@@ -38,8 +38,8 @@ Wave 2 返工要点
 ------------
 * 字面框：假名 advance 固定 1000。wave2 放大后墨迹框为 x 60..940 / y 0..820，
   竖直方向以 y=400 为中线与汉字对齐。
-  例外：ぜ 的基字整体左移 130 给浊音符让位，其墨迹左缘到 x=-48
-  （与相邻字形仍有 963 单位间隙，不粘连）。
+  例外：ぜ 的浊音符占住右上角，基字（せ）按参照字体的做法**横向收窄**
+  （只收窄 x，高度与笔画权重不动），浊音符留在右上角，���迹不越 em。
 * 笔画权重：主 92 / 次 84 / 细 76 / 点 84。假名笔画少、曲线笔多，
   整体比汉字轻一档（汉字 96/92/84），在汉字行里不抢视觉重量。
   放大只动中心线坐标、不动权重，所以放大后「笔画 / 字高」从 0.157 回到 0.117。
@@ -51,8 +51,9 @@ Wave 2 返工要点
 * 浊音符：U+3099 / U+309A 是零宽合记号（advance=0），只画右上角两枚短斜画
   （半浊音为一枚小圆环），落在基字右上角 x≈779..925 / y≈679..801，
   不落在字面中央。预组合形（が/ぎ/…）把同一枚浊音符烙进字面，
-  其中 ぐ/ざ/ず/ぜ/だ/ぢ/ば/ぱ 的基字整体左移，给浊音符腾出右上角空间
-  （放大后基字涨进右上角，让位量按新字面重算，见 VOICED_ORDER）。
+  其中 ぐ/ざ/ず/だ/ぢ/ば/ぱ 的基字整体左移，给浊音符腾出右上角空间
+  （放大后基字涨进右上角，让位量按新字面重算，见 VOICED_ORDER）；
+  ぜ 改用参照字体的做法：基字（せ）横向收窄、浊音符留在右上角（见 _narrow_to_fit）。
 * 反复记号 ゝゞ：做成上一字形缩小后的单笔曲线（advance 1000），
   ゞ 在右上角再加一枚浊音符。
 """
@@ -223,6 +224,43 @@ def _offset_strokes(strokes, dx=0.0, dy=0.0):
     if not dx and not dy:
         return list(strokes)
     return _map_strokes(strokes, lambda x, y: (x + dx, y + dy))
+
+
+def _narrow_strokes(strokes, k, anchor_x):
+    """横向收窄：只缩放 x 坐标（**高度与笔画权重一律不动**），锚点为 anchor_x。"""
+    if abs(k - 1.0) < 1e-9:
+        return list(strokes)
+    return _map_strokes(strokes, lambda x, y: (anchor_x + (x - anchor_x) * k, y))
+
+
+def _narrow_to_fit(base_strokes, mark_strokes, margin=5.0):
+    """底座横向收窄到「刚好不碰浊音符」，并返回收窄后的笔画与让位偏移。
+
+    参照字体的做法（Yu Gothic Bold：せ x 44.4..936.5，ぜ x 35.2..988.8）：
+    浊点占住右上角，浊音形的底座必然比单独的全尺寸字窄。
+    这里以底座**左缘**为锚点只收右边（高度与权重不动），
+    二分出「底座右缘刚好退到浊音符左边（留 margin 余量）」的最大收窄系数。
+    """
+    bb = _measure(base_strokes)
+    mb = _measure(mark_strokes)
+    if bb is None or mb is None:
+        return list(base_strokes), 0.0
+    anchor = bb[0]
+    limit = mb[0] - margin
+    lo, hi = 0.0, 1.0
+    for _ in range(20):
+        mid = (lo + hi) / 2.0
+        probe = _measure(_narrow_strokes(base_strokes, mid, anchor))
+        if probe is not None and probe[2] <= limit:
+            lo = mid
+        else:
+            hi = mid
+    narrowed = _narrow_strokes(base_strokes, lo, anchor)
+    nb = _measure(narrowed)
+    dx = 0.0
+    if nb is not None and nb[0] < INK_X[0]:
+        dx = INK_X[0] - nb[0]
+    return narrowed, dx
 
 
 def _scale_once(strokes, k):
@@ -789,6 +827,11 @@ BASE_ORDER = [
 # 思路沿用旧 recipe「ぐ / ぜ 的基字整体左下让位」，只是偏移量按新字面重算
 # （旧值在旧字面下成立；放大后基字涨了 35%，让位量必须重算）。
 # 让位量取「刚好不碰浊音符」的最小值再留 5 单位余量。
+# 需要**横向收窄底座**的预组合形（浊音符占住右上角，按参照字体的做法收底座）。
+# ぜ 的「せ」底座右缘涨到浊音符落点里，整体左移会把墨迹左缘推到 x<0（越 em），
+# 改为收窄底座右缘、浊音符留在右上角（见 _narrow_to_fit）。
+NARROW = {"ぜ"}
+
 VOICED_ORDER = [
     ("が", "か", 0, 0, "daku"),
     ("ぎ", "き", 0, 0, "daku"),
@@ -798,7 +841,7 @@ VOICED_ORDER = [
     ("ざ", "さ", -25, 0, "daku"),
     ("じ", "し", 0, 0, "daku"),
     ("ず", "す", -45, 0, "daku"),
-    ("ぜ", "せ", -130, 0, "daku"),
+    ("ぜ", "せ", 0, 0, "daku"),
     ("ぞ", "そ", 0, 0, "daku"),
     ("だ", "た", -45, 0, "daku"),
     ("ぢ", "ち", -20, 0, "daku"),
@@ -830,8 +873,15 @@ def build() -> list[Glyph]:
 
     # 预组合 25（浊音 / 半浊音）：基字放大 + 让位偏移 + 右上角落记号
     for ch, base, dx, dy, mark in VOICED_ORDER:
-        g = Glyph(f"uni{CP[ch]:04X}", advance=1000, unicode=CP[ch], note=f"平假名 {ch}（{base} + 浊音）")
-        for s in _offset_strokes(_scale_strokes(KANA[base]), dx, dy):
+        note = f"平假名 {ch}（{base} + 浊音）"
+        strokes = _scale_strokes(KANA[base])
+        if ch in NARROW:
+            # 底座横向收窄，把右上角让给浊音符（参照字体的做法）
+            strokes, dx = _narrow_to_fit(strokes, DAKU if mark == "daku" else HAND)
+            dy = 0
+            note += "，基字横向收窄让位"
+        g = Glyph(f"uni{CP[ch]:04X}", advance=1000, unicode=CP[ch], note=note)
+        for s in _offset_strokes(strokes, dx, dy):
             _stroke(g, s)
         for s in (DAKU if mark == "daku" else HAND):
             _stroke(g, s)
