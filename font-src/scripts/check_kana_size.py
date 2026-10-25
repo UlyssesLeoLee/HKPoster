@@ -83,6 +83,12 @@ def main() -> int:
     ap.add_argument("--ratio-max", type=float, default=0.95, help="假名/汉字字高比上限")
     ap.add_argument("--small-lo", type=float, default=0.55, help="小假名/全尺寸假名 下限")
     ap.add_argument("--small-hi", type=float, default=0.80, help="小假名/全尺寸假名 上限")
+    ap.add_argument("--small-cx-tol", type=float, default=100.0,
+                    help="小假名墨迹中心 x 距 500 的容差")
+    ap.add_argument("--small-bottom-lo", type=float, default=-30.0,
+                    help="小假名墨迹底边下限（贴基线）")
+    ap.add_argument("--small-bottom-hi", type=float, default=150.0,
+                    help="小假名墨迹底边上限（贴基线）")
     ap.add_argument("--report", default=str(ROOT / "font-src" / "reports" / "kana-size.json"))
     args = ap.parse_args()
 
@@ -140,6 +146,17 @@ def main() -> int:
         if not (args.small_lo <= rel <= args.small_hi):
             small_bad.append({**r, "rel": round(rel, 3)})
 
+    # 小假名落位：水平居中 + 贴基线（参照字体 Yu Gothic Bold 的实测规则）
+    # 集成方初稿规格写的是「右上区域」，实测参照字体是「居中 + 贴基线」，
+    # 且同一字体里两种落法自相矛盾 —— 见 docs/11 §6.8。
+    place_bad = []
+    for r in small:
+        b = r["box"]
+        cx = (b[0] + b[2]) / 2.0
+        bottom = b[1]
+        if abs(cx - 500.0) > args.small_cx_tol or not (args.small_bottom_lo <= bottom <= args.small_bottom_hi):
+            place_bad.append({**r, "center_x": round(cx, 1), "bottom": round(bottom, 1)})
+
     print("[kana-size] 汉字字高中位 = %s" % (round(cjk_median, 1) if cjk_median else "N/A"))
     print("[kana-size] 全尺寸假名字高中位 = %.1f  (n=%d)" % (full_median, len(full)))
     print("[kana-size] 假名/汉字 字高比 = %.3f  (目标 %.2f..%.2f)"
@@ -167,6 +184,12 @@ def main() -> int:
               f"{args.small_lo}..{args.small_hi}：")
         for r in small_bad[:20]:
             print("  %s  %s  h=%d  rel=%.2f" % (r["char"], r["codepoint"], r["height"], r["rel"]))
+    if place_bad:
+        problems += len(place_bad)
+        print(f"[kana-size] FAIL 小假名落位不对（应水平居中 x≈500 且贴基线）：")
+        for r in place_bad[:20]:
+            print("  %s  %s  h=%d  中心x=%.0f  底边=%.0f"
+                  % (r["char"], r["codepoint"], r["height"], r["center_x"], r["bottom"]))
     if overflow:
         problems += len(overflow)
         print(f"[kana-size] FAIL 超出 em 边界 {len(overflow)} 个：")
@@ -186,6 +209,7 @@ def main() -> int:
         "too_small": too_small,
         "too_tall": too_tall,
         "small_off": small_bad,
+        "small_place_off": place_bad,
         "overflow": overflow,
         "problems": problems,
     }
