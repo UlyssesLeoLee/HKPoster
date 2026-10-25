@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni540D" format="2">
+  <advance width="1000"/>
+  <unicode hex="540D"/>
+  <note>
+名：夕 + 口
+</note>
+  <outline>
+    <contour>
+      <point x="718" y="40" type="line"/>
+      <point x="810" y="40" type="line"/>
+      <point x="810" y="132" type="line"/>
+      <point x="810" y="258" type="line"/>
+      <point x="810" y="350" type="line"/>
+      <point x="718" y="350" type="line"/>
+      <point x="472" y="350" type="line"/>
+      <point x="380" y="350" type="line"/>
+      <point x="380" y="258" type="line"/>
+      <point x="380" y="132" type="line"/>
+      <point x="380" y="40" type="line"/>
+      <point x="472" y="40" type="line"/>
+    </contour>
+    <contour>
+      <point x="718" y="132" type="line"/>
+      <point x="472" y="132" type="line"/>
+      <point x="472" y="258" type="line"/>
+      <point x="718" y="258" type="line"/>
+    </contour>
+    <contour>
+      <point x="393" y="494" type="line"/>
+      <point x="122" y="299" type="line"/>
+      <point x="178" y="221" type="line"/>
+      <point x="767" y="644" type="line"/>
+      <point x="739" y="683" type="line"/>
+      <point x="739" y="729" type="line"/>
+      <point x="484" y="729" type="line"/>
+      <point x="503" y="747" type="line"/>
+      <point x="437" y="813" type="line"/>
+      <point x="354" y="729" type="line"/>
+      <point x="250" y="729" type="line"/>
+      <point x="250" y="637" type="line"/>
+      <point x="262" y="637" type="line"/>
+      <point x="217" y="593" type="line"/>
+      <point x="283" y="527" type="line"/>
+      <point x="392" y="637" type="line"/>
+      <point x="593" y="637" type="line"/>
+      <point x="459" y="541" type="line"/>
+      <point x="428" y="567" type="line"/>
+      <point x="378" y="507" type="line"/>
+    </contour>
+  </outline>
+</glyph>
