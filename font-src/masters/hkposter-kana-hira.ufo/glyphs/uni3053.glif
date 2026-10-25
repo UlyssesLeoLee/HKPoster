@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3053" format="2">
+  <advance width="1000"/>
+  <unicode hex="3053"/>
+  <note>
+平假名 こ（基础形）
+</note>
+  <outline>
+    <contour>
+      <point x="278" y="217" type="line"/>
+      <point x="233" y="282" type="line"/>
+      <point x="157" y="228" type="line"/>
+      <point x="217" y="143" type="line"/>
+      <point x="222" y="138" type="line"/>
+      <point x="228" y="133" type="line"/>
+      <point x="234" y="129" type="line"/>
+      <point x="241" y="126" type="line"/>
+      <point x="249" y="124" type="line"/>
+      <point x="256" y="124" type="line"/>
+      <point x="701" y="134" type="line"/>
+      <point x="699" y="226" type="line"/>
+    </contour>
+    <contour>
+      <point x="620" y="631" type="line"/>
+      <point x="240" y="631" type="line"/>
+      <point x="240" y="539" type="line"/>
+      <point x="620" y="539" type="line"/>
+    </contour>
+  </outline>
+</glyph>

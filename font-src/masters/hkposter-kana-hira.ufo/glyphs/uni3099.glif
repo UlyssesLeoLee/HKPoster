@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3099" format="2">
+  <unicode hex="3099"/>
+  <note>
+浊音符（零宽合记号，右上角两枚短斜画）
+</note>
+  <outline>
+    <contour>
+      <point x="753" y="707" type="line"/>
+      <point x="715" y="639" type="line"/>
+      <point x="781" y="601" type="line"/>
+      <point x="794" y="624" type="line"/>
+      <point x="835" y="601" type="line"/>
+      <point x="873" y="669" type="line"/>
+      <point x="807" y="707" type="line"/>
+      <point x="794" y="684" type="line"/>
+    </contour>
+  </outline>
+</glyph>
