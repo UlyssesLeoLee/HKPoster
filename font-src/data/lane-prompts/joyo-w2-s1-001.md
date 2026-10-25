@@ -1,0 +1,164 @@
+你是 HK Poster Heavy 字体工程的并行制作 lane，负责 **Jōyō 常用漢字批量试制：joyo-w2-s1-001**。
+
+【重要：零读文件模式 + 事实已内联】
+本项目上一轮有多个子代理会话被运行时中断，零产出。本提示词已内联全部事实。
+**你的第一个工具调用必须是 `write`**，一次性写出完整文件；不要先读仓库文件。
+
+【工作目录 —— 唯一允许写入的地方】
+E:/hkposter-lanes/wave1-joyo-w2-s1-001
+命令先切过去：`Set-Location 'E:/hkposter-lanes/wave1-joyo-w2-s1-001'`
+不要在 E:/HKPoster 里写任何文件。
+
+【你唯一允许写入的路径】
+- font-src/src/hkposter-joyo-w2-s1-001.py
+- font-src/masters/hkposter-joyo-w2-s1-001.ufo/（由 recipe 生成）
+
+【冻结参数（日本語漢字）】
+UPM 1000；y 向上，基线 y=0；ascender 880 / descender -120。
+**advance = 1000**；字面框 **x 60..940，y 0..820**（与繁体汉字完全一致，便于中英日混排）。
+漢字笔画权重档：**主 96 / 次 92 / 细 84 / 点 84–96**（与 zh-HK 繁体同一档）。
+
+【hkbuild 笔画 API（脚本已存在，import 即可，不要打开它）】
+```python
+from hkbuild import Glyph, write_ufo, ellipse_points
+
+g = Glyph(name, advance=1000, unicode=0x5360, note="说明")
+g.hbar(x1, x2, y, weight=96)        # 水平：中心线 y，横跨 x1..x2，墨迹占 y±weight/2
+g.vbar(x, y1, y2, weight=96)        # 垂直：中心线 x，跨 y1..y2（端点即墨迹端点）
+g.diag(x1, y1, x2, y2, weight=96)    # 斜笔画：中心线两端点，厚度垂直于中心线
+g.dot(cx, cy, w=96, h=112, slant=0)  # 点/短撇：平行四边形
+g.rect(x1, x2, y1, y2); g.poly([(x, y), ...])   # 原始几何
+g.ring(outer_pts, inner_pts)         # 环形带（等长点列），内白自动成洞
+```
+每条笔画 = "中心线 + 垂直权重"；所有笔画**自动求并集**，轮廓不自交/不重叠，内白自动成洞。
+**注意对齐语义**：横画要让墨迹上缘对齐 820 / 下缘对齐 0，中心线必须内缩半个笔画宽
+（参考 `font-src/src/hkposter-latin.py` 里的 bar_top / bar_base / diag_cap_base 辅助函数；
+本 lane 直接照同样的办法写自己的对齐辅助函数）。
+
+【recipe 文件骨架（照抄，只改 build() 与各字函数）】
+```python
+"""HK Poster Heavy —— Jōyō 常用漢字 joyo-w2-s1-001。
+
+本批 40 字，笔画范围 2–5，取自 2010 年文化厅《常用漢字表》。
+
+（在这里写整体设计取舍：字面框、权重、与同批次密度的协调）
+"""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+FONT_SRC = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(FONT_SRC / "scripts"))
+
+from hkbuild import Glyph, write_ufo  # noqa: E402
+
+W_MAIN = 96
+W_SEC = 92
+W_THIN = 84
+W_DOT = 84
+
+
+def build() -> list[Glyph]:
+    return [ ... ]
+
+
+def target_ufo() -> Path:
+    return FONT_SRC / "masters" / "hkposter-joyo-w2-s1-001.ufo"
+
+
+if __name__ == "__main__":
+    write_ufo(target_ufo(), build())
+    print(f"[recipe] 已写出 {target_ufo()}")
+```
+
+【你的字符清单（40 个，冻结，不得增删、不得改 Unicode）】
+字形名一律 `uniXXXX`（大写十六进制）。
+- 占  U+5360  uni5360  5 画  (频率排名 694)
+- 圧  U+5727  uni5727  5 画  (频率排名 718)
+- 玉  U+7389  uni7389  5 画  (频率排名 737)
+- 司  U+53F8  uni53F8  5 画  (频率排名 759)
+- 了  U+4E86  uni4E86  2 画  (频率排名 792)
+- 庁  U+5E81  uni5E81  5 画  (频率排名 793)
+- 令  U+4EE4  uni4EE4  5 画  (频率排名 804)
+- 払  U+6255  uni6255  5 画  (频率排名 813)
+- 仏  U+4ECF  uni4ECF  4 画  (频率排名 819)
+- 永  U+6C38  uni6C38  5 画  (频率排名 846)
+- 刊  U+520A  uni520A  5 画  (频率排名 855)
+- 功  U+529F  uni529F  5 画  (频率排名 857)
+- 欠  U+6B20  uni6B20  4 画  (频率排名 860)
+- 犯  U+72AF  uni72AF  5 画  (频率排名 874)
+- 布  U+5E03  uni5E03  5 画  (频率排名 877)
+- 巨  U+5DE8  uni5DE8  4 画  (频率排名 892)
+- 互  U+4E92  uni4E92  4 画  (频率排名 914)
+- 札  U+672D  uni672D  5 画  (频率排名 921)
+- 夕  U+5915  uni5915  3 画  (频率排名 924)
+- 包  U+5305  uni5305  5 画  (频率排名 954)
+- 双  U+53CC  uni53CC  4 画  (频率排名 1029)
+- 甲  U+7532  uni7532  5 画  (频率排名 1073)
+- 片  U+7247  uni7247  4 画  (频率排名 1076)
+- 冬  U+51AC  uni51AC  5 画  (频率排名 1090)
+- 皮  U+76AE  uni76AE  5 画  (频率排名 1092)
+- 己  U+5DF1  uni5DF1  3 画  (频率排名 1098)
+- 仙  U+4ED9  uni4ED9  5 画  (频率排名 1157)
+- 毛  U+6BDB  uni6BDB  4 画  (频率排名 1179)
+- 礼  U+793C  uni793C  5 画  (频率排名 1185)
+- 牛  U+725B  uni725B  4 画  (频率排名 1202)
+- 兄  U+5144  uni5144  5 画  (频率排名 1219)
+- 幼  U+5E7C  uni5E7C  5 画  (频率排名 1227)
+- 句  U+53E5  uni53E5  5 画  (频率排名 1244)
+- 甘  U+7518  uni7518  5 画  (频率排名 1248)
+- 巡  U+5DE1  uni5DE1  5 画  (频率排名 1262)
+- 矢  U+77E2  uni77E2  5 画  (频率排名 1294)
+- 丁  U+4E01  uni4E01  2 画  (频率排名 1312)
+- 冊  U+518A  uni518A  5 画  (频率排名 1313)
+- 犬  U+72AC  uni72AC  4 画  (频率排名 1326)
+- 仁  U+4EC1  uni4EC1  4 画  (频率排名 1332)
+
+【設計要点】
+- 本批字形密度接近（2–5 画），**务必保持同族观感**：
+  同一部件（如 亻、氵、扌、木）在批内要**复用同一套坐标与笔画拆法**，
+  只做位置与大小的光学校正（docs/03 GLY-004）。
+- 每个字先在 docstring 里写**笔画清单与部件分区坐标**，再逐笔画落坐标并注明所属部件。
+- 笔画少的字要**加粗**（用 96），笔画多的字在拥挤处**局部减重**到 84，
+  否则同批内会出现"有的太轻、有的太闷"（GLY-001 允许小空腔局部减重）。
+- 密排处（横画叠横画）内白不低于 24 单位；竖与竖之间不低于 60 单位（GLY-006）。
+- 禁止逐字机械挤压或倾斜（docs/02 偏差 D）。
+
+【要跑的 6 条命令（全部在 lane worktree 下执行）】
+```
+python font-src/src/hkposter-joyo-w2-s1-001.py
+python font-src/scripts/check_recipes.py --recipes font-src/src/hkposter-joyo-w2-s1-001.py
+python font-src/scripts/check_glyphs.py --sources font-src/masters/hkposter-joyo-w2-s1-001.ufo
+python font-src/scripts/build_font.py --sources font-src/masters/hkposter-joyo-w2-s1-001.ufo --out font-src/dist
+python font-src/scripts/verify_font.py --font font-src/dist/HKPoster-Heavy.ttf --sources font-src/masters/hkposter-joyo-w2-s1-001.ufo
+python font-src/scripts/render_glyph_sheet.py --font font-src/dist/HKPoster-Heavy.ttf --text "占圧玉司了庁令払仏永刊功" --size 200 --out font-src/reports/sheet-joyo-w2-s1-001.png
+```
+判定：check_recipes PASS（问题 0）；check_glyphs FAIL=0；verify_font FAIL=0。
+**若第 4 条因特性文件报错**：说明 `font-src/features/*.fea` 引用了本批没有的字形——
+子集构建会自动跳过不适用的特性文件，若仍失败请把报错原文写进报告交集成方。
+
+【交付步骤】
+1. write 一次性写出完整文件（40 个字形全写完，不要分次追加）。
+2. 跑上面 6 条命令。
+3. **用 read 工具打开 font-src/reports/sheet-joyo-w2-s1-001.png 亲眼看**（不能省）：
+   逐字判断：一眼认得出吗？有没有粘连成黑块？内白还在吗？批内观感一致吗？
+   不满意就改 recipe → 重新生成 → 重新渲染 → 再看（最多 4 轮）。
+4. 提交：
+```
+git add font-src/src/hkposter-joyo-w2-s1-001.py font-src/masters/hkposter-joyo-w2-s1-001.ufo
+git commit -m "wave1/joyo-w2-s1-001: Jōyō 常用漢字 40 字"
+```
+font-src/dist 与 font-src/reports 被 .gitignore 忽略，不要 add。
+
+【禁止】
+- 改 font-src/scripts/ 或任何 base 文件
+- git add -A / git push / 改 git 历史 / rebase
+- 写 lane 之外的任何文件（包括 E:/HKPoster）
+- 声称"应该通过"——报告里粘贴真实命令输出
+
+【交付报告格式（最后一条消息）】
+Task / Owner / Branch / Worktree / Base branch+SHA / Current HEAD / Commits / Files changed /
+Validation commands + 真实输出 / 逐字设计决定与理由（笔画清单 + 坐标 + 同批观感如何统一）/
+目视自检结论 / 已知问题与风险 / Recommended integration: merge
