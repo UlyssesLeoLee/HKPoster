@@ -55,8 +55,14 @@ python font-src/scripts/lane_prompt.py --list              # 列出全部 lane�
   同一数值在不同字面宽度里的视觉重量不同，**新增 master 必须按所属类别取对应档位**。
 - Jōyō 2136 字按笔画密度分 5 档切成 **90 条 lane**（见 `font-src/data/joyo-batches.json`），
   提示词由 `lane_prompt.py` 生成，续做时机械重复「登记 → 建 worktree → 派发 → 复验 → rebase → merge」。
-- **批次 id ≠ 分支名 ≠ worktree 名**：`joyo-w2-s3-001`（批次）→ `agent/wave2/joyo-s3-001`（分支）
+- **批次 id ≠ 分支名 ≠ worktree 名**：例如 `joyo-w2-s3-001`（批次）→ `agent/wave2/joyo-s3-001`（分支）
   → `E:/hkposter-lanes/wave2-joyo-s3-001`（worktree）。三者由 batch id 推导，**不得手写**。
+- **lane 名 ≠ recipe 文件名**：lane `kana-hira-rework` 拥有的是
+  `font-src/src/hkposter-kana-hira.py`（文件名**不带** `-rework`）。
+- **guard `plan` 之后必须 `guard list` 回读确认登记的路径**：路径拼错时 guard 不会报错，
+  会照错登记，等于这条 lane 的文件**没有被任何 claim 保护**。
+  PowerShell 里 `$arr[0]` 插进双引号字符串会被展开成整个数组（空格拼接），
+  写路径时要用显式变量，不要用数组下标。
 - **假名要求（项目所有者 2026-10-25）**：假名骨架必须保持标准形，只改笔画处理（粗手写体）；
   缺字是硬门禁（`check_kana_fidelity.py`）。判据见 `docs/11` §6.8。
 - 规划与缺口见 `docs/11_多文种规划.md`。
