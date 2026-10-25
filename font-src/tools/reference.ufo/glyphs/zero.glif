@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="zero" format="2">
+  <advance width="640"/>
+  <unicode hex="0030"/>
+  <note>
+0（Wave 0 参考实现）
+</note>
+  <outline>
+    <contour>
+      <point x="122" y="103" type="line"/>
+      <point x="213" y="27" type="line"/>
+      <point x="320" y="0" type="line"/>
+      <point x="427" y="27" type="line"/>
+      <point x="518" y="103" type="line"/>
+      <point x="579" y="216" type="line"/>
+      <point x="600" y="350" type="line"/>
+      <point x="579" y="484" type="line"/>
+      <point x="518" y="597" type="line"/>
+      <point x="427" y="673" type="line"/>
+      <point x="320" y="700" type="line"/>
+      <point x="213" y="673" type="line"/>
+      <point x="122" y="597" type="line"/>
+      <point x="61" y="484" type="line"/>
+      <point x="40" y="350" type="line"/>
+      <point x="61" y="216" type="line"/>
+    </contour>
+    <contour>
+      <point x="255" y="572" type="line"/>
+      <point x="320" y="590" type="line"/>
+      <point x="385" y="572" type="line"/>
+      <point x="440" y="520" type="line"/>
+      <point x="477" y="442" type="line"/>
+      <point x="490" y="350" type="line"/>
+      <point x="477" y="258" type="line"/>
+      <point x="440" y="180" type="line"/>
+      <point x="385" y="128" type="line"/>
+      <point x="320" y="110" type="line"/>
+      <point x="255" y="128" type="line"/>
+      <point x="200" y="180" type="line"/>
+      <point x="163" y="258" type="line"/>
+      <point x="150" y="350" type="line"/>
+      <point x="163" y="442" type="line"/>
+      <point x="200" y="520" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,15 @@
+# 构建产物与生成物（不入库，证据报告另存 docs/）
+font-src/dist/
+font-src/reports/
+font-src/build-tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 编辑器/系统
+.DS_Store
+Thumbs.db
+*.swp

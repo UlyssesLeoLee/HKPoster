@@ -1,0 +1,15 @@
+# HK Poster Heavy — 字体工程依赖（Wave 0）
+# 安装：pip install -r requirements.txt
+#
+# 已知限制：skia-pathops 在 CPython 3.13 无 wheel，因此不使用 ufo2ft 的
+# removeOverlaps（依赖 pathops）。轮廓并集在源阶段由 shapely 完成，
+# 见 font-src/scripts/hkbuild.py。
+
+fonttools==4.62.1
+ufo2ft==3.6.1
+ufoLib2==0.17.1
+fontmake==3.14.0
+brotli==1.1.0
+uharfbuzz==0.51.0
+shapely==2.1.1
+pillow==12.1.0

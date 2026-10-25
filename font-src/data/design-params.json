@@ -1,0 +1,55 @@
+{
+  "_comment": "HK Poster Heavy — Wave 0 冻结设计参数。本文件是各 lane 的唯一参数来源；改动需走变更记录。",
+  "family": "HK Poster",
+  "style": "Heavy",
+  "postscript_name": "HKPoster-Heavy",
+  "version": "1.000",
+  "upm": 1000,
+  "ascender": 880,
+  "descender": -120,
+  "cap_height": 700,
+  "x_height": 500,
+  "latin_cap_advance": 640,
+  "latin_lower_advance": 580,
+  "digit_advance": 640,
+  "cjk_advance": 1000,
+  "space_advance": 500,
+  "weights": {
+    "primary_stroke": 96,
+    "secondary_stroke": 78,
+    "dot_stroke": 84,
+    "frame_stroke": 92
+  },
+  "grid": {
+    "cjk_body_left": 60,
+    "cjk_body_right": 940,
+    "cjk_body_top": 820,
+    "cjk_body_bottom": 0,
+    "latin_cap_top": 700,
+    "latin_baseline": 0,
+    "latin_side_bearing": 48
+  },
+  "rules": {
+    "GLY-001": "横竖笔画维持统一视觉重量（主笔画 96 单位）",
+    "GLY-002": "外角以清晰硬折为主，弧形轮廓需光学平滑",
+    "GLY-003": "装饰斜切仅作用于不影响结构的位置",
+    "GLY-004": "同部件保持家族相似性",
+    "GLY-005": "字间紧凑但不得接触",
+    "GLY-006": "缩小后维护负空间，小尺寸不得出现内部白块完全消失"
+  },
+  "wave0_cjk": {
+    "core": ["港", "影", "城", "火", "夜", "風"],
+    "dense": ["龍", "義", "警", "愛", "無", "道"],
+    "expected_glyph_names": {
+      "港": "uni6E2F", "影": "uni5F71", "城": "uni57CE", "火": "uni706B",
+      "夜": "uni591C", "風": "uni98A8", "龍": "uni9F8D", "義": "uni7FA9",
+      "警": "uni8B66", "愛": "uni611B", "無": "uni7121", "道": "uni9053"
+    }
+  },
+  "wave0_latin": {
+    "uppercase": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "digits": "0123456789",
+    "punctuation_cjk": "，。、！？：；（）「」【】",
+    "punctuation_latin": ".,!?:;()-—\"'&"
+  }
+}
