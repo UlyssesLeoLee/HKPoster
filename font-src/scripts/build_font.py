@@ -125,6 +125,7 @@ def composite(sources: list[Path]) -> tuple[Font, list[str]]:
         glyph = space_glyph()
         target = base.newGlyph("space")
         target.width = glyph.advance
+        target.unicodes = [glyph.unicode] if glyph.unicode is not None else []
         glyph.draw(target.getPen())
     return base, conflicts
 
