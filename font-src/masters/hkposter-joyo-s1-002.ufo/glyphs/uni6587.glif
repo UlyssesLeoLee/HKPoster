@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni6587" format="2">
+  <advance width="1000"/>
+  <unicode hex="6587"/>
+  <note>
+文：丶 + 一 + 丿 + ㇏
+</note>
+  <outline>
+    <contour>
+      <point x="858" y="169" type="line"/>
+      <point x="561" y="560" type="line"/>
+      <point x="585" y="592" type="line"/>
+      <point x="890" y="592" type="line"/>
+      <point x="890" y="688" type="line"/>
+      <point x="543" y="688" type="line"/>
+      <point x="576" y="719" type="line"/>
+      <point x="491" y="809" type="line"/>
+      <point x="429" y="751" type="line"/>
+      <point x="489" y="688" type="line"/>
+      <point x="110" y="688" type="line"/>
+      <point x="110" y="592" type="line"/>
+      <point x="416" y="592" type="line"/>
+      <point x="442" y="558" type="line"/>
+      <point x="161" y="168" type="line"/>
+      <point x="239" y="112" type="line"/>
+      <point x="503" y="478" type="line"/>
+      <point x="782" y="111" type="line"/>
+    </contour>
+  </outline>
+</glyph>

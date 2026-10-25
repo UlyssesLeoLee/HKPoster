@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4E03" format="2">
+  <advance width="1000"/>
+  <unicode hex="4E03"/>
+  <note>
+七：一 + 竖弯钩
+</note>
+  <outline>
+    <contour>
+      <point x="818" y="234" type="line"/>
+      <point x="767" y="160" type="line"/>
+      <point x="368" y="160" type="line"/>
+      <point x="368" y="542" type="line"/>
+      <point x="890" y="542" type="line"/>
+      <point x="890" y="638" type="line"/>
+      <point x="368" y="638" type="line"/>
+      <point x="368" y="820" type="line"/>
+      <point x="272" y="820" type="line"/>
+      <point x="272" y="638" type="line"/>
+      <point x="100" y="638" type="line"/>
+      <point x="100" y="542" type="line"/>
+      <point x="272" y="542" type="line"/>
+      <point x="272" y="130" type="line"/>
+      <point x="320" y="130" type="line"/>
+      <point x="320" y="64" type="line"/>
+      <point x="790" y="64" type="line"/>
+      <point x="790" y="112" type="line"/>
+      <point x="828" y="86" type="line"/>
+      <point x="894" y="182" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5DDD" format="2">
+  <advance width="1000"/>
+  <unicode hex="5DDD"/>
+  <note>
+川：丿 + 丨 + 丨
+</note>
+  <outline>
+    <contour>
+      <point x="588" y="0" type="line"/>
+      <point x="588" y="700" type="line"/>
+      <point x="492" y="700" type="line"/>
+      <point x="492" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="732" y="0" type="line"/>
+      <point x="828" y="0" type="line"/>
+      <point x="828" y="810" type="line"/>
+      <point x="732" y="810" type="line"/>
+    </contour>
+    <contour>
+      <point x="106" y="438" type="line"/>
+      <point x="194" y="402" type="line"/>
+      <point x="344" y="772" type="line"/>
+      <point x="256" y="808" type="line"/>
+    </contour>
+  </outline>
+</glyph>

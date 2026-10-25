@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni516C" format="2">
+  <advance width="1000"/>
+  <unicode hex="516C"/>
+  <note>
+公：八 + 厶
+</note>
+  <outline>
+    <contour>
+      <point x="600" y="410" type="line"/>
+      <point x="643" y="368" type="line"/>
+      <point x="380" y="368" type="line"/>
+      <point x="490" y="533" type="line"/>
+      <point x="410" y="587" type="line"/>
+      <point x="250" y="347" type="line"/>
+      <point x="290" y="320" type="line"/>
+      <point x="290" y="272" type="line"/>
+      <point x="690" y="272" type="line"/>
+      <point x="690" y="321" type="line"/>
+      <point x="700" y="310" type="line"/>
+      <point x="760" y="370" type="line"/>
+      <point x="660" y="470" type="line"/>
+    </contour>
+    <contour>
+      <point x="307" y="802" type="line"/>
+      <point x="127" y="617" type="line"/>
+      <point x="193" y="553" type="line"/>
+      <point x="373" y="738" type="line"/>
+    </contour>
+    <contour>
+      <point x="627" y="738" type="line"/>
+      <point x="807" y="553" type="line"/>
+      <point x="873" y="617" type="line"/>
+      <point x="693" y="802" type="line"/>
+    </contour>
+  </outline>
+</glyph>
