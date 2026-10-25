@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni80AF" format="2">
+  <advance width="1000"/>
+  <unicode hex="80AF"/>
+  <note>
+肯：止 + 月
+</note>
+  <outline>
+    <contour>
+      <point x="300" y="78" type="line"/>
+      <point x="744" y="78" type="line"/>
+      <point x="744" y="80" type="line"/>
+      <point x="790" y="80" type="line"/>
+      <point x="790" y="334" type="line"/>
+      <point x="790" y="380" type="line"/>
+      <point x="790" y="422" type="line"/>
+      <point x="940" y="422" type="line"/>
+      <point x="940" y="518" type="line"/>
+      <point x="548" y="518" type="line"/>
+      <point x="548" y="644" type="line"/>
+      <point x="800" y="644" type="line"/>
+      <point x="800" y="736" type="line"/>
+      <point x="548" y="736" type="line"/>
+      <point x="548" y="820" type="line"/>
+      <point x="452" y="820" type="line"/>
+      <point x="452" y="518" type="line"/>
+      <point x="322" y="518" type="line"/>
+      <point x="322" y="700" type="line"/>
+      <point x="238" y="700" type="line"/>
+      <point x="238" y="518" type="line"/>
+      <point x="60" y="518" type="line"/>
+      <point x="60" y="422" type="line"/>
+      <point x="250" y="422" type="line"/>
+      <point x="250" y="334" type="line"/>
+      <point x="251" y="334" type="line"/>
+      <point x="185" y="71" type="line"/>
+      <point x="275" y="49" type="line"/>
+      <point x="300" y="150" type="line"/>
+    </contour>
+    <contour>
+      <point x="335" y="292" type="line"/>
+      <point x="346" y="334" type="line"/>
+      <point x="698" y="334" type="line"/>
+      <point x="698" y="292" type="line"/>
+    </contour>
+    <contour>
+      <point x="698" y="162" type="line"/>
+      <point x="303" y="162" type="line"/>
+      <point x="314" y="208" type="line"/>
+      <point x="698" y="208" type="line"/>
+    </contour>
+  </outline>
+</glyph>
