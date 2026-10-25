@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30CF" format="2">
+  <advance width="1000"/>
+  <unicode hex="30CF"/>
+  <note>
+ハ：左右两笔分张，顶部留白口
+</note>
+  <outline>
+    <contour>
+      <point x="266" y="116" type="line"/>
+      <point x="446" y="686" type="line"/>
+      <point x="354" y="714" type="line"/>
+      <point x="174" y="144" type="line"/>
+    </contour>
+    <contour>
+      <point x="835" y="148" type="line"/>
+      <point x="605" y="718" type="line"/>
+      <point x="515" y="682" type="line"/>
+      <point x="745" y="112" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30DC" format="2">
+  <advance width="1000"/>
+  <unicode hex="30DC"/>
+  <note>
+ボ：ホ：上横 + 中竖 + 下部左右分张短斜笔（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="201" y="222" type="line"/>
+      <point x="275" y="174" type="line"/>
+      <point x="392" y="349" type="line"/>
+      <point x="392" y="182" type="line"/>
+      <point x="488" y="182" type="line"/>
+      <point x="488" y="349" type="line"/>
+      <point x="605" y="174" type="line"/>
+      <point x="679" y="222" type="line"/>
+      <point x="527" y="449" type="line"/>
+      <point x="488" y="424" type="line"/>
+      <point x="488" y="537" type="line"/>
+      <point x="608" y="537" type="line"/>
+      <point x="608" y="633" type="line"/>
+      <point x="488" y="633" type="line"/>
+      <point x="488" y="652" type="line"/>
+      <point x="392" y="652" type="line"/>
+      <point x="392" y="633" type="line"/>
+      <point x="230" y="633" type="line"/>
+      <point x="230" y="537" type="line"/>
+      <point x="392" y="537" type="line"/>
+      <point x="392" y="424" type="line"/>
+      <point x="353" y="449" type="line"/>
+    </contour>
+    <contour>
+      <point x="804" y="742" type="line"/>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+    </contour>
+  </outline>
+</glyph>

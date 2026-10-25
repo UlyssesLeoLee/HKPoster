@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30DE" format="2">
+  <advance width="1000"/>
+  <unicode hex="30DE"/>
+  <note>
+マ：上横折向左下 + 自左上向右下斜笔相交
+</note>
+  <outline>
+    <contour>
+      <point x="831" y="181" type="line"/>
+      <point x="544" y="468" type="line"/>
+      <point x="689" y="661" type="line"/>
+      <point x="650" y="690" type="line"/>
+      <point x="650" y="738" type="line"/>
+      <point x="250" y="738" type="line"/>
+      <point x="250" y="660" type="line"/>
+      <point x="239" y="649" type="line"/>
+      <point x="423" y="465" type="line"/>
+      <point x="291" y="289" type="line"/>
+      <point x="369" y="231" type="line"/>
+      <point x="491" y="396" type="line"/>
+      <point x="769" y="119" type="line"/>
+    </contour>
+    <contour>
+      <point x="476" y="536" type="line"/>
+      <point x="370" y="642" type="line"/>
+      <point x="554" y="642" type="line"/>
+    </contour>
+  </outline>
+</glyph>

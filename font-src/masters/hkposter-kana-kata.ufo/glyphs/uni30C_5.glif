@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30C5" format="2">
+  <advance width="1000"/>
+  <unicode hex="30C5"/>
+  <note>
+ヅ：ツ：左上两点 + 自左上向右下长曲笔（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="699" y="191" type="line"/>
+      <point x="769" y="257" type="line"/>
+      <point x="366" y="685" type="line"/>
+      <point x="305" y="628" type="line"/>
+      <point x="282" y="664" type="line"/>
+      <point x="181" y="597" type="line"/>
+      <point x="227" y="527" type="line"/>
+      <point x="156" y="479" type="line"/>
+      <point x="204" y="405" type="line"/>
+      <point x="304" y="472" type="line"/>
+      <point x="258" y="542" type="line"/>
+      <point x="326" y="587" type="line"/>
+    </contour>
+    <contour>
+      <point x="804" y="742" type="line"/>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+    </contour>
+  </outline>
+</glyph>

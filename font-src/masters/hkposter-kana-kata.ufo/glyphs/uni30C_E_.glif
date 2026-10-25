@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30CE" format="2">
+  <advance width="1000"/>
+  <unicode hex="30CE"/>
+  <note>
+ノ：自左上向右下一笔长斜笔
+</note>
+  <outline>
+    <contour>
+      <point x="360" y="746" type="line"/>
+      <point x="280" y="694" type="line"/>
+      <point x="660" y="114" type="line"/>
+      <point x="740" y="166" type="line"/>
+    </contour>
+  </outline>
+</glyph>

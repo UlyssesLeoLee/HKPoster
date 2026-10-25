@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30D0" format="2">
+  <advance width="1000"/>
+  <unicode hex="30D0"/>
+  <note>
+バ：ハ：左右两笔分张，顶部留白口（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="159" y="187" type="line"/>
+      <point x="251" y="159" type="line"/>
+      <point x="402" y="638" type="line"/>
+      <point x="310" y="666" type="line"/>
+    </contour>
+    <contour>
+      <point x="640" y="155" type="line"/>
+      <point x="728" y="191" type="line"/>
+      <point x="534" y="670" type="line"/>
+      <point x="446" y="634" type="line"/>
+    </contour>
+    <contour>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+      <point x="804" y="742" type="line"/>
+    </contour>
+  </outline>
+</glyph>

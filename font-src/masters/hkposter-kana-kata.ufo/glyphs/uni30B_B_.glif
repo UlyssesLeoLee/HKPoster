@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30BB" format="2">
+  <advance width="1000"/>
+  <unicode hex="30BB"/>
+  <note>
+セ：上横 + 左竖贯穿 + 底部向右折脚
+</note>
+  <outline>
+    <contour>
+      <point x="560" y="154" type="line"/>
+      <point x="408" y="154" type="line"/>
+      <point x="408" y="572" type="line"/>
+      <point x="820" y="572" type="line"/>
+      <point x="820" y="668" type="line"/>
+      <point x="408" y="668" type="line"/>
+      <point x="408" y="700" type="line"/>
+      <point x="312" y="700" type="line"/>
+      <point x="312" y="668" type="line"/>
+      <point x="300" y="668" type="line"/>
+      <point x="300" y="572" type="line"/>
+      <point x="312" y="572" type="line"/>
+      <point x="312" y="110" type="line"/>
+      <point x="360" y="110" type="line"/>
+      <point x="360" y="66" type="line"/>
+      <point x="560" y="66" type="line"/>
+    </contour>
+  </outline>
+</glyph>
