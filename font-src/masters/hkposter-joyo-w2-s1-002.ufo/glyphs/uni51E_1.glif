@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni51E1" format="2">
+  <advance width="1000"/>
+  <unicode hex="51E1"/>
+  <note>
+3画：撇 + 横折弯钩 + 点
+</note>
+  <outline>
+    <contour>
+      <point x="883" y="209" type="line"/>
+      <point x="874" y="305" type="line"/>
+      <point x="748" y="294" type="line"/>
+      <point x="748" y="774" type="line"/>
+      <point x="720" y="774" type="line"/>
+      <point x="720" y="820" type="line"/>
+      <point x="300" y="820" type="line"/>
+      <point x="300" y="776" type="line"/>
+      <point x="246" y="785" type="line"/>
+      <point x="129" y="50" type="line"/>
+      <point x="224" y="35" type="line"/>
+      <point x="334" y="728" type="line"/>
+      <point x="652" y="728" type="line"/>
+      <point x="652" y="180" type="line"/>
+      <point x="748" y="180" type="line"/>
+      <point x="748" y="197" type="line"/>
+    </contour>
+    <contour>
+      <point x="482" y="490" type="line"/>
+      <point x="398" y="490" type="line"/>
+      <point x="398" y="370" type="line"/>
+      <point x="482" y="370" type="line"/>
+    </contour>
+  </outline>
+</glyph>

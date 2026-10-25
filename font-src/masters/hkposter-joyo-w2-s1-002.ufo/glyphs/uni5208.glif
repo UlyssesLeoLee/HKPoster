@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5208" format="2">
+  <advance width="1000"/>
+  <unicode hex="5208"/>
+  <note>
+4画：乂 + 刂
+</note>
+  <outline>
+    <contour>
+      <point x="840" y="0" type="line"/>
+      <point x="840" y="60" type="line"/>
+      <point x="888" y="60" type="line"/>
+      <point x="888" y="780" type="line"/>
+      <point x="792" y="780" type="line"/>
+      <point x="792" y="84" type="line"/>
+      <point x="720" y="84" type="line"/>
+      <point x="720" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="119" y="111" type="line"/>
+      <point x="202" y="62" type="line"/>
+      <point x="365" y="341" type="line"/>
+      <point x="478" y="143" type="line"/>
+      <point x="562" y="190" type="line"/>
+      <point x="421" y="436" type="line"/>
+      <point x="581" y="709" type="line"/>
+      <point x="498" y="758" type="line"/>
+      <point x="366" y="532" type="line"/>
+      <point x="272" y="697" type="line"/>
+      <point x="188" y="650" type="line"/>
+      <point x="310" y="437" type="line"/>
+    </contour>
+    <contour>
+      <point x="732" y="420" type="line"/>
+      <point x="732" y="780" type="line"/>
+      <point x="648" y="780" type="line"/>
+      <point x="648" y="420" type="line"/>
+    </contour>
+  </outline>
+</glyph>

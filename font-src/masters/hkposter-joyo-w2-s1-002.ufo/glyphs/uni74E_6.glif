@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni74E6" format="2">
+  <advance width="1000"/>
+  <unicode hex="74E6"/>
+  <note>
+5画：一 + 长撇 + 横折竖 + 点
+</note>
+  <outline>
+    <contour>
+      <point x="509" y="327" type="line"/>
+      <point x="512" y="271" type="line"/>
+      <point x="572" y="274" type="line"/>
+      <point x="572" y="260" type="line"/>
+      <point x="668" y="260" type="line"/>
+      <point x="668" y="500" type="line"/>
+      <point x="640" y="500" type="line"/>
+      <point x="640" y="542" type="line"/>
+      <point x="273" y="542" type="line"/>
+      <point x="288" y="694" type="line"/>
+      <point x="880" y="694" type="line"/>
+      <point x="880" y="786" type="line"/>
+      <point x="140" y="786" type="line"/>
+      <point x="140" y="694" type="line"/>
+      <point x="191" y="694" type="line"/>
+      <point x="129" y="76" type="line"/>
+      <point x="224" y="66" type="line"/>
+      <point x="264" y="458" type="line"/>
+      <point x="572" y="458" type="line"/>
+      <point x="572" y="358" type="line"/>
+      <point x="527" y="356" type="line"/>
+      <point x="527" y="423" type="line"/>
+      <point x="443" y="423" type="line"/>
+      <point x="443" y="327" type="line"/>
+    </contour>
+  </outline>
+</glyph>

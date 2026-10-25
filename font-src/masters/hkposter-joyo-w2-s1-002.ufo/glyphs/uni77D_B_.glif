@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni77DB" format="2">
+  <advance width="1000"/>
+  <unicode hex="77DB"/>
+  <note>
+5画：フ + 点 + 横 + 竖钩 + 长撇
+</note>
+  <outline>
+    <contour>
+      <point x="533" y="225" type="line"/>
+      <point x="550" y="143" type="line"/>
+      <point x="572" y="147" type="line"/>
+      <point x="572" y="140" type="line"/>
+      <point x="668" y="140" type="line"/>
+      <point x="668" y="412" type="line"/>
+      <point x="780" y="412" type="line"/>
+      <point x="780" y="508" type="line"/>
+      <point x="622" y="508" type="line"/>
+      <point x="704" y="619" type="line"/>
+      <point x="725" y="603" type="line"/>
+      <point x="802" y="708" type="line"/>
+      <point x="793" y="714" type="line"/>
+      <point x="800" y="714" type="line"/>
+      <point x="800" y="806" type="line"/>
+      <point x="260" y="806" type="line"/>
+      <point x="260" y="714" type="line"/>
+      <point x="703" y="714" type="line"/>
+      <point x="675" y="676" type="line"/>
+      <point x="644" y="699" type="line"/>
+      <point x="502" y="508" type="line"/>
+      <point x="120" y="508" type="line"/>
+      <point x="120" y="412" type="line"/>
+      <point x="431" y="412" type="line"/>
+      <point x="199" y="98" type="line"/>
+      <point x="276" y="41" type="line"/>
+      <point x="551" y="412" type="line"/>
+      <point x="572" y="412" type="line"/>
+      <point x="572" y="233" type="line"/>
+    </contour>
+    <contour>
+      <point x="342" y="568" type="line"/>
+      <point x="342" y="672" type="line"/>
+      <point x="258" y="672" type="line"/>
+      <point x="258" y="568" type="line"/>
+    </contour>
+  </outline>
+</glyph>
