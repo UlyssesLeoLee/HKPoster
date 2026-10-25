@@ -135,7 +135,7 @@ def ou(g: Glyph, x0: float, y_top: float = 560, y_low: float = 276) -> None:
 
 def mawari(g: Glyph) -> None:
     """⻌（辶）：点 + 折撇 + 平捺（底部长横）。三字共用同一坐标。"""
-    g.dot(140, 700, w=W_DOT, h=110, slant=30)
+    g.dot(140, 700, w=W_DOT, h=110, slant=-14)
     g.diag(130, 400, 430, 180, weight=W_SEC)
     h_at(g, 400, 940, 160, W_SEC)
 
@@ -204,7 +204,7 @@ def g_rei() -> Glyph:
     g.diag(480, 740, 370, 470, weight=W_MAIN)
     h_at(g, 440, 630, 690, W_SEC)          # 歹 的横撇
     g.diag(630, 690, 540, 430, weight=W_SEC)
-    g.dot(450, 520, w=W_DOT, h=88, slant=30)
+    g.dot(450, 520, w=W_DOT, h=88, slant=-14)
     v_at(g, 700, 700, 220, W_SEC)          # 刂 的短竖
     v_at(g, 892, 820, 60, W_MAIN)          # 刂 的长竖
     g.diag(892, 70, 800, 140, weight=W_SEC)
@@ -278,7 +278,7 @@ def g_den() -> Glyph:
     h_at(g, 370, 860, 570, W_MAIN)
     g.diag(540, 470, 450, 180, weight=W_SEC)
     h_at(g, 450, 790, 180, W_SEC)
-    g.dot(700, 300, w=W_DOT, h=104, slant=30)
+    g.dot(700, 300, w=W_DOT, h=104, slant=-14)
     return g
 
 
@@ -464,7 +464,7 @@ def g_shi() -> Glyph:
     """
     g = Glyph("uni59FF", advance=1000, unicode=0x59FF,
               note="姿 9画 ⿱次女：次(6)+女(3)")
-    g.dot(150, 700, w=W_DOT, h=100, slant=30)
+    g.dot(150, 700, w=W_DOT, h=100, slant=-14)
     g.diag(90, 500, 240, 570, weight=W_SEC)
     g.diag(430, 780, 350, 690, weight=W_SEC)
     h_at(g, 390, 690, 690, W_SEC)
@@ -544,7 +544,7 @@ def g_mori() -> Glyph:
     h_at(g, 220, 900, 560, W_MAIN)
     v_at(g, 700, 620, 60, W_MAIN)
     g.diag(700, 70, 610, 130, weight=W_SEC)
-    g.dot(430, 340, w=W_DOT, h=104, slant=30)
+    g.dot(430, 340, w=W_DOT, h=104, slant=-14)
     return g
 
 
@@ -569,8 +569,8 @@ def g_bi() -> Glyph:
     """
     g = Glyph("uni7F8E", advance=1000, unicode=0x7F8E,
               note="美 9画 ⿱羊大：羊(6)+大(3)")
-    g.dot(340, 770, w=W_DOT, h=92, slant=30)
-    g.dot(660, 770, w=W_DOT, h=92, slant=30)
+    g.dot(340, 770, w=W_DOT, h=92, slant=-14)
+    g.dot(660, 770, w=W_DOT, h=92, slant=14)
     h_at(g, 290, 710, 720, W_SEC)
     h_at(g, 270, 730, 600, W_SEC)
     h_at(g, 250, 750, 480, W_SEC)
@@ -649,7 +649,7 @@ def g_matsu() -> Glyph:
     g.diag(760, 790, 900, 620, weight=W_SEC)
     g.diag(650, 520, 550, 200, weight=W_SEC)
     h_at(g, 550, 840, 200, W_SEC)
-    g.dot(760, 320, w=W_DOT, h=100, slant=30)
+    g.dot(760, 320, w=W_DOT, h=100, slant=-14)
     return g
 
 
