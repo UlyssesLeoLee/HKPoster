@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30B4" format="2">
+  <advance width="1000"/>
+  <unicode hex="30B4"/>
+  <note>
+ゴ：コ：上下横 + 右侧竖连之（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="627" y="587" type="line"/>
+      <point x="627" y="204" type="line"/>
+      <point x="138" y="204" type="line"/>
+      <point x="138" y="108" type="line"/>
+      <point x="675" y="108" type="line"/>
+      <point x="675" y="156" type="line"/>
+      <point x="723" y="156" type="line"/>
+      <point x="723" y="635" type="line"/>
+      <point x="675" y="635" type="line"/>
+      <point x="675" y="683" type="line"/>
+      <point x="138" y="683" type="line"/>
+      <point x="138" y="587" type="line"/>
+    </contour>
+    <contour>
+      <point x="804" y="742" type="line"/>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+    </contour>
+  </outline>
+</glyph>

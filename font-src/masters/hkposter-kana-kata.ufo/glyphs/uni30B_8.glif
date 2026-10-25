@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30B8" format="2">
+  <advance width="1000"/>
+  <unicode hex="30B8"/>
+  <note>
+ジ：シ：左上两点 + 自左上向右下长曲笔（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="706" y="192" type="line"/>
+      <point x="778" y="256" type="line"/>
+      <point x="392" y="684" type="line"/>
+      <point x="355" y="651" type="line"/>
+      <point x="306" y="722" type="line"/>
+      <point x="205" y="654" type="line"/>
+      <point x="255" y="582" type="line"/>
+      <point x="346" y="643" type="line"/>
+      <point x="320" y="620" type="line"/>
+    </contour>
+    <contour>
+      <point x="338" y="531" type="line"/>
+      <point x="290" y="605" type="line"/>
+      <point x="189" y="538" type="line"/>
+      <point x="237" y="464" type="line"/>
+    </contour>
+    <contour>
+      <point x="804" y="742" type="line"/>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+    </contour>
+  </outline>
+</glyph>

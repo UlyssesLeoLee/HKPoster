@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30BE" format="2">
+  <advance width="1000"/>
+  <unicode hex="30BE"/>
+  <note>
+ゾ：ソ：左上短撇 + 自右上向左下长斜笔（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="232" y="200" type="line"/>
+      <point x="312" y="146" type="line"/>
+      <point x="648" y="650" type="line"/>
+      <point x="568" y="704" type="line"/>
+    </contour>
+    <contour>
+      <point x="419" y="605" type="line"/>
+      <point x="377" y="683" type="line"/>
+      <point x="234" y="607" type="line"/>
+      <point x="276" y="529" type="line"/>
+    </contour>
+    <contour>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+      <point x="804" y="742" type="line"/>
+    </contour>
+  </outline>
+</glyph>

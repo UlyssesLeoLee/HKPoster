@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30C4" format="2">
+  <advance width="1000"/>
+  <unicode hex="30C4"/>
+  <note>
+ツ：左上两点 + 自左上向右下长曲笔
+</note>
+  <outline>
+    <contour>
+      <point x="885" y="223" type="line"/>
+      <point x="405" y="733" type="line"/>
+      <point x="339" y="671" type="line"/>
+      <point x="316" y="707" type="line"/>
+      <point x="196" y="627" type="line"/>
+      <point x="244" y="553" type="line"/>
+      <point x="364" y="633" type="line"/>
+      <point x="359" y="642" type="line"/>
+      <point x="815" y="157" type="line"/>
+    </contour>
+    <contour>
+      <point x="334" y="493" type="line"/>
+      <point x="286" y="567" type="line"/>
+      <point x="166" y="487" type="line"/>
+      <point x="214" y="413" type="line"/>
+    </contour>
+  </outline>
+</glyph>

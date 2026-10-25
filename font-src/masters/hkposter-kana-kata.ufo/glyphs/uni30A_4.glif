@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30A4" format="2">
+  <advance width="1000"/>
+  <unicode hex="30A4"/>
+  <note>
+イ：左上短斜笔与右侧长竖在顶端相接
+</note>
+  <outline>
+    <contour>
+      <point x="602" y="573" type="line"/>
+      <point x="602" y="90" type="line"/>
+      <point x="698" y="90" type="line"/>
+      <point x="698" y="648" type="line"/>
+      <point x="730" y="672" type="line"/>
+      <point x="670" y="748" type="line"/>
+      <point x="622" y="710" type="line"/>
+      <point x="602" y="710" type="line"/>
+      <point x="602" y="694" type="line"/>
+      <point x="350" y="498" type="line"/>
+      <point x="410" y="422" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30FE" format="2">
+  <advance width="1000"/>
+  <unicode hex="30FE"/>
+  <note>
+ヾ：ヽ 重复两画
+</note>
+  <outline>
+    <contour>
+      <point x="601" y="361" type="line"/>
+      <point x="331" y="631" type="line"/>
+      <point x="269" y="569" type="line"/>
+      <point x="539" y="299" type="line"/>
+    </contour>
+    <contour>
+      <point x="771" y="361" type="line"/>
+      <point x="501" y="631" type="line"/>
+      <point x="439" y="569" type="line"/>
+      <point x="709" y="299" type="line"/>
+    </contour>
+  </outline>
+</glyph>

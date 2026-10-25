@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30CA" format="2">
+  <advance width="1000"/>
+  <unicode hex="30CA"/>
+  <note>
+ナ：横 + 自上中向左下长斜笔贯穿
+</note>
+  <outline>
+    <contour>
+      <point x="598" y="608" type="line"/>
+      <point x="645" y="733" type="line"/>
+      <point x="555" y="767" type="line"/>
+      <point x="495" y="608" type="line"/>
+      <point x="250" y="608" type="line"/>
+      <point x="250" y="512" type="line"/>
+      <point x="459" y="512" type="line"/>
+      <point x="315" y="127" type="line"/>
+      <point x="405" y="93" type="line"/>
+      <point x="562" y="512" type="line"/>
+      <point x="810" y="512" type="line"/>
+      <point x="810" y="608" type="line"/>
+    </contour>
+  </outline>
+</glyph>

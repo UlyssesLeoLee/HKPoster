@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30D3" format="2">
+  <advance width="1000"/>
+  <unicode hex="30D3"/>
+  <note>
+ビ：ヒ：左上短竖 + 底部长横（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="717" y="150" type="line"/>
+      <point x="717" y="246" type="line"/>
+      <point x="272" y="246" type="line"/>
+      <point x="272" y="150" type="line"/>
+    </contour>
+    <contour>
+      <point x="333" y="686" type="line"/>
+      <point x="245" y="686" type="line"/>
+      <point x="245" y="518" type="line"/>
+      <point x="333" y="518" type="line"/>
+    </contour>
+    <contour>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+      <point x="804" y="742" type="line"/>
+    </contour>
+  </outline>
+</glyph>

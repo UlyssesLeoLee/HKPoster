@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30D2" format="2">
+  <advance width="1000"/>
+  <unicode hex="30D2"/>
+  <note>
+ヒ：左上短竖 + 底部长横
+</note>
+  <outline>
+    <contour>
+      <point x="830" y="208" type="line"/>
+      <point x="300" y="208" type="line"/>
+      <point x="300" y="112" type="line"/>
+      <point x="830" y="112" type="line"/>
+    </contour>
+    <contour>
+      <point x="276" y="740" type="line"/>
+      <point x="276" y="540" type="line"/>
+      <point x="364" y="540" type="line"/>
+      <point x="364" y="740" type="line"/>
+    </contour>
+  </outline>
+</glyph>

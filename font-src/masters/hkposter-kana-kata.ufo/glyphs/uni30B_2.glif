@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30B2" format="2">
+  <advance width="1000"/>
+  <unicode hex="30B2"/>
+  <note>
+ゲ：ケ：左上短撇 + 中横 + 自右上向左下长斜笔（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="625" y="578" type="line"/>
+      <point x="606" y="578" type="line"/>
+      <point x="649" y="653" type="line"/>
+      <point x="567" y="701" type="line"/>
+      <point x="495" y="578" type="line"/>
+      <point x="329" y="578" type="line"/>
+      <point x="383" y="651" type="line"/>
+      <point x="313" y="703" type="line"/>
+      <point x="220" y="578" type="line"/>
+      <point x="205" y="578" type="line"/>
+      <point x="205" y="558" type="line"/>
+      <point x="195" y="544" type="line"/>
+      <point x="205" y="537" type="line"/>
+      <point x="205" y="490" type="line"/>
+      <point x="443" y="490" type="line"/>
+      <point x="273" y="197" type="line"/>
+      <point x="355" y="149" type="line"/>
+      <point x="554" y="490" type="line"/>
+      <point x="625" y="490" type="line"/>
+    </contour>
+    <contour>
+      <point x="804" y="742" type="line"/>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+    </contour>
+  </outline>
+</glyph>

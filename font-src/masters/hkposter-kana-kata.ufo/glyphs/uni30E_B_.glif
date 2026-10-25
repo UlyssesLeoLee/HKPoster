@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30EB" format="2">
+  <advance width="1000"/>
+  <unicode hex="30EB"/>
+  <note>
+ル：左上短竖 + 长斜笔下端上挑
+</note>
+  <outline>
+    <contour>
+      <point x="455" y="229" type="line"/>
+      <point x="434" y="255" type="line"/>
+      <point x="701" y="674" type="line"/>
+      <point x="619" y="726" type="line"/>
+      <point x="289" y="206" type="line"/>
+      <point x="330" y="180" type="line"/>
+      <point x="355" y="149" type="line"/>
+      <point x="366" y="157" type="line"/>
+      <point x="371" y="154" type="line"/>
+      <point x="379" y="168" type="line"/>
+    </contour>
+    <contour>
+      <point x="374" y="700" type="line"/>
+      <point x="286" y="700" type="line"/>
+      <point x="286" y="400" type="line"/>
+      <point x="374" y="400" type="line"/>
+    </contour>
+  </outline>
+</glyph>

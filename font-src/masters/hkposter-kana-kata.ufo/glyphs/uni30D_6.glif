@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30D6" format="2">
+  <advance width="1000"/>
+  <unicode hex="30D6"/>
+  <note>
+ブ：フ：上横 + 自右端向左下斜折（浊音形，基础形缩放并左移，右上加浊音符）
+</note>
+  <outline>
+    <contour>
+      <point x="334" y="210" type="line"/>
+      <point x="412" y="154" type="line"/>
+      <point x="731" y="607" type="line"/>
+      <point x="692" y="635" type="line"/>
+      <point x="692" y="683" type="line"/>
+      <point x="272" y="683" type="line"/>
+      <point x="272" y="587" type="line"/>
+      <point x="599" y="587" type="line"/>
+    </contour>
+    <contour>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+      <point x="804" y="742" type="line"/>
+    </contour>
+  </outline>
+</glyph>
