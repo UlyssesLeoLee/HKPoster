@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni51FB" format="2">
+  <advance width="1000"/>
+  <unicode hex="51FB"/>
+  <note>
+击（Wave 1 简体中文）
+</note>
+  <outline>
+    <contour>
+      <point x="750" y="20" type="line"/>
+      <point x="750" y="70" type="line"/>
+      <point x="800" y="70" type="line"/>
+      <point x="800" y="380" type="line"/>
+      <point x="700" y="380" type="line"/>
+      <point x="700" y="120" type="line"/>
+      <point x="300" y="120" type="line"/>
+      <point x="300" y="380" type="line"/>
+      <point x="200" y="380" type="line"/>
+      <point x="200" y="70" type="line"/>
+      <point x="250" y="70" type="line"/>
+      <point x="250" y="20" type="line"/>
+    </contour>
+    <contour>
+      <point x="80" y="466" type="line"/>
+      <point x="920" y="466" type="line"/>
+      <point x="920" y="574" type="line"/>
+      <point x="80" y="574" type="line"/>
+    </contour>
+    <contour>
+      <point x="240" y="666" type="line"/>
+      <point x="760" y="666" type="line"/>
+      <point x="760" y="774" type="line"/>
+      <point x="240" y="774" type="line"/>
+    </contour>
+  </outline>
+</glyph>
