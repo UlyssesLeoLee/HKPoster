@@ -31,6 +31,12 @@
    宽度 `w` 在 y 方向只覆盖 `w/2 × |ux|`，按水平笔画那样用 ±w/2 估会差几十单位。
    本轮实测：目视「看着还行」的字里藏着 3 个真 bug（更的日三横压在一起、
    尾的毛上横与尸中横同高、束的口贴住顶横），都是这个工具抓出来的。
+8. **码位要交叉核对，不能只查自洽**：字表里的「字符 ↔ 码位」必须与**独立来源**
+   对上，不能只验「记录里的字段与键互相吻合」—— 两者来自同一条记录时可能一起错。
+   2026-10-26 的实际事故：`joyo-kanji-meta.json` 里「栄」那一行被以「枤」(U+6804)
+   为键写入，`unicode` 字段也跟着写 U+6804 —— **自洽检查零不符**，但成品字体因此
+   缺「栄」多「枤」。`check_charset.py` 用 glyph `note` 里的汉字（子代理写的字形自称）
+   与 `unicode` 对撞，才抓到它。
 
 ## 常用命令
 
@@ -48,6 +54,7 @@ python font-src/scripts/check_kana_fidelity.py --selftest # 先自证该检查�
 python font-src/scripts/check_kana_size.py              # 假名字面尺寸验收（与汉字同档 + 平/片对称）
 python font-src/scripts/check_stroke_angles.py          # 笔画角度与记号倾角（recipe 层 AST 检查）
 python font-src/scripts/check_stroke_gaps.py            # 笔画粘连/间隙报告（重叠等效长度，单位=笔画宽）
+python font-src/scripts/check_charset.py              # 字符↔码位↔冻结清单自洽（note 汉字 vs unicode）
 python font-src/scripts/check_encoding.py              # 字符损坏扫描（坏字符进 recipe 就是错字形）
 python font-src/tests/run_tests.py         # UT + IT + ST 全套
 python font-src/specimens/render_specimens.py --all        # 重生成样张

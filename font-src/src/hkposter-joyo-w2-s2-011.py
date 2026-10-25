@@ -391,7 +391,7 @@ def _g_ei():
     冖：左短竖(x200) + 横(y620) + 右斜钩。
     木：批内统一拆法(box 100..900)。
     """
-    g = Glyph("uni6804", advance=1000, unicode=0x6804, note="栄：ツ + 冖 + 木")
+    g = Glyph("uni8368", advance=1000, unicode=0x8368, note="荨：ツ + 冖 + 木")
     g.dot(250, 740, W_DOT, 96, SLANT_DOT)
     g.dot(430, 740, W_DOT, 96, SLANT_DOT)
     g.diag(830, 790, 600, 590, W_THIN)

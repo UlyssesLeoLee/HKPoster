@@ -242,6 +242,23 @@ def analyse_by_import(path: Path) -> dict | None:
         kind = "横" if w > h * 2 else ("竖" if h > w * 2 else "斜")
         return f"{kind}({x0:.0f}..{x1:.0f},{y0:.0f}..{y1:.0f})"
 
+    def _is_same_stroke(a: Polygon, b: Polygon) -> bool:
+        """判断两条笔画是不是**同一条笔画被写成了两段**。
+
+        判据：一条的包围盒完全包含另一条，且两者主轴方向相同（都是横/都是竖）。
+        这种「记账重复」在视觉上完全连续，不算缺陷 —— 很多 recipe 会把一条长竖
+        分成上下两段写（为了控制竖的端点），工具不该把它报成粘连。
+        """
+        ax0, ay0, ax1, ay1 = a.bounds
+        bx0, by0, bx1, by1 = b.bounds
+        a_horiz = (ax1 - ax0) > (ay1 - ay0) * 2
+        b_horiz = (bx1 - bx0) > (by1 - by0) * 2
+        if a_horiz != b_horiz:
+            return False
+        a_in_b = ax0 >= bx0 - 1 and ax1 <= bx1 + 1 and ay0 >= by0 - 1 and ay1 <= by1 + 1
+        b_in_a = bx0 >= ax0 - 1 and bx1 <= ax1 + 1 and by0 >= ay0 - 1 and by1 <= ay1 + 1
+        return a_in_b or b_in_a
+
     for g in built:
         parts = getattr(g, "_parts", [])
         polys: list[tuple[str, Polygon]] = []
@@ -266,18 +283,21 @@ def analyse_by_import(path: Path) -> dict | None:
                 thinner = min(a.bounds[2] - a.bounds[0], a.bounds[3] - a.bounds[1],
                               b.bounds[2] - b.bounds[0], b.bounds[3] - b.bounds[1])
                 eq_len = area / (thinner * thinner) if thinner > 0 else 0.0
+                dup = _is_same_stroke(a, b)
                 pairs.append({
                     "a": polys[i][0], "b": polys[j][0],
                     "overlap_area": round(area, 1),
                     "ratio": round(ratio, 3),
                     "eq_len": round(eq_len, 2),
                     "gap": round(gap, 1),
+                    "dup": dup,
                 })
         pairs.sort(key=lambda p: (-p["eq_len"], p["gap"]))
         result["glyphs"].append({
             "func": getattr(g, "name", "?"), "strokes": len(polys),
-            "suspect": [p for p in pairs if p["eq_len"] >= SUSPECT_EQ],
+            "suspect": [p for p in pairs if p["eq_len"] >= SUSPECT_EQ and not p["dup"]],
             "tight": [p for p in pairs if 0 < p["gap"] < MIN_GAP],
+            "dup_pairs": [p for p in pairs if p["dup"]],
             "pairs": pairs,
         })
     return result
@@ -332,7 +352,7 @@ def analyse(path: Path) -> dict:
         pairs.sort(key=lambda p: (-p["eq_len"], p["gap"]))
         result["glyphs"].append({
             "func": fname, "strokes": len(polys),
-            "suspect": [p for p in pairs if p["eq_len"] >= SUSPECT_EQ],
+            "suspect": [p for p in pairs if p["eq_len"] >= SUSPECT_EQ and not p.get("dup")],
             "tight": [p for p in pairs if 0 < p["gap"] < MIN_GAP],
             "pairs": pairs,
         })
@@ -378,6 +398,8 @@ def main() -> int:
     print(f"[gaps] 指标：重叠等效长度（重叠面积 ÷ 较窄笔画的宽度，单位=笔画宽）· 间隙（相交时为 0）")
     print(f"[gaps] 刻度：等效长度 <1.5 属正常交叠 · 1.5~3 偏紧 · >3 疑似粘连；"
           f"间隙 <{MIN_GAP:.0f} 单位为临界")
+    print("[gaps] 注：同一条笔画被写成上下/左右两段（包围盒包含、主轴同向）算「记账重复」，"
+          "已排除出粘连统计。")
     print()
     for res in all_results:
         if res["skipped_dynamic_calls"]:
@@ -393,7 +415,10 @@ def main() -> int:
                 continue
             print(f"[gaps] {res['recipe']} :: {g['func']}（{g['strokes']} 笔）")
             for p in hot[: args.top]:
-                flag = "疑似粘连" if p["eq_len"] >= 3.0 else "偏紧"
+                if p.get("dup"):
+                    flag = "同笔重复段（已排除）"
+                else:
+                    flag = "疑似粘连" if p["eq_len"] >= 3.0 else "偏紧"
                 print(f"        {p['a']} × {p['b']}  等效重叠 {p['eq_len']} 宽  "
                       f"面积 {p['overlap_area']}  间隙 {p['gap']}  ← {flag}")
             print()

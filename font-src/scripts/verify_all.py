@@ -63,6 +63,7 @@ def main() -> int:
     parser.add_argument("--skip-encoding-check", action="store_true")
     parser.add_argument("--skip-kana-size", action="store_true")
     parser.add_argument("--skip-stroke-angles", action="store_true")
+    parser.add_argument("--skip-charset", action="store_true")
     args = parser.parse_args()
 
     masters = sorted((FONT_SRC / "masters").glob("*.ufo"))
@@ -207,6 +208,16 @@ def main() -> int:
     else:
         results["stroke_angles"] = True
         outputs["stroke_angles"] = "（跳过）"
+
+    # 11) 字符 ↔ 码位 ↔ 冻结清单的自洽检查
+    if not args.skip_charset:
+        results["charset"], outputs["charset"] = run(
+            "11/11 字符码位自洽",
+            [PY, str(SCRIPT_DIR / "check_charset.py")],
+        )
+    else:
+        results["charset"] = True
+        outputs["charset"] = "（跳过）"
 
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
