@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3011.vert" format="2">
+  <advance width="1000"/>
+  <note>
+】竖排：旋转 90°，开口朝上，落在字面上部
+</note>
+  <outline>
+    <contour>
+      <point x="98" y="386" type="line"/>
+      <point x="898" y="386" type="line"/>
+      <point x="898" y="734" type="line"/>
+      <point x="498" y="534" type="line"/>
+      <point x="98" y="734" type="line"/>
+    </contour>
+  </outline>
+</glyph>

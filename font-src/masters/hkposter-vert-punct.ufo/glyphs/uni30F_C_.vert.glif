@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30FC.vert" format="2">
+  <advance width="1000"/>
+  <note>
+ー竖排：竖直长条
+</note>
+  <outline>
+    <contour>
+      <point x="551" y="798" type="line"/>
+      <point x="467" y="798" type="line"/>
+      <point x="467" y="-22" type="line"/>
+      <point x="551" y="-22" type="line"/>
+    </contour>
+  </outline>
+</glyph>

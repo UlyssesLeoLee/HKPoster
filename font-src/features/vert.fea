@@ -1,0 +1,32 @@
+# wave1/vert-punct —— 日文竖排（縦書き）替代形态
+#
+# 竖排与横排的差异只在「位置」与「朝向」，墨形不变：.vert 替代形由
+# font-src/src/hkposter-vert-punct.py 从横排字形旋转 / 平移生成，
+# 因此同一字符竖排与横排粗细一致（同族）。
+#
+# 处理规则（参考 MS Gothic 实测的 vert 替代字形）：
+#   * 句读点（、。 ， ； ：）——移到字面右上；
+#   * 括号类（「」【】（））——整体旋转 90°，开口方向随行文方向：
+#     前括号开口朝下、落在字面下部；后括号开口朝上、落在字面上部；
+#   * ー 与 〜——由横排横杠 / 波形旋转成竖条 / 竖直波形。
+#
+# 注意：下面每一行的两个字形都必须在成品字体里真实存在，
+# 否则 ufo2ft 编译会直接失败（font-src/features/README.md 同此约定）。
+
+feature vert {
+    sub uni3001 by uni3001.vert;   # 、
+    sub uni3002 by uni3002.vert;   # 。
+    sub uniFF0C by uniFF0C.vert;   # ，
+    sub uniFF01 by uniFF01.vert;   # ！
+    sub uniFF1F by uniFF1F.vert;   # ？
+    sub uniFF1A by uniFF1A.vert;   # ：
+    sub uniFF1B by uniFF1B.vert;   # ；
+    sub uni300C by uni300C.vert;   # 「
+    sub uni300D by uni300D.vert;   # 」
+    sub uni3010 by uni3010.vert;   # 【
+    sub uni3011 by uni3011.vert;   # 】
+    sub uniFF08 by uniFF08.vert;   # （
+    sub uniFF09 by uniFF09.vert;   # ）
+    sub uni30FC by uni30FC.vert;   # ー
+    sub uni301C by uni301C.vert;   # 〜
+} vert;
