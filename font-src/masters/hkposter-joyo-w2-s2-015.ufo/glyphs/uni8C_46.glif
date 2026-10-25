@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni8C46" format="2">
+  <advance width="1000"/>
+  <unicode hex="8C46"/>
+  <note>
+豆（Jōyō joyo-w2-s2-015）
+</note>
+  <outline>
+    <contour>
+      <point x="90" y="42" type="line"/>
+      <point x="910" y="42" type="line"/>
+      <point x="910" y="138" type="line"/>
+      <point x="90" y="138" type="line"/>
+    </contour>
+    <contour>
+      <point x="472" y="180" type="line"/>
+      <point x="458" y="280" type="line"/>
+      <point x="374" y="280" type="line"/>
+      <point x="388" y="180" type="line"/>
+    </contour>
+    <contour>
+      <point x="612" y="180" type="line"/>
+      <point x="626" y="280" type="line"/>
+      <point x="542" y="280" type="line"/>
+      <point x="528" y="180" type="line"/>
+    </contour>
+    <contour>
+      <point x="255" y="304" type="line"/>
+      <point x="745" y="304" type="line"/>
+      <point x="745" y="350" type="line"/>
+      <point x="791" y="350" type="line"/>
+      <point x="791" y="590" type="line"/>
+      <point x="750" y="590" type="line"/>
+      <point x="750" y="636" type="line"/>
+      <point x="250" y="636" type="line"/>
+      <point x="250" y="590" type="line"/>
+      <point x="209" y="590" type="line"/>
+      <point x="209" y="350" type="line"/>
+      <point x="255" y="350" type="line"/>
+    </contour>
+    <contour>
+      <point x="699" y="396" type="line"/>
+      <point x="301" y="396" type="line"/>
+      <point x="301" y="544" type="line"/>
+      <point x="699" y="544" type="line"/>
+    </contour>
+    <contour>
+      <point x="120" y="712" type="line"/>
+      <point x="880" y="712" type="line"/>
+      <point x="880" y="808" type="line"/>
+      <point x="120" y="808" type="line"/>
+    </contour>
+  </outline>
+</glyph>
