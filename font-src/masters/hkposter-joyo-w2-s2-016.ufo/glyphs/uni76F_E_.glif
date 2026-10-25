@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni76FE" format="2">
+  <advance width="1000"/>
+  <unicode hex="76FE"/>
+  <note>
+盾：厂 + 十 + 目
+</note>
+  <outline>
+    <contour>
+      <point x="642" y="46" type="line"/>
+      <point x="642" y="224" type="line"/>
+      <point x="838" y="224" type="line"/>
+      <point x="838" y="46" type="line"/>
+      <point x="922" y="46" type="line"/>
+      <point x="922" y="560" type="line"/>
+      <point x="880" y="560" type="line"/>
+      <point x="838" y="560" type="line"/>
+      <point x="642" y="560" type="line"/>
+      <point x="620" y="560" type="line"/>
+      <point x="600" y="560" type="line"/>
+      <point x="558" y="560" type="line"/>
+      <point x="340" y="560" type="line"/>
+      <point x="340" y="476" type="line"/>
+      <point x="414" y="476" type="line"/>
+      <point x="414" y="430" type="line"/>
+      <point x="506" y="430" type="line"/>
+      <point x="506" y="476" type="line"/>
+      <point x="558" y="476" type="line"/>
+      <point x="558" y="46" type="line"/>
+    </contour>
+    <contour>
+      <point x="642" y="428" type="line"/>
+      <point x="642" y="476" type="line"/>
+      <point x="838" y="476" type="line"/>
+      <point x="838" y="428" type="line"/>
+    </contour>
+    <contour>
+      <point x="838" y="308" type="line"/>
+      <point x="642" y="308" type="line"/>
+      <point x="642" y="344" type="line"/>
+      <point x="838" y="344" type="line"/>
+    </contour>
+    <contour>
+      <point x="238" y="694" type="line"/>
+      <point x="84" y="133" type="line"/>
+      <point x="176" y="107" type="line"/>
+      <point x="337" y="694" type="line"/>
+      <point x="880" y="694" type="line"/>
+      <point x="880" y="786" type="line"/>
+      <point x="150" y="786" type="line"/>
+      <point x="150" y="694" type="line"/>
+    </contour>
+  </outline>
+</glyph>
