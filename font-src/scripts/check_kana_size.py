@@ -49,6 +49,7 @@ import sys
 from pathlib import Path
 
 from fontTools.ttLib import TTFont, TTCollection
+from fontTools.pens.areaPen import AreaPen
 from fontTools.pens.boundsPen import BoundsPen
 
 if hasattr(sys, "stdout") and "reconfigure" in dir(sys.stdout):
@@ -56,7 +57,15 @@ if hasattr(sys, "stdout") and "reconfigure" in dir(sys.stdout):
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_FONT = ROOT / "font-src" / "dist" / "HKPoster-Heavy.ttf"
-DEFAULT_REF = "C:/Windows/Fonts/YuGothB.ttc"
+
+# 参照字体候选，**按顺序取第一个存在的**。
+# 硬约束（项目所有者 2026-10-25）：参照字体必须**免费商用、开源、无任何限制**。
+# Yu Gothic / Meiryo / MS Gothic / UD Digi Kyokasho / 华文琥珀 等商用授权字体**不得作参照**。
+REF_CANDIDATES = [
+    Path("E:/hkposter-refs/MPLUS1p-Black.ttf"),      # SIL OFL 1.1 几何黑·Black
+    Path("E:/hkposter-refs/ZenKakuGothicNew-Black.ttf"),  # SIL OFL 1.1 硬切黑
+    Path("C:/Windows/Fonts/NotoSansJP-VF.ttf"),      # SIL OFL 1.1 骨架交叉校核
+]
 
 KANA_RANGES = ((0x3041, 0x309F), (0x30A0, 0x30FF))
 
@@ -96,8 +105,12 @@ def _load_ref(path: Path):
 def main() -> int:
     ap = argparse.ArgumentParser(description="假名字面尺寸验收")
     ap.add_argument("--font", default=str(DEFAULT_FONT))
-    ap.add_argument("--reference", default=DEFAULT_REF,
-                    help="参照字体（标准日文骨架），用于逐字比字高；不存在则跳过该判据")
+    ap.add_argument("--reference", default="",
+                    help="参照字体；留空则按 REF_CANDIDATES 取第一个存在的（均为开源可商用）")
+    ap.add_argument("--ink-min", type=float, default=0.54,
+                    help="假名/汉字 墨量比下限（项目所有者 2026-10-25 定 0.55）")
+    ap.add_argument("--ink-max", type=float, default=0.56,
+                    help="假名/汉字 墨量比上限")
     ap.add_argument("--ratio-min", type=float, default=0.85,
                     help="本字体/参照 的字高比下限（逐字）")
     ap.add_argument("--ratio-max", type=float, default=1.15,
@@ -127,13 +140,21 @@ def main() -> int:
 
     ref_cmap = ref_gs = None
     ref_upm = None
-    ref_path = Path(args.reference) if args.reference else None
-    if ref_path and ref_path.exists():
+    ref_path = None
+    if args.reference:
+        cand = [Path(args.reference)]
+    else:
+        cand = REF_CANDIDATES
+    for c in cand:
+        if c and c.exists():
+            ref_path = c
+            break
+    if ref_path is not None:
         ref_cmap, ref_gs, ref_upm = _load_ref(ref_path)
         if not ref_upm:
             ref_cmap = None
     else:
-        print(f"[kana-size] 参照字体不存在：{ref_path} —— 跳过「逐字比参照」判据")
+        print("[kana-size] 找不到参照字体 —— 跳过「逐字比参照」判据")
     our_upm = f["head"].unitsPerEm
 
     cjk_h = []
@@ -223,10 +244,34 @@ def main() -> int:
         if abs(cx - 500.0) > args.small_cx_tol or not (args.small_bottom_lo <= bottom <= args.small_bottom_hi):
             place_bad.append({**r, "center_x": round(cx, 1), "bottom": round(bottom, 1)})
 
+    # 假名 / 汉字 的墨量比 —— 「假名有没有跟汉字同黑度」
+    def _ink(cp):
+        n = cmap.get(cp)
+        if not n:
+            return None
+        p = AreaPen(gs)
+        gs[n].draw(p)
+        return abs(p.value) / (our_upm * our_upm)
+
+    def _med_ink(chars):
+        vals = [_ink(ord(c)) for c in chars]
+        vals = [v for v in vals if v is not None]
+        return statistics.median(vals) if vals else None
+
+    cjk_ink = _med_ink(CJK_SAMPLE)
+    hira_ink = _med_ink("あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん")
+    kata_ink = _med_ink("アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン")
+    ink_ratio = None
+    if cjk_ink and hira_ink and kata_ink:
+        ink_ratio = ((hira_ink + kata_ink) / 2) / cjk_ink
+
     print("[kana-size] 汉字字高中位 = %s" % (round(cjk_median, 1) if cjk_median else "N/A"))
     print("[kana-size] 全尺寸假名字高中位 = %.1f  (n=%d)" % (full_median, len(full)))
     print("[kana-size] 假名/汉字 字高比 = %.3f  (目标 %.2f..%.2f)"
           % (family, args.family_min, args.family_max))
+    if ink_ratio is not None:
+        print("[kana-size] 假名/汉字 墨量比 = %.3f  (目标 %.2f..%.2f)"
+              % (ink_ratio, args.ink_min, args.ink_max))
     if rel_bad:
         rels = [r["rel_ref"] for r in rel_bad]
         print("[kana-size] 与参照逐字比：中位 %.3f  n=%d" % (statistics.median(rels), len(rels)))
@@ -266,6 +311,10 @@ def main() -> int:
         problems += 1
         print(f"[kana-size] FAIL 假名/汉字字高比 {family:.3f} 不在 "
               f"{args.family_min}..{args.family_max}")
+    if ink_ratio is not None and not (args.ink_min <= ink_ratio <= args.ink_max):
+        problems += 1
+        print(f"[kana-size] FAIL 假名/汉字墨量比 {ink_ratio:.3f} 不在 "
+              f"{args.ink_min}..{args.ink_max}（假名要跟汉字同黑度）")
 
     report = {
         "font": str(font_path),
@@ -273,6 +322,7 @@ def main() -> int:
         "cjk_median_height": cjk_median,
         "kana_full_median_height": full_median,
         "family_ratio": round(family, 4),
+        "ink_ratio": round(ink_ratio, 4) if ink_ratio is not None else None,
         "missing": missing,
         "rel_ref_off": rel_bad,
         "small_off": small_bad,

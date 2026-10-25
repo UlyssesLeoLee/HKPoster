@@ -67,6 +67,12 @@ python font-src/scripts/lane_prompt.py --list              # 列出全部 lane�
   写路径时要用显式变量，不要用数组下标。
 - **假名要求（项目所有者 2026-10-25）**：假名骨架必须保持标准形，只改笔画处理（粗手写体）；
   缺字是硬门禁（`check_kana_fidelity.py`）。判据见 `docs/11` §6.8。
+- **参照字体必须免费商用、开源、无任何限制**（项目所有者 2026-10-25）：
+  Yu Gothic / Meiryo / MS Gothic / UD Digi Kyokasho / BIZ UD / 华文琥珀 等**商用授权字体不得作参照**。
+  当前参照：`E:/hkposter-refs/`（M PLUS 1p Black = 主参照，Noto Sans JP Black = 骨架交叉校核，
+  均为 SIL OFL 1.1）。**只参考比例与骨架，不描轮廓。**
+- **一条 lane 只能改自己的文件**：上一轮 kana-hira 的提交越界改了 kana-kata 的 recipe。
+  跨 lane 改文件 = 交付无效。
 - 规划与缺口见 `docs/11_多文种规划.md`。
 
 ## 环境注意
