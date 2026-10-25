@@ -1,0 +1,86 @@
+{
+  "note": "假名与字形参照字体清单。硬约束（项目所有者 2026-10-25）：参照字体必须**免费商用、开源、无任何限制**。商用授权字体（Yu Gothic / Meiryo / MS Gothic / UD Digi Kyokasho / BIZ UD / 华文琥珀 / 幼圆 等）一律不得作参照。",
+  "licenses": {
+    "MPLUS1p-Black.ttf": "SIL Open Font License 1.1",
+    "ZenKakuGothicNew-Black.ttf": "SIL Open Font License 1.1",
+    "ZenMaruGothic-Black.ttf": "SIL Open Font License 1.1",
+    "MPLUSRounded1c-Black.ttf": "SIL Open Font License 1.1",
+    "KleeOne-SemiBold.ttf": "SIL Open Font License 1.1",
+    "YuseiMagic-Regular.ttf": "SIL Open Font License 1.1",
+    "KaiseiDecol-Regular.ttf": "SIL Open Font License 1.1",
+    "KiwiMaru-Regular.ttf": "SIL Open Font License 1.1"
+  },
+  "source": "https://github.com/google/fonts/tree/main/ofl",
+  "install_dir": "E:/hkposter-refs",
+  "install_note": "字体文件不入库（体积大），按下面的 url 自行下载到 install_dir。",
+  "fonts": [
+    {
+      "file": "MPLUS1p-Black.ttf",
+      "name": "M PLUS 1p Black",
+      "role": "主参照",
+      "reason": "几何硬切、Black 字重，笔画构造与本字体汉字同构；它的「假名/汉字 墨量比」= 0.567，正落在项目所有者定的 0.55 目标上。",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/mplus1p/MPLUS1p-Black.ttf"
+    },
+    {
+      "file": null,
+      "name": "Noto Sans JP (variable, wght=900)",
+      "role": "骨架交叉校核",
+      "reason": "最标准的开源日文设计，用来确认「一眼看得出是哪个假名」；只参考比例与骨架，不描轮廓。",
+      "url": "系统自带 C:/Windows/Fonts/NotoSansJP-VF.ttf"
+    },
+    {
+      "file": "ZenKakuGothicNew-Black.ttf",
+      "name": "Zen Kaku Gothic New Black",
+      "role": "备选参照",
+      "reason": "更方的硬切黑，转折处理更锐利。",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/zenkakugothicnew/ZenKakuGothicNew-Black.ttf"
+    },
+    {
+      "file": "ZenMaruGothic-Black.ttf",
+      "name": "Zen Maru Gothic Black",
+      "role": "备选（圆润向）",
+      "reason": "若要更圆润的海报调性时用；「假名/汉字 墨量比」= 0.513。",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/zenmarugothic/ZenMaruGothic-Black.ttf"
+    },
+    {
+      "file": "MPLUSRounded1c-Black.ttf",
+      "name": "M PLUS Rounded 1c Black",
+      "role": "备选（圆润向）",
+      "reason": "「假名/汉字 墨量比」= 0.568，笔画最圆最重。",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/mplusrounded1c/MPLUSRounded1c-Black.ttf"
+    },
+    {
+      "file": "KleeOne-SemiBold.ttf",
+      "name": "Klee One SemiBold",
+      "role": "手写味参照（仅看手感，不作主参照）",
+      "reason": "教科書体（手書き衍生）Bold，手味最接近海报汉字，但整体太轻（「假名/汉字 墨量比」0.409）。",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kleeone/KleeOne-SemiBold.ttf"
+    },
+    {
+      "file": "YuseiMagic-Regular.ttf",
+      "name": "Yusei Magic",
+      "role": "手写味参照（仅看手感）",
+      "reason": "手書き magical，笔刷感强；与本字体硬切几何的汉字差距大，不作主参照。",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/yuseimagic/YuseiMagic-Regular.ttf"
+    },
+    {
+      "file": "KaiseiDecol-Regular.ttf",
+      "name": "Kaisei Decol",
+      "role": "装饰体参照（仅看效果）",
+      "reason": "装飾/海报笔刷体，汉字太轻，不适合作参照。",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kaiseidecol/KaiseiDecol-Regular.ttf"
+    },
+    {
+      "file": "KiwiMaru-Regular.ttf",
+      "name": "Kiwi Maru",
+      "role": "手写古风参照（仅看效果）",
+      "reason": "手書き古风，日文覆盖不全，仅作效果参考。",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kiwimaru/KiwiMaru-Regular.ttf"
+    }
+  ],
+  "usage_rules": [
+    "只参考**比例、骨架、笔画粗细关系、转折处理**；**不描轮廓** —— 我们的字形是手工重画的。",
+    "参照字体的墨量/字高数据可以用作**判据**（例：M PLUS 1p Black 的假名/汉字 墨量比 0.567）。",
+    "商用授权字体即使系统里已经装着，也不许作参照（项目所有者 2026-10-25 明确要求）。"
+  ]
+}
