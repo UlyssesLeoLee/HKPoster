@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5727" format="2">
+  <advance width="1000"/>
+  <unicode hex="5727"/>
+  <note>
+圧：厂 + 土
+</note>
+  <outline>
+    <contour>
+      <point x="562" y="384" type="line"/>
+      <point x="562" y="96" type="line"/>
+      <point x="300" y="96" type="line"/>
+      <point x="300" y="0" type="line"/>
+      <point x="900" y="0" type="line"/>
+      <point x="900" y="96" type="line"/>
+      <point x="658" y="96" type="line"/>
+      <point x="658" y="384" type="line"/>
+      <point x="880" y="384" type="line"/>
+      <point x="880" y="476" type="line"/>
+      <point x="340" y="476" type="line"/>
+      <point x="340" y="384" type="line"/>
+    </contour>
+    <contour>
+      <point x="110" y="724" type="line"/>
+      <point x="191" y="724" type="line"/>
+      <point x="48" y="19" type="line"/>
+      <point x="142" y="0" type="line"/>
+      <point x="289" y="724" type="line"/>
+      <point x="890" y="724" type="line"/>
+      <point x="890" y="820" type="line"/>
+      <point x="110" y="820" type="line"/>
+    </contour>
+  </outline>
+</glyph>

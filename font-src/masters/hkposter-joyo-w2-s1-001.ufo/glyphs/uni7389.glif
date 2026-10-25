@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni7389" format="2">
+  <advance width="1000"/>
+  <unicode hex="7389"/>
+  <note>
+玉：王 + 点
+</note>
+  <outline>
+    <contour>
+      <point x="890" y="0" type="line"/>
+      <point x="890" y="96" type="line"/>
+      <point x="548" y="96" type="line"/>
+      <point x="548" y="372" type="line"/>
+      <point x="870" y="372" type="line"/>
+      <point x="870" y="468" type="line"/>
+      <point x="130" y="468" type="line"/>
+      <point x="130" y="372" type="line"/>
+      <point x="452" y="372" type="line"/>
+      <point x="452" y="96" type="line"/>
+      <point x="110" y="96" type="line"/>
+      <point x="110" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="814" y="275" type="line"/>
+      <point x="710" y="275" type="line"/>
+      <point x="710" y="155" type="line"/>
+      <point x="814" y="155" type="line"/>
+    </contour>
+    <contour>
+      <point x="150" y="724" type="line"/>
+      <point x="850" y="724" type="line"/>
+      <point x="850" y="820" type="line"/>
+      <point x="150" y="820" type="line"/>
+    </contour>
+  </outline>
+</glyph>

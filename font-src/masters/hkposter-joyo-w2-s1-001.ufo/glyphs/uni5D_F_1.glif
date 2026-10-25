@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5DF1" format="2">
+  <advance width="1000"/>
+  <unicode hex="5DF1"/>
+  <note>
+己：横折 + 一 + 乚
+</note>
+  <outline>
+    <contour>
+      <point x="676" y="125" type="line"/>
+      <point x="690" y="106" type="line"/>
+      <point x="276" y="106" type="line"/>
+      <point x="276" y="434" type="line"/>
+      <point x="660" y="434" type="line"/>
+      <point x="660" y="526" type="line"/>
+      <point x="230" y="526" type="line"/>
+      <point x="230" y="480" type="line"/>
+      <point x="184" y="480" type="line"/>
+      <point x="184" y="60" type="line"/>
+      <point x="230" y="60" type="line"/>
+      <point x="230" y="14" type="line"/>
+      <point x="770" y="14" type="line"/>
+      <point x="770" y="79" type="line"/>
+      <point x="799" y="100" type="line"/>
+      <point x="744" y="175" type="line"/>
+    </contour>
+    <contour>
+      <point x="230" y="786" type="line"/>
+      <point x="230" y="694" type="line"/>
+      <point x="724" y="694" type="line"/>
+      <point x="724" y="560" type="line"/>
+      <point x="816" y="560" type="line"/>
+      <point x="816" y="740" type="line"/>
+      <point x="770" y="740" type="line"/>
+      <point x="770" y="786" type="line"/>
+    </contour>
+  </outline>
+</glyph>
