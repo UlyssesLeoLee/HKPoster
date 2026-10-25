@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import platform
 import shutil
 import subprocess
@@ -47,6 +48,37 @@ from hkbuild import ASCENDER, DESCENDER, UPM, notdef_glyph, space_glyph  # noqa:
 FAMILY = "HK Poster"
 STYLE = "Heavy"
 POSTSCRIPT_NAME = "HKPoster-Heavy"
+
+
+def git_commit_timestamp() -> str:
+    """HEAD 提交的 Unix 时间戳，用作 SOURCE_DATE_EPOCH。"""
+    try:
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%ct"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=20,
+        )
+        return result.stdout.strip()
+    except Exception:  # noqa: BLE001
+        return ""
+
+
+def ensure_reproducible() -> str:
+    """固定 SOURCE_DATE_EPOCH，让同一份源码每次构建出同一份二进制。
+
+    没有它，head.created 会带构建时刻，sha256 每次都变——
+    docs/05 §6 要求的「生成文件哈希」就无法作为产物身份凭证。
+    默认取 HEAD 提交时间（产物可追溯到具体提交），
+    调用方显式设置 SOURCE_DATE_EPOCH 时以调用方为准。
+    """
+    existing = os.environ.get("SOURCE_DATE_EPOCH")
+    if existing:
+        return existing
+    stamp = git_commit_timestamp() or "1735689600"  # 兜底：2025-01-01T00:00:00Z
+    os.environ["SOURCE_DATE_EPOCH"] = stamp
+    return stamp
 
 
 def rel_path(path: Path) -> str:
@@ -212,6 +244,8 @@ def main() -> int:
     parser.add_argument("--keep-temp", action="store_true", help="保留合成 UFO")
     args = parser.parse_args()
 
+    epoch = ensure_reproducible()
+    print(f"[build_font] SOURCE_DATE_EPOCH={epoch}（产物按此时间戳定版，构建可复现）")
     sources = collect_sources(args.sources)
     feature_files = collect_features()
     out_dir = Path(args.out).resolve()
