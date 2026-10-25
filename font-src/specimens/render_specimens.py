@@ -58,6 +58,12 @@ FOUR_WORDS = ["英雄本色", "旺角風雲", "霓虹之夜", "黑夜追擊"]
 # 英文标题行
 LATIN_TITLES = ["CITY OF SHADOWS", "LAST BULLET", "1997", "HONG KONG"]
 
+# 日文：假名（平 + 片）与日文标题行（Wave 1 起）
+KANA_HIRAGANA = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん"
+KANA_KATAKANA = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン"
+KANA_VOICED = "がぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽ"
+KANA_TITLES = ["ひらがな カタカナ", "东京 夜行", "ゲーム タイトル", "映画 タイトル 1997"]
+
 # 缺字标记色（洋红：在白底、黑底、红字、黄字四种底色上都可辨）
 FALLBACK_COLOR = "#E0249B"
 
@@ -364,6 +370,41 @@ def build_blocks(spec: Specimen, preset_name: str, custom_text: str | None) -> l
         )
         return blocks
 
+    if preset_name == "kana":
+        blocks.append(
+            Block(
+                title="F · 平假名 Hiragana",
+                kind="grid",
+                items=list(KANA_HIRAGANA),
+                cell=size * 1.0,
+            )
+        )
+        blocks.append(
+            Block(
+                title="G · 片假名 Katakana",
+                kind="grid",
+                items=list(KANA_KATAKANA),
+                cell=size * 1.0,
+            )
+        )
+        blocks.append(
+            Block(
+                title="H · 带浊音假名 Voiced kana",
+                kind="grid",
+                items=list(KANA_VOICED),
+                cell=size * 1.0,
+            )
+        )
+        blocks.append(
+            Block(
+                title="I · 日文标题行 Japanese titles",
+                kind="lines",
+                items=list(KANA_TITLES),
+                line_height=spec.bundle.em_px,
+            )
+        )
+        return blocks
+
     blocks.append(
         Block(
             title="A · 单字 Single characters",
@@ -649,6 +690,7 @@ PRESETS = {
     "effect-red": PRESET_EFFECT_RED,
     "effect-yellow": PRESET_EFFECT_YELLOW,
     "latin": Preset("latin", "英文标题行 English titles", "#000000", "#FFFFFF"),
+    "kana": Preset("kana", "日文样张 Japanese (kana + titles)", "#000000", "#FFFFFF"),
 }
 
 ALL_JOBS = [
@@ -659,6 +701,7 @@ ALL_JOBS = [
     ("specimen-effect-red.png", "effect-red", 96, {}),
     ("specimen-effect-yellow.png", "effect-yellow", 96, {}),
     ("specimen-latin.png", "latin", 120, {"tracking": 0.0}),
+    ("specimen-kana.png", "kana", 96, {}),
 ]
 
 
