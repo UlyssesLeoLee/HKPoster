@@ -115,6 +115,22 @@ U_SMALL_RATIO = 0.70
 # ---------------------------------------------------------------------------
 
 # 基础形：码位 -> (说明, 笔画表)
+# 基础形：码位 -> (说明, 笔画表)
+def _circle(cx: float, cy: float, r: float, n: int = 32) -> list[tuple[float, float]]:
+    """正多边形近似的圆（点列，逆时针）—— 用于环形记号（半浊点 ゚）。
+
+    半浊点按定义就是**圆圈**：参照字体的 ゚ 包围盒是正方形
+    （M PLUS 1p Black 320×320、Noto Sans JP 211×211）。
+    把它改成斜切平行四边形会让 パ/ピ/プ/ペ/ポ 失去「圆圈」这一识别线索，
+    违反「整体字形必须还保持原有状态」。浊点（゛ 两枚斜画）才用 slant=26。
+    """
+    return [
+        (cx + r * math.cos(2.0 * math.pi * i / n),
+         cy + r * math.sin(2.0 * math.pi * i / n))
+        for i in range(n)
+    ]
+
+
 BASE: dict[int, tuple[str, list]] = {
     0x30A2: ("ア：短横居中偏上，右端接短撇，长斜笔自左上向右下贯穿", [
         ("H", 320, 720, 600, W_SEC),
@@ -504,9 +520,14 @@ DAKUTEN: list = [
     ("DOT", 878, 630, 64, 112, 26),
 ]
 
-# 右上角半浊音记号：一枚斜切平行四边形，与浊点同一套语言（GLY-004）
+# 右上角半浊音记号：一枚**小圆环**。
+# ⚠️ 不要改成斜切平行四边形 —— 半浊点按定义就是圆圈：
+# 参照字体的 ゚ 包围盒是正方形（M PLUS 1p Black 320×320、Noto Sans JP 211×211），
+# 斜切块会让 パ/ピ/プ/ペ/ポ 失去「圆圈」这一识别线索，
+# 直接违反「整体字形必须还保持原有状态」。
+# 浊点（゛ 两枚斜画）才用 slant=26 的斜切平行四边形。
 HANDAKUTEN: list = [
-    ("DOT", 840, 650, 80, 100, 26),
+    ("RING", _circle(840, 650, 68), _circle(840, 650, 31)),
 ]
 
 
@@ -538,6 +559,11 @@ def _scale_about(strokes: list, s: float, about: tuple[float, float]) -> list:
             # 点/记号：w 与 slant 是绝对量（宽度档 / 汉字倾切角度档），只有高度 h 随缩放走
             out.append(("DOT", _sx(st[1], ax, s), _sy(st[2], ay, s),
                         st[3], int(round(st[4] * s)), st[5]))
+        elif k == "RING":
+            # 环形记号（半浊点）：点列整体缩放
+            outer = [(_sx(px, ax, s), _sy(py, ay, s)) for px, py in st[1]]
+            inner = [(_sx(px, ax, s), _sy(py, ay, s)) for px, py in st[2]]
+            out.append(("RING", outer, inner))
         else:
             out.append(st)
     return out
@@ -560,6 +586,12 @@ def _translate(strokes: list, dx: float, dy: float) -> list:
         elif k == "DOT":
             out.append(("DOT", st[1] + int(round(dx)), st[2] + int(round(dy)),
                         st[3], st[4], st[5]))
+        elif k == "RING":
+            ox = int(round(dx))
+            oy = int(round(dy))
+            outer = [(px + ox, py + oy) for px, py in st[1]]
+            inner = [(px + ox, py + oy) for px, py in st[2]]
+            out.append(("RING", outer, inner))
         else:
             out.append(st)
     return out
@@ -593,6 +625,10 @@ def _ink_box(strokes: list) -> tuple[float, float, float, float]:
             xs += [cx - w / 2.0, cx + w / 2.0,
                    cx - w / 2.0 + slant, cx + w / 2.0 + slant]
             ys += [cy - h / 2.0, cy + h / 2.0]
+        elif k == "RING":
+            # 环形记号（半浊点）：墨迹范围 = 外圈
+            xs += [px for px, _ in st[1]]
+            ys += [py for _, py in st[1]]
     return (min(xs), min(ys), max(xs), max(ys))
 
 
@@ -708,6 +744,8 @@ def _render(name: str, codepoint: int, strokes: list, note: str) -> Glyph:
             g.diag(st[1], st[2], st[3], st[4], weight=st[5])
         elif k == "DOT":
             g.dot(st[1], st[2], w=st[3], h=st[4], slant=st[5])
+        elif k == "RING":
+            g.ring(st[1], st[2])
     return g
 
 
