@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni65A4" format="2">
+  <advance width="1000"/>
+  <unicode hex="65A4"/>
+  <note>
+斤 4画：丿+丿+一+丨
+</note>
+  <outline>
+    <contour>
+      <point x="572" y="30" type="line"/>
+      <point x="668" y="30" type="line"/>
+      <point x="668" y="432" type="line"/>
+      <point x="890" y="432" type="line"/>
+      <point x="890" y="528" type="line"/>
+      <point x="327" y="528" type="line"/>
+      <point x="342" y="613" type="line"/>
+      <point x="560" y="717" type="line"/>
+      <point x="520" y="803" type="line"/>
+      <point x="255" y="678" type="line"/>
+      <point x="263" y="661" type="line"/>
+      <point x="253" y="663" type="line"/>
+      <point x="148" y="46" type="line"/>
+      <point x="242" y="30" type="line"/>
+      <point x="311" y="432" type="line"/>
+      <point x="572" y="432" type="line"/>
+    </contour>
+  </outline>
+</glyph>

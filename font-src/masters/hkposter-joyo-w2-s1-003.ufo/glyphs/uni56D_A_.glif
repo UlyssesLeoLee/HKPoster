@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni56DA" format="2">
+  <advance width="1000"/>
+  <unicode hex="56DA"/>
+  <note>
+囚 5画：囗(3)+人(2)
+</note>
+  <outline>
+    <contour>
+      <point x="794" y="30" type="line"/>
+      <point x="842" y="30" type="line"/>
+      <point x="890" y="30" type="line"/>
+      <point x="890" y="790" type="line"/>
+      <point x="842" y="790" type="line"/>
+      <point x="794" y="790" type="line"/>
+      <point x="186" y="790" type="line"/>
+      <point x="138" y="790" type="line"/>
+      <point x="90" y="790" type="line"/>
+      <point x="90" y="30" type="line"/>
+      <point x="138" y="30" type="line"/>
+      <point x="186" y="30" type="line"/>
+    </contour>
+    <contour>
+      <point x="794" y="126" type="line"/>
+      <point x="186" y="126" type="line"/>
+      <point x="186" y="694" type="line"/>
+      <point x="794" y="694" type="line"/>
+    </contour>
+    <contour>
+      <point x="474" y="407" type="line"/>
+      <point x="653" y="172" type="line"/>
+      <point x="727" y="228" type="line"/>
+      <point x="525" y="492" type="line"/>
+      <point x="580" y="587" type="line"/>
+      <point x="500" y="633" type="line"/>
+      <point x="260" y="223" type="line"/>
+      <point x="340" y="177" type="line"/>
+    </contour>
+  </outline>
+</glyph>
