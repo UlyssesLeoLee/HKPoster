@@ -34,16 +34,42 @@ DENSITY_CLASSES = [
 ]
 
 
+def covered_by_masters() -> set[str]:
+    """当前 master 已经提供的汉字（码位集合）。
+
+    Jōyō 集合与我们的繁体 12 字**完全重叠**（港影城火夜風龍義警愛無道 都在常用漢字表里）。
+    重画一遍既浪费，还会在合成时撞码（同一码位两个字形）。
+    所以分批时必须先排除已覆盖的字。
+    """
+    from ufoLib2 import Font
+
+    covered: set[str] = set()
+    masters = FONT_SRC / "masters"
+    if not masters.is_dir():
+        return covered
+    for master in sorted(masters.glob("*.ufo")):
+        font = Font.open(str(master))
+        for name in font.keys():
+            for codepoint in font[name].unicodes:
+                if 0x4E00 <= codepoint <= 0x9FFF:
+                    covered.add(chr(codepoint))
+    return covered
+
+
 def main() -> int:
+    wave = "w2"  # 批次轮次前缀：w1 已交付（见 data/lane-prompts/joyo-s1-*.md）
     meta = json.loads(META.read_text(encoding="utf-8"))
     characters = meta["characters"]
     if len(characters) != 2136:
         print(f"[batches] 元数据条目 {len(characters)} != 2136，先修数据")
         return 1
 
+    covered = covered_by_masters()
     buckets: dict[str, list[dict]] = defaultdict(list)
     unassigned: list[dict] = []
     for char, info in characters.items():
+        if char in covered:
+            continue  # 已有字形，跳过（不重画，也就不会撞码）
         strokes = info.get("strokes") or 0
         frequency = info.get("frequency")
         placed = False
@@ -86,7 +112,7 @@ def main() -> int:
             chunk = items[index : index + size]
             batches.append(
                 {
-                    "id": f"joyo-{name}-{index // size + 1:03d}",
+                    "id": f"joyo-{wave}-{name}-{index // size + 1:03d}",
                     "class": name,
                     "size": len(chunk),
                     "stroke_range": [min(c["strokes"] for c in chunk), max(c["strokes"] for c in chunk)],
@@ -97,10 +123,13 @@ def main() -> int:
                 }
             )
 
+    joyo_covered = {c for c in covered if c in characters}
     payload = {
         "source": meta["source"],
+        "wave": wave,
         "total": sum(b["size"] for b in batches),
         "batch_count": len(batches),
+        "already_covered": sorted(joyo_covered),
         "unassigned_strokes": [item["char"] for item in unassigned],
         "density_classes": [
             {"name": n, "strokes": [lo, hi], "batch_size": size} for n, lo, hi, size in DENSITY_CLASSES
@@ -109,9 +138,10 @@ def main() -> int:
     }
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    print(f"[batches] 总字形 {payload['total']}，批次数 {payload['batch_count']}")
-    if payload["total"] != 2136:
-        print(f"[batches] 警告：分批总数 {payload['total']} != 2136（必须有字被漏掉）")
+    print(f"[batches] 已被其他 master 覆盖的 Jōyō 字：{len(joyo_covered)} 个（不重画，避免撞码）")
+    print(f"[batches] 待制作 {payload['total']} 字，批次数 {payload['batch_count']}")
+    if payload["total"] + len(joyo_covered) != 2136:
+        print(f"[batches] 警告：{payload['total']} + {len(joyo_covered)} != 2136（必须有字被漏掉）")
     for name, _lo, _hi, _size in DENSITY_CLASSES:
         count = len(buckets.get(name, []))
         lanes = sum(1 for b in batches if b["class"] == name)

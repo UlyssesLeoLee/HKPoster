@@ -149,6 +149,15 @@ def composite(sources: list[Path]) -> tuple[Font, list[str]]:
                 conflicts.append(f"{name}（{source.name} 与既有 master 重复）")
                 continue
             base[name] = other[name]
+    if conflicts:
+        # 重名字形意味着「同一个码位有两个字形」，合成时只会保留先到的那个——
+        # 另一份会被静默丢掉。必须在这里失败，不能只打一行警告。
+        detail = "\n        ".join(conflicts)
+        raise SystemExit(
+            f"[build_font] 检测到 {len(conflicts)} 处重名字形，拒绝合成：\n        {detail}\n"
+            "        处理方式：同一个码位只保留一份字形（另一条 lane 删掉它并重新生成），"
+            "或改成不同码位/不同 glyph 名的变体。"
+        )
     if ".notdef" not in base:
         glyph = notdef_glyph()
         target = base.newGlyph(".notdef")

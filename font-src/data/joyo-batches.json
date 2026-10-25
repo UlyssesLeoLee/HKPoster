@@ -1,7 +1,140 @@
 {
  "source": "Kanjidic2 (edrdg) + Project X0213 常用漢字表(2010)",
- "total": 2136,
- "batch_count": 93,
+ "wave": "w2",
+ "total": 2006,
+ "batch_count": 90,
+ "already_covered": [
+  "一",
+  "七",
+  "万",
+  "三",
+  "上",
+  "下",
+  "不",
+  "与",
+  "世",
+  "中",
+  "丸",
+  "主",
+  "久",
+  "九",
+  "予",
+  "二",
+  "五",
+  "井",
+  "亡",
+  "人",
+  "今",
+  "介",
+  "仕",
+  "他",
+  "付",
+  "代",
+  "以",
+  "元",
+  "入",
+  "八",
+  "公",
+  "六",
+  "内",
+  "円",
+  "写",
+  "処",
+  "出",
+  "分",
+  "切",
+  "力",
+  "加",
+  "化",
+  "北",
+  "区",
+  "十",
+  "千",
+  "午",
+  "半",
+  "去",
+  "及",
+  "友",
+  "反",
+  "収",
+  "口",
+  "古",
+  "可",
+  "台",
+  "史",
+  "右",
+  "号",
+  "四",
+  "土",
+  "城",
+  "士",
+  "外",
+  "夜",
+  "大",
+  "天",
+  "太",
+  "夫",
+  "央",
+  "失",
+  "女",
+  "子",
+  "小",
+  "少",
+  "山",
+  "川",
+  "工",
+  "左",
+  "市",
+  "平",
+  "広",
+  "弁",
+  "引",
+  "影",
+  "心",
+  "必",
+  "愛",
+  "戸",
+  "手",
+  "打",
+  "支",
+  "文",
+  "方",
+  "日",
+  "旧",
+  "月",
+  "木",
+  "未",
+  "末",
+  "本",
+  "止",
+  "正",
+  "母",
+  "比",
+  "氏",
+  "民",
+  "水",
+  "港",
+  "火",
+  "無",
+  "父",
+  "王",
+  "生",
+  "用",
+  "田",
+  "由",
+  "申",
+  "白",
+  "目",
+  "石",
+  "示",
+  "立",
+  "義",
+  "警",
+  "辺",
+  "込",
+  "道",
+  "風"
+ ],
  "unassigned_strokes": [],
  "density_classes": [
   {
@@ -47,883 +180,7 @@
  ],
  "batches": [
   {
-   "id": "joyo-s1-001",
-   "class": "s1",
-   "size": 40,
-   "stroke_range": [
-    1,
-    5
-   ],
-   "min_frequency": 1,
-   "characters": [
-    {
-     "char": "日",
-     "unicode": "U+65E5",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 1
-    },
-    {
-     "char": "一",
-     "unicode": "U+4E00",
-     "strokes": 1,
-     "grade": 1,
-     "frequency": 2
-    },
-    {
-     "char": "人",
-     "unicode": "U+4EBA",
-     "strokes": 2,
-     "grade": 1,
-     "frequency": 5
-    },
-    {
-     "char": "大",
-     "unicode": "U+5927",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 7
-    },
-    {
-     "char": "十",
-     "unicode": "U+5341",
-     "strokes": 2,
-     "grade": 1,
-     "frequency": 8
-    },
-    {
-     "char": "二",
-     "unicode": "U+4E8C",
-     "strokes": 2,
-     "grade": 1,
-     "frequency": 9
-    },
-    {
-     "char": "本",
-     "unicode": "U+672C",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 10
-    },
-    {
-     "char": "中",
-     "unicode": "U+4E2D",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 11
-    },
-    {
-     "char": "出",
-     "unicode": "U+51FA",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 13
-    },
-    {
-     "char": "三",
-     "unicode": "U+4E09",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 14
-    },
-    {
-     "char": "月",
-     "unicode": "U+6708",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 23
-    },
-    {
-     "char": "分",
-     "unicode": "U+5206",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 24
-    },
-    {
-     "char": "民",
-     "unicode": "U+6C11",
-     "strokes": 5,
-     "grade": 4,
-     "frequency": 28
-    },
-    {
-     "char": "生",
-     "unicode": "U+751F",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 29
-    },
-    {
-     "char": "五",
-     "unicode": "U+4E94",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 31
-    },
-    {
-     "char": "上",
-     "unicode": "U+4E0A",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 35
-    },
-    {
-     "char": "市",
-     "unicode": "U+5E02",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 42
-    },
-    {
-     "char": "内",
-     "unicode": "U+5185",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 44
-    },
-    {
-     "char": "方",
-     "unicode": "U+65B9",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 46
-    },
-    {
-     "char": "四",
-     "unicode": "U+56DB",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 47
-    },
-    {
-     "char": "今",
-     "unicode": "U+4ECA",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 49
-    },
-    {
-     "char": "九",
-     "unicode": "U+4E5D",
-     "strokes": 2,
-     "grade": 1,
-     "frequency": 55
-    },
-    {
-     "char": "入",
-     "unicode": "U+5165",
-     "strokes": 2,
-     "grade": 1,
-     "frequency": 56
-    },
-    {
-     "char": "立",
-     "unicode": "U+7ACB",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 58
-    },
-    {
-     "char": "手",
-     "unicode": "U+624B",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 60
-    },
-    {
-     "char": "力",
-     "unicode": "U+529B",
-     "strokes": 2,
-     "grade": 1,
-     "frequency": 62
-    },
-    {
-     "char": "代",
-     "unicode": "U+4EE3",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 66
-    },
-    {
-     "char": "円",
-     "unicode": "U+5186",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 69
-    },
-    {
-     "char": "子",
-     "unicode": "U+5B50",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 72
-    },
-    {
-     "char": "目",
-     "unicode": "U+76EE",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 76
-    },
-    {
-     "char": "外",
-     "unicode": "U+5916",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 81
-    },
-    {
-     "char": "氏",
-     "unicode": "U+6C0F",
-     "strokes": 4,
-     "grade": 4,
-     "frequency": 84
-    },
-    {
-     "char": "化",
-     "unicode": "U+5316",
-     "strokes": 4,
-     "grade": 3,
-     "frequency": 89
-    },
-    {
-     "char": "田",
-     "unicode": "U+7530",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 90
-    },
-    {
-     "char": "八",
-     "unicode": "U+516B",
-     "strokes": 2,
-     "grade": 1,
-     "frequency": 92
-    },
-    {
-     "char": "六",
-     "unicode": "U+516D",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 93
-    },
-    {
-     "char": "主",
-     "unicode": "U+4E3B",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 95
-    },
-    {
-     "char": "下",
-     "unicode": "U+4E0B",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 97
-    },
-    {
-     "char": "不",
-     "unicode": "U+4E0D",
-     "strokes": 4,
-     "grade": 4,
-     "frequency": 101
-    },
-    {
-     "char": "用",
-     "unicode": "U+7528",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 107
-    }
-   ]
-  },
-  {
-   "id": "joyo-s1-002",
-   "class": "s1",
-   "size": 40,
-   "stroke_range": [
-    2,
-    5
-   ],
-   "min_frequency": 114,
-   "characters": [
-    {
-     "char": "小",
-     "unicode": "U+5C0F",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 114
-    },
-    {
-     "char": "七",
-     "unicode": "U+4E03",
-     "strokes": 2,
-     "grade": 1,
-     "frequency": 115
-    },
-    {
-     "char": "公",
-     "unicode": "U+516C",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 118
-    },
-    {
-     "char": "以",
-     "unicode": "U+4EE5",
-     "strokes": 5,
-     "grade": 4,
-     "frequency": 126
-    },
-    {
-     "char": "平",
-     "unicode": "U+5E73",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 128
-    },
-    {
-     "char": "加",
-     "unicode": "U+52A0",
-     "strokes": 5,
-     "grade": 4,
-     "frequency": 130
-    },
-    {
-     "char": "山",
-     "unicode": "U+5C71",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 131
-    },
-    {
-     "char": "世",
-     "unicode": "U+4E16",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 135
-    },
-    {
-     "char": "区",
-     "unicode": "U+533A",
-     "strokes": 4,
-     "grade": 3,
-     "frequency": 137
-    },
-    {
-     "char": "正",
-     "unicode": "U+6B63",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 143
-    },
-    {
-     "char": "女",
-     "unicode": "U+5973",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 151
-    },
-    {
-     "char": "北",
-     "unicode": "U+5317",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 153
-    },
-    {
-     "char": "午",
-     "unicode": "U+5348",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 154
-    },
-    {
-     "char": "心",
-     "unicode": "U+5FC3",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 157
-    },
-    {
-     "char": "支",
-     "unicode": "U+652F",
-     "strokes": 4,
-     "grade": 5,
-     "frequency": 159
-    },
-    {
-     "char": "予",
-     "unicode": "U+4E88",
-     "strokes": 4,
-     "grade": 3,
-     "frequency": 180
-    },
-    {
-     "char": "川",
-     "unicode": "U+5DDD",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 181
-    },
-    {
-     "char": "文",
-     "unicode": "U+6587",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 190
-    },
-    {
-     "char": "反",
-     "unicode": "U+53CD",
-     "strokes": 4,
-     "grade": 3,
-     "frequency": 191
-    },
-    {
-     "char": "元",
-     "unicode": "U+5143",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 192
-    },
-    {
-     "char": "千",
-     "unicode": "U+5343",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 195
-    },
-    {
-     "char": "引",
-     "unicode": "U+5F15",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 218
-    },
-    {
-     "char": "水",
-     "unicode": "U+6C34",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 223
-    },
-    {
-     "char": "半",
-     "unicode": "U+534A",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 224
-    },
-    {
-     "char": "示",
-     "unicode": "U+793A",
-     "strokes": 5,
-     "grade": 5,
-     "frequency": 237
-    },
-    {
-     "char": "打",
-     "unicode": "U+6253",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 239
-    },
-    {
-     "char": "台",
-     "unicode": "U+53F0",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 262
-    },
-    {
-     "char": "広",
-     "unicode": "U+5E83",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 263
-    },
-    {
-     "char": "必",
-     "unicode": "U+5FC5",
-     "strokes": 5,
-     "grade": 4,
-     "frequency": 265
-    },
-    {
-     "char": "口",
-     "unicode": "U+53E3",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 284
-    },
-    {
-     "char": "少",
-     "unicode": "U+5C11",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 287
-    },
-    {
-     "char": "工",
-     "unicode": "U+5DE5",
-     "strokes": 3,
-     "grade": 2,
-     "frequency": 299
-    },
-    {
-     "char": "土",
-     "unicode": "U+571F",
-     "strokes": 3,
-     "grade": 1,
-     "frequency": 307
-    },
-    {
-     "char": "与",
-     "unicode": "U+4E0E",
-     "strokes": 3,
-     "grade": 8,
-     "frequency": 308
-    },
-    {
-     "char": "止",
-     "unicode": "U+6B62",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 310
-    },
-    {
-     "char": "可",
-     "unicode": "U+53EF",
-     "strokes": 5,
-     "grade": 5,
-     "frequency": 314
-    },
-    {
-     "char": "木",
-     "unicode": "U+6728",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 317
-    },
-    {
-     "char": "付",
-     "unicode": "U+4ED8",
-     "strokes": 5,
-     "grade": 4,
-     "frequency": 322
-    },
-    {
-     "char": "切",
-     "unicode": "U+5207",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 324
-    },
-    {
-     "char": "由",
-     "unicode": "U+7531",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 325
-    }
-   ]
-  },
-  {
-   "id": "joyo-s1-003",
-   "class": "s1",
-   "size": 40,
-   "stroke_range": [
-    3,
-    5
-   ],
-   "min_frequency": 329,
-   "characters": [
-    {
-     "char": "比",
-     "unicode": "U+6BD4",
-     "strokes": 4,
-     "grade": 5,
-     "frequency": 329
-    },
-    {
-     "char": "夫",
-     "unicode": "U+592B",
-     "strokes": 4,
-     "grade": 4,
-     "frequency": 335
-    },
-    {
-     "char": "収",
-     "unicode": "U+53CE",
-     "strokes": 5,
-     "grade": 6,
-     "frequency": 337
-    },
-    {
-     "char": "井",
-     "unicode": "U+4E95",
-     "strokes": 4,
-     "grade": 4,
-     "frequency": 339
-    },
-    {
-     "char": "石",
-     "unicode": "U+77F3",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 342
-    },
-    {
-     "char": "万",
-     "unicode": "U+4E07",
-     "strokes": 3,
-     "grade": 2,
-     "frequency": 375
-    },
-    {
-     "char": "辺",
-     "unicode": "U+8FBA",
-     "strokes": 4,
-     "grade": 4,
-     "frequency": 428
-    },
-    {
-     "char": "仕",
-     "unicode": "U+4ED5",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 439
-    },
-    {
-     "char": "去",
-     "unicode": "U+53BB",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 440
-    },
-    {
-     "char": "失",
-     "unicode": "U+5931",
-     "strokes": 5,
-     "grade": 4,
-     "frequency": 447
-    },
-    {
-     "char": "写",
-     "unicode": "U+5199",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 453
-    },
-    {
-     "char": "末",
-     "unicode": "U+672B",
-     "strokes": 5,
-     "grade": 4,
-     "frequency": 456
-    },
-    {
-     "char": "白",
-     "unicode": "U+767D",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 483
-    },
-    {
-     "char": "申",
-     "unicode": "U+7533",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 492
-    },
-    {
-     "char": "古",
-     "unicode": "U+53E4",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 509
-    },
-    {
-     "char": "史",
-     "unicode": "U+53F2",
-     "strokes": 5,
-     "grade": 5,
-     "frequency": 511
-    },
-    {
-     "char": "天",
-     "unicode": "U+5929",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 512
-    },
-    {
-     "char": "士",
-     "unicode": "U+58EB",
-     "strokes": 3,
-     "grade": 5,
-     "frequency": 526
-    },
-    {
-     "char": "丸",
-     "unicode": "U+4E38",
-     "strokes": 3,
-     "grade": 2,
-     "frequency": 542
-    },
-    {
-     "char": "他",
-     "unicode": "U+4ED6",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 543
-    },
-    {
-     "char": "及",
-     "unicode": "U+53CA",
-     "strokes": 3,
-     "grade": 8,
-     "frequency": 544
-    },
-    {
-     "char": "処",
-     "unicode": "U+51E6",
-     "strokes": 5,
-     "grade": 6,
-     "frequency": 547
-    },
-    {
-     "char": "旧",
-     "unicode": "U+65E7",
-     "strokes": 5,
-     "grade": 5,
-     "frequency": 549
-    },
-    {
-     "char": "太",
-     "unicode": "U+592A",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 552
-    },
-    {
-     "char": "母",
-     "unicode": "U+6BCD",
-     "strokes": 5,
-     "grade": 2,
-     "frequency": 570
-    },
-    {
-     "char": "火",
-     "unicode": "U+706B",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 574
-    },
-    {
-     "char": "戸",
-     "unicode": "U+6238",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 575
-    },
-    {
-     "char": "央",
-     "unicode": "U+592E",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 582
-    },
-    {
-     "char": "号",
-     "unicode": "U+53F7",
-     "strokes": 5,
-     "grade": 3,
-     "frequency": 585
-    },
-    {
-     "char": "右",
-     "unicode": "U+53F3",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 602
-    },
-    {
-     "char": "介",
-     "unicode": "U+4ECB",
-     "strokes": 4,
-     "grade": 8,
-     "frequency": 617
-    },
-    {
-     "char": "弁",
-     "unicode": "U+5F01",
-     "strokes": 5,
-     "grade": 5,
-     "frequency": 619
-    },
-    {
-     "char": "友",
-     "unicode": "U+53CB",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 622
-    },
-    {
-     "char": "左",
-     "unicode": "U+5DE6",
-     "strokes": 5,
-     "grade": 1,
-     "frequency": 630
-    },
-    {
-     "char": "父",
-     "unicode": "U+7236",
-     "strokes": 4,
-     "grade": 2,
-     "frequency": 646
-    },
-    {
-     "char": "未",
-     "unicode": "U+672A",
-     "strokes": 5,
-     "grade": 4,
-     "frequency": 650
-    },
-    {
-     "char": "亡",
-     "unicode": "U+4EA1",
-     "strokes": 3,
-     "grade": 6,
-     "frequency": 661
-    },
-    {
-     "char": "込",
-     "unicode": "U+8FBC",
-     "strokes": 4,
-     "grade": 8,
-     "frequency": 675
-    },
-    {
-     "char": "王",
-     "unicode": "U+738B",
-     "strokes": 4,
-     "grade": 1,
-     "frequency": 684
-    },
-    {
-     "char": "久",
-     "unicode": "U+4E45",
-     "strokes": 3,
-     "grade": 5,
-     "frequency": 688
-    }
-   ]
-  },
-  {
-   "id": "joyo-s1-004",
+   "id": "joyo-w2-s1-001",
    "class": "s1",
    "size": 40,
    "stroke_range": [
@@ -1215,7 +472,7 @@
    ]
   },
   {
-   "id": "joyo-s1-005",
+   "id": "joyo-w2-s1-002",
    "class": "s1",
    "size": 40,
    "stroke_range": [
@@ -1507,7 +764,7 @@
    ]
   },
   {
-   "id": "joyo-s1-006",
+   "id": "joyo-w2-s1-003",
    "class": "s1",
    "size": 15,
    "stroke_range": [
@@ -1624,7 +881,7 @@
    ]
   },
   {
-   "id": "joyo-s2-001",
+   "id": "joyo-w2-s2-001",
    "class": "s2",
    "size": 32,
    "stroke_range": [
@@ -1860,7 +1117,7 @@
    ]
   },
   {
-   "id": "joyo-s2-002",
+   "id": "joyo-w2-s2-002",
    "class": "s2",
    "size": 32,
    "stroke_range": [
@@ -2096,7 +1353,7 @@
    ]
   },
   {
-   "id": "joyo-s2-003",
+   "id": "joyo-w2-s2-003",
    "class": "s2",
    "size": 32,
    "stroke_range": [
@@ -2332,7 +1589,7 @@
    ]
   },
   {
-   "id": "joyo-s2-004",
+   "id": "joyo-w2-s2-004",
    "class": "s2",
    "size": 32,
    "stroke_range": [
@@ -2568,7 +1825,7 @@
    ]
   },
   {
-   "id": "joyo-s2-005",
+   "id": "joyo-w2-s2-005",
    "class": "s2",
    "size": 32,
    "stroke_range": [
@@ -2804,7 +2061,7 @@
    ]
   },
   {
-   "id": "joyo-s2-006",
+   "id": "joyo-w2-s2-006",
    "class": "s2",
    "size": 32,
    "stroke_range": [
@@ -3040,7 +2297,7 @@
    ]
   },
   {
-   "id": "joyo-s2-007",
+   "id": "joyo-w2-s2-007",
    "class": "s2",
    "size": 32,
    "stroke_range": [
@@ -3069,13 +2326,6 @@
      "strokes": 6,
      "grade": 1,
      "frequency": 485
-    },
-    {
-     "char": "夜",
-     "unicode": "U+591C",
-     "strokes": 8,
-     "grade": 2,
-     "frequency": 487
     },
     {
      "char": "況",
@@ -3218,13 +2468,6 @@
      "frequency": 557
     },
     {
-     "char": "風",
-     "unicode": "U+98A8",
-     "strokes": 9,
-     "grade": 2,
-     "frequency": 558
-    },
-    {
      "char": "否",
      "unicode": "U+5426",
      "strokes": 7,
@@ -3272,19 +2515,7 @@
      "strokes": 8,
      "grade": 5,
      "frequency": 571
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-008",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 576,
-   "characters": [
+    },
     {
      "char": "速",
      "unicode": "U+901F",
@@ -3298,7 +2529,19 @@
      "strokes": 6,
      "grade": 6,
      "frequency": 577
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-008",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 578,
+   "characters": [
     {
      "char": "花",
      "unicode": "U+82B1",
@@ -3508,19 +2751,7 @@
      "strokes": 7,
      "grade": 5,
      "frequency": 680
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-009",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 682,
-   "characters": [
+    },
     {
      "char": "印",
      "unicode": "U+5370",
@@ -3534,7 +2765,19 @@
      "strokes": 8,
      "grade": 5,
      "frequency": 683
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-009",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 685,
+   "characters": [
     {
      "char": "返",
      "unicode": "U+8FD4",
@@ -3744,19 +2987,7 @@
      "strokes": 9,
      "grade": 5,
      "frequency": 780
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-010",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 785,
-   "characters": [
+    },
     {
      "char": "級",
      "unicode": "U+7D1A",
@@ -3770,7 +3001,19 @@
      "strokes": 8,
      "grade": 3,
      "frequency": 786
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-010",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 787,
+   "characters": [
     {
      "char": "岩",
      "unicode": "U+5CA9",
@@ -3784,13 +3027,6 @@
      "strokes": 8,
      "grade": 8,
      "frequency": 789
-    },
-    {
-     "char": "城",
-     "unicode": "U+57CE",
-     "strokes": 9,
-     "grade": 4,
-     "frequency": 795
     },
     {
      "char": "版",
@@ -3980,19 +3216,7 @@
      "strokes": 6,
      "grade": 8,
      "frequency": 864
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-011",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 865,
-   "characters": [
+    },
     {
      "char": "坂",
      "unicode": "U+5742",
@@ -4013,7 +3237,19 @@
      "strokes": 8,
      "grade": 4,
      "frequency": 867
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-011",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 871,
+   "characters": [
     {
      "char": "抱",
      "unicode": "U+62B1",
@@ -4216,19 +3452,7 @@
      "strokes": 7,
      "grade": 8,
      "frequency": 959
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-012",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 962,
-   "characters": [
+    },
     {
      "char": "折",
      "unicode": "U+6298",
@@ -4249,7 +3473,19 @@
      "strokes": 8,
      "grade": 8,
      "frequency": 966
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-012",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 967,
+   "characters": [
     {
      "char": "草",
      "unicode": "U+8349",
@@ -4452,19 +3688,7 @@
      "strokes": 9,
      "grade": 6,
      "frequency": 1067
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-013",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 1074,
-   "characters": [
+    },
     {
      "char": "快",
      "unicode": "U+5FEB",
@@ -4485,7 +3709,19 @@
      "strokes": 9,
      "grade": 6,
      "frequency": 1086
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-013",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 1095,
+   "characters": [
     {
      "char": "杉",
      "unicode": "U+6749",
@@ -4688,19 +3924,7 @@
      "strokes": 9,
      "grade": 3,
      "frequency": 1176
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-014",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 1182,
-   "characters": [
+    },
     {
      "char": "抵",
      "unicode": "U+62B5",
@@ -4721,7 +3945,19 @@
      "strokes": 9,
      "grade": 8,
      "frequency": 1187
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-014",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 1188,
+   "characters": [
     {
      "char": "茂",
      "unicode": "U+8302",
@@ -4924,19 +4160,7 @@
      "strokes": 9,
      "grade": 3,
      "frequency": 1307
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-015",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 1314,
-   "characters": [
+    },
     {
      "char": "恒",
      "unicode": "U+6052",
@@ -4957,7 +4181,19 @@
      "strokes": 9,
      "grade": 4,
      "frequency": 1319
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-015",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 1325,
+   "characters": [
     {
      "char": "怖",
      "unicode": "U+6016",
@@ -5160,19 +4396,7 @@
      "strokes": 9,
      "grade": 4,
      "frequency": 1427
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-016",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 1428,
-   "characters": [
+    },
     {
      "char": "岐",
      "unicode": "U+5C90",
@@ -5193,7 +4417,19 @@
      "strokes": 8,
      "grade": 4,
      "frequency": 1435
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-016",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 1437,
+   "characters": [
     {
      "char": "抽",
      "unicode": "U+62BD",
@@ -5396,19 +4632,7 @@
      "strokes": 6,
      "grade": 8,
      "frequency": 1543
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-017",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 1555,
-   "characters": [
+    },
     {
      "char": "架",
      "unicode": "U+67B6",
@@ -5429,7 +4653,19 @@
      "strokes": 7,
      "grade": 8,
      "frequency": 1569
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-017",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 1571,
+   "characters": [
     {
      "char": "呈",
      "unicode": "U+5448",
@@ -5632,19 +4868,7 @@
      "strokes": 6,
      "grade": 6,
      "frequency": 1671
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-018",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 1672,
-   "characters": [
+    },
     {
      "char": "尿",
      "unicode": "U+5C3F",
@@ -5665,7 +4889,19 @@
      "strokes": 8,
      "grade": 8,
      "frequency": 1687
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-018",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 1688,
+   "characters": [
     {
      "char": "昆",
      "unicode": "U+6606",
@@ -5868,19 +5104,7 @@
      "strokes": 8,
      "grade": 8,
      "frequency": 1813
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-019",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 1816,
-   "characters": [
+    },
     {
      "char": "伐",
      "unicode": "U+4F10",
@@ -5901,7 +5125,19 @@
      "strokes": 8,
      "grade": 8,
      "frequency": 1823
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-019",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 1830,
+   "characters": [
     {
      "char": "舌",
      "unicode": "U+820C",
@@ -6104,19 +5340,7 @@
      "strokes": 7,
      "grade": 8,
      "frequency": 1964
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-020",
-   "class": "s2",
-   "size": 32,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 1972,
-   "characters": [
+    },
     {
      "char": "岬",
      "unicode": "U+5CAC",
@@ -6137,7 +5361,19 @@
      "strokes": 9,
      "grade": 8,
      "frequency": 1996
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-020",
+   "class": "s2",
+   "size": 32,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 2003,
+   "characters": [
     {
      "char": "卑",
      "unicode": "U+5351",
@@ -6340,19 +5576,7 @@
      "strokes": 8,
      "grade": 8,
      "frequency": 2289
-    }
-   ]
-  },
-  {
-   "id": "joyo-s2-021",
-   "class": "s2",
-   "size": 31,
-   "stroke_range": [
-    6,
-    9
-   ],
-   "min_frequency": 2328,
-   "characters": [
+    },
     {
      "char": "抄",
      "unicode": "U+6284",
@@ -6373,7 +5597,19 @@
      "strokes": 7,
      "grade": 8,
      "frequency": 2351
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s2-021",
+   "class": "s2",
+   "size": 28,
+   "stroke_range": [
+    6,
+    9
+   ],
+   "min_frequency": 2363,
+   "characters": [
     {
      "char": "侯",
      "unicode": "U+4FAF",
@@ -6573,7 +5809,7 @@
    ]
   },
   {
-   "id": "joyo-s3-001",
+   "id": "joyo-w2-s3-001",
    "class": "s3",
    "size": 24,
    "stroke_range": [
@@ -6753,7 +5989,7 @@
    ]
   },
   {
-   "id": "joyo-s3-002",
+   "id": "joyo-w2-s3-002",
    "class": "s3",
    "size": 24,
    "stroke_range": [
@@ -6917,38 +6153,31 @@
      "frequency": 206
     },
     {
-     "char": "道",
-     "unicode": "U+9053",
-     "strokes": 11,
-     "grade": 2,
-     "frequency": 207
-    },
-    {
      "char": "策",
      "unicode": "U+7B56",
      "strokes": 12,
      "grade": 6,
      "frequency": 209
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-003",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 210,
-   "characters": [
+    },
     {
      "char": "集",
      "unicode": "U+96C6",
      "strokes": 12,
      "grade": 3,
      "frequency": 210
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-003",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 216,
+   "characters": [
     {
      "char": "側",
      "unicode": "U+5074",
@@ -7069,13 +6298,6 @@
      "frequency": 273
     },
     {
-     "char": "無",
-     "unicode": "U+7121",
-     "strokes": 12,
-     "grade": 4,
-     "frequency": 274
-    },
-    {
      "char": "置",
      "unicode": "U+7F6E",
      "strokes": 13,
@@ -7109,19 +6331,7 @@
      "strokes": 11,
      "grade": 5,
      "frequency": 285
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-004",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    12
-   ],
-   "min_frequency": 289,
-   "characters": [
+    },
     {
      "char": "税",
      "unicode": "U+7A0E",
@@ -7135,7 +6345,19 @@
      "strokes": 12,
      "grade": 5,
      "frequency": 290
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-004",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    12
+   ],
+   "min_frequency": 293,
+   "characters": [
     {
      "char": "常",
      "unicode": "U+5E38",
@@ -7289,19 +6511,7 @@
      "strokes": 10,
      "grade": 3,
      "frequency": 359
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-005",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 360,
-   "characters": [
+    },
     {
      "char": "副",
      "unicode": "U+526F",
@@ -7315,7 +6525,19 @@
      "strokes": 11,
      "grade": 6,
      "frequency": 362
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-005",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 364,
+   "characters": [
     {
      "char": "幹",
      "unicode": "U+5E79",
@@ -7457,31 +6679,12 @@
      "frequency": 414
     },
     {
-     "char": "義",
-     "unicode": "U+7FA9",
-     "strokes": 13,
-     "grade": 5,
-     "frequency": 415
-    },
-    {
      "char": "働",
      "unicode": "U+50CD",
      "strokes": 13,
      "grade": 4,
      "frequency": 417
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-006",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 419,
-   "characters": [
+    },
     {
      "char": "景",
      "unicode": "U+666F",
@@ -7502,7 +6705,19 @@
      "strokes": 13,
      "grade": 5,
      "frequency": 425
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-006",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 427,
+   "characters": [
     {
      "char": "訴",
      "unicode": "U+8A34",
@@ -7644,25 +6859,6 @@
      "frequency": 494
     },
     {
-     "char": "港",
-     "unicode": "U+6E2F",
-     "strokes": 12,
-     "grade": 3,
-     "frequency": 495
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-007",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 499,
-   "characters": [
-    {
      "char": "渉",
      "unicode": "U+6E09",
      "strokes": 11,
@@ -7689,7 +6885,19 @@
      "strokes": 10,
      "grade": 6,
      "frequency": 505
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-007",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 507,
+   "characters": [
     {
      "char": "推",
      "unicode": "U+63A8",
@@ -7829,19 +7037,7 @@
      "strokes": 10,
      "grade": 2,
      "frequency": 559
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-008",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 563,
-   "characters": [
+    },
     {
      "char": "師",
      "unicode": "U+5E2B",
@@ -7869,7 +7065,19 @@
      "strokes": 11,
      "grade": 2,
      "frequency": 573
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-008",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 581,
+   "characters": [
     {
      "char": "殺",
      "unicode": "U+6BBA",
@@ -8009,19 +7217,7 @@
      "strokes": 11,
      "grade": 8,
      "frequency": 627
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-009",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 628,
-   "characters": [
+    },
     {
      "char": "園",
      "unicode": "U+5712",
@@ -8049,7 +7245,19 @@
      "strokes": 10,
      "grade": 6,
      "frequency": 634
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-009",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 637,
+   "characters": [
     {
      "char": "献",
      "unicode": "U+732E",
@@ -8063,13 +7271,6 @@
      "strokes": 10,
      "grade": 2,
      "frequency": 639
-    },
-    {
-     "char": "愛",
-     "unicode": "U+611B",
-     "strokes": 13,
-     "grade": 4,
-     "frequency": 640
     },
     {
      "char": "幅",
@@ -8189,19 +7390,7 @@
      "strokes": 10,
      "grade": 5,
      "frequency": 674
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-010",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 681,
-   "characters": [
+    },
     {
      "char": "禁",
      "unicode": "U+7981",
@@ -8236,7 +7425,19 @@
      "strokes": 12,
      "grade": 3,
      "frequency": 699
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-010",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 701,
+   "characters": [
     {
      "char": "宿",
      "unicode": "U+5BBF",
@@ -8369,19 +7570,7 @@
      "strokes": 12,
      "grade": 6,
      "frequency": 744
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-011",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 746,
-   "characters": [
+    },
     {
      "char": "帯",
      "unicode": "U+5E2F",
@@ -8416,7 +7605,19 @@
      "strokes": 11,
      "grade": 4,
      "frequency": 760
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-011",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 761,
+   "characters": [
     {
      "char": "測",
      "unicode": "U+6E2C",
@@ -8549,19 +7750,7 @@
      "strokes": 12,
      "grade": 3,
      "frequency": 798
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-012",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 799,
-   "characters": [
+    },
     {
      "char": "救",
      "unicode": "U+6551",
@@ -8596,7 +7785,19 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 809
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-012",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 812,
+   "characters": [
     {
      "char": "裏",
      "unicode": "U+88CF",
@@ -8729,19 +7930,7 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 869
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-013",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 870,
-   "characters": [
+    },
     {
      "char": "致",
      "unicode": "U+81F4",
@@ -8776,7 +7965,19 @@
      "strokes": 10,
      "grade": 3,
      "frequency": 882
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-013",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 884,
+   "characters": [
     {
      "char": "項",
      "unicode": "U+9805",
@@ -8909,19 +8110,7 @@
      "strokes": 10,
      "grade": 6,
      "frequency": 936
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-014",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 937,
-   "characters": [
+    },
     {
      "char": "射",
      "unicode": "U+5C04",
@@ -8956,7 +8145,19 @@
      "strokes": 12,
      "grade": 6,
      "frequency": 946
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-014",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 951,
+   "characters": [
     {
      "char": "閉",
      "unicode": "U+9589",
@@ -9089,19 +8290,7 @@
      "strokes": 11,
      "grade": 3,
      "frequency": 990
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-015",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 994,
-   "characters": [
+    },
     {
      "char": "紛",
      "unicode": "U+7D1B",
@@ -9136,7 +8325,19 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1003
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-015",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1004,
+   "characters": [
     {
      "char": "照",
      "unicode": "U+7167",
@@ -9269,19 +8470,7 @@
      "strokes": 10,
      "grade": 6,
      "frequency": 1044
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-016",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1046,
-   "characters": [
+    },
     {
      "char": "飯",
      "unicode": "U+98EF",
@@ -9316,7 +8505,19 @@
      "strokes": 11,
      "grade": 6,
      "frequency": 1050
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-016",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1051,
+   "characters": [
     {
      "char": "盗",
      "unicode": "U+76D7",
@@ -9449,19 +8650,7 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1101
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-017",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1106,
-   "characters": [
+    },
     {
      "char": "歯",
      "unicode": "U+6B6F",
@@ -9496,7 +8685,19 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 1110
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-017",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1111,
+   "characters": [
     {
      "char": "症",
      "unicode": "U+75C7",
@@ -9629,19 +8830,7 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 1151
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-018",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1154,
-   "characters": [
+    },
     {
      "char": "陥",
      "unicode": "U+9665",
@@ -9676,7 +8865,19 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 1164
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-018",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1165,
+   "characters": [
     {
      "char": "聖",
      "unicode": "U+8056",
@@ -9809,19 +9010,7 @@
      "strokes": 13,
      "grade": 8,
      "frequency": 1217
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-019",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1222,
-   "characters": [
+    },
     {
      "char": "滅",
      "unicode": "U+6EC5",
@@ -9856,7 +9045,19 @@
      "strokes": 10,
      "grade": 5,
      "frequency": 1237
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-019",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1238,
+   "characters": [
     {
      "char": "滑",
      "unicode": "U+6ED1",
@@ -9989,19 +9190,7 @@
      "strokes": 13,
      "grade": 8,
      "frequency": 1282
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-020",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1284,
-   "characters": [
+    },
     {
      "char": "凍",
      "unicode": "U+51CD",
@@ -10036,7 +9225,19 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1288
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-020",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1290,
+   "characters": [
     {
      "char": "煙",
      "unicode": "U+7159",
@@ -10169,19 +9370,7 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1341
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-021",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1343,
-   "characters": [
+    },
     {
      "char": "遇",
      "unicode": "U+9047",
@@ -10216,7 +9405,19 @@
      "strokes": 11,
      "grade": 8,
      "frequency": 1353
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-021",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1356,
+   "characters": [
     {
      "char": "湯",
      "unicode": "U+6E6F",
@@ -10349,19 +9550,7 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1406
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-022",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1410,
-   "characters": [
+    },
     {
      "char": "粘",
      "unicode": "U+7C98",
@@ -10396,7 +9585,19 @@
      "strokes": 10,
      "grade": 6,
      "frequency": 1418
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-022",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1423,
+   "characters": [
     {
      "char": "遂",
      "unicode": "U+9042",
@@ -10529,19 +9730,7 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 1464
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-023",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1468,
-   "characters": [
+    },
     {
      "char": "据",
      "unicode": "U+636E",
@@ -10576,7 +9765,19 @@
      "strokes": 13,
      "grade": 8,
      "frequency": 1478
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-023",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1481,
+   "characters": [
     {
      "char": "俵",
      "unicode": "U+4FF5",
@@ -10709,19 +9910,7 @@
      "strokes": 11,
      "grade": 8,
      "frequency": 1533
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-024",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1541,
-   "characters": [
+    },
     {
      "char": "欺",
      "unicode": "U+6B3A",
@@ -10756,7 +9945,19 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1547
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-024",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1548,
+   "characters": [
     {
      "char": "脂",
      "unicode": "U+8102",
@@ -10889,19 +10090,7 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 1577
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-025",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1581,
-   "characters": [
+    },
     {
      "char": "嫁",
      "unicode": "U+5AC1",
@@ -10936,7 +10125,19 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1591
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-025",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1592,
+   "characters": [
     {
      "char": "班",
      "unicode": "U+73ED",
@@ -11069,19 +10270,7 @@
      "strokes": 13,
      "grade": 8,
      "frequency": 1648
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-026",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1650,
-   "characters": [
+    },
     {
      "char": "桑",
      "unicode": "U+6851",
@@ -11116,7 +10305,19 @@
      "strokes": 11,
      "grade": 8,
      "frequency": 1662
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-026",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1663,
+   "characters": [
     {
      "char": "痴",
      "unicode": "U+75F4",
@@ -11249,19 +10450,7 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1725
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-027",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1726,
-   "characters": [
+    },
     {
      "char": "眺",
      "unicode": "U+773A",
@@ -11296,7 +10485,19 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 1737
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-027",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1739,
+   "characters": [
     {
      "char": "睡",
      "unicode": "U+7761",
@@ -11429,19 +10630,7 @@
      "strokes": 13,
      "grade": 8,
      "frequency": 1795
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-028",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1796,
-   "characters": [
+    },
     {
      "char": "裸",
      "unicode": "U+88F8",
@@ -11476,7 +10665,19 @@
      "strokes": 11,
      "grade": 8,
      "frequency": 1801
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-028",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1805,
+   "characters": [
     {
      "char": "扇",
      "unicode": "U+6247",
@@ -11609,19 +10810,7 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 1866
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-029",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1867,
-   "characters": [
+    },
     {
      "char": "硫",
      "unicode": "U+786B",
@@ -11656,7 +10845,19 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 1876
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-029",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1890,
+   "characters": [
     {
      "char": "鉢",
      "unicode": "U+9262",
@@ -11789,19 +10990,7 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 1946
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-030",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 1953,
-   "characters": [
+    },
     {
      "char": "堪",
      "unicode": "U+582A",
@@ -11836,7 +11025,19 @@
      "strokes": 11,
      "grade": 8,
      "frequency": 1970
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-030",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 1974,
+   "characters": [
     {
      "char": "愉",
      "unicode": "U+6109",
@@ -11969,19 +11170,7 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 2049
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-031",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 2051,
-   "characters": [
+    },
     {
      "char": "唄",
      "unicode": "U+5504",
@@ -12016,7 +11205,19 @@
      "strokes": 12,
      "grade": 8,
      "frequency": 2070
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-031",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 2080,
+   "characters": [
     {
      "char": "殉",
      "unicode": "U+6B89",
@@ -12149,19 +11350,7 @@
      "strokes": 13,
      "grade": 8,
      "frequency": 2223
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-032",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 2229,
-   "characters": [
+    },
     {
      "char": "衷",
      "unicode": "U+8877",
@@ -12196,7 +11385,19 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 2262
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-032",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": 2271,
+   "characters": [
     {
      "char": "酌",
      "unicode": "U+914C",
@@ -12329,19 +11530,7 @@
      "strokes": 10,
      "grade": 8,
      "frequency": 2461
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-033",
-   "class": "s3",
-   "size": 24,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": 2479,
-   "characters": [
+    },
     {
      "char": "倹",
      "unicode": "U+5039",
@@ -12376,7 +11565,19 @@
      "strokes": 11,
      "grade": 8,
      "frequency": null
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-033",
+   "class": "s3",
+   "size": 24,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": null,
+   "characters": [
     {
      "char": "崖",
      "unicode": "U+5D16",
@@ -12509,19 +11710,7 @@
      "strokes": 11,
      "grade": 8,
      "frequency": null
-    }
-   ]
-  },
-  {
-   "id": "joyo-s3-034",
-   "class": "s3",
-   "size": 17,
-   "stroke_range": [
-    10,
-    13
-   ],
-   "min_frequency": null,
-   "characters": [
+    },
     {
      "char": "朕",
      "unicode": "U+6715",
@@ -12556,7 +11745,19 @@
      "strokes": 11,
      "grade": 8,
      "frequency": null
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s3-034",
+   "class": "s3",
+   "size": 12,
+   "stroke_range": [
+    10,
+    13
+   ],
+   "min_frequency": null,
+   "characters": [
     {
      "char": "耗",
      "unicode": "U+8017",
@@ -12644,7 +11845,7 @@
    ]
   },
   {
-   "id": "joyo-s4-001",
+   "id": "joyo-w2-s4-001",
    "class": "s4",
    "size": 16,
    "stroke_range": [
@@ -12768,7 +11969,7 @@
    ]
   },
   {
-   "id": "joyo-s4-002",
+   "id": "joyo-w2-s4-002",
    "class": "s4",
    "size": 16,
    "stroke_range": [
@@ -12892,7 +12093,7 @@
    ]
   },
   {
-   "id": "joyo-s4-003",
+   "id": "joyo-w2-s4-003",
    "class": "s4",
    "size": 16,
    "stroke_range": [
@@ -12951,13 +12152,6 @@
      "frequency": 461
     },
     {
-     "char": "影",
-     "unicode": "U+5F71",
-     "strokes": 15,
-     "grade": 8,
-     "frequency": 464
-    },
-    {
      "char": "蔵",
      "unicode": "U+8535",
      "strokes": 15,
@@ -13012,26 +12206,26 @@
      "strokes": 14,
      "grade": 3,
      "frequency": 493
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-004",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 517,
-   "characters": [
+    },
     {
      "char": "管",
      "unicode": "U+7BA1",
      "strokes": 14,
      "grade": 4,
      "frequency": 517
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-004",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 519,
+   "characters": [
     {
      "char": "歌",
      "unicode": "U+6B4C",
@@ -13136,26 +12330,26 @@
      "strokes": 17,
      "grade": 6,
      "frequency": 638
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-005",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 643,
-   "characters": [
+    },
     {
      "char": "維",
      "unicode": "U+7DAD",
      "strokes": 14,
      "grade": 8,
      "frequency": 643
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-005",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 647,
+   "characters": [
     {
      "char": "遺",
      "unicode": "U+907A",
@@ -13260,26 +12454,26 @@
      "strokes": 15,
      "grade": 4,
      "frequency": 716
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-006",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 723,
-   "characters": [
+    },
     {
      "char": "踏",
      "unicode": "U+8E0F",
      "strokes": 15,
      "grade": 8,
      "frequency": 723
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-006",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 724,
+   "characters": [
     {
      "char": "駅",
      "unicode": "U+99C5",
@@ -13384,26 +12578,26 @@
      "strokes": 17,
      "grade": 5,
      "frequency": 820
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-007",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 821,
-   "characters": [
+    },
     {
      "char": "築",
      "unicode": "U+7BC9",
      "strokes": 16,
      "grade": 5,
      "frequency": 821
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-007",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 839,
+   "characters": [
     {
      "char": "雑",
      "unicode": "U+96D1",
@@ -13508,26 +12702,26 @@
      "strokes": 14,
      "grade": 8,
      "frequency": 935
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-008",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 945,
-   "characters": [
+    },
     {
      "char": "購",
      "unicode": "U+8CFC",
      "strokes": 17,
      "grade": 8,
      "frequency": 945
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-008",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    16
+   ],
+   "min_frequency": 948,
+   "characters": [
     {
      "char": "燃",
      "unicode": "U+71C3",
@@ -13632,26 +12826,26 @@
      "strokes": 16,
      "grade": 6,
      "frequency": 1016
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-009",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 1023,
-   "characters": [
+    },
     {
      "char": "撮",
      "unicode": "U+64AE",
      "strokes": 15,
      "grade": 8,
      "frequency": 1023
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-009",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 1024,
+   "characters": [
     {
      "char": "誕",
      "unicode": "U+8A95",
@@ -13756,26 +12950,26 @@
      "strokes": 14,
      "grade": 4,
      "frequency": 1094
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-010",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 1104,
-   "characters": [
+    },
     {
      "char": "豪",
      "unicode": "U+8C6A",
      "strokes": 14,
      "grade": 8,
      "frequency": 1104
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-010",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 1105,
+   "characters": [
     {
      "char": "熊",
      "unicode": "U+718A",
@@ -13880,26 +13074,26 @@
      "strokes": 17,
      "grade": 8,
      "frequency": 1201
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-011",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    16
-   ],
-   "min_frequency": 1204,
-   "characters": [
+    },
     {
      "char": "潟",
      "unicode": "U+6F5F",
      "strokes": 15,
      "grade": 4,
      "frequency": 1204
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-011",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    16
+   ],
+   "min_frequency": 1205,
+   "characters": [
     {
      "char": "敵",
      "unicode": "U+6575",
@@ -14004,26 +13198,26 @@
      "strokes": 15,
      "grade": 8,
      "frequency": 1264
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-012",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    16
-   ],
-   "min_frequency": 1270,
-   "characters": [
+    },
     {
      "char": "噴",
      "unicode": "U+5674",
      "strokes": 15,
      "grade": 8,
      "frequency": 1270
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-012",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    16
+   ],
+   "min_frequency": 1279,
+   "characters": [
     {
      "char": "鳴",
      "unicode": "U+9CF4",
@@ -14128,26 +13322,26 @@
      "strokes": 15,
      "grade": 3,
      "frequency": 1357
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-013",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 1365,
-   "characters": [
+    },
     {
      "char": "輩",
      "unicode": "U+8F29",
      "strokes": 15,
      "grade": 8,
      "frequency": 1365
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-013",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 1368,
+   "characters": [
     {
      "char": "慢",
      "unicode": "U+6162",
@@ -14252,26 +13446,26 @@
      "strokes": 16,
      "grade": 8,
      "frequency": 1461
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-014",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 1466,
-   "characters": [
+    },
     {
      "char": "墜",
      "unicode": "U+589C",
      "strokes": 14,
      "grade": 8,
      "frequency": 1466
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-014",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 1471,
+   "characters": [
     {
      "char": "糖",
      "unicode": "U+7CD6",
@@ -14376,26 +13570,26 @@
      "strokes": 16,
      "grade": 8,
      "frequency": 1535
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-015",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 1567,
-   "characters": [
+    },
     {
      "char": "誓",
      "unicode": "U+8A93",
      "strokes": 14,
      "grade": 8,
      "frequency": 1567
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-015",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 1580,
+   "characters": [
     {
      "char": "謡",
      "unicode": "U+8B21",
@@ -14500,26 +13694,26 @@
      "strokes": 16,
      "grade": 8,
      "frequency": 1682
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-016",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 1683,
-   "characters": [
+    },
     {
      "char": "畿",
      "unicode": "U+757F",
      "strokes": 15,
      "grade": 8,
      "frequency": 1683
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-016",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 1686,
+   "characters": [
     {
      "char": "磁",
      "unicode": "U+78C1",
@@ -14624,26 +13818,26 @@
      "strokes": 15,
      "grade": 8,
      "frequency": 1756
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-017",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 1764,
-   "characters": [
+    },
     {
      "char": "縛",
      "unicode": "U+7E1B",
      "strokes": 16,
      "grade": 8,
      "frequency": 1764
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-017",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 1765,
+   "characters": [
     {
      "char": "暦",
      "unicode": "U+66A6",
@@ -14748,26 +13942,26 @@
      "strokes": 15,
      "grade": 8,
      "frequency": 1855
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-018",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 1862,
-   "characters": [
+    },
     {
      "char": "酵",
      "unicode": "U+9175",
      "strokes": 14,
      "grade": 8,
      "frequency": 1862
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-018",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 1863,
+   "characters": [
     {
      "char": "憤",
      "unicode": "U+61A4",
@@ -14872,26 +14066,26 @@
      "strokes": 17,
      "grade": 8,
      "frequency": 1990
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-019",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 2005,
-   "characters": [
+    },
     {
      "char": "鋳",
      "unicode": "U+92F3",
      "strokes": 15,
      "grade": 8,
      "frequency": 2005
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-019",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 2009,
+   "characters": [
     {
      "char": "隷",
      "unicode": "U+96B7",
@@ -14996,26 +14190,26 @@
      "strokes": 14,
      "grade": 8,
      "frequency": 2115
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-020",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 2120,
-   "characters": [
+    },
     {
      "char": "膳",
      "unicode": "U+81B3",
      "strokes": 16,
      "grade": 8,
      "frequency": 2120
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-020",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 2130,
+   "characters": [
     {
      "char": "嫡",
      "unicode": "U+5AE1",
@@ -15120,26 +14314,26 @@
      "strokes": 15,
      "grade": 8,
      "frequency": 2320
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-021",
-   "class": "s4",
-   "size": 16,
-   "stroke_range": [
-    14,
-    17
-   ],
-   "min_frequency": 2331,
-   "characters": [
+    },
     {
      "char": "麺",
      "unicode": "U+9EBA",
      "strokes": 16,
      "grade": 8,
      "frequency": 2331
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-021",
+   "class": "s4",
+   "size": 16,
+   "stroke_range": [
+    14,
+    17
+   ],
+   "min_frequency": 2334,
+   "characters": [
     {
      "char": "裾",
      "unicode": "U+88FE",
@@ -15244,11 +14438,18 @@
      "strokes": 16,
      "grade": 8,
      "frequency": null
+    },
+    {
+     "char": "遡",
+     "unicode": "U+9061",
+     "strokes": 14,
+     "grade": 8,
+     "frequency": null
     }
    ]
   },
   {
-   "id": "joyo-s4-022",
+   "id": "joyo-w2-s4-022",
    "class": "s4",
    "size": 16,
    "stroke_range": [
@@ -15257,13 +14458,6 @@
    ],
    "min_frequency": null,
    "characters": [
-    {
-     "char": "遡",
-     "unicode": "U+9061",
-     "strokes": 14,
-     "grade": 8,
-     "frequency": null
-    },
     {
      "char": "遜",
      "unicode": "U+905C",
@@ -15368,26 +14562,26 @@
      "strokes": 15,
      "grade": 8,
      "frequency": null
-    }
-   ]
-  },
-  {
-   "id": "joyo-s4-023",
-   "class": "s4",
-   "size": 3,
-   "stroke_range": [
-    14,
-    16
-   ],
-   "min_frequency": null,
-   "characters": [
+    },
     {
      "char": "辣",
      "unicode": "U+8FA3",
      "strokes": 14,
      "grade": 8,
      "frequency": null
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s4-023",
+   "class": "s4",
+   "size": 2,
+   "stroke_range": [
+    16,
+    16
+   ],
+   "min_frequency": null,
+   "characters": [
     {
      "char": "錮",
      "unicode": "U+932E",
@@ -15405,7 +14599,7 @@
    ]
   },
   {
-   "id": "joyo-s5-001",
+   "id": "joyo-w2-s5-001",
    "class": "s5",
    "size": 10,
    "stroke_range": [
@@ -15457,13 +14651,6 @@
      "frequency": 351
     },
     {
-     "char": "警",
-     "unicode": "U+8B66",
-     "strokes": 19,
-     "grade": 6,
-     "frequency": 366
-    },
-    {
      "char": "額",
      "unicode": "U+984D",
      "strokes": 18,
@@ -15483,26 +14670,26 @@
      "strokes": 18,
      "grade": 8,
      "frequency": 445
-    }
-   ]
-  },
-  {
-   "id": "joyo-s5-002",
-   "class": "s5",
-   "size": 10,
-   "stroke_range": [
-    18,
-    20
-   ],
-   "min_frequency": 476,
-   "characters": [
+    },
     {
      "char": "観",
      "unicode": "U+89B3",
      "strokes": 18,
      "grade": 4,
      "frequency": 476
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s5-002",
+   "class": "s5",
+   "size": 10,
+   "stroke_range": [
+    18,
+    20
+   ],
+   "min_frequency": 496,
+   "characters": [
     {
      "char": "識",
      "unicode": "U+8B58",
@@ -15565,26 +14752,26 @@
      "strokes": 19,
      "grade": 8,
      "frequency": 735
-    }
-   ]
-  },
-  {
-   "id": "joyo-s5-003",
-   "class": "s5",
-   "size": 10,
-   "stroke_range": [
-    18,
-    21
-   ],
-   "min_frequency": 751,
-   "characters": [
+    },
     {
      "char": "闘",
      "unicode": "U+95D8",
      "strokes": 18,
      "grade": 8,
      "frequency": 751
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s5-003",
+   "class": "s5",
+   "size": 10,
+   "stroke_range": [
+    18,
+    21
+   ],
+   "min_frequency": 872,
+   "characters": [
     {
      "char": "繰",
      "unicode": "U+7E70",
@@ -15647,26 +14834,26 @@
      "strokes": 20,
      "grade": 8,
      "frequency": 984
-    }
-   ]
-  },
-  {
-   "id": "joyo-s5-004",
-   "class": "s5",
-   "size": 10,
-   "stroke_range": [
-    18,
-    22
-   ],
-   "min_frequency": 991,
-   "characters": [
+    },
     {
      "char": "臓",
      "unicode": "U+81D3",
      "strokes": 19,
      "grade": 6,
      "frequency": 991
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s5-004",
+   "class": "s5",
+   "size": 10,
+   "stroke_range": [
+    18,
+    22
+   ],
+   "min_frequency": 1001,
+   "characters": [
     {
      "char": "贈",
      "unicode": "U+8D08",
@@ -15729,26 +14916,26 @@
      "strokes": 18,
      "grade": 8,
      "frequency": 1250
-    }
-   ]
-  },
-  {
-   "id": "joyo-s5-005",
-   "class": "s5",
-   "size": 10,
-   "stroke_range": [
-    18,
-    23
-   ],
-   "min_frequency": 1265,
-   "characters": [
+    },
     {
      "char": "瞬",
      "unicode": "U+77AC",
      "strokes": 18,
      "grade": 8,
      "frequency": 1265
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s5-005",
+   "class": "s5",
+   "size": 10,
+   "stroke_range": [
+    18,
+    23
+   ],
+   "min_frequency": 1303,
+   "characters": [
     {
      "char": "懲",
      "unicode": "U+61F2",
@@ -15811,26 +14998,26 @@
      "strokes": 18,
      "grade": 8,
      "frequency": 1465
-    }
-   ]
-  },
-  {
-   "id": "joyo-s5-006",
-   "class": "s5",
-   "size": 10,
-   "stroke_range": [
-    18,
-    21
-   ],
-   "min_frequency": 1486,
-   "characters": [
+    },
     {
      "char": "鯨",
      "unicode": "U+9BE8",
      "strokes": 19,
      "grade": 8,
      "frequency": 1486
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s5-006",
+   "class": "s5",
+   "size": 10,
+   "stroke_range": [
+    18,
+    21
+   ],
+   "min_frequency": 1506,
+   "characters": [
     {
      "char": "鏡",
      "unicode": "U+93E1",
@@ -15893,26 +15080,26 @@
      "strokes": 18,
      "grade": 8,
      "frequency": 1667
-    }
-   ]
-  },
-  {
-   "id": "joyo-s5-007",
-   "class": "s5",
-   "size": 10,
-   "stroke_range": [
-    18,
-    20
-   ],
-   "min_frequency": 1681,
-   "characters": [
+    },
     {
      "char": "鐘",
      "unicode": "U+9418",
      "strokes": 20,
      "grade": 8,
      "frequency": 1681
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s5-007",
+   "class": "s5",
+   "size": 10,
+   "stroke_range": [
+    18,
+    20
+   ],
+   "min_frequency": 1696,
+   "characters": [
     {
      "char": "騎",
      "unicode": "U+9A0E",
@@ -15975,26 +15162,26 @@
      "strokes": 18,
      "grade": 8,
      "frequency": 1973
-    }
-   ]
-  },
-  {
-   "id": "joyo-s5-008",
-   "class": "s5",
-   "size": 10,
-   "stroke_range": [
-    18,
-    19
-   ],
-   "min_frequency": 2030,
-   "characters": [
+    },
     {
      "char": "襟",
      "unicode": "U+895F",
      "strokes": 18,
      "grade": 8,
      "frequency": 2030
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s5-008",
+   "class": "s5",
+   "size": 10,
+   "stroke_range": [
+    18,
+    19
+   ],
+   "min_frequency": 2043,
+   "characters": [
     {
      "char": "藍",
      "unicode": "U+85CD",
@@ -16057,26 +15244,26 @@
      "strokes": 18,
      "grade": 8,
      "frequency": 2495
-    }
-   ]
-  },
-  {
-   "id": "joyo-s5-009",
-   "class": "s5",
-   "size": 6,
-   "stroke_range": [
-    18,
-    29
-   ],
-   "min_frequency": null,
-   "characters": [
+    },
     {
      "char": "顎",
      "unicode": "U+984E",
      "strokes": 18,
      "grade": 8,
      "frequency": null
-    },
+    }
+   ]
+  },
+  {
+   "id": "joyo-w2-s5-009",
+   "class": "s5",
+   "size": 5,
+   "stroke_range": [
+    18,
+    29
+   ],
+   "min_frequency": null,
+   "characters": [
     {
      "char": "璽",
      "unicode": "U+74BD",

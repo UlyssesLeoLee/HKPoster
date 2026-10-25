@@ -96,6 +96,23 @@ def category_of(codepoint: int | None) -> str:
     return "other"
 
 
+def load_stroke_counts() -> dict[str, int]:
+    """读 Jōyō 元数据里的笔画数（用于按密度分档比较墨量率）。"""
+    path = FONT_SRC / "data" / "joyo-kanji-meta.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    counts: dict[str, int] = {}
+    for char, info in (data.get("characters") or {}).items():
+        strokes = info.get("strokes")
+        if isinstance(strokes, int):
+            counts[char] = strokes
+    return counts
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="字形级 UT 检查")
     parser.add_argument("--sources", nargs="*", default=None)
@@ -174,6 +191,34 @@ def main() -> int:
             records.append(record)
 
     # ---- 家族一致性 ----
+    # 墨量率只能**同类比较**才有意义：1 画的「丁」与 15 画的「警」墨量差一个量级，
+    # 放在一起比会把"结构密度差异"误报成"风格漂移"。
+    # 因此按笔画密度分档，档内比较（docs/09 RV-10）。
+    stroke_map = load_stroke_counts()
+
+    def density_bucket(record) -> str:
+        unicode_value = record.get("unicode") or ""
+        codepoint = None
+        if isinstance(unicode_value, str) and unicode_value.startswith("U+"):
+            try:
+                codepoint = int(unicode_value[2:], 16)
+            except ValueError:
+                codepoint = None
+        strokes = stroke_map.get(chr(codepoint)) if codepoint else None
+        if strokes is None:
+            return f"{record.get('category')}-未分档"
+        for label, low, high in (
+            ("1-3", 1, 3),
+            ("4-6", 4, 6),
+            ("7-9", 7, 9),
+            ("10-13", 10, 13),
+            ("14-17", 14, 17),
+            ("18+", 18, 999),
+        ):
+            if low <= strokes <= high:
+                return label
+        return "其他"
+
     for cat, key in (("latin-upper", "cap_top"), ("digit", "digit_top")):
         values = [r[key] for r in records if r.get("category") == cat and key in r]
         if len(values) > 1:
@@ -183,19 +228,29 @@ def main() -> int:
                     f"{cat} {key} 离散 {spread} 单位 > 24（家族一致性被破坏）"
                 )
 
-    for cat in ("cjk", "latin-upper", "digit"):
-        ratios = [r["ink_ratio"] for r in records if r.get("category") == cat]
-        if len(ratios) < 3:
+    buckets: dict[str, list[float]] = {}
+    for record in records:
+        if record.get("category") not in ("cjk", "latin-upper", "digit"):
             continue
-        median = statistics.median(ratios)
-        for record in records:
-            if record.get("category") != cat:
-                continue
-            if median and abs(record["ink_ratio"] - median) / median > 0.35:
-                warnings.append(
-                    f"{record['name']}（{cat}）墨量率 {record['ink_ratio']:.3f} "
-                    f"偏离同类中位数 {median:.3f} 超 35%"
-                )
+        buckets.setdefault(density_bucket(record), []).append(record["ink_ratio"])
+
+    medians = {key: statistics.median(values) for key, values in buckets.items() if values}
+    for record in records:
+        if record.get("category") not in ("cjk", "latin-upper", "digit"):
+            continue
+        bucket = density_bucket(record)
+        median = medians.get(bucket)
+        if not median:
+            continue
+        deviation = abs(record["ink_ratio"] - median) / median
+        # 有笔画数据分档的用 35%；没有分档信息的（Latin/数字）字母形态密度本就
+        # 差异大（I 是细杆、O 是圆环），放宽到 150%，避免把形态差异报成风格漂移。
+        limit = 0.35 if not bucket.endswith("未分档") else 1.5
+        if deviation > limit:
+            warnings.append(
+                f"{record['name']}（{bucket} 档）墨量率 {record['ink_ratio']:.3f} "
+                f"偏离同档中位数 {median:.3f} 超 {limit:.0%}"
+            )
 
     report = {
         "sources": [str(p.relative_to(REPO_ROOT)).replace("\\", "/") for p in sources],

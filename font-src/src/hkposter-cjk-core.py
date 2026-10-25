@@ -198,11 +198,13 @@ def glyph_feng() -> Glyph:
 
 
 def build() -> list[Glyph]:
+    # 火（U+706B）不在本 lane：它同时属于 Jōyō 常用漢字集合，
+    # 由 wave1/joyo-s1-003 批次提供（那版的上/下两段分离更清楚）。
+    # 一个码位在一个字体里只能有一个字形，两边都做会在合成时撞码。
     return [
         glyph_gang(),
         glyph_ying(),
         glyph_cheng(),
-        glyph_huo(),
         glyph_ye(),
         glyph_feng(),
     ]
