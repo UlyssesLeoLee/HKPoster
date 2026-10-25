@@ -312,3 +312,48 @@ python font-src/scripts/render_glyph_sheet.py --font font-src/dist/HKPoster-Heav
 |---|---|---|
 | v1.0 | 初始契约（单套笔画权重 96/92/84，latin-core 含标点） | — |
 | v1.1 | 笔画权重分 CJK / Latin 两档；标点拆出独立 `latin-punct` lane | Wave 0 样张实测：Latin 用 96 只读作 Regular（docs/09 RV-14）；标点 26 个字形单拆可降低单 lane 负载与中断风险 |
+| v1.2 | 新增多文种：CJK / Latin / 简体 / 假名 四档权重；Jōyō 批次化生产；vert 特性 | 用户纳入 zh-CN 与 ja-JP（2026-10-25） |
+
+## 13. Wave 1 多文种 lane（2026-10-25 起）
+
+多文种的**码位策略**（决定了要不要 `locl`）：
+
+| 文种 | 策略 | 说明 |
+|---|---|---|
+| zh-HK 繁体 | 独立 master | 现有 12 字 + 后续繁体批次 |
+| zh-CN 简体 | 独立 master（**独立码位**） | 龙 U+9F99 / 义 U+4E49 / 爱 U+7231 / 无 U+65E0 / 风 U+98CE 等与繁体不同码位，**共用码位的问题不存在**，无需 `locl`；简繁同形字（港影警道城火夜）直接共用现有 master |
+| ja 假名 | 独立 master | 平假名 77 + 片假名 73 |
+| ja 漢字 | 独立 master（Jōyō 2136） | Jōyō 集合自带日文形（画 U+753B、竜 U+7ADC…），与繁体形同码位冲突的是 P2 的 JIS-vs-GB 变体，届时才启用 `locl` |
+| vert 竖排 | 独立 master + `vert` 特性 | 替代字形命名 `<基础名>.vert`（生产名已实测原样保留） |
+
+**四档笔画权重**（见 `font-src/data/design-params.json` 的 `weights`）：
+
+| 类别 | 主 | 次 | 斜/细 | 点 | 理由 |
+|---|---:|---:|---:|---:|---|
+| CJK 繁体 | 96 | 92 | 84 | 84 | 基准 |
+| CJK 简体 | 108 | 100 | 92 | 92 | 笔画少 → 需上调约 12% 才能与繁体等黑 |
+| Latin | 132 | 120 | 112 | 104 | 640 advance 里 96 只读作 Regular |
+| 假名 | 92 | 84 | 76 | 84 | 笔画少、曲线笔多 |
+
+**Jōyō 2136 字的批次化生产**：
+
+- 数据源：Project X0213（依据 2010 年文化厅《常用漢字表》修订版）+ Kanjidic2（笔画/学级/频率）
+- 落库：`font-src/data/joyo-kanji.json`（2136 字 + Unicode）、`joyo-kanji-meta.json`（笔画/学级/频率）
+- 分批：`font-src/scripts/plan_joyo_batches.py` → `font-src/data/joyo-batches.json`
+  （按笔画密度分 5 档：1–5 / 6–9 / 10–13 / 14–17 / 18+，档内按频率排名优先；
+  共 **93 条 lane**：s1 6 条 / s2 21 / s3 34 / s4 23 / s5 9）
+- 提示词生成：`font-src/scripts/lane_prompt.py --batch <id>` —— 规格固化，后续会话可机械续做
+- 每条 lane = 一个 recipe + 一个 UFO master，文件所有权天然互斥
+
+**lane 清单（Wave 1）**：
+
+| Lane | 拥有路径 | 产出 |
+|---|---|---|
+| `kana-hira` | `font-src/src/hkposter-kana-hira.py` + `masters/hkposter-kana-hira.ufo/` | 平假名 77 |
+| `kana-kata` | `font-src/src/hkposter-kana-kata.py` + `masters/hkposter-kana-kata.ufo/` | 片假名 73 |
+| `cn-simplified` | `font-src/src/hkposter-cn.py` + `masters/hkposter-cn.ufo/` | 简体 8 |
+| `joyo-<class>-<n>` | `font-src/src/hkposter-joyo-*.py` + `masters/hkposter-joyo-*.ufo/` | Jōyō 批次 |
+| `vert-punct` | `font-src/src/hkposter-vert-punct.py` + `masters/hkposter-vert-punct.ufo/` + `features/vert.fea` + `tests/test_vert.py` | 竖排替代形 + vert 特性 |
+
+**子集构建与特性文件的关系（已修）**：`build_font.py --sources <子集>` 只编译**引用的字形都存在**的特性文件，
+不适用则跳过并打印说明；全量构建遇到不适用的特性文件直接报错（防止特性被静默丢掉）。
