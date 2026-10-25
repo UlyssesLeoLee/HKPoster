@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="O" format="2">
+  <advance width="640"/>
+  <unicode hex="004F"/>
+  <note>
+O — HK Poster Heavy Wave 0
+</note>
+  <outline>
+    <contour>
+      <point x="590" y="350" type="line"/>
+      <point x="569" y="484" type="line"/>
+      <point x="511" y="597" type="line"/>
+      <point x="423" y="673" type="line"/>
+      <point x="320" y="700" type="line"/>
+      <point x="217" y="673" type="line"/>
+      <point x="129" y="597" type="line"/>
+      <point x="71" y="484" type="line"/>
+      <point x="50" y="350" type="line"/>
+      <point x="71" y="216" type="line"/>
+      <point x="129" y="103" type="line"/>
+      <point x="217" y="27" type="line"/>
+      <point x="320" y="0" type="line"/>
+      <point x="423" y="27" type="line"/>
+      <point x="511" y="103" type="line"/>
+      <point x="569" y="216" type="line"/>
+    </contour>
+    <contour>
+      <point x="494" y="350" type="line"/>
+      <point x="481" y="253" type="line"/>
+      <point x="443" y="170" type="line"/>
+      <point x="387" y="115" type="line"/>
+      <point x="320" y="96" type="line"/>
+      <point x="253" y="115" type="line"/>
+      <point x="197" y="170" type="line"/>
+      <point x="159" y="253" type="line"/>
+      <point x="146" y="350" type="line"/>
+      <point x="159" y="447" type="line"/>
+      <point x="197" y="530" type="line"/>
+      <point x="253" y="585" type="line"/>
+      <point x="320" y="604" type="line"/>
+      <point x="387" y="585" type="line"/>
+      <point x="443" y="530" type="line"/>
+      <point x="481" y="447" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="five" format="2">
+  <advance width="640"/>
+  <unicode hex="0035"/>
+  <note>
+five — HK Poster Heavy Wave 0
+</note>
+  <outline>
+    <contour>
+      <point x="303" y="493" type="line"/>
+      <point x="198" y="476" type="line"/>
+      <point x="198" y="604" type="line"/>
+      <point x="540" y="604" type="line"/>
+      <point x="540" y="700" type="line"/>
+      <point x="198" y="700" type="line"/>
+      <point x="110" y="700" type="line"/>
+      <point x="102" y="700" type="line"/>
+      <point x="102" y="420" type="line"/>
+      <point x="150" y="420" type="line"/>
+      <point x="158" y="373" type="line"/>
+      <point x="297" y="397" type="line"/>
+      <point x="426" y="362" type="line"/>
+      <point x="472" y="277" type="line"/>
+      <point x="434" y="152" type="line"/>
+      <point x="305" y="96" type="line"/>
+      <point x="177" y="132" type="line"/>
+      <point x="153" y="38" type="line"/>
+      <point x="315" y="0" type="line"/>
+      <point x="506" y="88" type="line"/>
+      <point x="568" y="283" type="line"/>
+      <point x="484" y="438" type="line"/>
+    </contour>
+  </outline>
+</glyph>
