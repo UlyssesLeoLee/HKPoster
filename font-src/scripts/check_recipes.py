@@ -43,6 +43,16 @@ def info_dict(font_path: Path) -> dict:
     return {key: getattr(font.info, key) for key in dir(font.info) if not key.startswith("_")}
 
 
+def _norm(raw: bytes) -> bytes:
+    """归一化行尾后再比对。
+
+    仓库 core.autocrlf=true：checkout 出来的 .glif 是 CRLF，
+    而 recipe 重新生成的是 LF。直接比字节会误报"不同步"，
+    所以比较前统一把 CRLF 折成 LF。
+    """
+    return raw.replace(b"\r\n", b"\n")
+
+
 def compare(recipe_path: Path) -> list[str]:
     problems: list[str] = []
     module = load_recipe(recipe_path)
@@ -58,10 +68,10 @@ def compare(recipe_path: Path) -> list[str]:
         regenerated = Path(tmp) / "regenerated.ufo"
         write_ufo(regenerated, module.build())
         committed_glifs = {
-            p.name: p.read_bytes() for p in (target / "glyphs").glob("*.glif")
+            p.name: _norm(p.read_bytes()) for p in (target / "glyphs").glob("*.glif")
         }
         regenerated_glifs = {
-            p.name: p.read_bytes() for p in (regenerated / "glyphs").glob("*.glif")
+            p.name: _norm(p.read_bytes()) for p in (regenerated / "glyphs").glob("*.glif")
         }
         if set(committed_glifs) != set(regenerated_glifs):
             missing = sorted(set(regenerated_glifs) - set(committed_glifs))
