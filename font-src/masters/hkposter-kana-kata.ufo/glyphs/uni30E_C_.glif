@@ -3,18 +3,18 @@
   <advance width="1000"/>
   <unicode hex="30EC"/>
   <note>
-レ：上段竖 + 底端向右下展开
+レ：上段竖 + 底端向右下展开（字面 ×1.30，与汉字同族）
 </note>
   <outline>
     <contour>
-      <point x="813" y="196" type="line"/>
-      <point x="568" y="266" type="line"/>
-      <point x="568" y="740" type="line"/>
-      <point x="472" y="740" type="line"/>
-      <point x="472" y="230" type="line"/>
-      <point x="520" y="230" type="line"/>
-      <point x="507" y="184" type="line"/>
-      <point x="787" y="104" type="line"/>
+      <point x="706" y="100" type="line"/>
+      <point x="390" y="190" type="line"/>
+      <point x="390" y="793" type="line"/>
+      <point x="294" y="793" type="line"/>
+      <point x="294" y="154" type="line"/>
+      <point x="342" y="154" type="line"/>
+      <point x="329" y="108" type="line"/>
+      <point x="680" y="8" type="line"/>
     </contour>
   </outline>
 </glyph>

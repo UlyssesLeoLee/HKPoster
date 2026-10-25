@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30A0" format="2">
+  <advance width="1000"/>
+  <unicode hex="30A0"/>
+  <note>
+゠：双横线（double hyphen），两条平行短横杠居中（wave2 新增）
+</note>
+  <outline>
+    <contour>
+      <point x="695" y="340" type="line"/>
+      <point x="305" y="340" type="line"/>
+      <point x="305" y="260" type="line"/>
+      <point x="695" y="260" type="line"/>
+    </contour>
+    <contour>
+      <point x="695" y="490" type="line"/>
+      <point x="305" y="490" type="line"/>
+      <point x="305" y="410" type="line"/>
+      <point x="695" y="410" type="line"/>
+    </contour>
+  </outline>
+</glyph>

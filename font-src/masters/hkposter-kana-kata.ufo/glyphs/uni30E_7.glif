@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30E7" format="2">
+  <advance width="1000"/>
+  <unicode hex="30E7"/>
+  <note>
+ョ：小假名，由 ヨ 另行绘制（wave2 新增，水平居中·贴基线，字高 560（全尺寸的 0.70 倍））
+</note>
+  <outline>
+    <contour>
+      <point x="726" y="40" type="line"/>
+      <point x="726" y="128" type="line"/>
+      <point x="361" y="128" type="line"/>
+      <point x="361" y="272" type="line"/>
+      <point x="673" y="272" type="line"/>
+      <point x="673" y="360" type="line"/>
+      <point x="361" y="360" type="line"/>
+      <point x="361" y="512" type="line"/>
+      <point x="620" y="512" type="line"/>
+      <point x="620" y="600" type="line"/>
+      <point x="317" y="600" type="line"/>
+      <point x="317" y="556" type="line"/>
+      <point x="273" y="556" type="line"/>
+      <point x="273" y="57" type="line"/>
+      <point x="317" y="57" type="line"/>
+      <point x="317" y="40" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30F6" format="2">
+  <advance width="1000"/>
+  <unicode hex="30F6"/>
+  <note>
+ヶ：小假名，由 ケ 另行绘制（wave2 新增，水平居中·贴基线，字高 555（全尺寸的 0.70 倍））
+</note>
+  <outline>
+    <contour>
+      <point x="678" y="467" type="line"/>
+      <point x="726" y="550" type="line"/>
+      <point x="650" y="594" type="line"/>
+      <point x="576" y="467" type="line"/>
+      <point x="398" y="467" type="line"/>
+      <point x="457" y="548" type="line"/>
+      <point x="393" y="596" type="line"/>
+      <point x="298" y="467" type="line"/>
+      <point x="281" y="467" type="line"/>
+      <point x="281" y="444" type="line"/>
+      <point x="274" y="434" type="line"/>
+      <point x="281" y="428" type="line"/>
+      <point x="281" y="387" type="line"/>
+      <point x="337" y="387" type="line"/>
+      <point x="338" y="386" type="line"/>
+      <point x="339" y="387" type="line"/>
+      <point x="529" y="387" type="line"/>
+      <point x="353" y="84" type="line"/>
+      <point x="429" y="40" type="line"/>
+      <point x="631" y="387" type="line"/>
+      <point x="705" y="387" type="line"/>
+      <point x="705" y="467" type="line"/>
+    </contour>
+  </outline>
+</glyph>

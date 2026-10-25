@@ -3,14 +3,14 @@
   <advance width="1000"/>
   <unicode hex="30CE"/>
   <note>
-ノ：自左上向右下一笔长斜笔
+ノ：自左上向右下一笔长斜笔（字面 ×1.30，与汉字同族）
 </note>
   <outline>
     <contour>
-      <point x="360" y="746" type="line"/>
-      <point x="280" y="694" type="line"/>
-      <point x="660" y="114" type="line"/>
-      <point x="740" y="166" type="line"/>
+      <point x="302" y="789" type="line"/>
+      <point x="222" y="737" type="line"/>
+      <point x="698" y="11" type="line"/>
+      <point x="778" y="63" type="line"/>
     </contour>
   </outline>
 </glyph>

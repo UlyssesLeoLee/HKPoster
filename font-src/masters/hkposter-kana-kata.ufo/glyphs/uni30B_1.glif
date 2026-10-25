@@ -3,32 +3,29 @@
   <advance width="1000"/>
   <unicode hex="30B1"/>
   <note>
-ケ：左上短撇 + 中横 + 自右上向左下长斜笔
+ケ：左上短撇 + 中横 + 自右上向左下长斜笔（字面 ×1.30，与汉字同族）
 </note>
   <outline>
     <contour>
-      <point x="682" y="604" type="line"/>
-      <point x="741" y="706" type="line"/>
-      <point x="659" y="754" type="line"/>
-      <point x="571" y="604" type="line"/>
-      <point x="352" y="604" type="line"/>
-      <point x="425" y="704" type="line"/>
-      <point x="355" y="756" type="line"/>
-      <point x="243" y="604" type="line"/>
-      <point x="220" y="604" type="line"/>
-      <point x="220" y="573" type="line"/>
-      <point x="215" y="566" type="line"/>
-      <point x="220" y="562" type="line"/>
-      <point x="220" y="516" type="line"/>
-      <point x="283" y="516" type="line"/>
-      <point x="285" y="514" type="line"/>
-      <point x="287" y="516" type="line"/>
-      <point x="520" y="516" type="line"/>
-      <point x="309" y="154" type="line"/>
-      <point x="391" y="106" type="line"/>
-      <point x="631" y="516" type="line"/>
-      <point x="720" y="516" type="line"/>
-      <point x="720" y="604" type="line"/>
+      <point x="731" y="600" type="line"/>
+      <point x="811" y="739" type="line"/>
+      <point x="729" y="787" type="line"/>
+      <point x="620" y="600" type="line"/>
+      <point x="329" y="600" type="line"/>
+      <point x="430" y="737" type="line"/>
+      <point x="358" y="789" type="line"/>
+      <point x="220" y="600" type="line"/>
+      <point x="188" y="600" type="line"/>
+      <point x="188" y="512" type="line"/>
+      <point x="252" y="512" type="line"/>
+      <point x="261" y="506" type="line"/>
+      <point x="265" y="512" type="line"/>
+      <point x="568" y="512" type="line"/>
+      <point x="305" y="59" type="line"/>
+      <point x="387" y="11" type="line"/>
+      <point x="679" y="512" type="line"/>
+      <point x="794" y="512" type="line"/>
+      <point x="794" y="600" type="line"/>
     </contour>
   </outline>
 </glyph>
