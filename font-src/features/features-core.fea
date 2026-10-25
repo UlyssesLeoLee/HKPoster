@@ -1,0 +1,30 @@
+# features-core.fea —— 核心 OpenType 特性（Wave 0）
+#
+# 本文件只放「不依赖具体字形、且不会导致 ufo2ft 编译失败」的特性。
+#
+# 启用规则（重要）
+# ----------------
+# 任何 feature 的替换目标必须在字体里真实存在，否则 ufo2ft 编译会直接失败。
+# 因此：
+#   * locl（地区字形切换）当前**没有第二套地区字形**（简体衍生尚未制作），
+#     因此只以注释形式预留，等有了对应 glyph 再启用；
+#   * palt / halt（比例标点 / 半宽标点）需要每个标点都有对应的比例版本，
+#     当前只有单一宽度，因此同样只预留不启用；
+#   * kerning 不在本文件，而在 kerning-latin.fea（Latin 六组关键组合）。
+#
+# 启用任一项时，请同时在 font-src/tests/test_opentype.py 里补上对应的断言。
+#
+# 预留：地区字形切换（简体衍生完成后启用，例如下面这行）
+# feature locl {
+#     sub uni6E2F by uni6E2F;   # 示例：港（港）→ 港（港）
+# } locl;
+#
+# 预留：比例标点（需要标点的比例版本）
+# feature palt {
+#     sub comma by comma.prop;
+# } palt;
+#
+# 预留：半宽标点（需要标点的半宽版本）
+# feature halt {
+#     sub comma by comma.half;
+# } halt;
