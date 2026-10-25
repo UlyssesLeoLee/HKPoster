@@ -25,6 +25,12 @@
 5. **不编造**：字符状态、测试状态、许可证状态一律按实际写。
    许可证当前是 `UNDECIDED`，发布门禁阻断（docs/08、docs/09）。
 6. **改 `.ufo` 之前先改 recipe**；直接改 `.ufo` 会在 `check_recipes.py` 里暴露为不同步。
+7. **「笔画粘连」用数字判，不靠眼估**：跑 `check_stroke_gaps.py` 看重叠等效长度
+   （单位=几个笔画宽；<1.5 正常交叠 · 1.5~3 偏紧 · >3 疑似粘连）。
+   手工估余隙极易算错 —— 斜笔（`g.diag`）的墨迹沿**垂直于中心线**展开，
+   宽度 `w` 在 y 方向只覆盖 `w/2 × |ux|`，按水平笔画那样用 ±w/2 估会差几十单位。
+   本轮实测：目视「看着还行」的字里藏着 3 个真 bug（更的日三横压在一起、
+   尾的毛上横与尸中横同高、束的口贴住顶横），都是这个工具抓出来的。
 
 ## 常用命令
 
@@ -41,6 +47,7 @@ python font-src/scripts/check_kana_fidelity.py            # 假名保真度：�
 python font-src/scripts/check_kana_fidelity.py --selftest # 先自证该检查器本身的分辨力
 python font-src/scripts/check_kana_size.py              # 假名字面尺寸验收（与汉字同档 + 平/片对称）
 python font-src/scripts/check_stroke_angles.py          # 笔画角度与记号倾角（recipe 层 AST 检查）
+python font-src/scripts/check_stroke_gaps.py            # 笔画粘连/间隙报告（重叠等效长度，单位=笔画宽）
 python font-src/scripts/check_encoding.py              # 字符损坏扫描（坏字符进 recipe 就是错字形）
 python font-src/tests/run_tests.py         # UT + IT + ST 全套
 python font-src/specimens/render_specimens.py --all        # 重生成样张

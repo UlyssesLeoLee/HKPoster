@@ -3,9 +3,21 @@
   <advance width="1000"/>
   <unicode hex="591C"/>
   <note>
-夜（Wave 0 代表字形）
+夜（Wave 0 代表字形，2026-10-26 返工）
 </note>
   <outline>
+    <contour>
+      <point x="487" y="396" type="line"/>
+      <point x="867" y="26" type="line"/>
+      <point x="933" y="94" type="line"/>
+      <point x="553" y="464" type="line"/>
+    </contour>
+    <contour>
+      <point x="917" y="209" type="line"/>
+      <point x="935" y="291" type="line"/>
+      <point x="861" y="291" type="line"/>
+      <point x="843" y="209" type="line"/>
+    </contour>
     <contour>
       <point x="194" y="412" type="line"/>
       <point x="194" y="60" type="line"/>
@@ -14,28 +26,18 @@
       <point x="250" y="450" type="line"/>
       <point x="370" y="657" type="line"/>
       <point x="361" y="662" type="line"/>
-      <point x="602" y="662" type="line"/>
-      <point x="580" y="636" type="line"/>
-      <point x="560" y="636" type="line"/>
-      <point x="560" y="613" type="line"/>
-      <point x="465" y="500" type="line"/>
-      <point x="516" y="456" type="line"/>
-      <point x="512" y="452" type="line"/>
-      <point x="578" y="388" type="line"/>
-      <point x="585" y="395" type="line"/>
-      <point x="843" y="89" type="line"/>
-      <point x="917" y="151" type="line"/>
-      <point x="859" y="219" type="line"/>
-      <point x="877" y="219" type="line"/>
-      <point x="895" y="301" type="line"/>
-      <point x="821" y="301" type="line"/>
-      <point x="815" y="272" type="line"/>
-      <point x="652" y="465" type="line"/>
-      <point x="729" y="544" type="line"/>
-      <point x="830" y="544" type="line"/>
-      <point x="830" y="636" type="line"/>
-      <point x="688" y="636" type="line"/>
-      <point x="658" y="662" type="line"/>
+      <point x="545" y="662" type="line"/>
+      <point x="545" y="574" type="line"/>
+      <point x="548" y="574" type="line"/>
+      <point x="545" y="569" type="line"/>
+      <point x="615" y="511" type="line"/>
+      <point x="668" y="574" type="line"/>
+      <point x="747" y="574" type="line"/>
+      <point x="633" y="463" type="line"/>
+      <point x="697" y="397" type="line"/>
+      <point x="892" y="587" type="line"/>
+      <point x="860" y="620" type="line"/>
+      <point x="860" y="662" type="line"/>
       <point x="900" y="662" type="line"/>
       <point x="900" y="758" type="line"/>
       <point x="100" y="758" type="line"/>

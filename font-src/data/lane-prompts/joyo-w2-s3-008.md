@@ -153,23 +153,33 @@ if __name__ == "__main__":
   否则同批内会出现"有的太轻、有的太闷"（GLY-001 允许小空腔局部减重）。
 - 密排处（横画叠横画）内白不低于 24 单位；竖与竖之间不低于 60 单位（GLY-006）。
 - 禁止逐字机械挤压或倾斜（docs/02 偏差 D）。
+- **「笔画粘连」不能只靠眼看**：`check_stroke_gaps.py` 会用与 hkbuild 相同的算法
+  重建每一笔的墨迹，算出笔画两两之间的重叠量（单位=几个笔画宽）。
+  刻度：< 1.5 正常交叠 · 1.5~3 偏紧 · **> 3 疑似粘连**。
+  本工具在已合并批次里抓到过 3 个目视没发现的 bug（更的「日」三横压在一起、
+  尾的「毛」上横与「尸」中横同高、束的「口」贴住顶横）——
+  那些字在 200px 下看着「还行」，实际内白已经被墨吃掉了。
+  规格里写「内白不低于 24 单位」时，请以工具的数字为准，不要靠估。
 
-【要跑的 6 条命令（全部在 lane worktree 下执行）】
+【要跑的 7 条命令（全部在 lane worktree 下执行）】
 ```
 python font-src/src/hkposter-joyo-w2-s3-008.py
 python font-src/scripts/check_recipes.py --recipes font-src/src/hkposter-joyo-w2-s3-008.py
 python font-src/scripts/check_glyphs.py --sources font-src/masters/hkposter-joyo-w2-s3-008.ufo
+python font-src/scripts/check_stroke_gaps.py --recipes font-src/src/hkposter-joyo-w2-s3-008.py --top 6 --threshold 1.5
 python font-src/scripts/build_font.py --sources font-src/masters/hkposter-joyo-w2-s3-008.ufo --out font-src/dist
 python font-src/scripts/verify_font.py --font font-src/dist/HKPoster-Heavy.ttf --sources font-src/masters/hkposter-joyo-w2-s3-008.ufo
 python font-src/scripts/render_glyph_sheet.py --font font-src/dist/HKPoster-Heavy.ttf --text "殺盟座破捜除降超責従修捕" --size 200 --out font-src/reports/sheet-joyo-w2-s3-008.png
 ```
-判定：check_recipes PASS（问题 0）；check_glyphs FAIL=0；verify_font FAIL=0。
-**若第 4 条因特性文件报错**：说明 `font-src/features/*.fea` 引用了本批没有的字形——
+判定：check_recipes PASS（问题 0）；check_glyphs FAIL=0；verify_font FAIL=0；
+**check_stroke_gaps 不得报出「疑似粘连」（> 3 个笔画宽）**——
+若报了，对照标准骨架改坐标后重跑，直到那一对不再出现在「疑似粘连」里。
+**若第 5 条因特性文件报错**：说明 `font-src/features/*.fea` 引用了本批没有的字形——
 子集构建会自动跳过不适用的特性文件，若仍失败请把报错原文写进报告交集成方。
 
 【交付步骤】
 1. write 一次性写出完整文件（24 个字形全写完，不要分次追加）。
-2. 跑上面 6 条命令。
+2. 跑上面 7 条命令。
 3. **用 read 工具打开 font-src/reports/sheet-joyo-w2-s3-008.png 亲眼看**（不能省）：
    逐字判断：一眼认得出吗？有没有粘连成黑块？内白还在吗？批内观感一致吗？
    不满意就改 recipe → 重新生成 → 重新渲染 → 再看（最多 4 轮）。
