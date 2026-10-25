@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni58EE" format="2">
+  <advance width="1000"/>
+  <unicode hex="58EE"/>
+  <note>
+壮：丬 + 士
+</note>
+  <outline>
+    <contour>
+      <point x="642" y="552" type="line"/>
+      <point x="642" y="248" type="line"/>
+      <point x="480" y="248" type="line"/>
+      <point x="480" y="152" type="line"/>
+      <point x="900" y="152" type="line"/>
+      <point x="900" y="248" type="line"/>
+      <point x="738" y="248" type="line"/>
+      <point x="738" y="552" type="line"/>
+      <point x="940" y="552" type="line"/>
+      <point x="940" y="648" type="line"/>
+      <point x="440" y="648" type="line"/>
+      <point x="440" y="552" type="line"/>
+    </contour>
+    <contour>
+      <point x="147" y="140" type="line"/>
+      <point x="282" y="231" type="line"/>
+      <point x="282" y="0" type="line"/>
+      <point x="378" y="0" type="line"/>
+      <point x="378" y="820" type="line"/>
+      <point x="282" y="820" type="line"/>
+      <point x="282" y="347" type="line"/>
+      <point x="93" y="220" type="line"/>
+    </contour>
+    <contour>
+      <point x="162" y="580" type="line"/>
+      <point x="148" y="700" type="line"/>
+      <point x="64" y="700" type="line"/>
+      <point x="78" y="580" type="line"/>
+    </contour>
+  </outline>
+</glyph>
