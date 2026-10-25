@@ -294,6 +294,13 @@ def write_ufo(
     info.openTypeNameDescription = (
         "HK Poster Heavy — 香港电影海报风格粗体（Wave 0 试制，未发布）"
     )
+    # Heavy 不是 RIBBI 样式名，fontTools 的 buildNameTable 会把 family 拼成
+    # "HK Poster Heavy"、subfamily 退化成 "Regular"。用排版家族名（nameID 16/17）
+    # 表达真实的族名/样式名，与真实字体（Inter Black 之类）的做法一致。
+    info.openTypeNamePreferredFamilyName = family
+    info.openTypeNamePreferredSubfamilyName = style
+    info.openTypeNamePreferredFamilyName = family
+    info.openTypeNamePreferredSubfamilyName = style
     info.openTypeNameLicense = (
         "UNDECIDED — 发布前必须完成许可证审查（见 docs/08_授权与发布.md）"
     )
