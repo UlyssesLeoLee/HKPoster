@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4EE5" format="2">
+  <advance width="1000"/>
+  <unicode hex="4EE5"/>
+  <note>
+以：竖提 + 点 + 撇捺
+</note>
+  <outline>
+    <contour>
+      <point x="327" y="201" type="line"/>
+      <point x="273" y="279" type="line"/>
+      <point x="218" y="242" type="line"/>
+      <point x="218" y="555" type="line"/>
+      <point x="272" y="524" type="line"/>
+      <point x="337" y="639" type="line"/>
+      <point x="263" y="681" type="line"/>
+      <point x="218" y="600" type="line"/>
+      <point x="122" y="600" type="line"/>
+      <point x="122" y="150" type="line"/>
+      <point x="170" y="150" type="line"/>
+      <point x="197" y="111" type="line"/>
+    </contour>
+    <contour>
+      <point x="799" y="83" type="line"/>
+      <point x="861" y="157" type="line"/>
+      <point x="526" y="433" type="line"/>
+      <point x="814" y="726" type="line"/>
+      <point x="746" y="794" type="line"/>
+      <point x="266" y="304" type="line"/>
+      <point x="334" y="236" type="line"/>
+      <point x="459" y="364" type="line"/>
+    </contour>
+  </outline>
+</glyph>

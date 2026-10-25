@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni53E3" format="2">
+  <advance width="1000"/>
+  <unicode hex="53E3"/>
+  <note>
+口：竖 + 横折 + 横
+</note>
+  <outline>
+    <contour>
+      <point x="940" y="742" type="line"/>
+      <point x="892" y="742" type="line"/>
+      <point x="892" y="790" type="line"/>
+      <point x="156" y="790" type="line"/>
+      <point x="108" y="790" type="line"/>
+      <point x="60" y="790" type="line"/>
+      <point x="60" y="0" type="line"/>
+      <point x="108" y="0" type="line"/>
+      <point x="156" y="0" type="line"/>
+      <point x="844" y="0" type="line"/>
+      <point x="892" y="0" type="line"/>
+      <point x="940" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="844" y="694" type="line"/>
+      <point x="844" y="96" type="line"/>
+      <point x="156" y="96" type="line"/>
+      <point x="156" y="694" type="line"/>
+    </contour>
+  </outline>
+</glyph>
