@@ -3,22 +3,22 @@
   <advance width="1000"/>
   <unicode hex="30B3"/>
   <note>
-コ：上下横 + 右侧竖连之
+コ：上下横 + 右侧竖连之（字面 ×1.30，与汉字同族）
 </note>
   <outline>
     <contour>
-      <point x="732" y="158" type="line"/>
-      <point x="140" y="158" type="line"/>
-      <point x="140" y="62" type="line"/>
-      <point x="780" y="62" type="line"/>
-      <point x="780" y="110" type="line"/>
-      <point x="828" y="110" type="line"/>
-      <point x="828" y="680" type="line"/>
-      <point x="780" y="680" type="line"/>
-      <point x="780" y="728" type="line"/>
-      <point x="140" y="728" type="line"/>
-      <point x="140" y="632" type="line"/>
-      <point x="732" y="632" type="line"/>
+      <point x="818" y="101" type="line"/>
+      <point x="86" y="101" type="line"/>
+      <point x="86" y="5" type="line"/>
+      <point x="866" y="5" type="line"/>
+      <point x="866" y="53" type="line"/>
+      <point x="914" y="53" type="line"/>
+      <point x="914" y="747" type="line"/>
+      <point x="866" y="747" type="line"/>
+      <point x="866" y="795" type="line"/>
+      <point x="86" y="795" type="line"/>
+      <point x="86" y="699" type="line"/>
+      <point x="818" y="699" type="line"/>
     </contour>
   </outline>
 </glyph>

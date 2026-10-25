@@ -2,14 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
+    <key>uni30A0</key>
+    <string>uni30A_0.glif</string>
+    <key>uni30A1</key>
+    <string>uni30A_1.glif</string>
     <key>uni30A2</key>
     <string>uni30A_2.glif</string>
+    <key>uni30A3</key>
+    <string>uni30A_3.glif</string>
     <key>uni30A4</key>
     <string>uni30A_4.glif</string>
+    <key>uni30A5</key>
+    <string>uni30A_5.glif</string>
     <key>uni30A6</key>
     <string>uni30A_6.glif</string>
+    <key>uni30A7</key>
+    <string>uni30A_7.glif</string>
     <key>uni30A8</key>
     <string>uni30A_8.glif</string>
+    <key>uni30A9</key>
+    <string>uni30A_9.glif</string>
     <key>uni30AA</key>
     <string>uni30A_A_.glif</string>
     <key>uni30AB</key>
@@ -60,6 +72,8 @@
     <string>uni30C_1.glif</string>
     <key>uni30C2</key>
     <string>uni30C_2.glif</string>
+    <key>uni30C3</key>
+    <string>uni30C_3.glif</string>
     <key>uni30C4</key>
     <string>uni30C_4.glif</string>
     <key>uni30C5</key>
@@ -122,10 +136,16 @@
     <string>uni30E_1.glif</string>
     <key>uni30E2</key>
     <string>uni30E_2.glif</string>
+    <key>uni30E3</key>
+    <string>uni30E_3.glif</string>
     <key>uni30E4</key>
     <string>uni30E_4.glif</string>
+    <key>uni30E5</key>
+    <string>uni30E_5.glif</string>
     <key>uni30E6</key>
     <string>uni30E_6.glif</string>
+    <key>uni30E7</key>
+    <string>uni30E_7.glif</string>
     <key>uni30E8</key>
     <string>uni30E_8.glif</string>
     <key>uni30E9</key>
@@ -138,6 +158,8 @@
     <string>uni30E_C_.glif</string>
     <key>uni30ED</key>
     <string>uni30E_D_.glif</string>
+    <key>uni30EE</key>
+    <string>uni30E_E_.glif</string>
     <key>uni30EF</key>
     <string>uni30E_F_.glif</string>
     <key>uni30F0</key>
@@ -148,9 +170,27 @@
     <string>uni30F_2.glif</string>
     <key>uni30F3</key>
     <string>uni30F_3.glif</string>
+    <key>uni30F4</key>
+    <string>uni30F_4.glif</string>
+    <key>uni30F5</key>
+    <string>uni30F_5.glif</string>
+    <key>uni30F6</key>
+    <string>uni30F_6.glif</string>
+    <key>uni30F7</key>
+    <string>uni30F_7.glif</string>
+    <key>uni30F8</key>
+    <string>uni30F_8.glif</string>
+    <key>uni30F9</key>
+    <string>uni30F_9.glif</string>
+    <key>uni30FA</key>
+    <string>uni30F_A_.glif</string>
+    <key>uni30FB</key>
+    <string>uni30F_B_.glif</string>
     <key>uni30FD</key>
     <string>uni30F_D_.glif</string>
     <key>uni30FE</key>
     <string>uni30F_E_.glif</string>
+    <key>uni30FF</key>
+    <string>uni30F_F_.glif</string>
   </dict>
 </plist>

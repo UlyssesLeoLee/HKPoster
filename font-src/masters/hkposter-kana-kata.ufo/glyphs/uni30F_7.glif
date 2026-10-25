@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30F7" format="2">
+  <advance width="1000"/>
+  <unicode hex="30F7"/>
+  <note>
+ヷ：ワ：左上短竖 + 横折撇（wave2 新增，浊音形，基础形缩放并左移，右上加记号）
+</note>
+  <outline>
+    <contour>
+      <point x="275" y="128" type="line"/>
+      <point x="353" y="72" type="line"/>
+      <point x="735" y="607" type="line"/>
+      <point x="696" y="635" type="line"/>
+      <point x="696" y="683" type="line"/>
+      <point x="237" y="683" type="line"/>
+      <point x="237" y="722" type="line"/>
+      <point x="149" y="722" type="line"/>
+      <point x="149" y="570" type="line"/>
+      <point x="237" y="570" type="line"/>
+      <point x="237" y="587" type="line"/>
+      <point x="603" y="587" type="line"/>
+    </contour>
+    <contour>
+      <point x="804" y="742" type="line"/>
+      <point x="759" y="647" type="line"/>
+      <point x="809" y="623" type="line"/>
+      <point x="809" y="622" type="line"/>
+      <point x="881" y="588" type="line"/>
+      <point x="926" y="683" type="line"/>
+      <point x="876" y="707" type="line"/>
+      <point x="876" y="708" type="line"/>
+    </contour>
+  </outline>
+</glyph>

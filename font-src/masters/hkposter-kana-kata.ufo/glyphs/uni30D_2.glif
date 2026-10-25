@@ -3,20 +3,20 @@
   <advance width="1000"/>
   <unicode hex="30D2"/>
   <note>
-ヒ：左上短竖 + 底部长横
+ヒ：左上短竖 + 底部长横（字面 ×1.30，与汉字同族）
 </note>
   <outline>
     <contour>
-      <point x="830" y="208" type="line"/>
-      <point x="300" y="208" type="line"/>
-      <point x="300" y="112" type="line"/>
-      <point x="830" y="112" type="line"/>
+      <point x="843" y="108" type="line"/>
+      <point x="177" y="108" type="line"/>
+      <point x="177" y="12" type="line"/>
+      <point x="843" y="12" type="line"/>
     </contour>
     <contour>
-      <point x="276" y="740" type="line"/>
-      <point x="276" y="540" type="line"/>
-      <point x="364" y="540" type="line"/>
-      <point x="364" y="740" type="line"/>
+      <point x="158" y="788" type="line"/>
+      <point x="158" y="537" type="line"/>
+      <point x="246" y="537" type="line"/>
+      <point x="246" y="788" type="line"/>
     </contour>
   </outline>
 </glyph>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30FF" format="2">
+  <advance width="1000"/>
+  <unicode hex="30FF"/>
+  <note>
+ヿ：片假名双字（ノ + 丶），上端横折接长斜笔（wave2 新增）
+</note>
+  <outline>
+    <contour>
+      <point x="339" y="22" type="line"/>
+      <point x="819" y="692" type="line"/>
+      <point x="780" y="720" type="line"/>
+      <point x="780" y="764" type="line"/>
+      <point x="360" y="764" type="line"/>
+      <point x="360" y="676" type="line"/>
+      <point x="689" y="676" type="line"/>
+      <point x="261" y="78" type="line"/>
+    </contour>
+  </outline>
+</glyph>
