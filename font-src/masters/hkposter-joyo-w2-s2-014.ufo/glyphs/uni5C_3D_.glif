@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5C3D" format="2">
+  <advance width="1000"/>
+  <unicode hex="5C3D"/>
+  <note>
+尽 6画 尺+两点
+</note>
+  <outline>
+    <contour>
+      <point x="420" y="186" type="line"/>
+      <point x="332" y="186" type="line"/>
+      <point x="346" y="74" type="line"/>
+      <point x="434" y="74" type="line"/>
+    </contour>
+    <contour>
+      <point x="404" y="264" type="line"/>
+      <point x="390" y="376" type="line"/>
+      <point x="302" y="376" type="line"/>
+      <point x="316" y="264" type="line"/>
+    </contour>
+    <contour>
+      <point x="615" y="468" type="line"/>
+      <point x="842" y="171" type="line"/>
+      <point x="918" y="229" type="line"/>
+      <point x="700" y="514" type="line"/>
+      <point x="700" y="560" type="line"/>
+      <point x="748" y="560" type="line"/>
+      <point x="748" y="760" type="line"/>
+      <point x="700" y="760" type="line"/>
+      <point x="652" y="760" type="line"/>
+      <point x="200" y="760" type="line"/>
+      <point x="200" y="739" type="line"/>
+      <point x="64" y="253" type="line"/>
+      <point x="156" y="227" type="line"/>
+      <point x="224" y="468" type="line"/>
+    </contour>
+    <contour>
+      <point x="652" y="564" type="line"/>
+      <point x="646" y="560" type="line"/>
+      <point x="249" y="560" type="line"/>
+      <point x="279" y="664" type="line"/>
+      <point x="652" y="664" type="line"/>
+    </contour>
+  </outline>
+</glyph>
