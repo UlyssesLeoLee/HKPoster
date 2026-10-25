@@ -2,22 +2,67 @@
 
 用法：
     python font-src/scripts/lane_prompt.py --list
-    python font-src/scripts/lane_prompt.py --batch joyo-s1-001
-    python font-src/scripts/lane_prompt.py --batch joyo-s1-001 --save   # 存成文件便于派发
+    python font-src/scripts/lane_prompt.py --batch joyo-w2-s1-003
+    python font-src/scripts/lane_prompt.py --batch joyo-w2-s1-003 --save   # 存成文件便于派发
 
 设计目的：把「一条 lane 要做什么」固化成机器生成的规格，
 让 2136 字的批量生产可以在后续会话里**机械地**继续，
 而不是每次重新组织语言、重新约定接口。
+
+批次 id 与 lane 身份的对应关系（v1.2 修正）
+-------------------------------------------
+批次 id 形如 ``joyo-w2-s3-001``，其中 ``w2`` 是「生产波次」，
+不是 lane 名。从批次 id 推导出三件互不相同、历史上曾被混用的东西：
+
+===============  ==========================  ==========================
+概念             值                          用途
+===============  ==========================  ==========================
+batch id         joyo-w2-s3-001              计划表主键 / recipe 文件名
+wave             wave2                       分支与 worktree 的前缀
+lane             joyo-s3-001                 分支名尾段 / worktree 目录名
+===============  ==========================  ==========================
+
+对应关系：
+
+* 分支      ``agent/{wave}/{lane}``              例：agent/wave2/joyo-s3-001
+* worktree  ``E:/hkposter-lanes/{wave}-{lane}``  例：E:/hkposter-lanes/wave2-joyo-s3-001
+* recipe    ``font-src/src/hkposter-{batch_id}.py``
+* master    ``font-src/masters/hkposter-{batch_id}.ufo``
+
+**这三者历史上被写成同一个字符串**，导致子代理在错误的目录里找文件、
+用错误的 commit 前缀提交。规格里的每处路径都必须由 batch id 推导，
+不得手写。
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 FONT_SRC = Path(__file__).resolve().parent.parent
 PLAN = FONT_SRC / "data" / "joyo-batches.json"
+LANE_ROOT = "E:/hkposter-lanes"
+
+# 批次 id -> (wave, lane)。形如 joyo-w2-s3-001 -> ('wave2', 'joyo-s3-001')
+_BATCH_ID_RE = re.compile(r"^joyo-w(?P<wave>\d+)-(?P<cls>[a-z]\d+)-(?P<idx>\d+)$")
+
+
+def lane_identity(batch_id: str) -> tuple[str, str]:
+    """由批次 id 推导 (wave, lane)。
+
+    例：'joyo-w2-s3-001' -> ('wave2', 'joyo-s3-001')
+    """
+    m = _BATCH_ID_RE.match(batch_id)
+    if not m:
+        raise ValueError(
+            f"批次 id 不符合 joyo-w<wave>-<class>-<index> 形式：{batch_id}"
+        )
+    wave = f"wave{m.group('wave')}"
+    lane = f"joyo-{m.group('cls')}-{m.group('idx')}"
+    return wave, lane
+
 
 TEMPLATE = """你是 HK Poster Heavy 字体工程的并行制作 lane，负责 **Jōyō 常用漢字批量试制：{batch_id}**。
 
@@ -30,7 +75,7 @@ TEMPLATE = """你是 HK Poster Heavy 字体工程的并行制作 lane，负责 *
 若写文件时遇连接中断，**重试 write**（整体覆盖），不要放弃。
 
 【文件名与路径一律以本规格为准】
-下面写的 `{recipe}` 与 `{master}` 是**唯一正确**的文件名（由批次 id 推导）。
+下面写的 `{recipe}` 与 `{master}` 是**唯一正确**的文件名（由批次 id `{batch_id}` 推导）。
 不要凭记忆或按"上一批"的命名习惯改写——历史上曾因派单里写错文件名，
 差点覆盖已交付批次的 recipe 与 master。**如果你在仓库里看到名字相近但不同的文件，
 那是别的批次的，一律不要碰。**
@@ -39,6 +84,8 @@ TEMPLATE = """你是 HK Poster Heavy 字体工程的并行制作 lane，负责 *
 {worktree}
 命令先切过去：`Set-Location '{worktree}'`
 不要在 E:/HKPoster 里写任何文件。
+（若你收到的工作目录与这一行不一致，**以本规格这一行为准**；
+ 历史上派单文本里曾把 wave 前缀写错成 wave1，导致你在不存在的目录里找文件。）
 
 【你唯一允许写入的路径】
 - font-src/src/{recipe}
@@ -140,8 +187,9 @@ python font-src/scripts/render_glyph_sheet.py --font font-src/dist/HKPoster-Heav
 4. 提交：
 ```
 git add font-src/src/{recipe} font-src/masters/{master}
-git commit -m "wave1/{batch_id}: Jōyō 常用漢字 {size} 字"
+git commit -m "{wave}/{batch_id}: Jōyō 常用漢字 {size} 字"
 ```
+提交所在分支：**{branch}**（已 checkout，不要新建分支、不要 rebase、不要 merge）。
 font-src/dist 与 font-src/reports 被 .gitignore 忽略，不要 add。
 
 【禁止】
@@ -160,16 +208,23 @@ Validation commands + 真实输出 / 逐字设计决定与理由（笔画清单 
 def main() -> int:
     parser = argparse.ArgumentParser(description="生成 Jōyō 批次 lane 提示词")
     parser.add_argument("--list", action="store_true", help="列出全部批次")
-    parser.add_argument("--batch", help="批次 id，如 joyo-s1-001")
+    parser.add_argument("--batch", help="批次 id，如 joyo-w2-s1-003")
     parser.add_argument("--save", action="store_true", help="存成文件")
+    parser.add_argument(
+        "--worktree",
+        help="覆盖 worktree 绝对路径（默认由 batch id 推导）",
+    )
     args = parser.parse_args()
 
     plan = json.loads(PLAN.read_text(encoding="utf-8"))
 
     if args.list:
         for batch in plan["batches"]:
+            wave, lane = lane_identity(batch["id"])
             print(
                 f"{batch['id']:<16} {batch['size']:>3} 字  笔画 {batch['stroke_range'][0]}–{batch['stroke_range'][1]}"
+                f"  分支 agent/{wave}/{lane}"
+                f"  worktree {LANE_ROOT}/{wave}-{lane}"
                 f"  首批字：{' '.join(c['char'] for c in batch['characters'][:8])}"
             )
         print(f"合计 {plan['total']} 字 / {plan['batch_count']} 条 lane")
@@ -183,6 +238,9 @@ def main() -> int:
         print(f"[lane_prompt] 找不到批次 {args.batch}")
         return 1
 
+    wave, lane = lane_identity(batch["id"])
+    worktree = args.worktree or f"{LANE_ROOT}/{wave}-{lane}"
+
     characters = batch["characters"]
     lines = []
     for item in characters:
@@ -193,7 +251,9 @@ def main() -> int:
 
     prompt = TEMPLATE.format(
         batch_id=batch["id"],
-        worktree=f"E:/hkposter-lanes/wave1-{batch['id']}",
+        wave=wave,
+        branch=f"agent/{wave}/{lane}",
+        worktree=worktree,
         recipe=f"hkposter-{batch['id']}.py",
         master=f"hkposter-{batch['id']}.ufo",
         size=batch["size"],

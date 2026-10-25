@@ -9,15 +9,17 @@
 若写文件时遇连接中断，**重试 write**（整体覆盖），不要放弃。
 
 【文件名与路径一律以本规格为准】
-下面写的 `hkposter-joyo-w2-s3-001.py` 与 `hkposter-joyo-w2-s3-001.ufo` 是**唯一正确**的文件名（由批次 id 推导）。
+下面写的 `hkposter-joyo-w2-s3-001.py` 与 `hkposter-joyo-w2-s3-001.ufo` 是**唯一正确**的文件名（由批次 id `joyo-w2-s3-001` 推导）。
 不要凭记忆或按"上一批"的命名习惯改写——历史上曾因派单里写错文件名，
 差点覆盖已交付批次的 recipe 与 master。**如果你在仓库里看到名字相近但不同的文件，
 那是别的批次的，一律不要碰。**
 
 【工作目录 —— 唯一允许写入的地方】
-E:/hkposter-lanes/wave1-joyo-w2-s3-001
-命令先切过去：`Set-Location 'E:/hkposter-lanes/wave1-joyo-w2-s3-001'`
+E:/hkposter-lanes/wave2-joyo-s3-001
+命令先切过去：`Set-Location 'E:/hkposter-lanes/wave2-joyo-s3-001'`
 不要在 E:/HKPoster 里写任何文件。
+（若你收到的工作目录与这一行不一致，**以本规格这一行为准**；
+ 历史上派单文本里曾把 wave 前缀写错成 wave1，导致你在不存在的目录里找文件。）
 
 【你唯一允许写入的路径】
 - font-src/src/hkposter-joyo-w2-s3-001.py
@@ -142,8 +144,9 @@ python font-src/scripts/render_glyph_sheet.py --font font-src/dist/HKPoster-Heav
 4. 提交：
 ```
 git add font-src/src/hkposter-joyo-w2-s3-001.py font-src/masters/hkposter-joyo-w2-s3-001.ufo
-git commit -m "wave1/joyo-w2-s3-001: Jōyō 常用漢字 24 字"
+git commit -m "wave2/joyo-w2-s3-001: Jōyō 常用漢字 24 字"
 ```
+提交所在分支：**agent/wave2/joyo-s3-001**（已 checkout，不要新建分支、不要 rebase、不要 merge）。
 font-src/dist 与 font-src/reports 被 .gitignore 忽略，不要 add。
 
 【禁止】
