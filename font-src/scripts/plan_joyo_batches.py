@@ -42,9 +42,11 @@ def main() -> int:
         return 1
 
     buckets: dict[str, list[dict]] = defaultdict(list)
+    unassigned: list[dict] = []
     for char, info in characters.items():
         strokes = info.get("strokes") or 0
         frequency = info.get("frequency")
+        placed = False
         for name, low, high, _ in DENSITY_CLASSES:
             if low <= strokes <= high:
                 buckets[name].append(
@@ -56,7 +58,24 @@ def main() -> int:
                         "frequency": frequency,
                     }
                 )
+                placed = True
                 break
+        if not placed:
+            # 笔画数缺失/异常的字不能被静默丢弃，否则会悄悄少做几个字
+            unassigned.append(
+                {
+                    "char": char,
+                    "unicode": info["unicode"],
+                    "strokes": strokes,
+                    "grade": info.get("grade"),
+                    "frequency": frequency,
+                }
+            )
+    if unassigned:
+        # 归入最简单的一档，但必须显式记录，避免"以为都排进去了"
+        buckets["s1"].extend(unassigned)
+        print(f"[batches] 警告：{len(unassigned)} 个字笔画数缺失/异常，已并入 s1 档："
+              f"{''.join(item['char'] for item in unassigned)}")
 
     batches = []
     for name, _low, _high, size in DENSITY_CLASSES:
@@ -82,6 +101,7 @@ def main() -> int:
         "source": meta["source"],
         "total": sum(b["size"] for b in batches),
         "batch_count": len(batches),
+        "unassigned_strokes": [item["char"] for item in unassigned],
         "density_classes": [
             {"name": n, "strokes": [lo, hi], "batch_size": size} for n, lo, hi, size in DENSITY_CLASSES
         ],
@@ -90,6 +110,8 @@ def main() -> int:
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
 
     print(f"[batches] 总字形 {payload['total']}，批次数 {payload['batch_count']}")
+    if payload["total"] != 2136:
+        print(f"[batches] 警告：分批总数 {payload['total']} != 2136（必须有字被漏掉）")
     for name, _lo, _hi, _size in DENSITY_CLASSES:
         count = len(buckets.get(name, []))
         lanes = sum(1 for b in batches if b["class"] == name)

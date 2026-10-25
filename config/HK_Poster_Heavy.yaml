@@ -23,8 +23,9 @@ project:
     _note: "zh-CN 与 ja-JP 于 Wave 1 纳入。简体与日文汉字多为独立码位，不共用码位、不需要 locl；同一码位的地区异形（JIS-vs-GB）列入 P2 backlog
   character_coverage:
     approach: "approved_explicit_list"
-    poc_glyphs: "74 已试制（12 汉字 + 36 Latin/数字 + 26 标点）"
-    pilot_cjk_characters: "500 (proposal；繁体 + 简体 + 日文汉字三集合分批推进)"
+    live_source: "../tables/字符集与测试计划.xlsx（字符规划表，由 font-src/scripts/sync_charset_table.py 从 master 反推回写）"
+    poc_glyphs: "已试制 236 个设计字形（繁体 12 + 简体 8 + 平假名 79 + 片假名 75 + 拉丁 36 + 标点 26）"
+    pilot_cjk_characters: "500 (proposal；繁体 + 简体 + 日文漢字三集合分批推进)"
     extended_cjk_characters: "1500 (proposal)"
     baseline_spreadsheet: "../tables/字符集与测试计划.xlsx"
   font_family:
