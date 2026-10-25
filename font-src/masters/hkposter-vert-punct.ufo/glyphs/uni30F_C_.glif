@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni30FC" format="2">
+  <advance width="1000"/>
+  <unicode hex="30FC"/>
+  <note>
+ー 长音符（横排）
+</note>
+  <outline>
+    <contour>
+      <point x="90" y="430" type="line"/>
+      <point x="90" y="346" type="line"/>
+      <point x="910" y="346" type="line"/>
+      <point x="910" y="430" type="line"/>
+    </contour>
+  </outline>
+</glyph>

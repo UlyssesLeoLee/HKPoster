@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni300C.vert" format="2">
+  <advance width="1000"/>
+  <note>
+「竖排：旋转 90°，开口朝下，落在字面下部
+</note>
+  <outline>
+    <contour>
+      <point x="899" y="390" type="line"/>
+      <point x="139" y="390" type="line"/>
+      <point x="139" y="294" type="line"/>
+      <point x="803" y="294" type="line"/>
+      <point x="803" y="42" type="line"/>
+      <point x="899" y="42" type="line"/>
+      <point x="899" y="294" type="line"/>
+      <point x="899" y="342" type="line"/>
+    </contour>
+  </outline>
+</glyph>
