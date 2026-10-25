@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5DE6" format="2">
+  <advance width="1000"/>
+  <unicode hex="5DE6"/>
+  <note>
+左：一 + 丿 + 工
+</note>
+  <outline>
+    <contour>
+      <point x="634" y="422" type="line"/>
+      <point x="634" y="96" type="line"/>
+      <point x="490" y="96" type="line"/>
+      <point x="490" y="0" type="line"/>
+      <point x="900" y="0" type="line"/>
+      <point x="900" y="96" type="line"/>
+      <point x="726" y="96" type="line"/>
+      <point x="726" y="422" type="line"/>
+      <point x="870" y="422" type="line"/>
+      <point x="870" y="518" type="line"/>
+      <point x="490" y="518" type="line"/>
+      <point x="490" y="422" type="line"/>
+    </contour>
+    <contour>
+      <point x="180" y="724" type="line"/>
+      <point x="347" y="724" type="line"/>
+      <point x="85" y="34" type="line"/>
+      <point x="175" y="0" type="line"/>
+      <point x="450" y="724" type="line"/>
+      <point x="830" y="724" type="line"/>
+      <point x="830" y="820" type="line"/>
+      <point x="180" y="820" type="line"/>
+    </contour>
+  </outline>
+</glyph>

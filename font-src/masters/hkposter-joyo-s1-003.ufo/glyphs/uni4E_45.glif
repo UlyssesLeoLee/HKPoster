@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4E45" format="2">
+  <advance width="1000"/>
+  <unicode hex="4E45"/>
+  <note>
+久：丿 + 横撇 + 捺
+</note>
+  <outline>
+    <contour>
+      <point x="318" y="31" type="line"/>
+      <point x="512" y="286" type="line"/>
+      <point x="817" y="0" type="line"/>
+      <point x="883" y="70" type="line"/>
+      <point x="571" y="363" type="line"/>
+      <point x="698" y="531" type="line"/>
+      <point x="660" y="560" type="line"/>
+      <point x="660" y="608" type="line"/>
+      <point x="394" y="608" type="line"/>
+      <point x="534" y="751" type="line"/>
+      <point x="466" y="819" type="line"/>
+      <point x="246" y="594" type="line"/>
+      <point x="280" y="560" type="line"/>
+      <point x="280" y="512" type="line"/>
+      <point x="563" y="512" type="line"/>
+      <point x="242" y="89" type="line"/>
+    </contour>
+  </outline>
+</glyph>

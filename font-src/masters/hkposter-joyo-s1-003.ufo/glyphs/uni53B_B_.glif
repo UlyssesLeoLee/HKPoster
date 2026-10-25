@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni53BB" format="2">
+  <advance width="1000"/>
+  <unicode hex="53BB"/>
+  <note>
+去：土 + 厶
+</note>
+  <outline>
+    <contour>
+      <point x="620" y="0" type="line"/>
+      <point x="620" y="96" type="line"/>
+      <point x="375" y="96" type="line"/>
+      <point x="494" y="360" type="line"/>
+      <point x="446" y="382" type="line"/>
+      <point x="850" y="382" type="line"/>
+      <point x="850" y="478" type="line"/>
+      <point x="548" y="478" type="line"/>
+      <point x="548" y="652" type="line"/>
+      <point x="760" y="652" type="line"/>
+      <point x="760" y="748" type="line"/>
+      <point x="240" y="748" type="line"/>
+      <point x="240" y="652" type="line"/>
+      <point x="452" y="652" type="line"/>
+      <point x="452" y="478" type="line"/>
+      <point x="150" y="478" type="line"/>
+      <point x="150" y="382" type="line"/>
+      <point x="398" y="382" type="line"/>
+      <point x="276" y="110" type="line"/>
+      <point x="320" y="90" type="line"/>
+      <point x="320" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="648" y="134" type="line"/>
+      <point x="648" y="246" type="line"/>
+      <point x="552" y="246" type="line"/>
+      <point x="552" y="134" type="line"/>
+    </contour>
+  </outline>
+</glyph>

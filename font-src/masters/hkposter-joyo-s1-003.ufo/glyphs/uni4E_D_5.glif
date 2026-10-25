@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4ED5" format="2">
+  <advance width="1000"/>
+  <unicode hex="4ED5"/>
+  <note>
+仕：亻 + 士
+</note>
+  <outline>
+    <contour>
+      <point x="860" y="184" type="line"/>
+      <point x="860" y="276" type="line"/>
+      <point x="708" y="276" type="line"/>
+      <point x="708" y="592" type="line"/>
+      <point x="900" y="592" type="line"/>
+      <point x="900" y="688" type="line"/>
+      <point x="420" y="688" type="line"/>
+      <point x="420" y="592" type="line"/>
+      <point x="612" y="592" type="line"/>
+      <point x="612" y="276" type="line"/>
+      <point x="480" y="276" type="line"/>
+      <point x="480" y="184" type="line"/>
+    </contour>
+    <contour>
+      <point x="207" y="0" type="line"/>
+      <point x="303" y="0" type="line"/>
+      <point x="303" y="650" type="line"/>
+      <point x="370" y="754" type="line"/>
+      <point x="290" y="806" type="line"/>
+      <point x="90" y="496" type="line"/>
+      <point x="170" y="444" type="line"/>
+      <point x="207" y="501" type="line"/>
+    </contour>
+  </outline>
+</glyph>

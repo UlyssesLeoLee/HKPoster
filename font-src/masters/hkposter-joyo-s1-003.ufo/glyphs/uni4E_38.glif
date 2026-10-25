@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4E38" format="2">
+  <advance width="1000"/>
+  <unicode hex="4E38"/>
+  <note>
+丸：九 + 点
+</note>
+  <outline>
+    <contour>
+      <point x="853" y="270" type="line"/>
+      <point x="822" y="211" type="line"/>
+      <point x="778" y="231" type="line"/>
+      <point x="778" y="700" type="line"/>
+      <point x="730" y="700" type="line"/>
+      <point x="730" y="748" type="line"/>
+      <point x="436" y="748" type="line"/>
+      <point x="446" y="783" type="line"/>
+      <point x="354" y="810" type="line"/>
+      <point x="124" y="27" type="line"/>
+      <point x="216" y="0" type="line"/>
+      <point x="408" y="652" type="line"/>
+      <point x="682" y="652" type="line"/>
+      <point x="682" y="200" type="line"/>
+      <point x="730" y="200" type="line"/>
+      <point x="710" y="156" type="line"/>
+      <point x="855" y="91" type="line"/>
+      <point x="880" y="146" type="line"/>
+      <point x="882" y="145" type="line"/>
+      <point x="927" y="230" type="line"/>
+    </contour>
+    <contour>
+      <point x="518" y="486" type="line"/>
+      <point x="422" y="486" type="line"/>
+      <point x="422" y="374" type="line"/>
+      <point x="518" y="374" type="line"/>
+    </contour>
+  </outline>
+</glyph>
