@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Y" format="2">
+  <advance width="640"/>
+  <unicode hex="0059"/>
+  <note>
+Y — HK Poster Heavy Wave 0
+</note>
+  <outline>
+    <contour>
+      <point x="276" y="325" type="line"/>
+      <point x="276" y="0" type="line"/>
+      <point x="364" y="0" type="line"/>
+      <point x="364" y="325" type="line"/>
+      <point x="605" y="649" type="line"/>
+      <point x="535" y="701" type="line"/>
+      <point x="320" y="414" type="line"/>
+      <point x="105" y="701" type="line"/>
+      <point x="35" y="649" type="line"/>
+    </contour>
+  </outline>
+</glyph>

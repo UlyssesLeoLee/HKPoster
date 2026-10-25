@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seven" format="2">
+  <advance width="640"/>
+  <unicode hex="0037"/>
+  <note>
+seven — HK Poster Heavy Wave 0
+</note>
+  <outline>
+    <contour>
+      <point x="580" y="657" type="line"/>
+      <point x="581" y="658" type="line"/>
+      <point x="580" y="658" type="line"/>
+      <point x="580" y="700" type="line"/>
+      <point x="501" y="700" type="line"/>
+      <point x="499" y="701" type="line"/>
+      <point x="499" y="700" type="line"/>
+      <point x="60" y="700" type="line"/>
+      <point x="60" y="604" type="line"/>
+      <point x="448" y="604" type="line"/>
+      <point x="149" y="42" type="line"/>
+      <point x="231" y="-1" type="line"/>
+      <point x="552" y="604" type="line"/>
+      <point x="580" y="604" type="line"/>
+    </contour>
+  </outline>
+</glyph>
