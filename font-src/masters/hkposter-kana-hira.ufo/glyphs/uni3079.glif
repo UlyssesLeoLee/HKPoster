@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3079" format="2">
+  <advance width="1000"/>
+  <unicode hex="3079"/>
+  <note>
+平假名 べ（へ + 浊音）
+</note>
+  <outline>
+    <contour>
+      <point x="410" y="721" type="line"/>
+      <point x="180" y="611" type="line"/>
+      <point x="220" y="529" type="line"/>
+      <point x="428" y="628" type="line"/>
+      <point x="691" y="470" type="line"/>
+      <point x="739" y="550" type="line"/>
+      <point x="454" y="720" type="line"/>
+      <point x="447" y="723" type="line"/>
+      <point x="440" y="725" type="line"/>
+      <point x="432" y="726" type="line"/>
+      <point x="425" y="726" type="line"/>
+      <point x="417" y="724" type="line"/>
+    </contour>
+    <contour>
+      <point x="794" y="684" type="line"/>
+      <point x="753" y="707" type="line"/>
+      <point x="715" y="639" type="line"/>
+      <point x="781" y="601" type="line"/>
+      <point x="794" y="624" type="line"/>
+      <point x="835" y="601" type="line"/>
+      <point x="873" y="669" type="line"/>
+      <point x="807" y="707" type="line"/>
+    </contour>
+  </outline>
+</glyph>
