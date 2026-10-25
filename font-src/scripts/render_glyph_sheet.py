@@ -63,6 +63,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="渲染字形样张 PNG")
     parser.add_argument("--font", default=str(FONT_SRC / "dist" / "HKPoster-Heavy.ttf"))
     parser.add_argument("--text", default="港影龍義城火夜風警愛無道")
+    parser.add_argument("--codes", default=None,
+                        help="逗号分隔的十六进制码位（如 8349,707D,6790）。"
+                             "**比 --text 可靠**：Windows 上把中文塞进命令行参数会被"
+                             "静默损坏成别的字符（生僻字尤其容易坏），"
+                             "损坏后的串会渲染成 .notdef 方框，看着像「字形坏了」。")
     parser.add_argument("--size", type=int, default=160)
     parser.add_argument("--out", default=str(FONT_SRC / "reports" / "glyph-sheet.png"))
     parser.add_argument("--columns", type=int, default=6)
@@ -73,9 +78,17 @@ def main() -> int:
     if not font_path.exists():
         print(f"[render] 找不到字体：{font_path}")
         return 1
+    text = args.text
+    if args.codes:
+        cps = []
+        for tok in args.codes.replace("，", ",").split(","):
+            tok = tok.strip().upper().removeprefix("U+")
+            if tok:
+                cps.append(chr(int(tok, 16)))
+        text = "".join(cps)
     out = render(
         font_path,
-        args.text,
+        text,
         args.size,
         Path(args.out).resolve(),
         columns=args.columns,
