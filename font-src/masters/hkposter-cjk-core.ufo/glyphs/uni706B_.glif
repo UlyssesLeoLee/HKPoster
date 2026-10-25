@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni706B" format="2">
+  <advance width="1000"/>
+  <unicode hex="706B"/>
+  <note>
+火（Wave 0 代表字形）
+</note>
+  <outline>
+    <contour>
+      <point x="137" y="82" type="line"/>
+      <point x="223" y="38" type="line"/>
+      <point x="510" y="595" type="line"/>
+      <point x="797" y="38" type="line"/>
+      <point x="883" y="82" type="line"/>
+      <point x="638" y="556" type="line"/>
+      <point x="735" y="670" type="line"/>
+      <point x="665" y="730" type="line"/>
+      <point x="593" y="644" type="line"/>
+      <point x="563" y="702" type="line"/>
+      <point x="510" y="675" type="line"/>
+      <point x="457" y="702" type="line"/>
+    </contour>
+    <contour>
+      <point x="331" y="705" type="line"/>
+      <point x="221" y="705" type="line"/>
+      <point x="195" y="575" type="line"/>
+      <point x="305" y="575" type="line"/>
+    </contour>
+  </outline>
+</glyph>
