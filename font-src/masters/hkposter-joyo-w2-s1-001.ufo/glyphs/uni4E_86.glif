@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4E86" format="2">
+  <advance width="1000"/>
+  <unicode hex="4E86"/>
+  <note>
+了：乛 + 亅
+</note>
+  <outline>
+    <contour>
+      <point x="382" y="60" type="line"/>
+      <point x="389" y="60" type="line"/>
+      <point x="396" y="50" type="line"/>
+      <point x="410" y="60" type="line"/>
+      <point x="478" y="60" type="line"/>
+      <point x="478" y="512" type="line"/>
+      <point x="844" y="729" type="line"/>
+      <point x="820" y="770" type="line"/>
+      <point x="820" y="818" type="line"/>
+      <point x="180" y="818" type="line"/>
+      <point x="180" y="722" type="line"/>
+      <point x="645" y="722" type="line"/>
+      <point x="256" y="491" type="line"/>
+      <point x="304" y="409" type="line"/>
+      <point x="382" y="455" type="line"/>
+      <point x="382" y="164" type="line"/>
+      <point x="336" y="130" type="line"/>
+      <point x="382" y="69" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni51AC" format="2">
+  <advance width="1000"/>
+  <unicode hex="51AC"/>
+  <note>
+冬：夂 + 两点
+</note>
+  <outline>
+    <contour>
+      <point x="604" y="162" type="line"/>
+      <point x="516" y="162" type="line"/>
+      <point x="516" y="58" type="line"/>
+      <point x="604" y="58" type="line"/>
+    </contour>
+    <contour>
+      <point x="444" y="178" type="line"/>
+      <point x="444" y="282" type="line"/>
+      <point x="356" y="282" type="line"/>
+      <point x="356" y="178" type="line"/>
+    </contour>
+    <contour>
+      <point x="535" y="405" type="line"/>
+      <point x="813" y="60" type="line"/>
+      <point x="887" y="120" type="line"/>
+      <point x="636" y="433" type="line"/>
+      <point x="815" y="627" type="line"/>
+      <point x="780" y="660" type="line"/>
+      <point x="780" y="708" type="line"/>
+      <point x="455" y="708" type="line"/>
+      <point x="510" y="753" type="line"/>
+      <point x="450" y="827" type="line"/>
+      <point x="290" y="697" type="line"/>
+      <point x="320" y="660" type="line"/>
+      <point x="320" y="612" type="line"/>
+      <point x="670" y="612" type="line"/>
+      <point x="505" y="433" type="line"/>
+    </contour>
+  </outline>
+</glyph>
