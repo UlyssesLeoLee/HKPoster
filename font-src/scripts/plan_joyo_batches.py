@@ -17,6 +17,7 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -57,12 +58,31 @@ def covered_by_masters() -> set[str]:
 
 
 def main() -> int:
-    wave = "w2"  # 批次轮次前缀：w1 已交付（见 data/lane-prompts/joyo-s1-*.md）
     meta = json.loads(META.read_text(encoding="utf-8"))
     characters = meta["characters"]
     if len(characters) != 2136:
         print(f"[batches] 元数据条目 {len(characters)} != 2136，先修数据")
         return 1
+
+    # 计划是**追加式**的：已有批次不再重排（否则批次 id 对应的字集会漂移，
+    # "机械续做"的承诺就废了）。本次只把**尚未分配**的字追加成新批次。
+    existing_batches: list[dict] = []
+    assigned: set[str] = set()
+    wave_number = 2
+    if OUT.exists():
+        try:
+            existing = json.loads(OUT.read_text(encoding="utf-8"))
+            existing_batches = existing.get("batches", [])
+            for batch in existing_batches:
+                for item in batch.get("characters", []):
+                    assigned.add(item["char"])
+            for batch in existing_batches:
+                match = re.search(r"-w(\d+)-", batch.get("id", ""))
+                if match:
+                    wave_number = max(wave_number, int(match.group(1)) + 1)
+        except (OSError, ValueError):
+            existing_batches = []
+    wave = f"w{wave_number}"
 
     covered = covered_by_masters()
     buckets: dict[str, list[dict]] = defaultdict(list)
@@ -70,6 +90,8 @@ def main() -> int:
     for char, info in characters.items():
         if char in covered:
             continue  # 已有字形，跳过（不重画，也就不会撞码）
+        if char in assigned:
+            continue  # 已分配到既有批次，批次是追加式的，不再重排
         strokes = info.get("strokes") or 0
         frequency = info.get("frequency")
         placed = False
@@ -124,33 +146,44 @@ def main() -> int:
             )
 
     joyo_covered = {c for c in covered if c in characters}
+    new_batches = batches
+    all_batches = existing_batches + new_batches
     payload = {
         "source": meta["source"],
         "wave": wave,
-        "total": sum(b["size"] for b in batches),
-        "batch_count": len(batches),
+        "total": sum(b["size"] for b in all_batches),
+        "batch_count": len(all_batches),
         "already_covered": sorted(joyo_covered),
         "unassigned_strokes": [item["char"] for item in unassigned],
         "density_classes": [
             {"name": n, "strokes": [lo, hi], "batch_size": size} for n, lo, hi, size in DENSITY_CLASSES
         ],
-        "batches": batches,
+        "batches": all_batches,
     }
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
 
     print(f"[batches] 已被其他 master 覆盖的 Jōyō 字：{len(joyo_covered)} 个（不重画，避免撞码）")
-    print(f"[batches] 待制作 {payload['total']} 字，批次数 {payload['batch_count']}")
+    print(f"[batches] 本次新增 {len(new_batches)} 条批次（{wave}），累计 {payload['total']} 字 / {payload['batch_count']} 条 lane")
     if payload["total"] + len(joyo_covered) != 2136:
         print(f"[batches] 警告：{payload['total']} + {len(joyo_covered)} != 2136（必须有字被漏掉）")
     for name, _lo, _hi, _size in DENSITY_CLASSES:
         count = len(buckets.get(name, []))
-        lanes = sum(1 for b in batches if b["class"] == name)
-        print(f"  {name}: {count} 字 → {lanes} 条 lane")
+        lanes = sum(1 for b in all_batches if b["class"] == name)
+        print(f"  {name}: 本次 {count} 字 → 累计 {lanes} 条 lane")
     print(f"[batches] 已写出 {OUT}")
-    head = batches[0]
-    print(f"[batches] 首批 {head['id']}：{head['size']} 字，"
-          f"笔画 {head['stroke_range']}，例：" +
-          " ".join(c["char"] for c in head["characters"][:10]))
+    if new_batches:
+        head = new_batches[0]
+        print(f"[batches] 本次首批 {head['id']}：{head['size']} 字，"
+              f"笔画 {head['stroke_range']}，例：" +
+              " ".join(c["char"] for c in head["characters"][:10]))
+    else:
+        pending = [
+            b["id"] for b in all_batches
+            if not (FONT_SRC / "masters" / f"hkposter-{b['id'].replace('joyo-', '')}.ufo").exists()
+        ]
+        print(f"[batches] 本次没有新批次可排（剩余字已全部分配）；待做批次 {len(pending)} 条")
+        if pending:
+            print(f"[batches] 下一条：{pending[0]}")
     return 0
 
 
