@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni592E" format="2">
+  <advance width="1000"/>
+  <unicode hex="592E"/>
+  <note>
+央：冂 + 大
+</note>
+  <outline>
+    <contour>
+      <point x="230" y="332" type="line"/>
+      <point x="397" y="332" type="line"/>
+      <point x="127" y="69" type="line"/>
+      <point x="193" y="0" type="line"/>
+      <point x="500" y="298" type="line"/>
+      <point x="828" y="0" type="line"/>
+      <point x="892" y="71" type="line"/>
+      <point x="605" y="332" type="line"/>
+      <point x="770" y="332" type="line"/>
+      <point x="770" y="380" type="line"/>
+      <point x="816" y="380" type="line"/>
+      <point x="816" y="700" type="line"/>
+      <point x="770" y="700" type="line"/>
+      <point x="770" y="748" type="line"/>
+      <point x="230" y="748" type="line"/>
+      <point x="230" y="700" type="line"/>
+      <point x="184" y="700" type="line"/>
+      <point x="184" y="380" type="line"/>
+      <point x="230" y="380" type="line"/>
+    </contour>
+    <contour>
+      <point x="724" y="428" type="line"/>
+      <point x="276" y="428" type="line"/>
+      <point x="276" y="652" type="line"/>
+      <point x="724" y="652" type="line"/>
+    </contour>
+    <contour>
+      <point x="509" y="332" type="line"/>
+      <point x="501" y="324" type="line"/>
+      <point x="493" y="332" type="line"/>
+    </contour>
+  </outline>
+</glyph>

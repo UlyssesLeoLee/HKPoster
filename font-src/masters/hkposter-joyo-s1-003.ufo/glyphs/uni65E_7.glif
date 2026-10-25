@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni65E7" format="2">
+  <advance width="1000"/>
+  <unicode hex="65E7"/>
+  <note>
+旧：丨 + 日
+</note>
+  <outline>
+    <contour>
+      <point x="820" y="0" type="line"/>
+      <point x="820" y="48" type="line"/>
+      <point x="866" y="48" type="line"/>
+      <point x="866" y="652" type="line"/>
+      <point x="820" y="652" type="line"/>
+      <point x="820" y="700" type="line"/>
+      <point x="350" y="700" type="line"/>
+      <point x="350" y="652" type="line"/>
+      <point x="304" y="652" type="line"/>
+      <point x="304" y="48" type="line"/>
+      <point x="350" y="48" type="line"/>
+      <point x="350" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="396" y="396" type="line"/>
+      <point x="396" y="604" type="line"/>
+      <point x="774" y="604" type="line"/>
+      <point x="774" y="396" type="line"/>
+    </contour>
+    <contour>
+      <point x="396" y="304" type="line"/>
+      <point x="774" y="304" type="line"/>
+      <point x="774" y="96" type="line"/>
+      <point x="396" y="96" type="line"/>
+    </contour>
+    <contour>
+      <point x="132" y="820" type="line"/>
+      <point x="132" y="0" type="line"/>
+      <point x="228" y="0" type="line"/>
+      <point x="228" y="820" type="line"/>
+    </contour>
+  </outline>
+</glyph>

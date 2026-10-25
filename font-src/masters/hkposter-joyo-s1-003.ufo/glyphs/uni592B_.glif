@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni592B" format="2">
+  <advance width="1000"/>
+  <unicode hex="592B"/>
+  <note>
+夫：二横 + 人
+</note>
+  <outline>
+    <contour>
+      <point x="483" y="552" type="line"/>
+      <point x="479" y="549" type="line"/>
+      <point x="819" y="0" type="line"/>
+      <point x="901" y="51" type="line"/>
+      <point x="591" y="552" type="line"/>
+      <point x="850" y="552" type="line"/>
+      <point x="850" y="648" type="line"/>
+      <point x="351" y="648" type="line"/>
+      <point x="370" y="724" type="line"/>
+      <point x="750" y="724" type="line"/>
+      <point x="750" y="820" type="line"/>
+      <point x="250" y="820" type="line"/>
+      <point x="250" y="724" type="line"/>
+      <point x="271" y="724" type="line"/>
+      <point x="252" y="648" type="line"/>
+      <point x="150" y="648" type="line"/>
+      <point x="150" y="552" type="line"/>
+      <point x="228" y="552" type="line"/>
+      <point x="93" y="24" type="line"/>
+      <point x="187" y="0" type="line"/>
+      <point x="327" y="552" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni6BD4" format="2">
+  <advance width="1000"/>
+  <unicode hex="6BD4"/>
+  <note>
+比：左匕横提，右匕撇竖弯
+</note>
+  <outline>
+    <contour>
+      <point x="876" y="162" type="line"/>
+      <point x="834" y="248" type="line"/>
+      <point x="728" y="197" type="line"/>
+      <point x="728" y="603" type="line"/>
+      <point x="821" y="686" type="line"/>
+      <point x="759" y="754" type="line"/>
+      <point x="728" y="726" type="line"/>
+      <point x="728" y="820" type="line"/>
+      <point x="632" y="820" type="line"/>
+      <point x="632" y="641" type="line"/>
+      <point x="624" y="634" type="line"/>
+      <point x="632" y="626" type="line"/>
+      <point x="632" y="120" type="line"/>
+      <point x="680" y="120" type="line"/>
+      <point x="701" y="77" type="line"/>
+    </contour>
+    <contour>
+      <point x="276" y="112" type="line"/>
+      <point x="401" y="197" type="line"/>
+      <point x="349" y="273" type="line"/>
+      <point x="298" y="238" type="line"/>
+      <point x="298" y="594" type="line"/>
+      <point x="300" y="594" type="line"/>
+      <point x="300" y="686" type="line"/>
+      <point x="90" y="686" type="line"/>
+      <point x="90" y="594" type="line"/>
+      <point x="202" y="594" type="line"/>
+      <point x="202" y="150" type="line"/>
+      <point x="250" y="150" type="line"/>
+    </contour>
+  </outline>
+</glyph>

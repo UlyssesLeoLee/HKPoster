@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4EA1" format="2">
+  <advance width="1000"/>
+  <unicode hex="4EA1"/>
+  <note>
+亡：亠 + 乚
+</note>
+  <outline>
+    <contour>
+      <point x="780" y="0" type="line"/>
+      <point x="780" y="96" type="line"/>
+      <point x="378" y="96" type="line"/>
+      <point x="378" y="552" type="line"/>
+      <point x="820" y="552" type="line"/>
+      <point x="820" y="648" type="line"/>
+      <point x="180" y="648" type="line"/>
+      <point x="180" y="552" type="line"/>
+      <point x="282" y="552" type="line"/>
+      <point x="282" y="48" type="line"/>
+      <point x="330" y="48" type="line"/>
+      <point x="330" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="555" y="820" type="line"/>
+      <point x="445" y="820" type="line"/>
+      <point x="445" y="700" type="line"/>
+      <point x="555" y="700" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni592A" format="2">
+  <advance width="1000"/>
+  <unicode hex="592A"/>
+  <note>
+太：大 + 点
+</note>
+  <outline>
+    <contour>
+      <point x="192" y="0" type="line"/>
+      <point x="500" y="576" type="line"/>
+      <point x="818" y="0" type="line"/>
+      <point x="902" y="46" type="line"/>
+      <point x="568" y="652" type="line"/>
+      <point x="850" y="652" type="line"/>
+      <point x="850" y="748" type="line"/>
+      <point x="150" y="748" type="line"/>
+      <point x="150" y="652" type="line"/>
+      <point x="432" y="652" type="line"/>
+      <point x="108" y="45" type="line"/>
+    </contour>
+    <contour>
+      <point x="568" y="406" type="line"/>
+      <point x="472" y="406" type="line"/>
+      <point x="472" y="294" type="line"/>
+      <point x="568" y="294" type="line"/>
+    </contour>
+  </outline>
+</glyph>
