@@ -34,7 +34,6 @@
 
 from __future__ import annotations
 
-import math
 import sys
 from pathlib import Path
 
@@ -49,56 +48,17 @@ W_THIN = 84
 W_DOT = 84
 
 CJK_TOP = 820
-CJK_BOTTOM = 0
-
-# 左偏旁的统一分区（全批复用，GLY-004）
-LR_HAND = (60, 320)      # 扌
-LR_WATER = (60, 310)     # 氵
-LR_STEP = (60, 330)      # 彳
-LR_DOG = (60, 320)       # 犭
-LR_FLESH = (60, 380)     # 月
-LR_TREE = (60, 360)      # 木
-LR_HORSE = (60, 330)     # 牜
-LR_MOUTH = (60, 380)     # 口
-LR_FEMALE = (60, 430)    # 女
-LR_KING = (60, 460)      # 王
-LR_MOUNTAIN = (60, 330)  # 山
 
 
 # ---------------------------------------------------------------------------
-# 对齐辅助
+# 对齐约定
 # ---------------------------------------------------------------------------
-def bar_top(y_top: float, weight: float = W_MAIN) -> float:
-    """横画的中心线 y：墨迹上缘对齐 y_top。"""
-    return y_top - weight / 2.0
-
-
-def bar_base(y_base: float, weight: float = W_MAIN) -> float:
-    """横画的中心线 y：墨迹下缘对齐 y_base。"""
-    return y_base + weight / 2.0
-
-
-def diag_cap_base(x1, y1, x2, y2, weight=W_MAIN, base=None, cap=None):
-    """斜笔画端点内缩，使墨迹下缘落在 base / 上缘落在 cap。
-
-    笔画厚度垂直于中心线，故墨迹在竖直方向比端点再多出
-    (weight/2)·|dx|/len；两端点同步平移，不改变笔画角度。
-    """
-    dx = x2 - x1
-    dy = y2 - y1
-    length = math.hypot(dx, dy)
-    if length == 0:
-        return (x1, y1, x2, y2)
-    off = (weight / 2.0) * abs(dx) / length
-    if base is not None:
-        shift = (min(y1, y2) - off) - base
-        y1 += shift
-        y2 += shift
-    if cap is not None:
-        shift = (max(y1, y2) + off) - cap
-        y1 -= shift
-        y2 -= shift
-    return (x1, y1, x2, y2)
+# 横：墨迹占 y±weight/2，中心线写「墨迹中心」的 y；
+# 竖：墨迹两端即中心线端点；
+# 斜：墨迹厚度垂直于中心线，墨迹下缘比中心线低 (weight/2)·|dx|/len——
+#     下文所有需要「撇捺落到基线」的斜笔画，端点已按此换算，
+#     故墨迹下缘正好落在 y=0（例：栃的万的撇端点 (465,8)，
+#     off = 46×135/744 ≈ 8.3，墨迹下缘 = 8 − 8.3 ≈ 0）。
 
 
 # ---------------------------------------------------------------------------
@@ -120,14 +80,14 @@ def draw_water(g: Glyph) -> None:
 
 def draw_step(g: Glyph) -> None:
     """彳（x 60..330）：上撇 + 下撇 + 竖。"""
-    g.diag(300, 800, 130, 650, weight=W_MAIN)    # 第一撇
+    g.diag(300, 782, 130, 640, weight=W_MAIN)    # 第一撇
     g.diag(310, 660, 95, 400, weight=W_MAIN)     # 第二撇
     g.vbar(185, 450, 40, weight=W_MAIN)          # 竖
 
 
 def draw_dog(g: Glyph) -> None:
     """犭（x 60..320）：撇 + 弯钩 + 撇。"""
-    g.diag(320, 810, 120, 620, weight=W_MAIN)    # 首撇
+    g.diag(320, 780, 120, 600, weight=W_MAIN)    # 首撇
     g.vbar(205, 790, 130, weight=W_MAIN)         # 弯钩的竖
     g.diag(205, 130, 140, 190, weight=W_THIN)    # 弯钩的钩
     g.diag(300, 540, 85, 330, weight=W_MAIN)     # 交叉的撇
@@ -148,23 +108,15 @@ def draw_tree(g: Glyph) -> None:
     g.hbar(70, 350, 620, weight=W_SEC)           # 横
     g.vbar(210, 790, 40, weight=W_SEC)           # 竖
     g.diag(215, 620, 80, 300, weight=W_SEC)      # 撇
-    g.dot(300, 560, w=84, h=110, slant=14)       # 捺变点（右下，14 档）
+    g.dot(300, 560, w=W_DOT, h=110, slant=14)      # 捺变点（右下，14 档）
 
 
 def draw_horse(g: Glyph) -> None:
     """牜（x 60..330）：撇 + 上横 + 下横 + 竖。"""
-    g.diag(260, 790, 140, 690, weight=W_MAIN)    # 首撇
+    g.diag(260, 772, 140, 675, weight=W_MAIN)    # 首撇
     g.hbar(110, 300, 640, weight=W_MAIN)         # 上横
     g.hbar(70, 330, 470, weight=W_MAIN)          # 下横（长）
     g.vbar(210, 790, 60, weight=W_MAIN)          # 竖
-
-
-def draw_king(g: Glyph, x0=60, x1=460) -> None:
-    """王（x0..x1）：上横 + 竖 + 中横 + 底横。"""
-    g.hbar(x0 + 60, x1 - 30, 730, weight=W_SEC)          # 上横
-    g.vbar(x0 + 215, 730, 200, weight=W_SEC)             # 竖
-    g.hbar(x0 + 90, x1 - 60, 520, weight=W_SEC)          # 中横
-    g.hbar(x0 + 30, x1, 200, weight=W_SEC)               # 底横（最长）
 
 
 def draw_mountain(g: Glyph) -> None:
@@ -214,7 +166,7 @@ def glyph_bi() -> Glyph:
 
     # ---- 布 ----
     g.hbar(380, 940, 730, weight=W_MAIN)         # 布的横
-    g.diag(620, 800, 400, 560, weight=W_MAIN)    # 布的撇
+    g.diag(620, 782, 400, 550, weight=W_MAIN)    # 布的撇
     g.hbar(500, 900, 630, weight=W_SEC)          # 巾的上横
     g.vbar(505, 630, 230, weight=W_SEC)          # 巾的左竖
     g.vbar(890, 630, 230, weight=W_SEC)          # 巾的右竖
@@ -265,8 +217,8 @@ def glyph_zhen() -> Glyph:
     g.hbar(90, 460, 200, weight=W_MAIN)          # 王的底横
 
     # ---- 㐱 ----
-    g.diag(700, 810, 520, 620, weight=W_MAIN)    # 人的撇
-    g.diag(700, 810, 930, 620, weight=W_MAIN)    # 人的捺
+    g.diag(700, 780, 520, 590, weight=W_MAIN)    # 人的撇
+    g.diag(700, 780, 930, 590, weight=W_MAIN)    # 人的捺
     g.diag(900, 560, 640, 440, weight=W_SEC)     # 彡的第一撇
     g.diag(900, 400, 620, 280, weight=W_SEC)     # 彡的第二撇
     g.diag(900, 240, 600, 100, weight=W_SEC)     # 彡的第三撇
@@ -296,7 +248,7 @@ def glyph_ke() -> Glyph:
     g.hbar(285, 715, 330, weight=W_THIN)         # 口的下横
 
     # ---- 儿 ----
-    g.diag(*diag_cap_base(400, 300, 230, 100, weight=W_MAIN, base=0), weight=W_MAIN)  # 撇
+    g.diag(400, 330, 230, 22, weight=W_MAIN)     # 撇（墨迹下缘落在基线）
     g.vbar(620, 300, 48, weight=W_MAIN)          # 竖弯钩的竖
     g.hbar(620, 880, 48, weight=W_MAIN)          # 竖弯钩的底横
     g.diag(880, 48, 820, 110, weight=W_THIN)     # 竖弯钩的钩
@@ -317,7 +269,7 @@ def glyph_yue() -> Glyph:
     g = Glyph("uni5CB3", advance=1000, unicode=0x5CB3, note="岳（Jōyō joyo-w2-s2-015）")
 
     # ---- 丘 ----
-    g.diag(430, 810, 255, 715, weight=W_SEC)     # 丘的首撇
+    g.diag(430, 780, 255, 685, weight=W_SEC)     # 丘的首撇
     g.vbar(330, 700, 520, weight=W_SEC)          # 丘的左竖
     g.hbar(330, 900, 630, weight=W_SEC)          # 丘的中横
     g.vbar(880, 630, 480, weight=W_SEC)          # 丘的右竖
@@ -410,8 +362,8 @@ def glyph_kyo() -> Glyph:
     g.dot(500, 570, w=92, h=120, slant=-14)      # 丷左
     g.dot(660, 570, w=92, h=120, slant=14)       # 丷右
     g.hbar(390, 940, 430, weight=W_MAIN)         # 夹的中横
-    g.diag(*diag_cap_base(640, 430, 470, 120, weight=W_MAIN, base=0), weight=W_MAIN)   # 撇
-    g.diag(*diag_cap_base(620, 430, 930, 120, weight=W_MAIN, base=0), weight=W_MAIN)   # 捺
+    g.diag(600, 430, 400, 22, weight=W_MAIN)     # 撇（墨迹下缘落在基线）
+    g.diag(600, 430, 880, 30, weight=W_MAIN)     # 捺（墨迹下缘落在基线）
     return g
 
 
@@ -428,7 +380,7 @@ def glyph_taku() -> Glyph:
     g = Glyph("uni5353", advance=1000, unicode=0x5353, note="卓（Jōyō joyo-w2-s2-015）")
 
     # ---- 卜 ----
-    g.vbar(500, 820, 700, weight=W_MAIN)         # 卜的竖
+    g.vbar(500, CJK_TOP, 700, weight=W_MAIN)      # 卜的竖
     g.hbar(500, 660, 720, weight=W_THIN)         # 卜的短横
 
     # ---- 日 ----
@@ -483,7 +435,7 @@ def glyph_satsu() -> Glyph:
     g.hbar(120, 620, 760, weight=W_SEC)          # 尸的横
     g.vbar(610, 760, 600, weight=W_SEC)          # 尸的竖
     g.hbar(120, 610, 600, weight=W_SEC)          # 尸的横
-    g.diag(*diag_cap_base(190, 600, 90, 120, weight=W_SEC, base=0), weight=W_SEC)  # 尸的撇
+    g.diag(190, 600, 105, 12, weight=W_SEC)      # 尸的撇（墨迹下缘落在基线）
 
     # ---- 巾 ----
     g.hbar(250, 620, 470, weight=W_THIN)         # 巾的上横
@@ -514,15 +466,15 @@ def glyph_ro() -> Glyph:
     # ---- 火 ----
     g.dot(150, 580, w=110, h=140, slant=26)      # 左上点
     g.diag(360, 700, 250, 570, weight=W_MAIN)    # 右上短撇
-    g.diag(*diag_cap_base(280, 640, 100, 120, weight=W_MAIN, base=0), weight=W_MAIN)  # 长撇
-    g.dot(370, 300, w=100, h=130, slant=14)      # 捺变点
+    g.diag(300, 620, 115, 18, weight=W_MAIN)     # 长撇（墨迹下缘落在基线）
+    g.dot(340, 290, w=96, h=124, slant=14)       # 捺变点
 
     # ---- 户 ----
-    g.dot(540, 780, w=84, h=90, slant=-14)       # 户的点
+    g.dot(540, 775, w=W_DOT, h=90, slant=-14)      # 户的点
     g.hbar(470, 900, 700, weight=W_MAIN)         # 户的横
     g.hbar(470, 900, 560, weight=W_MAIN)         # 户的第二横
     g.vbar(890, 560, 480, weight=W_MAIN)         # 户的竖
-    g.diag(*diag_cap_base(500, 580, 440, 120, weight=W_MAIN, base=0), weight=W_MAIN)  # 户的撇
+    g.diag(520, 580, 455, 12, weight=W_MAIN)     # 户的撇（墨迹下缘落在基线）
     return g
 
 
@@ -543,10 +495,10 @@ def glyph_moku() -> Glyph:
     draw_horse(g)
 
     # ---- 攵 ----
-    g.diag(600, 800, 470, 690, weight=W_SEC)     # 攵的首撇
+    g.diag(600, 782, 470, 675, weight=W_SEC)     # 攵的首撇
     g.hbar(560, 900, 700, weight=W_SEC)          # 攵的横
-    g.diag(780, 690, 480, 80, weight=W_MAIN)     # 乂的撇
-    g.diag(600, 660, 900, 60, weight=W_MAIN)     # 乂的捺
+    g.diag(780, 690, 480, 22, weight=W_MAIN)     # 乂的撇（墨迹下缘落在基线）
+    g.diag(600, 660, 900, 22, weight=W_MAIN)     # 乂的捺（墨迹下缘落在基线）
     return g
 
 
@@ -650,11 +602,11 @@ def glyph_seki() -> Glyph:
     draw_water(g)
 
     # ---- 立 ----
-    g.dot(660, 780, w=92, h=110, slant=0)        # 立的点（竖点）
+    g.dot(660, 765, w=92, h=110, slant=0)        # 立的点（竖点）
     g.hbar(400, 920, 660, weight=W_MAIN)         # 立的横
     g.dot(550, 410, w=104, h=150, slant=-14)     # 丷左
     g.dot(775, 410, w=104, h=150, slant=14)      # 丷右
-    g.hbar(380, 940, 120, weight=W_MAIN)         # 立的底横
+    g.hbar(380, 940, 48, weight=W_MAIN)          # 立的底横（墨迹落在基线）
     return g
 
 
@@ -675,7 +627,7 @@ def glyph_jou() -> Glyph:
     draw_water(g)
 
     # ---- 争 ----
-    g.diag(560, 810, 420, 700, weight=W_SEC)     # 𠂊的撇
+    g.diag(560, 782, 420, 675, weight=W_SEC)     # 𠂊的撇
     g.hbar(540, 780, 660, weight=W_MAIN)         # 𠂊的横
     g.hbar(580, 850, 590, weight=W_SEC)          # 彐的上横
     g.vbar(845, 590, 340, weight=W_SEC)          # 彐的右竖
@@ -707,8 +659,8 @@ def glyph_botsu() -> Glyph:
     g.vbar(870, 650, 520, weight=W_MAIN)         # 几的竖
     g.hbar(870, 935, 520, weight=W_THIN)         # 几的弯钩底
     g.hbar(450, 880, 380, weight=W_MAIN)         # 又的横
-    g.diag(870, 380, 480, 60, weight=W_SEC)      # 又的撇
-    g.diag(560, 370, 920, 60, weight=W_MAIN)     # 又的捺
+    g.diag(870, 380, 480, 36, weight=W_SEC)      # 又的撇（墨迹下缘落在基线）
+    g.diag(560, 370, 900, 36, weight=W_MAIN)     # 又的捺（墨迹下缘落在基线）
     return g
 
 
@@ -761,7 +713,7 @@ def glyph_teki() -> Glyph:
     g.hbar(285, 715, 300, weight=W_THIN)         # 貝的内横 2
     g.hbar(250, 750, 180, weight=W_SEC)          # 貝的底横
     g.diag(430, 170, 280, 60, weight=W_SEC)      # 八的撇
-    g.dot(640, 150, w=84, h=100, slant=16)       # 八的点
+    g.dot(640, 100, w=W_DOT, h=100, slant=16)      # 八的点
     return g
 
 
@@ -801,7 +753,7 @@ def glyph_nin() -> Glyph:
     draw_female(g)
 
     # ---- 壬 ----
-    g.diag(700, 800, 540, 740, weight=W_SEC)     # 壬的首撇
+    g.diag(700, 772, 540, 712, weight=W_SEC)     # 壬的首撇
     g.hbar(490, 930, 650, weight=W_SEC)          # 壬的长横
     g.vbar(700, 650, 200, weight=W_SEC)          # 壬的竖
     g.hbar(560, 900, 200, weight=W_SEC)          # 壬的底横
@@ -854,11 +806,11 @@ def glyph_ou() -> Glyph:
     draw_step(g)
 
     # ---- 主 ----
-    g.dot(660, 780, w=84, h=90, slant=0)         # 主的点（竖点）
+    g.dot(660, 775, w=W_DOT, h=90, slant=0)        # 主的点（竖点）
     g.hbar(430, 900, 620, weight=W_MAIN)         # 主的上横
     g.hbar(430, 900, 400, weight=W_MAIN)         # 主的中横
-    g.vbar(660, 620, 200, weight=W_MAIN)         # 主的竖
-    g.hbar(380, 940, 200, weight=W_MAIN)         # 主的底横
+    g.vbar(660, 620, 100, weight=W_MAIN)         # 主的竖
+    g.hbar(380, 940, 100, weight=W_MAIN)         # 主的底横（墨迹落在基线）
     return g
 
 
@@ -879,9 +831,9 @@ def glyph_mame() -> Glyph:
     g.vbar(255, 590, 350, weight=W_SEC)          # 口的左竖
     g.vbar(745, 590, 350, weight=W_SEC)          # 口的右竖
     g.hbar(255, 745, 350, weight=W_SEC)          # 口的下横
-    g.dot(430, 230, w=84, h=100, slant=-14)      # 丷左
-    g.dot(570, 230, w=84, h=100, slant=14)       # 丷右
-    g.hbar(90, 910, 90, weight=W_MAIN)           # 底横（最长）
+    g.dot(430, 230, w=W_DOT, h=100, slant=-14)     # 丷左
+    g.dot(570, 230, w=W_DOT, h=100, slant=14)      # 丷右
+    g.hbar(90, 910, 48, weight=W_MAIN)            # 底横（最长，墨迹落在基线）
     return g
 
 
@@ -902,9 +854,9 @@ def glyph_kyou() -> Glyph:
 
     # ---- 王 ----
     g.hbar(450, 870, 730, weight=W_MAIN)         # 王的上横
-    g.vbar(660, 730, 200, weight=W_MAIN)         # 王的竖
+    g.vbar(660, 730, 48, weight=W_MAIN)          # 王的竖
     g.hbar(480, 840, 530, weight=W_MAIN)         # 王的中横
-    g.hbar(400, 940, 200, weight=W_MAIN)         # 王的底横
+    g.hbar(400, 940, 48, weight=W_MAIN)          # 王的底横（墨迹落在基线）
     return g
 
 
@@ -953,7 +905,7 @@ def glyph_tochi() -> Glyph:
 
     # ---- 万 ----
     g.hbar(430, 940, 740, weight=W_MAIN)         # 万的顶横
-    g.diag(*diag_cap_base(600, 740, 470, 120, weight=W_SEC, base=0), weight=W_SEC)     # 万的撇
+    g.diag(600, 740, 465, 8, weight=W_SEC)       # 万的撇（墨迹下缘落在基线）
     g.hbar(590, 900, 580, weight=W_THIN)         # 万的横折钩的横
     g.vbar(890, 580, 220, weight=W_SEC)          # 万的竖
     g.diag(890, 220, 820, 160, weight=W_THIN)    # 万的钩
@@ -997,7 +949,7 @@ def glyph_kutsu() -> Glyph:
     g.hbar(120, 880, 760, weight=W_SEC)          # 尸的横
     g.vbar(870, 760, 600, weight=W_SEC)          # 尸的竖
     g.hbar(120, 870, 600, weight=W_SEC)          # 尸的横
-    g.diag(*diag_cap_base(180, 600, 90, 120, weight=W_SEC, base=0), weight=W_SEC)      # 尸的撇
+    g.diag(180, 600, 105, 12, weight=W_SEC)      # 尸的撇（墨迹下缘落在基线）
 
     # ---- 出 ----
     g.vbar(330, 460, 390, weight=W_THIN)         # 出上竖折的竖
