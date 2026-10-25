@@ -91,10 +91,10 @@ sys.path.insert(0, str(FONT_SRC / "scripts"))
 
 from hkbuild import Glyph, write_ufo  # noqa: E402
 
-W_MAIN = 101
-W_SEC = 92
-W_THIN = 83
-W_DOT = 92
+W_MAIN = 108
+W_SEC = 99
+W_THIN = 89
+W_DOT = 99
 
 # --- 放大参数（任务 B）---------------------------------------------------
 KANA_SCALE = 1.35        # 全尺寸假名的放大系数（只作用于中心线坐标）

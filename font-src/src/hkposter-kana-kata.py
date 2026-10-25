@@ -70,10 +70,10 @@ sys.path.insert(0, str(FONT_SRC / "scripts"))
 
 from hkbuild import Glyph, write_ufo  # noqa: E402
 
-W_MAIN = 110
-W_SEC = 100
-W_THIN = 90
-W_DOT = 100
+W_MAIN = 117
+W_SEC = 106
+W_THIN = 95
+W_DOT = 106
 # 点画细档（局部降档，**不是全局回退**）：
 #   シ/ツ 的两枚点画是「辅助撇」，字面 ×1.30 之后与长笔几乎相接；
 #   浊音形还要再缩到 0.84（ツ 更被压到 0.80），加粗后两枚点画会糊成一团
