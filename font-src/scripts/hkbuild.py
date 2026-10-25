@@ -263,7 +263,8 @@ def notdef_glyph() -> Glyph:
 
 
 def space_glyph(advance: int = 500) -> Glyph:
-    return Glyph("space", advance=advance)
+    """空格：必须有 U+0020 映射，否则排版时空格会落到 .notdef。"""
+    return Glyph("space", advance=advance, unicode=0x20)
 
 
 def write_ufo(
