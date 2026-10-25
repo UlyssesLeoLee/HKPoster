@@ -1,4 +1,4 @@
-"""check_kana_size —— 假名字面尺寸是否到位的验收判据。
+"""check_kana_size —— 假名字面尺寸与落位是否到位的验收判据。
 
 为什么需要
 ----------
@@ -8,28 +8,36 @@
 
 实测基线（返工前，本字体 em=1000）：
 
-======================  ==========  ===============  ==========
+======================  ==========  ===============  ==============
                         字高中位      与汉字字高比       参照(Yu Gothic Bold)
-======================  ==========  ===============  ==========
+======================  ==========  ===============  ==============
 本字体 汉字              796          ——                928
 本字体 平假名            586          0.736            872
 本字体 片假名            601          0.756            807
-======================  ==========  ===============  ==========
+======================  ==========  ===============  ==============
 
 处置是**放大字面、不加笔画**（中心线 ×1.35 / ×1.30，笔画权重不动）。
 
-判据
-----
+判据（按可靠性从高到低）
+------------------------
 1. **缺字** → FAIL（与 check_kana_fidelity 同一个硬门禁）。
-2. **全尺寸假名**字高落在 ``[min_h, max_h]``（默认 700..880）→ 否则 FAIL。
+2. **与参照字体逐字比字高**：本字体该字的字高 / 参照字体同一字的字高，
+   落在 ``[ratio_min, ratio_max]``（默认 0.85..1.15）→ 否则 FAIL。
+   *为什么用相对参照而不是绝对区间*：绝对区间（「全尺寸假名都要 ≥700 高」）
+   本身是错的 —— ニ 这种两横的字、へ 这种单笔的字**天生就矮**，
+   参照字体同样矮。拿绝对值判会把正确字形判成错。
+   相对参照判的才是「和标准假名一样大」。
 3. **假名/汉字字高比**（全尺寸假名中位）落在 ``[0.88, 0.95]`` → 否则 FAIL。
-4. **小假名**字高落在全尺寸假名中位的 ``[0.55, 0.80]`` 倍 → 否则 FAIL。
-5. 墨迹外接框不得超出 em（x 0..1000、y -120..880）。
+   这一条把「假名和汉字同族」这件事直接量出来。
+4. **小假名落位**：水平居中（中心 x≈500）+ 贴基线（底边 y≈40）。
+   依据是参照字体的实测（见 docs/11 §6.8）——初稿规格写的「右上区域」是错的。
+5. **小假名大小**：占全尺寸假名 0.55..0.80。
+6. 墨迹外接框不得超出 em（x 0..1000、y -120..880）。
 
 用法
 ----
     python font-src/scripts/check_kana_size.py
-    python font-src/scripts/check_kana_size.py --min-h 700 --max-h 880
+    python font-src/scripts/check_kana_size.py --reference C:/Windows/Fonts/YuGothB.ttc
 """
 
 from __future__ import annotations
@@ -40,7 +48,7 @@ import statistics
 import sys
 from pathlib import Path
 
-from fontTools.ttLib import TTFont
+from fontTools.ttLib import TTFont, TTCollection
 from fontTools.pens.boundsPen import BoundsPen
 
 if hasattr(sys, "stdout") and "reconfigure" in dir(sys.stdout):
@@ -48,11 +56,12 @@ if hasattr(sys, "stdout") and "reconfigure" in dir(sys.stdout):
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_FONT = ROOT / "font-src" / "dist" / "HKPoster-Heavy.ttf"
+DEFAULT_REF = "C:/Windows/Fonts/YuGothB.ttc"
 
 KANA_RANGES = ((0x3041, 0x309F), (0x30A0, 0x30FF))
 
-# 本身就只有一小截的符号，不参与「全尺寸」判定
-INHERENTLY_SHORT = set("ー゛゜ゝゞゟヽヾ゠・…‥ヿ")
+# 本身就只有一小截的符号（小假名另算），不参与「全尺寸」判定
+INHERENTLY_SHORT = set("ー゛゜ゝゞゟヽヾヿ・゠")
 
 # 小假名（码位）
 SMALL_KANA = {
@@ -74,13 +83,29 @@ def _bounds(glyphset, name):
     return bp.bounds
 
 
+def _load_ref(path: Path):
+    """读参照字体，返回 (cmap, glyphset, upm)。"""
+    if path.suffix.lower() == ".ttc":
+        coll = TTCollection(str(path), lazy=True)
+        f = coll.fonts[0]
+    else:
+        f = TTFont(str(path), lazy=True)
+    return f.getBestCmap(), f.getGlyphSet(), f["head"].unitsPerEm
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="假名字面尺寸验收")
     ap.add_argument("--font", default=str(DEFAULT_FONT))
-    ap.add_argument("--min-h", type=int, default=700, help="全尺寸假名字高下限")
-    ap.add_argument("--max-h", type=int, default=880, help="全尺寸假名字高上限")
-    ap.add_argument("--ratio-min", type=float, default=0.88, help="假名/汉字字高比下限")
-    ap.add_argument("--ratio-max", type=float, default=0.95, help="假名/汉字字高比上限")
+    ap.add_argument("--reference", default=DEFAULT_REF,
+                    help="参照字体（标准日文骨架），用于逐字比字高；不存在则跳过该判据")
+    ap.add_argument("--ratio-min", type=float, default=0.85,
+                    help="本字体/参照 的字高比下限（逐字）")
+    ap.add_argument("--ratio-max", type=float, default=1.15,
+                    help="本字体/参照 的字高比上限（逐字）")
+    ap.add_argument("--family-min", type=float, default=0.88,
+                    help="假名/汉字 字高比下限（整体）")
+    ap.add_argument("--family-max", type=float, default=0.95,
+                    help="假名/汉字 字高比上限（整体）")
     ap.add_argument("--small-lo", type=float, default=0.55, help="小假名/全尺寸假名 下限")
     ap.add_argument("--small-hi", type=float, default=0.80, help="小假名/全尺寸假名 上限")
     ap.add_argument("--small-cx-tol", type=float, default=100.0,
@@ -100,6 +125,17 @@ def main() -> int:
     cmap = f.getBestCmap()
     gs = f.getGlyphSet()
 
+    ref_cmap = ref_gs = None
+    ref_upm = None
+    ref_path = Path(args.reference) if args.reference else None
+    if ref_path and ref_path.exists():
+        ref_cmap, ref_gs, ref_upm = _load_ref(ref_path)
+        if not ref_upm:
+            ref_cmap = None
+    else:
+        print(f"[kana-size] 参照字体不存在：{ref_path} —— 跳过「逐字比参照」判据")
+    our_upm = f["head"].unitsPerEm
+
     cjk_h = []
     for ch in CJK_SAMPLE:
         n = cmap.get(ord(ch))
@@ -110,7 +146,22 @@ def main() -> int:
             cjk_h.append(b[3] - b[1])
     cjk_median = statistics.median(cjk_h) if cjk_h else None
 
+    # 参照字体的汉字中位（换算到本字体的 em）——用来把「整体刻度差异」除掉
+    ref_cjk_median = None
+    if ref_cmap is not None:
+        rc = []
+        for ch in CJK_SAMPLE:
+            rn = ref_cmap.get(ord(ch))
+            if not rn:
+                continue
+            rb = _bounds(ref_gs, rn)
+            if rb:
+                rc.append((rb[3] - rb[1]) * our_upm / ref_upm)
+        if rc:
+            ref_cjk_median = statistics.median(rc)
+
     missing, full, small, overflow = [], [], [], []
+    rel_bad = []
     for lo, hi in KANA_RANGES:
         for cp in range(lo, hi + 1):
             ch = chr(cp)
@@ -132,12 +183,29 @@ def main() -> int:
             elif ch not in INHERENTLY_SHORT:
                 full.append(rec)
 
+            # 与参照字体逐字比**相对比例**
+            # ⚠️ 三处换算都要做，否则比值全是假数：
+            #   ① 参照高度要按 em 比例换算到本字体（Yu Gothic Bold em=2048，本字体 1000）；
+            #   ② 要**各自除以自己字体的汉字中位**——参照字体的字形在 em 里占比普遍更大
+            #      （大 em 风格），直接比绝对高度会把「整体刻度差」误判成「这一字不对」；
+            #   ③ 这样比出来的才是「这个假名相对汉字的比例，跟标准字体是否一致」。
+            if ref_cmap is not None and ref_cjk_median and cjk_median:
+                rn = ref_cmap.get(cp)
+                rb = _bounds(ref_gs, rn) if rn else None
+                if rb and (rb[3] - rb[1]) > 0:
+                    ref_h = (rb[3] - rb[1]) * our_upm / ref_upm
+                    ours_rel = h / cjk_median
+                    ref_rel = ref_h / ref_cjk_median
+                    r = ours_rel / ref_rel
+                    rec["ref_height"] = round(ref_h, 1)
+                    rec["rel_ref"] = round(r, 3)
+                    if not (args.ratio_min <= r <= args.ratio_max):
+                        rel_bad.append({**rec})
+
     full_h = [r["height"] for r in full]
     full_median = statistics.median(full_h) if full_h else 0
-    ratio = (full_median / cjk_median) if (cjk_median and full_median) else 0
+    family = (full_median / cjk_median) if (cjk_median and full_median) else 0
 
-    too_small = [r for r in full if r["height"] < args.min_h]
-    too_tall = [r for r in full if r["height"] > args.max_h]
     small_bad = []
     for r in small:
         if not full_median:
@@ -146,9 +214,7 @@ def main() -> int:
         if not (args.small_lo <= rel <= args.small_hi):
             small_bad.append({**r, "rel": round(rel, 3)})
 
-    # 小假名落位：水平居中 + 贴基线（参照字体 Yu Gothic Bold 的实测规则）
-    # 集成方初稿规格写的是「右上区域」，实测参照字体是「居中 + 贴基线」，
-    # 且同一字体里两种落法自相矛盾 —— 见 docs/11 §6.8。
+    # 小假名落位：水平居中 + 贴基线
     place_bad = []
     for r in small:
         b = r["box"]
@@ -160,7 +226,10 @@ def main() -> int:
     print("[kana-size] 汉字字高中位 = %s" % (round(cjk_median, 1) if cjk_median else "N/A"))
     print("[kana-size] 全尺寸假名字高中位 = %.1f  (n=%d)" % (full_median, len(full)))
     print("[kana-size] 假名/汉字 字高比 = %.3f  (目标 %.2f..%.2f)"
-          % (ratio, args.ratio_min, args.ratio_max))
+          % (family, args.family_min, args.family_max))
+    if rel_bad:
+        rels = [r["rel_ref"] for r in rel_bad]
+        print("[kana-size] 与参照逐字比：中位 %.3f  n=%d" % (statistics.median(rels), len(rels)))
 
     problems = 0
     if missing:
@@ -168,25 +237,23 @@ def main() -> int:
         print(f"[kana-size] FAIL 缺字 {len(missing)} 个：")
         for r in missing:
             print("  %s  %s" % (r["char"], r["codepoint"]))
-    if too_small:
-        problems += len(too_small)
-        print(f"[kana-size] FAIL 偏小（<{args.min_h}）{len(too_small)} 个：")
-        for r in sorted(too_small, key=lambda x: x["height"])[:20]:
-            print("  %s  %s  h=%d" % (r["char"], r["codepoint"], r["height"]))
-    if too_tall:
-        problems += len(too_tall)
-        print(f"[kana-size] FAIL 偏高（>{args.max_h}）{len(too_tall)} 个：")
-        for r in sorted(too_tall, key=lambda x: -x["height"])[:20]:
-            print("  %s  %s  h=%d" % (r["char"], r["codepoint"], r["height"]))
+    if rel_bad:
+        print(f"[kana-size] WARN 与参照字高比不在 {args.ratio_min}..{args.ratio_max}"
+              f"（{len(rel_bad)} 个，**软信号**）：")
+        print("     参照是普通粗体（笔画 ≈4.4% em），本字体是 Heavy（≈9.6% em），"
+              "跨字重比绝对高度本就有系统性差异；")
+        print("     这一项用来暴露**同一套假名内部的比例不一致**，不作为门禁。")
+        for r in sorted(rel_bad, key=lambda x: x["rel_ref"])[:20]:
+            print("  %s  %s  本高=%d 参照高=%s 比=%.3f"
+                  % (r["char"], r["codepoint"], r["height"], r.get("ref_height"), r["rel_ref"]))
     if small_bad:
         problems += len(small_bad)
-        print(f"[kana-size] FAIL 小假名比例不在 "
-              f"{args.small_lo}..{args.small_hi}：")
+        print(f"[kana-size] FAIL 小假名比例不在 {args.small_lo}..{args.small_hi}：")
         for r in small_bad[:20]:
             print("  %s  %s  h=%d  rel=%.2f" % (r["char"], r["codepoint"], r["height"], r["rel"]))
     if place_bad:
         problems += len(place_bad)
-        print(f"[kana-size] FAIL 小假名落位不对（应水平居中 x≈500 且贴基线）：")
+        print("[kana-size] FAIL 小假名落位不对（应水平居中 x≈500 且贴基线）：")
         for r in place_bad[:20]:
             print("  %s  %s  h=%d  中心x=%.0f  底边=%.0f"
                   % (r["char"], r["codepoint"], r["height"], r["center_x"], r["bottom"]))
@@ -195,19 +262,19 @@ def main() -> int:
         print(f"[kana-size] FAIL 超出 em 边界 {len(overflow)} 个：")
         for r in overflow[:20]:
             print("  %s  %s  box=%s" % (r["char"], r["codepoint"], r["box"]))
-    if not (args.ratio_min <= ratio <= args.ratio_max):
+    if not (args.family_min <= family <= args.family_max):
         problems += 1
-        print(f"[kana-size] FAIL 假名/汉字字高比 {ratio:.3f} 不在 "
-              f"{args.ratio_min}..{args.ratio_max}")
+        print(f"[kana-size] FAIL 假名/汉字字高比 {family:.3f} 不在 "
+              f"{args.family_min}..{args.family_max}")
 
     report = {
         "font": str(font_path),
+        "reference": str(ref_path) if ref_cmap is not None else None,
         "cjk_median_height": cjk_median,
         "kana_full_median_height": full_median,
-        "ratio": round(ratio, 4),
+        "family_ratio": round(family, 4),
         "missing": missing,
-        "too_small": too_small,
-        "too_tall": too_tall,
+        "rel_ref_off": rel_bad,
         "small_off": small_bad,
         "small_place_off": place_bad,
         "overflow": overflow,

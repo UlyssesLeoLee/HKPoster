@@ -1,0 +1,2850 @@
+{
+  "note": "假名字高目标表：target_height = 7 个参照字体的「字高/汉字中位」中位数 × 本字体汉字中位。只约束大小（字高），不约束形状。",
+  "our_cjk_median": 815,
+  "reference_fonts": [
+    "Yu Gothic Bold",
+    "Yu Gothic Regular",
+    "BIZ UDGothic Bold",
+    "BIZ UDGothic",
+    "Noto Sans JP",
+    "MS Gothic",
+    "UD Digi Kyokasho NK-B"
+  ],
+  "targets": {
+    "ぁ": {
+      "codepoint": "U+3041",
+      "small": true,
+      "rel_to_cjk": 0.759,
+      "target_height": 618.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 687.5,
+        "Yu Gothic Regular": 641.1,
+        "BIZ UDGothic Bold": 744.1,
+        "BIZ UDGothic": 723.1,
+        "Noto Sans JP": 681.0,
+        "MS Gothic": 738.3,
+        "UD Digi Kyokasho NK-B": 681.6
+      }
+    },
+    "あ": {
+      "codepoint": "U+3042",
+      "small": false,
+      "rel_to_cjk": 0.944,
+      "target_height": 769.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 866.7,
+        "Yu Gothic Regular": 816.9,
+        "BIZ UDGothic Bold": 897.0,
+        "BIZ UDGothic": 873.5,
+        "Noto Sans JP": 816.0,
+        "MS Gothic": 898.4,
+        "UD Digi Kyokasho NK-B": 855.5
+      }
+    },
+    "ぃ": {
+      "codepoint": "U+3043",
+      "small": true,
+      "rel_to_cjk": 0.6337,
+      "target_height": 516.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 550.8,
+        "Yu Gothic Regular": 503.9,
+        "BIZ UDGothic Bold": 678.2,
+        "BIZ UDGothic": 643.1,
+        "Noto Sans JP": 571.0,
+        "MS Gothic": 585.9,
+        "UD Digi Kyokasho NK-B": 506.8
+      }
+    },
+    "い": {
+      "codepoint": "U+3044",
+      "small": false,
+      "rel_to_cjk": 0.7536,
+      "target_height": 614.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 682.6,
+        "Yu Gothic Regular": 634.8,
+        "BIZ UDGothic Bold": 815.4,
+        "BIZ UDGothic": 774.4,
+        "Noto Sans JP": 679.0,
+        "MS Gothic": 714.8,
+        "UD Digi Kyokasho NK-B": 629.9
+      }
+    },
+    "ぅ": {
+      "codepoint": "U+3045",
+      "small": true,
+      "rel_to_cjk": 0.7771,
+      "target_height": 633.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 709.0,
+        "Yu Gothic Regular": 653.8,
+        "BIZ UDGothic Bold": 751.0,
+        "BIZ UDGothic": 726.1,
+        "Noto Sans JP": 662.0,
+        "MS Gothic": 718.8,
+        "UD Digi Kyokasho NK-B": 701.2
+      }
+    },
+    "う": {
+      "codepoint": "U+3046",
+      "small": false,
+      "rel_to_cjk": 0.944,
+      "target_height": 769.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 892.1,
+        "Yu Gothic Regular": 828.6,
+        "BIZ UDGothic Bold": 897.0,
+        "BIZ UDGothic": 872.1,
+        "Noto Sans JP": 792.0,
+        "MS Gothic": 890.6,
+        "UD Digi Kyokasho NK-B": 863.8
+      }
+    },
+    "ぇ": {
+      "codepoint": "U+3047",
+      "small": true,
+      "rel_to_cjk": 0.7465,
+      "target_height": 608.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 686.0,
+        "Yu Gothic Regular": 632.3,
+        "BIZ UDGothic Bold": 744.1,
+        "BIZ UDGothic": 706.1,
+        "Noto Sans JP": 652.0,
+        "MS Gothic": 660.2,
+        "UD Digi Kyokasho NK-B": 676.3
+      }
+    },
+    "え": {
+      "codepoint": "U+3048",
+      "small": false,
+      "rel_to_cjk": 0.9195,
+      "target_height": 749.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 860.4,
+        "Yu Gothic Regular": 809.1,
+        "BIZ UDGothic Bold": 892.1,
+        "BIZ UDGothic": 849.6,
+        "Noto Sans JP": 795.0,
+        "MS Gothic": 808.6,
+        "UD Digi Kyokasho NK-B": 839.4
+      }
+    },
+    "ぉ": {
+      "codepoint": "U+3049",
+      "small": true,
+      "rel_to_cjk": 0.7435,
+      "target_height": 606.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 652.8,
+        "Yu Gothic Regular": 600.1,
+        "BIZ UDGothic Bold": 731.4,
+        "BIZ UDGothic": 708.0,
+        "Noto Sans JP": 651.0,
+        "MS Gothic": 707.0,
+        "UD Digi Kyokasho NK-B": 670.9
+      }
+    },
+    "お": {
+      "codepoint": "U+304A",
+      "small": false,
+      "rel_to_cjk": 0.9106,
+      "target_height": 742.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 824.8,
+        "Yu Gothic Regular": 764.6,
+        "BIZ UDGothic Bold": 882.3,
+        "BIZ UDGothic": 855.0,
+        "Noto Sans JP": 797.0,
+        "MS Gothic": 859.4,
+        "UD Digi Kyokasho NK-B": 829.1
+      }
+    },
+    "か": {
+      "codepoint": "U+304B",
+      "small": false,
+      "rel_to_cjk": 0.905,
+      "target_height": 737.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 821.8,
+        "Yu Gothic Regular": 773.9,
+        "BIZ UDGothic Bold": 891.1,
+        "BIZ UDGothic": 856.0,
+        "Noto Sans JP": 790.0,
+        "MS Gothic": 812.5,
+        "UD Digi Kyokasho NK-B": 807.1
+      }
+    },
+    "が": {
+      "codepoint": "U+304C",
+      "small": false,
+      "rel_to_cjk": 0.9356,
+      "target_height": 762.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 851.6,
+        "Yu Gothic Regular": 818.4,
+        "BIZ UDGothic Bold": 918.9,
+        "BIZ UDGothic": 884.8,
+        "Noto Sans JP": 843.0,
+        "MS Gothic": 859.4,
+        "UD Digi Kyokasho NK-B": 835.0
+      }
+    },
+    "き": {
+      "codepoint": "U+304D",
+      "small": false,
+      "rel_to_cjk": 0.9322,
+      "target_height": 759.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 855.0,
+        "Yu Gothic Regular": 810.1,
+        "BIZ UDGothic Bold": 885.7,
+        "BIZ UDGothic": 862.8,
+        "Noto Sans JP": 813.0,
+        "MS Gothic": 859.4,
+        "UD Digi Kyokasho NK-B": 862.3
+      }
+    },
+    "ぎ": {
+      "codepoint": "U+304E",
+      "small": false,
+      "rel_to_cjk": 0.9816,
+      "target_height": 800.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 924.3,
+        "Yu Gothic Regular": 885.7,
+        "BIZ UDGothic Bold": 929.7,
+        "BIZ UDGothic": 897.5,
+        "Noto Sans JP": 856.0,
+        "MS Gothic": 906.2,
+        "UD Digi Kyokasho NK-B": 885.7
+      }
+    },
+    "く": {
+      "codepoint": "U+304F",
+      "small": false,
+      "rel_to_cjk": 0.9324,
+      "target_height": 759.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 862.8,
+        "Yu Gothic Regular": 800.3,
+        "BIZ UDGothic Bold": 899.9,
+        "BIZ UDGothic": 858.9,
+        "Noto Sans JP": 830.0,
+        "MS Gothic": 863.3,
+        "UD Digi Kyokasho NK-B": 841.3
+      }
+    },
+    "ぐ": {
+      "codepoint": "U+3050",
+      "small": false,
+      "rel_to_cjk": 0.9324,
+      "target_height": 759.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 862.8,
+        "Yu Gothic Regular": 799.8,
+        "BIZ UDGothic Bold": 899.9,
+        "BIZ UDGothic": 859.9,
+        "Noto Sans JP": 830.0,
+        "MS Gothic": 863.3,
+        "UD Digi Kyokasho NK-B": 841.3
+      }
+    },
+    "け": {
+      "codepoint": "U+3051",
+      "small": false,
+      "rel_to_cjk": 0.924,
+      "target_height": 753.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 853.0,
+        "Yu Gothic Regular": 813.0,
+        "BIZ UDGothic Bold": 902.3,
+        "BIZ UDGothic": 873.5,
+        "Noto Sans JP": 807.0,
+        "MS Gothic": 835.9,
+        "UD Digi Kyokasho NK-B": 820.8
+      }
+    },
+    "げ": {
+      "codepoint": "U+3052",
+      "small": false,
+      "rel_to_cjk": 1.0027,
+      "target_height": 817.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 937.0,
+        "Yu Gothic Regular": 909.7,
+        "BIZ UDGothic Bold": 942.4,
+        "BIZ UDGothic": 913.6,
+        "Noto Sans JP": 854.0,
+        "MS Gothic": 914.1,
+        "UD Digi Kyokasho NK-B": 904.8
+      }
+    },
+    "こ": {
+      "codepoint": "U+3053",
+      "small": false,
+      "rel_to_cjk": 0.7614,
+      "target_height": 620.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 723.1,
+        "Yu Gothic Regular": 663.1,
+        "BIZ UDGothic Bold": 774.9,
+        "BIZ UDGothic": 742.2,
+        "Noto Sans JP": 685.0,
+        "MS Gothic": 660.2,
+        "UD Digi Kyokasho NK-B": 687.0
+      }
+    },
+    "ご": {
+      "codepoint": "U+3054",
+      "small": false,
+      "rel_to_cjk": 0.9342,
+      "target_height": 761.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 875.5,
+        "Yu Gothic Regular": 833.5,
+        "BIZ UDGothic Bold": 899.9,
+        "BIZ UDGothic": 870.1,
+        "Noto Sans JP": 838.0,
+        "MS Gothic": 832.0,
+        "UD Digi Kyokasho NK-B": 793.0
+      }
+    },
+    "さ": {
+      "codepoint": "U+3055",
+      "small": false,
+      "rel_to_cjk": 0.9232,
+      "target_height": 752.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 849.1,
+        "Yu Gothic Regular": 803.2,
+        "BIZ UDGothic Bold": 898.4,
+        "BIZ UDGothic": 863.3,
+        "Noto Sans JP": 803.1,
+        "MS Gothic": 863.3,
+        "UD Digi Kyokasho NK-B": 833.0
+      }
+    },
+    "ざ": {
+      "codepoint": "U+3056",
+      "small": false,
+      "rel_to_cjk": 0.9824,
+      "target_height": 800.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 908.2,
+        "Yu Gothic Regular": 858.4,
+        "BIZ UDGothic Bold": 939.5,
+        "BIZ UDGothic": 901.4,
+        "Noto Sans JP": 885.1,
+        "MS Gothic": 906.2,
+        "UD Digi Kyokasho NK-B": 880.9
+      }
+    },
+    "し": {
+      "codepoint": "U+3057",
+      "small": false,
+      "rel_to_cjk": 0.889,
+      "target_height": 724.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 819.3,
+        "Yu Gothic Regular": 784.2,
+        "BIZ UDGothic Bold": 874.0,
+        "BIZ UDGothic": 839.8,
+        "Noto Sans JP": 801.0,
+        "MS Gothic": 785.2,
+        "UD Digi Kyokasho NK-B": 793.0
+      }
+    },
+    "じ": {
+      "codepoint": "U+3058",
+      "small": false,
+      "rel_to_cjk": 0.8912,
+      "target_height": 726.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 819.3,
+        "Yu Gothic Regular": 784.2,
+        "BIZ UDGothic Bold": 874.0,
+        "BIZ UDGothic": 839.8,
+        "Noto Sans JP": 801.0,
+        "MS Gothic": 816.4,
+        "UD Digi Kyokasho NK-B": 793.0
+      }
+    },
+    "す": {
+      "codepoint": "U+3059",
+      "small": false,
+      "rel_to_cjk": 0.9627,
+      "target_height": 784.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 873.0,
+        "Yu Gothic Regular": 827.1,
+        "BIZ UDGothic Bold": 923.8,
+        "BIZ UDGothic": 900.4,
+        "Noto Sans JP": 811.0,
+        "MS Gothic": 894.5,
+        "UD Digi Kyokasho NK-B": 868.7
+      }
+    },
+    "ず": {
+      "codepoint": "U+305A",
+      "small": false,
+      "rel_to_cjk": 1.0227,
+      "target_height": 833.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 947.8,
+        "Yu Gothic Regular": 905.3,
+        "BIZ UDGothic Bold": 965.8,
+        "BIZ UDGothic": 949.2,
+        "Noto Sans JP": 845.0,
+        "MS Gothic": 929.7,
+        "UD Digi Kyokasho NK-B": 922.9
+      }
+    },
+    "せ": {
+      "codepoint": "U+305B",
+      "small": false,
+      "rel_to_cjk": 0.8696,
+      "target_height": 708.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 817.9,
+        "Yu Gothic Regular": 765.1,
+        "BIZ UDGothic Bold": 861.3,
+        "BIZ UDGothic": 823.7,
+        "Noto Sans JP": 758.0,
+        "MS Gothic": 765.6,
+        "UD Digi Kyokasho NK-B": 780.8
+      }
+    },
+    "ぜ": {
+      "codepoint": "U+305C",
+      "small": false,
+      "rel_to_cjk": 0.9558,
+      "target_height": 779.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 900.9,
+        "Yu Gothic Regular": 842.3,
+        "BIZ UDGothic Bold": 908.2,
+        "BIZ UDGothic": 873.0,
+        "Noto Sans JP": 796.0,
+        "MS Gothic": 875.0,
+        "UD Digi Kyokasho NK-B": 856.4
+      }
+    },
+    "そ": {
+      "codepoint": "U+305D",
+      "small": false,
+      "rel_to_cjk": 0.919,
+      "target_height": 749.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 866.2,
+        "Yu Gothic Regular": 808.6,
+        "BIZ UDGothic Bold": 862.3,
+        "BIZ UDGothic": 828.6,
+        "Noto Sans JP": 773.8,
+        "MS Gothic": 859.4,
+        "UD Digi Kyokasho NK-B": 833.0
+      }
+    },
+    "ぞ": {
+      "codepoint": "U+305E",
+      "small": false,
+      "rel_to_cjk": 0.9695,
+      "target_height": 790.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 867.7,
+        "Yu Gothic Regular": 813.0,
+        "BIZ UDGothic Bold": 940.4,
+        "BIZ UDGothic": 917.0,
+        "Noto Sans JP": 773.8,
+        "MS Gothic": 933.6,
+        "UD Digi Kyokasho NK-B": 904.8
+      }
+    },
+    "た": {
+      "codepoint": "U+305F",
+      "small": false,
+      "rel_to_cjk": 0.9231,
+      "target_height": 752.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 856.0,
+        "Yu Gothic Regular": 807.6,
+        "BIZ UDGothic Bold": 900.9,
+        "BIZ UDGothic": 873.0,
+        "Noto Sans JP": 799.0,
+        "MS Gothic": 832.0,
+        "UD Digi Kyokasho NK-B": 806.2
+      }
+    },
+    "だ": {
+      "codepoint": "U+3060",
+      "small": false,
+      "rel_to_cjk": 0.945,
+      "target_height": 770.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 856.0,
+        "Yu Gothic Regular": 808.1,
+        "BIZ UDGothic Bold": 930.2,
+        "BIZ UDGothic": 899.9,
+        "Noto Sans JP": 799.0,
+        "MS Gothic": 847.7,
+        "UD Digi Kyokasho NK-B": 831.1
+      }
+    },
+    "ち": {
+      "codepoint": "U+3061",
+      "small": false,
+      "rel_to_cjk": 0.9345,
+      "target_height": 761.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 870.1,
+        "Yu Gothic Regular": 817.9,
+        "BIZ UDGothic Bold": 891.1,
+        "BIZ UDGothic": 864.3,
+        "Noto Sans JP": 795.4,
+        "MS Gothic": 843.9,
+        "UD Digi Kyokasho NK-B": 843.3
+      }
+    },
+    "ぢ": {
+      "codepoint": "U+3062",
+      "small": false,
+      "rel_to_cjk": 0.9789,
+      "target_height": 797.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 900.4,
+        "Yu Gothic Regular": 861.3,
+        "BIZ UDGothic Bold": 931.2,
+        "BIZ UDGothic": 897.0,
+        "Noto Sans JP": 862.4,
+        "MS Gothic": 894.7,
+        "UD Digi Kyokasho NK-B": 862.8
+      }
+    },
+    "っ": {
+      "codepoint": "U+3063",
+      "small": false,
+      "rel_to_cjk": 0.5574,
+      "target_height": 454.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 504.9,
+        "Yu Gothic Regular": 452.1,
+        "BIZ UDGothic Bold": 607.9,
+        "BIZ UDGothic": 571.3,
+        "Noto Sans JP": 488.0,
+        "MS Gothic": 515.6,
+        "UD Digi Kyokasho NK-B": 447.3
+      }
+    },
+    "つ": {
+      "codepoint": "U+3064",
+      "small": false,
+      "rel_to_cjk": 0.6886,
+      "target_height": 561.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 627.9,
+        "Yu Gothic Regular": 577.1,
+        "BIZ UDGothic Bold": 728.0,
+        "BIZ UDGothic": 686.0,
+        "Noto Sans JP": 594.0,
+        "MS Gothic": 613.3,
+        "UD Digi Kyokasho NK-B": 571.3
+      }
+    },
+    "づ": {
+      "codepoint": "U+3065",
+      "small": false,
+      "rel_to_cjk": 0.9102,
+      "target_height": 741.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 824.7,
+        "Yu Gothic Regular": 774.9,
+        "BIZ UDGothic Bold": 904.8,
+        "BIZ UDGothic": 860.8,
+        "Noto Sans JP": 788.0,
+        "MS Gothic": 824.2,
+        "UD Digi Kyokasho NK-B": 799.3
+      }
+    },
+    "て": {
+      "codepoint": "U+3066",
+      "small": false,
+      "rel_to_cjk": 0.8209,
+      "target_height": 669.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 763.2,
+        "Yu Gothic Regular": 691.4,
+        "BIZ UDGothic Bold": 813.0,
+        "BIZ UDGothic": 776.4,
+        "Noto Sans JP": 725.0,
+        "MS Gothic": 738.3,
+        "UD Digi Kyokasho NK-B": 740.7
+      }
+    },
+    "で": {
+      "codepoint": "U+3067",
+      "small": false,
+      "rel_to_cjk": 0.8289,
+      "target_height": 675.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 763.2,
+        "Yu Gothic Regular": 698.7,
+        "BIZ UDGothic Bold": 813.0,
+        "BIZ UDGothic": 776.4,
+        "Noto Sans JP": 725.0,
+        "MS Gothic": 738.3,
+        "UD Digi Kyokasho NK-B": 888.2
+      }
+    },
+    "と": {
+      "codepoint": "U+3068",
+      "small": false,
+      "rel_to_cjk": 0.8838,
+      "target_height": 720.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 810.1,
+        "Yu Gothic Regular": 762.7,
+        "BIZ UDGothic Bold": 869.1,
+        "BIZ UDGothic": 835.9,
+        "Noto Sans JP": 771.0,
+        "MS Gothic": 812.5,
+        "UD Digi Kyokasho NK-B": 763.2
+      }
+    },
+    "ど": {
+      "codepoint": "U+3069",
+      "small": false,
+      "rel_to_cjk": 0.9286,
+      "target_height": 756.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 853.5,
+        "Yu Gothic Regular": 813.5,
+        "BIZ UDGothic Bold": 913.1,
+        "BIZ UDGothic": 871.6,
+        "Noto Sans JP": 811.0,
+        "MS Gothic": 839.8,
+        "UD Digi Kyokasho NK-B": 837.9
+      }
+    },
+    "な": {
+      "codepoint": "U+306A",
+      "small": false,
+      "rel_to_cjk": 0.9372,
+      "target_height": 763.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 877.0,
+        "Yu Gothic Regular": 820.8,
+        "BIZ UDGothic Bold": 897.9,
+        "BIZ UDGothic": 872.6,
+        "Noto Sans JP": 823.0,
+        "MS Gothic": 875.0,
+        "UD Digi Kyokasho NK-B": 845.7
+      }
+    },
+    "に": {
+      "codepoint": "U+306B",
+      "small": false,
+      "rel_to_cjk": 0.8596,
+      "target_height": 700.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 786.1,
+        "Yu Gothic Regular": 738.8,
+        "BIZ UDGothic Bold": 864.3,
+        "BIZ UDGothic": 836.9,
+        "Noto Sans JP": 766.0,
+        "MS Gothic": 765.6,
+        "UD Digi Kyokasho NK-B": 722.7
+      }
+    },
+    "ぬ": {
+      "codepoint": "U+306C",
+      "small": false,
+      "rel_to_cjk": 0.8631,
+      "target_height": 703.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 781.7,
+        "Yu Gothic Regular": 743.7,
+        "BIZ UDGothic Bold": 865.7,
+        "BIZ UDGothic": 833.0,
+        "Noto Sans JP": 766.0,
+        "MS Gothic": 808.6,
+        "UD Digi Kyokasho NK-B": 764.2
+      }
+    },
+    "ね": {
+      "codepoint": "U+306D",
+      "small": false,
+      "rel_to_cjk": 0.9345,
+      "target_height": 761.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 862.8,
+        "Yu Gothic Regular": 822.3,
+        "BIZ UDGothic Bold": 896.0,
+        "BIZ UDGothic": 866.7,
+        "Noto Sans JP": 803.0,
+        "MS Gothic": 855.5,
+        "UD Digi Kyokasho NK-B": 839.8
+      }
+    },
+    "の": {
+      "codepoint": "U+306E",
+      "small": false,
+      "rel_to_cjk": 0.7876,
+      "target_height": 641.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 713.4,
+        "Yu Gothic Regular": 657.7,
+        "BIZ UDGothic Bold": 835.9,
+        "BIZ UDGothic": 795.9,
+        "Noto Sans JP": 708.0,
+        "MS Gothic": 746.1,
+        "UD Digi Kyokasho NK-B": 691.9
+      }
+    },
+    "は": {
+      "codepoint": "U+306F",
+      "small": false,
+      "rel_to_cjk": 0.8957,
+      "target_height": 730.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 817.4,
+        "Yu Gothic Regular": 767.1,
+        "BIZ UDGothic Bold": 869.6,
+        "BIZ UDGothic": 847.2,
+        "Noto Sans JP": 783.0,
+        "MS Gothic": 812.5,
+        "UD Digi Kyokasho NK-B": 791.0
+      }
+    },
+    "ば": {
+      "codepoint": "U+3070",
+      "small": false,
+      "rel_to_cjk": 0.9764,
+      "target_height": 795.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 901.9,
+        "Yu Gothic Regular": 859.9,
+        "BIZ UDGothic Bold": 927.7,
+        "BIZ UDGothic": 907.2,
+        "Noto Sans JP": 836.0,
+        "MS Gothic": 882.8,
+        "UD Digi Kyokasho NK-B": 878.9
+      }
+    },
+    "ぱ": {
+      "codepoint": "U+3071",
+      "small": false,
+      "rel_to_cjk": 0.9773,
+      "target_height": 796.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 906.2,
+        "Yu Gothic Regular": 856.4,
+        "BIZ UDGothic Bold": 928.7,
+        "BIZ UDGothic": 909.2,
+        "Noto Sans JP": 856.0,
+        "MS Gothic": 886.7,
+        "UD Digi Kyokasho NK-B": 881.8
+      }
+    },
+    "ひ": {
+      "codepoint": "U+3072",
+      "small": false,
+      "rel_to_cjk": 0.8701,
+      "target_height": 709.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 788.1,
+        "Yu Gothic Regular": 733.4,
+        "BIZ UDGothic Bold": 871.6,
+        "BIZ UDGothic": 832.0,
+        "Noto Sans JP": 751.0,
+        "MS Gothic": 777.3,
+        "UD Digi Kyokasho NK-B": 743.7
+      }
+    },
+    "び": {
+      "codepoint": "U+3073",
+      "small": false,
+      "rel_to_cjk": 0.9673,
+      "target_height": 788.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 911.6,
+        "Yu Gothic Regular": 851.1,
+        "BIZ UDGothic Bold": 944.8,
+        "BIZ UDGothic": 907.7,
+        "Noto Sans JP": 848.0,
+        "MS Gothic": 890.6,
+        "UD Digi Kyokasho NK-B": 863.3
+      }
+    },
+    "ぴ": {
+      "codepoint": "U+3074",
+      "small": false,
+      "rel_to_cjk": 0.9567,
+      "target_height": 779.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 881.8,
+        "Yu Gothic Regular": 821.8,
+        "BIZ UDGothic Bold": 945.8,
+        "BIZ UDGothic": 904.8,
+        "Noto Sans JP": 850.0,
+        "MS Gothic": 898.4,
+        "UD Digi Kyokasho NK-B": 863.3
+      }
+    },
+    "ふ": {
+      "codepoint": "U+3075",
+      "small": false,
+      "rel_to_cjk": 0.8998,
+      "target_height": 733.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 817.4,
+        "Yu Gothic Regular": 762.2,
+        "BIZ UDGothic Bold": 883.3,
+        "BIZ UDGothic": 851.1,
+        "Noto Sans JP": 759.0,
+        "MS Gothic": 824.2,
+        "UD Digi Kyokasho NK-B": 797.4
+      }
+    },
+    "ぶ": {
+      "codepoint": "U+3076",
+      "small": false,
+      "rel_to_cjk": 0.9024,
+      "target_height": 735.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 817.4,
+        "Yu Gothic Regular": 762.2,
+        "BIZ UDGothic Bold": 933.1,
+        "BIZ UDGothic": 898.9,
+        "Noto Sans JP": 759.0,
+        "MS Gothic": 855.5,
+        "UD Digi Kyokasho NK-B": 813.0
+      }
+    },
+    "ぷ": {
+      "codepoint": "U+3077",
+      "small": false,
+      "rel_to_cjk": 0.9024,
+      "target_height": 735.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 817.4,
+        "Yu Gothic Regular": 762.2,
+        "BIZ UDGothic Bold": 909.2,
+        "BIZ UDGothic": 876.0,
+        "Noto Sans JP": 759.0,
+        "MS Gothic": 867.2,
+        "UD Digi Kyokasho NK-B": 797.4
+      }
+    },
+    "へ": {
+      "codepoint": "U+3078",
+      "small": false,
+      "rel_to_cjk": 0.579,
+      "target_height": 471.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 481.0,
+        "Yu Gothic Regular": 406.2,
+        "BIZ UDGothic Bold": 726.1,
+        "BIZ UDGothic": 675.8,
+        "Noto Sans JP": 551.1,
+        "MS Gothic": 449.2,
+        "UD Digi Kyokasho NK-B": 522.5
+      }
+    },
+    "べ": {
+      "codepoint": "U+3079",
+      "small": false,
+      "rel_to_cjk": 0.7368,
+      "target_height": 600.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 634.8,
+        "Yu Gothic Regular": 568.8,
+        "BIZ UDGothic Bold": 812.0,
+        "BIZ UDGothic": 754.9,
+        "Noto Sans JP": 671.0,
+        "MS Gothic": 656.2,
+        "UD Digi Kyokasho NK-B": 640.1
+      }
+    },
+    "ぺ": {
+      "codepoint": "U+307A",
+      "small": false,
+      "rel_to_cjk": 0.7193,
+      "target_height": 586.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 627.9,
+        "Yu Gothic Regular": 550.8,
+        "BIZ UDGothic Bold": 790.5,
+        "BIZ UDGothic": 746.1,
+        "Noto Sans JP": 657.0,
+        "MS Gothic": 640.6,
+        "UD Digi Kyokasho NK-B": 629.9
+      }
+    },
+    "ほ": {
+      "codepoint": "U+307B",
+      "small": false,
+      "rel_to_cjk": 0.888,
+      "target_height": 723.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 819.8,
+        "Yu Gothic Regular": 767.1,
+        "BIZ UDGothic Bold": 873.0,
+        "BIZ UDGothic": 839.8,
+        "Noto Sans JP": 772.0,
+        "MS Gothic": 793.0,
+        "UD Digi Kyokasho NK-B": 757.8
+      }
+    },
+    "ぼ": {
+      "codepoint": "U+307C",
+      "small": false,
+      "rel_to_cjk": 0.987,
+      "target_height": 804.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 911.1,
+        "Yu Gothic Regular": 882.8,
+        "BIZ UDGothic Bold": 931.2,
+        "BIZ UDGothic": 913.1,
+        "Noto Sans JP": 832.0,
+        "MS Gothic": 886.7,
+        "UD Digi Kyokasho NK-B": 890.6
+      }
+    },
+    "ぽ": {
+      "codepoint": "U+307D",
+      "small": false,
+      "rel_to_cjk": 0.9854,
+      "target_height": 803.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 916.5,
+        "Yu Gothic Regular": 873.5,
+        "BIZ UDGothic Bold": 936.0,
+        "BIZ UDGothic": 911.1,
+        "Noto Sans JP": 887.0,
+        "MS Gothic": 882.8,
+        "UD Digi Kyokasho NK-B": 889.2
+      }
+    },
+    "ま": {
+      "codepoint": "U+307E",
+      "small": false,
+      "rel_to_cjk": 0.9301,
+      "target_height": 758.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 873.0,
+        "Yu Gothic Regular": 816.9,
+        "BIZ UDGothic Bold": 883.8,
+        "BIZ UDGothic": 859.4,
+        "Noto Sans JP": 810.0,
+        "MS Gothic": 855.5,
+        "UD Digi Kyokasho NK-B": 842.8
+      }
+    },
+    "み": {
+      "codepoint": "U+307F",
+      "small": false,
+      "rel_to_cjk": 0.886,
+      "target_height": 722.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 837.4,
+        "Yu Gothic Regular": 786.6,
+        "BIZ UDGothic Bold": 863.3,
+        "BIZ UDGothic": 825.2,
+        "Noto Sans JP": 775.0,
+        "MS Gothic": 789.1,
+        "UD Digi Kyokasho NK-B": 792.0
+      }
+    },
+    "む": {
+      "codepoint": "U+3080",
+      "small": false,
+      "rel_to_cjk": 0.9229,
+      "target_height": 752.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 864.3,
+        "Yu Gothic Regular": 812.0,
+        "BIZ UDGothic Bold": 883.8,
+        "BIZ UDGothic": 858.9,
+        "Noto Sans JP": 805.0,
+        "MS Gothic": 851.6,
+        "UD Digi Kyokasho NK-B": 814.0
+      }
+    },
+    "め": {
+      "codepoint": "U+3081",
+      "small": false,
+      "rel_to_cjk": 0.8994,
+      "target_height": 733.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 818.4,
+        "Yu Gothic Regular": 757.8,
+        "BIZ UDGothic Bold": 869.1,
+        "BIZ UDGothic": 843.8,
+        "Noto Sans JP": 797.0,
+        "MS Gothic": 824.2,
+        "UD Digi Kyokasho NK-B": 811.5
+      }
+    },
+    "も": {
+      "codepoint": "U+3082",
+      "small": false,
+      "rel_to_cjk": 0.9347,
+      "target_height": 761.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 864.7,
+        "Yu Gothic Regular": 811.0,
+        "BIZ UDGothic Bold": 888.2,
+        "BIZ UDGothic": 863.8,
+        "Noto Sans JP": 805.0,
+        "MS Gothic": 878.9,
+        "UD Digi Kyokasho NK-B": 852.1
+      }
+    },
+    "ゃ": {
+      "codepoint": "U+3083",
+      "small": true,
+      "rel_to_cjk": 0.7585,
+      "target_height": 618.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 687.0,
+        "Yu Gothic Regular": 645.5,
+        "BIZ UDGothic Bold": 749.0,
+        "BIZ UDGothic": 721.2,
+        "Noto Sans JP": 674.0,
+        "MS Gothic": 679.7,
+        "UD Digi Kyokasho NK-B": 671.4
+      }
+    },
+    "や": {
+      "codepoint": "U+3084",
+      "small": false,
+      "rel_to_cjk": 0.9254,
+      "target_height": 754.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 869.1,
+        "Yu Gothic Regular": 821.8,
+        "BIZ UDGothic Bold": 898.9,
+        "BIZ UDGothic": 867.7,
+        "Noto Sans JP": 820.0,
+        "MS Gothic": 824.2,
+        "UD Digi Kyokasho NK-B": 834.0
+      }
+    },
+    "ゅ": {
+      "codepoint": "U+3085",
+      "small": true,
+      "rel_to_cjk": 0.7868,
+      "target_height": 641.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 677.2,
+        "Yu Gothic Regular": 635.7,
+        "BIZ UDGothic Bold": 764.2,
+        "BIZ UDGothic": 750.0,
+        "Noto Sans JP": 674.0,
+        "MS Gothic": 738.3,
+        "UD Digi Kyokasho NK-B": 710.0
+      }
+    },
+    "ゆ": {
+      "codepoint": "U+3086",
+      "small": false,
+      "rel_to_cjk": 0.9488,
+      "target_height": 773.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 859.4,
+        "Yu Gothic Regular": 814.0,
+        "BIZ UDGothic Bold": 916.0,
+        "BIZ UDGothic": 893.1,
+        "Noto Sans JP": 830.0,
+        "MS Gothic": 882.8,
+        "UD Digi Kyokasho NK-B": 867.7
+      }
+    },
+    "ょ": {
+      "codepoint": "U+3087",
+      "small": true,
+      "rel_to_cjk": 0.7435,
+      "target_height": 606.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 672.9,
+        "Yu Gothic Regular": 626.0,
+        "BIZ UDGothic Bold": 728.0,
+        "BIZ UDGothic": 707.5,
+        "Noto Sans JP": 655.0,
+        "MS Gothic": 675.8,
+        "UD Digi Kyokasho NK-B": 670.9
+      }
+    },
+    "よ": {
+      "codepoint": "U+3088",
+      "small": false,
+      "rel_to_cjk": 0.9128,
+      "target_height": 743.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 846.7,
+        "Yu Gothic Regular": 796.9,
+        "BIZ UDGothic Bold": 884.8,
+        "BIZ UDGothic": 863.3,
+        "Noto Sans JP": 800.0,
+        "MS Gothic": 812.5,
+        "UD Digi Kyokasho NK-B": 828.1
+      }
+    },
+    "ら": {
+      "codepoint": "U+3089",
+      "small": false,
+      "rel_to_cjk": 0.9367,
+      "target_height": 763.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 878.4,
+        "Yu Gothic Regular": 824.2,
+        "BIZ UDGothic Bold": 901.9,
+        "BIZ UDGothic": 868.2,
+        "Noto Sans JP": 786.3,
+        "MS Gothic": 832.0,
+        "UD Digi Kyokasho NK-B": 855.0
+      }
+    },
+    "り": {
+      "codepoint": "U+308A",
+      "small": false,
+      "rel_to_cjk": 0.9195,
+      "target_height": 749.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 859.9,
+        "Yu Gothic Regular": 809.1,
+        "BIZ UDGothic Bold": 888.7,
+        "BIZ UDGothic": 868.2,
+        "Noto Sans JP": 811.0,
+        "MS Gothic": 855.5,
+        "UD Digi Kyokasho NK-B": 823.2
+      }
+    },
+    "る": {
+      "codepoint": "U+308B",
+      "small": false,
+      "rel_to_cjk": 0.888,
+      "target_height": 723.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 838.4,
+        "Yu Gothic Regular": 779.8,
+        "BIZ UDGothic Bold": 860.8,
+        "BIZ UDGothic": 824.2,
+        "Noto Sans JP": 760.0,
+        "MS Gothic": 855.5,
+        "UD Digi Kyokasho NK-B": 801.3
+      }
+    },
+    "れ": {
+      "codepoint": "U+308C",
+      "small": false,
+      "rel_to_cjk": 0.943,
+      "target_height": 768.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 867.2,
+        "Yu Gothic Regular": 824.2,
+        "BIZ UDGothic Bold": 896.0,
+        "BIZ UDGothic": 865.7,
+        "Noto Sans JP": 803.0,
+        "MS Gothic": 863.3,
+        "UD Digi Kyokasho NK-B": 853.0
+      }
+    },
+    "ろ": {
+      "codepoint": "U+308D",
+      "small": false,
+      "rel_to_cjk": 0.9075,
+      "target_height": 739.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 870.6,
+        "Yu Gothic Regular": 814.9,
+        "BIZ UDGothic Bold": 862.3,
+        "BIZ UDGothic": 825.7,
+        "Noto Sans JP": 751.8,
+        "MS Gothic": 808.6,
+        "UD Digi Kyokasho NK-B": 812.5
+      }
+    },
+    "ゎ": {
+      "codepoint": "U+308E",
+      "small": true,
+      "rel_to_cjk": 0.7603,
+      "target_height": 619.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 689.0,
+        "Yu Gothic Regular": 648.9,
+        "BIZ UDGothic Bold": 743.7,
+        "BIZ UDGothic": 718.3,
+        "Noto Sans JP": 657.0,
+        "MS Gothic": 730.5,
+        "UD Digi Kyokasho NK-B": 686.0
+      }
+    },
+    "わ": {
+      "codepoint": "U+308F",
+      "small": false,
+      "rel_to_cjk": 0.943,
+      "target_height": 768.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 871.1,
+        "Yu Gothic Regular": 827.1,
+        "BIZ UDGothic Bold": 896.0,
+        "BIZ UDGothic": 865.7,
+        "Noto Sans JP": 803.0,
+        "MS Gothic": 894.5,
+        "UD Digi Kyokasho NK-B": 853.5
+      }
+    },
+    "ゐ": {
+      "codepoint": "U+3090",
+      "small": false,
+      "rel_to_cjk": 0.8972,
+      "target_height": 731.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 826.7,
+        "Yu Gothic Regular": 774.9,
+        "BIZ UDGothic Bold": 875.0,
+        "BIZ UDGothic": 835.9,
+        "Noto Sans JP": 770.0,
+        "MS Gothic": 824.2,
+        "UD Digi Kyokasho NK-B": 809.6
+      }
+    },
+    "ゑ": {
+      "codepoint": "U+3091",
+      "small": false,
+      "rel_to_cjk": 0.9265,
+      "target_height": 755.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 860.4,
+        "Yu Gothic Regular": 813.0,
+        "BIZ UDGothic Bold": 880.4,
+        "BIZ UDGothic": 853.0,
+        "Noto Sans JP": 787.0,
+        "MS Gothic": 886.7,
+        "UD Digi Kyokasho NK-B": 837.9
+      }
+    },
+    "を": {
+      "codepoint": "U+3092",
+      "small": false,
+      "rel_to_cjk": 0.9291,
+      "target_height": 757.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 873.0,
+        "Yu Gothic Regular": 820.8,
+        "BIZ UDGothic Bold": 874.5,
+        "BIZ UDGothic": 846.7,
+        "Noto Sans JP": 813.0,
+        "MS Gothic": 886.7,
+        "UD Digi Kyokasho NK-B": 838.4
+      }
+    },
+    "ん": {
+      "codepoint": "U+3093",
+      "small": false,
+      "rel_to_cjk": 0.9035,
+      "target_height": 736.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 821.8,
+        "Yu Gothic Regular": 755.9,
+        "BIZ UDGothic Bold": 909.7,
+        "BIZ UDGothic": 863.8,
+        "Noto Sans JP": 780.0,
+        "MS Gothic": 804.7,
+        "UD Digi Kyokasho NK-B": 793.0
+      }
+    },
+    "ゔ": {
+      "codepoint": "U+3094",
+      "small": false,
+      "rel_to_cjk": 0.9849,
+      "target_height": 802.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 892.1,
+        "Yu Gothic Regular": 828.6,
+        "BIZ UDGothic Bold": 939.9,
+        "BIZ UDGothic": 910.2,
+        "Noto Sans JP": 792.0,
+        "MS Gothic": 890.6,
+        "UD Digi Kyokasho NK-B": 904.8
+      }
+    },
+    "ゕ": {
+      "codepoint": "U+3095",
+      "small": true,
+      "rel_to_cjk": 0.7413,
+      "target_height": 604.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 650.9,
+        "Yu Gothic Regular": 603.0,
+        "BIZ UDGothic Bold": 741.7,
+        "BIZ UDGothic": 710.0,
+        "Noto Sans JP": 645.0,
+        "MS Gothic": 668.0,
+        "UD Digi Kyokasho NK-B": 668.9
+      }
+    },
+    "ゖ": {
+      "codepoint": "U+3096",
+      "small": true,
+      "rel_to_cjk": 0.75,
+      "target_height": 611.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 675.8,
+        "Yu Gothic Regular": 643.1,
+        "BIZ UDGothic Bold": 746.6,
+        "BIZ UDGothic": 726.1,
+        "Noto Sans JP": 667.0,
+        "MS Gothic": 691.4,
+        "UD Digi Kyokasho NK-B": 676.8
+      }
+    },
+    "゙": {
+      "codepoint": "U+3099",
+      "small": false,
+      "rel_to_cjk": 0.2386,
+      "target_height": 194.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 226.6,
+        "Yu Gothic Regular": 215.3,
+        "BIZ UDGothic Bold": 0,
+        "BIZ UDGothic": 0,
+        "Noto Sans JP": 192.0,
+        "MS Gothic": 207.0,
+        "UD Digi Kyokasho NK-B": 0
+      }
+    },
+    "゚": {
+      "codepoint": "U+309A",
+      "small": false,
+      "rel_to_cjk": 0.2407,
+      "target_height": 196.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 213.9,
+        "Yu Gothic Regular": 193.8,
+        "BIZ UDGothic Bold": 246.1,
+        "BIZ UDGothic": 231.9,
+        "Noto Sans JP": 211.0,
+        "MS Gothic": 218.8,
+        "UD Digi Kyokasho NK-B": 0
+      }
+    },
+    "゛": {
+      "codepoint": "U+309B",
+      "small": false,
+      "rel_to_cjk": 0.2447,
+      "target_height": 199.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 226.6,
+        "Yu Gothic Regular": 215.3,
+        "BIZ UDGothic Bold": 242.2,
+        "BIZ UDGothic": 226.1,
+        "Noto Sans JP": 216.0,
+        "MS Gothic": 207.0,
+        "UD Digi Kyokasho NK-B": 250.5
+      }
+    },
+    "゜": {
+      "codepoint": "U+309C",
+      "small": false,
+      "rel_to_cjk": 0.2453,
+      "target_height": 199.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 213.9,
+        "Yu Gothic Regular": 193.8,
+        "BIZ UDGothic Bold": 246.1,
+        "BIZ UDGothic": 231.9,
+        "Noto Sans JP": 221.0,
+        "MS Gothic": 218.8,
+        "UD Digi Kyokasho NK-B": 224.1
+      }
+    },
+    "ゝ": {
+      "codepoint": "U+309D",
+      "small": false,
+      "rel_to_cjk": 0.6239,
+      "target_height": 508.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 515.6,
+        "Yu Gothic Regular": 456.1,
+        "BIZ UDGothic Bold": 672.4,
+        "BIZ UDGothic": 630.4,
+        "Noto Sans JP": 520.0,
+        "MS Gothic": 685.2,
+        "UD Digi Kyokasho NK-B": 563.0
+      }
+    },
+    "ゞ": {
+      "codepoint": "U+309E",
+      "small": false,
+      "rel_to_cjk": 0.7543,
+      "target_height": 614.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 621.1,
+        "Yu Gothic Regular": 573.7,
+        "BIZ UDGothic Bold": 768.6,
+        "BIZ UDGothic": 718.8,
+        "Noto Sans JP": 647.0,
+        "MS Gothic": 703.1,
+        "UD Digi Kyokasho NK-B": 680.7
+      }
+    },
+    "ゟ": {
+      "codepoint": "U+309F",
+      "small": false,
+      "rel_to_cjk": 0.9514,
+      "target_height": 775.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 868.2,
+        "Yu Gothic Regular": 830.6,
+        "BIZ UDGothic Bold": 920.9,
+        "BIZ UDGothic": 893.1,
+        "Noto Sans JP": 897.0,
+        "MS Gothic": 812.5,
+        "UD Digi Kyokasho NK-B": 0
+      }
+    },
+    "゠": {
+      "codepoint": "U+30A0",
+      "small": false,
+      "rel_to_cjk": 0.2552,
+      "target_height": 208.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 195.8,
+        "Yu Gothic Regular": 192.4,
+        "BIZ UDGothic Bold": 290.0,
+        "BIZ UDGothic": 275.9,
+        "Noto Sans JP": 180.0,
+        "MS Gothic": 300.8,
+        "UD Digi Kyokasho NK-B": 0
+      }
+    },
+    "ァ": {
+      "codepoint": "U+30A1",
+      "small": true,
+      "rel_to_cjk": 0.682,
+      "target_height": 555.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 606.9,
+        "Yu Gothic Regular": 561.0,
+        "BIZ UDGothic Bold": 684.1,
+        "BIZ UDGothic": 645.0,
+        "Noto Sans JP": 592.0,
+        "MS Gothic": 621.1,
+        "UD Digi Kyokasho NK-B": 617.2
+      }
+    },
+    "ア": {
+      "codepoint": "U+30A2",
+      "small": false,
+      "rel_to_cjk": 0.8417,
+      "target_height": 686.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 762.7,
+        "Yu Gothic Regular": 705.6,
+        "BIZ UDGothic Bold": 799.8,
+        "BIZ UDGothic": 765.6,
+        "Noto Sans JP": 717.0,
+        "MS Gothic": 765.6,
+        "UD Digi Kyokasho NK-B": 761.7
+      }
+    },
+    "ィ": {
+      "codepoint": "U+30A3",
+      "small": true,
+      "rel_to_cjk": 0.7439,
+      "target_height": 606.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 673.8,
+        "Yu Gothic Regular": 632.8,
+        "BIZ UDGothic Bold": 731.0,
+        "BIZ UDGothic": 704.1,
+        "Noto Sans JP": 651.0,
+        "MS Gothic": 671.9,
+        "UD Digi Kyokasho NK-B": 655.3
+      }
+    },
+    "イ": {
+      "codepoint": "U+30A4",
+      "small": false,
+      "rel_to_cjk": 0.9112,
+      "target_height": 742.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 845.7,
+        "Yu Gothic Regular": 801.8,
+        "BIZ UDGothic Bold": 877.9,
+        "BIZ UDGothic": 849.1,
+        "Noto Sans JP": 773.0,
+        "MS Gothic": 828.1,
+        "UD Digi Kyokasho NK-B": 815.9
+      }
+    },
+    "ゥ": {
+      "codepoint": "U+30A5",
+      "small": true,
+      "rel_to_cjk": 0.7599,
+      "target_height": 619.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 680.7,
+        "Yu Gothic Regular": 627.0,
+        "BIZ UDGothic Bold": 741.2,
+        "BIZ UDGothic": 718.8,
+        "Noto Sans JP": 660.0,
+        "MS Gothic": 710.9,
+        "UD Digi Kyokasho NK-B": 690.9
+      }
+    },
+    "ウ": {
+      "codepoint": "U+30A6",
+      "small": false,
+      "rel_to_cjk": 0.9358,
+      "target_height": 762.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 857.9,
+        "Yu Gothic Regular": 806.6,
+        "BIZ UDGothic Bold": 889.2,
+        "BIZ UDGothic": 864.7,
+        "Noto Sans JP": 801.0,
+        "MS Gothic": 871.1,
+        "UD Digi Kyokasho NK-B": 854.0
+      }
+    },
+    "ェ": {
+      "codepoint": "U+30A7",
+      "small": true,
+      "rel_to_cjk": 0.5132,
+      "target_height": 418.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 450.2,
+        "Yu Gothic Regular": 391.6,
+        "BIZ UDGothic Bold": 616.2,
+        "BIZ UDGothic": 585.0,
+        "Noto Sans JP": 479.0,
+        "MS Gothic": 457.0,
+        "UD Digi Kyokasho NK-B": 455.6
+      }
+    },
+    "エ": {
+      "codepoint": "U+30A8",
+      "small": false,
+      "rel_to_cjk": 0.6272,
+      "target_height": 511.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 560.5,
+        "Yu Gothic Regular": 499.0,
+        "BIZ UDGothic Bold": 724.1,
+        "BIZ UDGothic": 689.9,
+        "Noto Sans JP": 579.0,
+        "MS Gothic": 558.6,
+        "UD Digi Kyokasho NK-B": 564.0
+      }
+    },
+    "ォ": {
+      "codepoint": "U+30A9",
+      "small": true,
+      "rel_to_cjk": 0.7408,
+      "target_height": 603.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 655.8,
+        "Yu Gothic Regular": 603.0,
+        "BIZ UDGothic Bold": 727.5,
+        "BIZ UDGothic": 710.0,
+        "Noto Sans JP": 644.0,
+        "MS Gothic": 699.2,
+        "UD Digi Kyokasho NK-B": 668.5
+      }
+    },
+    "オ": {
+      "codepoint": "U+30AA",
+      "small": false,
+      "rel_to_cjk": 0.9121,
+      "target_height": 743.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 826.2,
+        "Yu Gothic Regular": 773.9,
+        "BIZ UDGothic Bold": 877.0,
+        "BIZ UDGothic": 856.4,
+        "Noto Sans JP": 777.0,
+        "MS Gothic": 851.6,
+        "UD Digi Kyokasho NK-B": 833.5
+      }
+    },
+    "カ": {
+      "codepoint": "U+30AB",
+      "small": false,
+      "rel_to_cjk": 0.8988,
+      "target_height": 732.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 806.6,
+        "Yu Gothic Regular": 753.9,
+        "BIZ UDGothic Bold": 872.1,
+        "BIZ UDGothic": 850.1,
+        "Noto Sans JP": 780.0,
+        "MS Gothic": 820.3,
+        "UD Digi Kyokasho NK-B": 828.1
+      }
+    },
+    "ガ": {
+      "codepoint": "U+30AC",
+      "small": false,
+      "rel_to_cjk": 0.9546,
+      "target_height": 778.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 845.2,
+        "Yu Gothic Regular": 793.0,
+        "BIZ UDGothic Bold": 918.0,
+        "BIZ UDGothic": 902.8,
+        "Noto Sans JP": 823.0,
+        "MS Gothic": 882.8,
+        "UD Digi Kyokasho NK-B": 877.4
+      }
+    },
+    "キ": {
+      "codepoint": "U+30AD",
+      "small": false,
+      "rel_to_cjk": 0.9184,
+      "target_height": 748.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 826.2,
+        "Yu Gothic Regular": 785.2,
+        "BIZ UDGothic Bold": 896.0,
+        "BIZ UDGothic": 868.7,
+        "Noto Sans JP": 798.0,
+        "MS Gothic": 859.8,
+        "UD Digi Kyokasho NK-B": 862.3
+      }
+    },
+    "ギ": {
+      "codepoint": "U+30AE",
+      "small": false,
+      "rel_to_cjk": 0.9881,
+      "target_height": 805.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 895.0,
+        "Yu Gothic Regular": 858.9,
+        "BIZ UDGothic Bold": 939.9,
+        "BIZ UDGothic": 918.0,
+        "Noto Sans JP": 882.0,
+        "MS Gothic": 914.1,
+        "UD Digi Kyokasho NK-B": 904.3
+      }
+    },
+    "ク": {
+      "codepoint": "U+30AF",
+      "small": false,
+      "rel_to_cjk": 0.9162,
+      "target_height": 746.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 854.0,
+        "Yu Gothic Regular": 806.2,
+        "BIZ UDGothic Bold": 887.2,
+        "BIZ UDGothic": 854.0,
+        "Noto Sans JP": 809.0,
+        "MS Gothic": 855.5,
+        "UD Digi Kyokasho NK-B": 792.0
+      }
+    },
+    "グ": {
+      "codepoint": "U+30B0",
+      "small": false,
+      "rel_to_cjk": 0.9882,
+      "target_height": 805.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 896.5,
+        "Yu Gothic Regular": 857.9,
+        "BIZ UDGothic Bold": 939.0,
+        "BIZ UDGothic": 915.5,
+        "Noto Sans JP": 865.0,
+        "MS Gothic": 921.9,
+        "UD Digi Kyokasho NK-B": 908.7
+      }
+    },
+    "ケ": {
+      "codepoint": "U+30B1",
+      "small": false,
+      "rel_to_cjk": 0.9162,
+      "target_height": 746.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 853.0,
+        "Yu Gothic Regular": 806.2,
+        "BIZ UDGothic Bold": 882.3,
+        "BIZ UDGothic": 857.9,
+        "Noto Sans JP": 793.0,
+        "MS Gothic": 835.9,
+        "UD Digi Kyokasho NK-B": 799.3
+      }
+    },
+    "ゲ": {
+      "codepoint": "U+30B2",
+      "small": false,
+      "rel_to_cjk": 0.98,
+      "target_height": 798.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 899.4,
+        "Yu Gothic Regular": 861.3,
+        "BIZ UDGothic Bold": 931.2,
+        "BIZ UDGothic": 917.0,
+        "Noto Sans JP": 846.0,
+        "MS Gothic": 894.5,
+        "UD Digi Kyokasho NK-B": 906.7
+      }
+    },
+    "コ": {
+      "codepoint": "U+30B3",
+      "small": false,
+      "rel_to_cjk": 0.6771,
+      "target_height": 551.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 613.3,
+        "Yu Gothic Regular": 552.7,
+        "BIZ UDGothic Bold": 739.3,
+        "BIZ UDGothic": 692.4,
+        "Noto Sans JP": 656.0,
+        "MS Gothic": 558.6,
+        "UD Digi Kyokasho NK-B": 606.9
+      }
+    },
+    "ゴ": {
+      "codepoint": "U+30B4",
+      "small": false,
+      "rel_to_cjk": 0.9035,
+      "target_height": 736.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 821.3,
+        "Yu Gothic Regular": 764.6,
+        "BIZ UDGothic Bold": 884.8,
+        "BIZ UDGothic": 852.1,
+        "Noto Sans JP": 863.0,
+        "MS Gothic": 804.7,
+        "UD Digi Kyokasho NK-B": 811.0
+      }
+    },
+    "サ": {
+      "codepoint": "U+30B5",
+      "small": false,
+      "rel_to_cjk": 0.9167,
+      "target_height": 747.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 843.8,
+        "Yu Gothic Regular": 802.2,
+        "BIZ UDGothic Bold": 886.2,
+        "BIZ UDGothic": 855.5,
+        "Noto Sans JP": 789.0,
+        "MS Gothic": 816.4,
+        "UD Digi Kyokasho NK-B": 834.5
+      }
+    },
+    "ザ": {
+      "codepoint": "U+30B6",
+      "small": false,
+      "rel_to_cjk": 0.9898,
+      "target_height": 806.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 896.5,
+        "Yu Gothic Regular": 863.3,
+        "BIZ UDGothic Bold": 947.3,
+        "BIZ UDGothic": 918.0,
+        "Noto Sans JP": 826.0,
+        "MS Gothic": 902.3,
+        "UD Digi Kyokasho NK-B": 924.8
+      }
+    },
+    "シ": {
+      "codepoint": "U+30B7",
+      "small": false,
+      "rel_to_cjk": 0.8561,
+      "target_height": 697.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 775.4,
+        "Yu Gothic Regular": 717.8,
+        "BIZ UDGothic Bold": 833.0,
+        "BIZ UDGothic": 804.2,
+        "Noto Sans JP": 751.0,
+        "MS Gothic": 809.6,
+        "UD Digi Kyokasho NK-B": 772.5
+      }
+    },
+    "ジ": {
+      "codepoint": "U+30B8",
+      "small": false,
+      "rel_to_cjk": 0.9455,
+      "target_height": 770.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 862.3,
+        "Yu Gothic Regular": 817.9,
+        "BIZ UDGothic Bold": 898.4,
+        "BIZ UDGothic": 868.2,
+        "Noto Sans JP": 788.0,
+        "MS Gothic": 868.2,
+        "UD Digi Kyokasho NK-B": 874.0
+      }
+    },
+    "ス": {
+      "codepoint": "U+30B9",
+      "small": false,
+      "rel_to_cjk": 0.7895,
+      "target_height": 643.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 703.1,
+        "Yu Gothic Regular": 641.1,
+        "BIZ UDGothic Bold": 793.0,
+        "BIZ UDGothic": 754.9,
+        "Noto Sans JP": 688.0,
+        "MS Gothic": 703.1,
+        "UD Digi Kyokasho NK-B": 720.2
+      }
+    },
+    "ズ": {
+      "codepoint": "U+30BA",
+      "small": false,
+      "rel_to_cjk": 0.9488,
+      "target_height": 773.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 859.4,
+        "Yu Gothic Regular": 822.8,
+        "BIZ UDGothic Bold": 914.1,
+        "BIZ UDGothic": 892.1,
+        "Noto Sans JP": 852.0,
+        "MS Gothic": 859.4,
+        "UD Digi Kyokasho NK-B": 873.5
+      }
+    },
+    "セ": {
+      "codepoint": "U+30BB",
+      "small": false,
+      "rel_to_cjk": 0.8394,
+      "target_height": 684.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 760.3,
+        "Yu Gothic Regular": 703.6,
+        "BIZ UDGothic Bold": 855.0,
+        "BIZ UDGothic": 824.2,
+        "Noto Sans JP": 753.0,
+        "MS Gothic": 761.7,
+        "UD Digi Kyokasho NK-B": 756.3
+      }
+    },
+    "ゼ": {
+      "codepoint": "U+30BC",
+      "small": false,
+      "rel_to_cjk": 0.9329,
+      "target_height": 760.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 840.3,
+        "Yu Gothic Regular": 789.1,
+        "BIZ UDGothic Bold": 906.7,
+        "BIZ UDGothic": 882.3,
+        "Noto Sans JP": 822.0,
+        "MS Gothic": 847.7,
+        "UD Digi Kyokasho NK-B": 847.2
+      }
+    },
+    "ソ": {
+      "codepoint": "U+30BD",
+      "small": false,
+      "rel_to_cjk": 0.8241,
+      "target_height": 671.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 752.9,
+        "Yu Gothic Regular": 700.2,
+        "BIZ UDGothic Bold": 855.0,
+        "BIZ UDGothic": 816.9,
+        "Noto Sans JP": 719.0,
+        "MS Gothic": 730.5,
+        "UD Digi Kyokasho NK-B": 743.7
+      }
+    },
+    "ゾ": {
+      "codepoint": "U+30BE",
+      "small": false,
+      "rel_to_cjk": 0.9935,
+      "target_height": 809.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 931.2,
+        "Yu Gothic Regular": 906.7,
+        "BIZ UDGothic Bold": 939.0,
+        "BIZ UDGothic": 918.9,
+        "Noto Sans JP": 869.0,
+        "MS Gothic": 890.6,
+        "UD Digi Kyokasho NK-B": 896.5
+      }
+    },
+    "タ": {
+      "codepoint": "U+30BF",
+      "small": false,
+      "rel_to_cjk": 0.9245,
+      "target_height": 753.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 867.7,
+        "Yu Gothic Regular": 813.5,
+        "BIZ UDGothic Bold": 899.9,
+        "BIZ UDGothic": 868.7,
+        "Noto Sans JP": 814.0,
+        "MS Gothic": 867.2,
+        "UD Digi Kyokasho NK-B": 801.8
+      }
+    },
+    "ダ": {
+      "codepoint": "U+30C0",
+      "small": false,
+      "rel_to_cjk": 0.9933,
+      "target_height": 809.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 923.3,
+        "Yu Gothic Regular": 874.0,
+        "BIZ UDGothic Bold": 940.9,
+        "BIZ UDGothic": 928.2,
+        "Noto Sans JP": 872.0,
+        "MS Gothic": 910.2,
+        "UD Digi Kyokasho NK-B": 911.6
+      }
+    },
+    "チ": {
+      "codepoint": "U+30C1",
+      "small": false,
+      "rel_to_cjk": 0.9024,
+      "target_height": 735.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 829.1,
+        "Yu Gothic Regular": 779.3,
+        "BIZ UDGothic Bold": 890.1,
+        "BIZ UDGothic": 853.5,
+        "Noto Sans JP": 766.0,
+        "MS Gothic": 777.3,
+        "UD Digi Kyokasho NK-B": 846.2
+      }
+    },
+    "ヂ": {
+      "codepoint": "U+30C2",
+      "small": false,
+      "rel_to_cjk": 0.9437,
+      "target_height": 769.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 830.1,
+        "Yu Gothic Regular": 778.8,
+        "BIZ UDGothic Bold": 944.8,
+        "BIZ UDGothic": 925.8,
+        "Noto Sans JP": 766.0,
+        "MS Gothic": 902.3,
+        "UD Digi Kyokasho NK-B": 851.6
+      }
+    },
+    "ッ": {
+      "codepoint": "U+30C3",
+      "small": true,
+      "rel_to_cjk": 0.6841,
+      "target_height": 557.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 619.6,
+        "Yu Gothic Regular": 563.5,
+        "BIZ UDGothic Bold": 710.9,
+        "BIZ UDGothic": 676.3,
+        "Noto Sans JP": 614.0,
+        "MS Gothic": 621.1,
+        "UD Digi Kyokasho NK-B": 612.8
+      }
+    },
+    "ツ": {
+      "codepoint": "U+30C4",
+      "small": false,
+      "rel_to_cjk": 0.8382,
+      "target_height": 683.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 779.3,
+        "Yu Gothic Regular": 717.8,
+        "BIZ UDGothic Bold": 839.8,
+        "BIZ UDGothic": 813.0,
+        "Noto Sans JP": 741.0,
+        "MS Gothic": 742.2,
+        "UD Digi Kyokasho NK-B": 756.3
+      }
+    },
+    "ヅ": {
+      "codepoint": "U+30C5",
+      "small": false,
+      "rel_to_cjk": 0.9984,
+      "target_height": 813.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 937.5,
+        "Yu Gothic Regular": 912.6,
+        "BIZ UDGothic Bold": 934.1,
+        "BIZ UDGothic": 914.1,
+        "Noto Sans JP": 877.0,
+        "MS Gothic": 894.5,
+        "UD Digi Kyokasho NK-B": 900.9
+      }
+    },
+    "テ": {
+      "codepoint": "U+30C6",
+      "small": false,
+      "rel_to_cjk": 0.8772,
+      "target_height": 714.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 796.9,
+        "Yu Gothic Regular": 733.4,
+        "BIZ UDGothic Bold": 851.6,
+        "BIZ UDGothic": 817.9,
+        "Noto Sans JP": 743.0,
+        "MS Gothic": 781.2,
+        "UD Digi Kyokasho NK-B": 796.4
+      }
+    },
+    "デ": {
+      "codepoint": "U+30C7",
+      "small": false,
+      "rel_to_cjk": 1.0038,
+      "target_height": 818.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 921.4,
+        "Yu Gothic Regular": 884.3,
+        "BIZ UDGothic Bold": 942.9,
+        "BIZ UDGothic": 912.6,
+        "Noto Sans JP": 872.0,
+        "MS Gothic": 906.2,
+        "UD Digi Kyokasho NK-B": 905.8
+      }
+    },
+    "ト": {
+      "codepoint": "U+30C8",
+      "small": false,
+      "rel_to_cjk": 0.9218,
+      "target_height": 751.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 853.5,
+        "Yu Gothic Regular": 811.0,
+        "BIZ UDGothic Bold": 888.2,
+        "BIZ UDGothic": 856.0,
+        "Noto Sans JP": 774.0,
+        "MS Gothic": 781.2,
+        "UD Digi Kyokasho NK-B": 841.8
+      }
+    },
+    "ド": {
+      "codepoint": "U+30C9",
+      "small": false,
+      "rel_to_cjk": 0.9347,
+      "target_height": 761.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 874.0,
+        "Yu Gothic Regular": 839.4,
+        "BIZ UDGothic Bold": 888.2,
+        "BIZ UDGothic": 856.0,
+        "Noto Sans JP": 774.0,
+        "MS Gothic": 851.6,
+        "UD Digi Kyokasho NK-B": 841.8
+      }
+    },
+    "ナ": {
+      "codepoint": "U+30CA",
+      "small": false,
+      "rel_to_cjk": 0.9208,
+      "target_height": 750.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 834.0,
+        "Yu Gothic Regular": 790.5,
+        "BIZ UDGothic Bold": 897.9,
+        "BIZ UDGothic": 871.6,
+        "Noto Sans JP": 776.0,
+        "MS Gothic": 828.1,
+        "UD Digi Kyokasho NK-B": 800.8
+      }
+    },
+    "ニ": {
+      "codepoint": "U+30CB",
+      "small": false,
+      "rel_to_cjk": 0.5993,
+      "target_height": 488.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 552.7,
+        "Yu Gothic Regular": 481.0,
+        "BIZ UDGothic Bold": 665.0,
+        "BIZ UDGothic": 637.2,
+        "Noto Sans JP": 540.0,
+        "MS Gothic": 511.7,
+        "UD Digi Kyokasho NK-B": 524.4
+      }
+    },
+    "ヌ": {
+      "codepoint": "U+30CC",
+      "small": false,
+      "rel_to_cjk": 0.8286,
+      "target_height": 675.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 759.3,
+        "Yu Gothic Regular": 699.7,
+        "BIZ UDGothic Bold": 820.3,
+        "BIZ UDGothic": 783.7,
+        "Noto Sans JP": 702.0,
+        "MS Gothic": 707.0,
+        "UD Digi Kyokasho NK-B": 754.9
+      }
+    },
+    "ネ": {
+      "codepoint": "U+30CD",
+      "small": false,
+      "rel_to_cjk": 0.9545,
+      "target_height": 777.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 887.7,
+        "Yu Gothic Regular": 839.8,
+        "BIZ UDGothic Bold": 912.1,
+        "BIZ UDGothic": 894.0,
+        "Noto Sans JP": 813.0,
+        "MS Gothic": 843.8,
+        "UD Digi Kyokasho NK-B": 909.2
+      }
+    },
+    "ノ": {
+      "codepoint": "U+30CE",
+      "small": false,
+      "rel_to_cjk": 0.8198,
+      "target_height": 668.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 768.6,
+        "Yu Gothic Regular": 710.0,
+        "BIZ UDGothic Bold": 850.1,
+        "BIZ UDGothic": 813.0,
+        "Noto Sans JP": 713.0,
+        "MS Gothic": 718.8,
+        "UD Digi Kyokasho NK-B": 739.7
+      }
+    },
+    "ハ": {
+      "codepoint": "U+30CF",
+      "small": false,
+      "rel_to_cjk": 0.6447,
+      "target_height": 525.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 499.0,
+        "Yu Gothic Regular": 443.4,
+        "BIZ UDGothic Bold": 802.7,
+        "BIZ UDGothic": 755.9,
+        "Noto Sans JP": 650.0,
+        "MS Gothic": 574.2,
+        "UD Digi Kyokasho NK-B": 474.6
+      }
+    },
+    "バ": {
+      "codepoint": "U+30D0",
+      "small": false,
+      "rel_to_cjk": 0.8713,
+      "target_height": 710.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 674.3,
+        "Yu Gothic Regular": 624.0,
+        "BIZ UDGothic Bold": 904.8,
+        "BIZ UDGothic": 865.7,
+        "Noto Sans JP": 785.0,
+        "MS Gothic": 789.1,
+        "UD Digi Kyokasho NK-B": 688.5
+      }
+    },
+    "パ": {
+      "codepoint": "U+30D1",
+      "small": false,
+      "rel_to_cjk": 0.8535,
+      "target_height": 695.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 662.1,
+        "Yu Gothic Regular": 618.7,
+        "BIZ UDGothic Bold": 894.0,
+        "BIZ UDGothic": 843.8,
+        "Noto Sans JP": 769.0,
+        "MS Gothic": 773.4,
+        "UD Digi Kyokasho NK-B": 669.9
+      }
+    },
+    "ヒ": {
+      "codepoint": "U+30D2",
+      "small": false,
+      "rel_to_cjk": 0.8135,
+      "target_height": 663.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 729.0,
+        "Yu Gothic Regular": 677.2,
+        "BIZ UDGothic Bold": 809.1,
+        "BIZ UDGothic": 777.8,
+        "Noto Sans JP": 733.0,
+        "MS Gothic": 714.8,
+        "UD Digi Kyokasho NK-B": 738.8
+      }
+    },
+    "ビ": {
+      "codepoint": "U+30D3",
+      "small": false,
+      "rel_to_cjk": 0.8864,
+      "target_height": 722.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 799.3,
+        "Yu Gothic Regular": 751.5,
+        "BIZ UDGothic Bold": 870.6,
+        "BIZ UDGothic": 838.4,
+        "Noto Sans JP": 791.0,
+        "MS Gothic": 851.6,
+        "UD Digi Kyokasho NK-B": 799.8
+      }
+    },
+    "ピ": {
+      "codepoint": "U+30D4",
+      "small": false,
+      "rel_to_cjk": 0.8757,
+      "target_height": 713.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 772.9,
+        "Yu Gothic Regular": 731.9,
+        "BIZ UDGothic Bold": 856.4,
+        "BIZ UDGothic": 819.3,
+        "Noto Sans JP": 789.0,
+        "MS Gothic": 839.8,
+        "UD Digi Kyokasho NK-B": 798.8
+      }
+    },
+    "フ": {
+      "codepoint": "U+30D5",
+      "small": false,
+      "rel_to_cjk": 0.7895,
+      "target_height": 643.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 725.1,
+        "Yu Gothic Regular": 668.9,
+        "BIZ UDGothic Bold": 792.0,
+        "BIZ UDGothic": 751.0,
+        "Noto Sans JP": 680.0,
+        "MS Gothic": 703.1,
+        "UD Digi Kyokasho NK-B": 706.1
+      }
+    },
+    "ブ": {
+      "codepoint": "U+30D6",
+      "small": false,
+      "rel_to_cjk": 0.9828,
+      "target_height": 801.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 901.9,
+        "Yu Gothic Regular": 864.7,
+        "BIZ UDGothic Bold": 938.0,
+        "BIZ UDGothic": 912.6,
+        "Noto Sans JP": 860.0,
+        "MS Gothic": 871.1,
+        "UD Digi Kyokasho NK-B": 893.1
+      }
+    },
+    "プ": {
+      "codepoint": "U+30D7",
+      "small": false,
+      "rel_to_cjk": 0.9825,
+      "target_height": 800.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 900.4,
+        "Yu Gothic Regular": 858.9,
+        "BIZ UDGothic Bold": 935.1,
+        "BIZ UDGothic": 911.6,
+        "Noto Sans JP": 823.0,
+        "MS Gothic": 875.0,
+        "UD Digi Kyokasho NK-B": 892.1
+      }
+    },
+    "ヘ": {
+      "codepoint": "U+30D8",
+      "small": false,
+      "rel_to_cjk": 0.5671,
+      "target_height": 462.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 491.2,
+        "Yu Gothic Regular": 412.6,
+        "BIZ UDGothic Bold": 701.7,
+        "BIZ UDGothic": 648.9,
+        "Noto Sans JP": 536.1,
+        "MS Gothic": 496.1,
+        "UD Digi Kyokasho NK-B": 511.7
+      }
+    },
+    "ベ": {
+      "codepoint": "U+30D9",
+      "small": false,
+      "rel_to_cjk": 0.7314,
+      "target_height": 596.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 628.4,
+        "Yu Gothic Regular": 562.0,
+        "BIZ UDGothic Bold": 774.9,
+        "BIZ UDGothic": 735.4,
+        "Noto Sans JP": 659.0,
+        "MS Gothic": 679.7,
+        "UD Digi Kyokasho NK-B": 647.5
+      }
+    },
+    "ペ": {
+      "codepoint": "U+30DA",
+      "small": false,
+      "rel_to_cjk": 0.7214,
+      "target_height": 588.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 625.0,
+        "Yu Gothic Regular": 546.9,
+        "BIZ UDGothic Bold": 786.1,
+        "BIZ UDGothic": 730.5,
+        "Noto Sans JP": 650.0,
+        "MS Gothic": 660.2,
+        "UD Digi Kyokasho NK-B": 644.5
+      }
+    },
+    "ホ": {
+      "codepoint": "U+30DB",
+      "small": false,
+      "rel_to_cjk": 0.9179,
+      "target_height": 748.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 814.9,
+        "Yu Gothic Regular": 762.2,
+        "BIZ UDGothic Bold": 891.1,
+        "BIZ UDGothic": 868.2,
+        "Noto Sans JP": 780.0,
+        "MS Gothic": 847.7,
+        "UD Digi Kyokasho NK-B": 846.2
+      }
+    },
+    "ボ": {
+      "codepoint": "U+30DC",
+      "small": false,
+      "rel_to_cjk": 0.9757,
+      "target_height": 795.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 883.8,
+        "Yu Gothic Regular": 838.9,
+        "BIZ UDGothic Bold": 941.9,
+        "BIZ UDGothic": 920.9,
+        "Noto Sans JP": 828.0,
+        "MS Gothic": 898.4,
+        "UD Digi Kyokasho NK-B": 918.0
+      }
+    },
+    "ポ": {
+      "codepoint": "U+30DD",
+      "small": false,
+      "rel_to_cjk": 0.9763,
+      "target_height": 795.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 884.3,
+        "Yu Gothic Regular": 822.3,
+        "BIZ UDGothic Bold": 941.9,
+        "BIZ UDGothic": 922.9,
+        "Noto Sans JP": 860.0,
+        "MS Gothic": 898.4,
+        "UD Digi Kyokasho NK-B": 917.0
+      }
+    },
+    "マ": {
+      "codepoint": "U+30DE",
+      "small": false,
+      "rel_to_cjk": 0.7325,
+      "target_height": 597.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 631.8,
+        "Yu Gothic Regular": 561.0,
+        "BIZ UDGothic Bold": 765.1,
+        "BIZ UDGothic": 722.2,
+        "Noto Sans JP": 683.0,
+        "MS Gothic": 652.3,
+        "UD Digi Kyokasho NK-B": 622.1
+      }
+    },
+    "ミ": {
+      "codepoint": "U+30DF",
+      "small": false,
+      "rel_to_cjk": 0.8846,
+      "target_height": 720.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 838.4,
+        "Yu Gothic Regular": 778.3,
+        "BIZ UDGothic Bold": 877.9,
+        "BIZ UDGothic": 842.3,
+        "Noto Sans JP": 734.0,
+        "MS Gothic": 750.0,
+        "UD Digi Kyokasho NK-B": 767.1
+      }
+    },
+    "ム": {
+      "codepoint": "U+30E0",
+      "small": false,
+      "rel_to_cjk": 0.8535,
+      "target_height": 695.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 782.2,
+        "Yu Gothic Regular": 719.2,
+        "BIZ UDGothic Bold": 846.2,
+        "BIZ UDGothic": 802.2,
+        "Noto Sans JP": 769.0,
+        "MS Gothic": 777.3,
+        "UD Digi Kyokasho NK-B": 710.0
+      }
+    },
+    "メ": {
+      "codepoint": "U+30E1",
+      "small": false,
+      "rel_to_cjk": 0.8539,
+      "target_height": 695.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 787.1,
+        "Yu Gothic Regular": 733.4,
+        "BIZ UDGothic Bold": 880.9,
+        "BIZ UDGothic": 837.9,
+        "Noto Sans JP": 744.0,
+        "MS Gothic": 757.8,
+        "UD Digi Kyokasho NK-B": 770.5
+      }
+    },
+    "モ": {
+      "codepoint": "U+30E2",
+      "small": false,
+      "rel_to_cjk": 0.7693,
+      "target_height": 627.0,
+      "ref_heights": {
+        "Yu Gothic Bold": 696.8,
+        "Yu Gothic Regular": 634.8,
+        "BIZ UDGothic Bold": 814.0,
+        "BIZ UDGothic": 779.8,
+        "Noto Sans JP": 680.0,
+        "MS Gothic": 664.1,
+        "UD Digi Kyokasho NK-B": 715.3
+      }
+    },
+    "ャ": {
+      "codepoint": "U+30E3",
+      "small": true,
+      "rel_to_cjk": 0.7392,
+      "target_height": 602.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 656.2,
+        "Yu Gothic Regular": 610.8,
+        "BIZ UDGothic Bold": 736.8,
+        "BIZ UDGothic": 710.0,
+        "Noto Sans JP": 666.0,
+        "MS Gothic": 675.8,
+        "UD Digi Kyokasho NK-B": 652.8
+      }
+    },
+    "ヤ": {
+      "codepoint": "U+30E4",
+      "small": false,
+      "rel_to_cjk": 0.905,
+      "target_height": 737.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 825.7,
+        "Yu Gothic Regular": 782.2,
+        "BIZ UDGothic Bold": 885.3,
+        "BIZ UDGothic": 856.0,
+        "Noto Sans JP": 795.0,
+        "MS Gothic": 820.3,
+        "UD Digi Kyokasho NK-B": 816.4
+      }
+    },
+    "ュ": {
+      "codepoint": "U+30E5",
+      "small": true,
+      "rel_to_cjk": 0.5003,
+      "target_height": 407.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 453.1,
+        "Yu Gothic Regular": 394.5,
+        "BIZ UDGothic Bold": 616.2,
+        "BIZ UDGothic": 585.9,
+        "Noto Sans JP": 455.0,
+        "MS Gothic": 441.4,
+        "UD Digi Kyokasho NK-B": 439.5
+      }
+    },
+    "ユ": {
+      "codepoint": "U+30E6",
+      "small": false,
+      "rel_to_cjk": 0.6237,
+      "target_height": 508.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 564.9,
+        "Yu Gothic Regular": 500.5,
+        "BIZ UDGothic Bold": 704.1,
+        "BIZ UDGothic": 677.2,
+        "Noto Sans JP": 570.0,
+        "MS Gothic": 539.1,
+        "UD Digi Kyokasho NK-B": 543.0
+      }
+    },
+    "ョ": {
+      "codepoint": "U+30E7",
+      "small": true,
+      "rel_to_cjk": 0.6337,
+      "target_height": 516.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 543.5,
+        "Yu Gothic Regular": 494.6,
+        "BIZ UDGothic Bold": 642.1,
+        "BIZ UDGothic": 611.8,
+        "Noto Sans JP": 571.0,
+        "MS Gothic": 585.9,
+        "UD Digi Kyokasho NK-B": 521.5
+      }
+    },
+    "ヨ": {
+      "codepoint": "U+30E8",
+      "small": false,
+      "rel_to_cjk": 0.7658,
+      "target_height": 624.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 682.6,
+        "Yu Gothic Regular": 623.0,
+        "BIZ UDGothic Bold": 771.0,
+        "BIZ UDGothic": 736.3,
+        "Noto Sans JP": 690.0,
+        "MS Gothic": 707.0,
+        "UD Digi Kyokasho NK-B": 641.1
+      }
+    },
+    "ラ": {
+      "codepoint": "U+30E9",
+      "small": false,
+      "rel_to_cjk": 0.882,
+      "target_height": 718.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 809.1,
+        "Yu Gothic Regular": 746.1,
+        "BIZ UDGothic Bold": 842.3,
+        "BIZ UDGothic": 810.5,
+        "Noto Sans JP": 746.0,
+        "MS Gothic": 796.9,
+        "UD Digi Kyokasho NK-B": 795.9
+      }
+    },
+    "リ": {
+      "codepoint": "U+30EA",
+      "small": false,
+      "rel_to_cjk": 0.9167,
+      "target_height": 747.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 838.4,
+        "Yu Gothic Regular": 789.6,
+        "BIZ UDGothic Bold": 887.2,
+        "BIZ UDGothic": 856.9,
+        "Noto Sans JP": 767.0,
+        "MS Gothic": 816.4,
+        "UD Digi Kyokasho NK-B": 843.3
+      }
+    },
+    "ル": {
+      "codepoint": "U+30EB",
+      "small": false,
+      "rel_to_cjk": 0.8224,
+      "target_height": 670.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 679.2,
+        "Yu Gothic Regular": 628.9,
+        "BIZ UDGothic Bold": 844.2,
+        "BIZ UDGothic": 814.0,
+        "Noto Sans JP": 741.0,
+        "MS Gothic": 734.4,
+        "UD Digi Kyokasho NK-B": 729.5
+      }
+    },
+    "レ": {
+      "codepoint": "U+30EC",
+      "small": false,
+      "rel_to_cjk": 0.8063,
+      "target_height": 657.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 715.8,
+        "Yu Gothic Regular": 653.8,
+        "BIZ UDGothic Bold": 865.2,
+        "BIZ UDGothic": 841.8,
+        "Noto Sans JP": 720.0,
+        "MS Gothic": 718.8,
+        "UD Digi Kyokasho NK-B": 727.5
+      }
+    },
+    "ロ": {
+      "codepoint": "U+30ED",
+      "small": false,
+      "rel_to_cjk": 0.7057,
+      "target_height": 575.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 639.2,
+        "Yu Gothic Regular": 581.1,
+        "BIZ UDGothic Bold": 753.9,
+        "BIZ UDGothic": 721.2,
+        "Noto Sans JP": 657.0,
+        "MS Gothic": 609.4,
+        "UD Digi Kyokasho NK-B": 607.4
+      }
+    },
+    "ヮ": {
+      "codepoint": "U+30EE",
+      "small": true,
+      "rel_to_cjk": 0.6701,
+      "target_height": 546.1,
+      "ref_heights": {
+        "Yu Gothic Bold": 606.9,
+        "Yu Gothic Regular": 560.5,
+        "BIZ UDGothic Bold": 679.2,
+        "BIZ UDGothic": 642.1,
+        "Noto Sans JP": 579.0,
+        "MS Gothic": 601.6,
+        "UD Digi Kyokasho NK-B": 554.2
+      }
+    },
+    "ワ": {
+      "codepoint": "U+30EF",
+      "small": false,
+      "rel_to_cjk": 0.8152,
+      "target_height": 664.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 765.1,
+        "Yu Gothic Regular": 714.8,
+        "BIZ UDGothic Bold": 814.9,
+        "BIZ UDGothic": 771.0,
+        "Noto Sans JP": 695.0,
+        "MS Gothic": 734.4,
+        "UD Digi Kyokasho NK-B": 714.4
+      }
+    },
+    "ヰ": {
+      "codepoint": "U+30F0",
+      "small": false,
+      "rel_to_cjk": 0.938,
+      "target_height": 764.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 849.6,
+        "Yu Gothic Regular": 806.2,
+        "BIZ UDGothic Bold": 904.3,
+        "BIZ UDGothic": 886.7,
+        "Noto Sans JP": 763.0,
+        "MS Gothic": 863.3,
+        "UD Digi Kyokasho NK-B": 847.2
+      }
+    },
+    "ヱ": {
+      "codepoint": "U+30F1",
+      "small": false,
+      "rel_to_cjk": 0.676,
+      "target_height": 550.9,
+      "ref_heights": {
+        "Yu Gothic Bold": 612.3,
+        "Yu Gothic Regular": 550.8,
+        "BIZ UDGothic Bold": 709.0,
+        "BIZ UDGothic": 683.1,
+        "Noto Sans JP": 609.0,
+        "MS Gothic": 628.9,
+        "UD Digi Kyokasho NK-B": 600.6
+      }
+    },
+    "ヲ": {
+      "codepoint": "U+30F2",
+      "small": false,
+      "rel_to_cjk": 0.836,
+      "target_height": 681.4,
+      "ref_heights": {
+        "Yu Gothic Bold": 773.9,
+        "Yu Gothic Regular": 725.6,
+        "BIZ UDGothic Bold": 815.9,
+        "BIZ UDGothic": 780.8,
+        "Noto Sans JP": 719.0,
+        "MS Gothic": 746.1,
+        "UD Digi Kyokasho NK-B": 754.4
+      }
+    },
+    "ン": {
+      "codepoint": "U+30F3",
+      "small": false,
+      "rel_to_cjk": 0.7836,
+      "target_height": 638.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 707.0,
+        "Yu Gothic Regular": 636.2,
+        "BIZ UDGothic Bold": 816.4,
+        "BIZ UDGothic": 764.2,
+        "Noto Sans JP": 706.0,
+        "MS Gothic": 722.8,
+        "UD Digi Kyokasho NK-B": 692.9
+      }
+    },
+    "ヴ": {
+      "codepoint": "U+30F4",
+      "small": false,
+      "rel_to_cjk": 0.9856,
+      "target_height": 803.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 904.8,
+        "Yu Gothic Regular": 867.2,
+        "BIZ UDGothic Bold": 929.7,
+        "BIZ UDGothic": 914.6,
+        "Noto Sans JP": 856.0,
+        "MS Gothic": 921.9,
+        "UD Digi Kyokasho NK-B": 911.6
+      }
+    },
+    "ヵ": {
+      "codepoint": "U+30F5",
+      "small": true,
+      "rel_to_cjk": 0.7403,
+      "target_height": 603.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 639.6,
+        "Yu Gothic Regular": 591.3,
+        "BIZ UDGothic Bold": 723.6,
+        "BIZ UDGothic": 703.6,
+        "Noto Sans JP": 643.0,
+        "MS Gothic": 675.8,
+        "UD Digi Kyokasho NK-B": 668.0
+      }
+    },
+    "ヶ": {
+      "codepoint": "U+30F6",
+      "small": true,
+      "rel_to_cjk": 0.7488,
+      "target_height": 610.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 678.2,
+        "Yu Gothic Regular": 634.3,
+        "BIZ UDGothic Bold": 734.9,
+        "BIZ UDGothic": 714.8,
+        "Noto Sans JP": 663.0,
+        "MS Gothic": 683.6,
+        "UD Digi Kyokasho NK-B": 646.0
+      }
+    },
+    "ヷ": {
+      "codepoint": "U+30F7",
+      "small": false,
+      "rel_to_cjk": 0.993,
+      "target_height": 809.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 917.5,
+        "Yu Gothic Regular": 897.5,
+        "BIZ UDGothic Bold": 937.0,
+        "BIZ UDGothic": 912.1,
+        "Noto Sans JP": 887.0,
+        "MS Gothic": 914.1,
+        "UD Digi Kyokasho NK-B": 896.0
+      }
+    },
+    "ヸ": {
+      "codepoint": "U+30F8",
+      "small": false,
+      "rel_to_cjk": 1.001,
+      "target_height": 815.8,
+      "ref_heights": {
+        "Yu Gothic Bold": 922.4,
+        "Yu Gothic Regular": 891.6,
+        "BIZ UDGothic Bold": 951.2,
+        "BIZ UDGothic": 936.0,
+        "Noto Sans JP": 827.0,
+        "MS Gothic": 902.3,
+        "UD Digi Kyokasho NK-B": 898.9
+      }
+    },
+    "ヹ": {
+      "codepoint": "U+30F9",
+      "small": false,
+      "rel_to_cjk": 0.8889,
+      "target_height": 724.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 805.2,
+        "Yu Gothic Regular": 769.5,
+        "BIZ UDGothic Bold": 876.0,
+        "BIZ UDGothic": 852.1,
+        "Noto Sans JP": 800.0,
+        "MS Gothic": 808.6,
+        "UD Digi Kyokasho NK-B": 774.9
+      }
+    },
+    "ヺ": {
+      "codepoint": "U+30FA",
+      "small": false,
+      "rel_to_cjk": 1.0092,
+      "target_height": 822.5,
+      "ref_heights": {
+        "Yu Gothic Bold": 917.0,
+        "Yu Gothic Regular": 901.9,
+        "BIZ UDGothic Bold": 934.1,
+        "BIZ UDGothic": 911.6,
+        "Noto Sans JP": 902.0,
+        "MS Gothic": 902.3,
+        "UD Digi Kyokasho NK-B": 910.6
+      }
+    },
+    "・": {
+      "codepoint": "U+30FB",
+      "small": false,
+      "rel_to_cjk": 0.1905,
+      "target_height": 155.3,
+      "ref_heights": {
+        "Yu Gothic Bold": 200.2,
+        "Yu Gothic Regular": 157.2,
+        "BIZ UDGothic Bold": 220.2,
+        "BIZ UDGothic": 180.2,
+        "Noto Sans JP": 170.0,
+        "MS Gothic": 168.0,
+        "UD Digi Kyokasho NK-B": 217.8
+      }
+    },
+    "ー": {
+      "codepoint": "U+30FC",
+      "small": false,
+      "rel_to_cjk": 0.0965,
+      "target_height": 78.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 142.6,
+        "Yu Gothic Regular": 73.7,
+        "BIZ UDGothic Bold": 109.9,
+        "BIZ UDGothic": 77.1,
+        "Noto Sans JP": 38.0,
+        "MS Gothic": 85.9,
+        "UD Digi Kyokasho NK-B": 151.9
+      }
+    },
+    "ヽ": {
+      "codepoint": "U+30FD",
+      "small": false,
+      "rel_to_cjk": 0.5439,
+      "target_height": 443.2,
+      "ref_heights": {
+        "Yu Gothic Bold": 423.8,
+        "Yu Gothic Regular": 349.6,
+        "BIZ UDGothic Bold": 588.9,
+        "BIZ UDGothic": 522.9,
+        "Noto Sans JP": 425.0,
+        "MS Gothic": 484.4,
+        "UD Digi Kyokasho NK-B": 492.7
+      }
+    },
+    "ヾ": {
+      "codepoint": "U+30FE",
+      "small": false,
+      "rel_to_cjk": 0.667,
+      "target_height": 543.6,
+      "ref_heights": {
+        "Yu Gothic Bold": 549.8,
+        "Yu Gothic Regular": 496.6,
+        "BIZ UDGothic Bold": 695.3,
+        "BIZ UDGothic": 630.9,
+        "Noto Sans JP": 591.0,
+        "MS Gothic": 636.7,
+        "UD Digi Kyokasho NK-B": 624.0
+      }
+    },
+    "ヿ": {
+      "codepoint": "U+30FF",
+      "small": false,
+      "rel_to_cjk": 0.8303,
+      "target_height": 676.7,
+      "ref_heights": {
+        "Yu Gothic Bold": 762.2,
+        "Yu Gothic Regular": 714.8,
+        "BIZ UDGothic Bold": 778.3,
+        "BIZ UDGothic": 759.3,
+        "Noto Sans JP": 798.0,
+        "MS Gothic": 765.6,
+        "UD Digi Kyokasho NK-B": 0
+      }
+    }
+  }
+}
