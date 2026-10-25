@@ -170,6 +170,15 @@ def run(context) -> list[dict]:
                     }
                 )
 
+    if not records:
+        results.append(
+            {
+                "name": "字形度量与几何",
+                "status": "FAIL",
+                "detail": "没有任何字形——空集不算通过",
+            }
+        )
+        return results
     if not results:
         results.append(
             {

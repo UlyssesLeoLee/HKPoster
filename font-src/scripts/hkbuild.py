@@ -256,9 +256,18 @@ def ellipse_points(
 
 
 def notdef_glyph() -> Glyph:
-    """标准 .notdef：矩形框 + 内部斜杠。"""
+    """标准 .notdef：空心矩形框。
+
+    刻意不做成实心块——实心 .notdef 会让任何缺字在标题里变成一大团黑，
+    掩盖真正的缺字问题（docs/06 §4 的缺字策略要求缺字必须可见且可判定）。
+    """
     g = Glyph(".notdef", advance=UPM)
-    g.rect(80, 920, 0, 700)
+    x1, x2, y1, y2 = 80, 920, 0, 700
+    bar = 60
+    g.rect(x1, x2, y1, y1 + bar)          # 下边
+    g.rect(x1, x2, y2 - bar, y2)          # 上边
+    g.rect(x1, x1 + bar, y1 + bar, y2 - bar)   # 左边
+    g.rect(x2 - bar, x2, y1 + bar, y2 - bar)   # 右边
     return g
 
 

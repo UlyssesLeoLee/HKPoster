@@ -15,10 +15,19 @@
   "cjk_advance": 1000,
   "space_advance": 500,
   "weights": {
-    "primary_stroke": 96,
-    "secondary_stroke": 78,
-    "dot_stroke": 84,
-    "frame_stroke": 92
+    "cjk": {
+      "primary_stroke": 96,
+      "secondary_stroke": 92,
+      "thin_stroke": 84,
+      "dot_stroke": 84
+    },
+    "latin": {
+      "primary_stroke": 132,
+      "secondary_stroke": 120,
+      "diagonal_stroke": 112,
+      "thin_stroke": 104
+    },
+    "_note": "CJK 与 Latin 不能共用同一套权重常量：同样 96 单位在 1000 UPM 的 CJK 里读作 Heavy，但在 640 advance 的 Latin 里只读作 Regular（Wave 0 样张实测，见 docs/09 RV-14）"
   },
   "grid": {
     "cjk_body_left": 60,

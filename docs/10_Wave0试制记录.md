@@ -83,7 +83,13 @@ recipe（Python，笔画原语，设计源）
 | HKPoster-Heavy.otf | 7352 | `9b848eddc0f76412c104d9b4` | 76 | 11 |
 | HKPoster-Heavy.woff2 | 4912 | `305de00cc64a416070e171e6` | 76 | 12 |
 
+> 这是 **`dev@3861944` 的一次快照**。其后 `.notdef` 改为空心框、契约与参数文档同步修订，
+> 因此当前分支重新构建的字节数与哈希会不同（构建按提交时间定版，见 §3）。
+> 上表的作用是给出可复现的对照点：在 `dev@3861944` 上重建会得到同样的哈希。
+
 完整哈希与命令见 `font-src/reports/build.json`（每次构建覆盖，产物目录 `font-src/dist/` 不入库）。
+> `font-src/reports/` 是**本地运行产生的机器报告，不入库**；克隆仓库后需按第 8 节命令自行跑一遍。
+> 本节已摘录关键数值，结论不依赖那些文件是否在本地。
 
 ### 5.2 测试（`font-src/tests/run_tests.py`）
 
@@ -101,6 +107,7 @@ SKIP 为「字体尚无小写字母，`HK Poster Heavy` / `CITY OF SHADOWS` 两�
 - Windows GDI：`AddFontResourceExW(FR_PRIVATE)` 注册成功；`CreateFontW` 建面后，
   GDI 实测文本宽度 **122px**，与字体自身 hmtx 推算的 **122.0px** 一致 → 未被系统字体替换。
   （`CreateFontW` 必须传满 14 个参数，否则 `lfFaceName` 错位会导致静默替换。）
+  另一路径 `verify_font.py` 用 8 字串实测为 **222px**、期望 **222.0px**，结论一致。
 - 光栅化证据：`font-src/reports/st-platform-render.png`。
 - macOS / Linux / 浏览器：**NOT_RUN**（环境不可用，不得声称通过）。
 
@@ -111,6 +118,10 @@ SKIP 为「字体尚无小写字母，`HK Poster Heavy` / `CITY OF SHADOWS` 两�
 
 样张中**当前字体没有的字符以洋红 + 虚线下划线标出**，并注明「显示为系统回退字体（非本字体字形）」
 （docs/06 §4 缺字策略）。效果组样张只存在于样张层，字体轮廓内没有任何描边、霓虹或旧化处理。
+
+> 样张抬头里印的 sha256 是**该样张渲染时所依据的那一版字体**的哈希。
+> 由于构建按提交时间定版（§3），任意一次重新构建的哈希都会随提交变化，
+> 因此该值用于「这组样张出自哪一版字体」，不等于「当前分支重建后的哈希」。
 
 ## 6. 本轮发现的问题（已并入 docs/09 的 RV-09..RV-14）
 
@@ -139,11 +150,12 @@ SKIP 为「字体尚无小写字母，`HK Poster Heavy` / `CITY OF SHADOWS` 两�
 
 ```powershell
 pip install -r requirements.txt
-python font-src/scripts/selftest.py          # 垂直切片自证
+python font-src/scripts/verify_all.py      # 一条命令跑完：recipe 同步 → 字形 UT → 构建 → IT/ST → 样张 → UT/IT/ST 套件
+python font-src/scripts/selftest.py        # 垂直切片自证（参考 master）
 python font-src/scripts/build_font.py --out font-src/dist
-python font-src/scripts/check_recipes.py     # recipe ↔ UFO 同步
-python font-src/scripts/check_glyphs.py      # 字形 UT
-python font-src/tests/run_tests.py           # UT + IT + ST 全套
+python font-src/scripts/check_recipes.py   # recipe ↔ UFO 同步
+python font-src/scripts/check_glyphs.py    # 字形 UT
+python font-src/tests/run_tests.py         # UT + IT + ST 全套
 python font-src/specimens/render_specimens.py --all
 ```
 

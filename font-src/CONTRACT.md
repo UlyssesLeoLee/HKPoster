@@ -73,12 +73,15 @@ font-src/
 | 空格 advance | 500 |
 | 大写顶线 | y = 700 |
 | CJK 字面框 | x 60..940，y 0..820 |
-| 主笔画权重 | 96 |
-| 次笔画权重 | 92 |
-| 细笔画（横杠/钩） | 84 |
-| 点/撇 | 宽 84–96，高 96–130 |
+| CJK 笔画权重 | 主 96 / 次 92 / 细 84 / 点 84–96 |
+| **Latin 笔画权重** | **主 132 / 次 120 / 斜 112 / 细 104** |
 
 坐标：y 向上，基线 y=0；整数单位。
+
+> **权重分两档，不要混用。** CJK 与 Latin 不能共用同一套笔画权重：
+> 同样 96 单位在 1000 UPM 的 CJK 里读作 Heavy，但在 640 advance 的 Latin 里
+> 只读作 Regular。这是 Wave 0 样张实测出来的结论（见 `docs/09` RV-14），
+> 后续任何新增 master 都要按所属类别取对应那一档。
 
 ---
 
@@ -179,17 +182,22 @@ if __name__ == "__main__":
 
 ### Lane `latin-core` → `font-src/src/hkposter-latin.py` + `masters/hkposter-latin.ufo/` + `features/kerning-latin.fea`
 
-- 大写 A–Z（26 个），advance 640，大写顶线 **y=700**
+- 大写 A–Z（26 个），advance 640，大写顶线 **y=700**、基线 0
 - 数字 0–9（10 个），advance 640，高度与 A 一致（顶 700、底 0）
-- 全角标点：，。、！？：；（）「」【】（12 个），advance 1000
-- 半角标点：. , ! ? : ; ( ) - — " ' &（13 个），advance 视字形宽度（建议 240–340）
+- 笔画权重取 **Latin 档**（主 132 / 次 120 / 斜 112 / 细 104，见 §2）
 - `features/kerning-latin.fea`：按 docs/04 §3 实现 **AV / AW / TA / TO / YA / LT** 六组，
   并给出可解释的数值依据（侧边距实测差）；文件首行写注释说明取值方法。
+
+### Lane `latin-punct` → `font-src/src/hkposter-latin-punct.py` + `masters/hkposter-latin-punct.ufo/`
+
+- 全角标点 13 个：，。、！？：；（）「」【】，advance 1000，墨形位置按实测系统字体取位
+- 半角标点 13 个：. , ! ? : ; ( ) - — " ' &，advance 240–340
+- 字形名：半角用 AGL 名（period/comma/exclam…），全角用 `uniXXXX`
 
 ### Lane `quality-harness` → `font-src/tests/**` + `font-src/features/features-core.fea`
 
 - `font-src/tests/run_tests.py`：一条命令跑完 UT + IT + ST，输出 PASS/FAIL 汇总与 JSON 报告
-- `font-src/tests/test_glyph_metrics.py`：逐字形断言（advance、bbox、笔画权重落在 84–96、
+- `font-src/tests/test_glyph_metrics.py`：逐字形断言（advance、bbox、笔画权重落在所属档位、
   内白存在性、空字形禁止）
 - `font-src/tests/test_opentype.py`：cmap 覆盖、必需表、GSUB/GPOS 存在性、
   排版不出现 .notdef（用 uharfbuzz）
@@ -286,3 +294,21 @@ python font-src/scripts/render_glyph_sheet.py --font font-src/dist/HKPoster-Heav
 - 只提交本 lane 拥有的路径；不要 `git add -A`。
 - 集成方在合并前会独立重跑 §6 的命令，**以实际输出为准**，不接受子代理的口头结论。
 - 合并顺序：构建链 → 字形 lane → 特性/测试 → 样张；每次合并后重跑全链路自证。
+
+## 11. 产物与证据的存放位置
+
+| 内容 | 位置 | 是否入库 |
+|---|---|---|
+| 设计源（recipe）、UFO master、特性、测试、样张 PNG | `font-src/src`、`masters`、`features`、`tests`、`specimens` | **入库** |
+| 构建产物 TTF/OTF/WOFF2 | `font-src/dist/` | 不入库（可由上面全部内容重建） |
+| 机器报告（build.json / verify.json / tests.json / 渲染证据 PNG） | `font-src/reports/` | **不入库**（每次运行覆盖，路径在文档中作为「在哪里跑出来的」指引） |
+
+因此文档里出现的 `font-src/reports/...` 是**本地运行后产生的证据路径**，
+克隆仓库时需要按第 6 节命令自己跑一遍才能得到；`docs/10_Wave0试制记录.md` 里已摘录关键数值。
+
+## 12. 变更记录
+
+| 版本 | 变更 | 原因 |
+|---|---|---|
+| v1.0 | 初始契约（单套笔画权重 96/92/84，latin-core 含标点） | — |
+| v1.1 | 笔画权重分 CJK / Latin 两档；标点拆出独立 `latin-punct` lane | Wave 0 样张实测：Latin 用 96 只读作 Regular（docs/09 RV-14）；标点 26 个字形单拆可降低单 lane 负载与中断风险 |

@@ -174,10 +174,6 @@ def main() -> int:
             records.append(record)
 
     # ---- 家族一致性 ----
-    def group_median(cat: str, key: str) -> float | None:
-        values = [r[key] for r in records if r.get("category") == cat and key in r]
-        return statistics.median(values) if values else None
-
     for cat, key in (("latin-upper", "cap_top"), ("digit", "digit_top")):
         values = [r[key] for r in records if r.get("category") == cat and key in r]
         if len(values) > 1:
