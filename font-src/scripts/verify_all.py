@@ -61,6 +61,7 @@ def main() -> int:
     parser.add_argument("--skip-tests", action="store_true")
     parser.add_argument("--skip-kana-check", action="store_true")
     parser.add_argument("--skip-encoding-check", action="store_true")
+    parser.add_argument("--skip-kana-size", action="store_true")
     args = parser.parse_args()
 
     masters = sorted((FONT_SRC / "masters").glob("*.ufo"))
@@ -73,15 +74,15 @@ def main() -> int:
     outputs: dict[str, str] = {}
 
     results["check_recipes"], outputs["check_recipes"] = run(
-        "1/8 recipe 同步", [PY, str(SCRIPT_DIR / "check_recipes.py")]
+        "1/9 recipe 同步", [PY, str(SCRIPT_DIR / "check_recipes.py")]
     )
     results["check_glyphs"], outputs["check_glyphs"] = run(
-        "2/8 字形 UT", [PY, str(SCRIPT_DIR / "check_glyphs.py")]
+        "2/9 字形 UT", [PY, str(SCRIPT_DIR / "check_glyphs.py")]
     )
 
     build_report = FONT_SRC / "reports" / "build.json"
     results["build_font"], outputs["build_font"] = run(
-        "3/8 构建字体",
+        "3/9 构建字体",
         [
             PY,
             str(SCRIPT_DIR / "build_font.py"),
@@ -95,7 +96,7 @@ def main() -> int:
     font_path = Path(args.out).resolve() / "HKPoster-Heavy.ttf"
     if results["build_font"]:
         results["verify_font"], outputs["verify_font"] = run(
-            "4/8 成品 IT/ST",
+            "4/9 成品 IT/ST",
             [
                 PY,
                 str(SCRIPT_DIR / "verify_font.py"),
@@ -112,7 +113,7 @@ def main() -> int:
     if not args.skip_render:
         sheet = FONT_SRC / "reports" / "sheet-all.png"
         results["render"], outputs["render"] = run(
-            "5/8 渲染总样张",
+            "5/9 渲染总样张",
             [
                 PY,
                 str(SCRIPT_DIR / "render_glyph_sheet.py"),
@@ -135,7 +136,7 @@ def main() -> int:
     # 6) UT / IT / ST 测试套件（复用上一步已构建的产物，不重复构建）
     if not args.skip_tests:
         results["tests"], outputs["tests"] = run(
-            "6/8 UT/IT/ST 测试套件",
+            "6/9 UT/IT/ST 测试套件",
             [
                 PY,
                 str(FONT_SRC / "tests" / "run_tests.py"),
@@ -153,7 +154,7 @@ def main() -> int:
     # 7) 假名保真度检查（缺字 = 硬门禁；骨架 IoU = 软信号）
     if not args.skip_kana_check:
         results["kana_fidelity"], outputs["kana_fidelity"] = run(
-            "7/8 假名保真度检查",
+            "7/9 假名保真度检查",
             [
                 PY,
                 str(SCRIPT_DIR / "check_kana_fidelity.py"),
@@ -172,12 +173,29 @@ def main() -> int:
     # 8) 字符编码检查（坏字符进 recipe 就是错字形）
     if not args.skip_encoding_check:
         results["encoding"], outputs["encoding"] = run(
-            "8/8 字符编码检查",
+            "8/9 字符编码检查",
             [PY, str(SCRIPT_DIR / "check_encoding.py")],
         )
     else:
         results["encoding"] = True
         outputs["encoding"] = "（跳过）"
+
+    # 9) 假名字面尺寸验收（假名必须与汉字站在同一尺寸档）
+    if not args.skip_kana_size:
+        results["kana_size"], outputs["kana_size"] = run(
+            "9/9 假名字面尺寸验收",
+            [
+                PY,
+                str(SCRIPT_DIR / "check_kana_size.py"),
+                "--font",
+                str(font_path),
+                "--report",
+                str(FONT_SRC / "reports" / "kana-size.json"),
+            ],
+        )
+    else:
+        results["kana_size"] = True
+        outputs["kana_size"] = "（跳过）"
 
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
