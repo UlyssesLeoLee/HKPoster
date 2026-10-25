@@ -39,7 +39,8 @@ python font-src/scripts/check_recipes.py    # recipe ↔ UFO 同步
 python font-src/scripts/verify_font.py      # 成品 IT/ST（含 Windows GDI 真实加载）
 python font-src/scripts/check_kana_fidelity.py            # 假名保真度：缺字=硬门禁，骨架 IoU=软信号
 python font-src/scripts/check_kana_fidelity.py --selftest # 先自证该检查器本身的分辨力
-python font-src/scripts/check_kana_size.py              # 假名字面尺寸验收（与汉字同档）
+python font-src/scripts/check_kana_size.py              # 假名字面尺寸验收（与汉字同档 + 平/片对称）
+python font-src/scripts/check_stroke_angles.py          # 笔画角度与记号倾角（recipe 层 AST 检查）
 python font-src/scripts/check_encoding.py              # 字符损坏扫描（坏字符进 recipe 就是错字形）
 python font-src/tests/run_tests.py         # UT + IT + ST 全套
 python font-src/specimens/render_specimens.py --all        # 重生成样张
