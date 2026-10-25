@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni65E5" format="2">
+  <advance width="1000"/>
+  <unicode hex="65E5"/>
+  <note>
+日 / 4画
+</note>
+  <outline>
+    <contour>
+      <point x="908" y="0" type="line"/>
+      <point x="908" y="96" type="line"/>
+      <point x="908" y="362" type="line"/>
+      <point x="908" y="458" type="line"/>
+      <point x="908" y="724" type="line"/>
+      <point x="908" y="820" type="line"/>
+      <point x="812" y="820" type="line"/>
+      <point x="188" y="820" type="line"/>
+      <point x="92" y="820" type="line"/>
+      <point x="92" y="724" type="line"/>
+      <point x="92" y="458" type="line"/>
+      <point x="92" y="362" type="line"/>
+      <point x="92" y="96" type="line"/>
+      <point x="92" y="0" type="line"/>
+      <point x="188" y="0" type="line"/>
+      <point x="812" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="188" y="458" type="line"/>
+      <point x="188" y="724" type="line"/>
+      <point x="812" y="724" type="line"/>
+      <point x="812" y="458" type="line"/>
+    </contour>
+    <contour>
+      <point x="188" y="96" type="line"/>
+      <point x="188" y="362" type="line"/>
+      <point x="812" y="362" type="line"/>
+      <point x="812" y="96" type="line"/>
+    </contour>
+  </outline>
+</glyph>
