@@ -1,0 +1,8553 @@
+{
+ "source": "https://x0213.sakura.ne.jp/x0213/joyo-kanji-code/joyo-kanji-code-u.csv",
+ "source_note": "Project X0213，依据 2010 年文化厅《常用漢字表》修订版（2136 字）",
+ "count": 2136,
+ "verified": true,
+ "problems": [],
+ "characters": [
+  {
+   "char": "亜",
+   "unicode": "U+4E9C"
+  },
+  {
+   "char": "哀",
+   "unicode": "U+54C0"
+  },
+  {
+   "char": "挨",
+   "unicode": "U+6328"
+  },
+  {
+   "char": "愛",
+   "unicode": "U+611B"
+  },
+  {
+   "char": "曖",
+   "unicode": "U+66D6"
+  },
+  {
+   "char": "悪",
+   "unicode": "U+60AA"
+  },
+  {
+   "char": "握",
+   "unicode": "U+63E1"
+  },
+  {
+   "char": "圧",
+   "unicode": "U+5727"
+  },
+  {
+   "char": "扱",
+   "unicode": "U+6271"
+  },
+  {
+   "char": "宛",
+   "unicode": "U+5B9B"
+  },
+  {
+   "char": "嵐",
+   "unicode": "U+5D50"
+  },
+  {
+   "char": "安",
+   "unicode": "U+5B89"
+  },
+  {
+   "char": "案",
+   "unicode": "U+6848"
+  },
+  {
+   "char": "暗",
+   "unicode": "U+6697"
+  },
+  {
+   "char": "以",
+   "unicode": "U+4EE5"
+  },
+  {
+   "char": "衣",
+   "unicode": "U+8863"
+  },
+  {
+   "char": "位",
+   "unicode": "U+4F4D"
+  },
+  {
+   "char": "囲",
+   "unicode": "U+56F2"
+  },
+  {
+   "char": "医",
+   "unicode": "U+533B"
+  },
+  {
+   "char": "依",
+   "unicode": "U+4F9D"
+  },
+  {
+   "char": "委",
+   "unicode": "U+59D4"
+  },
+  {
+   "char": "威",
+   "unicode": "U+5A01"
+  },
+  {
+   "char": "為",
+   "unicode": "U+70BA"
+  },
+  {
+   "char": "畏",
+   "unicode": "U+754F"
+  },
+  {
+   "char": "胃",
+   "unicode": "U+80C3"
+  },
+  {
+   "char": "尉",
+   "unicode": "U+5C09"
+  },
+  {
+   "char": "異",
+   "unicode": "U+7570"
+  },
+  {
+   "char": "移",
+   "unicode": "U+79FB"
+  },
+  {
+   "char": "萎",
+   "unicode": "U+840E"
+  },
+  {
+   "char": "偉",
+   "unicode": "U+5049"
+  },
+  {
+   "char": "椅",
+   "unicode": "U+6905"
+  },
+  {
+   "char": "彙",
+   "unicode": "U+5F59"
+  },
+  {
+   "char": "意",
+   "unicode": "U+610F"
+  },
+  {
+   "char": "違",
+   "unicode": "U+9055"
+  },
+  {
+   "char": "維",
+   "unicode": "U+7DAD"
+  },
+  {
+   "char": "慰",
+   "unicode": "U+6170"
+  },
+  {
+   "char": "遺",
+   "unicode": "U+907A"
+  },
+  {
+   "char": "緯",
+   "unicode": "U+7DEF"
+  },
+  {
+   "char": "域",
+   "unicode": "U+57DF"
+  },
+  {
+   "char": "育",
+   "unicode": "U+80B2"
+  },
+  {
+   "char": "一",
+   "unicode": "U+4E00"
+  },
+  {
+   "char": "壱",
+   "unicode": "U+58F1"
+  },
+  {
+   "char": "逸",
+   "unicode": "U+9038"
+  },
+  {
+   "char": "茨",
+   "unicode": "U+8328"
+  },
+  {
+   "char": "芋",
+   "unicode": "U+828B"
+  },
+  {
+   "char": "引",
+   "unicode": "U+5F15"
+  },
+  {
+   "char": "印",
+   "unicode": "U+5370"
+  },
+  {
+   "char": "因",
+   "unicode": "U+56E0"
+  },
+  {
+   "char": "咽",
+   "unicode": "U+54BD"
+  },
+  {
+   "char": "姻",
+   "unicode": "U+59FB"
+  },
+  {
+   "char": "員",
+   "unicode": "U+54E1"
+  },
+  {
+   "char": "院",
+   "unicode": "U+9662"
+  },
+  {
+   "char": "淫",
+   "unicode": "U+6DEB"
+  },
+  {
+   "char": "陰",
+   "unicode": "U+9670"
+  },
+  {
+   "char": "飲",
+   "unicode": "U+98F2"
+  },
+  {
+   "char": "隠",
+   "unicode": "U+96A0"
+  },
+  {
+   "char": "韻",
+   "unicode": "U+97FB"
+  },
+  {
+   "char": "右",
+   "unicode": "U+53F3"
+  },
+  {
+   "char": "宇",
+   "unicode": "U+5B87"
+  },
+  {
+   "char": "羽",
+   "unicode": "U+7FBD"
+  },
+  {
+   "char": "雨",
+   "unicode": "U+96E8"
+  },
+  {
+   "char": "唄",
+   "unicode": "U+5504"
+  },
+  {
+   "char": "鬱",
+   "unicode": "U+9B31"
+  },
+  {
+   "char": "畝",
+   "unicode": "U+755D"
+  },
+  {
+   "char": "浦",
+   "unicode": "U+6D66"
+  },
+  {
+   "char": "運",
+   "unicode": "U+904B"
+  },
+  {
+   "char": "雲",
+   "unicode": "U+96F2"
+  },
+  {
+   "char": "永",
+   "unicode": "U+6C38"
+  },
+  {
+   "char": "泳",
+   "unicode": "U+6CF3"
+  },
+  {
+   "char": "英",
+   "unicode": "U+82F1"
+  },
+  {
+   "char": "映",
+   "unicode": "U+6620"
+  },
+  {
+   "char": "栄",
+   "unicode": "U+6804"
+  },
+  {
+   "char": "営",
+   "unicode": "U+55B6"
+  },
+  {
+   "char": "詠",
+   "unicode": "U+8A60"
+  },
+  {
+   "char": "影",
+   "unicode": "U+5F71"
+  },
+  {
+   "char": "鋭",
+   "unicode": "U+92ED"
+  },
+  {
+   "char": "衛",
+   "unicode": "U+885B"
+  },
+  {
+   "char": "易",
+   "unicode": "U+6613"
+  },
+  {
+   "char": "疫",
+   "unicode": "U+75AB"
+  },
+  {
+   "char": "益",
+   "unicode": "U+76CA"
+  },
+  {
+   "char": "液",
+   "unicode": "U+6DB2"
+  },
+  {
+   "char": "駅",
+   "unicode": "U+99C5"
+  },
+  {
+   "char": "悦",
+   "unicode": "U+60A6"
+  },
+  {
+   "char": "越",
+   "unicode": "U+8D8A"
+  },
+  {
+   "char": "謁",
+   "unicode": "U+8B01"
+  },
+  {
+   "char": "閲",
+   "unicode": "U+95B2"
+  },
+  {
+   "char": "円",
+   "unicode": "U+5186"
+  },
+  {
+   "char": "延",
+   "unicode": "U+5EF6"
+  },
+  {
+   "char": "沿",
+   "unicode": "U+6CBF"
+  },
+  {
+   "char": "炎",
+   "unicode": "U+708E"
+  },
+  {
+   "char": "怨",
+   "unicode": "U+6028"
+  },
+  {
+   "char": "宴",
+   "unicode": "U+5BB4"
+  },
+  {
+   "char": "媛",
+   "unicode": "U+5A9B"
+  },
+  {
+   "char": "援",
+   "unicode": "U+63F4"
+  },
+  {
+   "char": "園",
+   "unicode": "U+5712"
+  },
+  {
+   "char": "煙",
+   "unicode": "U+7159"
+  },
+  {
+   "char": "猿",
+   "unicode": "U+733F"
+  },
+  {
+   "char": "遠",
+   "unicode": "U+9060"
+  },
+  {
+   "char": "鉛",
+   "unicode": "U+925B"
+  },
+  {
+   "char": "塩",
+   "unicode": "U+5869"
+  },
+  {
+   "char": "演",
+   "unicode": "U+6F14"
+  },
+  {
+   "char": "縁",
+   "unicode": "U+7E01"
+  },
+  {
+   "char": "艶",
+   "unicode": "U+8276"
+  },
+  {
+   "char": "汚",
+   "unicode": "U+6C5A"
+  },
+  {
+   "char": "王",
+   "unicode": "U+738B"
+  },
+  {
+   "char": "凹",
+   "unicode": "U+51F9"
+  },
+  {
+   "char": "央",
+   "unicode": "U+592E"
+  },
+  {
+   "char": "応",
+   "unicode": "U+5FDC"
+  },
+  {
+   "char": "往",
+   "unicode": "U+5F80"
+  },
+  {
+   "char": "押",
+   "unicode": "U+62BC"
+  },
+  {
+   "char": "旺",
+   "unicode": "U+65FA"
+  },
+  {
+   "char": "欧",
+   "unicode": "U+6B27"
+  },
+  {
+   "char": "殴",
+   "unicode": "U+6BB4"
+  },
+  {
+   "char": "桜",
+   "unicode": "U+685C"
+  },
+  {
+   "char": "翁",
+   "unicode": "U+7FC1"
+  },
+  {
+   "char": "奥",
+   "unicode": "U+5965"
+  },
+  {
+   "char": "横",
+   "unicode": "U+6A2A"
+  },
+  {
+   "char": "岡",
+   "unicode": "U+5CA1"
+  },
+  {
+   "char": "屋",
+   "unicode": "U+5C4B"
+  },
+  {
+   "char": "億",
+   "unicode": "U+5104"
+  },
+  {
+   "char": "憶",
+   "unicode": "U+61B6"
+  },
+  {
+   "char": "臆",
+   "unicode": "U+81C6"
+  },
+  {
+   "char": "虞",
+   "unicode": "U+865E"
+  },
+  {
+   "char": "乙",
+   "unicode": "U+4E59"
+  },
+  {
+   "char": "俺",
+   "unicode": "U+4FFA"
+  },
+  {
+   "char": "卸",
+   "unicode": "U+5378"
+  },
+  {
+   "char": "音",
+   "unicode": "U+97F3"
+  },
+  {
+   "char": "恩",
+   "unicode": "U+6069"
+  },
+  {
+   "char": "温",
+   "unicode": "U+6E29"
+  },
+  {
+   "char": "穏",
+   "unicode": "U+7A4F"
+  },
+  {
+   "char": "下",
+   "unicode": "U+4E0B"
+  },
+  {
+   "char": "化",
+   "unicode": "U+5316"
+  },
+  {
+   "char": "火",
+   "unicode": "U+706B"
+  },
+  {
+   "char": "加",
+   "unicode": "U+52A0"
+  },
+  {
+   "char": "可",
+   "unicode": "U+53EF"
+  },
+  {
+   "char": "仮",
+   "unicode": "U+4EEE"
+  },
+  {
+   "char": "何",
+   "unicode": "U+4F55"
+  },
+  {
+   "char": "花",
+   "unicode": "U+82B1"
+  },
+  {
+   "char": "佳",
+   "unicode": "U+4F73"
+  },
+  {
+   "char": "価",
+   "unicode": "U+4FA1"
+  },
+  {
+   "char": "果",
+   "unicode": "U+679C"
+  },
+  {
+   "char": "河",
+   "unicode": "U+6CB3"
+  },
+  {
+   "char": "苛",
+   "unicode": "U+82DB"
+  },
+  {
+   "char": "科",
+   "unicode": "U+79D1"
+  },
+  {
+   "char": "架",
+   "unicode": "U+67B6"
+  },
+  {
+   "char": "夏",
+   "unicode": "U+590F"
+  },
+  {
+   "char": "家",
+   "unicode": "U+5BB6"
+  },
+  {
+   "char": "荷",
+   "unicode": "U+8377"
+  },
+  {
+   "char": "華",
+   "unicode": "U+83EF"
+  },
+  {
+   "char": "菓",
+   "unicode": "U+83D3"
+  },
+  {
+   "char": "貨",
+   "unicode": "U+8CA8"
+  },
+  {
+   "char": "渦",
+   "unicode": "U+6E26"
+  },
+  {
+   "char": "過",
+   "unicode": "U+904E"
+  },
+  {
+   "char": "嫁",
+   "unicode": "U+5AC1"
+  },
+  {
+   "char": "暇",
+   "unicode": "U+6687"
+  },
+  {
+   "char": "禍",
+   "unicode": "U+798D"
+  },
+  {
+   "char": "靴",
+   "unicode": "U+9774"
+  },
+  {
+   "char": "寡",
+   "unicode": "U+5BE1"
+  },
+  {
+   "char": "歌",
+   "unicode": "U+6B4C"
+  },
+  {
+   "char": "箇",
+   "unicode": "U+7B87"
+  },
+  {
+   "char": "稼",
+   "unicode": "U+7A3C"
+  },
+  {
+   "char": "課",
+   "unicode": "U+8AB2"
+  },
+  {
+   "char": "蚊",
+   "unicode": "U+868A"
+  },
+  {
+   "char": "牙",
+   "unicode": "U+7259"
+  },
+  {
+   "char": "瓦",
+   "unicode": "U+74E6"
+  },
+  {
+   "char": "我",
+   "unicode": "U+6211"
+  },
+  {
+   "char": "画",
+   "unicode": "U+753B"
+  },
+  {
+   "char": "芽",
+   "unicode": "U+82BD"
+  },
+  {
+   "char": "賀",
+   "unicode": "U+8CC0"
+  },
+  {
+   "char": "雅",
+   "unicode": "U+96C5"
+  },
+  {
+   "char": "餓",
+   "unicode": "U+9913"
+  },
+  {
+   "char": "介",
+   "unicode": "U+4ECB"
+  },
+  {
+   "char": "回",
+   "unicode": "U+56DE"
+  },
+  {
+   "char": "灰",
+   "unicode": "U+7070"
+  },
+  {
+   "char": "会",
+   "unicode": "U+4F1A"
+  },
+  {
+   "char": "快",
+   "unicode": "U+5FEB"
+  },
+  {
+   "char": "戒",
+   "unicode": "U+6212"
+  },
+  {
+   "char": "改",
+   "unicode": "U+6539"
+  },
+  {
+   "char": "怪",
+   "unicode": "U+602A"
+  },
+  {
+   "char": "拐",
+   "unicode": "U+62D0"
+  },
+  {
+   "char": "悔",
+   "unicode": "U+6094"
+  },
+  {
+   "char": "海",
+   "unicode": "U+6D77"
+  },
+  {
+   "char": "界",
+   "unicode": "U+754C"
+  },
+  {
+   "char": "皆",
+   "unicode": "U+7686"
+  },
+  {
+   "char": "械",
+   "unicode": "U+68B0"
+  },
+  {
+   "char": "絵",
+   "unicode": "U+7D75"
+  },
+  {
+   "char": "開",
+   "unicode": "U+958B"
+  },
+  {
+   "char": "階",
+   "unicode": "U+968E"
+  },
+  {
+   "char": "塊",
+   "unicode": "U+584A"
+  },
+  {
+   "char": "楷",
+   "unicode": "U+6977"
+  },
+  {
+   "char": "解",
+   "unicode": "U+89E3"
+  },
+  {
+   "char": "潰",
+   "unicode": "U+6F70"
+  },
+  {
+   "char": "壊",
+   "unicode": "U+58CA"
+  },
+  {
+   "char": "懐",
+   "unicode": "U+61D0"
+  },
+  {
+   "char": "諧",
+   "unicode": "U+8AE7"
+  },
+  {
+   "char": "貝",
+   "unicode": "U+8C9D"
+  },
+  {
+   "char": "外",
+   "unicode": "U+5916"
+  },
+  {
+   "char": "劾",
+   "unicode": "U+52BE"
+  },
+  {
+   "char": "害",
+   "unicode": "U+5BB3"
+  },
+  {
+   "char": "崖",
+   "unicode": "U+5D16"
+  },
+  {
+   "char": "涯",
+   "unicode": "U+6DAF"
+  },
+  {
+   "char": "街",
+   "unicode": "U+8857"
+  },
+  {
+   "char": "慨",
+   "unicode": "U+6168"
+  },
+  {
+   "char": "蓋",
+   "unicode": "U+84CB"
+  },
+  {
+   "char": "該",
+   "unicode": "U+8A72"
+  },
+  {
+   "char": "概",
+   "unicode": "U+6982"
+  },
+  {
+   "char": "骸",
+   "unicode": "U+9AB8"
+  },
+  {
+   "char": "垣",
+   "unicode": "U+57A3"
+  },
+  {
+   "char": "柿",
+   "unicode": "U+67FF"
+  },
+  {
+   "char": "各",
+   "unicode": "U+5404"
+  },
+  {
+   "char": "角",
+   "unicode": "U+89D2"
+  },
+  {
+   "char": "拡",
+   "unicode": "U+62E1"
+  },
+  {
+   "char": "革",
+   "unicode": "U+9769"
+  },
+  {
+   "char": "格",
+   "unicode": "U+683C"
+  },
+  {
+   "char": "核",
+   "unicode": "U+6838"
+  },
+  {
+   "char": "殻",
+   "unicode": "U+6BBB"
+  },
+  {
+   "char": "郭",
+   "unicode": "U+90ED"
+  },
+  {
+   "char": "覚",
+   "unicode": "U+899A"
+  },
+  {
+   "char": "較",
+   "unicode": "U+8F03"
+  },
+  {
+   "char": "隔",
+   "unicode": "U+9694"
+  },
+  {
+   "char": "閣",
+   "unicode": "U+95A3"
+  },
+  {
+   "char": "確",
+   "unicode": "U+78BA"
+  },
+  {
+   "char": "獲",
+   "unicode": "U+7372"
+  },
+  {
+   "char": "嚇",
+   "unicode": "U+5687"
+  },
+  {
+   "char": "穫",
+   "unicode": "U+7A6B"
+  },
+  {
+   "char": "学",
+   "unicode": "U+5B66"
+  },
+  {
+   "char": "岳",
+   "unicode": "U+5CB3"
+  },
+  {
+   "char": "楽",
+   "unicode": "U+697D"
+  },
+  {
+   "char": "額",
+   "unicode": "U+984D"
+  },
+  {
+   "char": "顎",
+   "unicode": "U+984E"
+  },
+  {
+   "char": "掛",
+   "unicode": "U+639B"
+  },
+  {
+   "char": "潟",
+   "unicode": "U+6F5F"
+  },
+  {
+   "char": "括",
+   "unicode": "U+62EC"
+  },
+  {
+   "char": "活",
+   "unicode": "U+6D3B"
+  },
+  {
+   "char": "喝",
+   "unicode": "U+559D"
+  },
+  {
+   "char": "渇",
+   "unicode": "U+6E07"
+  },
+  {
+   "char": "割",
+   "unicode": "U+5272"
+  },
+  {
+   "char": "葛",
+   "unicode": "U+845B"
+  },
+  {
+   "char": "滑",
+   "unicode": "U+6ED1"
+  },
+  {
+   "char": "褐",
+   "unicode": "U+8910"
+  },
+  {
+   "char": "轄",
+   "unicode": "U+8F44"
+  },
+  {
+   "char": "且",
+   "unicode": "U+4E14"
+  },
+  {
+   "char": "株",
+   "unicode": "U+682A"
+  },
+  {
+   "char": "釜",
+   "unicode": "U+91DC"
+  },
+  {
+   "char": "鎌",
+   "unicode": "U+938C"
+  },
+  {
+   "char": "刈",
+   "unicode": "U+5208"
+  },
+  {
+   "char": "干",
+   "unicode": "U+5E72"
+  },
+  {
+   "char": "刊",
+   "unicode": "U+520A"
+  },
+  {
+   "char": "甘",
+   "unicode": "U+7518"
+  },
+  {
+   "char": "汗",
+   "unicode": "U+6C57"
+  },
+  {
+   "char": "缶",
+   "unicode": "U+7F36"
+  },
+  {
+   "char": "完",
+   "unicode": "U+5B8C"
+  },
+  {
+   "char": "肝",
+   "unicode": "U+809D"
+  },
+  {
+   "char": "官",
+   "unicode": "U+5B98"
+  },
+  {
+   "char": "冠",
+   "unicode": "U+51A0"
+  },
+  {
+   "char": "巻",
+   "unicode": "U+5DFB"
+  },
+  {
+   "char": "看",
+   "unicode": "U+770B"
+  },
+  {
+   "char": "陥",
+   "unicode": "U+9665"
+  },
+  {
+   "char": "乾",
+   "unicode": "U+4E7E"
+  },
+  {
+   "char": "勘",
+   "unicode": "U+52D8"
+  },
+  {
+   "char": "患",
+   "unicode": "U+60A3"
+  },
+  {
+   "char": "貫",
+   "unicode": "U+8CAB"
+  },
+  {
+   "char": "寒",
+   "unicode": "U+5BD2"
+  },
+  {
+   "char": "喚",
+   "unicode": "U+559A"
+  },
+  {
+   "char": "堪",
+   "unicode": "U+582A"
+  },
+  {
+   "char": "換",
+   "unicode": "U+63DB"
+  },
+  {
+   "char": "敢",
+   "unicode": "U+6562"
+  },
+  {
+   "char": "棺",
+   "unicode": "U+68FA"
+  },
+  {
+   "char": "款",
+   "unicode": "U+6B3E"
+  },
+  {
+   "char": "間",
+   "unicode": "U+9593"
+  },
+  {
+   "char": "閑",
+   "unicode": "U+9591"
+  },
+  {
+   "char": "勧",
+   "unicode": "U+52E7"
+  },
+  {
+   "char": "寛",
+   "unicode": "U+5BDB"
+  },
+  {
+   "char": "幹",
+   "unicode": "U+5E79"
+  },
+  {
+   "char": "感",
+   "unicode": "U+611F"
+  },
+  {
+   "char": "漢",
+   "unicode": "U+6F22"
+  },
+  {
+   "char": "慣",
+   "unicode": "U+6163"
+  },
+  {
+   "char": "管",
+   "unicode": "U+7BA1"
+  },
+  {
+   "char": "関",
+   "unicode": "U+95A2"
+  },
+  {
+   "char": "歓",
+   "unicode": "U+6B53"
+  },
+  {
+   "char": "監",
+   "unicode": "U+76E3"
+  },
+  {
+   "char": "緩",
+   "unicode": "U+7DE9"
+  },
+  {
+   "char": "憾",
+   "unicode": "U+61BE"
+  },
+  {
+   "char": "還",
+   "unicode": "U+9084"
+  },
+  {
+   "char": "館",
+   "unicode": "U+9928"
+  },
+  {
+   "char": "環",
+   "unicode": "U+74B0"
+  },
+  {
+   "char": "簡",
+   "unicode": "U+7C21"
+  },
+  {
+   "char": "観",
+   "unicode": "U+89B3"
+  },
+  {
+   "char": "韓",
+   "unicode": "U+97D3"
+  },
+  {
+   "char": "艦",
+   "unicode": "U+8266"
+  },
+  {
+   "char": "鑑",
+   "unicode": "U+9451"
+  },
+  {
+   "char": "丸",
+   "unicode": "U+4E38"
+  },
+  {
+   "char": "含",
+   "unicode": "U+542B"
+  },
+  {
+   "char": "岸",
+   "unicode": "U+5CB8"
+  },
+  {
+   "char": "岩",
+   "unicode": "U+5CA9"
+  },
+  {
+   "char": "玩",
+   "unicode": "U+73A9"
+  },
+  {
+   "char": "眼",
+   "unicode": "U+773C"
+  },
+  {
+   "char": "頑",
+   "unicode": "U+9811"
+  },
+  {
+   "char": "顔",
+   "unicode": "U+9854"
+  },
+  {
+   "char": "願",
+   "unicode": "U+9858"
+  },
+  {
+   "char": "企",
+   "unicode": "U+4F01"
+  },
+  {
+   "char": "伎",
+   "unicode": "U+4F0E"
+  },
+  {
+   "char": "危",
+   "unicode": "U+5371"
+  },
+  {
+   "char": "机",
+   "unicode": "U+673A"
+  },
+  {
+   "char": "気",
+   "unicode": "U+6C17"
+  },
+  {
+   "char": "岐",
+   "unicode": "U+5C90"
+  },
+  {
+   "char": "希",
+   "unicode": "U+5E0C"
+  },
+  {
+   "char": "忌",
+   "unicode": "U+5FCC"
+  },
+  {
+   "char": "汽",
+   "unicode": "U+6C7D"
+  },
+  {
+   "char": "奇",
+   "unicode": "U+5947"
+  },
+  {
+   "char": "祈",
+   "unicode": "U+7948"
+  },
+  {
+   "char": "季",
+   "unicode": "U+5B63"
+  },
+  {
+   "char": "紀",
+   "unicode": "U+7D00"
+  },
+  {
+   "char": "軌",
+   "unicode": "U+8ECC"
+  },
+  {
+   "char": "既",
+   "unicode": "U+65E2"
+  },
+  {
+   "char": "記",
+   "unicode": "U+8A18"
+  },
+  {
+   "char": "起",
+   "unicode": "U+8D77"
+  },
+  {
+   "char": "飢",
+   "unicode": "U+98E2"
+  },
+  {
+   "char": "鬼",
+   "unicode": "U+9B3C"
+  },
+  {
+   "char": "帰",
+   "unicode": "U+5E30"
+  },
+  {
+   "char": "基",
+   "unicode": "U+57FA"
+  },
+  {
+   "char": "寄",
+   "unicode": "U+5BC4"
+  },
+  {
+   "char": "規",
+   "unicode": "U+898F"
+  },
+  {
+   "char": "亀",
+   "unicode": "U+4E80"
+  },
+  {
+   "char": "喜",
+   "unicode": "U+559C"
+  },
+  {
+   "char": "幾",
+   "unicode": "U+5E7E"
+  },
+  {
+   "char": "揮",
+   "unicode": "U+63EE"
+  },
+  {
+   "char": "期",
+   "unicode": "U+671F"
+  },
+  {
+   "char": "棋",
+   "unicode": "U+68CB"
+  },
+  {
+   "char": "貴",
+   "unicode": "U+8CB4"
+  },
+  {
+   "char": "棄",
+   "unicode": "U+68C4"
+  },
+  {
+   "char": "毀",
+   "unicode": "U+6BC0"
+  },
+  {
+   "char": "旗",
+   "unicode": "U+65D7"
+  },
+  {
+   "char": "器",
+   "unicode": "U+5668"
+  },
+  {
+   "char": "畿",
+   "unicode": "U+757F"
+  },
+  {
+   "char": "輝",
+   "unicode": "U+8F1D"
+  },
+  {
+   "char": "機",
+   "unicode": "U+6A5F"
+  },
+  {
+   "char": "騎",
+   "unicode": "U+9A0E"
+  },
+  {
+   "char": "技",
+   "unicode": "U+6280"
+  },
+  {
+   "char": "宜",
+   "unicode": "U+5B9C"
+  },
+  {
+   "char": "偽",
+   "unicode": "U+507D"
+  },
+  {
+   "char": "欺",
+   "unicode": "U+6B3A"
+  },
+  {
+   "char": "義",
+   "unicode": "U+7FA9"
+  },
+  {
+   "char": "疑",
+   "unicode": "U+7591"
+  },
+  {
+   "char": "儀",
+   "unicode": "U+5100"
+  },
+  {
+   "char": "戯",
+   "unicode": "U+622F"
+  },
+  {
+   "char": "擬",
+   "unicode": "U+64EC"
+  },
+  {
+   "char": "犠",
+   "unicode": "U+72A0"
+  },
+  {
+   "char": "議",
+   "unicode": "U+8B70"
+  },
+  {
+   "char": "菊",
+   "unicode": "U+83CA"
+  },
+  {
+   "char": "吉",
+   "unicode": "U+5409"
+  },
+  {
+   "char": "喫",
+   "unicode": "U+55AB"
+  },
+  {
+   "char": "詰",
+   "unicode": "U+8A70"
+  },
+  {
+   "char": "却",
+   "unicode": "U+5374"
+  },
+  {
+   "char": "客",
+   "unicode": "U+5BA2"
+  },
+  {
+   "char": "脚",
+   "unicode": "U+811A"
+  },
+  {
+   "char": "逆",
+   "unicode": "U+9006"
+  },
+  {
+   "char": "虐",
+   "unicode": "U+8650"
+  },
+  {
+   "char": "九",
+   "unicode": "U+4E5D"
+  },
+  {
+   "char": "久",
+   "unicode": "U+4E45"
+  },
+  {
+   "char": "及",
+   "unicode": "U+53CA"
+  },
+  {
+   "char": "弓",
+   "unicode": "U+5F13"
+  },
+  {
+   "char": "丘",
+   "unicode": "U+4E18"
+  },
+  {
+   "char": "旧",
+   "unicode": "U+65E7"
+  },
+  {
+   "char": "休",
+   "unicode": "U+4F11"
+  },
+  {
+   "char": "吸",
+   "unicode": "U+5438"
+  },
+  {
+   "char": "朽",
+   "unicode": "U+673D"
+  },
+  {
+   "char": "臼",
+   "unicode": "U+81FC"
+  },
+  {
+   "char": "求",
+   "unicode": "U+6C42"
+  },
+  {
+   "char": "究",
+   "unicode": "U+7A76"
+  },
+  {
+   "char": "泣",
+   "unicode": "U+6CE3"
+  },
+  {
+   "char": "急",
+   "unicode": "U+6025"
+  },
+  {
+   "char": "級",
+   "unicode": "U+7D1A"
+  },
+  {
+   "char": "糾",
+   "unicode": "U+7CFE"
+  },
+  {
+   "char": "宮",
+   "unicode": "U+5BAE"
+  },
+  {
+   "char": "救",
+   "unicode": "U+6551"
+  },
+  {
+   "char": "球",
+   "unicode": "U+7403"
+  },
+  {
+   "char": "給",
+   "unicode": "U+7D66"
+  },
+  {
+   "char": "嗅",
+   "unicode": "U+55C5"
+  },
+  {
+   "char": "窮",
+   "unicode": "U+7AAE"
+  },
+  {
+   "char": "牛",
+   "unicode": "U+725B"
+  },
+  {
+   "char": "去",
+   "unicode": "U+53BB"
+  },
+  {
+   "char": "巨",
+   "unicode": "U+5DE8"
+  },
+  {
+   "char": "居",
+   "unicode": "U+5C45"
+  },
+  {
+   "char": "拒",
+   "unicode": "U+62D2"
+  },
+  {
+   "char": "拠",
+   "unicode": "U+62E0"
+  },
+  {
+   "char": "挙",
+   "unicode": "U+6319"
+  },
+  {
+   "char": "虚",
+   "unicode": "U+865A"
+  },
+  {
+   "char": "許",
+   "unicode": "U+8A31"
+  },
+  {
+   "char": "距",
+   "unicode": "U+8DDD"
+  },
+  {
+   "char": "魚",
+   "unicode": "U+9B5A"
+  },
+  {
+   "char": "御",
+   "unicode": "U+5FA1"
+  },
+  {
+   "char": "漁",
+   "unicode": "U+6F01"
+  },
+  {
+   "char": "凶",
+   "unicode": "U+51F6"
+  },
+  {
+   "char": "共",
+   "unicode": "U+5171"
+  },
+  {
+   "char": "叫",
+   "unicode": "U+53EB"
+  },
+  {
+   "char": "狂",
+   "unicode": "U+72C2"
+  },
+  {
+   "char": "京",
+   "unicode": "U+4EAC"
+  },
+  {
+   "char": "享",
+   "unicode": "U+4EAB"
+  },
+  {
+   "char": "供",
+   "unicode": "U+4F9B"
+  },
+  {
+   "char": "協",
+   "unicode": "U+5354"
+  },
+  {
+   "char": "況",
+   "unicode": "U+6CC1"
+  },
+  {
+   "char": "峡",
+   "unicode": "U+5CE1"
+  },
+  {
+   "char": "挟",
+   "unicode": "U+631F"
+  },
+  {
+   "char": "狭",
+   "unicode": "U+72ED"
+  },
+  {
+   "char": "恐",
+   "unicode": "U+6050"
+  },
+  {
+   "char": "恭",
+   "unicode": "U+606D"
+  },
+  {
+   "char": "胸",
+   "unicode": "U+80F8"
+  },
+  {
+   "char": "脅",
+   "unicode": "U+8105"
+  },
+  {
+   "char": "強",
+   "unicode": "U+5F37"
+  },
+  {
+   "char": "教",
+   "unicode": "U+6559"
+  },
+  {
+   "char": "郷",
+   "unicode": "U+90F7"
+  },
+  {
+   "char": "境",
+   "unicode": "U+5883"
+  },
+  {
+   "char": "橋",
+   "unicode": "U+6A4B"
+  },
+  {
+   "char": "矯",
+   "unicode": "U+77EF"
+  },
+  {
+   "char": "鏡",
+   "unicode": "U+93E1"
+  },
+  {
+   "char": "競",
+   "unicode": "U+7AF6"
+  },
+  {
+   "char": "響",
+   "unicode": "U+97FF"
+  },
+  {
+   "char": "驚",
+   "unicode": "U+9A5A"
+  },
+  {
+   "char": "仰",
+   "unicode": "U+4EF0"
+  },
+  {
+   "char": "暁",
+   "unicode": "U+6681"
+  },
+  {
+   "char": "業",
+   "unicode": "U+696D"
+  },
+  {
+   "char": "凝",
+   "unicode": "U+51DD"
+  },
+  {
+   "char": "曲",
+   "unicode": "U+66F2"
+  },
+  {
+   "char": "局",
+   "unicode": "U+5C40"
+  },
+  {
+   "char": "極",
+   "unicode": "U+6975"
+  },
+  {
+   "char": "玉",
+   "unicode": "U+7389"
+  },
+  {
+   "char": "巾",
+   "unicode": "U+5DFE"
+  },
+  {
+   "char": "斤",
+   "unicode": "U+65A4"
+  },
+  {
+   "char": "均",
+   "unicode": "U+5747"
+  },
+  {
+   "char": "近",
+   "unicode": "U+8FD1"
+  },
+  {
+   "char": "金",
+   "unicode": "U+91D1"
+  },
+  {
+   "char": "菌",
+   "unicode": "U+83CC"
+  },
+  {
+   "char": "勤",
+   "unicode": "U+52E4"
+  },
+  {
+   "char": "琴",
+   "unicode": "U+7434"
+  },
+  {
+   "char": "筋",
+   "unicode": "U+7B4B"
+  },
+  {
+   "char": "僅",
+   "unicode": "U+50C5"
+  },
+  {
+   "char": "禁",
+   "unicode": "U+7981"
+  },
+  {
+   "char": "緊",
+   "unicode": "U+7DCA"
+  },
+  {
+   "char": "錦",
+   "unicode": "U+9326"
+  },
+  {
+   "char": "謹",
+   "unicode": "U+8B39"
+  },
+  {
+   "char": "襟",
+   "unicode": "U+895F"
+  },
+  {
+   "char": "吟",
+   "unicode": "U+541F"
+  },
+  {
+   "char": "銀",
+   "unicode": "U+9280"
+  },
+  {
+   "char": "区",
+   "unicode": "U+533A"
+  },
+  {
+   "char": "句",
+   "unicode": "U+53E5"
+  },
+  {
+   "char": "苦",
+   "unicode": "U+82E6"
+  },
+  {
+   "char": "駆",
+   "unicode": "U+99C6"
+  },
+  {
+   "char": "具",
+   "unicode": "U+5177"
+  },
+  {
+   "char": "惧",
+   "unicode": "U+60E7"
+  },
+  {
+   "char": "愚",
+   "unicode": "U+611A"
+  },
+  {
+   "char": "空",
+   "unicode": "U+7A7A"
+  },
+  {
+   "char": "偶",
+   "unicode": "U+5076"
+  },
+  {
+   "char": "遇",
+   "unicode": "U+9047"
+  },
+  {
+   "char": "隅",
+   "unicode": "U+9685"
+  },
+  {
+   "char": "串",
+   "unicode": "U+4E32"
+  },
+  {
+   "char": "屈",
+   "unicode": "U+5C48"
+  },
+  {
+   "char": "掘",
+   "unicode": "U+6398"
+  },
+  {
+   "char": "窟",
+   "unicode": "U+7A9F"
+  },
+  {
+   "char": "熊",
+   "unicode": "U+718A"
+  },
+  {
+   "char": "繰",
+   "unicode": "U+7E70"
+  },
+  {
+   "char": "君",
+   "unicode": "U+541B"
+  },
+  {
+   "char": "訓",
+   "unicode": "U+8A13"
+  },
+  {
+   "char": "勲",
+   "unicode": "U+52F2"
+  },
+  {
+   "char": "薫",
+   "unicode": "U+85AB"
+  },
+  {
+   "char": "軍",
+   "unicode": "U+8ECD"
+  },
+  {
+   "char": "郡",
+   "unicode": "U+90E1"
+  },
+  {
+   "char": "群",
+   "unicode": "U+7FA4"
+  },
+  {
+   "char": "兄",
+   "unicode": "U+5144"
+  },
+  {
+   "char": "刑",
+   "unicode": "U+5211"
+  },
+  {
+   "char": "形",
+   "unicode": "U+5F62"
+  },
+  {
+   "char": "系",
+   "unicode": "U+7CFB"
+  },
+  {
+   "char": "径",
+   "unicode": "U+5F84"
+  },
+  {
+   "char": "茎",
+   "unicode": "U+830E"
+  },
+  {
+   "char": "係",
+   "unicode": "U+4FC2"
+  },
+  {
+   "char": "型",
+   "unicode": "U+578B"
+  },
+  {
+   "char": "契",
+   "unicode": "U+5951"
+  },
+  {
+   "char": "計",
+   "unicode": "U+8A08"
+  },
+  {
+   "char": "恵",
+   "unicode": "U+6075"
+  },
+  {
+   "char": "啓",
+   "unicode": "U+5553"
+  },
+  {
+   "char": "掲",
+   "unicode": "U+63B2"
+  },
+  {
+   "char": "渓",
+   "unicode": "U+6E13"
+  },
+  {
+   "char": "経",
+   "unicode": "U+7D4C"
+  },
+  {
+   "char": "蛍",
+   "unicode": "U+86CD"
+  },
+  {
+   "char": "敬",
+   "unicode": "U+656C"
+  },
+  {
+   "char": "景",
+   "unicode": "U+666F"
+  },
+  {
+   "char": "軽",
+   "unicode": "U+8EFD"
+  },
+  {
+   "char": "傾",
+   "unicode": "U+50BE"
+  },
+  {
+   "char": "携",
+   "unicode": "U+643A"
+  },
+  {
+   "char": "継",
+   "unicode": "U+7D99"
+  },
+  {
+   "char": "詣",
+   "unicode": "U+8A63"
+  },
+  {
+   "char": "慶",
+   "unicode": "U+6176"
+  },
+  {
+   "char": "憬",
+   "unicode": "U+61AC"
+  },
+  {
+   "char": "稽",
+   "unicode": "U+7A3D"
+  },
+  {
+   "char": "憩",
+   "unicode": "U+61A9"
+  },
+  {
+   "char": "警",
+   "unicode": "U+8B66"
+  },
+  {
+   "char": "鶏",
+   "unicode": "U+9D8F"
+  },
+  {
+   "char": "芸",
+   "unicode": "U+82B8"
+  },
+  {
+   "char": "迎",
+   "unicode": "U+8FCE"
+  },
+  {
+   "char": "鯨",
+   "unicode": "U+9BE8"
+  },
+  {
+   "char": "隙",
+   "unicode": "U+9699"
+  },
+  {
+   "char": "劇",
+   "unicode": "U+5287"
+  },
+  {
+   "char": "撃",
+   "unicode": "U+6483"
+  },
+  {
+   "char": "激",
+   "unicode": "U+6FC0"
+  },
+  {
+   "char": "桁",
+   "unicode": "U+6841"
+  },
+  {
+   "char": "欠",
+   "unicode": "U+6B20"
+  },
+  {
+   "char": "穴",
+   "unicode": "U+7A74"
+  },
+  {
+   "char": "血",
+   "unicode": "U+8840"
+  },
+  {
+   "char": "決",
+   "unicode": "U+6C7A"
+  },
+  {
+   "char": "結",
+   "unicode": "U+7D50"
+  },
+  {
+   "char": "傑",
+   "unicode": "U+5091"
+  },
+  {
+   "char": "潔",
+   "unicode": "U+6F54"
+  },
+  {
+   "char": "月",
+   "unicode": "U+6708"
+  },
+  {
+   "char": "犬",
+   "unicode": "U+72AC"
+  },
+  {
+   "char": "件",
+   "unicode": "U+4EF6"
+  },
+  {
+   "char": "見",
+   "unicode": "U+898B"
+  },
+  {
+   "char": "券",
+   "unicode": "U+5238"
+  },
+  {
+   "char": "肩",
+   "unicode": "U+80A9"
+  },
+  {
+   "char": "建",
+   "unicode": "U+5EFA"
+  },
+  {
+   "char": "研",
+   "unicode": "U+7814"
+  },
+  {
+   "char": "県",
+   "unicode": "U+770C"
+  },
+  {
+   "char": "倹",
+   "unicode": "U+5039"
+  },
+  {
+   "char": "兼",
+   "unicode": "U+517C"
+  },
+  {
+   "char": "剣",
+   "unicode": "U+5263"
+  },
+  {
+   "char": "拳",
+   "unicode": "U+62F3"
+  },
+  {
+   "char": "軒",
+   "unicode": "U+8ED2"
+  },
+  {
+   "char": "健",
+   "unicode": "U+5065"
+  },
+  {
+   "char": "険",
+   "unicode": "U+967A"
+  },
+  {
+   "char": "圏",
+   "unicode": "U+570F"
+  },
+  {
+   "char": "堅",
+   "unicode": "U+5805"
+  },
+  {
+   "char": "検",
+   "unicode": "U+691C"
+  },
+  {
+   "char": "嫌",
+   "unicode": "U+5ACC"
+  },
+  {
+   "char": "献",
+   "unicode": "U+732E"
+  },
+  {
+   "char": "絹",
+   "unicode": "U+7D79"
+  },
+  {
+   "char": "遣",
+   "unicode": "U+9063"
+  },
+  {
+   "char": "権",
+   "unicode": "U+6A29"
+  },
+  {
+   "char": "憲",
+   "unicode": "U+61B2"
+  },
+  {
+   "char": "賢",
+   "unicode": "U+8CE2"
+  },
+  {
+   "char": "謙",
+   "unicode": "U+8B19"
+  },
+  {
+   "char": "鍵",
+   "unicode": "U+9375"
+  },
+  {
+   "char": "繭",
+   "unicode": "U+7E6D"
+  },
+  {
+   "char": "顕",
+   "unicode": "U+9855"
+  },
+  {
+   "char": "験",
+   "unicode": "U+9A13"
+  },
+  {
+   "char": "懸",
+   "unicode": "U+61F8"
+  },
+  {
+   "char": "元",
+   "unicode": "U+5143"
+  },
+  {
+   "char": "幻",
+   "unicode": "U+5E7B"
+  },
+  {
+   "char": "玄",
+   "unicode": "U+7384"
+  },
+  {
+   "char": "言",
+   "unicode": "U+8A00"
+  },
+  {
+   "char": "弦",
+   "unicode": "U+5F26"
+  },
+  {
+   "char": "限",
+   "unicode": "U+9650"
+  },
+  {
+   "char": "原",
+   "unicode": "U+539F"
+  },
+  {
+   "char": "現",
+   "unicode": "U+73FE"
+  },
+  {
+   "char": "舷",
+   "unicode": "U+8237"
+  },
+  {
+   "char": "減",
+   "unicode": "U+6E1B"
+  },
+  {
+   "char": "源",
+   "unicode": "U+6E90"
+  },
+  {
+   "char": "厳",
+   "unicode": "U+53B3"
+  },
+  {
+   "char": "己",
+   "unicode": "U+5DF1"
+  },
+  {
+   "char": "戸",
+   "unicode": "U+6238"
+  },
+  {
+   "char": "古",
+   "unicode": "U+53E4"
+  },
+  {
+   "char": "呼",
+   "unicode": "U+547C"
+  },
+  {
+   "char": "固",
+   "unicode": "U+56FA"
+  },
+  {
+   "char": "股",
+   "unicode": "U+80A1"
+  },
+  {
+   "char": "虎",
+   "unicode": "U+864E"
+  },
+  {
+   "char": "孤",
+   "unicode": "U+5B64"
+  },
+  {
+   "char": "弧",
+   "unicode": "U+5F27"
+  },
+  {
+   "char": "故",
+   "unicode": "U+6545"
+  },
+  {
+   "char": "枯",
+   "unicode": "U+67AF"
+  },
+  {
+   "char": "個",
+   "unicode": "U+500B"
+  },
+  {
+   "char": "庫",
+   "unicode": "U+5EAB"
+  },
+  {
+   "char": "湖",
+   "unicode": "U+6E56"
+  },
+  {
+   "char": "雇",
+   "unicode": "U+96C7"
+  },
+  {
+   "char": "誇",
+   "unicode": "U+8A87"
+  },
+  {
+   "char": "鼓",
+   "unicode": "U+9F13"
+  },
+  {
+   "char": "錮",
+   "unicode": "U+932E"
+  },
+  {
+   "char": "顧",
+   "unicode": "U+9867"
+  },
+  {
+   "char": "五",
+   "unicode": "U+4E94"
+  },
+  {
+   "char": "互",
+   "unicode": "U+4E92"
+  },
+  {
+   "char": "午",
+   "unicode": "U+5348"
+  },
+  {
+   "char": "呉",
+   "unicode": "U+5449"
+  },
+  {
+   "char": "後",
+   "unicode": "U+5F8C"
+  },
+  {
+   "char": "娯",
+   "unicode": "U+5A2F"
+  },
+  {
+   "char": "悟",
+   "unicode": "U+609F"
+  },
+  {
+   "char": "碁",
+   "unicode": "U+7881"
+  },
+  {
+   "char": "語",
+   "unicode": "U+8A9E"
+  },
+  {
+   "char": "誤",
+   "unicode": "U+8AA4"
+  },
+  {
+   "char": "護",
+   "unicode": "U+8B77"
+  },
+  {
+   "char": "口",
+   "unicode": "U+53E3"
+  },
+  {
+   "char": "工",
+   "unicode": "U+5DE5"
+  },
+  {
+   "char": "公",
+   "unicode": "U+516C"
+  },
+  {
+   "char": "勾",
+   "unicode": "U+52FE"
+  },
+  {
+   "char": "孔",
+   "unicode": "U+5B54"
+  },
+  {
+   "char": "功",
+   "unicode": "U+529F"
+  },
+  {
+   "char": "巧",
+   "unicode": "U+5DE7"
+  },
+  {
+   "char": "広",
+   "unicode": "U+5E83"
+  },
+  {
+   "char": "甲",
+   "unicode": "U+7532"
+  },
+  {
+   "char": "交",
+   "unicode": "U+4EA4"
+  },
+  {
+   "char": "光",
+   "unicode": "U+5149"
+  },
+  {
+   "char": "向",
+   "unicode": "U+5411"
+  },
+  {
+   "char": "后",
+   "unicode": "U+540E"
+  },
+  {
+   "char": "好",
+   "unicode": "U+597D"
+  },
+  {
+   "char": "江",
+   "unicode": "U+6C5F"
+  },
+  {
+   "char": "考",
+   "unicode": "U+8003"
+  },
+  {
+   "char": "行",
+   "unicode": "U+884C"
+  },
+  {
+   "char": "坑",
+   "unicode": "U+5751"
+  },
+  {
+   "char": "孝",
+   "unicode": "U+5B5D"
+  },
+  {
+   "char": "抗",
+   "unicode": "U+6297"
+  },
+  {
+   "char": "攻",
+   "unicode": "U+653B"
+  },
+  {
+   "char": "更",
+   "unicode": "U+66F4"
+  },
+  {
+   "char": "効",
+   "unicode": "U+52B9"
+  },
+  {
+   "char": "幸",
+   "unicode": "U+5E78"
+  },
+  {
+   "char": "拘",
+   "unicode": "U+62D8"
+  },
+  {
+   "char": "肯",
+   "unicode": "U+80AF"
+  },
+  {
+   "char": "侯",
+   "unicode": "U+4FAF"
+  },
+  {
+   "char": "厚",
+   "unicode": "U+539A"
+  },
+  {
+   "char": "恒",
+   "unicode": "U+6052"
+  },
+  {
+   "char": "洪",
+   "unicode": "U+6D2A"
+  },
+  {
+   "char": "皇",
+   "unicode": "U+7687"
+  },
+  {
+   "char": "紅",
+   "unicode": "U+7D05"
+  },
+  {
+   "char": "荒",
+   "unicode": "U+8352"
+  },
+  {
+   "char": "郊",
+   "unicode": "U+90CA"
+  },
+  {
+   "char": "香",
+   "unicode": "U+9999"
+  },
+  {
+   "char": "候",
+   "unicode": "U+5019"
+  },
+  {
+   "char": "校",
+   "unicode": "U+6821"
+  },
+  {
+   "char": "耕",
+   "unicode": "U+8015"
+  },
+  {
+   "char": "航",
+   "unicode": "U+822A"
+  },
+  {
+   "char": "貢",
+   "unicode": "U+8CA2"
+  },
+  {
+   "char": "降",
+   "unicode": "U+964D"
+  },
+  {
+   "char": "高",
+   "unicode": "U+9AD8"
+  },
+  {
+   "char": "康",
+   "unicode": "U+5EB7"
+  },
+  {
+   "char": "控",
+   "unicode": "U+63A7"
+  },
+  {
+   "char": "梗",
+   "unicode": "U+6897"
+  },
+  {
+   "char": "黄",
+   "unicode": "U+9EC4"
+  },
+  {
+   "char": "喉",
+   "unicode": "U+5589"
+  },
+  {
+   "char": "慌",
+   "unicode": "U+614C"
+  },
+  {
+   "char": "港",
+   "unicode": "U+6E2F"
+  },
+  {
+   "char": "硬",
+   "unicode": "U+786C"
+  },
+  {
+   "char": "絞",
+   "unicode": "U+7D5E"
+  },
+  {
+   "char": "項",
+   "unicode": "U+9805"
+  },
+  {
+   "char": "溝",
+   "unicode": "U+6E9D"
+  },
+  {
+   "char": "鉱",
+   "unicode": "U+9271"
+  },
+  {
+   "char": "構",
+   "unicode": "U+69CB"
+  },
+  {
+   "char": "綱",
+   "unicode": "U+7DB1"
+  },
+  {
+   "char": "酵",
+   "unicode": "U+9175"
+  },
+  {
+   "char": "稿",
+   "unicode": "U+7A3F"
+  },
+  {
+   "char": "興",
+   "unicode": "U+8208"
+  },
+  {
+   "char": "衡",
+   "unicode": "U+8861"
+  },
+  {
+   "char": "鋼",
+   "unicode": "U+92FC"
+  },
+  {
+   "char": "講",
+   "unicode": "U+8B1B"
+  },
+  {
+   "char": "購",
+   "unicode": "U+8CFC"
+  },
+  {
+   "char": "乞",
+   "unicode": "U+4E5E"
+  },
+  {
+   "char": "号",
+   "unicode": "U+53F7"
+  },
+  {
+   "char": "合",
+   "unicode": "U+5408"
+  },
+  {
+   "char": "拷",
+   "unicode": "U+62F7"
+  },
+  {
+   "char": "剛",
+   "unicode": "U+525B"
+  },
+  {
+   "char": "傲",
+   "unicode": "U+50B2"
+  },
+  {
+   "char": "豪",
+   "unicode": "U+8C6A"
+  },
+  {
+   "char": "克",
+   "unicode": "U+514B"
+  },
+  {
+   "char": "告",
+   "unicode": "U+544A"
+  },
+  {
+   "char": "谷",
+   "unicode": "U+8C37"
+  },
+  {
+   "char": "刻",
+   "unicode": "U+523B"
+  },
+  {
+   "char": "国",
+   "unicode": "U+56FD"
+  },
+  {
+   "char": "黒",
+   "unicode": "U+9ED2"
+  },
+  {
+   "char": "穀",
+   "unicode": "U+7A40"
+  },
+  {
+   "char": "酷",
+   "unicode": "U+9177"
+  },
+  {
+   "char": "獄",
+   "unicode": "U+7344"
+  },
+  {
+   "char": "骨",
+   "unicode": "U+9AA8"
+  },
+  {
+   "char": "駒",
+   "unicode": "U+99D2"
+  },
+  {
+   "char": "込",
+   "unicode": "U+8FBC"
+  },
+  {
+   "char": "頃",
+   "unicode": "U+9803"
+  },
+  {
+   "char": "今",
+   "unicode": "U+4ECA"
+  },
+  {
+   "char": "困",
+   "unicode": "U+56F0"
+  },
+  {
+   "char": "昆",
+   "unicode": "U+6606"
+  },
+  {
+   "char": "恨",
+   "unicode": "U+6068"
+  },
+  {
+   "char": "根",
+   "unicode": "U+6839"
+  },
+  {
+   "char": "婚",
+   "unicode": "U+5A5A"
+  },
+  {
+   "char": "混",
+   "unicode": "U+6DF7"
+  },
+  {
+   "char": "痕",
+   "unicode": "U+75D5"
+  },
+  {
+   "char": "紺",
+   "unicode": "U+7D3A"
+  },
+  {
+   "char": "魂",
+   "unicode": "U+9B42"
+  },
+  {
+   "char": "墾",
+   "unicode": "U+58BE"
+  },
+  {
+   "char": "懇",
+   "unicode": "U+61C7"
+  },
+  {
+   "char": "左",
+   "unicode": "U+5DE6"
+  },
+  {
+   "char": "佐",
+   "unicode": "U+4F50"
+  },
+  {
+   "char": "沙",
+   "unicode": "U+6C99"
+  },
+  {
+   "char": "査",
+   "unicode": "U+67FB"
+  },
+  {
+   "char": "砂",
+   "unicode": "U+7802"
+  },
+  {
+   "char": "唆",
+   "unicode": "U+5506"
+  },
+  {
+   "char": "差",
+   "unicode": "U+5DEE"
+  },
+  {
+   "char": "詐",
+   "unicode": "U+8A50"
+  },
+  {
+   "char": "鎖",
+   "unicode": "U+9396"
+  },
+  {
+   "char": "座",
+   "unicode": "U+5EA7"
+  },
+  {
+   "char": "挫",
+   "unicode": "U+632B"
+  },
+  {
+   "char": "才",
+   "unicode": "U+624D"
+  },
+  {
+   "char": "再",
+   "unicode": "U+518D"
+  },
+  {
+   "char": "災",
+   "unicode": "U+707D"
+  },
+  {
+   "char": "妻",
+   "unicode": "U+59BB"
+  },
+  {
+   "char": "采",
+   "unicode": "U+91C7"
+  },
+  {
+   "char": "砕",
+   "unicode": "U+7815"
+  },
+  {
+   "char": "宰",
+   "unicode": "U+5BB0"
+  },
+  {
+   "char": "栽",
+   "unicode": "U+683D"
+  },
+  {
+   "char": "彩",
+   "unicode": "U+5F69"
+  },
+  {
+   "char": "採",
+   "unicode": "U+63A1"
+  },
+  {
+   "char": "済",
+   "unicode": "U+6E08"
+  },
+  {
+   "char": "祭",
+   "unicode": "U+796D"
+  },
+  {
+   "char": "斎",
+   "unicode": "U+658E"
+  },
+  {
+   "char": "細",
+   "unicode": "U+7D30"
+  },
+  {
+   "char": "菜",
+   "unicode": "U+83DC"
+  },
+  {
+   "char": "最",
+   "unicode": "U+6700"
+  },
+  {
+   "char": "裁",
+   "unicode": "U+88C1"
+  },
+  {
+   "char": "債",
+   "unicode": "U+50B5"
+  },
+  {
+   "char": "催",
+   "unicode": "U+50AC"
+  },
+  {
+   "char": "塞",
+   "unicode": "U+585E"
+  },
+  {
+   "char": "歳",
+   "unicode": "U+6B73"
+  },
+  {
+   "char": "載",
+   "unicode": "U+8F09"
+  },
+  {
+   "char": "際",
+   "unicode": "U+969B"
+  },
+  {
+   "char": "埼",
+   "unicode": "U+57FC"
+  },
+  {
+   "char": "在",
+   "unicode": "U+5728"
+  },
+  {
+   "char": "材",
+   "unicode": "U+6750"
+  },
+  {
+   "char": "剤",
+   "unicode": "U+5264"
+  },
+  {
+   "char": "財",
+   "unicode": "U+8CA1"
+  },
+  {
+   "char": "罪",
+   "unicode": "U+7F6A"
+  },
+  {
+   "char": "崎",
+   "unicode": "U+5D0E"
+  },
+  {
+   "char": "作",
+   "unicode": "U+4F5C"
+  },
+  {
+   "char": "削",
+   "unicode": "U+524A"
+  },
+  {
+   "char": "昨",
+   "unicode": "U+6628"
+  },
+  {
+   "char": "柵",
+   "unicode": "U+67F5"
+  },
+  {
+   "char": "索",
+   "unicode": "U+7D22"
+  },
+  {
+   "char": "策",
+   "unicode": "U+7B56"
+  },
+  {
+   "char": "酢",
+   "unicode": "U+9162"
+  },
+  {
+   "char": "搾",
+   "unicode": "U+643E"
+  },
+  {
+   "char": "錯",
+   "unicode": "U+932F"
+  },
+  {
+   "char": "咲",
+   "unicode": "U+54B2"
+  },
+  {
+   "char": "冊",
+   "unicode": "U+518A"
+  },
+  {
+   "char": "札",
+   "unicode": "U+672D"
+  },
+  {
+   "char": "刷",
+   "unicode": "U+5237"
+  },
+  {
+   "char": "刹",
+   "unicode": "U+5239"
+  },
+  {
+   "char": "拶",
+   "unicode": "U+62F6"
+  },
+  {
+   "char": "殺",
+   "unicode": "U+6BBA"
+  },
+  {
+   "char": "察",
+   "unicode": "U+5BDF"
+  },
+  {
+   "char": "撮",
+   "unicode": "U+64AE"
+  },
+  {
+   "char": "擦",
+   "unicode": "U+64E6"
+  },
+  {
+   "char": "雑",
+   "unicode": "U+96D1"
+  },
+  {
+   "char": "皿",
+   "unicode": "U+76BF"
+  },
+  {
+   "char": "三",
+   "unicode": "U+4E09"
+  },
+  {
+   "char": "山",
+   "unicode": "U+5C71"
+  },
+  {
+   "char": "参",
+   "unicode": "U+53C2"
+  },
+  {
+   "char": "桟",
+   "unicode": "U+685F"
+  },
+  {
+   "char": "蚕",
+   "unicode": "U+8695"
+  },
+  {
+   "char": "惨",
+   "unicode": "U+60E8"
+  },
+  {
+   "char": "産",
+   "unicode": "U+7523"
+  },
+  {
+   "char": "傘",
+   "unicode": "U+5098"
+  },
+  {
+   "char": "散",
+   "unicode": "U+6563"
+  },
+  {
+   "char": "算",
+   "unicode": "U+7B97"
+  },
+  {
+   "char": "酸",
+   "unicode": "U+9178"
+  },
+  {
+   "char": "賛",
+   "unicode": "U+8CDB"
+  },
+  {
+   "char": "残",
+   "unicode": "U+6B8B"
+  },
+  {
+   "char": "斬",
+   "unicode": "U+65AC"
+  },
+  {
+   "char": "暫",
+   "unicode": "U+66AB"
+  },
+  {
+   "char": "士",
+   "unicode": "U+58EB"
+  },
+  {
+   "char": "子",
+   "unicode": "U+5B50"
+  },
+  {
+   "char": "支",
+   "unicode": "U+652F"
+  },
+  {
+   "char": "止",
+   "unicode": "U+6B62"
+  },
+  {
+   "char": "氏",
+   "unicode": "U+6C0F"
+  },
+  {
+   "char": "仕",
+   "unicode": "U+4ED5"
+  },
+  {
+   "char": "史",
+   "unicode": "U+53F2"
+  },
+  {
+   "char": "司",
+   "unicode": "U+53F8"
+  },
+  {
+   "char": "四",
+   "unicode": "U+56DB"
+  },
+  {
+   "char": "市",
+   "unicode": "U+5E02"
+  },
+  {
+   "char": "矢",
+   "unicode": "U+77E2"
+  },
+  {
+   "char": "旨",
+   "unicode": "U+65E8"
+  },
+  {
+   "char": "死",
+   "unicode": "U+6B7B"
+  },
+  {
+   "char": "糸",
+   "unicode": "U+7CF8"
+  },
+  {
+   "char": "至",
+   "unicode": "U+81F3"
+  },
+  {
+   "char": "伺",
+   "unicode": "U+4F3A"
+  },
+  {
+   "char": "志",
+   "unicode": "U+5FD7"
+  },
+  {
+   "char": "私",
+   "unicode": "U+79C1"
+  },
+  {
+   "char": "使",
+   "unicode": "U+4F7F"
+  },
+  {
+   "char": "刺",
+   "unicode": "U+523A"
+  },
+  {
+   "char": "始",
+   "unicode": "U+59CB"
+  },
+  {
+   "char": "姉",
+   "unicode": "U+59C9"
+  },
+  {
+   "char": "枝",
+   "unicode": "U+679D"
+  },
+  {
+   "char": "祉",
+   "unicode": "U+7949"
+  },
+  {
+   "char": "肢",
+   "unicode": "U+80A2"
+  },
+  {
+   "char": "姿",
+   "unicode": "U+59FF"
+  },
+  {
+   "char": "思",
+   "unicode": "U+601D"
+  },
+  {
+   "char": "指",
+   "unicode": "U+6307"
+  },
+  {
+   "char": "施",
+   "unicode": "U+65BD"
+  },
+  {
+   "char": "師",
+   "unicode": "U+5E2B"
+  },
+  {
+   "char": "恣",
+   "unicode": "U+6063"
+  },
+  {
+   "char": "紙",
+   "unicode": "U+7D19"
+  },
+  {
+   "char": "脂",
+   "unicode": "U+8102"
+  },
+  {
+   "char": "視",
+   "unicode": "U+8996"
+  },
+  {
+   "char": "紫",
+   "unicode": "U+7D2B"
+  },
+  {
+   "char": "詞",
+   "unicode": "U+8A5E"
+  },
+  {
+   "char": "歯",
+   "unicode": "U+6B6F"
+  },
+  {
+   "char": "嗣",
+   "unicode": "U+55E3"
+  },
+  {
+   "char": "試",
+   "unicode": "U+8A66"
+  },
+  {
+   "char": "詩",
+   "unicode": "U+8A69"
+  },
+  {
+   "char": "資",
+   "unicode": "U+8CC7"
+  },
+  {
+   "char": "飼",
+   "unicode": "U+98FC"
+  },
+  {
+   "char": "誌",
+   "unicode": "U+8A8C"
+  },
+  {
+   "char": "雌",
+   "unicode": "U+96CC"
+  },
+  {
+   "char": "摯",
+   "unicode": "U+646F"
+  },
+  {
+   "char": "賜",
+   "unicode": "U+8CDC"
+  },
+  {
+   "char": "諮",
+   "unicode": "U+8AEE"
+  },
+  {
+   "char": "示",
+   "unicode": "U+793A"
+  },
+  {
+   "char": "字",
+   "unicode": "U+5B57"
+  },
+  {
+   "char": "寺",
+   "unicode": "U+5BFA"
+  },
+  {
+   "char": "次",
+   "unicode": "U+6B21"
+  },
+  {
+   "char": "耳",
+   "unicode": "U+8033"
+  },
+  {
+   "char": "自",
+   "unicode": "U+81EA"
+  },
+  {
+   "char": "似",
+   "unicode": "U+4F3C"
+  },
+  {
+   "char": "児",
+   "unicode": "U+5150"
+  },
+  {
+   "char": "事",
+   "unicode": "U+4E8B"
+  },
+  {
+   "char": "侍",
+   "unicode": "U+4F8D"
+  },
+  {
+   "char": "治",
+   "unicode": "U+6CBB"
+  },
+  {
+   "char": "持",
+   "unicode": "U+6301"
+  },
+  {
+   "char": "時",
+   "unicode": "U+6642"
+  },
+  {
+   "char": "滋",
+   "unicode": "U+6ECB"
+  },
+  {
+   "char": "慈",
+   "unicode": "U+6148"
+  },
+  {
+   "char": "辞",
+   "unicode": "U+8F9E"
+  },
+  {
+   "char": "磁",
+   "unicode": "U+78C1"
+  },
+  {
+   "char": "餌",
+   "unicode": "U+990C"
+  },
+  {
+   "char": "璽",
+   "unicode": "U+74BD"
+  },
+  {
+   "char": "鹿",
+   "unicode": "U+9E7F"
+  },
+  {
+   "char": "式",
+   "unicode": "U+5F0F"
+  },
+  {
+   "char": "識",
+   "unicode": "U+8B58"
+  },
+  {
+   "char": "軸",
+   "unicode": "U+8EF8"
+  },
+  {
+   "char": "七",
+   "unicode": "U+4E03"
+  },
+  {
+   "char": "𠮟",
+   "unicode": "U+20B9F"
+  },
+  {
+   "char": "失",
+   "unicode": "U+5931"
+  },
+  {
+   "char": "室",
+   "unicode": "U+5BA4"
+  },
+  {
+   "char": "疾",
+   "unicode": "U+75BE"
+  },
+  {
+   "char": "執",
+   "unicode": "U+57F7"
+  },
+  {
+   "char": "湿",
+   "unicode": "U+6E7F"
+  },
+  {
+   "char": "嫉",
+   "unicode": "U+5AC9"
+  },
+  {
+   "char": "漆",
+   "unicode": "U+6F06"
+  },
+  {
+   "char": "質",
+   "unicode": "U+8CEA"
+  },
+  {
+   "char": "実",
+   "unicode": "U+5B9F"
+  },
+  {
+   "char": "芝",
+   "unicode": "U+829D"
+  },
+  {
+   "char": "写",
+   "unicode": "U+5199"
+  },
+  {
+   "char": "社",
+   "unicode": "U+793E"
+  },
+  {
+   "char": "車",
+   "unicode": "U+8ECA"
+  },
+  {
+   "char": "舎",
+   "unicode": "U+820E"
+  },
+  {
+   "char": "者",
+   "unicode": "U+8005"
+  },
+  {
+   "char": "射",
+   "unicode": "U+5C04"
+  },
+  {
+   "char": "捨",
+   "unicode": "U+6368"
+  },
+  {
+   "char": "赦",
+   "unicode": "U+8D66"
+  },
+  {
+   "char": "斜",
+   "unicode": "U+659C"
+  },
+  {
+   "char": "煮",
+   "unicode": "U+716E"
+  },
+  {
+   "char": "遮",
+   "unicode": "U+906E"
+  },
+  {
+   "char": "謝",
+   "unicode": "U+8B1D"
+  },
+  {
+   "char": "邪",
+   "unicode": "U+90AA"
+  },
+  {
+   "char": "蛇",
+   "unicode": "U+86C7"
+  },
+  {
+   "char": "尺",
+   "unicode": "U+5C3A"
+  },
+  {
+   "char": "借",
+   "unicode": "U+501F"
+  },
+  {
+   "char": "酌",
+   "unicode": "U+914C"
+  },
+  {
+   "char": "釈",
+   "unicode": "U+91C8"
+  },
+  {
+   "char": "爵",
+   "unicode": "U+7235"
+  },
+  {
+   "char": "若",
+   "unicode": "U+82E5"
+  },
+  {
+   "char": "弱",
+   "unicode": "U+5F31"
+  },
+  {
+   "char": "寂",
+   "unicode": "U+5BC2"
+  },
+  {
+   "char": "手",
+   "unicode": "U+624B"
+  },
+  {
+   "char": "主",
+   "unicode": "U+4E3B"
+  },
+  {
+   "char": "守",
+   "unicode": "U+5B88"
+  },
+  {
+   "char": "朱",
+   "unicode": "U+6731"
+  },
+  {
+   "char": "取",
+   "unicode": "U+53D6"
+  },
+  {
+   "char": "狩",
+   "unicode": "U+72E9"
+  },
+  {
+   "char": "首",
+   "unicode": "U+9996"
+  },
+  {
+   "char": "殊",
+   "unicode": "U+6B8A"
+  },
+  {
+   "char": "珠",
+   "unicode": "U+73E0"
+  },
+  {
+   "char": "酒",
+   "unicode": "U+9152"
+  },
+  {
+   "char": "腫",
+   "unicode": "U+816B"
+  },
+  {
+   "char": "種",
+   "unicode": "U+7A2E"
+  },
+  {
+   "char": "趣",
+   "unicode": "U+8DA3"
+  },
+  {
+   "char": "寿",
+   "unicode": "U+5BFF"
+  },
+  {
+   "char": "受",
+   "unicode": "U+53D7"
+  },
+  {
+   "char": "呪",
+   "unicode": "U+546A"
+  },
+  {
+   "char": "授",
+   "unicode": "U+6388"
+  },
+  {
+   "char": "需",
+   "unicode": "U+9700"
+  },
+  {
+   "char": "儒",
+   "unicode": "U+5112"
+  },
+  {
+   "char": "樹",
+   "unicode": "U+6A39"
+  },
+  {
+   "char": "収",
+   "unicode": "U+53CE"
+  },
+  {
+   "char": "囚",
+   "unicode": "U+56DA"
+  },
+  {
+   "char": "州",
+   "unicode": "U+5DDE"
+  },
+  {
+   "char": "舟",
+   "unicode": "U+821F"
+  },
+  {
+   "char": "秀",
+   "unicode": "U+79C0"
+  },
+  {
+   "char": "周",
+   "unicode": "U+5468"
+  },
+  {
+   "char": "宗",
+   "unicode": "U+5B97"
+  },
+  {
+   "char": "拾",
+   "unicode": "U+62FE"
+  },
+  {
+   "char": "秋",
+   "unicode": "U+79CB"
+  },
+  {
+   "char": "臭",
+   "unicode": "U+81ED"
+  },
+  {
+   "char": "修",
+   "unicode": "U+4FEE"
+  },
+  {
+   "char": "袖",
+   "unicode": "U+8896"
+  },
+  {
+   "char": "終",
+   "unicode": "U+7D42"
+  },
+  {
+   "char": "羞",
+   "unicode": "U+7F9E"
+  },
+  {
+   "char": "習",
+   "unicode": "U+7FD2"
+  },
+  {
+   "char": "週",
+   "unicode": "U+9031"
+  },
+  {
+   "char": "就",
+   "unicode": "U+5C31"
+  },
+  {
+   "char": "衆",
+   "unicode": "U+8846"
+  },
+  {
+   "char": "集",
+   "unicode": "U+96C6"
+  },
+  {
+   "char": "愁",
+   "unicode": "U+6101"
+  },
+  {
+   "char": "酬",
+   "unicode": "U+916C"
+  },
+  {
+   "char": "醜",
+   "unicode": "U+919C"
+  },
+  {
+   "char": "蹴",
+   "unicode": "U+8E74"
+  },
+  {
+   "char": "襲",
+   "unicode": "U+8972"
+  },
+  {
+   "char": "十",
+   "unicode": "U+5341"
+  },
+  {
+   "char": "汁",
+   "unicode": "U+6C41"
+  },
+  {
+   "char": "充",
+   "unicode": "U+5145"
+  },
+  {
+   "char": "住",
+   "unicode": "U+4F4F"
+  },
+  {
+   "char": "柔",
+   "unicode": "U+67D4"
+  },
+  {
+   "char": "重",
+   "unicode": "U+91CD"
+  },
+  {
+   "char": "従",
+   "unicode": "U+5F93"
+  },
+  {
+   "char": "渋",
+   "unicode": "U+6E0B"
+  },
+  {
+   "char": "銃",
+   "unicode": "U+9283"
+  },
+  {
+   "char": "獣",
+   "unicode": "U+7363"
+  },
+  {
+   "char": "縦",
+   "unicode": "U+7E26"
+  },
+  {
+   "char": "叔",
+   "unicode": "U+53D4"
+  },
+  {
+   "char": "祝",
+   "unicode": "U+795D"
+  },
+  {
+   "char": "宿",
+   "unicode": "U+5BBF"
+  },
+  {
+   "char": "淑",
+   "unicode": "U+6DD1"
+  },
+  {
+   "char": "粛",
+   "unicode": "U+7C9B"
+  },
+  {
+   "char": "縮",
+   "unicode": "U+7E2E"
+  },
+  {
+   "char": "塾",
+   "unicode": "U+587E"
+  },
+  {
+   "char": "熟",
+   "unicode": "U+719F"
+  },
+  {
+   "char": "出",
+   "unicode": "U+51FA"
+  },
+  {
+   "char": "述",
+   "unicode": "U+8FF0"
+  },
+  {
+   "char": "術",
+   "unicode": "U+8853"
+  },
+  {
+   "char": "俊",
+   "unicode": "U+4FCA"
+  },
+  {
+   "char": "春",
+   "unicode": "U+6625"
+  },
+  {
+   "char": "瞬",
+   "unicode": "U+77AC"
+  },
+  {
+   "char": "旬",
+   "unicode": "U+65EC"
+  },
+  {
+   "char": "巡",
+   "unicode": "U+5DE1"
+  },
+  {
+   "char": "盾",
+   "unicode": "U+76FE"
+  },
+  {
+   "char": "准",
+   "unicode": "U+51C6"
+  },
+  {
+   "char": "殉",
+   "unicode": "U+6B89"
+  },
+  {
+   "char": "純",
+   "unicode": "U+7D14"
+  },
+  {
+   "char": "循",
+   "unicode": "U+5FAA"
+  },
+  {
+   "char": "順",
+   "unicode": "U+9806"
+  },
+  {
+   "char": "準",
+   "unicode": "U+6E96"
+  },
+  {
+   "char": "潤",
+   "unicode": "U+6F64"
+  },
+  {
+   "char": "遵",
+   "unicode": "U+9075"
+  },
+  {
+   "char": "処",
+   "unicode": "U+51E6"
+  },
+  {
+   "char": "初",
+   "unicode": "U+521D"
+  },
+  {
+   "char": "所",
+   "unicode": "U+6240"
+  },
+  {
+   "char": "書",
+   "unicode": "U+66F8"
+  },
+  {
+   "char": "庶",
+   "unicode": "U+5EB6"
+  },
+  {
+   "char": "暑",
+   "unicode": "U+6691"
+  },
+  {
+   "char": "署",
+   "unicode": "U+7F72"
+  },
+  {
+   "char": "緒",
+   "unicode": "U+7DD2"
+  },
+  {
+   "char": "諸",
+   "unicode": "U+8AF8"
+  },
+  {
+   "char": "女",
+   "unicode": "U+5973"
+  },
+  {
+   "char": "如",
+   "unicode": "U+5982"
+  },
+  {
+   "char": "助",
+   "unicode": "U+52A9"
+  },
+  {
+   "char": "序",
+   "unicode": "U+5E8F"
+  },
+  {
+   "char": "叙",
+   "unicode": "U+53D9"
+  },
+  {
+   "char": "徐",
+   "unicode": "U+5F90"
+  },
+  {
+   "char": "除",
+   "unicode": "U+9664"
+  },
+  {
+   "char": "小",
+   "unicode": "U+5C0F"
+  },
+  {
+   "char": "升",
+   "unicode": "U+5347"
+  },
+  {
+   "char": "少",
+   "unicode": "U+5C11"
+  },
+  {
+   "char": "召",
+   "unicode": "U+53EC"
+  },
+  {
+   "char": "匠",
+   "unicode": "U+5320"
+  },
+  {
+   "char": "床",
+   "unicode": "U+5E8A"
+  },
+  {
+   "char": "抄",
+   "unicode": "U+6284"
+  },
+  {
+   "char": "肖",
+   "unicode": "U+8096"
+  },
+  {
+   "char": "尚",
+   "unicode": "U+5C1A"
+  },
+  {
+   "char": "招",
+   "unicode": "U+62DB"
+  },
+  {
+   "char": "承",
+   "unicode": "U+627F"
+  },
+  {
+   "char": "昇",
+   "unicode": "U+6607"
+  },
+  {
+   "char": "松",
+   "unicode": "U+677E"
+  },
+  {
+   "char": "沼",
+   "unicode": "U+6CBC"
+  },
+  {
+   "char": "昭",
+   "unicode": "U+662D"
+  },
+  {
+   "char": "宵",
+   "unicode": "U+5BB5"
+  },
+  {
+   "char": "将",
+   "unicode": "U+5C06"
+  },
+  {
+   "char": "消",
+   "unicode": "U+6D88"
+  },
+  {
+   "char": "症",
+   "unicode": "U+75C7"
+  },
+  {
+   "char": "祥",
+   "unicode": "U+7965"
+  },
+  {
+   "char": "称",
+   "unicode": "U+79F0"
+  },
+  {
+   "char": "笑",
+   "unicode": "U+7B11"
+  },
+  {
+   "char": "唱",
+   "unicode": "U+5531"
+  },
+  {
+   "char": "商",
+   "unicode": "U+5546"
+  },
+  {
+   "char": "渉",
+   "unicode": "U+6E09"
+  },
+  {
+   "char": "章",
+   "unicode": "U+7AE0"
+  },
+  {
+   "char": "紹",
+   "unicode": "U+7D39"
+  },
+  {
+   "char": "訟",
+   "unicode": "U+8A1F"
+  },
+  {
+   "char": "勝",
+   "unicode": "U+52DD"
+  },
+  {
+   "char": "掌",
+   "unicode": "U+638C"
+  },
+  {
+   "char": "晶",
+   "unicode": "U+6676"
+  },
+  {
+   "char": "焼",
+   "unicode": "U+713C"
+  },
+  {
+   "char": "焦",
+   "unicode": "U+7126"
+  },
+  {
+   "char": "硝",
+   "unicode": "U+785D"
+  },
+  {
+   "char": "粧",
+   "unicode": "U+7CA7"
+  },
+  {
+   "char": "詔",
+   "unicode": "U+8A54"
+  },
+  {
+   "char": "証",
+   "unicode": "U+8A3C"
+  },
+  {
+   "char": "象",
+   "unicode": "U+8C61"
+  },
+  {
+   "char": "傷",
+   "unicode": "U+50B7"
+  },
+  {
+   "char": "奨",
+   "unicode": "U+5968"
+  },
+  {
+   "char": "照",
+   "unicode": "U+7167"
+  },
+  {
+   "char": "詳",
+   "unicode": "U+8A73"
+  },
+  {
+   "char": "彰",
+   "unicode": "U+5F70"
+  },
+  {
+   "char": "障",
+   "unicode": "U+969C"
+  },
+  {
+   "char": "憧",
+   "unicode": "U+61A7"
+  },
+  {
+   "char": "衝",
+   "unicode": "U+885D"
+  },
+  {
+   "char": "賞",
+   "unicode": "U+8CDE"
+  },
+  {
+   "char": "償",
+   "unicode": "U+511F"
+  },
+  {
+   "char": "礁",
+   "unicode": "U+7901"
+  },
+  {
+   "char": "鐘",
+   "unicode": "U+9418"
+  },
+  {
+   "char": "上",
+   "unicode": "U+4E0A"
+  },
+  {
+   "char": "丈",
+   "unicode": "U+4E08"
+  },
+  {
+   "char": "冗",
+   "unicode": "U+5197"
+  },
+  {
+   "char": "条",
+   "unicode": "U+6761"
+  },
+  {
+   "char": "状",
+   "unicode": "U+72B6"
+  },
+  {
+   "char": "乗",
+   "unicode": "U+4E57"
+  },
+  {
+   "char": "城",
+   "unicode": "U+57CE"
+  },
+  {
+   "char": "浄",
+   "unicode": "U+6D44"
+  },
+  {
+   "char": "剰",
+   "unicode": "U+5270"
+  },
+  {
+   "char": "常",
+   "unicode": "U+5E38"
+  },
+  {
+   "char": "情",
+   "unicode": "U+60C5"
+  },
+  {
+   "char": "場",
+   "unicode": "U+5834"
+  },
+  {
+   "char": "畳",
+   "unicode": "U+7573"
+  },
+  {
+   "char": "蒸",
+   "unicode": "U+84B8"
+  },
+  {
+   "char": "縄",
+   "unicode": "U+7E04"
+  },
+  {
+   "char": "壌",
+   "unicode": "U+58CC"
+  },
+  {
+   "char": "嬢",
+   "unicode": "U+5B22"
+  },
+  {
+   "char": "錠",
+   "unicode": "U+9320"
+  },
+  {
+   "char": "譲",
+   "unicode": "U+8B72"
+  },
+  {
+   "char": "醸",
+   "unicode": "U+91B8"
+  },
+  {
+   "char": "色",
+   "unicode": "U+8272"
+  },
+  {
+   "char": "拭",
+   "unicode": "U+62ED"
+  },
+  {
+   "char": "食",
+   "unicode": "U+98DF"
+  },
+  {
+   "char": "植",
+   "unicode": "U+690D"
+  },
+  {
+   "char": "殖",
+   "unicode": "U+6B96"
+  },
+  {
+   "char": "飾",
+   "unicode": "U+98FE"
+  },
+  {
+   "char": "触",
+   "unicode": "U+89E6"
+  },
+  {
+   "char": "嘱",
+   "unicode": "U+5631"
+  },
+  {
+   "char": "織",
+   "unicode": "U+7E54"
+  },
+  {
+   "char": "職",
+   "unicode": "U+8077"
+  },
+  {
+   "char": "辱",
+   "unicode": "U+8FB1"
+  },
+  {
+   "char": "尻",
+   "unicode": "U+5C3B"
+  },
+  {
+   "char": "心",
+   "unicode": "U+5FC3"
+  },
+  {
+   "char": "申",
+   "unicode": "U+7533"
+  },
+  {
+   "char": "伸",
+   "unicode": "U+4F38"
+  },
+  {
+   "char": "臣",
+   "unicode": "U+81E3"
+  },
+  {
+   "char": "芯",
+   "unicode": "U+82AF"
+  },
+  {
+   "char": "身",
+   "unicode": "U+8EAB"
+  },
+  {
+   "char": "辛",
+   "unicode": "U+8F9B"
+  },
+  {
+   "char": "侵",
+   "unicode": "U+4FB5"
+  },
+  {
+   "char": "信",
+   "unicode": "U+4FE1"
+  },
+  {
+   "char": "津",
+   "unicode": "U+6D25"
+  },
+  {
+   "char": "神",
+   "unicode": "U+795E"
+  },
+  {
+   "char": "唇",
+   "unicode": "U+5507"
+  },
+  {
+   "char": "娠",
+   "unicode": "U+5A20"
+  },
+  {
+   "char": "振",
+   "unicode": "U+632F"
+  },
+  {
+   "char": "浸",
+   "unicode": "U+6D78"
+  },
+  {
+   "char": "真",
+   "unicode": "U+771F"
+  },
+  {
+   "char": "針",
+   "unicode": "U+91DD"
+  },
+  {
+   "char": "深",
+   "unicode": "U+6DF1"
+  },
+  {
+   "char": "紳",
+   "unicode": "U+7D33"
+  },
+  {
+   "char": "進",
+   "unicode": "U+9032"
+  },
+  {
+   "char": "森",
+   "unicode": "U+68EE"
+  },
+  {
+   "char": "診",
+   "unicode": "U+8A3A"
+  },
+  {
+   "char": "寝",
+   "unicode": "U+5BDD"
+  },
+  {
+   "char": "慎",
+   "unicode": "U+614E"
+  },
+  {
+   "char": "新",
+   "unicode": "U+65B0"
+  },
+  {
+   "char": "審",
+   "unicode": "U+5BE9"
+  },
+  {
+   "char": "震",
+   "unicode": "U+9707"
+  },
+  {
+   "char": "薪",
+   "unicode": "U+85AA"
+  },
+  {
+   "char": "親",
+   "unicode": "U+89AA"
+  },
+  {
+   "char": "人",
+   "unicode": "U+4EBA"
+  },
+  {
+   "char": "刃",
+   "unicode": "U+5203"
+  },
+  {
+   "char": "仁",
+   "unicode": "U+4EC1"
+  },
+  {
+   "char": "尽",
+   "unicode": "U+5C3D"
+  },
+  {
+   "char": "迅",
+   "unicode": "U+8FC5"
+  },
+  {
+   "char": "甚",
+   "unicode": "U+751A"
+  },
+  {
+   "char": "陣",
+   "unicode": "U+9663"
+  },
+  {
+   "char": "尋",
+   "unicode": "U+5C0B"
+  },
+  {
+   "char": "腎",
+   "unicode": "U+814E"
+  },
+  {
+   "char": "須",
+   "unicode": "U+9808"
+  },
+  {
+   "char": "図",
+   "unicode": "U+56F3"
+  },
+  {
+   "char": "水",
+   "unicode": "U+6C34"
+  },
+  {
+   "char": "吹",
+   "unicode": "U+5439"
+  },
+  {
+   "char": "垂",
+   "unicode": "U+5782"
+  },
+  {
+   "char": "炊",
+   "unicode": "U+708A"
+  },
+  {
+   "char": "帥",
+   "unicode": "U+5E25"
+  },
+  {
+   "char": "粋",
+   "unicode": "U+7C8B"
+  },
+  {
+   "char": "衰",
+   "unicode": "U+8870"
+  },
+  {
+   "char": "推",
+   "unicode": "U+63A8"
+  },
+  {
+   "char": "酔",
+   "unicode": "U+9154"
+  },
+  {
+   "char": "遂",
+   "unicode": "U+9042"
+  },
+  {
+   "char": "睡",
+   "unicode": "U+7761"
+  },
+  {
+   "char": "穂",
+   "unicode": "U+7A42"
+  },
+  {
+   "char": "随",
+   "unicode": "U+968F"
+  },
+  {
+   "char": "髄",
+   "unicode": "U+9AC4"
+  },
+  {
+   "char": "枢",
+   "unicode": "U+67A2"
+  },
+  {
+   "char": "崇",
+   "unicode": "U+5D07"
+  },
+  {
+   "char": "数",
+   "unicode": "U+6570"
+  },
+  {
+   "char": "据",
+   "unicode": "U+636E"
+  },
+  {
+   "char": "杉",
+   "unicode": "U+6749"
+  },
+  {
+   "char": "裾",
+   "unicode": "U+88FE"
+  },
+  {
+   "char": "寸",
+   "unicode": "U+5BF8"
+  },
+  {
+   "char": "瀬",
+   "unicode": "U+702C"
+  },
+  {
+   "char": "是",
+   "unicode": "U+662F"
+  },
+  {
+   "char": "井",
+   "unicode": "U+4E95"
+  },
+  {
+   "char": "世",
+   "unicode": "U+4E16"
+  },
+  {
+   "char": "正",
+   "unicode": "U+6B63"
+  },
+  {
+   "char": "生",
+   "unicode": "U+751F"
+  },
+  {
+   "char": "成",
+   "unicode": "U+6210"
+  },
+  {
+   "char": "西",
+   "unicode": "U+897F"
+  },
+  {
+   "char": "声",
+   "unicode": "U+58F0"
+  },
+  {
+   "char": "制",
+   "unicode": "U+5236"
+  },
+  {
+   "char": "姓",
+   "unicode": "U+59D3"
+  },
+  {
+   "char": "征",
+   "unicode": "U+5F81"
+  },
+  {
+   "char": "性",
+   "unicode": "U+6027"
+  },
+  {
+   "char": "青",
+   "unicode": "U+9752"
+  },
+  {
+   "char": "斉",
+   "unicode": "U+6589"
+  },
+  {
+   "char": "政",
+   "unicode": "U+653F"
+  },
+  {
+   "char": "星",
+   "unicode": "U+661F"
+  },
+  {
+   "char": "牲",
+   "unicode": "U+7272"
+  },
+  {
+   "char": "省",
+   "unicode": "U+7701"
+  },
+  {
+   "char": "凄",
+   "unicode": "U+51C4"
+  },
+  {
+   "char": "逝",
+   "unicode": "U+901D"
+  },
+  {
+   "char": "清",
+   "unicode": "U+6E05"
+  },
+  {
+   "char": "盛",
+   "unicode": "U+76DB"
+  },
+  {
+   "char": "婿",
+   "unicode": "U+5A7F"
+  },
+  {
+   "char": "晴",
+   "unicode": "U+6674"
+  },
+  {
+   "char": "勢",
+   "unicode": "U+52E2"
+  },
+  {
+   "char": "聖",
+   "unicode": "U+8056"
+  },
+  {
+   "char": "誠",
+   "unicode": "U+8AA0"
+  },
+  {
+   "char": "精",
+   "unicode": "U+7CBE"
+  },
+  {
+   "char": "製",
+   "unicode": "U+88FD"
+  },
+  {
+   "char": "誓",
+   "unicode": "U+8A93"
+  },
+  {
+   "char": "静",
+   "unicode": "U+9759"
+  },
+  {
+   "char": "請",
+   "unicode": "U+8ACB"
+  },
+  {
+   "char": "整",
+   "unicode": "U+6574"
+  },
+  {
+   "char": "醒",
+   "unicode": "U+9192"
+  },
+  {
+   "char": "税",
+   "unicode": "U+7A0E"
+  },
+  {
+   "char": "夕",
+   "unicode": "U+5915"
+  },
+  {
+   "char": "斥",
+   "unicode": "U+65A5"
+  },
+  {
+   "char": "石",
+   "unicode": "U+77F3"
+  },
+  {
+   "char": "赤",
+   "unicode": "U+8D64"
+  },
+  {
+   "char": "昔",
+   "unicode": "U+6614"
+  },
+  {
+   "char": "析",
+   "unicode": "U+6790"
+  },
+  {
+   "char": "席",
+   "unicode": "U+5E2D"
+  },
+  {
+   "char": "脊",
+   "unicode": "U+810A"
+  },
+  {
+   "char": "隻",
+   "unicode": "U+96BB"
+  },
+  {
+   "char": "惜",
+   "unicode": "U+60DC"
+  },
+  {
+   "char": "戚",
+   "unicode": "U+621A"
+  },
+  {
+   "char": "責",
+   "unicode": "U+8CAC"
+  },
+  {
+   "char": "跡",
+   "unicode": "U+8DE1"
+  },
+  {
+   "char": "積",
+   "unicode": "U+7A4D"
+  },
+  {
+   "char": "績",
+   "unicode": "U+7E3E"
+  },
+  {
+   "char": "籍",
+   "unicode": "U+7C4D"
+  },
+  {
+   "char": "切",
+   "unicode": "U+5207"
+  },
+  {
+   "char": "折",
+   "unicode": "U+6298"
+  },
+  {
+   "char": "拙",
+   "unicode": "U+62D9"
+  },
+  {
+   "char": "窃",
+   "unicode": "U+7A83"
+  },
+  {
+   "char": "接",
+   "unicode": "U+63A5"
+  },
+  {
+   "char": "設",
+   "unicode": "U+8A2D"
+  },
+  {
+   "char": "雪",
+   "unicode": "U+96EA"
+  },
+  {
+   "char": "摂",
+   "unicode": "U+6442"
+  },
+  {
+   "char": "節",
+   "unicode": "U+7BC0"
+  },
+  {
+   "char": "説",
+   "unicode": "U+8AAC"
+  },
+  {
+   "char": "舌",
+   "unicode": "U+820C"
+  },
+  {
+   "char": "絶",
+   "unicode": "U+7D76"
+  },
+  {
+   "char": "千",
+   "unicode": "U+5343"
+  },
+  {
+   "char": "川",
+   "unicode": "U+5DDD"
+  },
+  {
+   "char": "仙",
+   "unicode": "U+4ED9"
+  },
+  {
+   "char": "占",
+   "unicode": "U+5360"
+  },
+  {
+   "char": "先",
+   "unicode": "U+5148"
+  },
+  {
+   "char": "宣",
+   "unicode": "U+5BA3"
+  },
+  {
+   "char": "専",
+   "unicode": "U+5C02"
+  },
+  {
+   "char": "泉",
+   "unicode": "U+6CC9"
+  },
+  {
+   "char": "浅",
+   "unicode": "U+6D45"
+  },
+  {
+   "char": "洗",
+   "unicode": "U+6D17"
+  },
+  {
+   "char": "染",
+   "unicode": "U+67D3"
+  },
+  {
+   "char": "扇",
+   "unicode": "U+6247"
+  },
+  {
+   "char": "栓",
+   "unicode": "U+6813"
+  },
+  {
+   "char": "旋",
+   "unicode": "U+65CB"
+  },
+  {
+   "char": "船",
+   "unicode": "U+8239"
+  },
+  {
+   "char": "戦",
+   "unicode": "U+6226"
+  },
+  {
+   "char": "煎",
+   "unicode": "U+714E"
+  },
+  {
+   "char": "羨",
+   "unicode": "U+7FA8"
+  },
+  {
+   "char": "腺",
+   "unicode": "U+817A"
+  },
+  {
+   "char": "詮",
+   "unicode": "U+8A6E"
+  },
+  {
+   "char": "践",
+   "unicode": "U+8DF5"
+  },
+  {
+   "char": "箋",
+   "unicode": "U+7B8B"
+  },
+  {
+   "char": "銭",
+   "unicode": "U+92AD"
+  },
+  {
+   "char": "潜",
+   "unicode": "U+6F5C"
+  },
+  {
+   "char": "線",
+   "unicode": "U+7DDA"
+  },
+  {
+   "char": "遷",
+   "unicode": "U+9077"
+  },
+  {
+   "char": "選",
+   "unicode": "U+9078"
+  },
+  {
+   "char": "薦",
+   "unicode": "U+85A6"
+  },
+  {
+   "char": "繊",
+   "unicode": "U+7E4A"
+  },
+  {
+   "char": "鮮",
+   "unicode": "U+9BAE"
+  },
+  {
+   "char": "全",
+   "unicode": "U+5168"
+  },
+  {
+   "char": "前",
+   "unicode": "U+524D"
+  },
+  {
+   "char": "善",
+   "unicode": "U+5584"
+  },
+  {
+   "char": "然",
+   "unicode": "U+7136"
+  },
+  {
+   "char": "禅",
+   "unicode": "U+7985"
+  },
+  {
+   "char": "漸",
+   "unicode": "U+6F38"
+  },
+  {
+   "char": "膳",
+   "unicode": "U+81B3"
+  },
+  {
+   "char": "繕",
+   "unicode": "U+7E55"
+  },
+  {
+   "char": "狙",
+   "unicode": "U+72D9"
+  },
+  {
+   "char": "阻",
+   "unicode": "U+963B"
+  },
+  {
+   "char": "祖",
+   "unicode": "U+7956"
+  },
+  {
+   "char": "租",
+   "unicode": "U+79DF"
+  },
+  {
+   "char": "素",
+   "unicode": "U+7D20"
+  },
+  {
+   "char": "措",
+   "unicode": "U+63AA"
+  },
+  {
+   "char": "粗",
+   "unicode": "U+7C97"
+  },
+  {
+   "char": "組",
+   "unicode": "U+7D44"
+  },
+  {
+   "char": "疎",
+   "unicode": "U+758E"
+  },
+  {
+   "char": "訴",
+   "unicode": "U+8A34"
+  },
+  {
+   "char": "塑",
+   "unicode": "U+5851"
+  },
+  {
+   "char": "遡",
+   "unicode": "U+9061"
+  },
+  {
+   "char": "礎",
+   "unicode": "U+790E"
+  },
+  {
+   "char": "双",
+   "unicode": "U+53CC"
+  },
+  {
+   "char": "壮",
+   "unicode": "U+58EE"
+  },
+  {
+   "char": "早",
+   "unicode": "U+65E9"
+  },
+  {
+   "char": "争",
+   "unicode": "U+4E89"
+  },
+  {
+   "char": "走",
+   "unicode": "U+8D70"
+  },
+  {
+   "char": "奏",
+   "unicode": "U+594F"
+  },
+  {
+   "char": "相",
+   "unicode": "U+76F8"
+  },
+  {
+   "char": "荘",
+   "unicode": "U+8358"
+  },
+  {
+   "char": "草",
+   "unicode": "U+8349"
+  },
+  {
+   "char": "送",
+   "unicode": "U+9001"
+  },
+  {
+   "char": "倉",
+   "unicode": "U+5009"
+  },
+  {
+   "char": "捜",
+   "unicode": "U+635C"
+  },
+  {
+   "char": "挿",
+   "unicode": "U+633F"
+  },
+  {
+   "char": "桑",
+   "unicode": "U+6851"
+  },
+  {
+   "char": "巣",
+   "unicode": "U+5DE3"
+  },
+  {
+   "char": "掃",
+   "unicode": "U+6383"
+  },
+  {
+   "char": "曹",
+   "unicode": "U+66F9"
+  },
+  {
+   "char": "曽",
+   "unicode": "U+66FD"
+  },
+  {
+   "char": "爽",
+   "unicode": "U+723D"
+  },
+  {
+   "char": "窓",
+   "unicode": "U+7A93"
+  },
+  {
+   "char": "創",
+   "unicode": "U+5275"
+  },
+  {
+   "char": "喪",
+   "unicode": "U+55AA"
+  },
+  {
+   "char": "痩",
+   "unicode": "U+75E9"
+  },
+  {
+   "char": "葬",
+   "unicode": "U+846C"
+  },
+  {
+   "char": "装",
+   "unicode": "U+88C5"
+  },
+  {
+   "char": "僧",
+   "unicode": "U+50E7"
+  },
+  {
+   "char": "想",
+   "unicode": "U+60F3"
+  },
+  {
+   "char": "層",
+   "unicode": "U+5C64"
+  },
+  {
+   "char": "総",
+   "unicode": "U+7DCF"
+  },
+  {
+   "char": "遭",
+   "unicode": "U+906D"
+  },
+  {
+   "char": "槽",
+   "unicode": "U+69FD"
+  },
+  {
+   "char": "踪",
+   "unicode": "U+8E2A"
+  },
+  {
+   "char": "操",
+   "unicode": "U+64CD"
+  },
+  {
+   "char": "燥",
+   "unicode": "U+71E5"
+  },
+  {
+   "char": "霜",
+   "unicode": "U+971C"
+  },
+  {
+   "char": "騒",
+   "unicode": "U+9A12"
+  },
+  {
+   "char": "藻",
+   "unicode": "U+85FB"
+  },
+  {
+   "char": "造",
+   "unicode": "U+9020"
+  },
+  {
+   "char": "像",
+   "unicode": "U+50CF"
+  },
+  {
+   "char": "増",
+   "unicode": "U+5897"
+  },
+  {
+   "char": "憎",
+   "unicode": "U+618E"
+  },
+  {
+   "char": "蔵",
+   "unicode": "U+8535"
+  },
+  {
+   "char": "贈",
+   "unicode": "U+8D08"
+  },
+  {
+   "char": "臓",
+   "unicode": "U+81D3"
+  },
+  {
+   "char": "即",
+   "unicode": "U+5373"
+  },
+  {
+   "char": "束",
+   "unicode": "U+675F"
+  },
+  {
+   "char": "足",
+   "unicode": "U+8DB3"
+  },
+  {
+   "char": "促",
+   "unicode": "U+4FC3"
+  },
+  {
+   "char": "則",
+   "unicode": "U+5247"
+  },
+  {
+   "char": "息",
+   "unicode": "U+606F"
+  },
+  {
+   "char": "捉",
+   "unicode": "U+6349"
+  },
+  {
+   "char": "速",
+   "unicode": "U+901F"
+  },
+  {
+   "char": "側",
+   "unicode": "U+5074"
+  },
+  {
+   "char": "測",
+   "unicode": "U+6E2C"
+  },
+  {
+   "char": "俗",
+   "unicode": "U+4FD7"
+  },
+  {
+   "char": "族",
+   "unicode": "U+65CF"
+  },
+  {
+   "char": "属",
+   "unicode": "U+5C5E"
+  },
+  {
+   "char": "賊",
+   "unicode": "U+8CCA"
+  },
+  {
+   "char": "続",
+   "unicode": "U+7D9A"
+  },
+  {
+   "char": "卒",
+   "unicode": "U+5352"
+  },
+  {
+   "char": "率",
+   "unicode": "U+7387"
+  },
+  {
+   "char": "存",
+   "unicode": "U+5B58"
+  },
+  {
+   "char": "村",
+   "unicode": "U+6751"
+  },
+  {
+   "char": "孫",
+   "unicode": "U+5B6B"
+  },
+  {
+   "char": "尊",
+   "unicode": "U+5C0A"
+  },
+  {
+   "char": "損",
+   "unicode": "U+640D"
+  },
+  {
+   "char": "遜",
+   "unicode": "U+905C"
+  },
+  {
+   "char": "他",
+   "unicode": "U+4ED6"
+  },
+  {
+   "char": "多",
+   "unicode": "U+591A"
+  },
+  {
+   "char": "汰",
+   "unicode": "U+6C70"
+  },
+  {
+   "char": "打",
+   "unicode": "U+6253"
+  },
+  {
+   "char": "妥",
+   "unicode": "U+59A5"
+  },
+  {
+   "char": "唾",
+   "unicode": "U+553E"
+  },
+  {
+   "char": "堕",
+   "unicode": "U+5815"
+  },
+  {
+   "char": "惰",
+   "unicode": "U+60F0"
+  },
+  {
+   "char": "駄",
+   "unicode": "U+99C4"
+  },
+  {
+   "char": "太",
+   "unicode": "U+592A"
+  },
+  {
+   "char": "対",
+   "unicode": "U+5BFE"
+  },
+  {
+   "char": "体",
+   "unicode": "U+4F53"
+  },
+  {
+   "char": "耐",
+   "unicode": "U+8010"
+  },
+  {
+   "char": "待",
+   "unicode": "U+5F85"
+  },
+  {
+   "char": "怠",
+   "unicode": "U+6020"
+  },
+  {
+   "char": "胎",
+   "unicode": "U+80CE"
+  },
+  {
+   "char": "退",
+   "unicode": "U+9000"
+  },
+  {
+   "char": "帯",
+   "unicode": "U+5E2F"
+  },
+  {
+   "char": "泰",
+   "unicode": "U+6CF0"
+  },
+  {
+   "char": "堆",
+   "unicode": "U+5806"
+  },
+  {
+   "char": "袋",
+   "unicode": "U+888B"
+  },
+  {
+   "char": "逮",
+   "unicode": "U+902E"
+  },
+  {
+   "char": "替",
+   "unicode": "U+66FF"
+  },
+  {
+   "char": "貸",
+   "unicode": "U+8CB8"
+  },
+  {
+   "char": "隊",
+   "unicode": "U+968A"
+  },
+  {
+   "char": "滞",
+   "unicode": "U+6EDE"
+  },
+  {
+   "char": "態",
+   "unicode": "U+614B"
+  },
+  {
+   "char": "戴",
+   "unicode": "U+6234"
+  },
+  {
+   "char": "大",
+   "unicode": "U+5927"
+  },
+  {
+   "char": "代",
+   "unicode": "U+4EE3"
+  },
+  {
+   "char": "台",
+   "unicode": "U+53F0"
+  },
+  {
+   "char": "第",
+   "unicode": "U+7B2C"
+  },
+  {
+   "char": "題",
+   "unicode": "U+984C"
+  },
+  {
+   "char": "滝",
+   "unicode": "U+6EDD"
+  },
+  {
+   "char": "宅",
+   "unicode": "U+5B85"
+  },
+  {
+   "char": "択",
+   "unicode": "U+629E"
+  },
+  {
+   "char": "沢",
+   "unicode": "U+6CA2"
+  },
+  {
+   "char": "卓",
+   "unicode": "U+5353"
+  },
+  {
+   "char": "拓",
+   "unicode": "U+62D3"
+  },
+  {
+   "char": "託",
+   "unicode": "U+8A17"
+  },
+  {
+   "char": "濯",
+   "unicode": "U+6FEF"
+  },
+  {
+   "char": "諾",
+   "unicode": "U+8AFE"
+  },
+  {
+   "char": "濁",
+   "unicode": "U+6FC1"
+  },
+  {
+   "char": "但",
+   "unicode": "U+4F46"
+  },
+  {
+   "char": "達",
+   "unicode": "U+9054"
+  },
+  {
+   "char": "脱",
+   "unicode": "U+8131"
+  },
+  {
+   "char": "奪",
+   "unicode": "U+596A"
+  },
+  {
+   "char": "棚",
+   "unicode": "U+68DA"
+  },
+  {
+   "char": "誰",
+   "unicode": "U+8AB0"
+  },
+  {
+   "char": "丹",
+   "unicode": "U+4E39"
+  },
+  {
+   "char": "旦",
+   "unicode": "U+65E6"
+  },
+  {
+   "char": "担",
+   "unicode": "U+62C5"
+  },
+  {
+   "char": "単",
+   "unicode": "U+5358"
+  },
+  {
+   "char": "炭",
+   "unicode": "U+70AD"
+  },
+  {
+   "char": "胆",
+   "unicode": "U+80C6"
+  },
+  {
+   "char": "探",
+   "unicode": "U+63A2"
+  },
+  {
+   "char": "淡",
+   "unicode": "U+6DE1"
+  },
+  {
+   "char": "短",
+   "unicode": "U+77ED"
+  },
+  {
+   "char": "嘆",
+   "unicode": "U+5606"
+  },
+  {
+   "char": "端",
+   "unicode": "U+7AEF"
+  },
+  {
+   "char": "綻",
+   "unicode": "U+7DBB"
+  },
+  {
+   "char": "誕",
+   "unicode": "U+8A95"
+  },
+  {
+   "char": "鍛",
+   "unicode": "U+935B"
+  },
+  {
+   "char": "団",
+   "unicode": "U+56E3"
+  },
+  {
+   "char": "男",
+   "unicode": "U+7537"
+  },
+  {
+   "char": "段",
+   "unicode": "U+6BB5"
+  },
+  {
+   "char": "断",
+   "unicode": "U+65AD"
+  },
+  {
+   "char": "弾",
+   "unicode": "U+5F3E"
+  },
+  {
+   "char": "暖",
+   "unicode": "U+6696"
+  },
+  {
+   "char": "談",
+   "unicode": "U+8AC7"
+  },
+  {
+   "char": "壇",
+   "unicode": "U+58C7"
+  },
+  {
+   "char": "地",
+   "unicode": "U+5730"
+  },
+  {
+   "char": "池",
+   "unicode": "U+6C60"
+  },
+  {
+   "char": "知",
+   "unicode": "U+77E5"
+  },
+  {
+   "char": "値",
+   "unicode": "U+5024"
+  },
+  {
+   "char": "恥",
+   "unicode": "U+6065"
+  },
+  {
+   "char": "致",
+   "unicode": "U+81F4"
+  },
+  {
+   "char": "遅",
+   "unicode": "U+9045"
+  },
+  {
+   "char": "痴",
+   "unicode": "U+75F4"
+  },
+  {
+   "char": "稚",
+   "unicode": "U+7A1A"
+  },
+  {
+   "char": "置",
+   "unicode": "U+7F6E"
+  },
+  {
+   "char": "緻",
+   "unicode": "U+7DFB"
+  },
+  {
+   "char": "竹",
+   "unicode": "U+7AF9"
+  },
+  {
+   "char": "畜",
+   "unicode": "U+755C"
+  },
+  {
+   "char": "逐",
+   "unicode": "U+9010"
+  },
+  {
+   "char": "蓄",
+   "unicode": "U+84C4"
+  },
+  {
+   "char": "築",
+   "unicode": "U+7BC9"
+  },
+  {
+   "char": "秩",
+   "unicode": "U+79E9"
+  },
+  {
+   "char": "窒",
+   "unicode": "U+7A92"
+  },
+  {
+   "char": "茶",
+   "unicode": "U+8336"
+  },
+  {
+   "char": "着",
+   "unicode": "U+7740"
+  },
+  {
+   "char": "嫡",
+   "unicode": "U+5AE1"
+  },
+  {
+   "char": "中",
+   "unicode": "U+4E2D"
+  },
+  {
+   "char": "仲",
+   "unicode": "U+4EF2"
+  },
+  {
+   "char": "虫",
+   "unicode": "U+866B"
+  },
+  {
+   "char": "沖",
+   "unicode": "U+6C96"
+  },
+  {
+   "char": "宙",
+   "unicode": "U+5B99"
+  },
+  {
+   "char": "忠",
+   "unicode": "U+5FE0"
+  },
+  {
+   "char": "抽",
+   "unicode": "U+62BD"
+  },
+  {
+   "char": "注",
+   "unicode": "U+6CE8"
+  },
+  {
+   "char": "昼",
+   "unicode": "U+663C"
+  },
+  {
+   "char": "柱",
+   "unicode": "U+67F1"
+  },
+  {
+   "char": "衷",
+   "unicode": "U+8877"
+  },
+  {
+   "char": "酎",
+   "unicode": "U+914E"
+  },
+  {
+   "char": "鋳",
+   "unicode": "U+92F3"
+  },
+  {
+   "char": "駐",
+   "unicode": "U+99D0"
+  },
+  {
+   "char": "著",
+   "unicode": "U+8457"
+  },
+  {
+   "char": "貯",
+   "unicode": "U+8CAF"
+  },
+  {
+   "char": "丁",
+   "unicode": "U+4E01"
+  },
+  {
+   "char": "弔",
+   "unicode": "U+5F14"
+  },
+  {
+   "char": "庁",
+   "unicode": "U+5E81"
+  },
+  {
+   "char": "兆",
+   "unicode": "U+5146"
+  },
+  {
+   "char": "町",
+   "unicode": "U+753A"
+  },
+  {
+   "char": "長",
+   "unicode": "U+9577"
+  },
+  {
+   "char": "挑",
+   "unicode": "U+6311"
+  },
+  {
+   "char": "帳",
+   "unicode": "U+5E33"
+  },
+  {
+   "char": "張",
+   "unicode": "U+5F35"
+  },
+  {
+   "char": "彫",
+   "unicode": "U+5F6B"
+  },
+  {
+   "char": "眺",
+   "unicode": "U+773A"
+  },
+  {
+   "char": "釣",
+   "unicode": "U+91E3"
+  },
+  {
+   "char": "頂",
+   "unicode": "U+9802"
+  },
+  {
+   "char": "鳥",
+   "unicode": "U+9CE5"
+  },
+  {
+   "char": "朝",
+   "unicode": "U+671D"
+  },
+  {
+   "char": "貼",
+   "unicode": "U+8CBC"
+  },
+  {
+   "char": "超",
+   "unicode": "U+8D85"
+  },
+  {
+   "char": "腸",
+   "unicode": "U+8178"
+  },
+  {
+   "char": "跳",
+   "unicode": "U+8DF3"
+  },
+  {
+   "char": "徴",
+   "unicode": "U+5FB4"
+  },
+  {
+   "char": "嘲",
+   "unicode": "U+5632"
+  },
+  {
+   "char": "潮",
+   "unicode": "U+6F6E"
+  },
+  {
+   "char": "澄",
+   "unicode": "U+6F84"
+  },
+  {
+   "char": "調",
+   "unicode": "U+8ABF"
+  },
+  {
+   "char": "聴",
+   "unicode": "U+8074"
+  },
+  {
+   "char": "懲",
+   "unicode": "U+61F2"
+  },
+  {
+   "char": "直",
+   "unicode": "U+76F4"
+  },
+  {
+   "char": "勅",
+   "unicode": "U+52C5"
+  },
+  {
+   "char": "捗",
+   "unicode": "U+6357"
+  },
+  {
+   "char": "沈",
+   "unicode": "U+6C88"
+  },
+  {
+   "char": "珍",
+   "unicode": "U+73CD"
+  },
+  {
+   "char": "朕",
+   "unicode": "U+6715"
+  },
+  {
+   "char": "陳",
+   "unicode": "U+9673"
+  },
+  {
+   "char": "賃",
+   "unicode": "U+8CC3"
+  },
+  {
+   "char": "鎮",
+   "unicode": "U+93AE"
+  },
+  {
+   "char": "追",
+   "unicode": "U+8FFD"
+  },
+  {
+   "char": "椎",
+   "unicode": "U+690E"
+  },
+  {
+   "char": "墜",
+   "unicode": "U+589C"
+  },
+  {
+   "char": "通",
+   "unicode": "U+901A"
+  },
+  {
+   "char": "痛",
+   "unicode": "U+75DB"
+  },
+  {
+   "char": "塚",
+   "unicode": "U+585A"
+  },
+  {
+   "char": "漬",
+   "unicode": "U+6F2C"
+  },
+  {
+   "char": "坪",
+   "unicode": "U+576A"
+  },
+  {
+   "char": "爪",
+   "unicode": "U+722A"
+  },
+  {
+   "char": "鶴",
+   "unicode": "U+9DB4"
+  },
+  {
+   "char": "低",
+   "unicode": "U+4F4E"
+  },
+  {
+   "char": "呈",
+   "unicode": "U+5448"
+  },
+  {
+   "char": "廷",
+   "unicode": "U+5EF7"
+  },
+  {
+   "char": "弟",
+   "unicode": "U+5F1F"
+  },
+  {
+   "char": "定",
+   "unicode": "U+5B9A"
+  },
+  {
+   "char": "底",
+   "unicode": "U+5E95"
+  },
+  {
+   "char": "抵",
+   "unicode": "U+62B5"
+  },
+  {
+   "char": "邸",
+   "unicode": "U+90B8"
+  },
+  {
+   "char": "亭",
+   "unicode": "U+4EAD"
+  },
+  {
+   "char": "貞",
+   "unicode": "U+8C9E"
+  },
+  {
+   "char": "帝",
+   "unicode": "U+5E1D"
+  },
+  {
+   "char": "訂",
+   "unicode": "U+8A02"
+  },
+  {
+   "char": "庭",
+   "unicode": "U+5EAD"
+  },
+  {
+   "char": "逓",
+   "unicode": "U+9013"
+  },
+  {
+   "char": "停",
+   "unicode": "U+505C"
+  },
+  {
+   "char": "偵",
+   "unicode": "U+5075"
+  },
+  {
+   "char": "堤",
+   "unicode": "U+5824"
+  },
+  {
+   "char": "提",
+   "unicode": "U+63D0"
+  },
+  {
+   "char": "程",
+   "unicode": "U+7A0B"
+  },
+  {
+   "char": "艇",
+   "unicode": "U+8247"
+  },
+  {
+   "char": "締",
+   "unicode": "U+7DE0"
+  },
+  {
+   "char": "諦",
+   "unicode": "U+8AE6"
+  },
+  {
+   "char": "泥",
+   "unicode": "U+6CE5"
+  },
+  {
+   "char": "的",
+   "unicode": "U+7684"
+  },
+  {
+   "char": "笛",
+   "unicode": "U+7B1B"
+  },
+  {
+   "char": "摘",
+   "unicode": "U+6458"
+  },
+  {
+   "char": "滴",
+   "unicode": "U+6EF4"
+  },
+  {
+   "char": "適",
+   "unicode": "U+9069"
+  },
+  {
+   "char": "敵",
+   "unicode": "U+6575"
+  },
+  {
+   "char": "溺",
+   "unicode": "U+6EBA"
+  },
+  {
+   "char": "迭",
+   "unicode": "U+8FED"
+  },
+  {
+   "char": "哲",
+   "unicode": "U+54F2"
+  },
+  {
+   "char": "鉄",
+   "unicode": "U+9244"
+  },
+  {
+   "char": "徹",
+   "unicode": "U+5FB9"
+  },
+  {
+   "char": "撤",
+   "unicode": "U+64A4"
+  },
+  {
+   "char": "天",
+   "unicode": "U+5929"
+  },
+  {
+   "char": "典",
+   "unicode": "U+5178"
+  },
+  {
+   "char": "店",
+   "unicode": "U+5E97"
+  },
+  {
+   "char": "点",
+   "unicode": "U+70B9"
+  },
+  {
+   "char": "展",
+   "unicode": "U+5C55"
+  },
+  {
+   "char": "添",
+   "unicode": "U+6DFB"
+  },
+  {
+   "char": "転",
+   "unicode": "U+8EE2"
+  },
+  {
+   "char": "塡",
+   "unicode": "U+5861"
+  },
+  {
+   "char": "田",
+   "unicode": "U+7530"
+  },
+  {
+   "char": "伝",
+   "unicode": "U+4F1D"
+  },
+  {
+   "char": "殿",
+   "unicode": "U+6BBF"
+  },
+  {
+   "char": "電",
+   "unicode": "U+96FB"
+  },
+  {
+   "char": "斗",
+   "unicode": "U+6597"
+  },
+  {
+   "char": "吐",
+   "unicode": "U+5410"
+  },
+  {
+   "char": "妬",
+   "unicode": "U+59AC"
+  },
+  {
+   "char": "徒",
+   "unicode": "U+5F92"
+  },
+  {
+   "char": "途",
+   "unicode": "U+9014"
+  },
+  {
+   "char": "都",
+   "unicode": "U+90FD"
+  },
+  {
+   "char": "渡",
+   "unicode": "U+6E21"
+  },
+  {
+   "char": "塗",
+   "unicode": "U+5857"
+  },
+  {
+   "char": "賭",
+   "unicode": "U+8CED"
+  },
+  {
+   "char": "土",
+   "unicode": "U+571F"
+  },
+  {
+   "char": "奴",
+   "unicode": "U+5974"
+  },
+  {
+   "char": "努",
+   "unicode": "U+52AA"
+  },
+  {
+   "char": "度",
+   "unicode": "U+5EA6"
+  },
+  {
+   "char": "怒",
+   "unicode": "U+6012"
+  },
+  {
+   "char": "刀",
+   "unicode": "U+5200"
+  },
+  {
+   "char": "冬",
+   "unicode": "U+51AC"
+  },
+  {
+   "char": "灯",
+   "unicode": "U+706F"
+  },
+  {
+   "char": "当",
+   "unicode": "U+5F53"
+  },
+  {
+   "char": "投",
+   "unicode": "U+6295"
+  },
+  {
+   "char": "豆",
+   "unicode": "U+8C46"
+  },
+  {
+   "char": "東",
+   "unicode": "U+6771"
+  },
+  {
+   "char": "到",
+   "unicode": "U+5230"
+  },
+  {
+   "char": "逃",
+   "unicode": "U+9003"
+  },
+  {
+   "char": "倒",
+   "unicode": "U+5012"
+  },
+  {
+   "char": "凍",
+   "unicode": "U+51CD"
+  },
+  {
+   "char": "唐",
+   "unicode": "U+5510"
+  },
+  {
+   "char": "島",
+   "unicode": "U+5CF6"
+  },
+  {
+   "char": "桃",
+   "unicode": "U+6843"
+  },
+  {
+   "char": "討",
+   "unicode": "U+8A0E"
+  },
+  {
+   "char": "透",
+   "unicode": "U+900F"
+  },
+  {
+   "char": "党",
+   "unicode": "U+515A"
+  },
+  {
+   "char": "悼",
+   "unicode": "U+60BC"
+  },
+  {
+   "char": "盗",
+   "unicode": "U+76D7"
+  },
+  {
+   "char": "陶",
+   "unicode": "U+9676"
+  },
+  {
+   "char": "塔",
+   "unicode": "U+5854"
+  },
+  {
+   "char": "搭",
+   "unicode": "U+642D"
+  },
+  {
+   "char": "棟",
+   "unicode": "U+68DF"
+  },
+  {
+   "char": "湯",
+   "unicode": "U+6E6F"
+  },
+  {
+   "char": "痘",
+   "unicode": "U+75D8"
+  },
+  {
+   "char": "登",
+   "unicode": "U+767B"
+  },
+  {
+   "char": "答",
+   "unicode": "U+7B54"
+  },
+  {
+   "char": "等",
+   "unicode": "U+7B49"
+  },
+  {
+   "char": "筒",
+   "unicode": "U+7B52"
+  },
+  {
+   "char": "統",
+   "unicode": "U+7D71"
+  },
+  {
+   "char": "稲",
+   "unicode": "U+7A32"
+  },
+  {
+   "char": "踏",
+   "unicode": "U+8E0F"
+  },
+  {
+   "char": "糖",
+   "unicode": "U+7CD6"
+  },
+  {
+   "char": "頭",
+   "unicode": "U+982D"
+  },
+  {
+   "char": "謄",
+   "unicode": "U+8B04"
+  },
+  {
+   "char": "藤",
+   "unicode": "U+85E4"
+  },
+  {
+   "char": "闘",
+   "unicode": "U+95D8"
+  },
+  {
+   "char": "騰",
+   "unicode": "U+9A30"
+  },
+  {
+   "char": "同",
+   "unicode": "U+540C"
+  },
+  {
+   "char": "洞",
+   "unicode": "U+6D1E"
+  },
+  {
+   "char": "胴",
+   "unicode": "U+80F4"
+  },
+  {
+   "char": "動",
+   "unicode": "U+52D5"
+  },
+  {
+   "char": "堂",
+   "unicode": "U+5802"
+  },
+  {
+   "char": "童",
+   "unicode": "U+7AE5"
+  },
+  {
+   "char": "道",
+   "unicode": "U+9053"
+  },
+  {
+   "char": "働",
+   "unicode": "U+50CD"
+  },
+  {
+   "char": "銅",
+   "unicode": "U+9285"
+  },
+  {
+   "char": "導",
+   "unicode": "U+5C0E"
+  },
+  {
+   "char": "瞳",
+   "unicode": "U+77B3"
+  },
+  {
+   "char": "峠",
+   "unicode": "U+5CE0"
+  },
+  {
+   "char": "匿",
+   "unicode": "U+533F"
+  },
+  {
+   "char": "特",
+   "unicode": "U+7279"
+  },
+  {
+   "char": "得",
+   "unicode": "U+5F97"
+  },
+  {
+   "char": "督",
+   "unicode": "U+7763"
+  },
+  {
+   "char": "徳",
+   "unicode": "U+5FB3"
+  },
+  {
+   "char": "篤",
+   "unicode": "U+7BE4"
+  },
+  {
+   "char": "毒",
+   "unicode": "U+6BD2"
+  },
+  {
+   "char": "独",
+   "unicode": "U+72EC"
+  },
+  {
+   "char": "読",
+   "unicode": "U+8AAD"
+  },
+  {
+   "char": "栃",
+   "unicode": "U+6803"
+  },
+  {
+   "char": "凸",
+   "unicode": "U+51F8"
+  },
+  {
+   "char": "突",
+   "unicode": "U+7A81"
+  },
+  {
+   "char": "届",
+   "unicode": "U+5C4A"
+  },
+  {
+   "char": "屯",
+   "unicode": "U+5C6F"
+  },
+  {
+   "char": "豚",
+   "unicode": "U+8C5A"
+  },
+  {
+   "char": "頓",
+   "unicode": "U+9813"
+  },
+  {
+   "char": "貪",
+   "unicode": "U+8CAA"
+  },
+  {
+   "char": "鈍",
+   "unicode": "U+920D"
+  },
+  {
+   "char": "曇",
+   "unicode": "U+66C7"
+  },
+  {
+   "char": "丼",
+   "unicode": "U+4E3C"
+  },
+  {
+   "char": "那",
+   "unicode": "U+90A3"
+  },
+  {
+   "char": "奈",
+   "unicode": "U+5948"
+  },
+  {
+   "char": "内",
+   "unicode": "U+5185"
+  },
+  {
+   "char": "梨",
+   "unicode": "U+68A8"
+  },
+  {
+   "char": "謎",
+   "unicode": "U+8B0E"
+  },
+  {
+   "char": "鍋",
+   "unicode": "U+934B"
+  },
+  {
+   "char": "南",
+   "unicode": "U+5357"
+  },
+  {
+   "char": "軟",
+   "unicode": "U+8EDF"
+  },
+  {
+   "char": "難",
+   "unicode": "U+96E3"
+  },
+  {
+   "char": "二",
+   "unicode": "U+4E8C"
+  },
+  {
+   "char": "尼",
+   "unicode": "U+5C3C"
+  },
+  {
+   "char": "弐",
+   "unicode": "U+5F10"
+  },
+  {
+   "char": "匂",
+   "unicode": "U+5302"
+  },
+  {
+   "char": "肉",
+   "unicode": "U+8089"
+  },
+  {
+   "char": "虹",
+   "unicode": "U+8679"
+  },
+  {
+   "char": "日",
+   "unicode": "U+65E5"
+  },
+  {
+   "char": "入",
+   "unicode": "U+5165"
+  },
+  {
+   "char": "乳",
+   "unicode": "U+4E73"
+  },
+  {
+   "char": "尿",
+   "unicode": "U+5C3F"
+  },
+  {
+   "char": "任",
+   "unicode": "U+4EFB"
+  },
+  {
+   "char": "妊",
+   "unicode": "U+598A"
+  },
+  {
+   "char": "忍",
+   "unicode": "U+5FCD"
+  },
+  {
+   "char": "認",
+   "unicode": "U+8A8D"
+  },
+  {
+   "char": "寧",
+   "unicode": "U+5BE7"
+  },
+  {
+   "char": "熱",
+   "unicode": "U+71B1"
+  },
+  {
+   "char": "年",
+   "unicode": "U+5E74"
+  },
+  {
+   "char": "念",
+   "unicode": "U+5FF5"
+  },
+  {
+   "char": "捻",
+   "unicode": "U+637B"
+  },
+  {
+   "char": "粘",
+   "unicode": "U+7C98"
+  },
+  {
+   "char": "燃",
+   "unicode": "U+71C3"
+  },
+  {
+   "char": "悩",
+   "unicode": "U+60A9"
+  },
+  {
+   "char": "納",
+   "unicode": "U+7D0D"
+  },
+  {
+   "char": "能",
+   "unicode": "U+80FD"
+  },
+  {
+   "char": "脳",
+   "unicode": "U+8133"
+  },
+  {
+   "char": "農",
+   "unicode": "U+8FB2"
+  },
+  {
+   "char": "濃",
+   "unicode": "U+6FC3"
+  },
+  {
+   "char": "把",
+   "unicode": "U+628A"
+  },
+  {
+   "char": "波",
+   "unicode": "U+6CE2"
+  },
+  {
+   "char": "派",
+   "unicode": "U+6D3E"
+  },
+  {
+   "char": "破",
+   "unicode": "U+7834"
+  },
+  {
+   "char": "覇",
+   "unicode": "U+8987"
+  },
+  {
+   "char": "馬",
+   "unicode": "U+99AC"
+  },
+  {
+   "char": "婆",
+   "unicode": "U+5A46"
+  },
+  {
+   "char": "罵",
+   "unicode": "U+7F75"
+  },
+  {
+   "char": "拝",
+   "unicode": "U+62DD"
+  },
+  {
+   "char": "杯",
+   "unicode": "U+676F"
+  },
+  {
+   "char": "背",
+   "unicode": "U+80CC"
+  },
+  {
+   "char": "肺",
+   "unicode": "U+80BA"
+  },
+  {
+   "char": "俳",
+   "unicode": "U+4FF3"
+  },
+  {
+   "char": "配",
+   "unicode": "U+914D"
+  },
+  {
+   "char": "排",
+   "unicode": "U+6392"
+  },
+  {
+   "char": "敗",
+   "unicode": "U+6557"
+  },
+  {
+   "char": "廃",
+   "unicode": "U+5EC3"
+  },
+  {
+   "char": "輩",
+   "unicode": "U+8F29"
+  },
+  {
+   "char": "売",
+   "unicode": "U+58F2"
+  },
+  {
+   "char": "倍",
+   "unicode": "U+500D"
+  },
+  {
+   "char": "梅",
+   "unicode": "U+6885"
+  },
+  {
+   "char": "培",
+   "unicode": "U+57F9"
+  },
+  {
+   "char": "陪",
+   "unicode": "U+966A"
+  },
+  {
+   "char": "媒",
+   "unicode": "U+5A92"
+  },
+  {
+   "char": "買",
+   "unicode": "U+8CB7"
+  },
+  {
+   "char": "賠",
+   "unicode": "U+8CE0"
+  },
+  {
+   "char": "白",
+   "unicode": "U+767D"
+  },
+  {
+   "char": "伯",
+   "unicode": "U+4F2F"
+  },
+  {
+   "char": "拍",
+   "unicode": "U+62CD"
+  },
+  {
+   "char": "泊",
+   "unicode": "U+6CCA"
+  },
+  {
+   "char": "迫",
+   "unicode": "U+8FEB"
+  },
+  {
+   "char": "剝",
+   "unicode": "U+525D"
+  },
+  {
+   "char": "舶",
+   "unicode": "U+8236"
+  },
+  {
+   "char": "博",
+   "unicode": "U+535A"
+  },
+  {
+   "char": "薄",
+   "unicode": "U+8584"
+  },
+  {
+   "char": "麦",
+   "unicode": "U+9EA6"
+  },
+  {
+   "char": "漠",
+   "unicode": "U+6F20"
+  },
+  {
+   "char": "縛",
+   "unicode": "U+7E1B"
+  },
+  {
+   "char": "爆",
+   "unicode": "U+7206"
+  },
+  {
+   "char": "箱",
+   "unicode": "U+7BB1"
+  },
+  {
+   "char": "箸",
+   "unicode": "U+7BB8"
+  },
+  {
+   "char": "畑",
+   "unicode": "U+7551"
+  },
+  {
+   "char": "肌",
+   "unicode": "U+808C"
+  },
+  {
+   "char": "八",
+   "unicode": "U+516B"
+  },
+  {
+   "char": "鉢",
+   "unicode": "U+9262"
+  },
+  {
+   "char": "発",
+   "unicode": "U+767A"
+  },
+  {
+   "char": "髪",
+   "unicode": "U+9AEA"
+  },
+  {
+   "char": "伐",
+   "unicode": "U+4F10"
+  },
+  {
+   "char": "抜",
+   "unicode": "U+629C"
+  },
+  {
+   "char": "罰",
+   "unicode": "U+7F70"
+  },
+  {
+   "char": "閥",
+   "unicode": "U+95A5"
+  },
+  {
+   "char": "反",
+   "unicode": "U+53CD"
+  },
+  {
+   "char": "半",
+   "unicode": "U+534A"
+  },
+  {
+   "char": "氾",
+   "unicode": "U+6C3E"
+  },
+  {
+   "char": "犯",
+   "unicode": "U+72AF"
+  },
+  {
+   "char": "帆",
+   "unicode": "U+5E06"
+  },
+  {
+   "char": "汎",
+   "unicode": "U+6C4E"
+  },
+  {
+   "char": "伴",
+   "unicode": "U+4F34"
+  },
+  {
+   "char": "判",
+   "unicode": "U+5224"
+  },
+  {
+   "char": "坂",
+   "unicode": "U+5742"
+  },
+  {
+   "char": "阪",
+   "unicode": "U+962A"
+  },
+  {
+   "char": "板",
+   "unicode": "U+677F"
+  },
+  {
+   "char": "版",
+   "unicode": "U+7248"
+  },
+  {
+   "char": "班",
+   "unicode": "U+73ED"
+  },
+  {
+   "char": "畔",
+   "unicode": "U+7554"
+  },
+  {
+   "char": "般",
+   "unicode": "U+822C"
+  },
+  {
+   "char": "販",
+   "unicode": "U+8CA9"
+  },
+  {
+   "char": "斑",
+   "unicode": "U+6591"
+  },
+  {
+   "char": "飯",
+   "unicode": "U+98EF"
+  },
+  {
+   "char": "搬",
+   "unicode": "U+642C"
+  },
+  {
+   "char": "煩",
+   "unicode": "U+7169"
+  },
+  {
+   "char": "頒",
+   "unicode": "U+9812"
+  },
+  {
+   "char": "範",
+   "unicode": "U+7BC4"
+  },
+  {
+   "char": "繁",
+   "unicode": "U+7E41"
+  },
+  {
+   "char": "藩",
+   "unicode": "U+85E9"
+  },
+  {
+   "char": "晩",
+   "unicode": "U+6669"
+  },
+  {
+   "char": "番",
+   "unicode": "U+756A"
+  },
+  {
+   "char": "蛮",
+   "unicode": "U+86EE"
+  },
+  {
+   "char": "盤",
+   "unicode": "U+76E4"
+  },
+  {
+   "char": "比",
+   "unicode": "U+6BD4"
+  },
+  {
+   "char": "皮",
+   "unicode": "U+76AE"
+  },
+  {
+   "char": "妃",
+   "unicode": "U+5983"
+  },
+  {
+   "char": "否",
+   "unicode": "U+5426"
+  },
+  {
+   "char": "批",
+   "unicode": "U+6279"
+  },
+  {
+   "char": "彼",
+   "unicode": "U+5F7C"
+  },
+  {
+   "char": "披",
+   "unicode": "U+62AB"
+  },
+  {
+   "char": "肥",
+   "unicode": "U+80A5"
+  },
+  {
+   "char": "非",
+   "unicode": "U+975E"
+  },
+  {
+   "char": "卑",
+   "unicode": "U+5351"
+  },
+  {
+   "char": "飛",
+   "unicode": "U+98DB"
+  },
+  {
+   "char": "疲",
+   "unicode": "U+75B2"
+  },
+  {
+   "char": "秘",
+   "unicode": "U+79D8"
+  },
+  {
+   "char": "被",
+   "unicode": "U+88AB"
+  },
+  {
+   "char": "悲",
+   "unicode": "U+60B2"
+  },
+  {
+   "char": "扉",
+   "unicode": "U+6249"
+  },
+  {
+   "char": "費",
+   "unicode": "U+8CBB"
+  },
+  {
+   "char": "碑",
+   "unicode": "U+7891"
+  },
+  {
+   "char": "罷",
+   "unicode": "U+7F77"
+  },
+  {
+   "char": "避",
+   "unicode": "U+907F"
+  },
+  {
+   "char": "尾",
+   "unicode": "U+5C3E"
+  },
+  {
+   "char": "眉",
+   "unicode": "U+7709"
+  },
+  {
+   "char": "美",
+   "unicode": "U+7F8E"
+  },
+  {
+   "char": "備",
+   "unicode": "U+5099"
+  },
+  {
+   "char": "微",
+   "unicode": "U+5FAE"
+  },
+  {
+   "char": "鼻",
+   "unicode": "U+9F3B"
+  },
+  {
+   "char": "膝",
+   "unicode": "U+819D"
+  },
+  {
+   "char": "肘",
+   "unicode": "U+8098"
+  },
+  {
+   "char": "匹",
+   "unicode": "U+5339"
+  },
+  {
+   "char": "必",
+   "unicode": "U+5FC5"
+  },
+  {
+   "char": "泌",
+   "unicode": "U+6CCC"
+  },
+  {
+   "char": "筆",
+   "unicode": "U+7B46"
+  },
+  {
+   "char": "姫",
+   "unicode": "U+59EB"
+  },
+  {
+   "char": "百",
+   "unicode": "U+767E"
+  },
+  {
+   "char": "氷",
+   "unicode": "U+6C37"
+  },
+  {
+   "char": "表",
+   "unicode": "U+8868"
+  },
+  {
+   "char": "俵",
+   "unicode": "U+4FF5"
+  },
+  {
+   "char": "票",
+   "unicode": "U+7968"
+  },
+  {
+   "char": "評",
+   "unicode": "U+8A55"
+  },
+  {
+   "char": "漂",
+   "unicode": "U+6F02"
+  },
+  {
+   "char": "標",
+   "unicode": "U+6A19"
+  },
+  {
+   "char": "苗",
+   "unicode": "U+82D7"
+  },
+  {
+   "char": "秒",
+   "unicode": "U+79D2"
+  },
+  {
+   "char": "病",
+   "unicode": "U+75C5"
+  },
+  {
+   "char": "描",
+   "unicode": "U+63CF"
+  },
+  {
+   "char": "猫",
+   "unicode": "U+732B"
+  },
+  {
+   "char": "品",
+   "unicode": "U+54C1"
+  },
+  {
+   "char": "浜",
+   "unicode": "U+6D5C"
+  },
+  {
+   "char": "貧",
+   "unicode": "U+8CA7"
+  },
+  {
+   "char": "賓",
+   "unicode": "U+8CD3"
+  },
+  {
+   "char": "頻",
+   "unicode": "U+983B"
+  },
+  {
+   "char": "敏",
+   "unicode": "U+654F"
+  },
+  {
+   "char": "瓶",
+   "unicode": "U+74F6"
+  },
+  {
+   "char": "不",
+   "unicode": "U+4E0D"
+  },
+  {
+   "char": "夫",
+   "unicode": "U+592B"
+  },
+  {
+   "char": "父",
+   "unicode": "U+7236"
+  },
+  {
+   "char": "付",
+   "unicode": "U+4ED8"
+  },
+  {
+   "char": "布",
+   "unicode": "U+5E03"
+  },
+  {
+   "char": "扶",
+   "unicode": "U+6276"
+  },
+  {
+   "char": "府",
+   "unicode": "U+5E9C"
+  },
+  {
+   "char": "怖",
+   "unicode": "U+6016"
+  },
+  {
+   "char": "阜",
+   "unicode": "U+961C"
+  },
+  {
+   "char": "附",
+   "unicode": "U+9644"
+  },
+  {
+   "char": "訃",
+   "unicode": "U+8A03"
+  },
+  {
+   "char": "負",
+   "unicode": "U+8CA0"
+  },
+  {
+   "char": "赴",
+   "unicode": "U+8D74"
+  },
+  {
+   "char": "浮",
+   "unicode": "U+6D6E"
+  },
+  {
+   "char": "婦",
+   "unicode": "U+5A66"
+  },
+  {
+   "char": "符",
+   "unicode": "U+7B26"
+  },
+  {
+   "char": "富",
+   "unicode": "U+5BCC"
+  },
+  {
+   "char": "普",
+   "unicode": "U+666E"
+  },
+  {
+   "char": "腐",
+   "unicode": "U+8150"
+  },
+  {
+   "char": "敷",
+   "unicode": "U+6577"
+  },
+  {
+   "char": "膚",
+   "unicode": "U+819A"
+  },
+  {
+   "char": "賦",
+   "unicode": "U+8CE6"
+  },
+  {
+   "char": "譜",
+   "unicode": "U+8B5C"
+  },
+  {
+   "char": "侮",
+   "unicode": "U+4FAE"
+  },
+  {
+   "char": "武",
+   "unicode": "U+6B66"
+  },
+  {
+   "char": "部",
+   "unicode": "U+90E8"
+  },
+  {
+   "char": "舞",
+   "unicode": "U+821E"
+  },
+  {
+   "char": "封",
+   "unicode": "U+5C01"
+  },
+  {
+   "char": "風",
+   "unicode": "U+98A8"
+  },
+  {
+   "char": "伏",
+   "unicode": "U+4F0F"
+  },
+  {
+   "char": "服",
+   "unicode": "U+670D"
+  },
+  {
+   "char": "副",
+   "unicode": "U+526F"
+  },
+  {
+   "char": "幅",
+   "unicode": "U+5E45"
+  },
+  {
+   "char": "復",
+   "unicode": "U+5FA9"
+  },
+  {
+   "char": "福",
+   "unicode": "U+798F"
+  },
+  {
+   "char": "腹",
+   "unicode": "U+8179"
+  },
+  {
+   "char": "複",
+   "unicode": "U+8907"
+  },
+  {
+   "char": "覆",
+   "unicode": "U+8986"
+  },
+  {
+   "char": "払",
+   "unicode": "U+6255"
+  },
+  {
+   "char": "沸",
+   "unicode": "U+6CB8"
+  },
+  {
+   "char": "仏",
+   "unicode": "U+4ECF"
+  },
+  {
+   "char": "物",
+   "unicode": "U+7269"
+  },
+  {
+   "char": "粉",
+   "unicode": "U+7C89"
+  },
+  {
+   "char": "紛",
+   "unicode": "U+7D1B"
+  },
+  {
+   "char": "雰",
+   "unicode": "U+96F0"
+  },
+  {
+   "char": "噴",
+   "unicode": "U+5674"
+  },
+  {
+   "char": "墳",
+   "unicode": "U+58B3"
+  },
+  {
+   "char": "憤",
+   "unicode": "U+61A4"
+  },
+  {
+   "char": "奮",
+   "unicode": "U+596E"
+  },
+  {
+   "char": "分",
+   "unicode": "U+5206"
+  },
+  {
+   "char": "文",
+   "unicode": "U+6587"
+  },
+  {
+   "char": "聞",
+   "unicode": "U+805E"
+  },
+  {
+   "char": "丙",
+   "unicode": "U+4E19"
+  },
+  {
+   "char": "平",
+   "unicode": "U+5E73"
+  },
+  {
+   "char": "兵",
+   "unicode": "U+5175"
+  },
+  {
+   "char": "併",
+   "unicode": "U+4F75"
+  },
+  {
+   "char": "並",
+   "unicode": "U+4E26"
+  },
+  {
+   "char": "柄",
+   "unicode": "U+67C4"
+  },
+  {
+   "char": "陛",
+   "unicode": "U+965B"
+  },
+  {
+   "char": "閉",
+   "unicode": "U+9589"
+  },
+  {
+   "char": "塀",
+   "unicode": "U+5840"
+  },
+  {
+   "char": "幣",
+   "unicode": "U+5E63"
+  },
+  {
+   "char": "弊",
+   "unicode": "U+5F0A"
+  },
+  {
+   "char": "蔽",
+   "unicode": "U+853D"
+  },
+  {
+   "char": "餅",
+   "unicode": "U+9905"
+  },
+  {
+   "char": "米",
+   "unicode": "U+7C73"
+  },
+  {
+   "char": "壁",
+   "unicode": "U+58C1"
+  },
+  {
+   "char": "璧",
+   "unicode": "U+74A7"
+  },
+  {
+   "char": "癖",
+   "unicode": "U+7656"
+  },
+  {
+   "char": "別",
+   "unicode": "U+5225"
+  },
+  {
+   "char": "蔑",
+   "unicode": "U+8511"
+  },
+  {
+   "char": "片",
+   "unicode": "U+7247"
+  },
+  {
+   "char": "辺",
+   "unicode": "U+8FBA"
+  },
+  {
+   "char": "返",
+   "unicode": "U+8FD4"
+  },
+  {
+   "char": "変",
+   "unicode": "U+5909"
+  },
+  {
+   "char": "偏",
+   "unicode": "U+504F"
+  },
+  {
+   "char": "遍",
+   "unicode": "U+904D"
+  },
+  {
+   "char": "編",
+   "unicode": "U+7DE8"
+  },
+  {
+   "char": "弁",
+   "unicode": "U+5F01"
+  },
+  {
+   "char": "便",
+   "unicode": "U+4FBF"
+  },
+  {
+   "char": "勉",
+   "unicode": "U+52C9"
+  },
+  {
+   "char": "歩",
+   "unicode": "U+6B69"
+  },
+  {
+   "char": "保",
+   "unicode": "U+4FDD"
+  },
+  {
+   "char": "哺",
+   "unicode": "U+54FA"
+  },
+  {
+   "char": "捕",
+   "unicode": "U+6355"
+  },
+  {
+   "char": "補",
+   "unicode": "U+88DC"
+  },
+  {
+   "char": "舗",
+   "unicode": "U+8217"
+  },
+  {
+   "char": "母",
+   "unicode": "U+6BCD"
+  },
+  {
+   "char": "募",
+   "unicode": "U+52DF"
+  },
+  {
+   "char": "墓",
+   "unicode": "U+5893"
+  },
+  {
+   "char": "慕",
+   "unicode": "U+6155"
+  },
+  {
+   "char": "暮",
+   "unicode": "U+66AE"
+  },
+  {
+   "char": "簿",
+   "unicode": "U+7C3F"
+  },
+  {
+   "char": "方",
+   "unicode": "U+65B9"
+  },
+  {
+   "char": "包",
+   "unicode": "U+5305"
+  },
+  {
+   "char": "芳",
+   "unicode": "U+82B3"
+  },
+  {
+   "char": "邦",
+   "unicode": "U+90A6"
+  },
+  {
+   "char": "奉",
+   "unicode": "U+5949"
+  },
+  {
+   "char": "宝",
+   "unicode": "U+5B9D"
+  },
+  {
+   "char": "抱",
+   "unicode": "U+62B1"
+  },
+  {
+   "char": "放",
+   "unicode": "U+653E"
+  },
+  {
+   "char": "法",
+   "unicode": "U+6CD5"
+  },
+  {
+   "char": "泡",
+   "unicode": "U+6CE1"
+  },
+  {
+   "char": "胞",
+   "unicode": "U+80DE"
+  },
+  {
+   "char": "俸",
+   "unicode": "U+4FF8"
+  },
+  {
+   "char": "倣",
+   "unicode": "U+5023"
+  },
+  {
+   "char": "峰",
+   "unicode": "U+5CF0"
+  },
+  {
+   "char": "砲",
+   "unicode": "U+7832"
+  },
+  {
+   "char": "崩",
+   "unicode": "U+5D29"
+  },
+  {
+   "char": "訪",
+   "unicode": "U+8A2A"
+  },
+  {
+   "char": "報",
+   "unicode": "U+5831"
+  },
+  {
+   "char": "蜂",
+   "unicode": "U+8702"
+  },
+  {
+   "char": "豊",
+   "unicode": "U+8C4A"
+  },
+  {
+   "char": "飽",
+   "unicode": "U+98FD"
+  },
+  {
+   "char": "褒",
+   "unicode": "U+8912"
+  },
+  {
+   "char": "縫",
+   "unicode": "U+7E2B"
+  },
+  {
+   "char": "亡",
+   "unicode": "U+4EA1"
+  },
+  {
+   "char": "乏",
+   "unicode": "U+4E4F"
+  },
+  {
+   "char": "忙",
+   "unicode": "U+5FD9"
+  },
+  {
+   "char": "坊",
+   "unicode": "U+574A"
+  },
+  {
+   "char": "妨",
+   "unicode": "U+59A8"
+  },
+  {
+   "char": "忘",
+   "unicode": "U+5FD8"
+  },
+  {
+   "char": "防",
+   "unicode": "U+9632"
+  },
+  {
+   "char": "房",
+   "unicode": "U+623F"
+  },
+  {
+   "char": "肪",
+   "unicode": "U+80AA"
+  },
+  {
+   "char": "某",
+   "unicode": "U+67D0"
+  },
+  {
+   "char": "冒",
+   "unicode": "U+5192"
+  },
+  {
+   "char": "剖",
+   "unicode": "U+5256"
+  },
+  {
+   "char": "紡",
+   "unicode": "U+7D21"
+  },
+  {
+   "char": "望",
+   "unicode": "U+671B"
+  },
+  {
+   "char": "傍",
+   "unicode": "U+508D"
+  },
+  {
+   "char": "帽",
+   "unicode": "U+5E3D"
+  },
+  {
+   "char": "棒",
+   "unicode": "U+68D2"
+  },
+  {
+   "char": "貿",
+   "unicode": "U+8CBF"
+  },
+  {
+   "char": "貌",
+   "unicode": "U+8C8C"
+  },
+  {
+   "char": "暴",
+   "unicode": "U+66B4"
+  },
+  {
+   "char": "膨",
+   "unicode": "U+81A8"
+  },
+  {
+   "char": "謀",
+   "unicode": "U+8B00"
+  },
+  {
+   "char": "頰",
+   "unicode": "U+9830"
+  },
+  {
+   "char": "北",
+   "unicode": "U+5317"
+  },
+  {
+   "char": "木",
+   "unicode": "U+6728"
+  },
+  {
+   "char": "朴",
+   "unicode": "U+6734"
+  },
+  {
+   "char": "牧",
+   "unicode": "U+7267"
+  },
+  {
+   "char": "睦",
+   "unicode": "U+7766"
+  },
+  {
+   "char": "僕",
+   "unicode": "U+50D5"
+  },
+  {
+   "char": "墨",
+   "unicode": "U+58A8"
+  },
+  {
+   "char": "撲",
+   "unicode": "U+64B2"
+  },
+  {
+   "char": "没",
+   "unicode": "U+6CA1"
+  },
+  {
+   "char": "勃",
+   "unicode": "U+52C3"
+  },
+  {
+   "char": "堀",
+   "unicode": "U+5800"
+  },
+  {
+   "char": "本",
+   "unicode": "U+672C"
+  },
+  {
+   "char": "奔",
+   "unicode": "U+5954"
+  },
+  {
+   "char": "翻",
+   "unicode": "U+7FFB"
+  },
+  {
+   "char": "凡",
+   "unicode": "U+51E1"
+  },
+  {
+   "char": "盆",
+   "unicode": "U+76C6"
+  },
+  {
+   "char": "麻",
+   "unicode": "U+9EBB"
+  },
+  {
+   "char": "摩",
+   "unicode": "U+6469"
+  },
+  {
+   "char": "磨",
+   "unicode": "U+78E8"
+  },
+  {
+   "char": "魔",
+   "unicode": "U+9B54"
+  },
+  {
+   "char": "毎",
+   "unicode": "U+6BCE"
+  },
+  {
+   "char": "妹",
+   "unicode": "U+59B9"
+  },
+  {
+   "char": "枚",
+   "unicode": "U+679A"
+  },
+  {
+   "char": "昧",
+   "unicode": "U+6627"
+  },
+  {
+   "char": "埋",
+   "unicode": "U+57CB"
+  },
+  {
+   "char": "幕",
+   "unicode": "U+5E55"
+  },
+  {
+   "char": "膜",
+   "unicode": "U+819C"
+  },
+  {
+   "char": "枕",
+   "unicode": "U+6795"
+  },
+  {
+   "char": "又",
+   "unicode": "U+53C8"
+  },
+  {
+   "char": "末",
+   "unicode": "U+672B"
+  },
+  {
+   "char": "抹",
+   "unicode": "U+62B9"
+  },
+  {
+   "char": "万",
+   "unicode": "U+4E07"
+  },
+  {
+   "char": "満",
+   "unicode": "U+6E80"
+  },
+  {
+   "char": "慢",
+   "unicode": "U+6162"
+  },
+  {
+   "char": "漫",
+   "unicode": "U+6F2B"
+  },
+  {
+   "char": "未",
+   "unicode": "U+672A"
+  },
+  {
+   "char": "味",
+   "unicode": "U+5473"
+  },
+  {
+   "char": "魅",
+   "unicode": "U+9B45"
+  },
+  {
+   "char": "岬",
+   "unicode": "U+5CAC"
+  },
+  {
+   "char": "密",
+   "unicode": "U+5BC6"
+  },
+  {
+   "char": "蜜",
+   "unicode": "U+871C"
+  },
+  {
+   "char": "脈",
+   "unicode": "U+8108"
+  },
+  {
+   "char": "妙",
+   "unicode": "U+5999"
+  },
+  {
+   "char": "民",
+   "unicode": "U+6C11"
+  },
+  {
+   "char": "眠",
+   "unicode": "U+7720"
+  },
+  {
+   "char": "矛",
+   "unicode": "U+77DB"
+  },
+  {
+   "char": "務",
+   "unicode": "U+52D9"
+  },
+  {
+   "char": "無",
+   "unicode": "U+7121"
+  },
+  {
+   "char": "夢",
+   "unicode": "U+5922"
+  },
+  {
+   "char": "霧",
+   "unicode": "U+9727"
+  },
+  {
+   "char": "娘",
+   "unicode": "U+5A18"
+  },
+  {
+   "char": "名",
+   "unicode": "U+540D"
+  },
+  {
+   "char": "命",
+   "unicode": "U+547D"
+  },
+  {
+   "char": "明",
+   "unicode": "U+660E"
+  },
+  {
+   "char": "迷",
+   "unicode": "U+8FF7"
+  },
+  {
+   "char": "冥",
+   "unicode": "U+51A5"
+  },
+  {
+   "char": "盟",
+   "unicode": "U+76DF"
+  },
+  {
+   "char": "銘",
+   "unicode": "U+9298"
+  },
+  {
+   "char": "鳴",
+   "unicode": "U+9CF4"
+  },
+  {
+   "char": "滅",
+   "unicode": "U+6EC5"
+  },
+  {
+   "char": "免",
+   "unicode": "U+514D"
+  },
+  {
+   "char": "面",
+   "unicode": "U+9762"
+  },
+  {
+   "char": "綿",
+   "unicode": "U+7DBF"
+  },
+  {
+   "char": "麺",
+   "unicode": "U+9EBA"
+  },
+  {
+   "char": "茂",
+   "unicode": "U+8302"
+  },
+  {
+   "char": "模",
+   "unicode": "U+6A21"
+  },
+  {
+   "char": "毛",
+   "unicode": "U+6BDB"
+  },
+  {
+   "char": "妄",
+   "unicode": "U+5984"
+  },
+  {
+   "char": "盲",
+   "unicode": "U+76F2"
+  },
+  {
+   "char": "耗",
+   "unicode": "U+8017"
+  },
+  {
+   "char": "猛",
+   "unicode": "U+731B"
+  },
+  {
+   "char": "網",
+   "unicode": "U+7DB2"
+  },
+  {
+   "char": "目",
+   "unicode": "U+76EE"
+  },
+  {
+   "char": "黙",
+   "unicode": "U+9ED9"
+  },
+  {
+   "char": "門",
+   "unicode": "U+9580"
+  },
+  {
+   "char": "紋",
+   "unicode": "U+7D0B"
+  },
+  {
+   "char": "問",
+   "unicode": "U+554F"
+  },
+  {
+   "char": "冶",
+   "unicode": "U+51B6"
+  },
+  {
+   "char": "夜",
+   "unicode": "U+591C"
+  },
+  {
+   "char": "野",
+   "unicode": "U+91CE"
+  },
+  {
+   "char": "弥",
+   "unicode": "U+5F25"
+  },
+  {
+   "char": "厄",
+   "unicode": "U+5384"
+  },
+  {
+   "char": "役",
+   "unicode": "U+5F79"
+  },
+  {
+   "char": "約",
+   "unicode": "U+7D04"
+  },
+  {
+   "char": "訳",
+   "unicode": "U+8A33"
+  },
+  {
+   "char": "薬",
+   "unicode": "U+85AC"
+  },
+  {
+   "char": "躍",
+   "unicode": "U+8E8D"
+  },
+  {
+   "char": "闇",
+   "unicode": "U+95C7"
+  },
+  {
+   "char": "由",
+   "unicode": "U+7531"
+  },
+  {
+   "char": "油",
+   "unicode": "U+6CB9"
+  },
+  {
+   "char": "喩",
+   "unicode": "U+55A9"
+  },
+  {
+   "char": "愉",
+   "unicode": "U+6109"
+  },
+  {
+   "char": "諭",
+   "unicode": "U+8AED"
+  },
+  {
+   "char": "輸",
+   "unicode": "U+8F38"
+  },
+  {
+   "char": "癒",
+   "unicode": "U+7652"
+  },
+  {
+   "char": "唯",
+   "unicode": "U+552F"
+  },
+  {
+   "char": "友",
+   "unicode": "U+53CB"
+  },
+  {
+   "char": "有",
+   "unicode": "U+6709"
+  },
+  {
+   "char": "勇",
+   "unicode": "U+52C7"
+  },
+  {
+   "char": "幽",
+   "unicode": "U+5E7D"
+  },
+  {
+   "char": "悠",
+   "unicode": "U+60A0"
+  },
+  {
+   "char": "郵",
+   "unicode": "U+90F5"
+  },
+  {
+   "char": "湧",
+   "unicode": "U+6E67"
+  },
+  {
+   "char": "猶",
+   "unicode": "U+7336"
+  },
+  {
+   "char": "裕",
+   "unicode": "U+88D5"
+  },
+  {
+   "char": "遊",
+   "unicode": "U+904A"
+  },
+  {
+   "char": "雄",
+   "unicode": "U+96C4"
+  },
+  {
+   "char": "誘",
+   "unicode": "U+8A98"
+  },
+  {
+   "char": "憂",
+   "unicode": "U+6182"
+  },
+  {
+   "char": "融",
+   "unicode": "U+878D"
+  },
+  {
+   "char": "優",
+   "unicode": "U+512A"
+  },
+  {
+   "char": "与",
+   "unicode": "U+4E0E"
+  },
+  {
+   "char": "予",
+   "unicode": "U+4E88"
+  },
+  {
+   "char": "余",
+   "unicode": "U+4F59"
+  },
+  {
+   "char": "誉",
+   "unicode": "U+8A89"
+  },
+  {
+   "char": "預",
+   "unicode": "U+9810"
+  },
+  {
+   "char": "幼",
+   "unicode": "U+5E7C"
+  },
+  {
+   "char": "用",
+   "unicode": "U+7528"
+  },
+  {
+   "char": "羊",
+   "unicode": "U+7F8A"
+  },
+  {
+   "char": "妖",
+   "unicode": "U+5996"
+  },
+  {
+   "char": "洋",
+   "unicode": "U+6D0B"
+  },
+  {
+   "char": "要",
+   "unicode": "U+8981"
+  },
+  {
+   "char": "容",
+   "unicode": "U+5BB9"
+  },
+  {
+   "char": "庸",
+   "unicode": "U+5EB8"
+  },
+  {
+   "char": "揚",
+   "unicode": "U+63DA"
+  },
+  {
+   "char": "揺",
+   "unicode": "U+63FA"
+  },
+  {
+   "char": "葉",
+   "unicode": "U+8449"
+  },
+  {
+   "char": "陽",
+   "unicode": "U+967D"
+  },
+  {
+   "char": "溶",
+   "unicode": "U+6EB6"
+  },
+  {
+   "char": "腰",
+   "unicode": "U+8170"
+  },
+  {
+   "char": "様",
+   "unicode": "U+69D8"
+  },
+  {
+   "char": "瘍",
+   "unicode": "U+760D"
+  },
+  {
+   "char": "踊",
+   "unicode": "U+8E0A"
+  },
+  {
+   "char": "窯",
+   "unicode": "U+7AAF"
+  },
+  {
+   "char": "養",
+   "unicode": "U+990A"
+  },
+  {
+   "char": "擁",
+   "unicode": "U+64C1"
+  },
+  {
+   "char": "謡",
+   "unicode": "U+8B21"
+  },
+  {
+   "char": "曜",
+   "unicode": "U+66DC"
+  },
+  {
+   "char": "抑",
+   "unicode": "U+6291"
+  },
+  {
+   "char": "沃",
+   "unicode": "U+6C83"
+  },
+  {
+   "char": "浴",
+   "unicode": "U+6D74"
+  },
+  {
+   "char": "欲",
+   "unicode": "U+6B32"
+  },
+  {
+   "char": "翌",
+   "unicode": "U+7FCC"
+  },
+  {
+   "char": "翼",
+   "unicode": "U+7FFC"
+  },
+  {
+   "char": "拉",
+   "unicode": "U+62C9"
+  },
+  {
+   "char": "裸",
+   "unicode": "U+88F8"
+  },
+  {
+   "char": "羅",
+   "unicode": "U+7F85"
+  },
+  {
+   "char": "来",
+   "unicode": "U+6765"
+  },
+  {
+   "char": "雷",
+   "unicode": "U+96F7"
+  },
+  {
+   "char": "頼",
+   "unicode": "U+983C"
+  },
+  {
+   "char": "絡",
+   "unicode": "U+7D61"
+  },
+  {
+   "char": "落",
+   "unicode": "U+843D"
+  },
+  {
+   "char": "酪",
+   "unicode": "U+916A"
+  },
+  {
+   "char": "辣",
+   "unicode": "U+8FA3"
+  },
+  {
+   "char": "乱",
+   "unicode": "U+4E71"
+  },
+  {
+   "char": "卵",
+   "unicode": "U+5375"
+  },
+  {
+   "char": "覧",
+   "unicode": "U+89A7"
+  },
+  {
+   "char": "濫",
+   "unicode": "U+6FEB"
+  },
+  {
+   "char": "藍",
+   "unicode": "U+85CD"
+  },
+  {
+   "char": "欄",
+   "unicode": "U+6B04"
+  },
+  {
+   "char": "吏",
+   "unicode": "U+540F"
+  },
+  {
+   "char": "利",
+   "unicode": "U+5229"
+  },
+  {
+   "char": "里",
+   "unicode": "U+91CC"
+  },
+  {
+   "char": "理",
+   "unicode": "U+7406"
+  },
+  {
+   "char": "痢",
+   "unicode": "U+75E2"
+  },
+  {
+   "char": "裏",
+   "unicode": "U+88CF"
+  },
+  {
+   "char": "履",
+   "unicode": "U+5C65"
+  },
+  {
+   "char": "璃",
+   "unicode": "U+7483"
+  },
+  {
+   "char": "離",
+   "unicode": "U+96E2"
+  },
+  {
+   "char": "陸",
+   "unicode": "U+9678"
+  },
+  {
+   "char": "立",
+   "unicode": "U+7ACB"
+  },
+  {
+   "char": "律",
+   "unicode": "U+5F8B"
+  },
+  {
+   "char": "慄",
+   "unicode": "U+6144"
+  },
+  {
+   "char": "略",
+   "unicode": "U+7565"
+  },
+  {
+   "char": "柳",
+   "unicode": "U+67F3"
+  },
+  {
+   "char": "流",
+   "unicode": "U+6D41"
+  },
+  {
+   "char": "留",
+   "unicode": "U+7559"
+  },
+  {
+   "char": "竜",
+   "unicode": "U+7ADC"
+  },
+  {
+   "char": "粒",
+   "unicode": "U+7C92"
+  },
+  {
+   "char": "隆",
+   "unicode": "U+9686"
+  },
+  {
+   "char": "硫",
+   "unicode": "U+786B"
+  },
+  {
+   "char": "侶",
+   "unicode": "U+4FB6"
+  },
+  {
+   "char": "旅",
+   "unicode": "U+65C5"
+  },
+  {
+   "char": "虜",
+   "unicode": "U+865C"
+  },
+  {
+   "char": "慮",
+   "unicode": "U+616E"
+  },
+  {
+   "char": "了",
+   "unicode": "U+4E86"
+  },
+  {
+   "char": "両",
+   "unicode": "U+4E21"
+  },
+  {
+   "char": "良",
+   "unicode": "U+826F"
+  },
+  {
+   "char": "料",
+   "unicode": "U+6599"
+  },
+  {
+   "char": "涼",
+   "unicode": "U+6DBC"
+  },
+  {
+   "char": "猟",
+   "unicode": "U+731F"
+  },
+  {
+   "char": "陵",
+   "unicode": "U+9675"
+  },
+  {
+   "char": "量",
+   "unicode": "U+91CF"
+  },
+  {
+   "char": "僚",
+   "unicode": "U+50DA"
+  },
+  {
+   "char": "領",
+   "unicode": "U+9818"
+  },
+  {
+   "char": "寮",
+   "unicode": "U+5BEE"
+  },
+  {
+   "char": "療",
+   "unicode": "U+7642"
+  },
+  {
+   "char": "瞭",
+   "unicode": "U+77AD"
+  },
+  {
+   "char": "糧",
+   "unicode": "U+7CE7"
+  },
+  {
+   "char": "力",
+   "unicode": "U+529B"
+  },
+  {
+   "char": "緑",
+   "unicode": "U+7DD1"
+  },
+  {
+   "char": "林",
+   "unicode": "U+6797"
+  },
+  {
+   "char": "厘",
+   "unicode": "U+5398"
+  },
+  {
+   "char": "倫",
+   "unicode": "U+502B"
+  },
+  {
+   "char": "輪",
+   "unicode": "U+8F2A"
+  },
+  {
+   "char": "隣",
+   "unicode": "U+96A3"
+  },
+  {
+   "char": "臨",
+   "unicode": "U+81E8"
+  },
+  {
+   "char": "瑠",
+   "unicode": "U+7460"
+  },
+  {
+   "char": "涙",
+   "unicode": "U+6D99"
+  },
+  {
+   "char": "累",
+   "unicode": "U+7D2F"
+  },
+  {
+   "char": "塁",
+   "unicode": "U+5841"
+  },
+  {
+   "char": "類",
+   "unicode": "U+985E"
+  },
+  {
+   "char": "令",
+   "unicode": "U+4EE4"
+  },
+  {
+   "char": "礼",
+   "unicode": "U+793C"
+  },
+  {
+   "char": "冷",
+   "unicode": "U+51B7"
+  },
+  {
+   "char": "励",
+   "unicode": "U+52B1"
+  },
+  {
+   "char": "戻",
+   "unicode": "U+623B"
+  },
+  {
+   "char": "例",
+   "unicode": "U+4F8B"
+  },
+  {
+   "char": "鈴",
+   "unicode": "U+9234"
+  },
+  {
+   "char": "零",
+   "unicode": "U+96F6"
+  },
+  {
+   "char": "霊",
+   "unicode": "U+970A"
+  },
+  {
+   "char": "隷",
+   "unicode": "U+96B7"
+  },
+  {
+   "char": "齢",
+   "unicode": "U+9F62"
+  },
+  {
+   "char": "麗",
+   "unicode": "U+9E97"
+  },
+  {
+   "char": "暦",
+   "unicode": "U+66A6"
+  },
+  {
+   "char": "歴",
+   "unicode": "U+6B74"
+  },
+  {
+   "char": "列",
+   "unicode": "U+5217"
+  },
+  {
+   "char": "劣",
+   "unicode": "U+52A3"
+  },
+  {
+   "char": "烈",
+   "unicode": "U+70C8"
+  },
+  {
+   "char": "裂",
+   "unicode": "U+88C2"
+  },
+  {
+   "char": "恋",
+   "unicode": "U+604B"
+  },
+  {
+   "char": "連",
+   "unicode": "U+9023"
+  },
+  {
+   "char": "廉",
+   "unicode": "U+5EC9"
+  },
+  {
+   "char": "練",
+   "unicode": "U+7DF4"
+  },
+  {
+   "char": "錬",
+   "unicode": "U+932C"
+  },
+  {
+   "char": "呂",
+   "unicode": "U+5442"
+  },
+  {
+   "char": "炉",
+   "unicode": "U+7089"
+  },
+  {
+   "char": "賂",
+   "unicode": "U+8CC2"
+  },
+  {
+   "char": "路",
+   "unicode": "U+8DEF"
+  },
+  {
+   "char": "露",
+   "unicode": "U+9732"
+  },
+  {
+   "char": "老",
+   "unicode": "U+8001"
+  },
+  {
+   "char": "労",
+   "unicode": "U+52B4"
+  },
+  {
+   "char": "弄",
+   "unicode": "U+5F04"
+  },
+  {
+   "char": "郎",
+   "unicode": "U+90CE"
+  },
+  {
+   "char": "朗",
+   "unicode": "U+6717"
+  },
+  {
+   "char": "浪",
+   "unicode": "U+6D6A"
+  },
+  {
+   "char": "廊",
+   "unicode": "U+5ECA"
+  },
+  {
+   "char": "楼",
+   "unicode": "U+697C"
+  },
+  {
+   "char": "漏",
+   "unicode": "U+6F0F"
+  },
+  {
+   "char": "籠",
+   "unicode": "U+7C60"
+  },
+  {
+   "char": "六",
+   "unicode": "U+516D"
+  },
+  {
+   "char": "録",
+   "unicode": "U+9332"
+  },
+  {
+   "char": "麓",
+   "unicode": "U+9E93"
+  },
+  {
+   "char": "論",
+   "unicode": "U+8AD6"
+  },
+  {
+   "char": "和",
+   "unicode": "U+548C"
+  },
+  {
+   "char": "話",
+   "unicode": "U+8A71"
+  },
+  {
+   "char": "賄",
+   "unicode": "U+8CC4"
+  },
+  {
+   "char": "脇",
+   "unicode": "U+8107"
+  },
+  {
+   "char": "惑",
+   "unicode": "U+60D1"
+  },
+  {
+   "char": "枠",
+   "unicode": "U+67A0"
+  },
+  {
+   "char": "湾",
+   "unicode": "U+6E7E"
+  },
+  {
+   "char": "腕",
+   "unicode": "U+8155"
+  }
+ ]
+}

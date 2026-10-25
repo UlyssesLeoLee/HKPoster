@@ -1,5 +1,5 @@
 {
-  "_comment": "HK Poster Heavy — Wave 0 冻结设计参数。本文件是各 lane 的唯一参数来源；改动需走变更记录。",
+  "_comment": "HK Poster Heavy — 冻结设计参数（Wave 0 冻结 + Wave 1 多文种扩展）。本文件是各 lane 的唯一参数来源；改动需走变更记录。",
   "family": "HK Poster",
   "style": "Heavy",
   "postscript_name": "HKPoster-Heavy",
@@ -13,7 +13,14 @@
   "latin_lower_advance": 580,
   "digit_advance": 640,
   "cjk_advance": 1000,
+  "kana_advance": 1000,
   "space_advance": 500,
+  "languages": {
+    "primary": "zh-HK",
+    "additional": ["en-US", "zh-CN", "ja-JP"],
+    "planned_extension": [],
+    "_note": "zh-CN 与 ja-JP 为 Wave 1 新增。简体与日文汉字多为独立码位（龙/义/爱/无/风 vs 龍/義/愛/無/風；竜 vs 龍），因此不共用码位、不需要 locl；只有同一码位存在地区异形时（画/直/骨/化/令 等 JIS-vs-GB 变体）才启用 locl，该部分列入 P2 backlog"
+  },
   "weights": {
     "cjk": {
       "primary_stroke": 96,
@@ -27,6 +34,20 @@
       "diagonal_stroke": 112,
       "thin_stroke": 104
     },
+    "cjk_simplified": {
+      "primary_stroke": 108,
+      "secondary_stroke": 100,
+      "thin_stroke": 92,
+      "dot_stroke": 92,
+      "_note": "简体笔画比繁体少，同一绝对权重会显得更轻，故简体整体上调约 12% 以匹配繁体的视觉重量（简繁混排的配重原则）"
+    },
+    "kana": {
+      "primary_stroke": 92,
+      "secondary_stroke": 84,
+      "thin_stroke": 76,
+      "dot_stroke": 84,
+      "_note": "假名笔画少且多为曲线笔，权重低于汉字；片假名可略重于平假名"
+    },
     "_note": "CJK 与 Latin 不能共用同一套权重常量：同样 96 单位在 1000 UPM 的 CJK 里读作 Heavy，但在 640 advance 的 Latin 里只读作 Regular（Wave 0 样张实测，见 docs/09 RV-14）"
   },
   "grid": {
@@ -36,10 +57,14 @@
     "cjk_body_bottom": 0,
     "latin_cap_top": 700,
     "latin_baseline": 0,
-    "latin_side_bearing": 48
+    "latin_side_bearing": 48,
+    "kana_body_top": 760,
+    "kana_body_bottom": 40,
+    "kana_body_left": 90,
+    "kana_body_right": 910
   },
   "rules": {
-    "GLY-001": "横竖笔画维持统一视觉重量（主笔画 96 单位）",
+    "GLY-001": "横竖笔画维持统一视觉重量（主笔画 96 单位；简体与假名按各自档位）",
     "GLY-002": "外角以清晰硬折为主，弧形轮廓需光学平滑",
     "GLY-003": "装饰斜切仅作用于不影响结构的位置",
     "GLY-004": "同部件保持家族相似性",
@@ -60,5 +85,33 @@
     "digits": "0123456789",
     "punctuation_cjk": "，。、！？：；（）「」【】",
     "punctuation_latin": ".,!?:;()-—\"'&"
+  },
+  "wave1_cn_simplified": {
+    "_note": "简体专有字（与繁体不同码位）。港影警道城火夜等简繁同形字直接共用现有 master，不重复制作",
+    "characters": [
+      {"char": "龙", "unicode": "U+9F99"},
+      {"char": "义", "unicode": "U+4E49"},
+      {"char": "爱", "unicode": "U+7231"},
+      {"char": "无", "unicode": "U+65E0"},
+      {"char": "风", "unicode": "U+98CE"},
+      {"char": "电", "unicode": "U+7535"},
+      {"char": "击", "unicode": "U+51FB"},
+      {"char": "间", "unicode": "U+95F4"}
+    ]
+  },
+  "wave1_kana": {
+    "_note": "平假名 46 + 片假名 46 为基础集；有浊音/半浊音的预组合形与浊音符、反复记号一并制作。U+3099/U+309A 只放在平假名 master（避免跨 master 重名）",
+    "hiragana_base": "あいうえお かきくけこ さしすせそ たちつてと なにぬねの はひふへほ まみむめも やゆよ らりるれろ わゐゑをん",
+    "katakana_base": "アイウエオ カキクケコ サシスセソ タチツテト ナニヌネノ ハヒフヘホ マミムメモ ヤユヨ ラリルレロ ワヰヱヲン",
+    "hiragana_voiced": "がぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽ",
+    "katakana_voiced": "ガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ",
+    "combining_marks": ["U+3099", "U+309A"],
+    "iteration_marks": ["U+309D", "U+309E", "U+30FD", "U+30FE", "U+309B", "U+309C"]
+  },
+  "wave1_jp": {
+    "_note": "日语汉字集合的范围由集成方拍板（见 docs/11 多文种规划）；本轮先做不依赖该决定的假名与简体",
+    "jp_specific_forms": [
+      {"char": "竜", "unicode": "U+7ADC", "note": "日文形，对应繁体 龍 / 简体 龙"}
+    ]
   }
 }

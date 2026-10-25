@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import io
 import json
 import os
 import platform
@@ -162,17 +163,72 @@ def composite(sources: list[Path]) -> tuple[Font, list[str]]:
     return base, conflicts
 
 
-def apply_features(font: Font, feature_files: list[Path]) -> list[str]:
+def feature_applies(glyph_names: set[str], text: str) -> tuple[bool, str]:
+    """判断该特性文件在当前字形集下是否适用。
+
+    feaLib 解析特性时会把被引用的字形记成 ast.GlyphName；
+    只要引用了当前字形集里没有的字形（例如只构建 CJK 子集却编译
+    kerning-latin.fea），该特性文件就不适用。
+    """
+    from fontTools.feaLib import ast as fea_ast
+    from fontTools.feaLib.parser import Parser
+
+    def walk(node):
+        if isinstance(node, (list, tuple)):
+            for item in node:
+                yield from walk(item)
+            return
+        yield node
+        attributes = getattr(node, "__dict__", None)
+        if attributes:
+            for value in attributes.values():
+                yield from walk(value)
+
+    try:
+        tree = Parser(io.StringIO(text), set()).parse()
+    except Exception as error:  # noqa: BLE001
+        return False, f"解析失败 {type(error).__name__}: {error}"
+
+    referenced = {
+        node.glyph for node in walk(tree) if isinstance(node, fea_ast.GlyphName)
+    }
+    missing = sorted(referenced - glyph_names)
+    if missing:
+        return False, f"引用了当前字形集没有的字形 {missing}"
+    return True, ""
+
+
+def apply_features(font: Font, feature_files: list[Path], strict: bool) -> tuple[list[str], list[str]]:
+    """把适用的 .fea 拼进 UFO 的 features.fea。
+
+    strict=True（全量构建）：任何不适用的特性文件都是**硬错误**——
+    静默跳过会让特性凭空消失，比构建失败更难发现。
+    strict=False（子集构建）：跳过的特性文件会被打印出来，避免"以为编进去了"。
+    """
+    glyph_names = set(font.keys())
     chunks = []
-    used = []
+    used: list[str] = []
+    skipped: list[str] = []
     for path in feature_files:
         text = path.read_text(encoding="utf-8")
-        if text.strip():
-            chunks.append(text.rstrip() + "\n")
-            used.append(path.name)
+        if not text.strip():
+            continue
+        applicable, reason = feature_applies(glyph_names, text)
+        if not applicable:
+            message = f"{path.name}：{reason}"
+            if strict:
+                raise SystemExit(
+                    f"[build_font] 特性文件在全量构建下不可用 → {message}\n"
+                    "        （要么补齐它引用的字形，要么删掉该特性文件）"
+                )
+            skipped.append(message)
+            print(f"[build_font] 跳过特性文件（子集构建，字形不存在）：{message}")
+            continue
+        chunks.append(text.rstrip() + "\n")
+        used.append(path.name)
     if chunks:
         font.features = "\n".join(chunks)
-    return used
+    return used, skipped
 
 
 def compile_formats(
@@ -247,11 +303,12 @@ def main() -> int:
     epoch = ensure_reproducible()
     print(f"[build_font] SOURCE_DATE_EPOCH={epoch}（产物按此时间戳定版，构建可复现）")
     sources = collect_sources(args.sources)
+    full_build = args.sources is None
     feature_files = collect_features()
     out_dir = Path(args.out).resolve()
 
     font, conflicts = composite(sources)
-    used_features = apply_features(font, feature_files)
+    used_features, skipped_features = apply_features(font, feature_files, strict=full_build)
 
     tmp_dir = Path(tempfile.mkdtemp(prefix="hkposter-build-", dir=str(FONT_SRC)))
     try:
@@ -290,6 +347,7 @@ def main() -> int:
         },
         "sources": [rel_path(p) for p in sources],
         "features": used_features,
+        "features_skipped": skipped_features,
         "glyph_count": len(font.keys()),
         "unicode_glyph_count": unicode_count,
         "conflicts": conflicts,

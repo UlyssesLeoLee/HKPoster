@@ -7,6 +7,9 @@ style_requirements: |
   内部复杂字必须保留清晰负空间，不可变成黑块。
   霓虹、描边、金属效果和旧化纹理属于海报排版特效，
   不能作为真实字体字形成立的前提。
+  多文种要求：繁体（zh-HK）为主基线，简体中文（zh-CN）与
+  日文（ja-JP）同字体并置——简体因笔画少需上调约 12% 权重以匹配繁体黑度，
+  假名需自成一档更细的权重；简繁同形字共用同一字形，日文专有形另立字形。
 
 project:
   name: "港映重黑"
@@ -15,28 +18,32 @@ project:
   target_usage: ["电影海报标题", "游戏封面", "活动主视觉", "视频封面"]
   languages:
     primary: "zh-HK"
-    additional: ["en-US"]
-    planned_extension: ["zh-CN"]
+    additional: ["en-US", "zh-CN", "ja-JP"]
+    planned_extension: []
+    _note: "zh-CN 与 ja-JP 于 Wave 1 纳入。简体与日文汉字多为独立码位，不共用码位、不需要 locl；同一码位的地区异形（JIS-vs-GB）列入 P2 backlog
   character_coverage:
     approach: "approved_explicit_list"
-    poc_glyphs: "30-50 (proposal)"
-    pilot_cjk_characters: "500 (proposal)"
+    poc_glyphs: "74 已试制（12 汉字 + 36 Latin/数字 + 26 标点）"
+    pilot_cjk_characters: "500 (proposal；繁体 + 简体 + 日文汉字三集合分批推进)"
     extended_cjk_characters: "1500 (proposal)"
     baseline_spreadsheet: "../tables/字符集与测试计划.xlsx"
   font_family:
     styles: ["Heavy"]
     variable_font: false
   technical_preferences:
-    units_per_em: "1000 (candidate; not frozen)"
+    units_per_em: "1000 (frozen)"
     target_formats: ["OTF", "TTF", "WOFF2"]
-    glyph_outlines_status: "NOT_CREATED"
+    glyph_outlines_status: "CREATED (Wave 0：recipe → UFO → 字体可构建；见 docs/10_Wave0试制记录.md)"
+    source_pipeline: "recipe (Python 笔画原语) → UFO master → ufo2ft → OTF/TTF/WOFF2"
+    reproducible_build: true
   licensing:
     status: "UNDECIDED"
 
 execution:
-  mode: "DOCUMENTS_ONLY"
+  mode: "FONT_ENGINEERING"
   document_formats: ["md", "xlsx"]
-  output_path: "./hk-poster-font-output"
+  output_path: "./font-src"
   requirements_traceability: true
   adversarial_review: true
-  release_gate: "REQUIRES_REAL_FONT_BUILD_AND_TEST"
+  release_gate: "REQUIRES_LICENSE_DECISION + REMAINING_GLYPH_FIXES + macOS_BROWSER_TESTS"
+  _note: "发布门禁仍未通过：许可证 UNDECIDED、4 个汉字待修、macOS 与浏览器平台测试 NOT_RUN（见 docs/10 §7）"
