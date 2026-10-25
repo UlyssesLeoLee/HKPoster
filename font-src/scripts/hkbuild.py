@@ -320,5 +320,6 @@ def write_ufo(
         glyph.draw(ufo_glyph.getPen())
 
     path = Path(ufo_dir)
+    path.parent.mkdir(parents=True, exist_ok=True)
     font.save(str(path), overwrite=True)
     return path
