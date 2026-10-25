@@ -28,6 +28,26 @@ Wave 2 返工要点
 * 浊音符 / 半浊音符 / 反复记号本身没有上下分布，不参与放大，
   只把落点挪到放大后的右上角。
 
+Wave 2 v3：海报外观改造（wave2/kana-hira-rework）
+-------------------------------------------------
+* **任务 A（`_band` 改造）**：曲线笔由「圆转角管子」改成
+  **外角硬折 + 内角开孔**（docs/03 GLY-002「外角以清晰硬折为主」）：
+  - 外角（凸转角）取两条偏移边的**交点**（miter）做硬折；
+    miter 长度 > 2.5 × (w/2) 时改用斜切（bevel），避免 48px 下的尖刺毛刺；
+  - 内角（凹转角）两条偏移边会相交，直接连两个偏移端点（bevel），
+    形成 V 形内凹 =「内角适度开孔」；
+  - **端面保持平切**（垂直于中心线），与汉字横竖端面一致；
+  - **中心线坐标一个字都没改** —— 只改轮廓的处理方式（字形不动）。
+* **任务 B（端点斜切）**：浊点 / 半浊点改成**斜切平行四边形**，
+  与汉字 `g.dot(..., slant=26)` 同语言、同角度档（docs/03 GLY-004）。
+  汉字的 slant 是分档的（26 / 20 / 18 / 16 / 14 / −14），假名点画用 26。
+  GLY-003：斜切只用在点/短撇/记号，主笔的识别笔画不斜切。
+* **任务 C（字重）**：在**新外观**上把「假名/汉字 墨量比」迭代到 0.54..0.56。
+  起点 W_MAIN 110 / W_SEC 100 / W_THIN 90 / W_DOT 100，
+  因为硬角改造会改变墨量面积，权重必须在外观改完之后再调。
+  实测（墨量比口径见交付报告）：110/100/90/100 → 平假名墨量比 0.598（过重），
+  逐轮降到 **101/92/83/92 → 平假名墨量比 0.5505**（落在 0.54..0.56）。
+
 码位说明：字符集合严格按任务清单执行（不增不删），
 码位一律取 Unicode 实际值（unicodedata.name 逐个核对）。
 任务清单的码位表有 16 处错位（い/う/え/お 与 12 个预组合形），
@@ -39,18 +59,20 @@ Wave 2 返工要点
 * 字面框：假名 advance 固定 1000。wave2 放大后墨迹框为 x 60..940 / y 0..820，
   竖直方向以 y=400 为中线与汉字对齐。
   例外：ぜ 的浊音符占住右上角，基字（せ）按参照字体的做法**横向收窄**
-  （只收窄 x，高度与笔画权重不动），浊音符留在右上角，���迹不越 em。
-* 笔画权重：主 92 / 次 84 / 细 76 / 点 84。假名笔画少、曲线笔多，
-  整体比汉字轻一档（汉字 96/92/84），在汉字行里不抢视觉重量。
+  （只收窄 x，高度与笔画权重不动），浊音符留在右上角，墨迹不越 em。
+* 笔画权重四档：**主 101 / 次 92 / 细 83 / 点 92**（wave2 v3 起）。
+  假名笔画少、曲线笔多，整体比汉字同档略轻（汉字 96/92/84），
+  但「假名/汉字 墨量比」要落在 0.54..0.56（与日文黑体同黑度）。
   放大只动中心线坐标、不动权重，所以放大后「笔画 / 字高」从 0.157 回到 0.117。
 * 曲线笔（し/つ/ら/り/や/ろ/わ/か/み/ぬ/ね/の/め/ゆ/れ/わ…）用 3–8 段折线
   加粗成闭合轮廓：端面平切（垂直于中心线，GLY-002 硬折优先），
-  转折处用圆弧过渡，与汉字的硬折形成同族但不雷同。
+  **外角硬折（miter，超限斜切）、内角开孔（bevel）**，
+  与汉字的硬折同族。
 * 字形之间不互相粘连（GLY-005）：墨迹收在字面框内，
   相邻假名之间天然留出空隙，连绵感靠字距不靠字形相接。
-* 浊音符：U+3099 / U+309A 是零宽合记号（advance=0），只画右上角两枚短斜画
-  （半浊音为一枚小圆环），落在基字右上角 x≈779..925 / y≈679..801，
-  不落在字面中央。预组合形（が/ぎ/…）把同一枚浊音符烙进字面，
+* 浊音符：U+3099 / U+309A 是零宽合记号（advance=0），只画右上角两枚
+  **斜切平行四边形**（汉字 `g.dot(..., slant=26)` 的同语言），
+  落在基字右上角，不落在字面中央。预组合形（が/ぎ/…）把同一枚浊音符烙进字面，
   其中 ぐ/ざ/ず/だ/ぢ/ば/ぱ 的基字整体左移，给浊音符腾出右上角空间
   （放大后基字涨进右上角，让位量按新字面重算，见 VOICED_ORDER）；
   ぜ 改用参照字体的做法：基字（せ）横向收窄、浊音符留在右上角（见 _narrow_to_fit）。
@@ -69,10 +91,10 @@ sys.path.insert(0, str(FONT_SRC / "scripts"))
 
 from hkbuild import Glyph, write_ufo  # noqa: E402
 
-W_MAIN = 92
-W_SEC = 84
-W_THIN = 76
-W_DOT = 84
+W_MAIN = 101
+W_SEC = 92
+W_THIN = 83
+W_DOT = 92
 
 # --- 放大参数（任务 B）---------------------------------------------------
 KANA_SCALE = 1.35        # 全尺寸假名的放大系数（只作用于中心线坐标）
@@ -84,46 +106,88 @@ INK_Y = (0.0, 820.0)
 
 # --------------------------------------------------------------------- 几何
 
-def _band(pts, weight):
-    """中心线折线 → 闭合轮廓：端面平切，转折处圆滑。
+def _band(pts, weight, miter_limit=2.5):
+    """中心线折线 → 闭合轮廓：**外角硬折、内角开孔**（海报家族的轮廓语言）。
 
-    每段按法线左右各偏移 weight/2，转角处补一段圆弧，
-    左右两侧拼成一条简单闭合多边形（不自交）。
+    对应 docs/03 GLY-002「外角以清晰硬折为主；弧形轮廓需光学平滑」：
+
+    * 逐段沿法线左右各偏移 weight/2，得到左右两条偏移边；
+    * **外角（凸转角）** 用两条偏移边的**交点**（miter）做硬折；
+      miter 长度超过 ``miter_limit * (weight/2)`` 时改用**斜切（bevel）**，
+      避免 48px 下出现尖刺毛刺（GLY-006）；
+    * **内角（凹转角）** 两条偏移边会相交，直接**连两个偏移端点**（bevel），
+      形成 V 形内凹 —— 即设计资料说的「内角必要时适度开孔」；
+    * **端面保持平切**（垂直于中心线），与汉字横竖的端面一致；
+    * **中心线坐标一个字都不改** —— 这里只改轮廓的处理方式（字形不动）。
     """
     h = weight / 2.0
-    segs = []
-    for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
-        dx, dy = x2 - x1, y2 - y1
-        length = math.hypot(dx, dy)
-        if length < 1e-9:
-            continue
-        segs.append((x1, y1, x2, y2, dx / length, dy / length))
-    if not segs:
+
+    # 去掉重复点（零长段会让偏移线的方向算不出来）
+    p = [pts[0]]
+    for q in pts[1:]:
+        if abs(q[0] - p[-1][0]) > 1e-9 or abs(q[1] - p[-1][1]) > 1e-9:
+            p.append(q)
+    if len(p) < 2:
         return []
 
+    dirs = []
+    for (x1, y1), (x2, y2) in zip(p, p[1:]):
+        dx, dy = x2 - x1, y2 - y1
+        length = math.hypot(dx, dy)
+        dirs.append((dx / length, dy / length))
+    nseg = len(dirs)
+
     def side(sign):
-        out = []
-        for i, (x1, y1, x2, y2, ux, uy) in enumerate(segs):
-            nx, ny = -uy * sign, ux * sign
-            if i:
-                _, _, _, _, pux, puy = segs[i - 1]
-                pnx, pny = -puy * sign, pux * sign
-                a0 = math.atan2(pny, pnx)
-                a1 = math.atan2(ny, nx)
-                delta = (a1 - a0 + math.pi) % (2 * math.pi) - math.pi
-                steps = max(2, int(abs(delta) / math.radians(10)) + 1)
-                for s in range(steps + 1):
-                    a = a0 + delta * s / steps
-                    out.append((x1 + math.cos(a) * h, y1 + math.sin(a) * h))
+        """sign=+1 取左侧偏移边，sign=-1 取右侧偏移边。"""
+        nors = [(-uy * sign, ux * sign) for (ux, uy) in dirs]
+        out = [(p[0][0] + nors[0][0] * h, p[0][1] + nors[0][1] * h)]
+        for i in range(1, nseg):
+            px, py = p[i]
+            n1, n2 = nors[i - 1], nors[i]
+            d1, d2 = dirs[i - 1], dirs[i]
+            cross = d1[0] * d2[1] - d1[1] * d2[0]
+            # 上一段偏移边的终点 / 下一段偏移边的起点
+            e_pt = (px + n1[0] * h, py + n1[1] * h)
+            s_pt = (px + n2[0] * h, py + n2[1] * h)
+            if abs(cross) < 1e-12:
+                # 共线：偏移线连续，直接接上
+                out.append(s_pt)
+                continue
+            # 左转（cross>0）时左侧是内角；sign=-1 时左右对调
+            inner = (cross * sign) > 0.0
+            if inner:
+                # 内角：斜切 → V 形内凹（开孔）
+                out.append(e_pt)
+                out.append(s_pt)
+                continue
+            # 外角：miter 硬折（超限则斜切）
+            denom = 1.0 + d1[0] * d2[0] + d1[1] * d2[1]
+            if denom < 1e-9:
+                out.append(e_pt)
+                out.append(s_pt)
+                continue
+            mx = (n1[0] + n2[0]) * h / denom
+            my = (n1[1] + n2[1]) * h / denom
+            if math.hypot(mx, my) > miter_limit * h:
+                out.append(e_pt)
+                out.append(s_pt)
             else:
-                out.append((x1 + nx * h, y1 + ny * h))
-            out.append((x2 + nx * h, y2 + ny * h))
+                out.append((px + mx, py + my))
+        out.append((p[-1][0] + nors[-1][0] * h, p[-1][1] + nors[-1][1] * h))
         return out
 
     left = side(1)
     right = side(-1)
     right.reverse()
-    return left + right
+    poly = left + right
+    # 去掉相邻重复点（连续共线段会造出零长边）
+    clean = []
+    for pt in poly:
+        if not clean or abs(pt[0] - clean[-1][0]) > 1e-9 or abs(pt[1] - clean[-1][1]) > 1e-9:
+            clean.append(pt)
+    if len(clean) > 1 and abs(clean[0][0] - clean[-1][0]) < 1e-9 and abs(clean[0][1] - clean[-1][1]) < 1e-9:
+        clean.pop()
+    return clean
 
 
 def _circle(cx, cy, r, n=28):
@@ -261,6 +325,21 @@ def _narrow_to_fit(base_strokes, mark_strokes, margin=5.0):
     if nb is not None and nb[0] < INK_X[0]:
         dx = INK_X[0] - nb[0]
     return narrowed, dx
+
+
+def _scale_only(strokes, k):
+    """只缩放**中心线坐标**（笔画权重不动），围绕这组笔画自身的墨迹外接框中心。
+
+    与 `_scale_strokes` 的区别：不做「对到 (500, 400)」的对齐，
+    也不做框夹取 —— 只把一组已经按最终空间画好的笔画整体放大，
+    落位仍交给 `_place_small`（水平居中 + 贴基线）。
+    """
+    bb = _measure(strokes)
+    if bb is None:
+        return list(strokes)
+    cx = (bb[0] + bb[2]) / 2.0
+    cy = (bb[1] + bb[3]) / 2.0
+    return _map_strokes(strokes, lambda x, y: ((x - cx) * k + cx, (y - cy) * k + cy))
 
 
 def _scale_once(strokes, k):
@@ -636,17 +715,20 @@ KANA: dict[str, list[tuple]] = {
     ],
 }
 
-# 浊音符：右上角两枚短斜画（斜向右上升，与日文浊点的习惯方向一致）。
-# wave2：全尺寸假名放大 ×1.35 后，浊音符挪到字面框的右上角
-# （墨迹 x 773..929 / y 669..811），与 Yu Gothic Bold 的落点同侧。
+# 浊音符：右上角两枚**斜切平行四边形**。
+# wave2 v3：统一到汉字的端点语言 —— 汉字用 g.dot(..., slant=26) 的斜切
+# 平行四边形作点（港的氵、共的点），假名的浊点改用同一套语言、同一个
+# 角度档（26）。docs/03 GLY-004：同一枚记号在全字族形状必须一致。
+# 落点不变（右上角），倾切方向与原来的「/」一致（slant>0 = 顶边右移）。
 DAKU = [
-    ("p", [(806, 706), (844, 774)], W_THIN),
-    ("p", [(860, 706), (898, 774)], W_THIN),
+    ("dot", 810, 742, 52, 86, 26),
+    ("dot", 866, 742, 52, 86, 26),
 ]
 
-# 半浊音符：右上角一枚小圆环（与浊音符同角）。
+# 半浊音符：右上角一枚同语言的斜切平行四边形（v3 规格明确要求，
+# 与浊点同属「点/记号」一档，用 slant=26）。
 HAND = [
-    ("ring", _circle(851, 740, 58, 28), _circle(851, 740, 26, 28)),
+    ("dot", 851, 740, 58, 86, 26),
 ]
 
 # 反复记号：上一字形缩小后的单笔曲线。
@@ -762,6 +844,20 @@ SMALL = {
 # 笔画清单、笔画拆法、相对坐标一律不动，落位靠一次整体平移完成。
 SMALL_PLACE_CX = 500.0
 SMALL_PLACE_BOTTOM = 40.0
+
+# 个别小假名的**尺寸**修正（v2 规格任务 B2 / v3 沿用）：
+# ゖ 现状字高 416 = 全尺寸假名的 0.55，卡在「小假名/全尺寸假名 ≥ 0.55」
+# 的门槛上；标准小假名应在 0.65..0.72。
+# ょ/ゕ/ぉ 原本在「0.60..0.80」这条设计线上；全尺寸假名加粗后字高中位
+# 从 774 涨到 785.5，它们的比例被摊薄到 0.558..0.589 —— 按同样办法补回。
+# 做法 = 只放大中心线坐标（笔画权重不动、不改笔画拆法），
+# 再交给 `_place_small` 重新落位（水平居中 + 贴基线）。
+SMALL_SCALE = {
+    "ゖ": 1.30,
+    "ょ": 1.14,
+    "ゕ": 1.07,
+    "ぉ": 1.06,
+}
 
 
 def _place_small(strokes):
@@ -895,7 +991,11 @@ def build() -> list[Glyph]:
                    ("ゎ", 0x308E), ("ゕ", 0x3095), ("ゖ", 0x3096)):
         g = Glyph(f"uni{cp:04X}", advance=1000, unicode=cp,
                   note=f"平假名 {ch}（小假名，新补）")
-        for s in _place_small(SMALL[ch]):
+        strokes = SMALL[ch]
+        if ch in SMALL_SCALE:
+            # 尺寸修正（只动中心线坐标，权重与笔画拆法不动）
+            strokes = _scale_only(strokes, SMALL_SCALE[ch])
+        for s in _place_small(strokes):
             _stroke(g, s)
         glyphs.append(g)
 
