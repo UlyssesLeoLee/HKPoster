@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="semicolon" format="2">
+  <advance width="240"/>
+  <unicode hex="003B"/>
+  <note>
+; 分号
+</note>
+  <outline>
+    <contour>
+      <point x="79" y="-57" type="line"/>
+      <point x="133" y="3" type="line"/>
+      <point x="140" y="4" type="line"/>
+      <point x="157" y="15" type="line"/>
+      <point x="168" y="32" type="line"/>
+      <point x="172" y="52" type="line"/>
+      <point x="168" y="72" type="line"/>
+      <point x="157" y="89" type="line"/>
+      <point x="140" y="100" type="line"/>
+      <point x="120" y="104" type="line"/>
+      <point x="100" y="100" type="line"/>
+      <point x="83" y="89" type="line"/>
+      <point x="72" y="72" type="line"/>
+      <point x="68" y="52" type="line"/>
+      <point x="72" y="32" type="line"/>
+      <point x="79" y="22" type="line"/>
+      <point x="69" y="-51" type="line"/>
+    </contour>
+    <contour>
+      <point x="157" y="363" type="line"/>
+      <point x="168" y="380" type="line"/>
+      <point x="172" y="400" type="line"/>
+      <point x="168" y="420" type="line"/>
+      <point x="157" y="437" type="line"/>
+      <point x="140" y="448" type="line"/>
+      <point x="120" y="452" type="line"/>
+      <point x="100" y="448" type="line"/>
+      <point x="83" y="437" type="line"/>
+      <point x="72" y="420" type="line"/>
+      <point x="68" y="400" type="line"/>
+      <point x="72" y="380" type="line"/>
+      <point x="83" y="363" type="line"/>
+      <point x="100" y="352" type="line"/>
+      <point x="120" y="348" type="line"/>
+      <point x="140" y="352" type="line"/>
+    </contour>
+  </outline>
+</glyph>
