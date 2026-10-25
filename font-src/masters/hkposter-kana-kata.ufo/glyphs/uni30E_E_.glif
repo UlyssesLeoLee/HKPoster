@@ -3,22 +3,22 @@
   <advance width="1000"/>
   <unicode hex="30EE"/>
   <note>
-ヮ：小假名，由 ワ 另行绘制（wave2 v2 加粗，字高 550，水平居中·贴基线）
+ヮ：小假名，由 ワ 另行绘制（wave2 v2 加粗，字高 552，水平居中·贴基线）
 </note>
   <outline>
     <contour>
-      <point x="434" y="40" type="line"/>
-      <point x="753" y="486" type="line"/>
-      <point x="710" y="517" type="line"/>
-      <point x="710" y="570" type="line"/>
-      <point x="358" y="570" type="line"/>
-      <point x="362" y="590" type="line"/>
-      <point x="272" y="590" type="line"/>
-      <point x="246" y="462" type="line"/>
-      <point x="336" y="462" type="line"/>
-      <point x="336" y="464" type="line"/>
-      <point x="607" y="464" type="line"/>
-      <point x="348" y="102" type="line"/>
+      <point x="437" y="40" type="line"/>
+      <point x="756" y="486" type="line"/>
+      <point x="709" y="519" type="line"/>
+      <point x="709" y="576" type="line"/>
+      <point x="358" y="576" type="line"/>
+      <point x="361" y="592" type="line"/>
+      <point x="271" y="592" type="line"/>
+      <point x="245" y="464" type="line"/>
+      <point x="272" y="464" type="line"/>
+      <point x="272" y="462" type="line"/>
+      <point x="597" y="462" type="line"/>
+      <point x="343" y="106" type="line"/>
     </contour>
   </outline>
 </glyph>

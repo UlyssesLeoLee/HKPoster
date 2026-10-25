@@ -3,28 +3,28 @@
   <advance width="1000"/>
   <unicode hex="30A9"/>
   <note>
-ォ：小假名，由 オ 另行绘制（wave2 v2 加粗，字高 577，水平居中·贴基线）
+ォ：小假名，由 オ 另行绘制（wave2 v2 加粗，字高 582，水平居中·贴基线）
 </note>
   <outline>
     <contour>
-      <point x="431" y="241" type="line"/>
-      <point x="431" y="40" type="line"/>
-      <point x="537" y="40" type="line"/>
-      <point x="537" y="337" type="line"/>
-      <point x="747" y="529" type="line"/>
-      <point x="715" y="564" type="line"/>
-      <point x="715" y="617" type="line"/>
-      <point x="253" y="617" type="line"/>
-      <point x="253" y="511" type="line"/>
-      <point x="431" y="511" type="line"/>
-      <point x="431" y="369" type="line"/>
-      <point x="274" y="226" type="line"/>
-      <point x="338" y="156" type="line"/>
+      <point x="426" y="231" type="line"/>
+      <point x="426" y="40" type="line"/>
+      <point x="540" y="40" type="line"/>
+      <point x="540" y="336" type="line"/>
+      <point x="749" y="526" type="line"/>
+      <point x="714" y="564" type="line"/>
+      <point x="714" y="622" type="line"/>
+      <point x="252" y="622" type="line"/>
+      <point x="252" y="506" type="line"/>
+      <point x="426" y="506" type="line"/>
+      <point x="426" y="371" type="line"/>
+      <point x="270" y="229" type="line"/>
+      <point x="340" y="153" type="line"/>
     </contour>
     <contour>
-      <point x="537" y="466" type="line"/>
-      <point x="537" y="511" type="line"/>
-      <point x="586" y="511" type="line"/>
+      <point x="540" y="475" type="line"/>
+      <point x="540" y="506" type="line"/>
+      <point x="575" y="506" type="line"/>
     </contour>
   </outline>
 </glyph>

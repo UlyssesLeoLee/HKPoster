@@ -111,6 +111,8 @@ def main() -> int:
                     help="假名/汉字 墨量比下限（项目所有者 2026-10-25 定 0.55）")
     ap.add_argument("--ink-max", type=float, default=0.56,
                     help="假名/汉字 墨量比上限")
+    ap.add_argument("--script-gap", type=float, default=0.03,
+                    help="平假名/片假名 两者墨量比之差的上限（黑度对称性）")
     ap.add_argument("--ratio-min", type=float, default=0.85,
                     help="本字体/参照 的字高比下限（逐字）")
     ap.add_argument("--ratio-max", type=float, default=1.15,
@@ -262,8 +264,11 @@ def main() -> int:
     hira_ink = _med_ink("あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん")
     kata_ink = _med_ink("アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン")
     ink_ratio = None
+    hira_ratio = kata_ratio = None
     if cjk_ink and hira_ink and kata_ink:
-        ink_ratio = ((hira_ink + kata_ink) / 2) / cjk_ink
+        hira_ratio = hira_ink / cjk_ink
+        kata_ratio = kata_ink / cjk_ink
+        ink_ratio = (hira_ratio + kata_ratio) / 2
 
     print("[kana-size] 汉字字高中位 = %s" % (round(cjk_median, 1) if cjk_median else "N/A"))
     print("[kana-size] 全尺寸假名字高中位 = %.1f  (n=%d)" % (full_median, len(full)))
@@ -272,6 +277,10 @@ def main() -> int:
     if ink_ratio is not None:
         print("[kana-size] 假名/汉字 墨量比 = %.3f  (目标 %.2f..%.2f)"
               % (ink_ratio, args.ink_min, args.ink_max))
+        print("[kana-size]   分列：平假名 %.3f / 片假名 %.3f  (两者差 %.3f，"
+              "上限 %.3f —— 差太多说明平/片黑度不对称)"
+              % (hira_ratio, kata_ratio, abs(hira_ratio - kata_ratio),
+                 args.script_gap))
     if rel_bad:
         rels = [r["rel_ref"] for r in rel_bad]
         print("[kana-size] 与参照逐字比：中位 %.3f  n=%d" % (statistics.median(rels), len(rels)))
@@ -315,6 +324,13 @@ def main() -> int:
         problems += 1
         print(f"[kana-size] FAIL 假名/汉字墨量比 {ink_ratio:.3f} 不在 "
               f"{args.ink_min}..{args.ink_max}（假名要跟汉字同黑度）")
+    if hira_ratio is not None and kata_ratio is not None:
+        gap = abs(hira_ratio - kata_ratio)
+        if gap > args.script_gap:
+            problems += 1
+            print(f"[kana-size] FAIL 平/片假名黑度不对称："
+                  f"平 {hira_ratio:.3f} vs 片 {kata_ratio:.3f}（差 {gap:.3f} > "
+                  f"{args.script_gap}）—— 混排会看出平/片不同档")
 
     report = {
         "font": str(font_path),
@@ -323,6 +339,8 @@ def main() -> int:
         "kana_full_median_height": full_median,
         "family_ratio": round(family, 4),
         "ink_ratio": round(ink_ratio, 4) if ink_ratio is not None else None,
+        "hira_ink_ratio": round(hira_ratio, 4) if hira_ratio is not None else None,
+        "kata_ink_ratio": round(kata_ratio, 4) if kata_ratio is not None else None,
         "missing": missing,
         "rel_ref_off": rel_bad,
         "small_off": small_bad,

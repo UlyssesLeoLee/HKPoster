@@ -7,24 +7,24 @@
 </note>
   <outline>
     <contour>
-      <point x="805" y="0" type="line"/>
-      <point x="805" y="59" type="line"/>
-      <point x="864" y="59" type="line"/>
-      <point x="864" y="741" type="line"/>
-      <point x="805" y="741" type="line"/>
-      <point x="805" y="800" type="line"/>
-      <point x="195" y="800" type="line"/>
-      <point x="195" y="741" type="line"/>
-      <point x="136" y="741" type="line"/>
-      <point x="136" y="59" type="line"/>
-      <point x="195" y="59" type="line"/>
-      <point x="195" y="0" type="line"/>
+      <point x="800" y="0" type="line"/>
+      <point x="800" y="64" type="line"/>
+      <point x="864" y="64" type="line"/>
+      <point x="864" y="736" type="line"/>
+      <point x="800" y="736" type="line"/>
+      <point x="800" y="800" type="line"/>
+      <point x="200" y="800" type="line"/>
+      <point x="200" y="736" type="line"/>
+      <point x="136" y="736" type="line"/>
+      <point x="136" y="64" type="line"/>
+      <point x="200" y="64" type="line"/>
+      <point x="200" y="0" type="line"/>
     </contour>
     <contour>
-      <point x="254" y="118" type="line"/>
-      <point x="254" y="682" type="line"/>
-      <point x="746" y="682" type="line"/>
-      <point x="746" y="118" type="line"/>
+      <point x="264" y="128" type="line"/>
+      <point x="264" y="672" type="line"/>
+      <point x="736" y="672" type="line"/>
+      <point x="736" y="128" type="line"/>
     </contour>
   </outline>
 </glyph>
