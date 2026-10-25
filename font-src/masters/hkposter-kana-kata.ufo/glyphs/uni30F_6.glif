@@ -3,32 +3,29 @@
   <advance width="1000"/>
   <unicode hex="30F6"/>
   <note>
-ヶ：小假名，由 ケ 另行绘制（wave2 新增，水平居中·贴基线，字高 555（全尺寸的 0.70 倍））
+ヶ：小假名，由 ケ 另行绘制（wave2 v2 加粗，字高 562，水平居中·贴基线）
 </note>
   <outline>
     <contour>
-      <point x="678" y="467" type="line"/>
-      <point x="726" y="550" type="line"/>
-      <point x="650" y="594" type="line"/>
-      <point x="576" y="467" type="line"/>
-      <point x="398" y="467" type="line"/>
-      <point x="457" y="548" type="line"/>
-      <point x="393" y="596" type="line"/>
-      <point x="298" y="467" type="line"/>
-      <point x="281" y="467" type="line"/>
-      <point x="281" y="444" type="line"/>
-      <point x="274" y="434" type="line"/>
-      <point x="281" y="428" type="line"/>
-      <point x="281" y="387" type="line"/>
-      <point x="337" y="387" type="line"/>
-      <point x="338" y="386" type="line"/>
-      <point x="339" y="387" type="line"/>
-      <point x="529" y="387" type="line"/>
-      <point x="353" y="84" type="line"/>
-      <point x="429" y="40" type="line"/>
-      <point x="631" y="387" type="line"/>
-      <point x="705" y="387" type="line"/>
-      <point x="705" y="467" type="line"/>
+      <point x="688" y="475" type="line"/>
+      <point x="731" y="550" type="line"/>
+      <point x="645" y="600" type="line"/>
+      <point x="572" y="475" type="line"/>
+      <point x="407" y="475" type="line"/>
+      <point x="461" y="548" type="line"/>
+      <point x="389" y="602" type="line"/>
+      <point x="296" y="475" type="line"/>
+      <point x="281" y="475" type="line"/>
+      <point x="281" y="455" type="line"/>
+      <point x="270" y="440" type="line"/>
+      <point x="281" y="431" type="line"/>
+      <point x="281" y="385" type="line"/>
+      <point x="519" y="385" type="line"/>
+      <point x="348" y="90" type="line"/>
+      <point x="434" y="40" type="line"/>
+      <point x="635" y="385" type="line"/>
+      <point x="705" y="385" type="line"/>
+      <point x="705" y="475" type="line"/>
     </contour>
   </outline>
 </glyph>

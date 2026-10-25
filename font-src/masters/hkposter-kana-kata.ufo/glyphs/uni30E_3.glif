@@ -3,19 +3,21 @@
   <advance width="1000"/>
   <unicode hex="30E3"/>
   <note>
-ャ：小假名，由 ヤ 另行绘制（wave2 新增，水平居中·贴基线，字高 554（全尺寸的 0.70 倍））
+ャ：小假名，由 ヤ 另行绘制（wave2 v2 加粗，字高 560，水平居中·贴基线）
 </note>
   <outline>
     <contour>
-      <point x="461" y="40" type="line"/>
-      <point x="727" y="554" type="line"/>
-      <point x="671" y="583" type="line"/>
-      <point x="649" y="594" type="line"/>
-      <point x="643" y="583" type="line"/>
-      <point x="272" y="583" type="line"/>
-      <point x="272" y="495" type="line"/>
-      <point x="598" y="495" type="line"/>
-      <point x="383" y="80" type="line"/>
+      <point x="464" y="40" type="line"/>
+      <point x="730" y="554" type="line"/>
+      <point x="669" y="586" type="line"/>
+      <point x="669" y="592" type="line"/>
+      <point x="657" y="592" type="line"/>
+      <point x="642" y="600" type="line"/>
+      <point x="637" y="592" type="line"/>
+      <point x="270" y="592" type="line"/>
+      <point x="270" y="492" type="line"/>
+      <point x="586" y="492" type="line"/>
+      <point x="376" y="86" type="line"/>
     </contour>
   </outline>
 </glyph>

@@ -3,22 +3,22 @@
   <advance width="1000"/>
   <unicode hex="30EF"/>
   <note>
-ワ：左上短竖 + 横折撇（字面 ×1.30，与汉字同族）
+ワ：左上点（斜切平行四边形）+ 横折撇（字面 ×1.30，与汉字同族）
 </note>
   <outline>
     <contour>
-      <point x="385" y="15" type="line"/>
-      <point x="840" y="652" type="line"/>
-      <point x="801" y="680" type="line"/>
-      <point x="801" y="728" type="line"/>
-      <point x="247" y="728" type="line"/>
-      <point x="247" y="784" type="line"/>
-      <point x="159" y="784" type="line"/>
-      <point x="159" y="602" type="line"/>
-      <point x="247" y="602" type="line"/>
-      <point x="247" y="632" type="line"/>
-      <point x="708" y="632" type="line"/>
-      <point x="307" y="71" type="line"/>
+      <point x="392" y="13" type="line"/>
+      <point x="847" y="650" type="line"/>
+      <point x="802" y="682" type="line"/>
+      <point x="802" y="737" type="line"/>
+      <point x="273" y="737" type="line"/>
+      <point x="280" y="786" type="line"/>
+      <point x="180" y="786" type="line"/>
+      <point x="154" y="604" type="line"/>
+      <point x="254" y="604" type="line"/>
+      <point x="257" y="627" type="line"/>
+      <point x="695" y="627" type="line"/>
+      <point x="302" y="77" type="line"/>
     </contour>
   </outline>
 </glyph>
