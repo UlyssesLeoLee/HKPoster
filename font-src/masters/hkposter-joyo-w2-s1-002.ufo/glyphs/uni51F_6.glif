@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni51F6" format="2">
+  <advance width="1000"/>
+  <unicode hex="51F6"/>
+  <note>
+4画：乂 + 凵
+</note>
+  <outline>
+    <contour>
+      <point x="712" y="0" type="line"/>
+      <point x="760" y="0" type="line"/>
+      <point x="808" y="0" type="line"/>
+      <point x="808" y="560" type="line"/>
+      <point x="712" y="560" type="line"/>
+      <point x="712" y="96" type="line"/>
+      <point x="248" y="96" type="line"/>
+      <point x="248" y="470" type="line"/>
+      <point x="152" y="470" type="line"/>
+      <point x="152" y="0" type="line"/>
+      <point x="200" y="0" type="line"/>
+      <point x="248" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="622" y="670" type="line"/>
+      <point x="538" y="717" type="line"/>
+      <point x="471" y="598" type="line"/>
+      <point x="410" y="698" type="line"/>
+      <point x="328" y="647" type="line"/>
+      <point x="417" y="503" type="line"/>
+      <point x="258" y="220" type="line"/>
+      <point x="342" y="173" type="line"/>
+      <point x="475" y="409" type="line"/>
+      <point x="620" y="172" type="line"/>
+      <point x="702" y="223" type="line"/>
+      <point x="529" y="505" type="line"/>
+    </contour>
+  </outline>
+</glyph>

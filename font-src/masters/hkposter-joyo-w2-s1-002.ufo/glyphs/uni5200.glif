@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5200" format="2">
+  <advance width="1000"/>
+  <unicode hex="5200"/>
+  <note>
+2画：横折钩 + 撇
+</note>
+  <outline>
+    <contour>
+      <point x="703" y="327" type="line"/>
+      <point x="687" y="245" type="line"/>
+      <point x="732" y="236" type="line"/>
+      <point x="732" y="220" type="line"/>
+      <point x="828" y="220" type="line"/>
+      <point x="828" y="774" type="line"/>
+      <point x="800" y="774" type="line"/>
+      <point x="800" y="820" type="line"/>
+      <point x="180" y="820" type="line"/>
+      <point x="180" y="728" type="line"/>
+      <point x="501" y="728" type="line"/>
+      <point x="139" y="111" type="line"/>
+      <point x="222" y="62" type="line"/>
+      <point x="601" y="709" type="line"/>
+      <point x="569" y="728" type="line"/>
+      <point x="732" y="728" type="line"/>
+      <point x="732" y="321" type="line"/>
+    </contour>
+  </outline>
+</glyph>

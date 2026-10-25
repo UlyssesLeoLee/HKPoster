@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5F14" format="2">
+  <advance width="1000"/>
+  <unicode hex="5F14"/>
+  <note>
+4画：弓身 + 穿心竖
+</note>
+  <outline>
+    <contour>
+      <point x="698" y="281" type="line"/>
+      <point x="678" y="287" type="line"/>
+      <point x="654" y="207" type="line"/>
+      <point x="698" y="194" type="line"/>
+      <point x="698" y="180" type="line"/>
+      <point x="782" y="180" type="line"/>
+      <point x="782" y="400" type="line"/>
+      <point x="760" y="400" type="line"/>
+      <point x="760" y="442" type="line"/>
+      <point x="542" y="442" type="line"/>
+      <point x="542" y="594" type="line"/>
+      <point x="780" y="594" type="line"/>
+      <point x="780" y="620" type="line"/>
+      <point x="802" y="620" type="line"/>
+      <point x="802" y="774" type="line"/>
+      <point x="780" y="774" type="line"/>
+      <point x="780" y="820" type="line"/>
+      <point x="542" y="820" type="line"/>
+      <point x="458" y="820" type="line"/>
+      <point x="220" y="820" type="line"/>
+      <point x="220" y="728" type="line"/>
+      <point x="458" y="728" type="line"/>
+      <point x="458" y="686" type="line"/>
+      <point x="220" y="686" type="line"/>
+      <point x="220" y="594" type="line"/>
+      <point x="238" y="594" type="line"/>
+      <point x="238" y="380" type="line"/>
+      <point x="280" y="380" type="line"/>
+      <point x="280" y="358" type="line"/>
+      <point x="698" y="358" type="line"/>
+    </contour>
+    <contour>
+      <point x="322" y="442" type="line"/>
+      <point x="322" y="594" type="line"/>
+      <point x="458" y="594" type="line"/>
+      <point x="458" y="442" type="line"/>
+    </contour>
+    <contour>
+      <point x="718" y="686" type="line"/>
+      <point x="542" y="686" type="line"/>
+      <point x="542" y="728" type="line"/>
+      <point x="718" y="728" type="line"/>
+    </contour>
+  </outline>
+</glyph>

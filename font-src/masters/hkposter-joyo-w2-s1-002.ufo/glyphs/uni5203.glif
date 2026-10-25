@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5203" format="2">
+  <advance width="1000"/>
+  <unicode hex="5203"/>
+  <note>
+3画：刀 + 丿 + 点
+</note>
+  <outline>
+    <contour>
+      <point x="703" y="407" type="line"/>
+      <point x="687" y="325" type="line"/>
+      <point x="732" y="316" type="line"/>
+      <point x="732" y="300" type="line"/>
+      <point x="828" y="300" type="line"/>
+      <point x="828" y="774" type="line"/>
+      <point x="800" y="774" type="line"/>
+      <point x="800" y="820" type="line"/>
+      <point x="180" y="820" type="line"/>
+      <point x="180" y="728" type="line"/>
+      <point x="501" y="728" type="line"/>
+      <point x="372" y="502" type="line"/>
+      <point x="372" y="595" type="line"/>
+      <point x="288" y="595" type="line"/>
+      <point x="288" y="485" type="line"/>
+      <point x="362" y="485" type="line"/>
+      <point x="149" y="110" type="line"/>
+      <point x="232" y="62" type="line"/>
+      <point x="601" y="710" type="line"/>
+      <point x="570" y="728" type="line"/>
+      <point x="732" y="728" type="line"/>
+      <point x="732" y="401" type="line"/>
+    </contour>
+  </outline>
+</glyph>

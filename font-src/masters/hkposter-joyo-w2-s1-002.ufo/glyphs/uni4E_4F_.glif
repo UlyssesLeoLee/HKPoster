@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4E4F" format="2">
+  <advance width="1000"/>
+  <unicode hex="4E4F"/>
+  <note>
+3画（规格）/ 4段落笔：ノ + 丶 + 乛 + ㇏
+</note>
+  <outline>
+    <contour>
+      <point x="243" y="269" type="line"/>
+      <point x="287" y="199" type="line"/>
+      <point x="251" y="201" type="line"/>
+      <point x="247" y="105" type="line"/>
+      <point x="869" y="79" type="line"/>
+      <point x="873" y="175" type="line"/>
+      <point x="289" y="199" type="line"/>
+      <point x="557" y="371" type="line"/>
+      <point x="540" y="398" type="line"/>
+      <point x="560" y="398" type="line"/>
+      <point x="560" y="482" type="line"/>
+      <point x="200" y="482" type="line"/>
+      <point x="200" y="398" type="line"/>
+      <point x="444" y="398" type="line"/>
+    </contour>
+    <contour>
+      <point x="496" y="565" type="line"/>
+      <point x="496" y="675" type="line"/>
+      <point x="404" y="675" type="line"/>
+      <point x="404" y="565" type="line"/>
+    </contour>
+    <contour>
+      <point x="265" y="784" type="line"/>
+      <point x="156" y="718" type="line"/>
+      <point x="205" y="636" type="line"/>
+      <point x="314" y="702" type="line"/>
+    </contour>
+  </outline>
+</glyph>

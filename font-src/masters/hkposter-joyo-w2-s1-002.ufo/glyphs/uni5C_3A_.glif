@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5C3A" format="2">
+  <advance width="1000"/>
+  <unicode hex="5C3A"/>
+  <note>
+4画：尸 + 捺
+</note>
+  <outline>
+    <contour>
+      <point x="118" y="53" type="line"/>
+      <point x="213" y="38" type="line"/>
+      <point x="278" y="454" type="line"/>
+      <point x="366" y="454" type="line"/>
+      <point x="323" y="378" type="line"/>
+      <point x="850" y="78" type="line"/>
+      <point x="897" y="162" type="line"/>
+      <point x="383" y="454" type="line"/>
+      <point x="700" y="454" type="line"/>
+      <point x="700" y="480" type="line"/>
+      <point x="728" y="480" type="line"/>
+      <point x="728" y="760" type="line"/>
+      <point x="700" y="760" type="line"/>
+      <point x="700" y="806" type="line"/>
+      <point x="120" y="806" type="line"/>
+      <point x="120" y="714" type="line"/>
+      <point x="632" y="714" type="line"/>
+      <point x="632" y="546" type="line"/>
+      <point x="120" y="546" type="line"/>
+      <point x="120" y="454" type="line"/>
+      <point x="181" y="454" type="line"/>
+    </contour>
+  </outline>
+</glyph>

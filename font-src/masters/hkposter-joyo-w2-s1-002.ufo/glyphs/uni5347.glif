@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5347" format="2">
+  <advance width="1000"/>
+  <unicode hex="5347"/>
+  <note>
+4画：短撇 + 横 + 长撇 + 竖
+</note>
+  <outline>
+    <contour>
+      <point x="808" y="40" type="line"/>
+      <point x="808" y="572" type="line"/>
+      <point x="880" y="572" type="line"/>
+      <point x="880" y="668" type="line"/>
+      <point x="239" y="668" type="line"/>
+      <point x="282" y="728" type="line"/>
+      <point x="215" y="777" type="line"/>
+      <point x="138" y="672" type="line"/>
+      <point x="180" y="642" type="line"/>
+      <point x="180" y="572" type="line"/>
+      <point x="435" y="572" type="line"/>
+      <point x="119" y="138" type="line"/>
+      <point x="197" y="81" type="line"/>
+      <point x="554" y="572" type="line"/>
+      <point x="712" y="572" type="line"/>
+      <point x="712" y="40" type="line"/>
+    </contour>
+  </outline>
+</glyph>
