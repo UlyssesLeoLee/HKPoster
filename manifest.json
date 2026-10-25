@@ -1,0 +1,84 @@
+{
+  "title": "港映重黑｜香港电影海报粗字体文档包",
+  "version": "1.0",
+  "type": "design_documents_only",
+  "font_binaries": "NOT_CREATED",
+  "test_execution": "NOT_RUN",
+  "items": [
+    {
+      "path": "00_完整设计文档.md",
+      "bytes": 5681,
+      "sha256": "608223fcb6e27922e730ef95fe5609f6050da7b45822c50248e9b98fbdb54ff1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2575,
+      "sha256": "092bd5f2326c6a6a4c3373287582cd9dd2afe19f1b48fa344d4082429362e594"
+    },
+    {
+      "path": "config/HK_Poster_Heavy.yaml",
+      "bytes": 1607,
+      "sha256": "be0424504a77022418559dd09e620c8dea788da9c19e1e24f2b858f205021d70"
+    },
+    {
+      "path": "docs/01_需求定义.md",
+      "bytes": 3018,
+      "sha256": "d1648cc3ef708aec8062cf6595f584a306087ef03a14e4c11460d72faa25eb8b"
+    },
+    {
+      "path": "docs/02_视觉基本设计.md",
+      "bytes": 2906,
+      "sha256": "b9aab46d3cc645f0aba371b161f37156f421f0a09d40000d70bfc39c7443bdb0"
+    },
+    {
+      "path": "docs/03_字形结构基本设计.md",
+      "bytes": 2374,
+      "sha256": "831dc8b8ac0a9b456d7f8e20b685a39ea833a3292eea81326c4c8e655a43d165"
+    },
+    {
+      "path": "docs/04_字体系统与排版基本设计.md",
+      "bytes": 2185,
+      "sha256": "63d36f545c7b399052f0f49c071a93421dc78bbd434c0573459f39b559146603"
+    },
+    {
+      "path": "docs/05_工程详细设计.md",
+      "bytes": 3003,
+      "sha256": "9461f4c15bca34b5b7eed48fb4993db2270aa9753b8f0faf220d8d961123ba69"
+    },
+    {
+      "path": "docs/06_字符集与制作规划.md",
+      "bytes": 1734,
+      "sha256": "f8f8bf1878636be4c2f3ad073f3fcedf38ae1368dd0ca9a465ba89dde1d1943c"
+    },
+    {
+      "path": "docs/07_测试与验收.md",
+      "bytes": 1825,
+      "sha256": "13141b06e5769ece5ffbadb0da99f7374995b240bc142447e2a97af9c57c6b99"
+    },
+    {
+      "path": "docs/08_授权与发布.md",
+      "bytes": 1617,
+      "sha256": "fc3671b619e198043d69a2312544f26abe68034747f48bdcea7f4b1988e51142"
+    },
+    {
+      "path": "docs/09_对抗式自审.md",
+      "bytes": 1877,
+      "sha256": "31b9d85e818e1da1e4cf951797af78b2f630285ca5cb517b7fe9740a3754a25b"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 2511,
+      "sha256": "6d528718134290a626483537b550162ebfd4dff6ff640bfc1573e5f08e5dd525"
+    },
+    {
+      "path": "specimens/港_电影海报视觉概念.png",
+      "bytes": 2963002,
+      "sha256": "2d36b168967f4210fe9c21b6e2951c36e5a8566c010c05c094aa99872b631b9f"
+    },
+    {
+      "path": "tables/字符集与测试计划.xlsx",
+      "bytes": 12517,
+      "sha256": "ae12c2a21ac38edf6b0bc70dda575b13823c048a9de661bd3006019e81708fcc"
+    }
+  ]
+}

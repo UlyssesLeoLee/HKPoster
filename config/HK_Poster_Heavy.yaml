@@ -1,0 +1,42 @@
+# 项目专属配置。风格要求栏保留为第一项。
+style_requirements: |
+  设计一套具有 1980–1990 年代香港商业电影海报气质的
+  原创展示型超粗中文字体。黑白状态下必须有力量感。
+  视觉特征：高字重、紧凑块面、清晰骨架、方中带势、
+  局部硬切角与轻微手工光学校正；避免机械统一与无意义破损。
+  内部复杂字必须保留清晰负空间，不可变成黑块。
+  霓虹、描边、金属效果和旧化纹理属于海报排版特效，
+  不能作为真实字体字形成立的前提。
+
+project:
+  name: "港映重黑"
+  font_family_name: "HK Poster"
+  intended_style: "Heavy Display"
+  target_usage: ["电影海报标题", "游戏封面", "活动主视觉", "视频封面"]
+  languages:
+    primary: "zh-HK"
+    additional: ["en-US"]
+    planned_extension: ["zh-CN"]
+  character_coverage:
+    approach: "approved_explicit_list"
+    poc_glyphs: "30-50 (proposal)"
+    pilot_cjk_characters: "500 (proposal)"
+    extended_cjk_characters: "1500 (proposal)"
+    baseline_spreadsheet: "../tables/字符集与测试计划.xlsx"
+  font_family:
+    styles: ["Heavy"]
+    variable_font: false
+  technical_preferences:
+    units_per_em: "1000 (candidate; not frozen)"
+    target_formats: ["OTF", "TTF", "WOFF2"]
+    glyph_outlines_status: "NOT_CREATED"
+  licensing:
+    status: "UNDECIDED"
+
+execution:
+  mode: "DOCUMENTS_ONLY"
+  document_formats: ["md", "xlsx"]
+  output_path: "./hk-poster-font-output"
+  requirements_traceability: true
+  adversarial_review: true
+  release_gate: "REQUIRES_REAL_FONT_BUILD_AND_TEST"
