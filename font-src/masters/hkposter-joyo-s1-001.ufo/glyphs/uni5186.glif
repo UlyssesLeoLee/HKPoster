@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5186" format="2">
+  <advance width="1000"/>
+  <unicode hex="5186"/>
+  <note>
+円 / 4画
+</note>
+  <outline>
+    <contour>
+      <point x="452" y="0" type="line"/>
+      <point x="480" y="0" type="line"/>
+      <point x="548" y="0" type="line"/>
+      <point x="548" y="652" type="line"/>
+      <point x="742" y="652" type="line"/>
+      <point x="742" y="0" type="line"/>
+      <point x="838" y="0" type="line"/>
+      <point x="838" y="652" type="line"/>
+      <point x="838" y="748" type="line"/>
+      <point x="742" y="748" type="line"/>
+      <point x="548" y="748" type="line"/>
+      <point x="548" y="796" type="line"/>
+      <point x="452" y="796" type="line"/>
+      <point x="452" y="748" type="line"/>
+      <point x="258" y="748" type="line"/>
+      <point x="162" y="748" type="line"/>
+      <point x="162" y="652" type="line"/>
+      <point x="162" y="96" type="line"/>
+      <point x="162" y="0" type="line"/>
+      <point x="258" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="258" y="96" type="line"/>
+      <point x="258" y="652" type="line"/>
+      <point x="452" y="652" type="line"/>
+      <point x="452" y="96" type="line"/>
+    </contour>
+  </outline>
+</glyph>

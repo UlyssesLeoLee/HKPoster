@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni6708" format="2">
+  <advance width="1000"/>
+  <unicode hex="6708"/>
+  <note>
+月 / 4画
+</note>
+  <outline>
+    <contour>
+      <point x="784" y="118" type="line"/>
+      <point x="736" y="70" type="line"/>
+      <point x="784" y="23" type="line"/>
+      <point x="784" y="0" type="line"/>
+      <point x="876" y="0" type="line"/>
+      <point x="876" y="724" type="line"/>
+      <point x="878" y="724" type="line"/>
+      <point x="878" y="820" type="line"/>
+      <point x="876" y="820" type="line"/>
+      <point x="784" y="820" type="line"/>
+      <point x="218" y="820" type="line"/>
+      <point x="122" y="820" type="line"/>
+      <point x="122" y="724" type="line"/>
+      <point x="122" y="0" type="line"/>
+      <point x="218" y="0" type="line"/>
+      <point x="218" y="258" type="line"/>
+      <point x="784" y="258" type="line"/>
+    </contour>
+    <contour>
+      <point x="218" y="602" type="line"/>
+      <point x="218" y="724" type="line"/>
+      <point x="784" y="724" type="line"/>
+      <point x="784" y="602" type="line"/>
+    </contour>
+    <contour>
+      <point x="218" y="342" type="line"/>
+      <point x="218" y="518" type="line"/>
+      <point x="784" y="518" type="line"/>
+      <point x="784" y="342" type="line"/>
+    </contour>
+  </outline>
+</glyph>
