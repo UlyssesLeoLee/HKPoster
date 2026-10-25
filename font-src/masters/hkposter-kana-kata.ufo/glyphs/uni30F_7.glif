@@ -3,32 +3,34 @@
   <advance width="1000"/>
   <unicode hex="30F7"/>
   <note>
-ヷ：ワ：左上短竖 + 横折撇（wave2 新增，浊音形，基础形缩放并左移，右上加记号）
+ヷ：ワ：左上点（斜切平行四边形）+ 横折撇（wave2 新增，浊音形，基础形缩放并左移，右上加记号）
 </note>
   <outline>
     <contour>
-      <point x="275" y="128" type="line"/>
-      <point x="353" y="72" type="line"/>
-      <point x="735" y="607" type="line"/>
-      <point x="696" y="635" type="line"/>
-      <point x="696" y="683" type="line"/>
-      <point x="237" y="683" type="line"/>
-      <point x="237" y="722" type="line"/>
-      <point x="149" y="722" type="line"/>
-      <point x="149" y="570" type="line"/>
-      <point x="237" y="570" type="line"/>
-      <point x="237" y="587" type="line"/>
-      <point x="603" y="587" type="line"/>
+      <point x="263" y="134" type="line"/>
+      <point x="353" y="70" type="line"/>
+      <point x="735" y="605" type="line"/>
+      <point x="690" y="637" type="line"/>
+      <point x="690" y="692" type="line"/>
+      <point x="257" y="692" type="line"/>
+      <point x="263" y="724" type="line"/>
+      <point x="163" y="724" type="line"/>
+      <point x="137" y="572" type="line"/>
+      <point x="237" y="572" type="line"/>
+      <point x="239" y="582" type="line"/>
+      <point x="583" y="582" type="line"/>
     </contour>
     <contour>
-      <point x="804" y="742" type="line"/>
-      <point x="759" y="647" type="line"/>
-      <point x="809" y="623" type="line"/>
-      <point x="809" y="622" type="line"/>
-      <point x="881" y="588" type="line"/>
-      <point x="926" y="683" type="line"/>
-      <point x="876" y="707" type="line"/>
-      <point x="876" y="708" type="line"/>
+      <point x="936" y="686" type="line"/>
+      <point x="872" y="686" type="line"/>
+      <point x="846" y="574" type="line"/>
+      <point x="910" y="574" type="line"/>
+    </contour>
+    <contour>
+      <point x="822" y="594" type="line"/>
+      <point x="848" y="706" type="line"/>
+      <point x="784" y="706" type="line"/>
+      <point x="758" y="594" type="line"/>
     </contour>
   </outline>
 </glyph>

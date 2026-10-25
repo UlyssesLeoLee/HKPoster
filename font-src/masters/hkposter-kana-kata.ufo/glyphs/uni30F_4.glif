@@ -3,34 +3,36 @@
   <advance width="1000"/>
   <unicode hex="30F4"/>
   <note>
-ヴ：ウ：左上短竖点 + 横折撇，横右端向左下折出（wave2 新增，浊音形，基础形缩放并左移，右上加记号）
+ヴ：ウ：左上点（斜切平行四边形）+ 横折撇，横右端向左下折出（wave2 新增，浊音形，基础形缩放并左移，右上加记号）
 </note>
   <outline>
     <contour>
-      <point x="413" y="252" type="line"/>
-      <point x="481" y="184" type="line"/>
-      <point x="735" y="439" type="line"/>
-      <point x="701" y="473" type="line"/>
-      <point x="701" y="521" type="line"/>
-      <point x="252" y="521" type="line"/>
-      <point x="252" y="425" type="line"/>
-      <point x="585" y="425" type="line"/>
+      <point x="407" y="263" type="line"/>
+      <point x="485" y="185" type="line"/>
+      <point x="735" y="435" type="line"/>
+      <point x="696" y="474" type="line"/>
+      <point x="696" y="529" type="line"/>
+      <point x="254" y="529" type="line"/>
+      <point x="254" y="419" type="line"/>
+      <point x="563" y="419" type="line"/>
     </contour>
     <contour>
-      <point x="198" y="609" type="line"/>
-      <point x="110" y="609" type="line"/>
-      <point x="110" y="502" type="line"/>
-      <point x="198" y="502" type="line"/>
+      <point x="233" y="608" type="line"/>
+      <point x="133" y="608" type="line"/>
+      <point x="107" y="502" type="line"/>
+      <point x="207" y="502" type="line"/>
     </contour>
     <contour>
-      <point x="804" y="742" type="line"/>
-      <point x="759" y="647" type="line"/>
-      <point x="809" y="623" type="line"/>
-      <point x="809" y="622" type="line"/>
-      <point x="881" y="588" type="line"/>
-      <point x="926" y="683" type="line"/>
-      <point x="876" y="707" type="line"/>
-      <point x="876" y="708" type="line"/>
+      <point x="910" y="574" type="line"/>
+      <point x="936" y="686" type="line"/>
+      <point x="872" y="686" type="line"/>
+      <point x="846" y="574" type="line"/>
+    </contour>
+    <contour>
+      <point x="822" y="594" type="line"/>
+      <point x="848" y="706" type="line"/>
+      <point x="784" y="706" type="line"/>
+      <point x="758" y="594" type="line"/>
     </contour>
   </outline>
 </glyph>

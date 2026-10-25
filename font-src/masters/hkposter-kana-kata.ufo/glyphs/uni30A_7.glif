@@ -3,25 +3,25 @@
   <advance width="1000"/>
   <unicode hex="30A7"/>
   <note>
-ェ：小假名，由 エ 另行绘制（wave2 新增，水平居中·贴基线，字高 580（全尺寸的 0.70 倍））
+ェ：小假名，由 エ 另行绘制（wave2 v2 加粗，字高 592，水平居中·贴基线）
 </note>
   <outline>
     <contour>
       <point x="763" y="40" type="line"/>
-      <point x="763" y="128" type="line"/>
-      <point x="593" y="128" type="line"/>
-      <point x="593" y="532" type="line"/>
+      <point x="763" y="140" type="line"/>
+      <point x="599" y="140" type="line"/>
+      <point x="599" y="532" type="line"/>
       <point x="763" y="532" type="line"/>
-      <point x="763" y="620" type="line"/>
-      <point x="237" y="620" type="line"/>
+      <point x="763" y="632" type="line"/>
+      <point x="237" y="632" type="line"/>
       <point x="237" y="532" type="line"/>
-      <point x="505" y="532" type="line"/>
-      <point x="505" y="370" type="line"/>
-      <point x="336" y="370" type="line"/>
-      <point x="336" y="290" type="line"/>
-      <point x="505" y="290" type="line"/>
-      <point x="505" y="128" type="line"/>
-      <point x="237" y="128" type="line"/>
+      <point x="499" y="532" type="line"/>
+      <point x="499" y="381" type="line"/>
+      <point x="336" y="381" type="line"/>
+      <point x="336" y="291" type="line"/>
+      <point x="499" y="291" type="line"/>
+      <point x="499" y="140" type="line"/>
+      <point x="237" y="140" type="line"/>
       <point x="237" y="40" type="line"/>
     </contour>
   </outline>

@@ -23,8 +23,9 @@
     放大后墨迹统一收在 x 60..940 / y 0..820（与汉字同框）。
   * 几何化：片假名笔画直、转折硬，全部用硬折（GLY-002），不做圆转；斜笔仅用中心线两端点
     + 垂直权重表达。
-  * 权重档：主 96 / 次 88 / 细 80（比汉字 96/92/84 轻一档，因字面小一圈）。
-    点、浊音、手浊音记号一律 80。本轮放大只动坐标，不动权重。
+  * 权重档：主 110 / 次 100 / 细 90 / 点 100（wave2 v2：整体加粗到「假名/汉字 墨量比 0.55」；
+    加粗只动笔画权重档位，不动笔画走向、不动骨架、不动字面框）。
+    点、浊音、手浊音记号一律 100。
   * 放大算法：围绕该字自身墨迹外接框中心 ×1.30，再把墨迹外接框中心对到 (500, 400)；
     宽度/高度超过 x 60..940 / y 0..820 的字按可用空间等比回退（见 _enlarge）。
   * 视觉大小匹配：浊音/半浊音形由**放大后的**基础形再缩放 0.84 并右缘对到 735，
@@ -32,11 +33,35 @@
   * 小假名：另画的紧凑字形（笔画更少更紧凑），位置在 em 右上区域；
     **ッ** 横向居中、纵向偏下。字高约为对应全尺寸片假名的 0.70 倍。
   * 白口（GLY-005）：八/ハ 类两笔形顶部留 60 单位净空，底部左右分张。
+
+> wave2 v2 返工要点（lane: wave2/kana-kata-rework）
+>   * **加粗到墨量比 0.55**（项目所有者 2026-10-25）：四档权重 96/88/80/88 → 110/100/90/100。
+>     参照字体换成开源可商用的 M PLUS 1p Black（OFL 1.1），只参考比例与骨架，不描轮廓。
+>     重量档位之外的一切（笔画走向、骨架、字面框）保持不变。
+>   * **修 ゥ（U+30A5）太小**：原字高 356，只占全尺寸片假名的 0.49，判据要求 0.65..0.78。
+>     本轮把 ゥ 的中心线坐标放大到「全尺寸片假名字高中位 × 0.70」，
+>     骨架拆法（短竖 + 横 + 横折撇）不变；放大后重新对中（中心 x=500）+ 贴基线（底边 y=40）。
+>   * **小假名落位复核**：权重加粗后墨迹会外扩，所有小假名重新做「水平居中 + 贴基线」，
+>     保证落位判据（中心 x=500 / 底边 y=40）在新权重下依然成立。
+>
+> wave2 v3 返工要点（lane: wave2/kana-kata-rework）—— 外观改成港产海报风格
+>   * **浊点 / 半浊点统一成斜切平行四边形**（汉字 `g.dot(..., slant=26)` 的语言）：
+>     浊点 = 两枚 DOT（slant=26），半浊点 = 一枚 DOT（slant=26）；
+>     全字族同一形状（GLY-004），且与基字不相交（浊点让位仍为 0）。
+>   * **点画走斜切语言**：ウ/ゥ/ワ/ヮ 的左上点、・（片假名中点）都改成 DOT(slant=26)，
+>     本 master 不再使用圆环（RING）语言 —— 汉字词汇里没有环形记号。
+>   * **斜笔（撇捺）保持 D（= 汉字 g.diag「斜切边矩形」语言）**：シ/ツ/ソ/ン 的两枚点画
+>     倾角约 56°，汉字 slant 档（14~26）表达不了，改成 DOT 会改笔画走向（字形红线），故不动。
+>   * **GLY-003**：斜切只用在点/记号上；横竖撇捺一律不斜切。
+>   * **内白保护（局部降档，不全局回退）**：シ/ツ 的点画 W_TICK=84、小假名 ッ 的点画
+>     W_TICK_SM=76 —— 加粗 + 浊音形 0.84 挤压后两枚点画会糊在一起
+>     （check_glyphs 曾报 ジ 轮廓自交），单独降档后净空分别为 15.9 / 8.6 / 5.2 单位。
 """
 
 from __future__ import annotations
 
 import math
+import statistics
 import sys
 from pathlib import Path
 
@@ -45,10 +70,17 @@ sys.path.insert(0, str(FONT_SRC / "scripts"))
 
 from hkbuild import Glyph, write_ufo  # noqa: E402
 
-W_MAIN = 96
-W_SEC = 88
-W_THIN = 80
-W_DOT = 88
+W_MAIN = 110
+W_SEC = 100
+W_THIN = 90
+W_DOT = 100
+# 点画细档（局部降档，**不是全局回退**）：
+#   シ/ツ 的两枚点画是「辅助撇」，字面 ×1.30 之后与长笔几乎相接；
+#   浊音形还要再缩到 0.84（ツ 更被压到 0.80），加粗后两枚点画会糊成一团
+#   （check_glyphs 报 ジ 轮廓自交）。按 v3 规格「糊了就该字单独降一档」处理。
+W_TICK = 84
+# 小假名 ッ 的两枚点画本来就更挤，再降一档，保住两枚点画之间的内白。
+W_TICK_SM = 76
 
 # 设计框中心（缩放用）
 _CX = 500.0
@@ -64,15 +96,22 @@ _VOICE_SCALE = 0.84
 _VOICE_RIGHT = 735.0
 # 小假名：字高约为全尺寸的 0.70 倍，位于 em 右上区域（ッ 横向居中、纵向偏下）
 SMALL_RATIO = 0.70
+# 小假名落位：水平居中（中心 x=500）+ 贴基线（底边 y=40）
+SMALL_CX = 500.0
+SMALL_BOTTOM = 40.0
+# ゥ（U+30A5）目标字高 = 全尺寸片假名字高中位 × 本系数（判据 0.68..0.72）
+U_SMALL_RATIO = 0.70
 
 
 # ---------------------------------------------------------------------------
-# 笔画描述符：
+# 笔画描述符（与汉字同源的四个词汇）：
 #   ("H", x1, x2, y, w)          水平笔画（墨迹占 y±w/2，两端平切）
 #   ("V", x, y1, y2, w)          垂直笔画（端点即墨迹端点）
-#   ("D", x1, y1, x2, y2, w)     斜笔画（厚度垂直于中心线）
-#   ("DOT", cx, cy, w, h, slant) 点/短撇
-#   ("RING", outer, inner)       环形带
+#   ("D", x1, y1, x2, y2, w)     斜笔画（厚度垂直于中心线）＝ 汉字的撇捺语言
+#   ("DOT", cx, cy, w, h, slant) 点/记号：斜切平行四边形（汉字 g.dot 语言）
+#       上下边水平、顶边相对底边右移 slant，slant 沿用汉字档位（26/20/18/16/14/−14）。
+#       w 是绝对宽度，h 随字面放大走，slant 是绝对量（角度档不随缩放漂移）。
+# 圆环（RING）语言已随浊点/半浊点统一一起去掉：汉字词汇里没有环形记号。
 # ---------------------------------------------------------------------------
 
 # 基础形：码位 -> (说明, 笔画表)
@@ -86,8 +125,8 @@ BASE: dict[int, tuple[str, list]] = {
         ("D", 700, 710, 380, 460, W_MAIN),
         ("V", 650, 90, 710, W_MAIN),
     ]),
-    0x30A6: ("ウ：左上短竖点 + 横折撇，横右端向左下折出", [
-        ("V", 300, 620, 730, W_SEC),
+    0x30A6: ("ウ：左上点（斜切平行四边形）+ 横折撇，横右端向左下折出", [
+        ("DOT", 300, 675, 100, 110, 26),
         ("H", 400, 860, 590, W_MAIN),
         ("D", 860, 590, 600, 330, W_MAIN),
     ]),
@@ -133,8 +172,8 @@ BASE: dict[int, tuple[str, list]] = {
         ("V", 300, 140, 560, W_SEC),
     ]),
     0x30B7: ("シ：左上两点 + 自左上向右下长曲笔", [
-        ("D", 250, 660, 370, 740, W_SEC),
-        ("D", 230, 520, 350, 600, W_SEC),
+        ("D", 250, 660, 370, 740, W_TICK),
+        ("D", 230, 520, 350, 600, W_TICK),
         ("D", 400, 700, 860, 190, W_MAIN),
     ]),
     0x30B9: ("ス：上横折向左下 + 自左上向右下捺笔相交", [
@@ -163,8 +202,8 @@ BASE: dict[int, tuple[str, list]] = {
         ("H", 380, 830, 420, W_SEC),
     ]),
     0x30C4: ("ツ：左上两点 + 自左上向右下长曲笔", [
-        ("D", 220, 590, 340, 670, W_SEC),
-        ("D", 190, 450, 310, 530, W_SEC),
+        ("D", 220, 590, 340, 670, W_TICK),
+        ("D", 190, 450, 310, 530, W_TICK),
         ("D", 370, 700, 850, 190, W_MAIN),
     ]),
     0x30C6: ("テ：上横右端接长斜笔向左下 + 中横向左伸出", [
@@ -285,8 +324,8 @@ BASE: dict[int, tuple[str, list]] = {
         ("V", 750, 140, 700, W_MAIN),
         ("H", 250, 750, 140, W_MAIN),
     ]),
-    0x30EF: ("ワ：左上短竖 + 横折撇", [
-        ("V", 320, 560, 700, W_SEC),
+    0x30EF: ("ワ：左上点（斜切平行四边形）+ 横折撇", [
+        ("DOT", 320, 630, 100, 140, 26),
         ("H", 300, 780, 620, W_MAIN),
         ("D", 780, 620, 430, 130, W_MAIN),
     ]),
@@ -360,16 +399,6 @@ ITERATION: list[tuple[int, str, list]] = [
     ]),
 ]
 
-def _circle(cx: float, cy: float, r: float, n: int = 32) -> list[tuple[int, int]]:
-    """整点圆周点列（契约要求坐标取整）。"""
-    return [
-        (
-            int(round(cx + r * math.cos(2.0 * math.pi * i / n))),
-            int(round(cy + r * math.sin(2.0 * math.pi * i / n))),
-        )
-        for i in range(n)
-    ]
-
 
 # ---------------------------------------------------------------------------
 # wave2 返工：新增 20 字（此前不在字体里，渲染成豆腐块）
@@ -390,8 +419,8 @@ NEW_SYMBOL: dict[int, tuple[str, list]] = {
         ("H", 305, 695, 450, W_THIN),
         ("H", 305, 695, 300, W_THIN),
     ]),
-    0x30FB: ("・：片假名中点，居中圆点（非句点）", [
-        ("RING", _circle(500, 380, 85), _circle(500, 380, 0)),
+    0x30FB: ("・：片假名中点，居中斜切平行四边形（非句点）", [
+        ("DOT", 487, 380, 140, 170, 26),
     ]),
     0x30FF: ("ヿ：片假名双字（ノ + 丶），上端横折接长斜笔", [
         ("H", 360, 780, 720, W_SEC),
@@ -401,80 +430,83 @@ NEW_SYMBOL: dict[int, tuple[str, list]] = {
 
 # 小假名：字高约为全尺寸片假名的 0.70 倍，位于 em 右上区域；ッ 横向居中、纵向偏下。
 # 下列坐标是**最终尺寸坐标**（已按最终尺寸另行绘制，不参与全尺寸的 ×1.30 放大）。
+# wave2 v2：权重加粗后墨迹外扩，落位（中心 x=500 / 底边 y=40）在 build() 里重新对齐。
 # 项 = (字符, 基础形, 说明, 笔画表)
 NEW_SMALL: dict[int, tuple[str, str, str, list]] = {
-    0x30A1: ("ァ", "ア", "水平居中·贴基线，字高 565（全尺寸的 0.70 倍）", [
+    0x30A1: ("ァ", "ア", "水平居中·贴基线", [
         ("H", 370, 717, 474, W_THIN),
         ("D", 717, 474, 500, 283, W_THIN),
         ("D", 292, 578, 691, 67, W_SEC),
     ]),
-    0x30A3: ("ィ", "イ", "水平居中·贴基线，字高 567（全尺寸的 0.70 倍）", [
+    0x30A3: ("ィ", "イ", "水平居中·贴基线", [
         ("D", 638, 573, 362, 358, W_SEC),
         ("V", 594, 40, 573, W_SEC),
     ]),
-    0x30A5: ("ゥ", "ウ", "水平居中·贴基线，字高 356（全尺寸的 0.70 倍）", [
-        ("V", 276, 307, 396, W_THIN),
+    0x30A5: ("ゥ", "ウ", "水平居中·贴基线；字高 = 全尺寸片假名字高中位 ×0.70（wave2 v2 放大）", [
+        ("DOT", 276, 352, 90, 88, 26),
         ("H", 357, 732, 283, W_SEC),
         ("D", 732, 283, 520, 71, W_SEC),
     ]),
-    0x30A7: ("ェ", "エ", "水平居中·贴基线，字高 580（全尺寸的 0.70 倍）", [
+    0x30A7: ("ェ", "エ", "水平居中·贴基线", [
         ("H", 237, 763, 576, W_SEC),
         ("V", 549, 84, 576, W_SEC),
         ("H", 336, 549, 330, W_THIN),
         ("H", 237, 763, 84, W_SEC),
     ]),
-    0x30A9: ("ォ", "オ", "水平居中·贴基线，字高 568（全尺寸的 0.70 倍）", [
+    0x30A9: ("ォ", "オ", "水平居中·贴基线", [
         ("H", 256, 718, 564, W_SEC),
         ("V", 487, 40, 600, W_SEC),
         ("D", 718, 564, 309, 191, W_THIN),
     ]),
-    0x30C3: ("ッ", "ツ", "水平居中·贴基线，字高 478（全尺寸的 0.70 倍）", [
-        ("D", 250, 398, 348, 463, W_THIN),
-        ("D", 225, 283, 323, 349, W_THIN),
+    0x30C3: ("ッ", "ツ", "水平居中·贴基线", [
+        ("D", 250, 398, 348, 463, W_TICK_SM),
+        ("D", 225, 283, 323, 349, W_TICK_SM),
         ("D", 372, 488, 766, 70, W_SEC),
     ]),
-    0x30E3: ("ャ", "ヤ", "水平居中·贴基线，字高 554（全尺寸的 0.70 倍）", [
+    0x30E3: ("ャ", "ヤ", "水平居中·贴基线", [
         ("H", 272, 671, 539, W_SEC),
         ("D", 688, 574, 422, 60, W_SEC),
     ]),
-    0x30E5: ("ュ", "ユ", "水平居中·贴基线，字高 537（全尺寸的 0.70 倍）", [
+    0x30E5: ("ュ", "ユ", "水平居中·贴基线", [
         ("D", 266, 484, 439, 539, W_THIN),
         ("H", 302, 703, 393, W_SEC),
         ("V", 703, 84, 393, W_SEC),
         ("H", 284, 703, 84, W_SEC),
     ]),
-    0x30E7: ("ョ", "ヨ", "水平居中·贴基线，字高 560（全尺寸的 0.70 倍）", [
+    0x30E7: ("ョ", "ヨ", "水平居中·贴基线", [
         ("V", 317, 57, 556, W_SEC),
         ("H", 317, 620, 556, W_SEC),
         ("H", 317, 673, 316, W_SEC),
         ("H", 317, 726, 84, W_SEC),
     ]),
-    0x30EE: ("ヮ", "ワ", "水平居中·贴基线，字高 544（全尺寸的 0.70 倍）", [
-        ("V", 293, 457, 585, W_THIN),
+    0x30EE: ("ヮ", "ワ", "水平居中·贴基线", [
+        ("DOT", 293, 521, 90, 128, 26),
         ("H", 275, 712, 512, W_SEC),
         ("D", 712, 512, 393, 66, W_SEC),
     ]),
-    0x30F5: ("ヵ", "カ", "水平居中·贴基线，字高 546（全尺寸的 0.70 倍）", [
+    0x30F5: ("ヵ", "カ", "水平居中·贴基线", [
         ("H", 288, 726, 498, W_SEC),
         ("D", 726, 498, 602, 52, W_SEC),
         ("D", 560, 564, 264, 135, W_THIN),
     ]),
-    0x30F6: ("ヶ", "ケ", "水平居中·贴基线，字高 555（全尺寸的 0.70 倍）", [
+    0x30F6: ("ヶ", "ケ", "水平居中·贴基线", [
         ("D", 306, 410, 425, 572, W_THIN),
         ("H", 281, 705, 427, W_THIN),
         ("D", 688, 572, 391, 62, W_SEC),
     ]),
 }
 
-# 右上角浊音记号（两笔右上斜画）
+# 右上角浊音记号：两枚**斜切平行四边形**（汉字 g.dot(..., slant=26) 的语言）。
+# 全字族统一（GLY-004）：同一枚记号在任何字里形状完全一样。
+# 两枚之间留出 30 单位左右的净空，不与基字相交（浊点让位）。
 DAKUTEN: list = [
-    ("D", 795, 630, 840, 725, W_THIN),
-    ("D", 845, 605, 890, 700, W_THIN),
+    ("DOT", 790, 650, 64, 112, 26),
+    ("DOT", 878, 630, 64, 112, 26),
 ]
 
-# 右上角半浊音记号（小圆环）
+# 右上角半浊音记号：一枚斜切平行四边形，与浊点同一套语言（GLY-004）
 HANDAKUTEN: list = [
-    ("RING", _circle(850, 660, 58), _circle(850, 660, 26)),
+    ("DOT", 840, 650, 80, 100, 26),
 ]
 
 
@@ -503,17 +535,9 @@ def _scale_about(strokes: list, s: float, about: tuple[float, float]) -> list:
             out.append(("D", _sx(st[1], ax, s), _sy(st[2], ay, s),
                         _sx(st[3], ax, s), _sy(st[4], ay, s), st[5]))
         elif k == "DOT":
-            out.append(("DOT", _sx(st[1], ax, s), _sy(st[2], ay, s), st[3], st[4], st[5]))
-        elif k == "RING":
-            # 圆环：只移圆心，环宽（半径）不变
-            outer, inner = st[1], st[2]
-            ox = sum(p[0] for p in outer) / len(outer)
-            oy = sum(p[1] for p in outer) / len(outer)
-            r_out = max(math.hypot(p[0] - ox, p[1] - oy) for p in outer)
-            r_in = max(math.hypot(p[0] - ox, p[1] - oy) for p in inner)
-            cx = _sx(ox, ax, s)
-            cy = _sy(oy, ay, s)
-            out.append(("RING", _circle(cx, cy, r_out), _circle(cx, cy, r_in)))
+            # 点/记号：w 与 slant 是绝对量（宽度档 / 汉字倾切角度档），只有高度 h 随缩放走
+            out.append(("DOT", _sx(st[1], ax, s), _sy(st[2], ay, s),
+                        st[3], int(round(st[4] * s)), st[5]))
         else:
             out.append(st)
     return out
@@ -536,15 +560,6 @@ def _translate(strokes: list, dx: float, dy: float) -> list:
         elif k == "DOT":
             out.append(("DOT", st[1] + int(round(dx)), st[2] + int(round(dy)),
                         st[3], st[4], st[5]))
-        elif k == "RING":
-            outer, inner = st[1], st[2]
-            ox = sum(p[0] for p in outer) / len(outer)
-            oy = sum(p[1] for p in outer) / len(outer)
-            r_out = max(math.hypot(p[0] - ox, p[1] - oy) for p in outer)
-            r_in = max(math.hypot(p[0] - ox, p[1] - oy) for p in inner)
-            cx = int(round(ox + dx))
-            cy = int(round(oy + dy))
-            out.append(("RING", _circle(cx, cy, r_out), _circle(cx, cy, r_in)))
         else:
             out.append(st)
     return out
@@ -573,13 +588,11 @@ def _ink_box(strokes: list) -> tuple[float, float, float, float]:
                 xs += [px + nx, px - nx]
                 ys += [py + ny, py - ny]
         elif k == "DOT":
-            cx, cy, w, h = st[1], st[2], st[3], st[4]
-            xs += [cx - w / 2.0, cx + w / 2.0]
+            cx, cy, w, h, slant = st[1], st[2], st[3], st[4], st[5]
+            # 斜切平行四边形：上下边水平，顶边相对底边右移 slant
+            xs += [cx - w / 2.0, cx + w / 2.0,
+                   cx - w / 2.0 + slant, cx + w / 2.0 + slant]
             ys += [cy - h / 2.0, cy + h / 2.0]
-        elif k == "RING":
-            outer = st[1]
-            xs += [p[0] for p in outer]
-            ys += [p[1] for p in outer]
     return (min(xs), min(ys), max(xs), max(ys))
 
 
@@ -636,6 +649,53 @@ def _voice_form(base_strokes: list, marks: list) -> list:
     return small + marks
 
 
+def _full_size_kata_heights() -> list[float]:
+    """全尺寸片假名（含浊音/半浊音形）的墨迹高度 —— 小假名定尺的基准。
+
+    与 check_kana_size.py 的「全尺寸假名」口径一致：浊音形算它带记号后的整体高度。
+    """
+    hs: list[float] = []
+    for cp in sorted(BASE):
+        _, strokes = BASE[cp]
+        b = _ink_box(_enlarge(strokes))
+        hs.append(b[3] - b[1])
+    for group in (VOICED, SEMI_VOICED):
+        for _cp, base_cp, _label in group:
+            _, strokes = BASE[base_cp]
+            b = _ink_box(_voice_form(strokes, DAKUTEN))
+            hs.append(b[3] - b[1])
+    for cp, base_cp, _label, _ in NEW_VOICED:
+        _, strokes = BASE[base_cp]
+        marks = HANDAKUTEN if cp in (0x30F8, 0x30FA) else DAKUTEN
+        b = _ink_box(_voice_form(strokes, marks))
+        hs.append(b[3] - b[1])
+    return hs
+
+
+def _scale_small(strokes: list, target_h: float) -> list:
+    """把小假名的中心线坐标放大到目标字高（笔画权重不变，只改大小）。
+
+    以墨迹底边中心为支点等比缩放中心线坐标；墨迹高度随系数单调递增，二分求解。
+    """
+    x0, y0, x1, y1 = _ink_box(strokes)
+    pivot = ((x0 + x1) / 2.0, y0)
+    lo, hi = 0.2, 4.0
+    for _ in range(48):
+        mid = (lo + hi) / 2.0
+        b = _ink_box(_scale_about(strokes, mid, pivot))
+        if (b[3] - b[1]) < target_h:
+            lo = mid
+        else:
+            hi = mid
+    return _scale_about(strokes, (lo + hi) / 2.0, pivot)
+
+
+def _place_small(strokes: list) -> list:
+    """小假名落位：水平居中（中心 x=500）+ 贴基线（底边 y=40）。"""
+    x0, y0, x1, y1 = _ink_box(strokes)
+    return _translate(strokes, SMALL_CX - (x0 + x1) / 2.0, SMALL_BOTTOM - y0)
+
+
 def _render(name: str, codepoint: int, strokes: list, note: str) -> Glyph:
     g = Glyph(name, advance=1000, unicode=codepoint, note=note)
     for st in strokes:
@@ -648,8 +708,6 @@ def _render(name: str, codepoint: int, strokes: list, note: str) -> Glyph:
             g.diag(st[1], st[2], st[3], st[4], weight=st[5])
         elif k == "DOT":
             g.dot(st[1], st[2], w=st[3], h=st[4], slant=st[5])
-        elif k == "RING":
-            g.ring(st[1], st[2])
     return g
 
 
@@ -691,12 +749,19 @@ def build() -> list[Glyph]:
     for cp in sorted(NEW_SYMBOL):
         note, strokes = NEW_SYMBOL[cp]
         glyphs.append(_render(f"uni{cp:04X}", cp, strokes, f"{note}（wave2 新增）"))
-    # 7) wave2 新增：小假名 12（另画，em 右上区域；ッ 横向居中、纵向偏下）
+    # 7) wave2 v2：小假名 12（另画，em 右上区域；ッ 横向居中、纵向偏下）
+    #    加粗后墨迹外扩 -> 重新「水平居中 + 贴基线」；
+    #    ゥ（U+30A5）另按「全尺寸片假名字高中位 ×0.70」放大（骨架拆法不变）。
+    med_h = statistics.median(_full_size_kata_heights())
     for cp in sorted(NEW_SMALL):
         label, base_label, desc, strokes = NEW_SMALL[cp]
+        if cp == 0x30A5:
+            strokes = _scale_small(strokes, U_SMALL_RATIO * med_h)
+        strokes = _place_small(strokes)
+        b = _ink_box(strokes)
         glyphs.append(_render(
             f"uni{cp:04X}", cp, strokes,
-            f"{label}：小假名，由 {base_label} 另行绘制（wave2 新增，{desc}）",
+            f"{label}：小假名，由 {base_label} 另行绘制（wave2 v2 加粗，字高 {b[3] - b[1]:.0f}，{desc}）",
         ))
     return glyphs
 
