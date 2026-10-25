@@ -234,6 +234,14 @@ def analyse_by_import(path: Path) -> dict | None:
 
     result = {"recipe": path.name, "glyphs": [], "skipped_dynamic_calls": 0, "skipped_detail": [],
               "method": "import-build"}
+
+    def _label(poly: Polygon) -> str:
+        """用几何给笔画起个可读的名字（import 模式拿不到方法名）。"""
+        x0, y0, x1, y1 = poly.bounds
+        w, h = x1 - x0, y1 - y0
+        kind = "横" if w > h * 2 else ("竖" if h > w * 2 else "斜")
+        return f"{kind}({x0:.0f}..{x1:.0f},{y0:.0f}..{y1:.0f})"
+
     for g in built:
         parts = getattr(g, "_parts", [])
         polys: list[tuple[str, Polygon]] = []
@@ -245,7 +253,7 @@ def analyse_by_import(path: Path) -> dict | None:
                 poly = poly.buffer(0)
             if poly.is_empty:
                 continue
-            polys.append(("stroke", poly))
+            polys.append((_label(poly), poly))
         pairs = []
         for i in range(len(polys)):
             for j in range(i + 1, len(polys)):
@@ -259,7 +267,7 @@ def analyse_by_import(path: Path) -> dict | None:
                               b.bounds[2] - b.bounds[0], b.bounds[3] - b.bounds[1])
                 eq_len = area / (thinner * thinner) if thinner > 0 else 0.0
                 pairs.append({
-                    "a": f"{i}", "b": f"{j}",
+                    "a": polys[i][0], "b": polys[j][0],
                     "overlap_area": round(area, 1),
                     "ratio": round(ratio, 3),
                     "eq_len": round(eq_len, 2),
