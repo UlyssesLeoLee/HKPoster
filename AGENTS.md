@@ -31,17 +31,20 @@
 ```powershell
 pip install -r requirements.txt
 
-python font-src/scripts/verify_all.py      # 一条命令跑完全链路：recipe 同步 → 字形 UT → 构建 → IT/ST → 样张 → 测试套件
+python font-src/scripts/verify_all.py      # 一条命令跑完全链路：recipe 同步 → 字形 UT → 构建 → IT/ST → 样张 → 测试套件 → 假名保真度
 python font-src/scripts/selftest.py        # 垂直切片自证（参考 master）
 python font-src/scripts/build_font.py --out font-src/dist  # 构建 TTF/OTF/WOFF2
 python font-src/scripts/check_glyphs.py     # 字形 UT
 python font-src/scripts/check_recipes.py    # recipe ↔ UFO 同步
 python font-src/scripts/verify_font.py      # 成品 IT/ST（含 Windows GDI 真实加载）
+python font-src/scripts/check_kana_fidelity.py            # 假名保真度：缺字=硬门禁，骨架 IoU=软信号
+python font-src/scripts/check_kana_fidelity.py --selftest # 先自证该检查器本身的分辨力
 python font-src/tests/run_tests.py         # UT + IT + ST 全套
 python font-src/specimens/render_specimens.py --all        # 重生成样张
 python font-src/scripts/sync_charset_table.py              # 把 master 里的真实字形回写进字符规划表
-python font-src/scripts/plan_joyo_batches.py               # 生成 Jōyō 2136 字的批次计划（93 条 lane）
+python font-src/scripts/plan_joyo_batches.py               # 生成 Jōyō 2136 字的批次计划（90 条 lane）
 python font-src/scripts/lane_prompt.py --batch <id>        # 生成某批次的 lane 提示词（续做用）
+python font-src/scripts/lane_prompt.py --list              # 列出全部 lane（分支 ↔ worktree ↔ 字数对照）
 ```
 
 ## 多文种与批量生产（Wave 1）
@@ -50,8 +53,12 @@ python font-src/scripts/lane_prompt.py --batch <id>        # 生成某批次的 
 - 简、假名、Jōyō 多为**独立码位**，本轮不启用 `locl`（同码位地区异形留给 P2）。
 - 笔画权重**分四档**：繁体 96/92/84、简体 108/100/92、Latin 132/120/112、假名 92/84/76。
   同一数值在不同字面宽度里的视觉重量不同，**新增 master 必须按所属类别取对应档位**。
-- Jōyō 2136 字按笔画密度分 5 档切成 **93 条 lane**（见 `font-src/data/joyo-batches.json`），
+- Jōyō 2136 字按笔画密度分 5 档切成 **90 条 lane**（见 `font-src/data/joyo-batches.json`），
   提示词由 `lane_prompt.py` 生成，续做时机械重复「登记 → 建 worktree → 派发 → 复验 → rebase → merge」。
+- **批次 id ≠ 分支名 ≠ worktree 名**：`joyo-w2-s3-001`（批次）→ `agent/wave2/joyo-s3-001`（分支）
+  → `E:/hkposter-lanes/wave2-joyo-s3-001`（worktree）。三者由 batch id 推导，**不得手写**。
+- **假名要求（项目所有者 2026-10-25）**：假名骨架必须保持标准形，只改笔画处理（粗手写体）；
+  缺字是硬门禁（`check_kana_fidelity.py`）。判据见 `docs/11` §6.8。
 - 规划与缺口见 `docs/11_多文种规划.md`。
 
 ## 环境注意
