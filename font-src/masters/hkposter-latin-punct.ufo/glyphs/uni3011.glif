@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3011" format="2">
+  <advance width="1000"/>
+  <unicode hex="3011"/>
+  <note>
+】全角鱼尾括号
+</note>
+  <outline>
+    <contour>
+      <point x="448" y="0" type="line"/>
+      <point x="448" y="800" type="line"/>
+      <point x="100" y="800" type="line"/>
+      <point x="300" y="400" type="line"/>
+      <point x="100" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>
