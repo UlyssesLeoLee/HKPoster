@@ -153,30 +153,37 @@ if __name__ == "__main__":
   那些字在 200px 下看着「还行」，实际内白已经被墨吃掉了。
   规格里写「内白不低于 24 单位」时，请以工具的数字为准，不要靠估。
 
-【要跑的 8 条命令（全部在 lane worktree 下执行）】
+【要跑的 9 条命令（全部在 lane worktree 下执行）】
 ```
 python font-src/src/hkposter-joyo-w2-s4-001.py
 python font-src/scripts/check_recipes.py --recipes font-src/src/hkposter-joyo-w2-s4-001.py
 python font-src/scripts/check_glyphs.py --sources font-src/masters/hkposter-joyo-w2-s4-001.ufo
 python font-src/scripts/check_charset.py --recipes font-src/src/hkposter-joyo-w2-s4-001.py
+python font-src/scripts/check_codepoint_ref.py --font font-src/dist/HKPoster-Heavy.ttf
 python font-src/scripts/check_stroke_gaps.py --recipes font-src/src/hkposter-joyo-w2-s4-001.py --top 6 --threshold 1.5
 python font-src/scripts/build_font.py --sources font-src/masters/hkposter-joyo-w2-s4-001.ufo --out font-src/dist
 python font-src/scripts/verify_font.py --font font-src/dist/HKPoster-Heavy.ttf --sources font-src/masters/hkposter-joyo-w2-s4-001.ufo
-python font-src/scripts/render_glyph_sheet.py --font font-src/dist/HKPoster-Heavy.ttf --text "選関調機総領権際認論増確" --size 200 --out font-src/reports/sheet-joyo-w2-s4-001.png
+python font-src/scripts/render_glyph_sheet.py --font font-src/dist/HKPoster-Heavy.ttf --codes "9078,95A2,8ABF,6A5F,7DCF,9818,6A29,969B,8A8D,8AD6,5897,78BA,6F14,8AC7,7591,8A9E" --size 200 --out font-src/reports/sheet-joyo-w2-s4-001.png
 ```
+**渲染必须用 `--codes`，不要用 `--text` 传中文**：Windows 命令行传中文会被**静默损坏**
+（部分字符变成别的字，渲染出来是洋红方框，2026-10-26 实测过）。
+本批的码位串已写在上面 `--codes` 的位置，照抄。
 判定：check_recipes PASS（问题 0）；check_glyphs FAIL=0；verify_font FAIL=0；
-**check_charset PASS（问题 0）** —— 它拿字形的 `note` 汉字与 `unicode` 对撞，
-用来抓「码位写错」这类错误（2026-10-26 有个批次把「栄」做成了 U+6804「枤」，
-自洽检查查不出来，是这个门禁抓到的）。写 recipe 时 `note` 务必写成
-「<这个字>：<部件说明>」的格式，`note` 的首字符就是字形自称；
+**check_charset PASS（问题 0）** —— 它拿字形的 `note` 汉字与 `unicode` 对撞。
+写 recipe 时 `note` 务必写成「<这个字>：<部件说明>」的格式，`note` 的首字符就是字形自称。
+**check_codepoint_ref PASS** —— 它拿**参照字体**（免费商用开源的日语字体）当第三方证据源：
+本批的每个 CJK 码位都必须在那几个参照字体里存在。Jōyō 常用漢字在日语字体里全都存在，
+所以「参照字体里根本没有的码位」几乎一定是**选错了字**。
+2026-10-26 的真实事故：有个批次把「栄」挂在了 U+8368「荨」上（U+6804 才是栄），
+note 与 unicode 一起错、字段自洽检查零不符 —— 是**参照字体**这条独立证据源才能抓住它。
 **check_stroke_gaps 不得报出「疑似粘连」（> 3 个笔画宽）**——
 若报了，对照标准骨架改坐标后重跑，直到那一对不再出现在「疑似粘连」里。
-**若第 6 条因特性文件报错**：说明 `font-src/features/*.fea` 引用了本批没有的字形——
+**若第 7 条因特性文件报错**：说明 `font-src/features/*.fea` 引用了本批没有的字形——
 子集构建会自动跳过不适用的特性文件，若仍失败请把报错原文写进报告交集成方。
 
 【交付步骤】
 1. write 一次性写出完整文件（16 个字形全写完，不要分次追加）。
-2. 跑上面 8 条命令。
+2. 跑上面 9 条命令。
 3. **用 read 工具打开 font-src/reports/sheet-joyo-w2-s4-001.png 亲眼看**（不能省）：
    逐字判断：一眼认得出吗？有没有粘连成黑块？内白还在吗？批内观感一致吗？
    不满意就改 recipe → 重新生成 → 重新渲染 → 再看（最多 4 轮）。

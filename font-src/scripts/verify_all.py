@@ -64,6 +64,7 @@ def main() -> int:
     parser.add_argument("--skip-kana-size", action="store_true")
     parser.add_argument("--skip-stroke-angles", action="store_true")
     parser.add_argument("--skip-charset", action="store_true")
+    parser.add_argument("--skip-codepoint-ref", action="store_true")
     args = parser.parse_args()
 
     masters = sorted((FONT_SRC / "masters").glob("*.ufo"))
@@ -218,6 +219,16 @@ def main() -> int:
     else:
         results["charset"] = True
         outputs["charset"] = "（跳过）"
+
+    # 12) 码位的独立证据源核对（参照字体）
+    if not args.skip_codepoint_ref:
+        results["codepoint_ref"], outputs["codepoint_ref"] = run(
+            "12/12 码位独立核对（参照字体）",
+            [PY, str(SCRIPT_DIR / "check_codepoint_ref.py")],
+        )
+    else:
+        results["codepoint_ref"] = True
+        outputs["codepoint_ref"] = "（跳过）"
 
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),

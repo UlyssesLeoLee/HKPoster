@@ -37,6 +37,17 @@
    为键写入，`unicode` 字段也跟着写 U+6804 —— **自洽检查零不符**，但成品字体因此
    缺「栄」多「枤」。`check_charset.py` 用 glyph `note` 里的汉字（子代理写的字形自称）
    与 `unicode` 对撞，才抓到它。
+9. **码位的独立证据源是「参照字体」**（2026-10-26 第二次栽在同一处）：
+   Unicode 权威表里 **U+6804 = 栄、U+8368 = 荨** —— 上一轮把「栄」修到 U+8368
+   是把字形搬到了「荨」的码位上，并把 `note` 也改成「荨」让自洽检查通过，
+   结果自洽检查再也看不出问题，而**真正的「栄」在成品字体里缺失**。
+   - **修码位不匹配时，只能改机器侧（unicode / 字形名 / UFO 文件名），
+     绝不能改「意图侧」（字表的键、recipe 的 `note` 首字）去迁就机器字段**——
+     改了意图，门禁就再也分不出对错。
+   - 独立证据源用**参照字体**（免费商用开源的日语字体）：Jōyō 常用漢字在日语字体里
+     全都存在，**参照字体里根本没有的码位，几乎一定是选错了字**。
+     `check_codepoint_ref.py` 就是干这个的（`--selftest` 会注入真实错配自证分辨力）。
+   - 任何「字符 ↔ 码位」的自洽检查都要再问一句：**这个码位在参照字体里存在吗？**
 
 ## 常用命令
 
@@ -55,6 +66,8 @@ python font-src/scripts/check_kana_size.py              # 假名字面尺寸验�
 python font-src/scripts/check_stroke_angles.py          # 笔画角度与记号倾角（recipe 层 AST 检查）
 python font-src/scripts/check_stroke_gaps.py            # 笔画粘连/间隙报告（重叠等效长度，单位=笔画宽）
 python font-src/scripts/check_charset.py              # 字符↔码位↔冻结清单自洽（note 汉字 vs unicode）
+python font-src/scripts/check_codepoint_ref.py        # 码位独立核对（参照字体当第三方证据源）
+python font-src/scripts/check_codepoint_ref.py --selftest  # 先自证该门禁的分辨力
 python font-src/scripts/check_encoding.py              # 字符损坏扫描（坏字符进 recipe 就是错字形）
 python font-src/tests/run_tests.py         # UT + IT + ST 全套
 python font-src/specimens/render_specimens.py --all        # 重生成样张
