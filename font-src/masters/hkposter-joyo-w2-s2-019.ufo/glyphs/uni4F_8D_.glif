@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni4F8D" format="2">
+  <advance width="1000"/>
+  <unicode hex="4F8D"/>
+  <note>
+侍：亻 + 寺
+</note>
+  <outline>
+    <contour>
+      <point x="660" y="-8" type="line"/>
+      <point x="740" y="-8" type="line"/>
+      <point x="740" y="40" type="line"/>
+      <point x="788" y="40" type="line"/>
+      <point x="788" y="372" type="line"/>
+      <point x="940" y="372" type="line"/>
+      <point x="940" y="468" type="line"/>
+      <point x="788" y="468" type="line"/>
+      <point x="788" y="522" type="line"/>
+      <point x="940" y="522" type="line"/>
+      <point x="940" y="618" type="line"/>
+      <point x="703" y="618" type="line"/>
+      <point x="703" y="692" type="line"/>
+      <point x="880" y="692" type="line"/>
+      <point x="880" y="788" type="line"/>
+      <point x="430" y="788" type="line"/>
+      <point x="430" y="692" type="line"/>
+      <point x="607" y="692" type="line"/>
+      <point x="607" y="618" type="line"/>
+      <point x="370" y="618" type="line"/>
+      <point x="370" y="522" type="line"/>
+      <point x="692" y="522" type="line"/>
+      <point x="692" y="468" type="line"/>
+      <point x="370" y="468" type="line"/>
+      <point x="370" y="372" type="line"/>
+      <point x="692" y="372" type="line"/>
+      <point x="692" y="88" type="line"/>
+      <point x="660" y="88" type="line"/>
+    </contour>
+    <contour>
+      <point x="512" y="190" type="line"/>
+      <point x="498" y="290" type="line"/>
+      <point x="414" y="290" type="line"/>
+      <point x="428" y="190" type="line"/>
+    </contour>
+    <contour>
+      <point x="152" y="501" type="line"/>
+      <point x="152" y="0" type="line"/>
+      <point x="248" y="0" type="line"/>
+      <point x="248" y="623" type="line"/>
+      <point x="236" y="623" type="line"/>
+      <point x="340" y="776" type="line"/>
+      <point x="261" y="831" type="line"/>
+      <point x="70" y="552" type="line"/>
+      <point x="150" y="498" type="line"/>
+    </contour>
+  </outline>
+</glyph>

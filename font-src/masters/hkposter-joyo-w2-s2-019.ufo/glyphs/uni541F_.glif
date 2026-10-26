@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni541F" format="2">
+  <advance width="1000"/>
+  <unicode hex="541F"/>
+  <note>
+吟：口 + 今
+</note>
+  <outline>
+    <contour>
+      <point x="770" y="332" type="line"/>
+      <point x="565" y="113" type="line"/>
+      <point x="635" y="47" type="line"/>
+      <point x="915" y="347" type="line"/>
+      <point x="880" y="380" type="line"/>
+      <point x="880" y="428" type="line"/>
+      <point x="500" y="428" type="line"/>
+      <point x="500" y="332" type="line"/>
+    </contour>
+    <contour>
+      <point x="204" y="200" type="line"/>
+      <point x="300" y="200" type="line"/>
+      <point x="300" y="296" type="line"/>
+      <point x="300" y="544" type="line"/>
+      <point x="300" y="640" type="line"/>
+      <point x="204" y="640" type="line"/>
+      <point x="156" y="640" type="line"/>
+      <point x="60" y="640" type="line"/>
+      <point x="60" y="544" type="line"/>
+      <point x="60" y="296" type="line"/>
+      <point x="60" y="200" type="line"/>
+      <point x="156" y="200" type="line"/>
+    </contour>
+    <contour>
+      <point x="156" y="296" type="line"/>
+      <point x="156" y="544" type="line"/>
+      <point x="204" y="544" type="line"/>
+      <point x="204" y="296" type="line"/>
+    </contour>
+    <contour>
+      <point x="470" y="452" type="line"/>
+      <point x="810" y="452" type="line"/>
+      <point x="810" y="548" type="line"/>
+      <point x="470" y="548" type="line"/>
+    </contour>
+    <contour>
+      <point x="640" y="780" type="line"/>
+      <point x="609" y="817" type="line"/>
+      <point x="349" y="597" type="line"/>
+      <point x="411" y="523" type="line"/>
+      <point x="640" y="717" type="line"/>
+      <point x="859" y="533" type="line"/>
+      <point x="921" y="607" type="line"/>
+      <point x="671" y="817" type="line"/>
+    </contour>
+  </outline>
+</glyph>
