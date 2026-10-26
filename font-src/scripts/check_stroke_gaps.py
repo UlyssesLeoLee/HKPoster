@@ -384,6 +384,7 @@ def main() -> int:
     all_results = []
     total_suspect = 0
     total_tight = 0
+    total_dup = 0
     for path in paths:
         if not path.exists():
             print(f"[gaps] 找不到 recipe：{path}")
@@ -393,6 +394,8 @@ def main() -> int:
         for g in res["glyphs"]:
             total_suspect += len(g["suspect"])
             total_tight += len(g["tight"])
+            total_dup += len([p for p in g.get("dup_pairs", [])
+                              if p["eq_len"] >= args.threshold])
 
     print(f"[gaps] 扫了 {len(paths)} 个 recipe")
     print(f"[gaps] 指标：重叠等效长度（重叠面积 ÷ 较窄笔画的宽度，单位=笔画宽）· 间隙（相交时为 0）")
@@ -431,7 +434,12 @@ def main() -> int:
         "min_gap": MIN_GAP,
         "recipes": all_results,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[gaps] 疑似粘连 {total_suspect} 对 · 临界间隙 {total_tight} 对")
+    print(f"[gaps] 疑似粘连 {total_suspect} 对 · 临界间隙 {total_tight} 对"
+          f" · 同笔重复段 {total_dup} 对")
+    if total_dup:
+        print("[gaps]   ↑ 同笔重复段**不计入粘连**，但要看一眼："
+              "同一条笔画被写了两次（常见于「加宽某横」），"
+              "并集后那一笔会比别的笔画明显粗 —— 视觉上就是「这条横偏胖」。")
     print(f"[gaps] 报告：{out}")
     # 纯参考工具：不判 FAIL
     return 0
