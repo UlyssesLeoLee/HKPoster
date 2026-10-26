@@ -215,9 +215,6 @@ def _stroke(g, s, dx=0.0, dy=0.0):
     elif kind == "p":
         _, pts, w = s
         g.poly([(x + dx, y + dy) for x, y in _band(pts, w)])
-    elif kind == "dot":
-        _, cx, cy, w, h, slant = s
-        g.dot(cx + dx, cy + dy, w=w, h=h, slant=slant)
     elif kind == "ring":
         _, outer, inner = s
         g.ring(
@@ -272,10 +269,6 @@ def _map_strokes(strokes, fn):
         elif kind == "p":
             _, pts, w = s
             out.append(("p", [fn(x, y) for x, y in pts], w))
-        elif kind == "dot":
-            _, cx, cy, w, h, slant = s
-            n = fn(cx, cy)
-            out.append(("dot", n[0], n[1], w, h, slant))
         elif kind == "ring":
             _, outer, inner = s
             out.append(("ring", [fn(x, y) for x, y in outer],
