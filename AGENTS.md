@@ -48,6 +48,19 @@
      全都存在，**参照字体里根本没有的码位，几乎一定是选错了字**。
      `check_codepoint_ref.py` 就是干这个的（`--selftest` 会注入真实错配自证分辨力）。
    - 任何「字符 ↔ 码位」的自洽检查都要再问一句：**这个码位在参照字体里存在吗？**
+10. **「腔被封死」要用自己的门禁判，不能指望 `check_stroke_gaps`**（2026-10-27）：
+    `check_stroke_gaps` 用「重叠等效长度」判粘连，**横画墨连成黑带时等效长度可能只有
+    0.08~0.88**（短横 / 部分重叠）→ 门槛 3.0 以下 → 门禁不报，字已经糊成黑砖。
+    - 实测：`程 / 崎 / 週 / 登 / 値 / 討 / 買` 的 **口 / 日 / 目 / 田 型方框内白被吃光**
+      （框高 < 2×笔画宽 + 24 → 腔高 ≤ 0），现有 12 步门禁**全部不报**，渲染出来是黑砖。
+    - **「腔高 ≤ 0」才是硬伤**：两条横互相叠 19 单位（如「爱」的「友」部）是合法密字，
+      几何上分不出好坏 —— 所以只有**白口 ≤ 0**（上笔下缘 ≥ 下笔上缘）判 FAIL。
+    - 门禁：`python font-src/scripts/check_hcounters.py`（已接入 `verify_all` 第 13 步）。
+      **新出现的封闭内白一律 FAIL**；已合并的老字记在
+      `font-src/data/hcounter-baseline.json`（当前 57 个字形）里，**基线只许变短**。
+      `--selftest` 会注入真实错配自证分辨力。
+    - **写 recipe 时的硬规矩**：口/日/目/田 型方框的**框高必须 ≥ 2×笔画宽 + 24**，
+      否则腔消失。实在放不下就把横画降到细档（W_THIN/W_HAIR）再算一遍。
 
 ## 常用命令
 
@@ -65,6 +78,8 @@ python font-src/scripts/check_kana_fidelity.py --selftest # 先自证该检查�
 python font-src/scripts/check_kana_size.py              # 假名字面尺寸验收（与汉字同档 + 平/片对称）
 python font-src/scripts/check_stroke_angles.py          # 笔画角度与记号倾角（recipe 层 AST 检查）
 python font-src/scripts/check_stroke_gaps.py            # 笔画粘连/间隙报告（重叠等效长度，单位=笔画宽）
+python font-src/scripts/check_hcounters.py             # 横画内白封闭（黑砖）专项门禁，第 13 步
+python font-src/scripts/check_hcounters.py --selftest  # 注入真实错配，自证分辨力
 python font-src/scripts/check_charset.py              # 字符↔码位↔冻结清单自洽（note 汉字 vs unicode）
 python font-src/scripts/check_codepoint_ref.py        # 码位独立核对（参照字体当第三方证据源）
 python font-src/scripts/check_codepoint_ref.py --selftest  # 先自证该门禁的分辨力
@@ -87,12 +102,35 @@ python font-src/scripts/lane_prompt.py --list              # 列出全部 lane�
   提示词由 `lane_prompt.py` 生成，续做时机械重复「登记 → 建 worktree → 派发 → 复验 → rebase → merge」。
 - **批次 id ≠ 分支名 ≠ worktree 名**：例如 `joyo-w2-s3-001`（批次）→ `agent/wave2/joyo-s3-001`（分支）
   → `E:/hkposter-lanes/wave2-joyo-s3-001`（worktree）。三者由 batch id 推导，**不得手写**。
+  - 写脚本建 lane 时**不要自己拼路径**：把 batch id 传进去，由脚本按上例推导。
+    手拼漏掉 `joyo-` 会建成 `agent/wave2/s3-001` + `wave2-s3-001`，
+    而 `lane_prompt.py` 生成的规格里写的是**正确路径** —— 子代理会扑空。
+  - **分支一旦存在就不能事后补登记**（guard 报 exit 15「不能事后补登记」，
+    因为它分不清「从未登记」与「登记丢了」）。所以**必须先 `plan` 再建分支**。
+    万一已经建错：改名的代价是 claim 无法补登记（纯账目问题，
+    文件互斥由 batch id 推导的文件名天然保证，hook 未武装时无实际冲突风险）——
+    但**不要**为此删掉正在被子代理使用的 worktree。
 - **lane 名 ≠ recipe 文件名**：lane `kana-hira-rework` 拥有的是
   `font-src/src/hkposter-kana-hira.py`（文件名**不带** `-rework`）。
 - **guard `plan` 之后必须 `guard list` 回读确认登记的路径**：路径拼错时 guard 不会报错，
   会照错登记，等于这条 lane 的文件**没有被任何 claim 保护**。
   PowerShell 里 `$arr[0]` 插进双引号字符串会被展开成整个数组（空格拼接），
   写路径时要用显式变量，不要用数组下标。
+- **guard 的 git 预算（`BUDGET_S = 18.0`）是硬编码常量**：它在 `Git.__init__` 的**默认参数**里，
+  运行时改模块属性 `mod.BUDGET_S` **无效**（默认参数在类定义时就绑定了）。
+  当本机 git spawn 变慢（实测 1.5–3.4 s/进程，原因是提交内存 95%+ 满）时，
+  guard 一律报 `BUDGET_EXCEEDED` —— 这是**预算不够**，不是仓库有问题。
+  绕法：**在进程内加载 guard 并包一层 `Git.__init__`**（不改插件文件）：
+  ```python
+  spec = importlib.util.spec_from_file_location("magos_guard", GUARD)
+  mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+  orig = mod.Git.__init__
+  mod.Git.__init__ = lambda self, start, budget=None: orig(
+      self, start, budget=120.0 if budget is None else budget)
+  mod.HOOK_DEADLINE = None
+  sys.argv = ["magos_guard"] + argv; mod.main()
+  ```
+  实测：预算 18 s → `plan` 必失败（20 s 放弃）；预算 120 s → 约 110 s 成功。
 - **假名要求（项目所有者 2026-10-25）**：假名骨架必须保持标准形，只改笔画处理（粗手写体）；
   缺字是硬门禁（`check_kana_fidelity.py`）。判据见 `docs/11` §6.8。
 - **笔画的角度不可改（项目所有者 2026-10-25）**：

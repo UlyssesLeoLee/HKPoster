@@ -65,6 +65,7 @@ def main() -> int:
     parser.add_argument("--skip-stroke-angles", action="store_true")
     parser.add_argument("--skip-charset", action="store_true")
     parser.add_argument("--skip-codepoint-ref", action="store_true")
+    parser.add_argument("--skip-hcounters", action="store_true")
     args = parser.parse_args()
 
     masters = sorted((FONT_SRC / "masters").glob("*.ufo"))
@@ -229,6 +230,16 @@ def main() -> int:
     else:
         results["codepoint_ref"] = True
         outputs["codepoint_ref"] = "（跳过）"
+
+    # 13) 横画内白封闭专项（黑砖检测）
+    if not args.skip_hcounters:
+        results["hcounters"], outputs["hcounters"] = run(
+            "13/13 横画内白封闭专项",
+            [PY, str(SCRIPT_DIR / "check_hcounters.py")],
+        )
+    else:
+        results["hcounters"] = True
+        outputs["hcounters"] = "（跳过）"
 
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
