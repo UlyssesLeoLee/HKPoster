@@ -85,7 +85,7 @@ def glyph_ying() -> Glyph:
     g.hbar(190, 410, 410, weight=W_THIN)       # 口的上横
     g.vbar(230, 410, 290, weight=W_THIN)       # 口的左竖
     g.vbar(370, 410, 290, weight=W_THIN)       # 口的右竖
-    g.hbar(190, 410, 290, weight=W_THIN)       # 口的下横
+    g.hbar(190, 410, 290, weight=W_THIN)       # 口的下横  # HC_SELFTEST_ANCHOR
 
     # ---- 景下部：小 ----
     # 小字头的标准骨架：左点为撇（"/"）、右点为捺（"\\"）。

@@ -69,9 +69,49 @@ BASELINE_PATH = FONT_SRC / "data" / "hcounter-baseline.json"
 
 
 def _is_horizontal(poly: Polygon) -> bool:
+    """这条笔画是不是**真正的横**（轴对齐的长条矩形）。
+
+    这是**兜底判据**，只在拿不到原语元数据时使用（例如对外部几何体）。
+    不能只看包围盒的宽高比：**平捺**（辶的底、戈的斜钩）是一个很扁的斜四边形，
+    宽高比轻松超过 2，会被误判成「横」，然后拿它的 bbox 去跟真的横比白口，
+    算出一堆假阳性（实测「辻」的平捺 bbox 高 190、宽 404 → 被当成横）。
+
+    判据用**面积**：轴对齐矩形的面积 == 包围盒面积；斜笔的面积 < 包围盒面积。
+    """
     x0, y0, x1, y1 = poly.bounds
     w, h = x1 - x0, y1 - y0
-    return w >= MIN_W and w > h * 2.0
+    if w < MIN_W or w <= h * 2.0:
+        return False
+    bbox_area = w * h
+    if bbox_area <= 0:
+        return False
+    return abs(poly.area - bbox_area) <= max(1.0, bbox_area * 0.02)
+
+
+def _horizontal_flags(glyph) -> list[bool] | None:
+    """每一条笔画是不是横画 —— **用原语类型判，不用几何猜**。
+
+    为什么必须用原语类型：一条**竖桩**（长度短于笔画宽）画出来的多边形是
+    (宽, 短) 的矩形，和一条同尺寸的**横桩**多边形完全一样 ——
+    几何上根本分不出方向（实测：書 的聿顶點 84×40、授 的冖左竖 88×42，
+    都被几何判据当成了横画，去跟真的横比白口，报出假阳性）。
+
+    原语类型（hbar/vbar/diag/dot/rect/ring/poly）是唯一可靠的方向来源。
+    """
+    parts = getattr(glyph, "_parts", [])
+    prims = getattr(glyph, "_prims", None)
+    if prims is None or len(prims) != len(parts):
+        return None
+    flags = []
+    for prim in prims:
+        kind = prim.get("kind")
+        if kind == "hbar":
+            # 宽度（横跨长度）小于门槛的小记号忽略
+            length = abs(float(prim.get("x2", 0)) - float(prim.get("x1", 0)))
+            flags.append(length >= MIN_W)
+        else:
+            flags.append(False)
+    return flags
 
 
 def _label(poly: Polygon) -> str:
@@ -115,20 +155,25 @@ def collect(path: Path) -> list[dict]:
     findings: list[dict] = []
     for g in built:
         name = getattr(g, "name", "?")
-        polys: list[Polygon] = []
+        flags = _horizontal_flags(g)
+        polys: list[Polygon | None] = []
         for pts in getattr(g, "_parts", []):
             if len(pts) < 3:
+                polys.append(None)
                 continue
             poly = Polygon([(float(x), float(y)) for x, y in pts])
             if not poly.is_valid:
                 poly = poly.buffer(0)
-            if poly.is_empty:
-                continue
-            polys.append(poly)
+            polys.append(None if poly.is_empty else poly)
         for i in range(len(polys)):
             for j in range(i + 1, len(polys)):
                 a, b = polys[i], polys[j]
-                if not (_is_horizontal(a) and _is_horizontal(b)):
+                if a is None or b is None:
+                    continue
+                if flags is not None:
+                    if not (flags[i] and flags[j]):
+                        continue
+                elif not (_is_horizontal(a) and _is_horizontal(b)):
                     continue
                 if _x_overlap(a, b) <= 0:
                     continue
@@ -228,24 +273,90 @@ def main() -> int:
 def _selftest() -> int:
     """注入真实错配：把某字的一条横抬到与相邻横贴死，看门禁是否多报出来。
 
+    锚点用**源码标记**（`HC_SELFTEST_ANCHOR` 注释）定位，不写死坐标 ——
+    写死坐标的话，一改字形坐标这个自证就悄悄失效（锚点找不到 → 返回 2，
+    看起来像"自证失败"，其实是自证没在跑）。
+
     判据是**封闭对的数量**变化（不是 key 集合变化）——
     注入目标字本身可能已经在欠账里，key 不变但封闭对会多一条。
     """
+    import ast
+    import re
     import shutil
     import tempfile
 
+    MARKER = "HC_SELFTEST_ANCHOR"
     src = FONT_SRC / "src" / "hkposter-cjk-core.py"
-    anchor = "g.hbar(190, 410, 290, weight=W_THIN)"   # 「影」的「口」下横
-    replacement = "g.hbar(190, 410, 410, weight=W_THIN)"  # 抬到与上横齐平 → 腔封死
+    text = src.read_text(encoding="utf-8")
+    lines = text.splitlines()
+
+    marker_idx = next((i for i, ln in enumerate(lines) if MARKER in ln), None)
+    if marker_idx is None:
+        print(f"[hcounters] selftest：源码里没有 {MARKER} 标记，自证失败")
+        return 2
+
+    # 顶层常量（W_THIN 之类）用于把 weight 解析成数值
+    consts: dict[str, float] = {}
+    for node in ast.parse(text).body:
+        if isinstance(node, ast.Assign) and isinstance(node.value, ast.Constant):
+            if isinstance(node.value.value, (int, float)):
+                for tgt in node.targets:
+                    if isinstance(tgt, ast.Name):
+                        consts[tgt.id] = float(node.value.value)
+
+    hbar_re = re.compile(r"g\.hbar\(\s*([^,]+),\s*([^,]+),\s*([^,]+),\s*([^)]+)\)")
+
+    def parse_hbar(line: str):
+        m = hbar_re.search(line)
+        if not m:
+            return None
+        vals = []
+        for raw in m.groups():
+            raw = raw.strip()
+            if raw.startswith("weight="):
+                raw = raw.split("=", 1)[1].strip()
+            try:
+                vals.append(float(raw))
+            except ValueError:
+                if raw in consts:
+                    vals.append(consts[raw])
+                else:
+                    return None
+        return vals  # x1, x2, y, weight
+
+    # 同一函数里、标记行之上的第一条 hbar（作为「上面那条横」）
+    fn_start = 0
+    for i in range(marker_idx, -1, -1):
+        if lines[i].startswith("def "):
+            fn_start = i
+            break
+    prev = None
+    for i in range(fn_start, marker_idx):
+        got = parse_hbar(lines[i])
+        if got is not None:
+            prev = got
+    anchor = parse_hbar(lines[marker_idx])
+    if prev is None or anchor is None:
+        print("[hcounters] selftest：解析锚点或上一条横失败，自证失败")
+        return 2
+
+    # 把锚点横抬到与上面那条横的墨迹重叠 10 单位 → 白口 = −10 → 腔被封死
+    prev_ink_bottom = prev[2] - prev[3] / 2.0
+    new_y = prev_ink_bottom + 10.0 + anchor[3] / 2.0
+    new_line = re.sub(r"(g\.hbar\([^,]+,[^,]+,\s*)([^,]+)(,)",
+                      lambda m: m.group(1) + f"{new_y:g}" + m.group(3),
+                      lines[marker_idx], count=1)
+    if new_line == lines[marker_idx]:
+        print("[hcounters] selftest：没能改写锚点行，自证失败")
+        return 2
+
     with tempfile.TemporaryDirectory() as td:
         tmp = Path(td) / src.name
         shutil.copy2(src, tmp)
-        text = tmp.read_text(encoding="utf-8")
-        if anchor not in text:
-            print(f"[hcounters] selftest：没找到注入锚点 {anchor!r}，自证失败")
-            return 2
         before = [f for f in collect(tmp) if f["closed"]]
-        tmp.write_text(text.replace(anchor, replacement), encoding="utf-8")
+        patched = list(lines)
+        patched[marker_idx] = new_line
+        tmp.write_text("\n".join(patched) + "\n", encoding="utf-8")
         after = [f for f in collect(tmp) if f["closed"]]
         if len(after) <= len(before):
             print(f"[hcounters] selftest FAIL：注入后封闭内白没有增加"

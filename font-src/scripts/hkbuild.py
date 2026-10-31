@@ -88,6 +88,13 @@ class Glyph:
         self.unicode = unicode
         self.note = note
         self._parts: list[list[tuple[float, float]]] = []
+        # 与 _parts 一一对应的**原语元数据**。
+        # 为什么需要它：一条「竖」如果长度短于笔画宽（竖桩），它的包围盒是
+        # (宽, 短) —— 和一条「横」的多边形**完全一样**，几何上无法区分方向。
+        # 任何靠 bbox 猜方向的检查器都会把竖桩误判成横（实测：書 的聿顶點
+        # 84×40、授 的冖左竖 88×42，都被 `check_hcounters` 当成横画去比白口）。
+        # 原语类型是唯一可靠的方向来源，所以在这里记下来。
+        self._prims: list[dict] = []
 
     # ---- 笔画原语 ----
     def hbar(
@@ -103,6 +110,8 @@ class Glyph:
         self._parts.append(
             _stroke_quad(x1, y, x2, y, weight, cut_left, cut_right)
         )
+        self._prims.append({"kind": "hbar", "weight": weight,
+                            "x1": x1, "x2": x2, "y": y})
         return self
 
     def vbar(
@@ -118,6 +127,8 @@ class Glyph:
         self._parts.append(
             _stroke_quad(x, y1, x, y2, weight, cut_bottom, cut_top)
         )
+        self._prims.append({"kind": "vbar", "weight": weight,
+                            "x": x, "y1": y1, "y2": y2})
         return self
 
     def diag(
@@ -130,6 +141,8 @@ class Glyph:
     ) -> "Glyph":
         """斜笔画：中心线 (x1,y1)->(x2,y2)，厚度垂直于中心线。"""
         self._parts.append(_stroke_quad(x1, y1, x2, y2, weight))
+        self._prims.append({"kind": "diag", "weight": weight,
+                            "x1": x1, "y1": y1, "x2": x2, "y2": y2})
         return self
 
     def dot(
@@ -149,11 +162,15 @@ class Glyph:
                 (cx - w / 2.0 + slant, cy + h / 2.0),
             ]
         )
+        self._prims.append({"kind": "dot", "weight": w, "w": w, "h": h,
+                            "cx": cx, "cy": cy, "slant": slant})
         return self
 
     def rect(self, x1: float, x2: float, y1: float, y2: float) -> "Glyph":
         """原始矩形。"""
         self._parts.append([(x1, y1), (x2, y1), (x2, y2), (x1, y2)])
+        self._prims.append({"kind": "rect", "weight": None,
+                            "x1": x1, "x2": x2, "y1": y1, "y2": y2})
         return self
 
     def ring(
@@ -174,11 +191,14 @@ class Glyph:
             self._parts.append(
                 [outer_pts[index], outer_pts[nxt], inner_pts[nxt], inner_pts[index]]
             )
+            # 每条边带一个 part，元数据也要一一对应（否则 _prims 与 _parts 错位）
+            self._prims.append({"kind": "ring", "weight": None, "index": index})
         return self
 
     def poly(self, points: Iterable[Sequence[float]]) -> "Glyph":
         """原始多边形（用于字面框、钩、特殊形状）。"""
         self._parts.append([(float(x), float(y)) for x, y in points])
+        self._prims.append({"kind": "poly", "weight": None})
         return self
 
     # ---- 轮廓输出 ----
@@ -327,6 +347,11 @@ def write_ufo(
     info.note = note or "Wave 0 试制 master；轮廓由 hkbuild 笔画原语生成。"
 
     for glyph in glyphs:
+        # 不变量：元数据与笔画必须一一对应，否则按原语类型判方向的检查器会错位
+        if len(glyph._prims) != len(glyph._parts):
+            raise AssertionError(
+                f"{glyph.name}: _prims({len(glyph._prims)}) 与 _parts({len(glyph._parts)}) 不等长"
+            )
         ufo_glyph = font.newGlyph(glyph.name)
         ufo_glyph.width = glyph.advance
         if glyph.unicode is not None:
