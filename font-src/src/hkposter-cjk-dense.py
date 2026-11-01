@@ -110,19 +110,25 @@ def glyph_yi() -> Glyph:
     # ---- 羊 ----
     g.dot(320, 772, w=88, h=96, slant=-14)  # 丷 左
     g.dot(640, 772, w=88, h=96, slant=14)  # 丷 右
-    g.hbar(100, 780, 666, weight=W_SEC)  # 横 1
+    # 2026-10-31 回修：羊的三横原来用 W_SEC(92)、中心线间距 96 → 墨迹白口只有 4，
+    # 整段糊成黑带；横 3 与「手的一」白口 −8（腔被封死）。
+    # 改为三横用 W_THIN(84)（GLY-001 高密字局部减重），中心线间距 96 → 白口 12；
+    # 「手的一」下移到 340 → 与横 3 白口 46。
+    # 参照 M PLUS 1p Black「義」实测：羊部横画间距只有 10~15 单位（开放缝，不成腔），
+    # 本仓取 12，视觉接近；腔的封闭才是硬伤，已全部解开。
+    g.hbar(100, 780, 666, weight=W_THIN)  # 横 1（墨 624..708）
     g.vbar(440, 430, 700, weight=W_THIN)  # 羊的竖
-    g.hbar(140, 740, 570, weight=W_SEC)  # 横 2
-    g.hbar(60, 780, 474, weight=W_SEC)  # 横 3
+    g.hbar(140, 740, 570, weight=W_THIN)  # 横 2（墨 528..612）
+    g.hbar(60, 780, 474, weight=W_THIN)  # 横 3（墨 432..516）
 
     # ---- 我：手侧 ----
     g.diag(430, 330, 350, 355, weight=W_LIGHT)  # 丿
-    g.hbar(100, 420, 390, weight=W_SEC)  # 手的一
-    g.vbar(280, 344, 20, weight=W_SEC)  # 亅
+    g.hbar(100, 420, 340, weight=W_SEC)  # 手的一（墨 294..386）
+    g.vbar(280, 340, 20, weight=W_SEC)  # 亅
     g.diag(90, 50, 420, 100, weight=W_THIN)  # 提
 
     # ---- 我：戈侧 ----
-    g.hbar(60, 740, 230, weight=W_SEC)  # 戈的一（长横）
+    g.hbar(60, 740, 220, weight=W_SEC)  # 戈的一（长横，墨 174..266）
     g.diag(545, 300, 745, 40, weight=W_THIN)  # ㇂ 斜钩
     g.diag(645, 200, 435, 140, weight=W_LIGHT)  # 丿（局部减重）
     g.dot(700, 350, w=84, h=100, slant=22)  # 丶
