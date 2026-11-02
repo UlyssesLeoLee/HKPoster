@@ -146,7 +146,7 @@ def uni753A() -> Glyph:
       6 丁横    hbar(447, 911, 665, 84)
       7 丁竖钩  vbar(752, 0, 665, 96) + 左钩
     """
-    g = Glyph("uni753A", advance=1000, unicode=0x753A, note="町 田+丁")
+    g = Glyph("uni753A", advance=1000, unicode=0x753A, note="町：町田 + 丁")
     vbar(g, 106, 262, 617, W_SEC)
     bar(g, 106, 391, 617, W_THIN)
     vbar(g, 345, 262, 617, W_SEC)
@@ -172,7 +172,7 @@ def uni6CA2() -> Glyph:
       6 尺撇    pie(295, 90, 455, 695, 96)
       7 尺捺    na(536, 70, 872, 478, 96)
     """
-    g = Glyph("uni6CA2", advance=1000, unicode=0x6CA2, note="沢 氵+尺")
+    g = Glyph("uni6CA2", advance=1000, unicode=0x6CA2, note="沢：沢氵 + 尺")
     g.dot(208, 737, w=90, h=75, slant=0)
     g.dot(130, 501, w=96, h=70, slant=0)
     ti(g, 89, 80, 234, 257, W_MAIN)
@@ -197,7 +197,7 @@ def uni72B6() -> Glyph:
       6 犬捺  na(594, 87, 875, 484, 96)
       7 犬点  dot(768, 679, 84, 92)
     """
-    g = Glyph("uni72B6", advance=1000, unicode=0x72B6, note="状 丬+犬")
+    g = Glyph("uni72B6", advance=1000, unicode=0x72B6, note="状：状丬 + 犬")
     vbar(g, 303, 39, 752, W_MAIN)
     g.dot(164, 579, w=96, h=94, slant=0)
     ti(g, 82, 233, 232, 365, W_MAIN)
@@ -223,7 +223,7 @@ def uni5EFA() -> Glyph:
       8 廴折   vbar(150, 120, 470, 92)
       9 廴払い na(99, 41, 845, 175, 84)
     """
-    g = Glyph("uni5EFA", advance=1000, unicode=0x5EFA, note="建 聿+廴")
+    g = Glyph("uni5EFA", advance=1000, unicode=0x5EFA, note="建：建聿 + 廴")
     bar(g, 450, 814, 770, W_THIN)
     vbar(g, 772, 600, 770, W_SEC)
     bar(g, 377, 921, 656, W_THIN)
@@ -253,7 +253,7 @@ def uni7A7A() -> Glyph:
       7 工竖   vbar(491, 88, 266, 96)
       8 工下横 hbar(162, 867, 79, 96)
     """
-    g = Glyph("uni7A7A", advance=1000, unicode=0x7A7A, note="空 宀+八+工")
+    g = Glyph("uni7A7A", advance=1000, unicode=0x7A7A, note="空：空宀 + 八 + 工")
     tick(g, 487, 664, 793, W_THIN)
     g.dot(212, 582, w=56, h=130, slant=0)
     bar(g, 240, 848, 645, W_THIN)
@@ -281,7 +281,7 @@ def uni6025() -> Glyph:
       8 心中点 dot(535, 217, 70, 62)
       9 心右点 dot(800, 236, 93, 103)
     """
-    g = Glyph("uni6025", advance=1000, unicode=0x6025, note="急 ク+彐+心")
+    g = Glyph("uni6025", advance=1000, unicode=0x6025, note="急：急ク + 彐 + 心")
     pie(g, 172, 561, 416, 784, W_SEC)
     bar(g, 398, 638, 719, W_THIN)
     pie(g, 398, 581, 638, 719, W_THIN)
@@ -312,7 +312,7 @@ def uni9001() -> Glyph:
       6 天捺   na(618, 164, 812, 357, 96)
       7 辶点+折+払（part_ninkyou）
     """
-    g = Glyph("uni9001", advance=1000, unicode=0x9001, note="送 关+辶")
+    g = Glyph("uni9001", advance=1000, unicode=0x9001, note="送：送关 + 辶")
     g.dot(489, 683, w=89, h=118, slant=0)
     pie(g, 636, 611, 730, 773, W_THIN)
     bar(g, 438, 790, 578, W_THIN)
@@ -338,7 +338,7 @@ def uni4F9B() -> Glyph:
       7 共撇   pie(340, 61, 514, 247, 92)
       8 共捺   na(699, 75, 896, 260, 92)
     """
-    g = Glyph("uni4F9B", advance=1000, unicode=0x4F9B, note="供 亻+共")
+    g = Glyph("uni4F9B", advance=1000, unicode=0x4F9B, note="供：供亻 + 共")
     pie(g, 91, 369, 294, 732, W_SEC)
     vbar(g, 230, 52, 520, W_MAIN)
     bar(g, 367, 847, 572, W_THIN)
@@ -363,7 +363,7 @@ def uni5F79() -> Glyph:
       6 又横撇 hbar(350, 733, 445, 84) + pie(350, 45, 733, 445, 96)
       7 又捺  na(432, 53, 890, 331, 96)
     """
-    g = Glyph("uni5F79", advance=1000, unicode=0x5F79, note="役 彳+殳")
+    g = Glyph("uni5F79", advance=1000, unicode=0x5F79, note="役：役彳 + 殳")
     pie(g, 112, 595, 277, 770, W_THIN)
     pie(g, 94, 313, 309, 592, W_SEC)
     vbar(g, 242, 20, 424, W_MAIN)
@@ -390,7 +390,7 @@ def uni8EAB() -> Glyph:
       6 提   ti(153, 274, 652, 401, 84)
       7 撇   pie(230, 80, 700, 500, 96)
     """
-    g = Glyph("uni8EAB", advance=1000, unicode=0x8EAB, note="身")
+    g = Glyph("uni8EAB", advance=1000, unicode=0x8EAB, note="身：身")
     pie(g, 406, 699, 488, 814, W_THIN)
     vbar(g, 318, 322, 685, W_LIGHT)
     bar(g, 331, 662, 690, W_LIGHT)
@@ -417,7 +417,7 @@ def uni65BD() -> Glyph:
       8 也丨   vbar(656, 208, 574, 96)
       9 也乚   vbar(540, 110, 460, 96) + 折 + 钩
     """
-    g = Glyph("uni65BD", advance=1000, unicode=0x65BD, note="施 方+𠂉+也")
+    g = Glyph("uni65BD", advance=1000, unicode=0x65BD, note="施：施方 + 𠂉 + 也")
     tick(g, 274, 608, 761, W_THIN)
     bar(g, 99, 418, 596, W_THIN)
     bar(g, 166, 371, 448, W_THIN)
@@ -451,7 +451,7 @@ def uni98DF() -> Glyph:
       8 撇   pie(611, 225, 691, 324, 84)
       9 捺   na(471, 34, 829, 261, 92)
     """
-    g = Glyph("uni98DF", advance=1000, unicode=0x98DF, note="食 𠆢+良")
+    g = Glyph("uni98DF", advance=1000, unicode=0x98DF, note="食：食𠆢 + 良")
     pie(g, 108, 437, 484, 806, W_SEC)
     na(g, 483, 500, 892, 755, W_SEC)
     tick(g, 485, 556, 638, W_THIN)
@@ -478,7 +478,7 @@ def uni9632() -> Glyph:
       5 方横折钩 hbar(599, 834, 477, 84) + vbar(792, 25, 477, 92) + 钩
       6 方撇   pie(309, 135, 640, 599, 96)
     """
-    g = Glyph("uni9632", advance=1000, unicode=0x9632, note="防 阝+方")
+    g = Glyph("uni9632", advance=1000, unicode=0x9632, note="防：防阝 + 方")
     bar(g, 134, 350, 750, W_THIN)
     pie(g, 160, 590, 350, 750, W_SEC)
     vbar(g, 134, 20, 732, W_MAIN)
@@ -504,7 +504,7 @@ def uni8ECA() -> Glyph:
       6 一   hbar(128, 875, 219, 96)
       7 丨   vbar(491, 28, 797, 96)
     """
-    g = Glyph("uni8ECA", advance=1000, unicode=0x8ECA, note="車")
+    g = Glyph("uni8ECA", advance=1000, unicode=0x8ECA, note="車：車")
     bar(g, 224, 764, 681, W_THIN)
     vbar(g, 266, 318, 566, W_THIN)
     bar(g, 266, 767, 566, W_THIN)
@@ -531,7 +531,7 @@ def uni7814() -> Glyph:
       8 撇   pie(440, 83, 593, 689, 96)
       9 丨   vbar(758, 43, 710, 96)
     """
-    g = Glyph("uni7814", advance=1000, unicode=0x7814, note="研 石+开")
+    g = Glyph("uni7814", advance=1000, unicode=0x7814, note="研：研石 + 开")
     bar(g, 118, 411, 662, W_THIN)
     pie(g, 96, 290, 229, 629, W_MAIN)
     vbar(g, 203, 168, 410, W_THIN)
@@ -558,7 +558,7 @@ def uni4F55() -> Glyph:
       6 口一  hbar(414, 583, 343, 84)
       7 亅   vbar(752, 0, 683, 96) + 左钩
     """
-    g = Glyph("uni4F55", advance=1000, unicode=0x4F55, note="何 亻+可")
+    g = Glyph("uni4F55", advance=1000, unicode=0x4F55, note="何：何亻 + 可")
     pie(g, 82, 390, 289, 777, W_SEC)
     vbar(g, 240, 59, 572, W_MAIN)
     bar(g, 349, 917, 683, W_THIN)
@@ -586,7 +586,7 @@ def uni5357() -> Glyph:
       8 一   hbar(293, 716, 238, 84)
       9 丨   vbar(495, 38, 353, 96)
     """
-    g = Glyph("uni5357", advance=1000, unicode=0x5357, note="南 十+冂+丷+干")
+    g = Glyph("uni5357", advance=1000, unicode=0x5357, note="南：南十 + 冂 + 丷 + 干")
     bar(g, 238, 766, 661, W_THIN)
     vbar(g, 486, 511, 804, W_MAIN)
     vbar(g, 184, 47, 508, W_SEC)
@@ -613,7 +613,7 @@ def uni8DB3() -> Glyph:
       6 撇    pie(152, 88, 327, 405, 96)
       7 捺    na(295, 50, 860, 264, 96)
     """
-    g = Glyph("uni8DB3", advance=1000, unicode=0x8DB3, note="足 口+龰")
+    g = Glyph("uni8DB3", advance=1000, unicode=0x8DB3, note="足：足口 + 龰")
     vbar(g, 294, 514, 750, W_SEC)
     bar(g, 294, 706, 750, W_THIN)
     vbar(g, 660, 580, 750, W_SEC)
@@ -640,7 +640,7 @@ def uni795E() -> Glyph:
       8 申一  hbar(534, 866, 356, 84)
       9 申丨  vbar(686, 5, 809, 96)
     """
-    g = Glyph("uni795E", advance=1000, unicode=0x795E, note="神 礻+申")
+    g = Glyph("uni795E", advance=1000, unicode=0x795E, note="神：神礻 + 申")
     g.dot(283, 721, w=89, h=68, slant=0)
     bar(g, 72, 368, 570, W_THIN)
     pie(g, 72, 268, 368, 570, W_SEC)
@@ -667,7 +667,7 @@ def uni5B85() -> Glyph:
       5 乇一   hbar(154, 797, 320, 84)
       6 乇乚   vbar(490, 100, 440, 96) + 折 + 钩
     """
-    g = Glyph("uni5B85", advance=1000, unicode=0x5B85, note="宅 宀+乇")
+    g = Glyph("uni5B85", advance=1000, unicode=0x5B85, note="宅：宅宀 + 乇")
     tick(g, 481, 681, 788, W_THIN)
     g.dot(170, 586, w=55, h=163, slant=0)
     bar(g, 201, 901, 654, W_THIN)
@@ -693,7 +693,7 @@ def uni6761() -> Glyph:
       6 木撇   pie(118, 38, 461, 307, 92)
       7 木捺   na(524, 66, 863, 306, 92)
     """
-    g = Glyph("uni6761", advance=1000, unicode=0x6761, note="条 夂+木")
+    g = Glyph("uni6761", advance=1000, unicode=0x6761, note="条：条夂 + 木")
     pie(g, 212, 580, 418, 793, W_SEC)
     bar(g, 157, 656, 743, W_THIN)
     pie(g, 157, 381, 656, 743, W_SEC)
@@ -720,7 +720,7 @@ def uni72EC() -> Glyph:
       8 虫提    ti(469, 83, 827, 179, 84)
       9 虫点    dot(836, 167, 120, 146)
     """
-    g = Glyph("uni72EC", advance=1000, unicode=0x72EC, note="独 犭+虫")
+    g = Glyph("uni72EC", advance=1000, unicode=0x72EC, note="独：独犭 + 虫")
     pie(g, 108, 446, 347, 712, W_SEC)
     vbar(g, 350, 90, 653, W_SEC)
     pie(g, 185, 30, 350, 110, W_DOT)
@@ -749,7 +749,7 @@ def uni7A76() -> Glyph:
       7 九乙   hbar(231, 820, 374, 84) + vbar(790, 110, 374, 92)
               + bar(790, 870, 70, 80) + 钩
     """
-    g = Glyph("uni7A76", advance=1000, unicode=0x7A76, note="究 穴+九")
+    g = Glyph("uni7A76", advance=1000, unicode=0x7A76, note="究：究穴 + 九")
     tick(g, 487, 703, 802, W_THIN)
     g.dot(213, 620, w=46, h=123, slant=0)
     bar(g, 245, 848, 678, W_THIN)
@@ -780,7 +780,7 @@ def uni80B2() -> Glyph:
       7 月一 hbar(379, 636, 308, 84)
       8 月一 hbar(380, 636, 206, 84)
     """
-    g = Glyph("uni80B2", advance=1000, unicode=0x80B2, note="育 亠+厶+月")
+    g = Glyph("uni80B2", advance=1000, unicode=0x80B2, note="育：育亠 + 厶 + 月")
     tick(g, 490, 693, 801, W_THIN)
     bar(g, 96, 894, 676, W_THIN)
     pie(g, 300, 480, 600, 640, W_SEC)
@@ -810,7 +810,7 @@ def uni4E57() -> Glyph:
       8 撇   pie(137, 86, 464, 349, 92)
       9 捺   na(519, 96, 861, 347, 92)
     """
-    g = Glyph("uni4E57", advance=1000, unicode=0x4E57, note="乗")
+    g = Glyph("uni4E57", advance=1000, unicode=0x4E57, note="乗：乗")
     pie(g, 288, 701, 633, 807, W_SEC)
     bar(g, 205, 783, 622, W_THIN)
     bar(g, 113, 861, 486, W_THIN)
@@ -837,7 +837,7 @@ def uni5E97() -> Glyph:
       7 口横折 hbar(380, 806, 262, 84) + vbar(760, 76, 262, 92)
       8 口一  hbar(416, 760, 54, 84)
     """
-    g = Glyph("uni5E97", advance=1000, unicode=0x5E97, note="店 广+占")
+    g = Glyph("uni5E97", advance=1000, unicode=0x5E97, note="店：店广 + 占")
     tick(g, 532, 678, 801, W_THIN)
     bar(g, 221, 845, 672, W_THIN)
     pie(g, 113, 81, 265, 644, W_MAIN)
@@ -862,7 +862,7 @@ def uni8FF0() -> Glyph:
       5 丶   dot(751, 731, 98, 82)
       6 辶点+折+払（part_ninkyou）
     """
-    g = Glyph("uni8FF0", advance=1000, unicode=0x8FF0, note="述 术+辶")
+    g = Glyph("uni8FF0", advance=1000, unicode=0x8FF0, note="述：述术 + 辶")
     bar(g, 371, 798, 602, W_THIN)
     vbar(g, 580, 207, 779, W_MAIN)
     pie(g, 345, 245, 466, 500, W_SEC)
@@ -885,7 +885,7 @@ def uni5DDE() -> Glyph:
       5 丶  dot(678, 461, 81, 124)
       6 丨  vbar(827, 46, 747, 96)
     """
-    g = Glyph("uni5DDE", advance=1000, unicode=0x5DDE, note="州")
+    g = Glyph("uni5DDE", advance=1000, unicode=0x5DDE, note="州：州")
     g.dot(138, 448, w=55, h=136, slant=0)
     pie(g, 104, 86, 276, 712, W_SEC)
     g.dot(406, 453, w=66, h=109, slant=0)
@@ -909,7 +909,7 @@ def uni6B66() -> Glyph:
       7 斜钩 na(517, 40, 890, 740, 96) + 上钩
       8 丶   dot(720, 697, 106, 83)
     """
-    g = Glyph("uni6B66", advance=1000, unicode=0x6B66, note="武")
+    g = Glyph("uni6B66", advance=1000, unicode=0x6B66, note="武：武")
     bar(g, 200, 425, 637, W_THIN)
     bar(g, 116, 863, 523, W_THIN)
     vbar(g, 367, 152, 447, W_MAIN)
@@ -935,7 +935,7 @@ def uni58F0() -> Glyph:
       6 一   hbar(297, 704, 321, 84)
       7 撇   pie(154, 29, 303, 444, 96)
     """
-    g = Glyph("uni58F0", advance=1000, unicode=0x58F0, note="声 士+ヨ+撇")
+    g = Glyph("uni58F0", advance=1000, unicode=0x58F0, note="声：声士 + ヨ + 撇")
     bar(g, 195, 795, 701, W_THIN)
     vbar(g, 491, 571, 811, W_MAIN)
     bar(g, 266, 772, 566, W_THIN)
@@ -961,7 +961,7 @@ def uni5FF5() -> Glyph:
       7 心中点 dot(503, 218, 65, 63)
       8 心右点 dot(796, 237, 75, 94)
     """
-    g = Glyph("uni5FF5", advance=1000, unicode=0x5FF5, note="念 今+心")
+    g = Glyph("uni5FF5", advance=1000, unicode=0x5FF5, note="念：念今 + 心")
     pie(g, 111, 448, 478, 811, W_SEC)
     na(g, 480, 496, 901, 781, W_SEC)
     bar(g, 384, 603, 567, W_THIN)
@@ -992,7 +992,7 @@ def uni5F85() -> Glyph:
       8 寸竖钩 vbar(690, 0, 473, 96) + 左钩
       9 寸丶   dot(535, 220, 80, 94)
     """
-    g = Glyph("uni5F85", advance=1000, unicode=0x5F85, note="待 彳+寺")
+    g = Glyph("uni5F85", advance=1000, unicode=0x5F85, note="待：待彳 + 寺")
     pie(g, 124, 601, 316, 764, W_THIN)
     pie(g, 84, 322, 320, 606, W_SEC)
     vbar(g, 231, 27, 433, W_MAIN)

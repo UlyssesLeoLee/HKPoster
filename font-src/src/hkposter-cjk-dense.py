@@ -59,7 +59,7 @@ def glyph_long() -> Glyph:
         横 2 与横 3 之间加一个竖向节点（对应字形里的「コ」形），
         底横最长并向右出钩。
     """
-    g = Glyph("uni9F8D", advance=1000, unicode=0x9F8D, note="龍（Wave 0 高密字）")
+    g = Glyph("uni9F8D", advance=1000, unicode=0x9F8D, note="龍：Wave 0 高密字")
 
     # ---- 左半：立 ----
     g.dot(240, 772, w=88, h=96, slant=0)  # 立的点
@@ -105,7 +105,7 @@ def glyph_yi() -> Glyph:
       取舍：手的横与戈的横同属长横层，若都贴在一起会糊，故上下错开 100 单位；
       戈的撇用 76 做局部减重，使斜钩与撇的交叉处留出白口。
     """
-    g = Glyph("uni7FA9", advance=1000, unicode=0x7FA9, note="義（Wave 0 高密字）")
+    g = Glyph("uni7FA9", advance=1000, unicode=0x7FA9, note="義：義（Wave0高密字）")
 
     # ---- 羊 ----
     g.dot(320, 772, w=88, h=96, slant=-14)  # 丷 左
@@ -150,7 +150,7 @@ def glyph_jing() -> Glyph:
     上部敬用 76–84：艹的竖 84，勹与攵的横 76，
     保证「艹 / 句 / 攵」三块之间还能看到白。
     """
-    g = Glyph("uni8B66", advance=1000, unicode=0x8B66, note="警（Wave 0 高密字）")
+    g = Glyph("uni8B66", advance=1000, unicode=0x8B66, note="警：警（Wave0高密字）")
 
     # ---- 敬：苟 ----
     g.hbar(90, 420, 772, weight=W_LIGHT)  # 艹的横
@@ -198,7 +198,7 @@ def glyph_ai() -> Glyph:
     夂的长捺是全字唯一的出气口，故取 96 主笔画，
     让它把墨量拉到与 龍 / 警 同档，避免家族墨量率离散。
     """
-    g = Glyph("uni611B", advance=1000, unicode=0x611B, note="愛（Wave 0 高密字）")
+    g = Glyph("uni611B", advance=1000, unicode=0x611B, note="愛：愛（Wave0高密字）")
 
     # ---- 爫 ----
     g.diag(770, 805, 180, 715, weight=W_THIN)  # 爫的长撇
@@ -239,7 +239,7 @@ def glyph_wu() -> Glyph:
         绝不会连成横画。
     墨量靠竖与横的 92 主重量拉齐家族中位。
     """
-    g = Glyph("uni7121", advance=1000, unicode=0x7121, note="無（Wave 0 高密字）")
+    g = Glyph("uni7121", advance=1000, unicode=0x7121, note="無：無（Wave0高密字）")
 
     g.diag(290, 790, 205, 740, weight=W_THIN)  # 顶部的短撇
     g.hbar(140, 810, 680, weight=W_SEC)  # 上横
@@ -271,7 +271,7 @@ def glyph_dao() -> Glyph:
     取舍：目的横竖用 84（细横杠）而丷与首的一用 92，
     使包围结构的"框"与"内容"有对比（GLY-001）。
     """
-    g = Glyph("uni9053", advance=1000, unicode=0x9053, note="道（Wave 0 高密字）")
+    g = Glyph("uni9053", advance=1000, unicode=0x9053, note="道：道（Wave0高密字）")
 
     # ---- 首 ----
     g.dot(340, 770, w=84, h=96, slant=-16)  # 丷 左

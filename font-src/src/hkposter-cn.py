@@ -70,7 +70,7 @@ def glyph_long() -> Glyph:
         两者与顶横、乚 的竖都留 25 单位以上白口，不会黏成块；
       * 乚 的弯用直角（竖直接落到底横），不用斜折，避免出现台阶。
     """
-    g = Glyph("uni9F99", advance=1000, unicode=0x9F99, note="龙（Wave 1 简体中文）")
+    g = Glyph("uni9F99", advance=1000, unicode=0x9F99, note="龙：Wave 1 简体中文")
 
     g.hbar(170, 810, 690, weight=W_MAIN)  # 顶横（一）
     g.diag(300, 780, 110, 25, weight=W_SEC)  # 长撇（冲出左下）
@@ -106,7 +106,7 @@ def glyph_yi() -> Glyph:
         已知取舍：本字墨量率必然低于家族中位数（3 笔字的上限），
         与繁体的 火 同属"轻字"档，见 check_glyphs 的 WARN 说明。
     """
-    g = Glyph("uni4E49", advance=1000, unicode=0x4E49, note="义（Wave 1 简体中文）")
+    g = Glyph("uni4E49", advance=1000, unicode=0x4E49, note="义：Wave 1 简体中文")
 
     g.dot(430, 740, w=130, h=160, slant=22)  # 顶上的大点
     g.diag(660, 655, 90, 40, weight=W_MAIN)  # 乂的撇
@@ -136,7 +136,7 @@ def glyph_ai() -> Glyph:
         两端出气，左下与右下同时打开，墨迹最低点不低于 -2；
       * 友 的「一」只用 100，避免与 冖 的横黏成两条平行黑带。
     """
-    g = Glyph("uni7231", advance=1000, unicode=0x7231, note="爱（Wave 1 简体中文）")
+    g = Glyph("uni7231", advance=1000, unicode=0x7231, note="爱：Wave 1 简体中文")
 
     # ---- 爫 ----
     g.diag(220, 750, 730, 776, weight=W_THIN)  # 爫的撇
@@ -178,7 +178,7 @@ def glyph_wu() -> Glyph:
         右侧留白口 ≥ 250 单位，保证 儿 的两笔不并行成「门」；
       * 乚 的底横与竖成直角，钩向右上回挑，不做斜折台阶。
     """
-    g = Glyph("uni65E0", advance=1000, unicode=0x65E0, note="无（Wave 1 简体中文）")
+    g = Glyph("uni65E0", advance=1000, unicode=0x65E0, note="无：Wave 1 简体中文")
 
     g.hbar(220, 780, 700, weight=W_MAIN)  # 上横（一）
     g.hbar(60, 880, 470, weight=W_MAIN)  # 下横（一）
@@ -210,7 +210,7 @@ def glyph_feng() -> Glyph:
         整个下半部仍然通透，不会挤成一块黑；
       * 内乂用 108 主权重，几的框用 108，保证"框"与"内容"都有存在感。
     """
-    g = Glyph("uni98CE", advance=1000, unicode=0x98CE, note="风（Wave 1 简体中文）")
+    g = Glyph("uni98CE", advance=1000, unicode=0x98CE, note="风：Wave 1 简体中文")
 
     # ---- 几 ----
     g.diag(240, 790, 140, 50, weight=W_MAIN)  # 几的撇
@@ -246,7 +246,7 @@ def glyph_dian() -> Glyph:
         与 電 的"电"钩同向，保证混排时右下重心一致；
       * 钩用直角弯（竖直接落到底横），不做斜折台阶。
     """
-    g = Glyph("uni7535", advance=1000, unicode=0x7535, note="电（Wave 1 简体中文）")
+    g = Glyph("uni7535", advance=1000, unicode=0x7535, note="电：Wave 1 简体中文")
 
     # ---- 日 ----
     g.hbar(120, 760, 700, weight=W_MAIN)  # 日的顶横
@@ -281,7 +281,7 @@ def glyph_ji() -> Glyph:
       * 底横落在 y 70（墨迹 20..120），墨迹最低点 ≈ 20，与繁体 擊 的
         底部重量分布一致。
     """
-    g = Glyph("uni51FB", advance=1000, unicode=0x51FB, note="击（Wave 1 简体中文）")
+    g = Glyph("uni51FB", advance=1000, unicode=0x51FB, note="击：Wave 1 简体中文")
 
     g.hbar(240, 760, 720, weight=W_MAIN)  # 上横（一）
     g.hbar(80, 920, 520, weight=W_MAIN)  # 下横（一）
@@ -314,7 +314,7 @@ def glyph_jian() -> Glyph:
       * 日 的右缘（746）与折竖的左缘（816）之间留 70 单位，
         门 内不会读成「闷」。
     """
-    g = Glyph("uni95F4", advance=1000, unicode=0x95F4, note="间（Wave 1 简体中文）")
+    g = Glyph("uni95F4", advance=1000, unicode=0x95F4, note="间：Wave 1 简体中文")
 
     # ---- 门 ----
     g.dot(130, 785, w=W_DOT, h=100, slant=22)  # 门的点

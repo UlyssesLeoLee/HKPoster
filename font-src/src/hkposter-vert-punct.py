@@ -241,14 +241,14 @@ def fw_prolonged_sound_mark() -> Glyph:
     长度取 820（= 字面框高度），这样竖排形态是同一根杠的精确 90° 旋转，
     竖起来正好贯穿一个字面高度。
     """
-    g = Glyph("uni30FC", advance=CJK_ADV, unicode=0x30FC, note="ー 长音符（横排）")
+    g = Glyph("uni30FC", advance=CJK_ADV, unicode=0x30FC, note="ー：ー 长音符（横排）")
     g.hbar(90, 910, 388, weight=W_THIN)
     return g
 
 
 def fw_wave_dash() -> Glyph:
     """〜 U+301C 波浪号（横排）：一条正弦波带。"""
-    g = Glyph("uni301C", advance=CJK_ADV, unicode=0x301C, note="〜 波浪号（横排）")
+    g = Glyph("uni301C", advance=CJK_ADV, unicode=0x301C, note="〜：波浪号")
     wave_ribbon(g, x0=90, x1=910, y_mid=388, amp=58, weight=W_THIN)
     return g
 

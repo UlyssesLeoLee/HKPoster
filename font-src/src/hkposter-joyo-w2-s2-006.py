@@ -164,7 +164,7 @@ def g_zhu() -> Glyph:
     部件分区：且 x 60..390；力 x 430..940。
     """
     g = Glyph("uni52A9", advance=1000, unicode=0x52A9,
-              note="助 7画 ⿰且力：且(5)+力(2)")
+              note="助：助7画⿰且力：且(5) + 力(2)")
     v_at(g, 148, 820, 0, W_THIN)
     v_at(g, 342, 820, 0, W_THIN)
     h_top(g, 102, 388, W_THIN)
@@ -181,7 +181,7 @@ def g_rou() -> Glyph:
     分区：⺍ y 650..790；冖 y 560..730；力 y 40..520。
     """
     g = Glyph("uni52B4", advance=1000, unicode=0x52B4,
-              note="労 7画 ⿱⺍冖力：ツ(3)+冖(2)+力(2)")
+              note="労：労7画⿱⺍冖力：ツ(3) + 冖(2) + 力(2)")
     g.diag(250, 790, 205, 700, weight=W_SEC)
     g.diag(470, 790, 425, 700, weight=W_SEC)
     g.diag(870, 770, 700, 700, weight=W_SEC)
@@ -198,7 +198,7 @@ def g_rei() -> Glyph:
     分区：亻 x 60..300；歹 x 330..640；刂 x 660..940。
     """
     g = Glyph("uni4F8B", advance=1000, unicode=0x4F8B,
-              note="例 8画 ⿰亻歹刂：亻(2)+歹(4)+刂(2)")
+              note="例：例8画⿰亻歹刂：亻(2) + 歹(4) + 刂(2)")
     jin(g)
     h_at(g, 370, 640, 820, W_MAIN)         # 歹 的横
     g.diag(480, 740, 370, 470, weight=W_MAIN)
@@ -217,7 +217,7 @@ def g_sou() -> Glyph:
     笔画少的字用满 96 权重。
     """
     g = Glyph("uni65E9", advance=1000, unicode=0x65E9,
-              note="早 6画 ⿱日十：日(4)+十(2)")
+              note="早：早6画⿱日十：日(4) + 十(2)")
     sun(g, 290, 710, 400, 820, W_MAIN, inner=1)
     h_at(g, 140, 860, 340, W_MAIN)
     v_at(g, 500, 380, 0, W_MAIN)
@@ -229,7 +229,7 @@ def g_ei() -> Glyph:
     日(4)：左部外框 x 60..360 / y 400..820；央(5)：ou() 落在 x0=430。
     """
     g = Glyph("uni6620", advance=1000, unicode=0x6620,
-              note="映 9画 ⿰日央：日(4)+央(5)")
+              note="映：映9画⿰日央：日(4) + 央(5)")
     sun(g, 60, 360, 400, 820, W_SEC, inner=1)
     ou(g, 430, 560, 276)
     return g
@@ -241,7 +241,7 @@ def g_gen() -> Glyph:
     分区：阝 x 60..320；艮 x 330..940。
     """
     g = Glyph("uni9650", advance=1000, unicode=0x9650,
-              note="限 9画 ⿰阝艮：阝(2)+艮(6)")
+              note="限：限9画⿰阝艮：阝(2) + 艮(6)")
     v_at(g, 110, 820, 0, W_THIN)             # 阝 的竖
     h_at(g, 64, 300, 820, W_THIN)           # 阝 的旗
     g.diag(300, 780, 200, 660, weight=W_THIN)
@@ -259,7 +259,7 @@ def g_tsui() -> Glyph:
     分区：𠂤 x 480..780 / y 216..790；⻌ 占左侧与底部。
     """
     g = Glyph("uni8FFD", advance=1000, unicode=0x8FFD,
-              note="追 8画 ⿻⻌𠂤：⻌(2)+𠂤(6)")
+              note="追：追8画⿻⻌𠂤：⻌(2) + 𠂤(6)")
     mawari(g)
     g.diag(590, 780, 500, 690, weight=W_SEC)
     sun(g, 480, 780, 240, 700, W_THIN, inner=2)
@@ -272,7 +272,7 @@ def g_den() -> Glyph:
     分区：亻 x 60..300；云 x 340..940。
     """
     g = Glyph("uni4F1D", advance=1000, unicode=0x4F1D,
-              note="伝 6画 ⿰亻云：亻(2)+云(4)")
+              note="伝：伝6画⿰亻云：亻(2) + 云(4)")
     jin(g)
     h_at(g, 420, 900, 720, W_MAIN)
     h_at(g, 370, 860, 570, W_MAIN)
@@ -288,7 +288,7 @@ def g_kei() -> Glyph:
     分区：开 x 60..500；彡 x 640..920。
     """
     g = Glyph("uni5F62", advance=1000, unicode=0x5F62,
-              note="形 7画 ⿰开彡：开(4)+彡(3)")
+              note="形：形7画⿰开彡：开(4) + 彡(3)")
     h_top(g, 80, 480, W_MAIN)
     h_at(g, 60, 500, 620, W_MAIN)
     v_at(g, 300, 800, 0, W_MAIN)
@@ -303,7 +303,7 @@ def g_ou() -> Glyph:
     分区：区 x 60..430；欠 x 480..940。
     """
     g = Glyph("uni6B27", advance=1000, unicode=0x6B27,
-              note="欧 8画 ⿰区欠：区(4)+欠(4)")
+              note="欧：欧8画⿰区欠：区(4) + 欠(4)")
     h_top(g, 60, 430, W_MAIN)
     v_at(g, 108, 820, 0, W_MAIN)
     h_base(g, 60, 430, W_MAIN)
@@ -323,7 +323,7 @@ def g_tan() -> Glyph:
     分区：扌 x 60..310；旦 x 340..940。
     """
     g = Glyph("uni62C5", advance=1000, unicode=0x62C5,
-              note="担 8画 ⿰扌旦：扌(3)+旦(5)")
+              note="担：担8画⿰扌旦：扌(3) + 旦(5)")
     tehen(g)
     sun(g, 420, 860, 400, 730, W_SEC, inner=1)
     h_base(g, 340, 940, W_MAIN)
@@ -336,7 +336,7 @@ def g_ko() -> Glyph:
     分区：女 x 60..440；子 x 500..940。
     """
     g = Glyph("uni597D", advance=1000, unicode=0x597D,
-              note="好 6画 ⿰女子：女(3)+子(3)")
+              note="好：好6画⿰女子：女(3) + 子(3)")
     g.diag(260, 790, 130, 430, weight=W_MAIN)
     g.diag(130, 430, 380, 70, weight=W_MAIN)
     g.diag(400, 780, 180, 60, weight=W_MAIN)
@@ -355,7 +355,7 @@ def g_tai() -> Glyph:
     分区：艮 x 330..940 / y 272..820；辶 占左下与底。
     """
     g = Glyph("uni9000", advance=1000, unicode=0x9000,
-              note="退 8画 ⿻艮辶：艮(6)+辶(2)")
+              note="退：退8画⿻艮辶：艮(6) + 辶(2)")
     sun(g, 334, 850, 400, 820, W_THIN, inner=2)
     h_at(g, 426, 840, 374, W_THIN)
     g.diag(470, 330, 400, 230, weight=W_THIN)
@@ -370,7 +370,7 @@ def g_zou() -> Glyph:
     分区：告 x 320..920 / y 192..820；辶 占左下与底。
     """
     g = Glyph("uni9020", advance=1000, unicode=0x9020,
-              note="造 9画 ⿻告辶：告(7)+辶(2)")
+              note="造：造9画⿻告辶：告(7) + 辶(2)")
     g.diag(430, 780, 340, 700, weight=W_SEC)
     h_at(g, 360, 880, 788, W_THIN)
     v_at(g, 600, 788, 590, W_THIN)
@@ -385,7 +385,7 @@ def g_ei_boku() -> Glyph:
     艹(3)：kusanmuri()；央(5)：ou() 落在 x0=250。
     """
     g = Glyph("uni82F1", advance=1000, unicode=0x82F1,
-              note="英 8画 ⿱艹央：艹(3)+央(5)")
+              note="英：英8画⿱艹央：艹(3) + 央(5)")
     kusanmuri(g)
     ou(g, 250, 560, 276)
     return g
@@ -397,7 +397,7 @@ def g_gi() -> Glyph:
     分区：扌 x 60..310；支 x 340..940。
     """
     g = Glyph("uni6280", advance=1000, unicode=0x6280,
-              note="技 7画 ⿰扌支：扌(3)+支(4)")
+              note="技：技7画⿰扌支：扌(3) + 支(4)")
     tehen(g)
     h_at(g, 380, 900, 700, W_MAIN)
     v_at(g, 640, 790, 520, W_MAIN)
@@ -413,7 +413,7 @@ def g_tei() -> Glyph:
     分区：亻 x 60..300；氐 x 330..940。
     """
     g = Glyph("uni4F4E", advance=1000, unicode=0x4F4E,
-              note="低 7画 ⿰亻氐：亻(2)+氐(5)")
+              note="低：低7画⿰亻氐：亻(2) + 氐(5)")
     jin(g)
     g.diag(560, 780, 420, 690, weight=W_SEC)
     h_at(g, 430, 870, 680, W_MAIN)
@@ -429,7 +429,7 @@ def g_mai() -> Glyph:
     分区：𠂉 y 690..790；母 y 100..600。
     """
     g = Glyph("uni6BCE", advance=1000, unicode=0x6BCE,
-              note="毎 6画 ⿱𠂉母：𠂉(2)+母(4)")
+              note="毎：毎6画⿱𠂉母：𠂉(2) + 母(4)")
     g.diag(370, 780, 280, 700, weight=W_THIN)
     h_at(g, 290, 790, 720, W_THIN)
     sun(g, 240, 760, 0, 600, W_THIN, inner=0)
@@ -445,7 +445,7 @@ def g_i() -> Glyph:
     分区：匚 x 60..400；矢 x 190..840。
     """
     g = Glyph("uni533B", advance=1000, unicode=0x533B,
-              note="医 7画 ⿵匚矢：匚(2)+矢(5)")
+              note="医：医7画⿵匚矢：匚(2) + 矢(5)")
     h_top(g, 60, 400, W_MAIN)
     v_at(g, 108, 820, 0, W_MAIN)
     h_base(g, 60, 400, W_MAIN)
@@ -463,7 +463,7 @@ def g_shi() -> Glyph:
     分区：次 y 430..790；女 y 0..380。
     """
     g = Glyph("uni59FF", advance=1000, unicode=0x59FF,
-              note="姿 9画 ⿱次女：次(6)+女(3)")
+              note="姿：姿9画⿱次女：次(6) + 女(3)")
     g.dot(150, 700, w=W_DOT, h=100, slant=-14)
     g.diag(90, 500, 240, 570, weight=W_SEC)
     g.diag(430, 780, 350, 690, weight=W_SEC)
@@ -484,7 +484,7 @@ def g_mi() -> Glyph:
     分区：口 x 60..320 / y 292..820；未 x 400..920。
     """
     g = Glyph("uni5473", advance=1000, unicode=0x5473,
-              note="味 8画 ⿰口未：口(3)+未(5)")
+              note="味：味8画⿰口未：口(3) + 未(5)")
     kuchi(g, 60, 320, 292, 820, W_THIN)
     h_at(g, 480, 860, 720, W_SEC)
     h_at(g, 400, 920, 580, W_MAIN)
@@ -503,7 +503,7 @@ def g_fu() -> Glyph:
     参照 M PLUS 1p Black「負」实测：貝部 3 个腔，腔高 34、宽 440。
     """
     g = Glyph("uni8CA0", advance=1000, unicode=0x8CA0,
-              note="負 9画 ⿱⺈貝：⺈(2)+貝(7)")
+              note="負：負9画⿱⺈貝：⺈(2) + 貝(7)")
     g.diag(450, 780, 350, 690, weight=W_SEC)
     h_at(g, 360, 740, 736, W_SEC)
     g.diag(730, 690, 640, 600, weight=W_SEC)
@@ -519,7 +519,7 @@ def g_mon() -> Glyph:
     分区：左半 x 60..400；右半 x 600..940；中间留 200 通气。
     """
     g = Glyph("uni9580", advance=1000, unicode=0x9580,
-              note="門 8画：左右各 4 画（丨+横折+二横）")
+              note="門：門8画：左右各4画（丨 + 横折 + 二横）")
     v_at(g, 108, 820, 0, W_SEC)
     h_top(g, 60, 400, W_SEC)
     v_at(g, 352, 760, 280, W_THIN)
@@ -539,7 +539,7 @@ def g_mori() -> Glyph:
     分区：宀 y 628..790；寸 y 70..620。
     """
     g = Glyph("uni5B88", advance=1000, unicode=0x5B88,
-              note="守 6画 ⿱宀寸：宀(3)+寸(3)")
+              note="守：守6画⿱宀寸：宀(3) + 寸(3)")
     g.dot(500, 770, w=W_DOT, h=96, slant=0)
     v_at(g, 160, 790, 720, W_SEC)
     h_at(g, 140, 880, 720, W_MAIN)
@@ -557,7 +557,7 @@ def g_waku() -> Glyph:
     分区：艹 y 540..820；右 x 190..880 / y 0..560。
     """
     g = Glyph("uni82E5", advance=1000, unicode=0x82E5,
-              note="若 8画 ⿱艹右：艹(3)+右(5)")
+              note="若：若8画⿱艹右：艹(3) + 右(5)")
     kusanmuri(g)
     h_at(g, 240, 880, 560, W_THIN)
     g.diag(380, 540, 230, 260, weight=W_SEC)
@@ -571,7 +571,7 @@ def g_bi() -> Glyph:
     分区：羊 y 340..800；大 y 60..340。
     """
     g = Glyph("uni7F8E", advance=1000, unicode=0x7F8E,
-              note="美 9画 ⿱羊大：羊(6)+大(3)")
+              note="美：美9画⿱羊大：羊(6) + 大(3)")
     g.dot(340, 770, w=W_DOT, h=92, slant=-14)
     g.dot(660, 770, w=W_DOT, h=92, slant=14)
     h_at(g, 290, 710, 720, W_SEC)
@@ -590,7 +590,7 @@ def g_oka() -> Glyph:
     分区：冂 x 60..940；内部 x 284..716 / y 92..700。
     """
     g = Glyph("uni5CA1", advance=1000, unicode=0x5CA1,
-              note="岡 8画 ⿵冂(丷一山)：冂(2)+丷(2)+一(1)+山(3)")
+              note="岡：岡8画⿵冂(丷一山)：冂(2) + 丷(2) + 一(1) + 山(3)")
     h_top(g, 60, 940, W_MAIN)
     v_at(g, 108, 820, 0, W_SEC)
     v_at(g, 892, 820, 0, W_SEC)
@@ -610,7 +610,7 @@ def g_inochi() -> Glyph:
     分区：人 y 620..780；一 y 488..580；叩 x 180..760 / y 12..470。
     """
     g = Glyph("uni547D", advance=1000, unicode=0x547D,
-              note="命 8画 ⿱人一叩：人(2)+一(1)+口(3)+卩(2)")
+              note="命：命8画⿱人一叩：人(2) + 一(1) + 口(3) + 卩(2)")
     g.diag(500, 780, 290, 620, weight=W_MAIN)
     g.diag(500, 780, 710, 620, weight=W_MAIN)
     h_at(g, 280, 720, 580, W_MAIN)
@@ -627,7 +627,7 @@ def g_kan() -> Glyph:
     分区：今 y 430..780；口 x 280..720 / y 0..380。
     """
     g = Glyph("uni542B", advance=1000, unicode=0x542B,
-              note="含 7画 ⿱今口：今(4)+口(3)")
+              note="含：含7画⿱今口：今(4) + 口(3)")
     g.diag(500, 775, 300, 650, weight=W_SEC)
     g.diag(500, 775, 700, 650, weight=W_SEC)
     g.dot(500, 590, w=W_DOT, h=96, slant=0)
@@ -643,7 +643,7 @@ def g_matsu() -> Glyph:
     分区：木 x 60..430；公 x 460..940。
     """
     g = Glyph("uni677E", advance=1000, unicode=0x677E,
-              note="松 8画 ⿰木公：木(4)+公(4)")
+              note="松：松8画⿰木公：木(4) + 公(4)")
     h_at(g, 60, 430, 620, W_MAIN)
     v_at(g, 240, 820, 0, W_MAIN)
     g.diag(240, 580, 120, 60, weight=W_MAIN)
@@ -662,7 +662,7 @@ def g_hi() -> Glyph:
     分区：左竖 x390、右竖 x610；通栏 x 120..880。
     """
     g = Glyph("uni975E", advance=1000, unicode=0x975E,
-              note="非 8画：两竖 + 左右各三横")
+              note="非：非8画：两竖 + 左右各三横")
     v_at(g, 390, 820, 0, W_MAIN)
     v_at(g, 610, 820, 0, W_MAIN)
     h_at(g, 120, 438, 700, W_SEC)
@@ -678,7 +678,7 @@ def g_sa() -> Glyph:
     分区：亻 x 60..300；左 x 310..940。
     """
     g = Glyph("uni4F50", advance=1000, unicode=0x4F50,
-              note="佐 7画 ⿰亻左：亻(2)+左(5)")
+              note="佐：佐7画⿰亻左：亻(2) + 左(5)")
     jin(g)
     h_top(g, 400, 900, W_MAIN)
     g.diag(470, 790, 350, 580, weight=W_MAIN)

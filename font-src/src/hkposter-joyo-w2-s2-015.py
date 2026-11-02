@@ -158,7 +158,7 @@ def glyph_bi() -> Glyph:
       巾的上横 584..676，左竖 459..551、中竖 647..743、右竖 844..936，
       竖距 96 单位，内白充足（GLY-006）。
     """
-    g = Glyph("uni6016", advance=1000, unicode=0x6016, note="怖（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni6016", advance=1000, unicode=0x6016, note="怖：怖（Jōyōjoyo-w2-s2-015）")
 
     # ---- 忄 ----
     g.vbar(200, 770, 40, weight=W_MAIN)          # 忄的竖
@@ -187,7 +187,7 @@ def glyph_er() -> Glyph:
     横距 96–116 单位，内白宽 310 单位，是本批最干净的内白。
     右竖 (800) 越过底横下探到 y=30，左竖 (215) 止于底横，构成耳的固定识别特征。
     """
-    g = Glyph("uni8033", advance=1000, unicode=0x8033, note="耳（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni8033", advance=1000, unicode=0x8033, note="耳：耳（Jōyōjoyo-w2-s2-015）")
 
     g.hbar(120, 860, 760, weight=W_MAIN)         # 顶横
     g.vbar(215, 760, 140, weight=W_SEC)          # 左竖
@@ -209,7 +209,7 @@ def glyph_zhen() -> Glyph:
     㐱 = 人（撇捺自 (700,810) 向两侧张开）+ 彡（三撇，右上到左下依次下移）。
     9 画偏密，人部用 96、彡部降到 92，避免右上角糊成一块。
     """
-    g = Glyph("uni73CD", advance=1000, unicode=0x73CD, note="珍（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni73CD", advance=1000, unicode=0x73CD, note="珍：珍（Jōyōjoyo-w2-s2-015）")
 
     # ---- 王 ----
     g.hbar(120, 430, 730, weight=W_MAIN)         # 王的上横
@@ -236,7 +236,7 @@ def glyph_ke() -> Glyph:
     儿的两腿：左撇自 (400,300) 下探到基线，右腿是竖弯钩（竖 620 + 底横 620..880 + 上钩）。
     口为 84 细笔画，与十的 96 主笔画拉开层次；十的竖只到 y=640，不与口相接。
     """
-    g = Glyph("uni514B", advance=1000, unicode=0x514B, note="克（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni514B", advance=1000, unicode=0x514B, note="克：克（Jōyōjoyo-w2-s2-015）")
 
     # ---- 十 ----
     g.hbar(180, 820, 720, weight=W_MAIN)         # 十的横
@@ -267,7 +267,7 @@ def glyph_yue() -> Glyph:
       右竖 880；底横 180..920 最长。
     山：中竖 195 最高，左右竖 85 / 305 较短，底横 y 44..136。
     """
-    g = Glyph("uni5CB3", advance=1000, unicode=0x5CB3, note="岳（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5CB3", advance=1000, unicode=0x5CB3, note="岳：岳（Jōyōjoyo-w2-s2-015）")
 
     # ---- 丘 ----
     g.diag(430, 780, 255, 685, weight=W_SEC)     # 丘的首撇
@@ -295,7 +295,7 @@ def glyph_ju() -> Glyph:
     勹的横 y 714..806，钩竖 x=890；口 518..602 / 278..362，
     口内白高 156 单位、宽 218 单位，右上留白充足不粘连。
     """
-    g = Glyph("uni62D8", advance=1000, unicode=0x62D8, note="拘（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni62D8", advance=1000, unicode=0x62D8, note="拘：拘（Jōyōjoyo-w2-s2-015）")
 
     # ---- 扌 ----
     draw_hand(g)
@@ -324,7 +324,7 @@ def glyph_ran() -> Glyph:
     中部：两点竖排，上点 (520,560)、下点 (545,400)，均向左下倾 14 档（内部点）。
     右半：卩 = 横折钩（横 600..900 / 竖 890）+ 竖 700。
     """
-    g = Glyph("uni5375", advance=1000, unicode=0x5375, note="卵（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5375", advance=1000, unicode=0x5375, note="卵：卵（Jōyōjoyo-w2-s2-015）")
 
     # ---- 左半 ----
     g.diag(430, 800, 150, 250, weight=W_MAIN)    # 长撇（卯的首笔，扫到左下）
@@ -353,7 +353,7 @@ def glyph_kyo() -> Glyph:
     夹 = 一（顶横 673..767）+ 丷（两点 430 / 640，均向下张开）+ 一（中横）+ 撇捺。
     9 画密字：夹部的中横与两撇交点密集，故丷两点用 84、撇捺用 96 保主次。
     """
-    g = Glyph("uni72ED", advance=1000, unicode=0x72ED, note="狭（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni72ED", advance=1000, unicode=0x72ED, note="狭：狭（Jōyōjoyo-w2-s2-015）")
 
     # ---- 犭 ----
     draw_dog(g)
@@ -379,7 +379,7 @@ def glyph_taku() -> Glyph:
     卜用竖 + 右侧短横（点化），是卓的固定识别特征。
     日部四横全部 84，字腔 96 单位；下方十的横 220..780 最宽。
     """
-    g = Glyph("uni5353", advance=1000, unicode=0x5353, note="卓（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5353", advance=1000, unicode=0x5353, note="卓：卓（Jōyōjoyo-w2-s2-015）")
 
     # ---- 卜 ----
     g.vbar(500, CJK_TOP, 730, weight=W_MAIN)      # 卜的竖
@@ -408,7 +408,7 @@ def glyph_mushi() -> Glyph:
     口 240..760 / 394..686，中竖 500 贯穿至 120；
     底左的提自 (120,90) 升到 (430,150)，底右的点用 16 档（与「風」内的虫同档，GLY-004）。
     """
-    g = Glyph("uni866B", advance=1000, unicode=0x866B, note="虫（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni866B", advance=1000, unicode=0x866B, note="虫：虫（Jōyōjoyo-w2-s2-015）")
 
     g.hbar(230, 770, 650, weight=W_MAIN)         # 口的上横
     g.vbar(235, 650, 360, weight=W_MAIN)         # 口的左竖
@@ -431,7 +431,7 @@ def glyph_satsu() -> Glyph:
     巾：上横 470、左竖 255、右竖 615、中竖 435 落基线。
     刂：短竖 760（300..640）+ 长竖 900（60..740）带钩。
     """
-    g = Glyph("uni5237", advance=1000, unicode=0x5237, note="刷（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5237", advance=1000, unicode=0x5237, note="刷：刷（Jōyōjoyo-w2-s2-015）")
 
     # ---- 尸 ----
     g.hbar(120, 620, 760, weight=W_SEC)          # 尸的横
@@ -463,7 +463,7 @@ def glyph_ro() -> Glyph:
     户：顶部点用 −14 档（左下倾）、横 470..900、𠃌 的横 470..900 + 竖 890、
       撇自 (500,580) 斜下到 (440,60) 落基线。
     """
-    g = Glyph("uni7089", advance=1000, unicode=0x7089, note="炉（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni7089", advance=1000, unicode=0x7089, note="炉：炉（Jōyōjoyo-w2-s2-015）")
 
     # ---- 火 ----
     g.dot(150, 580, w=110, h=140, slant=26)      # 左上点
@@ -491,7 +491,7 @@ def glyph_moku() -> Glyph:
     攵：首撇 470..600、横 560..900、乂的撇 480..780、乂的捺 600..900，
       两腿交叉点在 (650,330) 附近，是 8 画里最容易糊的字，故撇用 92、捺用 96。
     """
-    g = Glyph("uni7267", advance=1000, unicode=0x7267, note="牧（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni7267", advance=1000, unicode=0x7267, note="牧：牧（Jōyōjoyo-w2-s2-015）")
 
     # ---- 牜 ----
     draw_horse(g)
@@ -514,7 +514,7 @@ def glyph_ki() -> Glyph:
     大部压扁：横 150..850（614..706），撇捺自 (520,720) 张开到 (130,480)/(900,470)。
     可部：一（150..940）+ 口（84 细笔画）+ 亅（竖 830 带钩）。
     """
-    g = Glyph("uni5947", advance=1000, unicode=0x5947, note="奇（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5947", advance=1000, unicode=0x5947, note="奇：奇（Jōyōjoyo-w2-s2-015）")
 
     # ---- 大 ----
     g.hbar(150, 850, 660, weight=W_SEC)          # 大的横
@@ -543,7 +543,7 @@ def glyph_haku() -> Glyph:
     日部四横 84 细笔画，字腔 346×196；撇与上横留 40 单位，不粘连。
     白比「拘」的句更窄，让 8 画的拍不至于闷成黑块。
     """
-    g = Glyph("uni62CD", advance=1000, unicode=0x62CD, note="拍（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni62CD", advance=1000, unicode=0x62CD, note="拍：拍（Jōyōjoyo-w2-s2-015）")
 
     # ---- 扌 ----
     draw_hand(g)
@@ -569,7 +569,7 @@ def glyph_hou() -> Glyph:
     包：勹（撇 620→440 + 横折钩 600..900）+ 巳（横折 + 中横 + 竖 + 底横）。
     9 画密字，包部内白被压缩，故巳部用 84 细笔画。
     """
-    g = Glyph("uni80DE", advance=1000, unicode=0x80DE, note="胞（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni80DE", advance=1000, unicode=0x80DE, note="胞：胞（Jōyōjoyo-w2-s2-015）")
 
     # ---- 月 ----
     draw_flesh(g)
@@ -598,7 +598,7 @@ def glyph_seki() -> Glyph:
       + 底横（380..940，最长）。
     丷两点一左一右分别 −14 / +14，是全批 丷 的统一处理（GLY-004）。
     """
-    g = Glyph("uni6CE3", advance=1000, unicode=0x6CE3, note="泣（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni6CE3", advance=1000, unicode=0x6CE3, note="泣：泣（Jōyōjoyo-w2-s2-015）")
 
     # ---- 氵 ----
     draw_water(g)
@@ -625,7 +625,7 @@ def glyph_jou() -> Glyph:
     2026-10-31 回修：𠂊的横（612..708）与彐上横（544..636）白口 −24 → 彐部三横下移并重排，
     腔各 24、𠂊与彐白口 26。
     """
-    g = Glyph("uni6D44", advance=1000, unicode=0x6D44, note="浄（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni6D44", advance=1000, unicode=0x6D44, note="浄：浄（Jōyōjoyo-w2-s2-015）")
 
     # ---- 氵 ----
     draw_water(g)
@@ -652,7 +652,7 @@ def glyph_botsu() -> Glyph:
     殳 = 几（撇 + 横折弯钩）+ 又（横 + 撇 + 捺）。
     又部的撇捺交点在 (620,320) 附近；撇用 84、捺用 96，主次分明。
     """
-    g = Glyph("uni6CA1", advance=1000, unicode=0x6CA1, note="没（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni6CA1", advance=1000, unicode=0x6CA1, note="没：没（Jōyōjoyo-w2-s2-015）")
 
     # ---- 氵 ----
     draw_water(g)
@@ -678,7 +678,7 @@ def glyph_hai() -> Glyph:
     巿 = 一（430..940）+ 巾（上横 480..900 / 左竖 485 / 右竖 895 / 中竖 690 落基线）。
     中竖 690 与左竖 485 之间的白口 159 单位，右竖 895 与中竖之间 159 单位。
     """
-    g = Glyph("uni80BA", advance=1000, unicode=0x80BA, note="肺（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni80BA", advance=1000, unicode=0x80BA, note="肺：肺（Jōyōjoyo-w2-s2-015）")
 
     # ---- 月 ----
     draw_flesh(g)
@@ -703,7 +703,7 @@ def glyph_teki() -> Glyph:
     卜用竖 + 短横（点化），与「卓」的卜同款（GLY-004）。
     貝部四横 84 细笔画（三道内白 80–90 单位），底横 84，撇 92，右侧点用 16 档。
     """
-    g = Glyph("uni8C9E", advance=1000, unicode=0x8C9E, note="貞（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni8C9E", advance=1000, unicode=0x8C9E, note="貞：貞（Jōyōjoyo-w2-s2-015）")
 
     # ---- 卜 ----
     g.vbar(490, 810, 660, weight=W_MAIN)         # 卜的竖
@@ -731,7 +731,7 @@ def glyph_eda() -> Glyph:
     木字旁的捺变点（14 档），与「栃」的木字旁同款（GLY-004）。
     支 = 十 + 又，与「岐」的支同款（GLY-004）。
     """
-    g = Glyph("uni679D", advance=1000, unicode=0x679D, note="枝（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni679D", advance=1000, unicode=0x679D, note="枝：枝（Jōyōjoyo-w2-s2-015）")
 
     # ---- 木 ----
     draw_tree(g)
@@ -751,7 +751,7 @@ def glyph_nin() -> Glyph:
     女：撇点拆成两段斜画成「く」形，撇自 (330,700) 落到 (110,200)，横 60..430。
     壬：首撇 (700,800)→(540,740)、长横 490..930、竖 700、底横 560..900。
     """
-    g = Glyph("uni598A", advance=1000, unicode=0x598A, note="妊（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni598A", advance=1000, unicode=0x598A, note="妊：妊（Jōyōjoyo-w2-s2-015）")
 
     # ---- 女 ----
     draw_female(g)
@@ -775,7 +775,7 @@ def glyph_doku() -> Glyph:
     母：横折（顶横 250..780 + 右竖 775）、竖折（左竖 255 + 底横 255..780）、
       中间长横 150..850、贯穿的竖 520、两点（内点 −14 档）。
     """
-    g = Glyph("uni6BD2", advance=1000, unicode=0x6BD2, note="毒（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni6BD2", advance=1000, unicode=0x6BD2, note="毒：毒（Jōyōjoyo-w2-s2-015）")
 
     # ---- 龶 ----
     g.hbar(230, 770, 760, weight=W_SEC)          # 短横
@@ -804,7 +804,7 @@ def glyph_ou() -> Glyph:
     主 = 竖点（0 档）+ 三横 + 竖：点 660、横 430..900、横 430..900、底横 380..940。
     三横间距 170 / 150 单位，是本批最疏朗的右部件。
     """
-    g = Glyph("uni5F80", advance=1000, unicode=0x5F80, note="往（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5F80", advance=1000, unicode=0x5F80, note="往：往（Jōyōjoyo-w2-s2-015）")
 
     # ---- 彳 ----
     draw_step(g)
@@ -828,7 +828,7 @@ def glyph_mame() -> Glyph:
       + 丷（两点 430 / 570）+ 底横 90..910（42..138）。
     丷两点一左一右分别 −14 / +14，与全批 丷 一致（GLY-004）。
     """
-    g = Glyph("uni8C46", advance=1000, unicode=0x8C46, note="豆（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni8C46", advance=1000, unicode=0x8C46, note="豆：豆（Jōyōjoyo-w2-s2-015）")
 
     g.hbar(120, 880, 760, weight=W_MAIN)         # 顶横
     g.hbar(250, 750, 590, weight=W_SEC)          # 口的上横
@@ -851,7 +851,7 @@ def glyph_kyou() -> Glyph:
     王为全字形（非偏旁形）：上横 450..870、中横 480..840、底横 400..940 最长、竖 660。
     与「珍」的王字旁比，本字的王居中且横距更大。
     """
-    g = Glyph("uni72C2", advance=1000, unicode=0x72C2, note="狂（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni72C2", advance=1000, unicode=0x72C2, note="狂：狂（Jōyōjoyo-w2-s2-015）")
 
     # ---- 犭 ----
     draw_dog(g)
@@ -875,7 +875,7 @@ def glyph_kyou2() -> Glyph:
     丩 = 短竖 520（60..470）+ 底横 520..800 + 长竖 790（60..790）。
     6 画疏字，主笔画全部 96。
     """
-    g = Glyph("uni53EB", advance=1000, unicode=0x53EB, note="叫（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni53EB", advance=1000, unicode=0x53EB, note="叫：叫（Jōyōjoyo-w2-s2-015）")
 
     # ---- 口 ----
     g.hbar(80, 380, 640, weight=W_SEC)           # 口的上横
@@ -902,7 +902,7 @@ def glyph_tochi() -> Glyph:
       （横 590..900 / 竖 890 带钩）。
     9 画密字：万部的横叠（顶横与中横）间距仅 88 单位，故中横降到 84。
     """
-    g = Glyph("uni6803", advance=1000, unicode=0x6803, note="栃（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni6803", advance=1000, unicode=0x6803, note="栃：栃（Jōyōjoyo-w2-s2-015）")
 
     # ---- 木 ----
     draw_tree(g)
@@ -926,7 +926,7 @@ def glyph_aki() -> Glyph:
     山为偏旁形：中竖 195 最高，左右竖 85 / 305，底横 y 44..136。
     支与「枝」同款（GLY-004）。
     """
-    g = Glyph("uni5C90", advance=1000, unicode=0x5C90, note="岐（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5C90", advance=1000, unicode=0x5C90, note="岐：岐（Jōyōjoyo-w2-s2-015）")
 
     # ---- 山 ----
     draw_mountain(g)
@@ -947,7 +947,7 @@ def glyph_kutsu() -> Glyph:
     出 = 5 画：上竖折（左竖 330 + 中横 330..710）+ 中竖 520 + 上右竖 705
       + 下竖折（左竖 290 + 底横 290..750）+ 下右竖 745。
     """
-    g = Glyph("uni5C48", advance=1000, unicode=0x5C48, note="屈（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5C48", advance=1000, unicode=0x5C48, note="屈：屈（Jōyōjoyo-w2-s2-015）")
 
     # ---- 尸 ----
     g.hbar(120, 880, 760, weight=W_SEC)          # 尸的横
@@ -976,7 +976,7 @@ def glyph_kei() -> Glyph:
     圣 = 又（横 450..880 + 撇 870→500 + 捺 560→880）+ 土（横 450..900 + 竖 675 + 底横 400..940）。
     又的两腿在 (620,500) 附近交叉，土的竖落到底横上，互不粘连。
     """
-    g = Glyph("uni5F84", advance=1000, unicode=0x5F84, note="径（Jōyō joyo-w2-s2-015）")
+    g = Glyph("uni5F84", advance=1000, unicode=0x5F84, note="径：径（Jōyōjoyo-w2-s2-015）")
 
     # ---- 彳 ----
     draw_step(g)

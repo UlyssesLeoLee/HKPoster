@@ -150,28 +150,28 @@ def comma_mark(
 # --------------------------------------------------------------------------
 def fw_ideographic_full_stop() -> Glyph:
     """。U+3002 全角句号：字面左下 1/3 的实心圆点。"""
-    g = Glyph("uni3002", advance=CJK_ADV, unicode=0x3002, note="。全角句号")
+    g = Glyph("uni3002", advance=CJK_ADV, unicode=0x3002, note="。：全角句号")
     disc(g, 250, 100, 90)
     return g
 
 
 def fw_comma() -> Glyph:
     """，U+FF0C 全角逗号：字面左下 1/3，圆头 + 左下出锋尾。"""
-    g = Glyph("uniFF0C", advance=CJK_ADV, unicode=0xFF0C, note="，全角逗号")
+    g = Glyph("uniFF0C", advance=CJK_ADV, unicode=0xFF0C, note="，：全角逗号")
     comma_mark(g, 272, 150, 82, tip=(176, -40), w_root=88, w_tip=18)
     return g
 
 
 def fw_ideographic_comma() -> Glyph:
     """、U+3001 顿号：左下的上重下锐斜笔（起笔顿、收笔出锋）。"""
-    g = Glyph("uni3001", advance=CJK_ADV, unicode=0x3001, note="、顿号")
+    g = Glyph("uni3001", advance=CJK_ADV, unicode=0x3001, note="、：顿号")
     wedge(g, (318, 262), (172, 38), W_MAIN, 26)
     return g
 
 
 def fw_exclamation() -> Glyph:
     """！U+FF01 全角叹号：中线竖笔 + 独立圆点。"""
-    g = Glyph("uniFF01", advance=CJK_ADV, unicode=0xFF01, note="！全角叹号")
+    g = Glyph("uniFF01", advance=CJK_ADV, unicode=0xFF01, note="！：全角叹号")
     g.vbar(MID, 250, 760, weight=W_MAIN)
     disc(g, MID, 55, 55)
     return g
@@ -179,7 +179,7 @@ def fw_exclamation() -> Glyph:
 
 def fw_question() -> Glyph:
     """？U+FF1F 全角问号：开口环带成钩，竖笔成干，底部独立圆点。"""
-    g = Glyph("uniFF1F", advance=CJK_ADV, unicode=0xFF1F, note="？全角问号")
+    g = Glyph("uniFF1F", advance=CJK_ADV, unicode=0xFF1F, note="？：全角问号")
     band(g, MID, 620, 144, 144, 60, 60, 150, -80, steps=18)
     g.vbar(517, 320, 520, weight=W_SECOND)
     disc(g, MID, 55, 55)
@@ -188,7 +188,7 @@ def fw_question() -> Glyph:
 
 def fw_colon() -> Glyph:
     """：U+FF1A 全角冒号：中线上下两个圆点。"""
-    g = Glyph("uniFF1A", advance=CJK_ADV, unicode=0xFF1A, note="：全角冒号")
+    g = Glyph("uniFF1A", advance=CJK_ADV, unicode=0xFF1A, note="：：全角冒号")
     disc(g, MID, 450, 55)
     disc(g, MID, 55, 55)
     return g
@@ -196,7 +196,7 @@ def fw_colon() -> Glyph:
 
 def fw_semicolon() -> Glyph:
     """；U+FF1B 全角分号：上圆点 + 下逗号。"""
-    g = Glyph("uniFF1B", advance=CJK_ADV, unicode=0xFF1B, note="；全角分号")
+    g = Glyph("uniFF1B", advance=CJK_ADV, unicode=0xFF1B, note="；：全角分号")
     disc(g, MID, 450, 55)
     comma_mark(g, MID, 55, 55, tip=(450, -55), w_root=70, w_tip=13)
     return g
@@ -204,21 +204,21 @@ def fw_semicolon() -> Glyph:
 
 def fw_parenleft() -> Glyph:
     """（U+FF08 全角左括号：GB/T 前半标点居右半，紧贴后续内容。"""
-    g = Glyph("uniFF08", advance=CJK_ADV, unicode=0xFF08, note="（全角左括号")
+    g = Glyph("uniFF08", advance=CJK_ADV, unicode=0xFF08, note="（：全角左括号")
     band(g, 790, 380, 150, 400, 66, 316, 105, 255, steps=16)
     return g
 
 
 def fw_parenright() -> Glyph:
     """）U+FF09 全角右括号：GB/T 后半标点居左半，紧贴前置内容。"""
-    g = Glyph("uniFF09", advance=CJK_ADV, unicode=0xFF09, note="）全角右括号")
+    g = Glyph("uniFF09", advance=CJK_ADV, unicode=0xFF09, note="）：全角右括号")
     band(g, 210, 380, 150, 400, 66, 316, 285, 75, steps=16)
     return g
 
 
 def fw_corner_left() -> Glyph:
     """「U+300C 全角直角引号（左）：竖笔在左、横笔在顶，构成左上角。"""
-    g = Glyph("uni300C", advance=CJK_ADV, unicode=0x300C, note="「全角左直角引号")
+    g = Glyph("uni300C", advance=CJK_ADV, unicode=0x300C, note="「：全角左直角引号")
     g.vbar(600, 48, 808, weight=W_MAIN)
     g.hbar(600, 900, 760, weight=W_MAIN)
     return g
@@ -226,7 +226,7 @@ def fw_corner_left() -> Glyph:
 
 def fw_corner_right() -> Glyph:
     """」U+300D 全角直角引号（右）：竖笔在右、横笔在底，构成右下角。"""
-    g = Glyph("uni300D", advance=CJK_ADV, unicode=0x300D, note="」全角右直角引号")
+    g = Glyph("uni300D", advance=CJK_ADV, unicode=0x300D, note="」：全角右直角引号")
     g.vbar(400, 0, 760, weight=W_MAIN)
     g.hbar(100, 400, 48, weight=W_MAIN)
     return g
@@ -234,14 +234,14 @@ def fw_corner_right() -> Glyph:
 
 def fw_lenticular_left() -> Glyph:
     """【U+3010 全角鱼尾括号（左）：实心体块 + 右侧 V 形收口。"""
-    g = Glyph("uni3010", advance=CJK_ADV, unicode=0x3010, note="【全角鱼尾括号")
+    g = Glyph("uni3010", advance=CJK_ADV, unicode=0x3010, note="【：全角鱼尾括号")
     g.poly([(552, 0), (900, 0), (700, 400), (900, 800), (552, 800)])
     return g
 
 
 def fw_lenticular_right() -> Glyph:
     """】U+3011 全角鱼尾括号（右）：实心体块 + 左侧 V 形收口。"""
-    g = Glyph("uni3011", advance=CJK_ADV, unicode=0x3011, note="】全角鱼尾括号")
+    g = Glyph("uni3011", advance=CJK_ADV, unicode=0x3011, note="】：全角鱼尾括号")
     g.poly([(448, 0), (100, 0), (300, 400), (100, 800), (448, 800)])
     return g
 
@@ -251,21 +251,21 @@ def fw_lenticular_right() -> Glyph:
 # --------------------------------------------------------------------------
 def hw_period() -> Glyph:
     """period . 句点：贴基线圆点。"""
-    g = Glyph("period", advance=ADV_NARROW, unicode=0x2E, note=". 句点")
+    g = Glyph("period", advance=ADV_NARROW, unicode=0x2E, note=".：句点")
     disc(g, 120, 52, 52)
     return g
 
 
 def hw_comma() -> Glyph:
     """comma , 逗号：圆头 + 左下出锋尾，尾低于基线。"""
-    g = Glyph("comma", advance=ADV_NARROW, unicode=0x2C, note=", 逗号")
+    g = Glyph("comma", advance=ADV_NARROW, unicode=0x2C, note=",：逗号")
     comma_mark(g, 120, 52, 52, tip=(74, -54), w_root=70, w_tip=12)
     return g
 
 
 def hw_exclam() -> Glyph:
     """exclam ! 叹号：竖笔 + 独立圆点，顶端与大写顶线齐平。"""
-    g = Glyph("exclam", advance=ADV_NARROW, unicode=0x21, note="! 叹号")
+    g = Glyph("exclam", advance=ADV_NARROW, unicode=0x21, note="!：叹号")
     g.vbar(120, 240, CAP_TOP, weight=W_MAIN)
     disc(g, 120, 52, 52)
     return g
@@ -273,7 +273,7 @@ def hw_exclam() -> Glyph:
 
 def hw_question() -> Glyph:
     """question ? 问号：开口环带成钩，竖笔成干，底部独立圆点。"""
-    g = Glyph("question", advance=ADV_WIDE, unicode=0x3F, note="? 问号")
+    g = Glyph("question", advance=ADV_WIDE, unicode=0x3F, note="?：问号")
     band(g, 150, 586, 130, 130, 46, 46, 150, -80, steps=18)
     g.vbar(165, 320, 530, weight=W_SECOND)
     disc(g, 150, 52, 52)
@@ -282,7 +282,7 @@ def hw_question() -> Glyph:
 
 def hw_colon() -> Glyph:
     """colon : 冒号：x 高处与基线各一个圆点。"""
-    g = Glyph("colon", advance=ADV_NARROW, unicode=0x3A, note=": 冒号")
+    g = Glyph("colon", advance=ADV_NARROW, unicode=0x3A, note=":：冒号")
     disc(g, 120, 400, 52)
     disc(g, 120, 52, 52)
     return g
@@ -290,7 +290,7 @@ def hw_colon() -> Glyph:
 
 def hw_semicolon() -> Glyph:
     """semicolon ; 分号：上圆点 + 下逗号。"""
-    g = Glyph("semicolon", advance=ADV_NARROW, unicode=0x3B, note="; 分号")
+    g = Glyph("semicolon", advance=ADV_NARROW, unicode=0x3B, note=";：分号")
     disc(g, 120, 400, 52)
     comma_mark(g, 120, 52, 52, tip=(74, -54), w_root=70, w_tip=12)
     return g
@@ -298,35 +298,35 @@ def hw_semicolon() -> Glyph:
 
 def hw_parenleft() -> Glyph:
     """parenleft ( 左括号：开口环带，凸面朝左。"""
-    g = Glyph("parenleft", advance=ADV_WIDE, unicode=0x28, note="( 左括号")
+    g = Glyph("parenleft", advance=ADV_WIDE, unicode=0x28, note="(：左括号")
     band(g, 250, 358, 190, 358, 106, 274, 100, 260, steps=16)
     return g
 
 
 def hw_parenright() -> Glyph:
     """parenright ) 右括号：开口环带，凸面朝右。"""
-    g = Glyph("parenright", advance=ADV_WIDE, unicode=0x29, note=") 右括号")
+    g = Glyph("parenright", advance=ADV_WIDE, unicode=0x29, note=")：右括号")
     band(g, 50, 358, 190, 358, 106, 274, -80, 80, steps=16)
     return g
 
 
 def hw_hyphen() -> Glyph:
     """hyphen - 连字符：短横，置于 x 高中部。"""
-    g = Glyph("hyphen", advance=ADV_HYPHEN, unicode=0x2D, note="- 连字符")
+    g = Glyph("hyphen", advance=ADV_HYPHEN, unicode=0x2D, note="-：连字符")
     g.hbar(60, 260, 300, weight=W_THIN)
     return g
 
 
 def hw_emdash() -> Glyph:
     """emdash — 长破折号：1 em 宽通栏横画。"""
-    g = Glyph("emdash", advance=ADV_EMDASH, unicode=0x2014, note="— 长破折号")
+    g = Glyph("emdash", advance=ADV_EMDASH, unicode=0x2014, note="—：长破折号")
     g.hbar(BODY_L, BODY_R, 300, weight=W_MAIN)
     return g
 
 
 def hw_quotedbl() -> Glyph:
     """quotedbl " 双引号：两枚上斜楔形，顶部与大写顶线齐平。"""
-    g = Glyph("quotedbl", advance=ADV_QUOTEDBL, unicode=0x22, note='" 双引号')
+    g = Glyph("quotedbl", advance=ADV_QUOTEDBL, unicode=0x22, note='"：双引号')
     g.dot(80, 592, w=90, h=236, slant=28)
     g.dot(210, 592, w=90, h=236, slant=28)
     return g
@@ -334,14 +334,14 @@ def hw_quotedbl() -> Glyph:
 
 def hw_quotesingle() -> Glyph:
     """quotesingle ' 单引号：一枚上斜楔形。"""
-    g = Glyph("quotesingle", advance=ADV_NARROW, unicode=0x27, note="' 单引号")
+    g = Glyph("quotesingle", advance=ADV_NARROW, unicode=0x27, note="'：单引号")
     g.dot(110, 592, w=96, h=236, slant=28)
     return g
 
 
 def hw_ampersand() -> Glyph:
     """ampersand & & 号：左上闭环 + 右上斜脊 + 下方开口环带。"""
-    g = Glyph("ampersand", advance=ADV_AMP, unicode=0x26, note="& &号")
+    g = Glyph("ampersand", advance=ADV_AMP, unicode=0x26, note="&：&号")
     # 左上闭环（环带自动成洞）
     g.ring(
         ellipse_points(130, 570, 118, 124, count=16),

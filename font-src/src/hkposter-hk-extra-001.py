@@ -72,7 +72,7 @@ def glyph_zhi() -> Glyph:
     「之」与「又」的差别全在「点 + 长横 + 撇捺分头落地」这三处，
     横画短了或撇捺收在中间，字就读成「又」。
     """
-    g = Glyph("uni4E4B", advance=1000, unicode=0x4E4B, note="之（繁体补字，zh-HK）")
+    g = Glyph("uni4E4B", advance=1000, unicode=0x4E4B, note="之：繁体补字，zh-HK")
 
     # ---- 竖点（右上，slant=0 竖点） ----
     g.dot(505, 750, w=96, h=120, slant=0)
@@ -105,7 +105,7 @@ def glyph_ji() -> Glyph:
 
     日的内白：日宽 340（x 90..430），中竖 76 厚 → 每格内白 85 / 95 单位。
     """
-    g = Glyph("uni64CA", advance=1000, unicode=0x64CA, note="擊（繁体补字，zh-HK）")
+    g = Glyph("uni64CA", advance=1000, unicode=0x64CA, note="擊：繁体补字，zh-HK")
 
     # ================= 上部左：車（x 60..450，y 334..820） =================
     g.hbar(60, 450, 778, weight=W_THIN)           # 車 顶横
@@ -153,7 +153,7 @@ def glyph_ni() -> Glyph:
         兒 = 臼 + 儿，**没有右上「冂」**（第 8 版之前的那个判断是误读，
         已按 Klee One 实测推翻 —— 多画一笔会让 霓 读成「臼+儿」的错形）。
     """
-    g = Glyph("uni9713", advance=1000, unicode=0x9713, note="霓（繁体补字，zh-HK）")
+    g = Glyph("uni9713", advance=1000, unicode=0x9713, note="霓：繁体补字，zh-HK")
 
     # ================= 上部：雨（x 60..940，y 460..820） =================
     g.hbar(60, 940, 778, weight=W_THIN)          # 雨 顶横
@@ -198,7 +198,7 @@ def glyph_hei() -> Glyph:
     **横画间距**：田 的三道横（790 / 620 / 450）间距 170；
     田下三横（350 / 240 / 130）间距 110；灬 的墨顶与最下一横留 24 白口。
     """
-    g = Glyph("uni9ED1", advance=1000, unicode=0x9ED1, note="黑（繁体补字，zh-HK）")
+    g = Glyph("uni9ED1", advance=1000, unicode=0x9ED1, note="黑：繁体补字，zh-HK")
 
     # ================= 上部：田（x 150..850，y 450..790） =================
     g.hbar(150, 850, 790, weight=W_THIN)         # 田 上横

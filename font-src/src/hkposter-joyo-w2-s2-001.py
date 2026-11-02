@@ -103,7 +103,7 @@ def uni56FD() -> Glyph:
       8 一  玉下横  y=180  x 230..770
       9 丶  玉点    (650,300)
     """
-    g = Glyph("uni56FD", advance=1000, unicode=0x56FD, note="囗+玉")
+    g = Glyph("uni56FD", advance=1000, unicode=0x56FD, note="国：囗 + 玉")
     _v(g, 108, 820, 0)
     _bt(g, 60, 940)
     _v(g, 892, 772, 0)
@@ -129,7 +129,7 @@ def uni4F1A() -> Glyph:
       6 乛  厶横    y=100  x 250..560
       7 丶  厶点    (640,250)
     """
-    g = Glyph("uni4F1A", advance=1000, unicode=0x4F1A, note="人+云")
+    g = Glyph("uni4F1A", advance=1000, unicode=0x4F1A, note="会：人 + 云")
     _d(g, 470, 765, 150, 570)
     _d(g, 520, 700, 870, 560)
     _h(g, 250, 750, 500)
@@ -153,7 +153,7 @@ def uni5E74() -> Glyph:
       5 一  下长横  y=190  x 60..940
       6 丨  中长竖  x=490  y 670→190
     """
-    g = Glyph("uni5E74", advance=1000, unicode=0x5E74, note="年")
+    g = Glyph("uni5E74", advance=1000, unicode=0x5E74, note="年：年")
     _d(g, 325, 775, 190, 650, W_THIN)
     _h(g, 200, 800, 670)
     _v(g, 175, 670, 440, W_THIN)
@@ -177,7 +177,7 @@ def uni9577() -> Glyph:
       6 ノ  撇        (250,370)→(110,90)
       7 ㇏  捺        (420,330)→(810,80)
     """
-    g = Glyph("uni9577", advance=1000, unicode=0x9577, note="長")
+    g = Glyph("uni9577", advance=1000, unicode=0x9577, note="長：長")
     _v(g, 190, 820, 350)
     _h(g, 190, 660, 760, W_SEC)
     _h(g, 190, 780, 620, W_SEC)
@@ -203,7 +203,7 @@ def uni540C() -> Glyph:
       7 丨  口右竖  x=708  y 480→160
       8 一  口下横  y=160  x 250..750
     """
-    g = Glyph("uni540C", advance=1000, unicode=0x540C, note="冂+一口")
+    g = Glyph("uni540C", advance=1000, unicode=0x540C, note="同：冂 + 一口")
     _v(g, 108, 820, 0)
     _bt(g, 60, 940)
     _v(g, 892, 772, 0)
@@ -230,7 +230,7 @@ def uni653F() -> Glyph:
       8 丿  攵长撇  (860,700)→(500,60)
       9 ㇏  攵捺    (520,690)→(890,70)
     """
-    g = Glyph("uni653F", advance=1000, unicode=0x653F, note="正+攵")
+    g = Glyph("uni653F", advance=1000, unicode=0x653F, note="政：正 + 攵")
     _h(g, 60, 430, 772)
     _v(g, 260, 772, 170)
     _h(g, 260, 430, 470, W_THIN)
@@ -260,7 +260,7 @@ def uni4E8B() -> Glyph:
       9 一  底长横  y=48   x 60..940
      10 亅  中竖    x=500  y 772→96
     """
-    g = Glyph("uni4E8B", advance=1000, unicode=0x4E8B, note="事")
+    g = Glyph("uni4E8B", advance=1000, unicode=0x4E8B, note="事：事")
     _bt(g, 60, 940)
     _h(g, 230, 730, 650, W_THIN)
     _v(g, 272, 650, 510, W_THIN)
@@ -287,7 +287,7 @@ def uni81EA() -> Glyph:
       6 一  目中二  y=250  x 110..890
       7 一  目下横  y=48   x 110..890
     """
-    g = Glyph("uni81EA", advance=1000, unicode=0x81EA, note="丿+目")
+    g = Glyph("uni81EA", advance=1000, unicode=0x81EA, note="自：丿 + 目")
     _d(g, 330, 765, 230, 680, W_THIN)
     _v(g, 158, 700, 0)
     _h(g, 110, 890, 652)
@@ -310,7 +310,7 @@ def uni884C() -> Glyph:
       5 一  亍下横  y=620  x 380..940
       6 亅  亍竖钩  x=700  y 620→60
     """
-    g = Glyph("uni884C", advance=1000, unicode=0x884C, note="彳+亍")
+    g = Glyph("uni884C", advance=1000, unicode=0x884C, note="行：彳 + 亍")
     _d(g, 250, 770, 110, 660, W_SEC)
     _d(g, 250, 560, 110, 450, W_SEC)
     _v(g, 106, 480, 0, W_SEC)
@@ -335,7 +335,7 @@ def uni793E() -> Glyph:
       7 丨  土竖      x=690  y 620→190
       8 一  土下横    y=190  x 460..940
     """
-    g = Glyph("uni793E", advance=1000, unicode=0x793E, note="礻+土")
+    g = Glyph("uni793E", advance=1000, unicode=0x793E, note="社：礻 + 土")
     _dot(g, 250, 760, W_MAIN, 104)
     _h(g, 160, 380, 620)
     _d(g, 370, 615, 190, 450)
@@ -361,7 +361,7 @@ def uni898B() -> Glyph:
       7 ノ  儿撇    (300,330)→(150,70)
       8 乚  儿竖钩  x=690  y 348→120
     """
-    g = Glyph("uni898B", advance=1000, unicode=0x898B, note="目+儿")
+    g = Glyph("uni898B", advance=1000, unicode=0x898B, note="見：目 + 儿")
     _v(g, 248, 820, 348)
     _h(g, 200, 800, 772)
     _v(g, 752, 820, 348)
@@ -393,7 +393,7 @@ def uni5F8C() -> Glyph:
      11 丿  夂横撇  (880,710)→(700,400)
      12 ㇏  夂捺    (700,540)→(890,110)
     """
-    g = Glyph("uni5F8C", advance=1000, unicode=0x5F8C, note="彳+幺+夂")
+    g = Glyph("uni5F8C", advance=1000, unicode=0x5F8C, note="後：彳 + 幺 + 夂")
     _d(g, 245, 770, 105, 660, W_SEC)
     _d(g, 245, 560, 105, 450, W_SEC)
     _v(g, 106, 480, 0, W_SEC)
@@ -426,7 +426,7 @@ def uni524D() -> Glyph:
       9 丨  刂短竖  x=680  y 560→120
      10 亅  刂长竖  x=890  y 600→60
     """
-    g = Glyph("uni524D", advance=1000, unicode=0x524D, note="前")
+    g = Glyph("uni524D", advance=1000, unicode=0x524D, note="前：前")
     _dot(g, 300, 760, W_DOT, 84)
     _dot(g, 700, 760, W_DOT, 84)
     _h(g, 60, 940, 650)
@@ -458,7 +458,7 @@ def uni9023() -> Glyph:
      11 丨  車中竖  x=630  y 772→120
      12 一  車下横  y=140  x 360..940
     """
-    g = Glyph("uni9023", advance=1000, unicode=0x9023, note="辶+車")
+    g = Glyph("uni9023", advance=1000, unicode=0x9023, note="連：辶 + 車")
     _dot(g, 140, 770, W_DOT, 96)
     _v(g, 120, 640, 480, W_THIN)
     _h(g, 120, 260, 480, W_THIN)
@@ -490,7 +490,7 @@ def uni767A() -> Glyph:
       9 ノ  儿撇    (350,300)→(190,70)
      10 乚  儿竖钩  x=600  y 300→100
     """
-    g = Glyph("uni767A", advance=1000, unicode=0x767A, note="癶+二+儿")
+    g = Glyph("uni767A", advance=1000, unicode=0x767A, note="発：癶 + 二 + 儿")
     _h(g, 110, 380, 770, W_THIN)
     _d(g, 370, 760, 230, 620, W_THIN)
     _dot(g, 460, 650, W_DOT, 92)
@@ -518,7 +518,7 @@ def uni5BFE() -> Glyph:
       6 亅  寸竖钩  x=780  y 690→60
       7 丶  寸点    (590,470)
     """
-    g = Glyph("uni5BFE", advance=1000, unicode=0x5BFE, note="文+寸")
+    g = Glyph("uni5BFE", advance=1000, unicode=0x5BFE, note="対：文 + 寸")
     _dot(g, 270, 770, W_DOT, 96)
     _h(g, 70, 470, 660)
     _d(g, 430, 630, 110, 80, W_THIN)
@@ -546,7 +546,7 @@ def uni6771() -> Glyph:
       8 ノ  撇      (400,270)→(150,60)
       9 ㇏  捺      (600,270)→(860,60)
     """
-    g = Glyph("uni6771", advance=1000, unicode=0x6771, note="東")
+    g = Glyph("uni6771", advance=1000, unicode=0x6771, note="東：東")
     _bt(g, 60, 940)
     _v(g, 500, 772, 120)
     _v(g, 210, 610, 270)
@@ -575,7 +575,7 @@ def uni8005() -> Glyph:
       8 一  日中横  y=210  x 300..700
       9 一  日下横  y=48   x 300..700
     """
-    g = Glyph("uni8005", advance=1000, unicode=0x8005, note="者")
+    g = Glyph("uni8005", advance=1000, unicode=0x8005, note="者：者")
     _h(g, 300, 900, 740)
     _v(g, 600, 740, 600)
     _h(g, 120, 880, 600)
@@ -603,7 +603,7 @@ def uni5730() -> Glyph:
       8 丨  也左竖  x=478  y 640→250
       9 ㇏  也底捺  (478,250)→(905,130)
     """
-    g = Glyph("uni5730", advance=1000, unicode=0x5730, note="土+也")
+    g = Glyph("uni5730", advance=1000, unicode=0x5730, note="地：土 + 也")
     _h(g, 90, 350, 640, W_THIN)
     _v(g, 220, 640, 170)
     _h(g, 60, 380, 170)
@@ -629,7 +629,7 @@ def uni5408() -> Glyph:
       6 丨  口右竖  x=678  y 360→84
       7 一  口下横  y=84   x 280..720
     """
-    g = Glyph("uni5408", advance=1000, unicode=0x5408, note="人+一+口")
+    g = Glyph("uni5408", advance=1000, unicode=0x5408, note="合：人 + 一 + 口")
     _d(g, 470, 765, 140, 570)
     _d(g, 520, 700, 870, 570)
     _h(g, 250, 750, 500, W_THIN)
@@ -656,7 +656,7 @@ def uni76F8() -> Glyph:
       9 一  目中二  y=329  x 460..940
      10 一  目下横  y=108  x 460..940
     """
-    g = Glyph("uni76F8", advance=1000, unicode=0x76F8, note="木+目")
+    g = Glyph("uni76F8", advance=1000, unicode=0x76F8, note="相：木 + 目")
     _h(g, 60, 400, 680)
     _v(g, 190, 820, 40)
     _d(g, 190, 660, 130, 190, W_THIN)
@@ -686,7 +686,7 @@ def uni5B9A() -> Glyph:
       8 ノ  左撇    (250,280)→(120,80)
       9 ㇏  右捺    (520,330)→(880,80)
     """
-    g = Glyph("uni5B9A", advance=1000, unicode=0x5B9A, note="宀+疋")
+    g = Glyph("uni5B9A", advance=1000, unicode=0x5B9A, note="定：宀 + 疋")
     _dot(g, 500, 680, W_DOT, 96)
     _v(g, 112, 760, 640, W_THIN)
     _h(g, 70, 930, 760, W_THIN)
@@ -713,7 +713,7 @@ def uni56DE() -> Glyph:
       7 一  口上横  y=650  x 222..778
       8 一  口下横  y=180  x 222..778
     """
-    g = Glyph("uni56DE", advance=1000, unicode=0x56DE, note="囗+口")
+    g = Glyph("uni56DE", advance=1000, unicode=0x56DE, note="回：囗 + 口")
     _v(g, 108, 820, 0)
     _bt(g, 60, 940)
     _v(g, 892, 772, 0)
@@ -740,7 +740,7 @@ def uni91D1() -> Glyph:
       7 丨  中竖    x=500  y 330→150
       8 一  底横    y=48   x 140..860
     """
-    g = Glyph("uni91D1", advance=1000, unicode=0x91D1, note="金")
+    g = Glyph("uni91D1", advance=1000, unicode=0x91D1, note="金：金")
     _d(g, 475, 765, 150, 560)
     _d(g, 525, 715, 860, 560)
     _h(g, 200, 800, 600)
@@ -765,7 +765,7 @@ def uni7C73() -> Glyph:
       5 ノ  撇      (420,540)→(140,70)
       6 ㇏  捺      (580,540)→(860,70)
     """
-    g = Glyph("uni7C73", advance=1000, unicode=0x7C73, note="米")
+    g = Glyph("uni7C73", advance=1000, unicode=0x7C73, note="米：米")
     _dot(g, 370, 740, W_DOT, 100)
     _d(g, 700, 780, 620, 680, W_THIN)
     _h(g, 60, 940, 570)
@@ -792,7 +792,7 @@ def uni5B66() -> Glyph:
       9 亅  子竖钩  x=500  y 430→90
      10 一  子长横  y=290  x 130..870
     """
-    g = Glyph("uni5B66", advance=1000, unicode=0x5B66, note="学")
+    g = Glyph("uni5B66", advance=1000, unicode=0x5B66, note="学：学")
     _dot(g, 240, 768, W_DOT, 84)
     _dot(g, 500, 780, W_DOT, 72)
     _dot(g, 760, 768, W_DOT, 84)
@@ -823,7 +823,7 @@ def uni660E() -> Glyph:
       9 一  月中一  y=560  x 520..940
      10 一  月中二  y=310  x 520..940
     """
-    g = Glyph("uni660E", advance=1000, unicode=0x660E, note="日+月")
+    g = Glyph("uni660E", advance=1000, unicode=0x660E, note="明：日 + 月")
     _v(g, 108, 820, 0)
     _v(g, 352, 820, 0)
     _h(g, 60, 400, 772)
@@ -852,7 +852,7 @@ def uni5B9F() -> Glyph:
       7 ノ  撇      (490,580)→(170,80)
       8 ㇏  捺      (510,560)→(860,80)
     """
-    g = Glyph("uni5B9F", advance=1000, unicode=0x5B9F, note="宀+夫")
+    g = Glyph("uni5B9F", advance=1000, unicode=0x5B9F, note="実：宀 + 夫")
     _dot(g, 500, 680, W_DOT, 96)
     _v(g, 112, 760, 640, W_THIN)
     _h(g, 70, 930, 760, W_THIN)
@@ -878,7 +878,7 @@ def uni6C7A() -> Glyph:
       7 丿  撇      (540,700)→(320,80)
       8 ㇏  捺      (560,520)→(900,80)
     """
-    g = Glyph("uni6C7A", advance=1000, unicode=0x6C7A, note="氵+夬")
+    g = Glyph("uni6C7A", advance=1000, unicode=0x6C7A, note="決：氵 + 夬")
     _dot(g, 150, 760, W_DOT, 96)
     _dot(g, 120, 590, W_DOT, 96)
     _d(g, 110, 340, 250, 430, W_THIN)
@@ -906,7 +906,7 @@ def uni4EAC() -> Glyph:
       8 丶  小左点  (290,180)
       9 丶  小右点  (710,180)
     """
-    g = Glyph("uni4EAC", advance=1000, unicode=0x4EAC, note="京")
+    g = Glyph("uni4EAC", advance=1000, unicode=0x4EAC, note="京：京")
     _dot(g, 500, 765, W_DOT, 100)
     _h(g, 130, 870, 650)
     _h(g, 300, 700, 500, W_SEC)
@@ -932,7 +932,7 @@ def uni5168() -> Glyph:
       5 一  下横    y=160  x 160..840
       6 丨  中竖    x=500  y 540→160
     """
-    g = Glyph("uni5168", advance=1000, unicode=0x5168, note="全")
+    g = Glyph("uni5168", advance=1000, unicode=0x5168, note="全：全")
     _d(g, 475, 765, 160, 570)
     _d(g, 525, 715, 850, 570)
     _h(g, 240, 760, 540)
@@ -955,7 +955,7 @@ def uni8868() -> Glyph:
       6 ノ  撇      (470,480)→(150,80)
       7 ㇏  捺      (530,450)→(860,80)
     """
-    g = Glyph("uni8868", advance=1000, unicode=0x8868, note="表")
+    g = Glyph("uni8868", advance=1000, unicode=0x8868, note="表：表")
     _h(g, 340, 660, 770, W_THIN)
     _h(g, 250, 750, 630, W_THIN)
     _v(g, 500, 770, 480)

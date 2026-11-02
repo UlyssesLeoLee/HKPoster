@@ -1008,13 +1008,13 @@ def build() -> list[Glyph]:
         glyphs.append(g)
 
     # っ：横向居中、纵向偏下（低位置的小写 つ）
-    g = Glyph("uni3063", advance=1000, unicode=0x3063, note="平假名 っ（小假名 つ，新补）")
+    g = Glyph("uni3063", advance=1000, unicode=0x3063, note="っ：平假名 っ（小假名 つ，新补）")
     for s in SMALL["っ"]:
         _stroke(g, s)
     glyphs.append(g)
 
     # ゔ U+3094：全尺寸 う + 浊点
-    g = Glyph("uni3094", advance=1000, unicode=0x3094, note="平假名 ゔ（う + 浊点，新补）")
+    g = Glyph("uni3094", advance=1000, unicode=0x3094, note="ゔ：平假名 ゔ（う + 浊点，新补）")
     for s in _scale_strokes(KANA["う"]):
         _stroke(g, s)
     for s in DAKU:
@@ -1022,13 +1022,13 @@ def build() -> list[Glyph]:
     glyphs.append(g)
 
     # ゗ U+3097：ゝ + 斜杠
-    g = Glyph("uni3097", advance=1000, unicode=0x3097, note="反复记号 ゗（ゝ + 斜杠，新补）")
+    g = Glyph("uni3097", advance=1000, unicode=0x3097, note="゗：反复记号 ゗（ゝ + 斜杠，新补）")
     for s in ITER + SLASH:
         _stroke(g, s)
     glyphs.append(g)
 
     # ゘ U+3098：ゝ + 浊点
-    g = Glyph("uni3098", advance=1000, unicode=0x3098, note="反复记号 ゘（ゝ + 浊点，新补）")
+    g = Glyph("uni3098", advance=1000, unicode=0x3098, note="゘：反复记号 ゘（ゝ + 浊点，新补）")
     for s in ITER:
         _stroke(g, s)
     for s in DAKU:
@@ -1036,7 +1036,7 @@ def build() -> list[Glyph]:
     glyphs.append(g)
 
     # ゟ U+309F：ゝ + 半浊点
-    g = Glyph("uni309F", advance=1000, unicode=0x309F, note="平假名 ゟ（ゝ + 半浊点，新补）")
+    g = Glyph("uni309F", advance=1000, unicode=0x309F, note="ゟ：平假名 ゟ（ゝ + 半浊点，新补）")
     for s in ITER:
         _stroke(g, s)
     for s in HAND:
@@ -1046,35 +1046,35 @@ def build() -> list[Glyph]:
     # --- 记号（不参与放大，只挪落点）-------------------------------------
 
     # 浊音符 U+3099（零宽合记号）
-    g = Glyph("uni3099", advance=0, unicode=0x3099, note="浊音符（零宽合记号，右上角两枚短斜画）")
+    g = Glyph("uni3099", advance=0, unicode=0x3099, note="゙：浊音符（零宽合记号，右上角两枚短斜画）")
     for s in DAKU:
         _stroke(g, s)
     glyphs.append(g)
 
     # 半浊音符 U+309A（零宽合记号）
-    g = Glyph("uni309A", advance=0, unicode=0x309A, note="半浊音符（零宽合记号，右上角小圆环）")
+    g = Glyph("uni309A", advance=0, unicode=0x309A, note="゚：半浊音符（零宽合记号，右上角小圆环）")
     for s in HAND:
         _stroke(g, s)
     glyphs.append(g)
 
     # 浊点符号 U+309B / U+309C（独立形，advance 1000）
-    g = Glyph("uni309B", advance=1000, unicode=0x309B, note="浊点符号 ゛（独立形）")
+    g = Glyph("uni309B", advance=1000, unicode=0x309B, note="゛：浊点符号 ゛（独立形）")
     for s in DAKU:
         _stroke(g, s)
     glyphs.append(g)
 
-    g = Glyph("uni309C", advance=1000, unicode=0x309C, note="浊点符号 ゜（独立形）")
+    g = Glyph("uni309C", advance=1000, unicode=0x309C, note="゜：浊点符号 ゜（独立形）")
     for s in HAND:
         _stroke(g, s)
     glyphs.append(g)
 
     # 反复记号 U+309D / U+309E
-    g = Glyph("uni309D", advance=1000, unicode=0x309D, note="反复记号 ゝ（上一字形的缩小重复形）")
+    g = Glyph("uni309D", advance=1000, unicode=0x309D, note="ゝ：反复记号 ゝ（上一字形的缩小重复形）")
     for s in ITER:
         _stroke(g, s)
     glyphs.append(g)
 
-    g = Glyph("uni309E", advance=1000, unicode=0x309E, note="反复记号 ゞ（缩小重复形 + 浊音符）")
+    g = Glyph("uni309E", advance=1000, unicode=0x309E, note="ゞ：反复记号 ゞ（缩小重复形 + 浊音符）")
     for s in ITER:
         _stroke(g, s)
     for s in DAKU:

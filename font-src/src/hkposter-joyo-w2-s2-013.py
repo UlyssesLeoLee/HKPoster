@@ -628,7 +628,7 @@ def g_5146() -> Glyph:
     分区：左二撇 x100..300；中长撇 x330..430；右二撇 x560..740；
     右竖弯钩 x820..930。
     """
-    g = Glyph("uni5146", advance=1000, unicode=0x5146, note="兆")
+    g = Glyph("uni5146", advance=1000, unicode=0x5146, note="兆：兆")
     g.diag(320, 810, 140, 675, weight=W_MAIN)         # 1 撇（左上）
     g.diag(265, 635, 85, 500, weight=W_MAIN)          # 2 撇（左中）
     g.diag(440, 790, 335, 80, weight=W_MAIN)          # 3 长撇（中）
