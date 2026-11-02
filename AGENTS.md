@@ -75,6 +75,23 @@
     都被几何判据当成横画，报出假阳性）。
     `check_hcounters._horizontal_flags()` 已改用原语类型，几何判据降级为兜底；
     `hkbuild.write_ufo()` 里有 `_prims` 与 `_parts` 的等长断言。
+12. **门禁「跑过了」不等于「门禁覆盖到了」（2026-11-02）**：
+    `check_charset` 只在 note 写成「`<字>`：`<说明>`」时才做 note↔unicode 对撞；
+    写成**部件式**（`note="口+貝"`）会被**静默跳过**。实测全库 1049 个带 unicode
+    的字形里只有 **635 个**真被核对，414 个是跳过的（s3-001 的 24 个已修，
+    覆盖 770→794；其余见 docs/10 §9.15.7）。
+    - 查覆盖要按**判据的触发条件**核，不是看「脚本 PASS 了」。
+    - 补 note 前缀只能用**独立来源**（`joyo-kanji-meta.json` / 官方 UCD /
+      参照字体），**绝不能 `chr(unicode)` 回灌** —— 那会让「note ↔ unicode 对撞」
+      变成永真，正是「栄/枤」事故的镜像（改意图侧迁就机器字段 = 门禁死了）。
+    - 扩完覆盖要用**注入实验**自证分辨力（改错一个字自称 → 门禁必须 FAIL）。
+13. **写清单/文档时，AI 凭记忆写的汉字标签不可信（2026-11-02）**：
+    写 docs/10 的 41 字清单时，AI 凭记忆写的标签 **17/41 是错的**
+    （働→偍、員→唯、径→徑、意→慍、戦→彧、敗→敷、査→束、準→涼、狙→状、
+    現→環、畏→界、貞→責、買→賸、費→賻、身→襲、軍→醫、週→逼）。
+    码位本身没错（错的是**标签**），但标签错 = 文档在教人做错事。
+    **凡是要写出「字符 ↔ 码位 ↔ 汉字」三元组，一律用官方 UCD（`chr()`）+
+    `joyo-kanji-meta.json` 交叉核对，两源不一致就不写。**
 
 ## 常用命令
 
@@ -94,6 +111,8 @@ python font-src/scripts/check_stroke_angles.py          # 笔画角度与记号�
 python font-src/scripts/check_stroke_gaps.py            # 笔画粘连/间隙报告（重叠等效长度，单位=笔画宽）
 python font-src/scripts/check_hcounters.py             # 横画内白封闭（黑砖）专项门禁，第 13 步
 python font-src/scripts/check_hcounters.py --selftest  # 注入真实错配，自证分辨力
+python font-src/scripts/audit_white_holes.py <TTF>   # 全库白洞审计：找「压扁腔」（宽≥40 且 高<24）
+python font-src/scripts/audit_white_holes.py --selftest  # 合成矩形环，自证「栅格化+判定」分辨力
 python font-src/scripts/check_charset.py              # 字符↔码位↔冻结清单自洽（note 汉字 vs unicode）
 python font-src/scripts/check_codepoint_ref.py        # 码位独立核对（参照字体当第三方证据源）
 python font-src/scripts/check_codepoint_ref.py --selftest  # 先自证该门禁的分辨力
