@@ -78,28 +78,6 @@ def _ozato(g):
     g.diag(340, 500, 160, 430, weight=W_THIN)
 
 
-def _tree(g, x1, x2, ybar, ytop, ybase=0, w=W_MAIN):
-    """木：一横 + 一竖 + 下撇 + 下捺（墨迹边界 x1..x2，竖顶 ytop，竖底 ybase）。"""
-    xc = (x1 + x2) / 2.0
-    g.hbar(x1, x2, ybar, weight=w)
-    g.vbar(xc, ytop, ybase, weight=w)
-    g.diag(xc - 15, ybar - 60, x1 + 10, ybase + 200, weight=W_SEC)
-    g.diag(xc + 15, ybar - 60, x2 - 10, ybase + 210, weight=W_SEC)
-
-
-def _hachi(g, cx, cy, w=W_THIN):
-    """八：左撇 + 右点（右点按契约用 −14）。"""
-    g.diag(cx - 10, cy, cx - 100, cy - 90, weight=W_THIN)
-    g.dot(cx + 100, cy - 40, w=w, h=96, slant=-14)
-
-
-def _hashi(g, cx, cy):
-    """又：横撇（横 + 撇）+ 捺。"""
-    g.hbar(cx - 90, cx + 90, cy, weight=W_SEC)
-    g.diag(cx + 90, cy, cx - 80, cy - 300, weight=W_SEC)
-    g.diag(cx - 20, cy, cx + 100, cy - 310, weight=W_SEC)
-
-
 # --------------------------------------------------------------------------
 # 24 字
 # --------------------------------------------------------------------------
