@@ -167,7 +167,7 @@ def g_hua() -> Glyph:
       撇 (764,463)->(417,152)  W_SEC
       捺 (532,493)->(892,225)  W_MAIN
     """
-    g = Glyph("uni82B1", advance=1000, unicode=0x82B1, note="花：花7画")
+    g = Glyph("uni82B1", advance=1000, unicode=0x82B1, note="花：7 画")
     g.hbar(176, 845, 657, weight=W_MAIN)
     g.poly(pline([(338, 761), (379, 734), (413, 548)], W_THIN))
     g.poly(pline([(603, 820), (641, 779), (561, 535)], W_SEC))
@@ -191,7 +191,7 @@ def g_chun() -> Glyph:
       横 x360..491 @y193   W_THIN
       横 x353..524 @y77    W_THIN
     """
-    g = Glyph("uni6625", advance=1000, unicode=0x6625, note="春：春9画")
+    g = Glyph("uni6625", advance=1000, unicode=0x6625, note="春：9 画")
     g.hbar(286, 629, 703, weight=W_SEC)
     g.hbar(272, 611, 593, weight=W_SEC)
     g.hbar(102, 797, 475, weight=W_MAIN)
@@ -220,7 +220,7 @@ def g_fei() -> Glyph:
       9 撃   (712,412)->(678,320) W_THIN  下飛 左羽
       10 斜  (626,313)->(775,221) W_THIN  下飛 右羽
     """
-    g = Glyph("uni98DB", advance=1000, unicode=0x98DB, note="飛：飛9画")
+    g = Glyph("uni98DB", advance=1000, unicode=0x98DB, note="飛：9 画")
     g.hbar(120, 620, 772, weight=W_MAIN)
     g.poly(pline([(620, 800), (617, 640), (632, 594), (664, 542), (706, 504), (745, 482), (804, 471), (816, 500), (827, 585)], W_THIN))
     g.poly(pline([(736, 800), (754, 775), (694, 709)], W_THIN))
@@ -246,7 +246,7 @@ def g_ken() -> Glyph:
       捺 (257,268)->(414,58)  W_MAIN
       撇 (358,244)->(165,0)  W_SEC
     """
-    g = Glyph("uni5238", advance=1000, unicode=0x5238, note="券：券8画")
+    g = Glyph("uni5238", advance=1000, unicode=0x5238, note="券：8 画")
     g.diag(266, 718, 343, 652, weight=W_THIN)
     g.poly(pline([(617, 802), (636, 762), (527, 673)], W_THIN))
     g.hbar(261, 620, 589, weight=W_SEC)
@@ -269,7 +269,7 @@ def g_aka() -> Glyph:
       撇 (266,297)->(202,142)  W_THIN
       捺 (668,306)->(837,157)  W_THIN
     """
-    g = Glyph("uni8D64", advance=1000, unicode=0x8D64, note="赤：赤7画")
+    g = Glyph("uni8D64", advance=1000, unicode=0x8D64, note="赤：7 画")
     g.hbar(326, 674, 615, weight=W_SEC)
     g.poly(pline([(455, 820), (504, 778), (493, 497), (476, 477)], W_SEC))
     g.hbar(110, 890, 449, weight=W_MAIN)
@@ -294,7 +294,7 @@ def g_tan() -> Glyph:
       g.hbar(250, 750, 150, weight=W_MAIN)
       g.vbar(500, 260, 0, weight=W_MAIN)
     """
-    g = Glyph("uni5358", advance=1000, unicode=0x5358, note="単：単9画")
+    g = Glyph("uni5358", advance=1000, unicode=0x5358, note="単：9 画")
     g.dot(360, 760, w=W_THIN, h=100, slant=26)
     g.dot(490, 750, w=W_THIN, h=100, slant=26)
     g.diag(640, 780, 520, 650, weight=W_THIN)
@@ -320,7 +320,7 @@ def g_ao() -> Glyph:
       横 x376..534 @y271   W_THIN
       横 x369..542 @y177   W_THIN
     """
-    g = Glyph("uni9752", advance=1000, unicode=0x9752, note="青：青8画")
+    g = Glyph("uni9752", advance=1000, unicode=0x9752, note="青：8 画")
     g.hbar(311, 669, 717, weight=W_SEC)
     g.hbar(321, 647, 604, weight=W_SEC)
     g.poly(pline([(442, 820), (486, 779), (466, 504)], W_SEC))
@@ -342,7 +342,7 @@ def g_take() -> Glyph:
       横 x595..940 @y461   W_SEC
       撇 (684,411)->(577,76)  W_SEC
     """
-    g = Glyph("uni7AF9", advance=1000, unicode=0x7AF9, note="竹：竹6画")
+    g = Glyph("uni7AF9", advance=1000, unicode=0x7AF9, note="竹：6 画")
     g.poly(pline([(300, 739), (342, 694), (295, 579), (188, 388), (60, 226)], W_SEC))
     g.hbar(220, 495, 428, weight=W_SEC)
     g.vbar(322, 10, 379, weight=W_SEC)
@@ -363,7 +363,7 @@ def g_kan() -> Glyph:
       撇 (370,299)->(108,11)  W_SEC
       捺 (499,328)->(892,206)  W_MAIN
     """
-    g = Glyph("uni5B8C", advance=1000, unicode=0x5B8C, note="完：完7画")
+    g = Glyph("uni5B8C", advance=1000, unicode=0x5B8C, note="完：7 画")
     g.poly(pline([(421, 820), (519, 774), (554, 734)], W_THIN))
     g.vbar(228, 472, 661, weight=W_THIN)
     g.poly(pline([(284, 620), (721, 681), (777, 641), (704, 562)], W_SEC))
@@ -386,7 +386,7 @@ def g_hei() -> Glyph:
       撇 (748,437)->(597,215)  W_SEC
       横 x74..926 @y22    W_MAIN
     """
-    g = Glyph("uni4E26", advance=1000, unicode=0x4E26, note="並：並8画")
+    g = Glyph("uni4E26", advance=1000, unicode=0x4E26, note="並：8 画")
     g.dot(350, 700, w=W_THIN, h=151, slant=26)
     g.poly(pline([(626, 820), (657, 773), (509, 586)], W_SEC))
     g.hbar(203, 793, 556, weight=W_MAIN)
@@ -408,7 +408,7 @@ def g_ki() -> Glyph:
       捺 (481,376)->(561,230)  W_SEC
       捺 (427,386)->(890,216)  W_MAIN
     """
-    g = Glyph("uni5371", advance=1000, unicode=0x5371, note="危：危6画")
+    g = Glyph("uni5371", advance=1000, unicode=0x5371, note="危：6 画")
     g.poly(pline([(501, 820), (518, 768), (331, 573)], W_SEC))
     g.poly(pline([(491, 687), (626, 708), (676, 693), (557, 537)], W_SEC))
     g.hbar(363, 808, 526, weight=W_SEC)
@@ -432,7 +432,7 @@ def g_hiro() -> Glyph:
       g.diag(760, 540, 620, 250, weight=W_THIN)
       g.hbar(620, 830, 250, weight=W_THIN)
     """
-    g = Glyph("uni62E1", advance=1000, unicode=0x62E1, note="拡：拡8画")
+    g = Glyph("uni62E1", advance=1000, unicode=0x62E1, note="拡：8 画")
     g.hbar(90, 320, 620, weight=W_SEC)
     g.vbar(215, 790, 130, weight=W_SEC)
     g.diag(215, 130, 145, 85, weight=W_THIN)
@@ -459,7 +459,7 @@ def g_ko() -> Glyph:
       撇 (621,427)->(391,36)  W_SEC
       捺 (466,324)->(940,0)  W_SEC
     """
-    g = Glyph("uni6545", advance=1000, unicode=0x6545, note="故：故9画")
+    g = Glyph("uni6545", advance=1000, unicode=0x6545, note="故：9 画")
     g.hbar(60, 455, 452, weight=W_SEC)
     g.poly(pline([(261, 706), (308, 643), (281, 306), (258, 272)], W_SEC))
     g.poly(pline([(123, 254), (156, 216), (192, 18)], W_THIN))
@@ -485,7 +485,7 @@ def g_ya() -> Glyph:
       捺 (551,299)->(565,61)  W_THIN
       横 x251..940 @y26    W_MAIN
     """
-    g = Glyph("uni5C4B", advance=1000, unicode=0x5C4B, note="屋：屋9画")
+    g = Glyph("uni5C4B", advance=1000, unicode=0x5C4B, note="屋：9 画")
     g.poly(pline([(407, 781), (698, 812), (727, 781), (697, 711), (666, 691)], W_SEC))
     g.hbar(385, 738, 637, weight=W_SEC)
     g.poly(pline([(331, 805), (369, 752), (288, 366), (175, 135), (60, 0)], W_MAIN))
@@ -508,7 +508,7 @@ def g_iro() -> Glyph:
       横 x242..643 @y288   W_SEC
       捺 (186,478)->(813,240)  W_MAIN
     """
-    g = Glyph("uni8272", advance=1000, unicode=0x8272, note="色：色6画")
+    g = Glyph("uni8272", advance=1000, unicode=0x8272, note="色：6 画")
     g.poly(pline([(410, 820), (433, 772), (405, 732), (199, 542)], W_SEC))
     g.poly(pline([(377, 654), (513, 676), (559, 662), (435, 498)], W_SEC))
     g.poly(pline([(252, 459), (273, 448), (606, 517), (650, 480), (614, 369), (586, 350)], W_SEC))
@@ -530,7 +530,7 @@ def g_ku() -> Glyph:
       捺 (348,222)->(594,89)  W_SEC
       横 x372..652 @y43    W_SEC
     """
-    g = Glyph("uni82E6", advance=1000, unicode=0x82E6, note="苦：苦8画")
+    g = Glyph("uni82E6", advance=1000, unicode=0x82E6, note="苦：8 画")
     g.hbar(187, 784, 659, weight=W_MAIN)
     g.poly(pline([(307, 757), (351, 726), (385, 547)], W_THIN))
     g.poly(pline([(588, 820), (627, 774), (548, 562)], W_SEC))
@@ -553,7 +553,7 @@ def g_mukae() -> Glyph:
       捺 (62,459)->(260,180)  W_SEC
       横 x60..940 @y79    W_MAIN
     """
-    g = Glyph("uni8FCE", advance=1000, unicode=0x8FCE, note="迎：迎6画")
+    g = Glyph("uni8FCE", advance=1000, unicode=0x8FCE, note="迎：6 画")
     g.poly(pline([(559, 798), (583, 755), (439, 642)], W_THIN))
     g.poly(pline([(375, 652), (416, 604), (422, 348), (568, 444)], W_SEC))
     g.poly(pline([(682, 594), (821, 642), (856, 626), (843, 473), (811, 378), (785, 351), (699, 389)], W_SEC))
@@ -575,7 +575,7 @@ def g_sou() -> Glyph:
       撇 (295,350)->(89,0)  W_SEC
       捺 (350,267)->(911,20)  W_SEC
     """
-    g = Glyph("uni8D70", advance=1000, unicode=0x8D70, note="走：走7画")
+    g = Glyph("uni8D70", advance=1000, unicode=0x8D70, note="走：7 画")
     g.hbar(286, 659, 625, weight=W_SEC)
     g.poly(pline([(445, 820), (491, 783), (468, 488)], W_SEC))
     g.hbar(139, 811, 461, weight=W_MAIN)
@@ -598,7 +598,7 @@ def g_gu() -> Glyph:
       撇 (410,171)->(178,0)  W_SEC
       捺 (573,190)->(769,5)  W_THIN
     """
-    g = Glyph("uni5177", advance=1000, unicode=0x5177, note="具：具8画")
+    g = Glyph("uni5177", advance=1000, unicode=0x5177, note="具：8 画")
     g.vbar(318, 289, 797, weight=W_MAIN)
     g.poly(pline([(351, 786), (378, 772), (597, 820), (646, 771), (621, 341), (595, 322)], W_MAIN))
     g.hbar(368, 527, 655, weight=W_THIN)
@@ -623,7 +623,7 @@ def g_aki() -> Glyph:
       撇 (574,758)->(374,64)  W_MAIN
       捺 (631,365)->(940,67)  W_SEC
     """
-    g = Glyph("uni79CB", advance=1000, unicode=0x79CB, note="秋：秋9画")
+    g = Glyph("uni79CB", advance=1000, unicode=0x79CB, note="秋：9 画")
     g.poly(pline([(435, 715), (371, 722), (145, 604)], W_SEC))
     g.hbar(71, 425, 475, weight=W_SEC)
     g.vbar(293, 0, 636, weight=W_MAIN)
@@ -646,7 +646,7 @@ def g_i() -> Glyph:
       捺 (548,384)->(693,219)  W_THIN
       横 x232..739 @y59    W_MAIN
     """
-    g = Glyph("uni56E0", advance=1000, unicode=0x56E0, note="因：因6画")
+    g = Glyph("uni56E0", advance=1000, unicode=0x56E0, note="因：6 画")
     g.vbar(199, 0, 796, weight=W_MAIN)
     g.poly(pline([(236, 776), (271, 760), (751, 820), (818, 782), (832, 90), (817, 35), (750, 69)], W_MAIN))
     g.hbar(324, 685, 500, weight=W_SEC)
@@ -666,7 +666,7 @@ def g_kyuu() -> Glyph:
       撇 (551,509)->(301,163)  W_SEC
       捺 (602,489)->(940,196)  W_SEC
     """
-    g = Glyph("uni4F11", advance=1000, unicode=0x4F11, note="休：休6画")
+    g = Glyph("uni4F11", advance=1000, unicode=0x4F11, note="休：6 画")
     g.poly(pline([(286, 771), (321, 723), (291, 659), (192, 495), (60, 345)], W_SEC))
     g.vbar(245, 51, 523, weight=W_MAIN)
     g.hbar(371, 803, 544, weight=W_SEC)
@@ -688,7 +688,7 @@ def g_hi() -> Glyph:
       撇 (481,349)->(431,41)  W_SEC
       捺 (496,293)->(940,0)  W_SEC
     """
-    g = Glyph("uni5F7C", advance=1000, unicode=0x5F7C, note="彼：彼8画")
+    g = Glyph("uni5F7C", advance=1000, unicode=0x5F7C, note="彼：8 画")
     g.poly(pline([(311, 745), (334, 701), (298, 645), (142, 490)], W_SEC))
     g.poly(pline([(305, 542), (334, 493), (294, 422), (166, 254), (60, 154)], W_SEC))
     g.vbar(262, 9, 325, weight=W_SEC)
@@ -710,7 +710,7 @@ def g_hou() -> Glyph:
       捺 (653,653)->(700,342)  W_MAIN
       竖 x598  y0..690  W_MAIN
     """
-    g = Glyph("uni90A6", advance=1000, unicode=0x90A6, note="邦：邦6画")
+    g = Glyph("uni90A6", advance=1000, unicode=0x90A6, note="邦：6 画")
     g.hbar(244, 525, 648, weight=W_SEC)
     g.hbar(255, 508, 524, weight=W_SEC)
     g.hbar(139, 545, 381, weight=W_SEC)
@@ -732,7 +732,7 @@ def g_rin() -> Glyph:
       撇 (577,502)->(371,190)  W_SEC
       捺 (630,471)->(940,212)  W_SEC
     """
-    g = Glyph("uni6797", advance=1000, unicode=0x6797, note="林：林8画")
+    g = Glyph("uni6797", advance=1000, unicode=0x6797, note="林：8 画")
     g.hbar(102, 408, 503, weight=W_SEC)
     g.vbar(273, 38, 774, weight=W_MAIN)
     g.poly(pline([(265, 473), (200, 329), (60, 156)], W_SEC))
@@ -756,7 +756,7 @@ def g_kawa() -> Glyph:
       横 x414..571 @y340   W_THIN
       撇 (675,664)->(573,66)  W_MAIN
     """
-    g = Glyph("uni6CB3", advance=1000, unicode=0x6CB3, note="河：河8画")
+    g = Glyph("uni6CB3", advance=1000, unicode=0x6CB3, note="河：8 画")
     g.poly(pline([(160, 814), (253, 761), (276, 724)], W_THIN))
     g.diag(60, 588, 170, 512, weight=W_THIN)
     g.poly(pline([(128, 41), (112, 131), (250, 390)], W_SEC))
@@ -779,7 +779,7 @@ def g_kou() -> Glyph:
       撇 (492,357)->(379,6)  W_SEC
       捺 (555,356)->(940,188)  W_MAIN
     """
-    g = Glyph("uni6297", advance=1000, unicode=0x6297, note="抗：抗7画")
+    g = Glyph("uni6297", advance=1000, unicode=0x6297, note="抗：7 画")
     g.hbar(140, 423, 502, weight=W_SEC)
     g.poly(pline([(282, 757), (329, 717), (312, 65), (290, 4), (178, 55)], W_MAIN))
     g.poly(pline([(60, 170), (112, 166), (411, 392)], W_SEC))
@@ -801,7 +801,7 @@ def g_rei() -> Glyph:
       捺 (321,302)->(514,147)  W_SEC
       捺 (418,176)->(576,0)  W_THIN
     """
-    g = Glyph("uni51B7", advance=1000, unicode=0x51B7, note="冷：冷7画")
+    g = Glyph("uni51B7", advance=1000, unicode=0x51B7, note="冷：7 画")
     g.poly(pline([(108, 724), (191, 662), (214, 617)], W_THIN))
     g.poly(pline([(95, 150), (84, 227), (220, 462)], W_SEC))
     g.poly(pline([(461, 820), (500, 771), (467, 697), (352, 509), (228, 369)], W_SEC))
@@ -826,7 +826,7 @@ def g_ji() -> Glyph:
       g.hbar(560, 830, 120, weight=W_SEC)
       g.vbar(830, 120, 190, weight=W_THIN)
     """
-    g = Glyph("uni5150", advance=1000, unicode=0x5150, note="児：児7画")
+    g = Glyph("uni5150", advance=1000, unicode=0x5150, note="児：7 画")
     g.vbar(280, 800, 340, weight=W_MAIN)
     g.vbar(400, 780, 340, weight=W_SEC)
     g.hbar(400, 680, 732, weight=W_SEC)
@@ -851,7 +851,7 @@ def g_yo() -> Glyph:
       撇 (278,194)->(188,47)  W_THIN
       捺 (595,204)->(751,49)  W_THIN
     """
-    g = Glyph("uni4F59", advance=1000, unicode=0x4F59, note="余：余7画")
+    g = Glyph("uni4F59", advance=1000, unicode=0x4F59, note="余：7 画")
     g.poly(pline([(435, 820), (466, 776), (364, 600), (243, 464), (66, 336)], W_SEC))
     g.poly(pline([(484, 718), (617, 575), (743, 476), (934, 433)], W_SEC))
     g.hbar(329, 608, 462, weight=W_SEC)
@@ -871,7 +871,7 @@ def g_in() -> Glyph:
       捺 (580,643)->(663,392)  W_SEC
       竖 x549  y0..646  W_MAIN
     """
-    g = Glyph("uni5370", advance=1000, unicode=0x5370, note="印：印6画")
+    g = Glyph("uni5370", advance=1000, unicode=0x5370, note="印：6 画")
     g.poly(pline([(398, 820), (420, 775), (269, 655)], W_THIN))
     g.poly(pline([(191, 680), (231, 632), (229, 312), (442, 418)], W_SEC))
     g.hbar(267, 456, 556, weight=W_THIN)
@@ -893,7 +893,7 @@ def g_gyaku() -> Glyph:
       捺 (89,443)->(264,169)  W_SEC
       横 x81..919 @y79    W_MAIN
     """
-    g = Glyph("uni9006", advance=1000, unicode=0x9006, note="逆：逆8画")
+    g = Glyph("uni9006", advance=1000, unicode=0x9006, note="逆：8 画")
     g.dot(523, 713, w=W_THIN, h=127, slant=26)
     g.poly(pline([(713, 820), (743, 786), (628, 648)], W_THIN))
     g.hbar(462, 789, 588, weight=W_SEC)

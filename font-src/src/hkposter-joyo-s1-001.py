@@ -104,7 +104,7 @@ def uni65E5() -> Glyph:
       ④ 中横   中心线 410, x 92..908, 96
       ⑤ 底横   墨迹下缘 0（中心线 48）, x 92..908, 96
     """
-    g = Glyph("uni65E5", advance=1000, unicode=0x65E5, note="日：日/4画")
+    g = Glyph("uni65E5", advance=1000, unicode=0x65E5, note="日：/4画")
     vbar(g, BOX_L, 0, TOP, W_MAIN)
     hbar_top(g, 92, 908, TOP, W_MAIN)
     vbar(g, BOX_R, 0, TOP, W_MAIN)
@@ -125,7 +125,7 @@ def uni4E00() -> Glyph:
     理由：只有一笔，占满 880×96 的墨面就够；再粗会糊成块。
     横画取满宽（与批内满宽横 92..908 同口径），否则单笔字在同批里显得"缩"。
     """
-    g = Glyph("uni4E00", advance=1000, unicode=0x4E00, note="一：一/1画")
+    g = Glyph("uni4E00", advance=1000, unicode=0x4E00, note="一：/1画")
     dbar(g, 92, 385, 908, 425, W_MAIN)
     return g
 
@@ -144,7 +144,7 @@ def uni4EBA() -> Glyph:
     否则两笔在起笔处断开，字形读成「入」；改后捺角约 40°，与撇约 65° 成对比。
     内白：两腿之间的三角空隙起点 y=490 处宽约 200，安全。
     """
-    g = Glyph("uni4EBA", advance=1000, unicode=0x4EBA, note="人：人/2画")
+    g = Glyph("uni4EBA", advance=1000, unicode=0x4EBA, note="人：/2画")
     dbar(g, 480, 790, 150, 60, W_MAIN)
     dbar(g, 350, 490, 855, 60, W_MAIN)
     return g
@@ -162,7 +162,7 @@ def uni5927() -> Glyph:
       ② 撇    (478, 720) → (150, 60), 96（起点压在横带上）
       ③ 捺    (440, 590) → (855, 60), 96（起点压在横带上，与撇合成交叉）
     """
-    g = Glyph("uni5927", advance=1000, unicode=0x5927, note="大：大/3画")
+    g = Glyph("uni5927", advance=1000, unicode=0x5927, note="大：/3画")
     hbar_mid(g, 92, 908, 600, W_MAIN)
     dbar(g, 478, 720, 150, 60, W_MAIN)
     dbar(g, 440, 590, 855, 60, W_MAIN)
@@ -180,7 +180,7 @@ def uni5341() -> Glyph:
       ① 横    中心线 500, x 92..908, 96
       ② 竖    x=500, y 0..820, 96
     """
-    g = Glyph("uni5341", advance=1000, unicode=0x5341, note="十：十/2画")
+    g = Glyph("uni5341", advance=1000, unicode=0x5341, note="十：/2画")
     hbar_mid(g, 92, 908, 500, W_MAIN)
     vbar(g, AXIS, 0, TOP, W_MAIN)
     return g
@@ -197,7 +197,7 @@ def uni4E8C() -> Glyph:
       ① 上横  中心线 580, x 210..790, 96
       ② 下横  墨迹下缘 0, x 92..908, 96
     """
-    g = Glyph("uni4E8C", advance=1000, unicode=0x4E8C, note="二：二/2画")
+    g = Glyph("uni4E8C", advance=1000, unicode=0x4E8C, note="二：/2画")
     hbar_mid(g, 210, 790, 580, W_MAIN)
     hbar_base(g, 92, 908, BASE, W_MAIN)
     return g
@@ -217,7 +217,7 @@ def uni672C() -> Glyph:
       ④ 捺    (430, 620) → (850, 60), 92
       ⑤ 根横  中心线 210, x 320..680, 84（减重，保根横两侧内白）
     """
-    g = Glyph("uni672C", advance=1000, unicode=0x672C, note="本：本/5画")
+    g = Glyph("uni672C", advance=1000, unicode=0x672C, note="本：/5画")
     hbar_mid(g, 92, 908, 640, W_MAIN)
     vbar(g, AXIS, 0, 790, W_MAIN)
     dbar(g, 478, 660, 150, 60, W_SEC)
@@ -241,7 +241,7 @@ def uni4E2D() -> Glyph:
       ⑤ 中竖   x=500, y 0..820, 96
     内白：口内左右两格各宽 166（≥60）；口上 180、口下 250。
     """
-    g = Glyph("uni4E2D", advance=1000, unicode=0x4E2D, note="中：中/4画")
+    g = Glyph("uni4E2D", advance=1000, unicode=0x4E2D, note="中：/4画")
     vbar(g, 240, 250, 640, W_SEC)
     hbar_top(g, 194, 806, 640, W_SEC)
     vbar(g, 760, 250, 640, W_SEC)
@@ -266,7 +266,7 @@ def uni51FA() -> Glyph:
     理由：初版把上山底横与下凵顶端留了一段空带，字形读成上下两个独立件；
           改成「满宽中横 + 上山下凵都挂在中横上」才是出。
     """
-    g = Glyph("uni51FA", advance=1000, unicode=0x51FA, note="出：出/5画")
+    g = Glyph("uni51FA", advance=1000, unicode=0x51FA, note="出：/5画")
     vbar(g, AXIS, 0, TOP, W_MAIN)
     hbar_mid(g, 204, 796, 476, W_SEC)
     vbar(g, 320, 500, 660, W_SEC)
@@ -288,7 +288,7 @@ def uni4E09() -> Glyph:
       ② 中横  中心线 430, x 250..750, 96
       ③ 底横  墨迹下缘 0, x 92..908, 96
     """
-    g = Glyph("uni4E09", advance=1000, unicode=0x4E09, note="三：三/3画")
+    g = Glyph("uni4E09", advance=1000, unicode=0x4E09, note="三：/3画")
     hbar_mid(g, 200, 800, 700, W_MAIN)
     hbar_mid(g, 250, 750, 430, W_MAIN)
     hbar_base(g, 92, 908, BASE, W_MAIN)
@@ -311,7 +311,7 @@ def uni6708() -> Glyph:
       ⑥ 钩     自 (826, 40) 左上挑至 (766, 100), 84
     内白：三道横之间的间距 122 / 176，均远大于 24。
     """
-    g = Glyph("uni6708", advance=1000, unicode=0x6708, note="月：月/4画")
+    g = Glyph("uni6708", advance=1000, unicode=0x6708, note="月：/4画")
     vbar(g, 170, 0, TOP, W_MAIN)
     hbar_top(g, 122, 878, TOP, W_MAIN)
     vbar(g, 830, 0, TOP, W_SEC)
@@ -337,7 +337,7 @@ def uni5206() -> Glyph:
       ⑥ 钩   自 (736, 60) 左上挑至 (676, 120), 84
     内白：八与刀横之间约 50（≥24）。
     """
-    g = Glyph("uni5206", advance=1000, unicode=0x5206, note="分：分/4画")
+    g = Glyph("uni5206", advance=1000, unicode=0x5206, note="分：/4画")
     dbar(g, 400, 770, 160, 600, W_SEC)
     dbar(g, 590, 760, 840, 605, W_SEC)
     hbar_mid(g, 210, 740, 480, W_MAIN)
@@ -366,7 +366,7 @@ def uni6C11() -> Glyph:
           且竖提顶（720）低于顶横上缘（746）；改为竖提上端 746、顶横左端与
           竖提左缘齐平（158 落在竖提墨迹 154..246 内），左上角成为干净方角。
     """
-    g = Glyph("uni6C11", advance=1000, unicode=0x6C11, note="民：民/5画")
+    g = Glyph("uni6C11", advance=1000, unicode=0x6C11, note="民：/5画")
     hbar_mid(g, 158, 840, 700, W_SEC)
     vbar(g, 800, 560, 700, W_SEC)
     hbar_mid(g, 240, 840, 540, W_SEC)
@@ -391,7 +391,7 @@ def uni751F() -> Glyph:
       ④ 中横  中心线 400, x 160..840, 92
       ⑤ 底横  墨迹下缘 0, x 92..908, 96
     """
-    g = Glyph("uni751F", advance=1000, unicode=0x751F, note="生：生/5画")
+    g = Glyph("uni751F", advance=1000, unicode=0x751F, note="生：/5画")
     dbar(g, 370, 780, 280, 645, W_SEC)
     hbar_mid(g, 300, 760, 650, W_SEC)
     vbar(g, AXIS, 30, 700, W_MAIN)
@@ -414,7 +414,7 @@ def uni4E94() -> Glyph:
       ④ 折竖  x=700, y 48..380, 92（与③ 合成 𠃍）
       ⑤ 底横  墨迹下缘 0, x 92..908, 96
     """
-    g = Glyph("uni4E94", advance=1000, unicode=0x4E94, note="五：五/4画")
+    g = Glyph("uni4E94", advance=1000, unicode=0x4E94, note="五：/4画")
     hbar_mid(g, 140, 860, 700, W_MAIN)
     vbar(g, 360, 48, 700, W_SEC)
     hbar_mid(g, 314, 700, 380, W_SEC)
@@ -435,7 +435,7 @@ def uni4E0A() -> Glyph:
       ② 短横  中心线 600, x 448..780, 92（起点贴竖画右缘）
       ③ 底横  墨迹下缘 0, x 92..908, 96
     """
-    g = Glyph("uni4E0A", advance=1000, unicode=0x4E0A, note="上：上/3画")
+    g = Glyph("uni4E0A", advance=1000, unicode=0x4E0A, note="上：/3画")
     vbar(g, 400, 48, 700, W_MAIN)
     hbar_mid(g, 448, 780, 600, W_SEC)
     hbar_base(g, 92, 908, BASE, W_MAIN)
@@ -456,7 +456,7 @@ def uni5E02() -> Glyph:
       ④ 巾横折 墨迹上缘 500（中心线 454）, x 254..746, 92 + 右竖 x=700, 120..454
       ⑤ 巾中竖 x=500, y 0..520, 96（比两侧长，是「市」的识别点）
     """
-    g = Glyph("uni5E02", advance=1000, unicode=0x5E02, note="市：市/5画")
+    g = Glyph("uni5E02", advance=1000, unicode=0x5E02, note="市：/5画")
     vbar(g, AXIS, 690, 800, W_DOT)
     hbar_mid(g, 92, 908, 600, W_MAIN)
     vbar(g, 300, 120, 454, W_SEC)
@@ -481,7 +481,7 @@ def uni5185() -> Glyph:
       ⑤ 内撇  (530, 465) → (350, 90), 92（起笔落在④ 的中段，构成「内」里的「入」）
     内白：内撇与左竖净距 81、内捺与右竖净距 64（≥60）。
     """
-    g = Glyph("uni5185", advance=1000, unicode=0x5185, note="内：内/4画")
+    g = Glyph("uni5185", advance=1000, unicode=0x5185, note="内：/4画")
     vbar(g, 180, 0, 748, W_MAIN)
     hbar_top(g, 132, 868, 748, W_MAIN)
     vbar(g, 820, 0, 748, W_MAIN)
@@ -504,7 +504,7 @@ def uni65B9() -> Glyph:
       ④ 撇    (430, 420) → (260, 40), 92
       ⑤ 钩    自 (696, 70) 左上挑至 (636, 130), 84
     """
-    g = Glyph("uni65B9", advance=1000, unicode=0x65B9, note="方：方/4画")
+    g = Glyph("uni65B9", advance=1000, unicode=0x65B9, note="方：/4画")
     vbar(g, AXIS, 680, 810, W_DOT)
     hbar_mid(g, 150, 850, 650, W_MAIN)
     hbar_mid(g, 240, 700, 420, W_MAIN)
@@ -530,7 +530,7 @@ def uni56DB() -> Glyph:
       ⑥ 内乚竖 x=610, y 190..740, 84
       ⑦ 内乚底 墨迹下缘 190（中心线 232）, x 610..750, 84
     """
-    g = Glyph("uni56DB", advance=1000, unicode=0x56DB, note="四：四/5画")
+    g = Glyph("uni56DB", advance=1000, unicode=0x56DB, note="四：/5画")
     vbar(g, 160, 0, TOP, W_MAIN)
     hbar_top(g, 112, 888, TOP, W_MAIN)
     vbar(g, 840, 0, TOP, W_MAIN)
@@ -555,7 +555,7 @@ def uni4ECA() -> Glyph:
       ④ 乛横  中心线 360, x 390..640, 84
       ⑤ 乛撇  (630, 360) → (390, 100), 92
     """
-    g = Glyph("uni4ECA", advance=1000, unicode=0x4ECA, note="今：今/4画")
+    g = Glyph("uni4ECA", advance=1000, unicode=0x4ECA, note="今：/4画")
     dbar(g, 490, 770, 230, 560, W_SEC)
     dbar(g, 510, 760, 790, 550, W_SEC)
     hbar_mid(g, 320, 640, 480, W_SEC)
@@ -578,7 +578,7 @@ def uni4E5D() -> Glyph:
       ④ 弯底   墨迹下缘 180（中心线 226）, x 700..860, 92
       ⑤ 钩     自 (856, 185) 左上挑至 (806, 255), 84
     """
-    g = Glyph("uni4E5D", advance=1000, unicode=0x4E5D, note="九：九/2画")
+    g = Glyph("uni4E5D", advance=1000, unicode=0x4E5D, note="九：/2画")
     dbar(g, 390, 760, 180, 60, W_SEC)
     hbar_mid(g, 200, 700, 660, W_MAIN)
     vbar(g, 700, 180, 660, W_SEC)
@@ -598,7 +598,7 @@ def uni5165() -> Glyph:
       ① 捺   (390, 780) → (890, 60), 96
       ② 撇   (530, 560) → (150, 60), 92（起笔落在捺的中段）
     """
-    g = Glyph("uni5165", advance=1000, unicode=0x5165, note="入：入/2画")
+    g = Glyph("uni5165", advance=1000, unicode=0x5165, note="入：/2画")
     dbar(g, 390, 780, 890, 60, W_MAIN)
     dbar(g, 530, 560, 150, 60, W_SEC)
     return g
@@ -619,7 +619,7 @@ def uni7ACB() -> Glyph:
       ⑤ 下横  墨迹下缘 0, x 92..908, 96
     中间两笔左右分开（站姿），不交叉——这是「立」与「文」「辛」的区别。
     """
-    g = Glyph("uni7ACB", advance=1000, unicode=0x7ACB, note="立：立/5画")
+    g = Glyph("uni7ACB", advance=1000, unicode=0x7ACB, note="立：/5画")
     vbar(g, AXIS, 700, 800, W_DOT)
     hbar_mid(g, 140, 860, 640, W_SEC)
     dbar(g, 430, 530, 330, 250, W_THIN)
@@ -642,7 +642,7 @@ def uni624B() -> Glyph:
       ④ 竖钩  x=480, y 40..700, 96
       ⑤ 钩    自 (476, 60) 左上挑至 (416, 120), 84
     """
-    g = Glyph("uni624B", advance=1000, unicode=0x624B, note="手：手/4画")
+    g = Glyph("uni624B", advance=1000, unicode=0x624B, note="手：/4画")
     dbar(g, 440, 770, 270, 690, W_THIN)
     hbar_mid(g, 170, 830, 620, W_SEC)
     hbar_mid(g, 92, 908, 430, W_MAIN)
@@ -664,7 +664,7 @@ def uni529B() -> Glyph:
       ③ 撇    (440, 640) → (180, 60), 92
       ④ 钩    自 (696, 190) 左上挑至 (636, 250), 84
     """
-    g = Glyph("uni529B", advance=1000, unicode=0x529B, note="力：力/2画")
+    g = Glyph("uni529B", advance=1000, unicode=0x529B, note="力：/2画")
     hbar_mid(g, 180, 700, 620, W_MAIN)
     vbar(g, 700, 180, 620, W_SEC)
     dbar(g, 440, 640, 180, 60, W_SEC)
@@ -687,7 +687,7 @@ def uni4EE3() -> Glyph:
       ⑤ 弋点   x=790, y 620..740, 84
       ⑥ 钩     自 (818, 130) 右上挑至 (878, 210), 84
     """
-    g = Glyph("uni4EE3", advance=1000, unicode=0x4EE3, note="代：代/5画")
+    g = Glyph("uni4EE3", advance=1000, unicode=0x4EE3, note="代：/5画")
     dbar(g, 300, 780, 150, 600, W_SEC)
     vbar(g, 225, 60, 640, W_SEC)
     hbar_mid(g, 360, 900, 560, W_SEC)
@@ -711,7 +711,7 @@ def uni5186() -> Glyph:
       ④ 中竖  x=500, y 0..796, 96
       ⑤ 底横  墨迹下缘 0, x 162..480, 96（左半封口，右半开口——円 的识别点）
     """
-    g = Glyph("uni5186", advance=1000, unicode=0x5186, note="円：円/4画")
+    g = Glyph("uni5186", advance=1000, unicode=0x5186, note="円：/4画")
     vbar(g, 210, 0, 748, W_MAIN)
     hbar_top(g, 162, 838, 748, W_MAIN)
     vbar(g, 790, 0, 748, W_MAIN)
@@ -734,7 +734,7 @@ def uni5B50() -> Glyph:
       ④ 横    中心线 300, x 150..850, 96
       ⑤ 钩    自 (486, 70) 左上挑至 (426, 130), 84
     """
-    g = Glyph("uni5B50", advance=1000, unicode=0x5B50, note="子：子/3画")
+    g = Glyph("uni5B50", advance=1000, unicode=0x5B50, note="子：/3画")
     hbar_mid(g, 300, 730, 700, W_SEC)
     dbar(g, 720, 690, 460, 490, W_SEC)
     vbar(g, 490, 60, 600, W_MAIN)
@@ -759,7 +759,7 @@ def uni76EE() -> Glyph:
       ⑥ 底横  墨迹下缘 0, x 127..873, 96
     内白：三道横间距 102 / 126，远大于 24。
     """
-    g = Glyph("uni76EE", advance=1000, unicode=0x76EE, note="目：目/5画")
+    g = Glyph("uni76EE", advance=1000, unicode=0x76EE, note="目：/5画")
     vbar(g, BOX_L_N, 0, TOP, W_MAIN)
     hbar_top(g, 127, 873, TOP, W_MAIN)
     vbar(g, BOX_R_N, 0, TOP, W_MAIN)
@@ -786,7 +786,7 @@ def uni5916() -> Glyph:
     理由：初版① 的下端 (160,620) 在② 的左端 (230) 之外，两笔不相接，
           头部呈锯齿状；改为① 下端与② 左端同点 (200,640) 后成为干净方角。
     """
-    g = Glyph("uni5916", advance=1000, unicode=0x5916, note="外：外/5画")
+    g = Glyph("uni5916", advance=1000, unicode=0x5916, note="外：/5画")
     dbar(g, 350, 770, 200, 640, W_SEC)
     hbar_mid(g, 200, 450, 640, W_SEC)
     dbar(g, 445, 630, 150, 110, W_SEC)
@@ -813,7 +813,7 @@ def uni6C0F() -> Glyph:
     理由：撇的下端落在横的墨迹带内（569..651 ⊂ 564..656），横的左端与撇的墨迹
           左缘齐平（279），头部不出现台阶；这是「氏」与「民」共有的左上角处理。
     """
-    g = Glyph("uni6C0F", advance=1000, unicode=0x6C0F, note="氏：氏/4画")
+    g = Glyph("uni6C0F", advance=1000, unicode=0x6C0F, note="氏：/4画")
     dbar(g, 620, 770, 300, 610, W_SEC)
     hbar_mid(g, 279, 800, 610, W_SEC)
     vbar(g, 340, 0, 640, W_SEC)
@@ -838,7 +838,7 @@ def uni5316() -> Glyph:
       ⑤ 匕底  墨迹下缘 130（中心线 176）, x 620..860, 92
       ⑥ 钩    自 (856, 145) 左上挑至 (812, 215), 84
     """
-    g = Glyph("uni5316", advance=1000, unicode=0x5316, note="化：化/4画")
+    g = Glyph("uni5316", advance=1000, unicode=0x5316, note="化：/4画")
     dbar(g, 300, 780, 140, 570, W_SEC)
     vbar(g, 230, 60, 640, W_SEC)
     dbar(g, 790, 770, 520, 570, W_SEC)
@@ -864,7 +864,7 @@ def uni7530() -> Glyph:
       ⑥ 内竖  x=500, y 0..820, 84
     内白：内竖左右各 260 宽；上下两格各 272 高。
     """
-    g = Glyph("uni7530", advance=1000, unicode=0x7530, note="田：田/5画")
+    g = Glyph("uni7530", advance=1000, unicode=0x7530, note="田：/5画")
     vbar(g, 150, 0, TOP, W_MAIN)
     hbar_top(g, 102, 898, TOP, W_MAIN)
     vbar(g, 850, 0, TOP, W_MAIN)
@@ -885,7 +885,7 @@ def uni516B() -> Glyph:
       ① 撇   (430, 740) → (150, 60), 96
       ② 捺   (560, 740) → (860, 60), 96
     """
-    g = Glyph("uni516B", advance=1000, unicode=0x516B, note="八：八/2画")
+    g = Glyph("uni516B", advance=1000, unicode=0x516B, note="八：/2画")
     dbar(g, 430, 740, 150, 60, W_MAIN)
     dbar(g, 560, 740, 860, 60, W_MAIN)
     return g
@@ -905,7 +905,7 @@ def uni516D() -> Glyph:
       ④ 捺    (560, 480) → (860, 60), 92
     内白：亠横下缘 572 与八起笔 480 之间留 92。
     """
-    g = Glyph("uni516D", advance=1000, unicode=0x516D, note="六：六/4画")
+    g = Glyph("uni516D", advance=1000, unicode=0x516D, note="六：/4画")
     vbar(g, AXIS, 700, 810, W_DOT)
     hbar_mid(g, 120, 880, 620, W_MAIN)
     dbar(g, 430, 480, 150, 60, W_SEC)
@@ -927,7 +927,7 @@ def uni4E3B() -> Glyph:
       ④ 竖    x=500, y 0..700, 96
       ⑤ 底横  墨迹下缘 0, x 92..908, 96
     """
-    g = Glyph("uni4E3B", advance=1000, unicode=0x4E3B, note="主：主/5画")
+    g = Glyph("uni4E3B", advance=1000, unicode=0x4E3B, note="主：/5画")
     vbar(g, AXIS, 700, 810, W_DOT)
     hbar_mid(g, 160, 840, 640, W_SEC)
     hbar_mid(g, 230, 770, 400, W_THIN)
@@ -948,7 +948,7 @@ def uni4E0B() -> Glyph:
       ② 竖  x=400, y 60..780, 96
       ③ 点  (452, 580) → (580, 460), 84
     """
-    g = Glyph("uni4E0B", advance=1000, unicode=0x4E0B, note="下：下/3画")
+    g = Glyph("uni4E0B", advance=1000, unicode=0x4E0B, note="下：/3画")
     hbar_mid(g, 120, 880, 700, W_MAIN)
     vbar(g, 400, 60, 780, W_MAIN)
     dbar(g, 452, 580, 580, 460, W_THIN)
@@ -968,7 +968,7 @@ def uni4E0D() -> Glyph:
       ③ 竖  x=490, y 0..720, 96
       ④ 点  (530, 540) → (660, 420), 84
     """
-    g = Glyph("uni4E0D", advance=1000, unicode=0x4E0D, note="不：不/4画")
+    g = Glyph("uni4E0D", advance=1000, unicode=0x4E0D, note="不：/4画")
     hbar_mid(g, 92, 908, 700, W_MAIN)
     dbar(g, 460, 690, 190, 60, W_SEC)
     vbar(g, 490, 0, 720, W_MAIN)
@@ -992,7 +992,7 @@ def uni7528() -> Glyph:
       ⑥ 中竖  x=500, y 0..780, 96
     内白：横间距 146；中竖与左右侧净距 214 / 217。
     """
-    g = Glyph("uni7528", advance=1000, unicode=0x7528, note="用：用/5画")
+    g = Glyph("uni7528", advance=1000, unicode=0x7528, note="用：/5画")
     dbar(g, 210, 790, 140, 40, W_SEC)
     hbar_top(g, 160, 850, TOP, W_MAIN)
     vbar(g, 810, 0, 780, W_MAIN)

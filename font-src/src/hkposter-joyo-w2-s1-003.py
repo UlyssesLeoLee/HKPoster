@@ -116,7 +116,7 @@ def _g_yu() -> Glyph:
       4 一   外框底横   x 138..842，中心线 y=78
       5 人   内撇 (540,610)→(300,200)；内捺 (480,475)→(690,200)
     """
-    g = Glyph("uni56DA", advance=1000, unicode=0x56DA, note="囚：囚5画：囗(3) + 人(2)")
+    g = Glyph("uni56DA", advance=1000, unicode=0x56DA, note="囚：5 画：囗(3) + 人(2)")
     vline(g, 138, 790, 30, W_MAIN)
     g.hbar(138, 842, 742, weight=W_MAIN)
     vline(g, 842, 790, 30, W_MAIN)
@@ -136,7 +136,7 @@ def _g_e() -> Glyph:
       3 ㇆   㔾 横折    上横 x 440..790 @600 + 右竖 x=790 落到 y=390
       4 乚   㔾 竖弯钩  左竖 x=440 落到 250 + 底横 x 440..840 @250 + 右上钩
     """
-    g = Glyph("uni5384", advance=1000, unicode=0x5384, note="厄：厄4画：厂(2) + 㔾(2)")
+    g = Glyph("uni5384", advance=1000, unicode=0x5384, note="厄：4 画：厂(2) + 㔾(2)")
     bar_top(g, 180, 920, W_MAIN)
     g.diag(250, 772, 120, 50, weight=W_MAIN)
     draw_he(g, 440, 790, 840, 600, 250, W_MAIN)
@@ -158,7 +158,7 @@ def _g_tsu() -> Glyph:
       7 丨   方块右竖   x=652，y 820→432
       8 一   方块顶横   x 302..694，顶对齐
     """
-    g = Glyph("uni51F8", advance=1000, unicode=0x51F8, note="凸：凸5画：底座 + 顶块")
+    g = Glyph("uni51F8", advance=1000, unicode=0x51F8, note="凸：5 画：底座 + 顶块")
     bar_base(g, 60, 940, W_MAIN)
     vline(g, 108, 432, BASE, W_MAIN)
     vline(g, 892, 432, BASE, W_MAIN)
@@ -185,7 +185,7 @@ def _g_omi() -> Glyph:
       7 丨   底足右竖   x=652，y 388→0
       8 一   底足底横   x 302..694，底对齐
     """
-    g = Glyph("uni51F9", advance=1000, unicode=0x51F9, note="凹：凹5画：宽顶块 + 窄底足")
+    g = Glyph("uni51F9", advance=1000, unicode=0x51F9, note="凹：5 画：宽顶块 + 窄底足")
     bar_top(g, 60, 940, W_MAIN)
     vline(g, 108, 388, TOP, W_MAIN)
     vline(g, 892, 388, TOP, W_MAIN)
@@ -208,7 +208,7 @@ def _g_nio() -> Glyph:
       3 丿   匕 撇       (620,520)→(330,330)
       4 乚   匕 竖弯钩   竖 x=400 由 600 落到 215 + 底横 x 400..660 @215 + 钩
     """
-    g = Glyph("uni5302", advance=1000, unicode=0x5302, note="匂：匂4画：勹(2) + 匕(2)")
+    g = Glyph("uni5302", advance=1000, unicode=0x5302, note="匂：4 画：勹(2) + 匕(2)")
     draw_men(g, 130, 860, 820, 165, W_MAIN)
     g.diag(620, 520, 330, 330, weight=W_MAIN)
     vline(g, 400, 600, 215, W_MAIN)
@@ -228,7 +228,7 @@ def _g_seki() -> Glyph:
       4 丨   竖         x=615，y 490→30
       5 丶   点         (755,750)→(845,680)
     """
-    g = Glyph("uni65A5", advance=1000, unicode=0x65A5, note="斥：斥5画：斤(4) + 丶(1)")
+    g = Glyph("uni65A5", advance=1000, unicode=0x65A5, note="斥：5 画：斤(4) + 丶(1)")
     g.diag(540, 760, 275, 635, weight=W_SEC)
     g.diag(300, 655, 195, 38, weight=W_MAIN)
     g.hbar(250, 870, 480, weight=W_MAIN)
@@ -247,7 +247,7 @@ def _g_ki() -> Glyph:
       2 一   横         x 280..760，中心线 y=640
       3 乙   横折弯钩   斜段 (730,640)→(430,120) + 底横 x 420..690 @70 + 右上钩
     """
-    g = Glyph("uni4E5E", advance=1000, unicode=0x4E5E, note="乞：乞3画：𠂉(2) + 乙(1)")
+    g = Glyph("uni4E5E", advance=1000, unicode=0x4E5E, note="乞：3 画：𠂉(2) + 乙(1)")
     g.diag(545, 770, 310, 630, weight=W_MAIN)
     g.hbar(280, 760, 640, weight=W_MAIN)
     g.diag(730, 640, 430, 120, weight=W_SEC)
@@ -268,7 +268,7 @@ def _g_katsu() -> Glyph:
       4 一   内横二     x 348..652，中心线 y=300，减重到 84
       5 一   底横       x 190..810，底对齐
     """
-    g = Glyph("uni4E14", advance=1000, unicode=0x4E14, note="且：且5画：目形框 + 外伸底横")
+    g = Glyph("uni4E14", advance=1000, unicode=0x4E14, note="且：5 画：目形框 + 外伸底横")
     vline(g, 348, TOP, 48, W_MAIN)
     bar_top(g, 348, 652, W_MAIN)
     vline(g, 652, TOP, 48, W_MAIN)
@@ -288,7 +288,7 @@ def _g_kin() -> Glyph:
       2 丨   左竖       x=186，y 780→200
       3 丨   中竖       x=500，y 780→55（比两侧竖低，示中竖出头）
     """
-    g = Glyph("uni5DFE", advance=1000, unicode=0x5DFE, note="巾：巾3画：冂 + 中竖")
+    g = Glyph("uni5DFE", advance=1000, unicode=0x5DFE, note="巾：3 画：冂 + 中竖")
     bar_top(g, 140, 860, W_MAIN)
     vline(g, 186, 780, 200, W_SEC)
     vline(g, 814, 780, 200, W_SEC)
@@ -307,7 +307,7 @@ def _g_kin_axe() -> Glyph:
       3 一   横         x 235..890，中心线 y=480
       4 丨   竖         x=620，y 490→30
     """
-    g = Glyph("uni65A4", advance=1000, unicode=0x65A4, note="斤：斤4画：丿 + 丿 + 一 + 丨")
+    g = Glyph("uni65A4", advance=1000, unicode=0x65A4, note="斤：4 画：丿 + 丿 + 一 + 丨")
     g.diag(540, 760, 275, 635, weight=W_MAIN)
     g.diag(300, 655, 195, 38, weight=W_MAIN)
     g.hbar(235, 890, 480, weight=W_MAIN)
@@ -326,7 +326,7 @@ def _g_magari() -> Glyph:
       3 ㇜   厶 撇折     斜段 (560,560)→(390,260) + 底横 x 390..640 @260
       4 丶   厶 点       (610,390)→(675,455)
     """
-    g = Glyph("uni52FE", advance=1000, unicode=0x52FE, note="勾：勾4画：勹(2) + 厶(2)")
+    g = Glyph("uni52FE", advance=1000, unicode=0x52FE, note="勾：4 画：勹(2) + 厶(2)")
     draw_men(g, 130, 860, 820, 150, W_MAIN)
     g.diag(560, 560, 390, 260, weight=W_MAIN)
     g.hbar(390, 640, 260, weight=W_MAIN)
@@ -345,7 +345,7 @@ def _g_tan() -> Glyph:
       4 一   日底横      x 280..720，中心线 y=250
       5 一   下横        x 140..860，底对齐
     """
-    g = Glyph("uni65E6", advance=1000, unicode=0x65E6, note="旦：旦5画：日 + 下横")
+    g = Glyph("uni65E6", advance=1000, unicode=0x65E6, note="旦：5 画：日 + 下横")
     vline(g, 328, TOP, 250, W_MAIN)
     bar_top(g, 328, 672, W_MAIN)
     vline(g, 672, TOP, 250, W_MAIN)
@@ -366,7 +366,7 @@ def _g_han() -> Glyph:
       4 ㇆   㔾 横折     上横 x 430..790 @640 + 右竖 x=790 落到 310
       5 乚   㔾 竖弯钩   左竖 x=430 落到 90 + 底横 x 430..840 @90 + 右上钩
     """
-    g = Glyph("uni6C3E", advance=1000, unicode=0x6C3E, note="氾：氾5画：氵(3) + 㔾(2)")
+    g = Glyph("uni6C3E", advance=1000, unicode=0x6C3E, note="氾：5 画：氵(3) + 㔾(2)")
     draw_sanzui(g, W_DOT)
     draw_he(g, 430, 790, 840, 640, 90, W_MAIN)
     return g
@@ -383,7 +383,7 @@ def _g_hei() -> Glyph:
       4 丿   内撇       (520,620)→(330,175)
       5 丶   内捺       (465,470)→(700,175)
     """
-    g = Glyph("uni4E19", advance=1000, unicode=0x4E19, note="丙：丙5画：一 + 冂 + 人")
+    g = Glyph("uni4E19", advance=1000, unicode=0x4E19, note="丙：5 画：一 + 冂 + 人")
     bar_top(g, 60, 940, W_MAIN)
     vline(g, 140, 780, 60, W_SEC)
     vline(g, 860, 780, 60, W_SEC)
@@ -405,7 +405,7 @@ def _g_bo() -> Glyph:
       5 一   七横       x 440..900，中心线 y=520
       6 乚   七竖弯钩   竖 x=610 由 780 落到 140 + 底横 x 610..870 @140 + 钩
     """
-    g = Glyph("uni20B9F", advance=1000, unicode=0x20B9F, note="𠮟：𠮟5画：⿰口七")
+    g = Glyph("uni20B9F", advance=1000, unicode=0x20B9F, note="𠮟：5 画：⿰口七")
     vline(g, 106, 658, 342, W_SEC)
     g.hbar(60, 370, 658, weight=W_SEC)
     vline(g, 324, 658, 342, W_SEC)

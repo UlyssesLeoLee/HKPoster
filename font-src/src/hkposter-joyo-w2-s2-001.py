@@ -153,7 +153,7 @@ def uni5E74() -> Glyph:
       5 一  下长横  y=190  x 60..940
       6 丨  中长竖  x=490  y 670→190
     """
-    g = Glyph("uni5E74", advance=1000, unicode=0x5E74, note="年：年")
+    g = Glyph("uni5E74", advance=1000, unicode=0x5E74, note="年：")
     _d(g, 325, 775, 190, 650, W_THIN)
     _h(g, 200, 800, 670)
     _v(g, 175, 670, 440, W_THIN)
@@ -177,7 +177,7 @@ def uni9577() -> Glyph:
       6 ノ  撇        (250,370)→(110,90)
       7 ㇏  捺        (420,330)→(810,80)
     """
-    g = Glyph("uni9577", advance=1000, unicode=0x9577, note="長：長")
+    g = Glyph("uni9577", advance=1000, unicode=0x9577, note="長：")
     _v(g, 190, 820, 350)
     _h(g, 190, 660, 760, W_SEC)
     _h(g, 190, 780, 620, W_SEC)
@@ -260,7 +260,7 @@ def uni4E8B() -> Glyph:
       9 一  底长横  y=48   x 60..940
      10 亅  中竖    x=500  y 772→96
     """
-    g = Glyph("uni4E8B", advance=1000, unicode=0x4E8B, note="事：事")
+    g = Glyph("uni4E8B", advance=1000, unicode=0x4E8B, note="事：")
     _bt(g, 60, 940)
     _h(g, 230, 730, 650, W_THIN)
     _v(g, 272, 650, 510, W_THIN)
@@ -426,7 +426,7 @@ def uni524D() -> Glyph:
       9 丨  刂短竖  x=680  y 560→120
      10 亅  刂长竖  x=890  y 600→60
     """
-    g = Glyph("uni524D", advance=1000, unicode=0x524D, note="前：前")
+    g = Glyph("uni524D", advance=1000, unicode=0x524D, note="前：")
     _dot(g, 300, 760, W_DOT, 84)
     _dot(g, 700, 760, W_DOT, 84)
     _h(g, 60, 940, 650)
@@ -546,7 +546,7 @@ def uni6771() -> Glyph:
       8 ノ  撇      (400,270)→(150,60)
       9 ㇏  捺      (600,270)→(860,60)
     """
-    g = Glyph("uni6771", advance=1000, unicode=0x6771, note="東：東")
+    g = Glyph("uni6771", advance=1000, unicode=0x6771, note="東：")
     _bt(g, 60, 940)
     _v(g, 500, 772, 120)
     _v(g, 210, 610, 270)
@@ -575,7 +575,7 @@ def uni8005() -> Glyph:
       8 一  日中横  y=210  x 300..700
       9 一  日下横  y=48   x 300..700
     """
-    g = Glyph("uni8005", advance=1000, unicode=0x8005, note="者：者")
+    g = Glyph("uni8005", advance=1000, unicode=0x8005, note="者：")
     _h(g, 300, 900, 740)
     _v(g, 600, 740, 600)
     _h(g, 120, 880, 600)
@@ -740,7 +740,7 @@ def uni91D1() -> Glyph:
       7 丨  中竖    x=500  y 330→150
       8 一  底横    y=48   x 140..860
     """
-    g = Glyph("uni91D1", advance=1000, unicode=0x91D1, note="金：金")
+    g = Glyph("uni91D1", advance=1000, unicode=0x91D1, note="金：")
     _d(g, 475, 765, 150, 560)
     _d(g, 525, 715, 860, 560)
     _h(g, 200, 800, 600)
@@ -765,7 +765,7 @@ def uni7C73() -> Glyph:
       5 ノ  撇      (420,540)→(140,70)
       6 ㇏  捺      (580,540)→(860,70)
     """
-    g = Glyph("uni7C73", advance=1000, unicode=0x7C73, note="米：米")
+    g = Glyph("uni7C73", advance=1000, unicode=0x7C73, note="米：")
     _dot(g, 370, 740, W_DOT, 100)
     _d(g, 700, 780, 620, 680, W_THIN)
     _h(g, 60, 940, 570)
@@ -792,7 +792,7 @@ def uni5B66() -> Glyph:
       9 亅  子竖钩  x=500  y 430→90
      10 一  子长横  y=290  x 130..870
     """
-    g = Glyph("uni5B66", advance=1000, unicode=0x5B66, note="学：学")
+    g = Glyph("uni5B66", advance=1000, unicode=0x5B66, note="学：")
     _dot(g, 240, 768, W_DOT, 84)
     _dot(g, 500, 780, W_DOT, 72)
     _dot(g, 760, 768, W_DOT, 84)
@@ -906,7 +906,7 @@ def uni4EAC() -> Glyph:
       8 丶  小左点  (290,180)
       9 丶  小右点  (710,180)
     """
-    g = Glyph("uni4EAC", advance=1000, unicode=0x4EAC, note="京：京")
+    g = Glyph("uni4EAC", advance=1000, unicode=0x4EAC, note="京：")
     _dot(g, 500, 765, W_DOT, 100)
     _h(g, 130, 870, 650)
     _h(g, 300, 700, 500, W_SEC)
@@ -932,7 +932,7 @@ def uni5168() -> Glyph:
       5 一  下横    y=160  x 160..840
       6 丨  中竖    x=500  y 540→160
     """
-    g = Glyph("uni5168", advance=1000, unicode=0x5168, note="全：全")
+    g = Glyph("uni5168", advance=1000, unicode=0x5168, note="全：")
     _d(g, 475, 765, 160, 570)
     _d(g, 525, 715, 850, 570)
     _h(g, 240, 760, 540)
@@ -955,7 +955,7 @@ def uni8868() -> Glyph:
       6 ノ  撇      (470,480)→(150,80)
       7 ㇏  捺      (530,450)→(860,80)
     """
-    g = Glyph("uni8868", advance=1000, unicode=0x8868, note="表：表")
+    g = Glyph("uni8868", advance=1000, unicode=0x8868, note="表：")
     _h(g, 340, 660, 770, W_THIN)
     _h(g, 250, 750, 630, W_THIN)
     _v(g, 500, 770, 480)

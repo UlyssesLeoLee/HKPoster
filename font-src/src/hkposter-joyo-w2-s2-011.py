@@ -602,7 +602,7 @@ def _g_ame():
     """雨 = 雨。
     一(y774) + 冂(左竖x160 + 横折横160..900 y660 + 右竖x854) + 中竖(x530) + 四点。
     """
-    g = Glyph("uni96E8", advance=1000, unicode=0x96E8, note="雨：雨")
+    g = Glyph("uni96E8", advance=1000, unicode=0x96E8, note="雨：")
     g.hbar(120, 880, 774, W_SEC)
     g.vbar(160, 100, 660, W_SEC)
     g.hbar(160, 900, 660, W_SEC)

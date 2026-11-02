@@ -142,7 +142,7 @@ def _uni8FD4() -> Glyph:
     （长撇是 厂/广 一类偏旁的写法，用在这里会读成“反=厂又”）。
     又 = フ（横 + 撇）+ 乀，二者在 x≈700 处交叠。
     """
-    g = Glyph("uni8FD4", advance=1000, unicode=0x8FD4, note="返：返⿺辶反")
+    g = Glyph("uni8FD4", advance=1000, unicode=0x8FD4, note="返：⿺辶反")
     _shinnyou(g)
     g.diag(450, 815, 360, 665, weight=W_SEC)             # 反の丿（出头于横上）
     g.hbar(360, 915, 700, weight=W_MAIN)                 # 反の一
@@ -160,7 +160,7 @@ def _uni6CB9() -> Glyph:
     中竖 x=630 由 y=60 直上到 820（穿出框顶 60 单位），
     中横 y=410 贯穿框内，内白四格各 ≥ 146×206。
     """
-    g = Glyph("uni6CB9", advance=1000, unicode=0x6CB9, note="油：油⿰氵由")
+    g = Glyph("uni6CB9", advance=1000, unicode=0x6CB9, note="油：⿰氵由")
     _sansui(g)
     kamae(g, 340, 920, 60, 760, weight=W_MAIN)          # 由の框
     g.hbar(340, 920, 410, weight=W_MAIN)                 # 由の中横
@@ -177,7 +177,7 @@ def _uni59BB() -> Glyph:
     横叠横内白 ≥ 58；ヨ的右边竖（x 844..936）与中竖相距 296；
     女的撇点与长撇从 ヨ 的下横之间伸出，与 ヨ 的中横相交。
     """
-    g = Glyph("uni59BB", advance=1000, unicode=0x59BB, note="妻：妻")
+    g = Glyph("uni59BB", advance=1000, unicode=0x59BB, note="妻：")
     # 上部：一 + ヨ + 丨
     g.hbar(60, 930, 752, weight=W_MAIN)                  # 一（最上横）
     g.vbar(500, 240, 820, weight=W_MAIN)                  # 丨（顶端出头）
@@ -200,7 +200,7 @@ def _uni5BA3() -> Glyph:
     亘 占 y 0..566 = 一 + 日 + 一，日的框墨迹 x 290..710 / y 120..444。
     宀 与 亘 之间留白 ≥ 24；日内白三格 ≥ 24。
     """
-    g = Glyph("uni5BA3", advance=1000, unicode=0x5BA3, note="宣：宣⿱宀亘")
+    g = Glyph("uni5BA3", advance=1000, unicode=0x5BA3, note="宣：⿱宀亘")
     # 宀
     g.dot(500, 770, w=88, h=88, slant=SLANT_DOT)         # 丶
     g.hbar(150, 850, 654, weight=W_SEC)                  # 冖の横
@@ -222,7 +222,7 @@ def _uni80CC() -> Glyph:
         占 y 470..820；横不是中部横臂，且竖要高出横画。
     月 = y 0..436，四道横（上 / 内二 / 下）＝三格，格间内白 28–32。
     """
-    g = Glyph("uni80CC", advance=1000, unicode=0x80CC, note="背：背⿱北月")
+    g = Glyph("uni80CC", advance=1000, unicode=0x80CC, note="背：⿱北月")
     # 北 —— 左 丬
     g.vbar(280, 470, 820, weight=W_SEC)                  # 丨（顶出头）
     g.hbar(60, 320, 750, weight=W_SEC)                   # 左上の横
@@ -246,7 +246,7 @@ def _uni662D() -> Glyph:
     部件分区：日 占 x 60..380 / y 100..740（窄长日，中横居中）；
     召 占 x 430..810：刀（𠃌 + 丿）在上 y 500..744，口在下 y 0..380。
     """
-    g = Glyph("uni662D", advance=1000, unicode=0x662D, note="昭：昭⿰日召")
+    g = Glyph("uni662D", advance=1000, unicode=0x662D, note="昭：⿰日召")
     # 日
     g.vbar(108, 100, 740, weight=W_SEC)
     g.vbar(332, 100, 740, weight=W_SEC)
@@ -272,7 +272,7 @@ def _uni6C5F() -> Glyph:
     部件分区：氵 = 左（_sansui）；工 = 右 x 340..930，
     上横墨迹齐 820、下横齐基线，中竖贯通两横。
     """
-    g = Glyph("uni6C5F", advance=1000, unicode=0x6C5F, note="江：江⿰氵工")
+    g = Glyph("uni6C5F", advance=1000, unicode=0x6C5F, note="江：⿰氵工")
     _sansui(g)
     hbar_top(g, 340, 930, weight=W_MAIN)
     hbar_base(g, 340, 930, weight=W_MAIN)
@@ -286,7 +286,7 @@ def _uni5409() -> Glyph:
     部件分区：士 占 y 554..820（上横长 200..800、下横短 280..720、中竖）；
     口 占 y 0..500，墨迹 x 260..740。
     """
-    g = Glyph("uni5409", advance=1000, unicode=0x5409, note="吉：吉⿱士口")
+    g = Glyph("uni5409", advance=1000, unicode=0x5409, note="吉：⿱士口")
     g.hbar(200, 800, 772, weight=W_MAIN)                 # 士の上横
     g.vbar(500, 560, 772, weight=W_MAIN)                 # 士の竖
     g.hbar(280, 720, 600, weight=W_SEC)                  # 士の下横
@@ -304,7 +304,7 @@ def _uni5747() -> Glyph:
     勻 = 右 x 400..900：勹（丿 + 横折钩带左钩）包住 冫（丶 + 提）。
     冫的提按参照比例收短（x 450..720），不抵到勹的右边竖。
     """
-    g = Glyph("uni5747", advance=1000, unicode=0x5747, note="均：均⿰土勻")
+    g = Glyph("uni5747", advance=1000, unicode=0x5747, note="均：⿰土勻")
     _tsuchihen(g)
     # 勹
     g.diag(520, 800, 420, 520, weight=W_SEC)             # 丿
@@ -324,7 +324,7 @@ def _uni9014() -> Glyph:
     人（丿 + 乀）在顶 y 640..810，下接一 + 朩（一 / 亅 / 丿 / 丶）。
     底部余的部件压在辶の底の払之上（留白 ≥ 100）。
     """
-    g = Glyph("uni9014", advance=1000, unicode=0x9014, note="途：途⿺辶余")
+    g = Glyph("uni9014", advance=1000, unicode=0x9014, note="途：⿺辶余")
     _shinnyou(g)
     # 余
     g.diag(640, 800, 420, 640, weight=W_SEC)             # 人の丿
@@ -343,7 +343,7 @@ def _uni82B8() -> Glyph:
     部件分区：艹 占 y 640..820（一 + 两竖穿出）；
     云 占 y 48..606：二（两横）+ 厶（丿折 + 丶）。
     """
-    g = Glyph("uni82B8", advance=1000, unicode=0x82B8, note="芸：芸⿱艹云")
+    g = Glyph("uni82B8", advance=1000, unicode=0x82B8, note="芸：⿱艹云")
     # 艹
     g.hbar(120, 880, 730, weight=W_SEC)
     g.vbar(320, 640, 820, weight=W_SEC)
@@ -363,7 +363,7 @@ def _uni7687() -> Glyph:
     部件分区：白 占 y 440..810（丿 + 日）；王 占 y 0..418（三横 + 中竖）。
     白の框墨迹 x 280..720 / y 440..770，中横减细至 84 保内白 ≥ 31。
     """
-    g = Glyph("uni7687", advance=1000, unicode=0x7687, note="皇：皇⿱白王")
+    g = Glyph("uni7687", advance=1000, unicode=0x7687, note="皇：⿱白王")
     # 白
     g.diag(352, 806, 286, 752, weight=W_THIN)            # 丿
     g.vbar(328, 440, 770, weight=W_SEC)
@@ -386,7 +386,7 @@ def _uni629C() -> Glyph:
     友 = 右 x 366..920：一（顶）+ 丿（长撇）+ 又（横撇 + 捺）。
     友の丿自 y=800 穿一而下到 330，捺自左上向右下到底。
     """
-    g = Glyph("uni629C", advance=1000, unicode=0x629C, note="抜：抜⿰扌友")
+    g = Glyph("uni629C", advance=1000, unicode=0x629C, note="抜：⿰扌友")
     _tehen(g)
     # 友
     g.hbar(430, 900, 700, weight=W_SEC)                  # 一
@@ -403,7 +403,7 @@ def _uni4FBF() -> Glyph:
     部件分区：亻 = 左（_ninben）；更 = 右 x 394..940：
     顶一 + 曰（框含中横）+ 穿框的丿 / 乀 交叠于 x≈640。
     """
-    g = Glyph("uni4FBF", advance=1000, unicode=0x4FBF, note="便：便⿰亻更")
+    g = Glyph("uni4FBF", advance=1000, unicode=0x4FBF, note="便：⿰亻更")
     _ninben(g)
     g.hbar(360, 940, 760, weight=W_SEC)                  # 一
     g.vbar(446, 380, 700, weight=W_SEC)                  # 曰の左竖
@@ -422,7 +422,7 @@ def _uni4F38() -> Glyph:
     部件分区：亻 = 左（_ninben）；申 = 右 x 400..900：
     框 y 300..740，中竖 x=650 上下各出头 60 单位。
     """
-    g = Glyph("uni4F38", advance=1000, unicode=0x4F38, note="伸：伸⿰亻申")
+    g = Glyph("uni4F38", advance=1000, unicode=0x4F38, note="伸：⿰亻申")
     _ninben(g)
     g.vbar(446, 300, 740, weight=W_SEC)
     g.vbar(854, 300, 740, weight=W_SEC)
@@ -440,7 +440,7 @@ def _uni6CE2() -> Glyph:
     乛（横 + 钩）在顶，长丿自右上斜贯至左下，
     丨 在中，㇇（横 + 撇）与乀在 x≈690 交叠。
     """
-    g = Glyph("uni6CE2", advance=1000, unicode=0x6CE2, note="波：波⿰氵皮")
+    g = Glyph("uni6CE2", advance=1000, unicode=0x6CE2, note="波：⿰氵皮")
     _sansui(g)
     g.hbar(430, 900, 765, weight=W_SEC)                  # 乛の横
     g.vbar(856, 700, 765, weight=W_SEC)                  # 乛の折
@@ -459,7 +459,7 @@ def _uni72D9() -> Glyph:
     部件分区：犭 = 左 x 60..340（丿 / 弯钩 / 长丿）；
     且 = 右 x 340..940：冂 + 两分隔横 + 底横（底横左右出头）。
     """
-    g = Glyph("uni72D9", advance=1000, unicode=0x72D9, note="狙：狙⿰犭且")
+    g = Glyph("uni72D9", advance=1000, unicode=0x72D9, note="狙：⿰犭且")
     # 犭
     g.diag(230, 790, 130, 680, weight=W_THIN)            # 上丿
     g.vbar(200, 130, 690, weight=W_SEC)                  # 弯钩
@@ -482,7 +482,7 @@ def _uni5EF6() -> Glyph:
     贯通到底的底之払（不是两个长横组成的“Z”形）；
     正 = 右 x 380..940（一 + 丨 + 一 + 丨 + 底一）。
     """
-    g = Glyph("uni5EF6", advance=1000, unicode=0x5EF6, note="延：延⿺廴正")
+    g = Glyph("uni5EF6", advance=1000, unicode=0x5EF6, note="延：⿺廴正")
     # 廴
     g.hbar(100, 230, 680, weight=W_SEC)                   # 折の横
     g.vbar(165, 500, 680, weight=W_SEC)                   # 折の竖
@@ -504,7 +504,7 @@ def _uni7FBD() -> Glyph:
     每半 = ㇆（横 + 竖带左钩）+ 内点（斜切平行四边形）+ 内提。
     两半同族同档，批内观感统一。
     """
-    g = Glyph("uni7FBD", advance=1000, unicode=0x7FBD, note="羽：羽⿰习习")
+    g = Glyph("uni7FBD", advance=1000, unicode=0x7FBD, note="羽：⿰习习")
     for off in (0, 430):
         g.hbar(60 + off, 400 + off, 772, weight=W_SEC)            # ㇆ の横
         g.vbar(354 + off, 120, 772, weight=W_SEC)                 # ㇆ の折
@@ -521,7 +521,7 @@ def _uni52AA() -> Glyph:
     又 = 右上 x 450..915；力 = 下 x 60..790（横折钩 + 撇），
     横画贯通全宽、竖钩偏右（按参照比例）。
     """
-    g = Glyph("uni52AA", advance=1000, unicode=0x52AA, note="努：努⿱女又力")
+    g = Glyph("uni52AA", advance=1000, unicode=0x52AA, note="努：⿱女又力")
     # 女
     g.diag(330, 810, 215, 625, weight=W_THIN)
     g.diag(215, 625, 340, 440, weight=W_THIN)
@@ -545,7 +545,7 @@ def _uni56FA() -> Glyph:
     部件分区：囗 = 外框墨迹 x 60..940 / y 0..820；
     古 = 内部居中（十 + 口），口的内白 ≥ 104。
     """
-    g = Glyph("uni56FA", advance=1000, unicode=0x56FA, note="固：固⿴囗古")
+    g = Glyph("uni56FA", advance=1000, unicode=0x56FA, note="固：⿴囗古")
     g.vbar(108, 0, 820, weight=W_MAIN)
     g.vbar(892, 0, 820, weight=W_MAIN)
     hbar_top(g, 60, 940, weight=W_MAIN)
@@ -566,7 +566,7 @@ def _uni5247() -> Glyph:
     部件分区：貝 = 左 x 60..560（目字框 + 两撇捺）；
     刂 = 右（短竖 + 长竖带左钩）。
     """
-    g = Glyph("uni5247", advance=1000, unicode=0x5247, note="則：則⿰貝刂")
+    g = Glyph("uni5247", advance=1000, unicode=0x5247, note="則：⿰貝刂")
     # 貝
     g.vbar(108, 280, 800, weight=W_SEC)
     g.vbar(508, 280, 800, weight=W_SEC)
@@ -589,7 +589,7 @@ def _uni4E71() -> Glyph:
     部件分区：舌 = 左 x 60..540（丿 + 十 + 口）；
     乚 = 右 x 654..930（竖 + 向右上扬的底）。
     """
-    g = Glyph("uni4E71", advance=1000, unicode=0x4E71, note="乱：乱⿰舌乚")
+    g = Glyph("uni4E71", advance=1000, unicode=0x4E71, note="乱：⿰舌乚")
     # 舌
     g.diag(100, 690, 520, 745, weight=W_THIN)            # 丿
     g.vbar(310, 360, 720, weight=W_SEC)                  # 丨
@@ -610,7 +610,7 @@ def _uni6D0B() -> Glyph:
     部件分区：氵 = 左（_sansui）；羊 = 右 x 360..920：
     丷（两点）+ 三横 + 贯通的竖。
     """
-    g = Glyph("uni6D0B", advance=1000, unicode=0x6D0B, note="洋：洋⿰氵羊")
+    g = Glyph("uni6D0B", advance=1000, unicode=0x6D0B, note="洋：⿰氵羊")
     _sansui(g)
     g.dot(450, 780, w=W_SEC, h=110, slant=SLANT_DOT)     # 丷の左（点）
     g.dot(820, 780, w=W_SEC, h=110, slant=SLANT_PIE)     # 丷の右（短撇）
@@ -627,7 +627,7 @@ def _uni539A() -> Glyph:
     部件分区：厂 = 一（齐 820）+ 左长撇（x 110..275）；
     日 = x 280..640 / y 380..700；子 = x 240..780 / y 40..360。
     """
-    g = Glyph("uni539A", advance=1000, unicode=0x539A, note="厚：厚⿸厂日子")
+    g = Glyph("uni539A", advance=1000, unicode=0x539A, note="厚：⿸厂日子")
     hbar_top(g, 60, 940, weight=W_MAIN)                  # 厂の一
     g.diag(230, 800, 110, 200, weight=W_SEC)             # 厂の丿
     # 日
@@ -651,7 +651,7 @@ def _uni56F2() -> Glyph:
     部件分区：囗 = 外框 x 60..940 / y 0..820；井 居中 x 200..800，
     左竖作撇（井の第一竖），右竖作直竖。
     """
-    g = Glyph("uni56F2", advance=1000, unicode=0x56F2, note="囲：囲⿴囗井")
+    g = Glyph("uni56F2", advance=1000, unicode=0x56F2, note="囲：⿴囗井")
     g.vbar(108, 0, 820, weight=W_MAIN)
     g.vbar(892, 0, 820, weight=W_MAIN)
     hbar_top(g, 60, 940, weight=W_MAIN)
@@ -670,7 +670,7 @@ def _uni5352() -> Glyph:
     部件分区：亠 = 丶 + 一（y 614..820）；从 = 两个 人（y 390..570）；
     十 = 一 + 竖（竖落到基线）。
     """
-    g = Glyph("uni5352", advance=1000, unicode=0x5352, note="卒：卒⿱亠从十")
+    g = Glyph("uni5352", advance=1000, unicode=0x5352, note="卒：⿱亠从十")
     g.dot(500, 770, w=W_SEC, h=100, slant=SLANT_DOT)     # 亠の丶
     g.hbar(160, 840, 660, weight=W_SEC)                  # 亠の一
     # 从
@@ -690,7 +690,7 @@ def _uni8FEB() -> Glyph:
     部件分区：辶 = 左下（_shinnyou）；白 = 右上 x 380..820，
     丿（短撇）+ 日字框（含中横）。
     """
-    g = Glyph("uni8FEB", advance=1000, unicode=0x8FEB, note="迫：迫⿺辶白")
+    g = Glyph("uni8FEB", advance=1000, unicode=0x8FEB, note="迫：⿺辶白")
     _shinnyou(g)
     g.diag(452, 800, 392, 716, weight=W_THIN)            # 白の丿
     g.vbar(426, 250, 700, weight=W_SEC)
@@ -708,7 +708,7 @@ def _uni627F() -> Glyph:
     贯通的竖 x 514..606；三横 y 258..602；底部左右两扫（丿 / 乀）落地。
     共 8 笔：乛 / 丨 / 三 / 丿 / ㇏。
     """
-    g = Glyph("uni627F", advance=1000, unicode=0x627F, note="承：承")
+    g = Glyph("uni627F", advance=1000, unicode=0x627F, note="承：")
     g.hbar(360, 720, 752, weight=W_SEC)                  # 乛の横
     g.diag(560, 752, 430, 600, weight=W_SEC)             # 乛の撇（自横的中部落下）
     g.vbar(560, 200, 720, weight=W_SEC)                  # 竖
@@ -726,7 +726,7 @@ def _uni7D00() -> Glyph:
     部件分区：糸 = 左（_ito 固定坐标）；己 = 右 x 420..860
     （㇕ + 一 + 乚带右钩）。
     """
-    g = Glyph("uni7D00", advance=1000, unicode=0x7D00, note="紀：紀⿰糸己")
+    g = Glyph("uni7D00", advance=1000, unicode=0x7D00, note="紀：⿰糸己")
     _ito(g)
     g.hbar(420, 860, 714, weight=W_SEC)                  # ㇕ の横
     g.vbar(814, 500, 714, weight=W_SEC)                  # ㇕ の折
@@ -743,7 +743,7 @@ def _uni7D1A() -> Glyph:
     部件分区：糸 = 左（_ito）；及 = 右 x 420..920
     （丿 + ㇇（横折折撇）+ 乀）。
     """
-    g = Glyph("uni7D1A", advance=1000, unicode=0x7D1A, note="級：級⿰糸及")
+    g = Glyph("uni7D1A", advance=1000, unicode=0x7D1A, note="級：⿰糸及")
     _ito(g)
     g.diag(590, 810, 450, 430, weight=W_SEC)             # 丿
     g.hbar(490, 880, 670, weight=W_SEC)                  # ㇇の横
@@ -759,7 +759,7 @@ def _uni5E78() -> Glyph:
     部件分区：土 = 顶 y 604..814；丷 = 两点 y 488..592；
     干 = y 30..444（两横 + 贯通的竖落基线）。
     """
-    g = Glyph("uni5E78", advance=1000, unicode=0x5E78, note="幸：幸⿱土丷干")
+    g = Glyph("uni5E78", advance=1000, unicode=0x5E78, note="幸：⿱土丷干")
     g.hbar(300, 700, 770, weight=W_SEC)                  # 土の一
     g.vbar(500, 620, 770, weight=W_SEC)                  # 土の竖
     g.hbar(240, 760, 650, weight=W_MAIN)                 # 土の底一

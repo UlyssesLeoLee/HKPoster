@@ -180,7 +180,7 @@ def g_mo():
       戊短横 hbar_top(360, 600, 430, 84)
       戊交叉撇 diag(790, 520, 420, 90, 92)
     """
-    g = Glyph("uni8302", advance=1000, unicode=0x8302, note="茂：茂8画艹 + 戊")
+    g = Glyph("uni8302", advance=1000, unicode=0x8302, note="茂：8 画艹 + 戊")
     kusa(g, 250.0, 770.0, drop=210.0)
     g.diag(470.0, 600.0, 120.0, 20.0, weight=W_MAIN)
     hbar_top(g, 100.0, 900.0, 540.0, W_MAIN)
@@ -201,7 +201,7 @@ def g_se():
       廿下横 hbar_top(230, 770, 640, 96)
       日     nichi(300, 700, 0, 520)
     """
-    g = Glyph("uni6614", advance=1000, unicode=0x6614, note="昔：昔8画廿 + 日")
+    g = Glyph("uni6614", advance=1000, unicode=0x6614, note="昔：8 画廿 + 日")
     g.vbar(330.0, 640.0, 820.0, weight=W_MAIN)
     g.vbar(670.0, 640.0, 820.0, weight=W_MAIN)
     hbar_top(g, 230.0, 770.0, 780.0, W_MAIN)
@@ -224,7 +224,7 @@ def g_chi():
       欠长撇  diag(600, 430, 330, 40)
       欠捺    diag(640, 420, 930, 40)
     """
-    g = Glyph("uni8328", advance=1000, unicode=0x8328, note="茨：茨9画艹 + 次")
+    g = Glyph("uni8328", advance=1000, unicode=0x8328, note="茨：9 画艹 + 次")
     kusa(g, 180.0, 820.0)
     g.dot(170.0, 560.0, w=88, h=112, slant=-14)
     g.diag(110.0, 300.0, 270.0, 420.0, weight=W_SEC)
@@ -249,7 +249,7 @@ def g_sai():
       乂捺 diag(340, 640, 930, 60, 96)
       日   nichi(440, 570, 0, 330, 96, 0.52)
     """
-    g = Glyph("uni6589", advance=1000, unicode=0x6589, note="斉：斉8画亠 + 乂 + 日")
+    g = Glyph("uni6589", advance=1000, unicode=0x6589, note="斉：8 画亠 + 乂 + 日")
     g.dot(500.0, 765.0, w=84, h=110, slant=0)
     hbar_top(g, 60.0, 940.0, 700.0, W_MAIN)
     g.diag(660.0, 640.0, 70.0, 60.0, weight=W_MAIN)
@@ -271,7 +271,7 @@ def g_i():
       短撇 diag(430, 260, 170, 30, 92)
       捺   diag(500, 470, 910, 30, 96)
     """
-    g = Glyph("uni8863", advance=1000, unicode=0x8863, note="衣：衣6画亠 + 衣身")
+    g = Glyph("uni8863", advance=1000, unicode=0x8863, note="衣：6 画亠 + 衣身")
     g.dot(500.0, 760.0, w=84, h=110, slant=0)
     hbar_top(g, 60.0, 940.0, 690.0, W_MAIN)
     g.diag(580.0, 640.0, 290.0, 380.0, weight=W_MAIN)
@@ -299,7 +299,7 @@ def g_kata():
       月中横 hbar_top(640, 890, 540, 84)
       月中横2 hbar_top(640, 890, 340, 84)
     """
-    g = Glyph("uni80A9", advance=1000, unicode=0x80A9, note="肩：肩8画戸 + 月")
+    g = Glyph("uni80A9", advance=1000, unicode=0x80A9, note="肩：8 画戸 + 月")
     hbar_top(g, 90.0, 600.0, 820.0, W_MAIN)
     hbar_top(g, 150.0, 560.0, 700.0, W_SEC)
     g.vbar(560.0, 300.0, 700.0, weight=W_SEC)
@@ -329,7 +329,7 @@ def g_do():
       心中点 dot(450, 380, slant -14)
       心右点 dot(650, 390, slant +14)
     """
-    g = Glyph("uni6012", advance=1000, unicode=0x6012, note="怒：怒9画奴 + 心")
+    g = Glyph("uni6012", advance=1000, unicode=0x6012, note="怒：9 画奴 + 心")
     # 女：撇点（先左下再右下）+ 撇 + 横
     g.diag(280.0, 815.0, 215.0, 600.0, weight=W_MAIN)
     g.diag(215.0, 600.0, 470.0, 430.0, weight=W_MAIN)
@@ -360,7 +360,7 @@ def g_ei():
       撇   diag(540, 480, 330, 60, 96)
       捺   diag(620, 470, 900, 40, 96)
     """
-    g = Glyph("uni6CF3", advance=1000, unicode=0x6CF3, note="泳：泳8画氵 + 永")
+    g = Glyph("uni6CF3", advance=1000, unicode=0x6CF3, note="泳：8 画氵 + 永")
     sanzui(g, 150.0)
     g.dot(600.0, 760.0, w=84, h=110, slant=0)
     g.vbar(600.0, 120.0, 640.0, weight=W_MAIN)
@@ -384,7 +384,7 @@ def g_so():
       礻右点 dot(310, 400, slant -14)
       且     soko(450, 890, 0, 760)
     """
-    g = Glyph("uni7956", advance=1000, unicode=0x7956, note="祖：祖9画礻 + 且")
+    g = Glyph("uni7956", advance=1000, unicode=0x7956, note="祖：9 画礻 + 且")
     g.dot(190.0, 770.0, w=84, h=110, slant=0)
     hbar_top(g, 100.0, 330.0, 620.0, W_SEC)
     g.diag(330.0, 600.0, 200.0, 470.0, weight=W_SEC)
@@ -403,7 +403,7 @@ def g_haku():
       白撇 diag(520, 780, 400, 680, 92)
       日   nichi(430, 870, 0, 640, 96, 0.55)
     """
-    g = Glyph("uni6CCA", advance=1000, unicode=0x6CCA, note="泊：泊8画氵 + 白")
+    g = Glyph("uni6CCA", advance=1000, unicode=0x6CCA, note="泊：8 画氵 + 白")
     sanzui(g, 150.0)
     g.diag(520.0, 780.0, 400.0, 680.0, weight=W_SEC)
     nichi(g, 430.0, 870.0, 0.0, 640.0, W_MAIN, mid_frac=0.55)
@@ -423,7 +423,7 @@ def g_jin():
       冫上点 dot(360, 320, slant -14)
       冫下点 dot(390, 130, slant -14)
     """
-    g = Glyph("uni5C3D", advance=1000, unicode=0x5C3D, note="尽：尽6画尺 + 两点")
+    g = Glyph("uni5C3D", advance=1000, unicode=0x5C3D, note="尽：6 画尺 + 两点")
     hbar_top(g, 200.0, 700.0, 760.0, W_MAIN)
     g.vbar(700.0, 560.0, 760.0, weight=W_MAIN)
     hbar_top(g, 200.0, 700.0, 560.0, W_SEC)
@@ -445,7 +445,7 @@ def g_hai():
       不竖 vbar(740, 60, 740, 96)
       不点 dot(860, 480, slant -14)
     """
-    g = Glyph("uni676F", advance=1000, unicode=0x676F, note="杯：杯8画木 + 不")
+    g = Glyph("uni676F", advance=1000, unicode=0x676F, note="杯：8 画木 + 不")
     ki(g, 60.0, 460.0, 0.0, 800.0)
     hbar_top(g, 490.0, 940.0, 760.0, W_MAIN)
     g.diag(720.0, 740.0, 540.0, 400.0, weight=W_MAIN)
@@ -466,7 +466,7 @@ def g_ko():
       瓜点   dot(830, 400, slant -14)
       瓜捺   diag(700, 520, 930, 40, 96)
     """
-    g = Glyph("uni5B64", advance=1000, unicode=0x5B64, note="孤：孤9画子 + 瓜")
+    g = Glyph("uni5B64", advance=1000, unicode=0x5B64, note="孤：9 画子 + 瓜")
     ko(g, 60.0, 470.0, 0.0, 520.0)
     # 瓜：长撇 + 中竖 + 竖提 + 捺
     g.diag(700.0, 790.0, 520.0, 30.0, weight=W_MAIN)
@@ -485,7 +485,7 @@ def g_en():
       上火 hi(60, 940, 400, 820)
       下火 hi(60, 940, 0, 400)
     """
-    g = Glyph("uni708E", advance=1000, unicode=0x708E, note="炎：炎8画火 + 火")
+    g = Glyph("uni708E", advance=1000, unicode=0x708E, note="炎：8 画火 + 火")
     hi(g, 60.0, 940.0, 400.0, 820.0)
     hi(g, 60.0, 940.0, 0.0, 400.0)
     return g
@@ -504,7 +504,7 @@ def g_ju():
       寸竖钩 vbar(700, 40, 400, 96) + diag(700, 45, 645, 105, 84)
       寸点 dot(520, 240, slant -14)
     """
-    g = Glyph("uni5BFF", advance=1000, unicode=0x5BFF, note="寿：寿7画三 + 丿 + 寸")
+    g = Glyph("uni5BFF", advance=1000, unicode=0x5BFF, note="寿：7 画三 + 丿 + 寸")
     hbar_top(g, 280.0, 720.0, 820.0, W_MAIN)
     hbar_top(g, 230.0, 770.0, 700.0, W_MAIN)
     hbar_top(g, 180.0, 820.0, 580.0, W_MAIN)
@@ -531,7 +531,7 @@ def g_shin():
       短竖中 vbar(797, 388, 580, 84)
       短竖下 vbar(460, 48, 388, 84)
     """
-    g = Glyph("uni81E3", advance=1000, unicode=0x81E3, note="臣：臣7画外框 + 短竖")
+    g = Glyph("uni81E3", advance=1000, unicode=0x81E3, note="臣：7 画外框 + 短竖")
     g.vbar(108.0, 0.0, 820.0, weight=W_MAIN)
     hbar_at(g, 60.0, 940.0, 772.0, W_MAIN)
     hbar_at(g, 108.0, 940.0, 580.0, W_MAIN)
@@ -555,7 +555,7 @@ def g_sen():
       戋撇 diag(860, 600, 430, 70, 92)
       戋下横 hbar_top(400, 820, 330, 92)
     """
-    g = Glyph("uni6D45", advance=1000, unicode=0x6D45, note="浅：浅9画氵 + 戋")
+    g = Glyph("uni6D45", advance=1000, unicode=0x6D45, note="浅：9 画氵 + 戋")
     sanzui(g, 150.0)
     hbar_top(g, 400.0, 840.0, 680.0, W_MAIN)
     g.dot(870.0, 760.0, w=84, h=108, slant=-14)
@@ -577,7 +577,7 @@ def g_rei():
       万撇 diag(400, 460, 210, 60, 92)
       力   chikara(600, 940, 40, 620)
     """
-    g = Glyph("uni52B1", advance=1000, unicode=0x52B1, note="励：励7画厉 + 力")
+    g = Glyph("uni52B1", advance=1000, unicode=0x52B1, note="励：7 画厉 + 力")
     hbar_top(g, 90.0, 560.0, 800.0, W_MAIN)
     g.diag(150.0, 790.0, 80.0, 60.0, weight=W_MAIN)
     hbar_top(g, 200.0, 520.0, 620.0, W_SEC)
@@ -601,7 +601,7 @@ def g_kai():
       白撇   diag(520, 500, 400, 400, 84)
       白日   nichi(430, 870, 0, 400, 96, 0.52)
     """
-    g = Glyph("uni7686", advance=1000, unicode=0x7686, note="皆：皆9画比 + 白")
+    g = Glyph("uni7686", advance=1000, unicode=0x7686, note="皆：9 画比 + 白")
     hbar_top(g, 100.0, 420.0, 700.0, W_SEC)
     g.vbar(180.0, 560.0, 820.0, weight=W_SEC)
     g.diag(180.0, 570.0, 420.0, 660.0, weight=W_THIN)
@@ -624,7 +624,7 @@ def g_shin2():
       儿撇 diag(640, 620, 430, 60, 96)
       儿竖弯钩 vbar(760, 120, 620, 96) + diag(760, 130, 900, 200, 84)
     """
-    g = Glyph("uni6C88", advance=1000, unicode=0x6C88, note="沈：沈7画氵 + 冘")
+    g = Glyph("uni6C88", advance=1000, unicode=0x6C88, note="沈：7 画氵 + 冘")
     sanzui(g, 150.0)
     g.dot(620.0, 760.0, w=84, h=110, slant=0)
     hbar_top(g, 560.0, 880.0, 690.0, W_MAIN)
@@ -650,7 +650,7 @@ def g_sei():
       生竖 vbar(660, 40, 660, 96)
       生横 hbar_base(400, 940, 0, 96)
     """
-    g = Glyph("uni7272", advance=1000, unicode=0x7272, note="牲：牲9画牜 + 生")
+    g = Glyph("uni7272", advance=1000, unicode=0x7272, note="牲：9 画牜 + 生")
     g.diag(230.0, 780.0, 150.0, 640.0, weight=W_SEC)
     hbar_top(g, 90.0, 330.0, 600.0, W_SEC)
     hbar_top(g, 110.0, 350.0, 420.0, W_SEC)
@@ -679,7 +679,7 @@ def g_tei():
       巾右折 vbar(620, 60, 420, 92)
       巾中竖 vbar(500, 0, 420, 96)
     """
-    g = Glyph("uni5E1D", advance=1000, unicode=0x5E1D, note="帝：帝9画亠 + 丷 + 冖 + 巾")
+    g = Glyph("uni5E1D", advance=1000, unicode=0x5E1D, note="帝：9 画亠 + 丷 + 冖 + 巾")
     g.dot(500.0, 765.0, w=84, h=100, slant=0)
     hbar_top(g, 150.0, 850.0, 700.0, W_MAIN)
     g.dot(360.0, 570.0, w=88, h=112, slant=-14)
@@ -700,7 +700,7 @@ def g_so2():
       阝 kozato(108)
       且 soko(450, 890, 0, 760)
     """
-    g = Glyph("uni963B", advance=1000, unicode=0x963B, note="阻：阻8画阝 + 且")
+    g = Glyph("uni963B", advance=1000, unicode=0x963B, note="阻：8 画阝 + 且")
     kozato(g, 108.0)
     soko(g, 450.0, 890.0, 0.0, 760.0, W_MAIN)
     return g
@@ -719,7 +719,7 @@ def g_nyu():
       乚竖 vbar(700, 120, 800, 96)
       乚曲 diag(700, 130, 890, 220, 84)
     """
-    g = Glyph("uni4E73", advance=1000, unicode=0x4E73, note="乳：乳8画爫 + 子 + 乚")
+    g = Glyph("uni4E73", advance=1000, unicode=0x4E73, note="乳：8 画爫 + 子 + 乚")
     g.diag(600.0, 780.0, 140.0, 700.0, weight=W_MAIN)
     g.dot(220.0, 600.0, w=84, h=108, slant=14)
     g.dot(390.0, 590.0, w=84, h=108, slant=-14)
@@ -745,7 +745,7 @@ def g_tai():
       寸竖钩 vbar(800, 60, 700, 96) + diag(800, 65, 745, 125, 84)
       寸点 dot(680, 480, slant -14)
     """
-    g = Glyph("uni8010", advance=1000, unicode=0x8010, note="耐：耐9画而 + 寸")
+    g = Glyph("uni8010", advance=1000, unicode=0x8010, note="耐：9 画而 + 寸")
     hbar_top(g, 80.0, 600.0, 800.0, W_MAIN)
     g.diag(330.0, 780.0, 280.0, 630.0, weight=W_THIN)
     g.vbar(140.0, 60.0, 560.0, weight=W_SEC)
@@ -775,7 +775,7 @@ def g_ku():
       工竖   vbar(680, 60, 700, 96)
       工横   hbar_base(420, 940, 0, 96)
     """
-    g = Glyph("uni7D05", advance=1000, unicode=0x7D05, note="紅：紅9画糸 + 工")
+    g = Glyph("uni7D05", advance=1000, unicode=0x7D05, note="紅：9 画糸 + 工")
     g.diag(300.0, 780.0, 200.0, 620.0, weight=W_SEC)
     g.diag(210.0, 640.0, 140.0, 500.0, weight=W_SEC)
     g.diag(140.0, 505.0, 340.0, 570.0, weight=W_SEC)
@@ -800,7 +800,7 @@ def g_hou():
       方横折 hbar_top(250, 720, 340, 92) + vbar(720, 40, 340, 92)
       方撇 diag(560, 340, 250, 30, 92)
     """
-    g = Glyph("uni82B3", advance=1000, unicode=0x82B3, note="芳：芳7画艹 + 方")
+    g = Glyph("uni82B3", advance=1000, unicode=0x82B3, note="芳：7 画艹 + 方")
     kusa(g, 180.0, 820.0)
     g.dot(500.0, 560.0, w=84, h=108, slant=0)
     hbar_top(g, 180.0, 820.0, 480.0, W_MAIN)
@@ -823,7 +823,7 @@ def g_kou():
       交捺 diag(430, 480, 620, 60, 96)
       阝 kozato(700)
     """
-    g = Glyph("uni90CA", advance=1000, unicode=0x90CA, note="郊：郊8画交 + 阝")
+    g = Glyph("uni90CA", advance=1000, unicode=0x90CA, note="郊：8 画交 + 阝")
     g.dot(350.0, 760.0, w=84, h=108, slant=0)
     hbar_top(g, 100.0, 620.0, 700.0, W_MAIN)
     g.diag(480.0, 660.0, 250.0, 420.0, weight=W_SEC)
@@ -846,7 +846,7 @@ def g_tan():
       厂撇 diag(180, 570, 80, 40, 96)
       火   hi(300, 940, 40, 560)
     """
-    g = Glyph("uni70AD", advance=1000, unicode=0x70AD, note="炭：炭9画山 + 灰")
+    g = Glyph("uni70AD", advance=1000, unicode=0x70AD, note="炭：9 画山 + 灰")
     g.vbar(500.0, 716.0, 820.0, weight=W_MAIN)
     g.vbar(250.0, 660.0, 760.0, weight=W_SEC)
     hbar_at(g, 250.0, 750.0, 716.0, W_SEC)
@@ -869,7 +869,7 @@ def g_kou2():
       亘日   nichi(460, 860, 200, 700, 92, 0.5)
       亘底横 hbar_base(380, 940, 0, 96)
     """
-    g = Glyph("uni6052", advance=1000, unicode=0x6052, note="恒：恒9画忄 + 亘")
+    g = Glyph("uni6052", advance=1000, unicode=0x6052, note="恒：9 画忄 + 亘")
     g.dot(130.0, 560.0, w=84, h=112, slant=-14)
     g.vbar(230.0, 0.0, 800.0, weight=W_MAIN)
     g.dot(330.0, 620.0, w=84, h=112, slant=14)
@@ -888,7 +888,7 @@ def g_mou():
             / 中横 hbar(120,880,628) / 下横 hbar(120,880,520)
       下目 me(160, 840, 0, 452, 92)
     """
-    g = Glyph("uni5192", advance=1000, unicode=0x5192, note="冒：冒9画日 + 目")
+    g = Glyph("uni5192", advance=1000, unicode=0x5192, note="冒：9 画日 + 目")
     g.vbar(120.0, 488.0, 820.0, weight=W_LIGHT)
     hbar_at(g, 120.0, 880.0, 772.0, W_SEC)
     g.vbar(880.0, 488.0, 820.0, weight=W_LIGHT)
@@ -915,7 +915,7 @@ def g_yu():
       用中竖 vbar(500, 228, 620, 92)
       力   chikara(140, 860, 0, 220)
     """
-    g = Glyph("uni52C7", advance=1000, unicode=0x52C7, note="勇：勇9画マ + 用 + 力")
+    g = Glyph("uni52C7", advance=1000, unicode=0x52C7, note="勇：9 画マ + 用 + 力")
     # マ：一横（右端折向左下）+ 横下短点
     hbar_top(g, 140.0, 860.0, 820.0, W_MAIN)
     g.diag(850.0, 800.0, 770.0, 720.0, weight=W_THIN)

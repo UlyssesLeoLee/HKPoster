@@ -35,7 +35,7 @@ def glyph_gang() -> Glyph:
     取舍：巷笔画密集，整体降到 84（横 96 保留骨架），让墨量率不压过同族；
       巳的左竖与底弯钩连成一体，保住「己」形识别；氵的两点用 94 宽。
     """
-    g = Glyph("uni6E2F", advance=1000, unicode=0x6E2F, note="港：港（Wave0代表字形）")
+    g = Glyph("uni6E2F", advance=1000, unicode=0x6E2F, note="港：（Wave0代表字形）")
 
     # ---- 氵 ----
     g.dot(158, 700, w=94, h=126, slant=26)      # 氵的上点
@@ -69,7 +69,7 @@ def glyph_ying() -> Glyph:
       日的两个腔各留 24 单位白口、口腔留 24 单位白口（AGENTS.md 铁律 10）；
       彡三撇自上而下等距（每撇落差 190），彼此不相接。
     """
-    g = Glyph("uni5F71", advance=1000, unicode=0x5F71, note="影：影（Wave0代表字形）")
+    g = Glyph("uni5F71", advance=1000, unicode=0x5F71, note="影：（Wave0代表字形）")
 
     # ---- 景上部：日 ----
     # 2026-10-31 回修：日的三横原来中心线 778/700/620、墨迹 736..820 / 662..738 /
@@ -132,7 +132,7 @@ def glyph_cheng() -> Glyph:
       校验：y=430 处斜钩墨 725..809，竖墨 614..706 → 余隙 19；
         y=250（竖底）处斜钩墨 799..883，与竖余隙 93；内撇起笔与斜钩余隙 15。
     """
-    g = Glyph("uni57CE", advance=1000, unicode=0x57CE, note="城：城（Wave0代表字形，2026-10-26返工）")
+    g = Glyph("uni57CE", advance=1000, unicode=0x57CE, note="城：（Wave0代表字形，2026-10-26返工）")
 
     # ---- 土 ----
     g.hbar(90, 320, 570, weight=W_SEC)         # 土的横
@@ -181,7 +181,7 @@ def glyph_ye() -> Glyph:
       校验：横下缘 574 与捺起笔上缘 478 → 余隙 96；
         撇段墨 639..732 与捺起笔墨 474..566 → 余隙 53。
     """
-    g = Glyph("uni591C", advance=1000, unicode=0x591C, note="夜：夜（Wave0代表字形，2026-10-26返工）")
+    g = Glyph("uni591C", advance=1000, unicode=0x591C, note="夜：（Wave0代表字形，2026-10-26返工）")
 
     # ---- 亠 ----
     # 2026-10-31 回修：亠的横原来中心线 710（墨 662..758），与夂的横
@@ -221,7 +221,7 @@ def glyph_feng() -> Glyph:
       校验：口左缘 238 与几的左撇墨（99..191）余隙 47；
         口右缘 732 与几的右竖墨（809..901）余隙 77。
     """
-    g = Glyph("uni98A8", advance=1000, unicode=0x98A8, note="風：風（Wave0代表字形，2026-10-26返工）")
+    g = Glyph("uni98A8", advance=1000, unicode=0x98A8, note="風：（Wave0代表字形，2026-10-26返工）")
 
     # ---- 几 ----
     g.hbar(180, 880, 790, weight=W_SEC)        # 几的顶横

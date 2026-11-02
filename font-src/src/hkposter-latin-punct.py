@@ -341,7 +341,7 @@ def hw_quotesingle() -> Glyph:
 
 def hw_ampersand() -> Glyph:
     """ampersand & & 号：左上闭环 + 右上斜脊 + 下方开口环带。"""
-    g = Glyph("ampersand", advance=ADV_AMP, unicode=0x26, note="&：&号")
+    g = Glyph("ampersand", advance=ADV_AMP, unicode=0x26, note="&：号")
     # 左上闭环（环带自动成洞）
     g.ring(
         ellipse_points(130, 570, 118, 124, count=16),
