@@ -50,6 +50,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 高密字局部减重（四横以上的方框）
 
 TOP = 820.0
 BASE = 0.0
@@ -308,10 +309,12 @@ def glyph_ki() -> Glyph:
 def glyph_chaku() -> Glyph:
     """着（U+7740，12 画）：羊字头 + 丿 + 目。
 
-    部件分区：丷在顶（y 760），三横 680/560/470，长撇斜穿左上，目占下半。
+    部件分区：丷在顶（y 760），三横 680/560/442，长撇斜穿左上，目占下半。
     取舍：羊字头的三横逐级加宽（最下一横 150..860 贯通），
       撇从最下一横左端斜下（45°，与骨架一致），左下的目四横密排，
-      每层白口 29 单位。
+      每层白口 24 单位。
+    2026-10-31 回修：羊字头最下一横与目頂白口 −10、羊字头两道横白口 −4 →
+    最下一横上移 28、目四横上移并局部减重（W_THIN 84 → W_LIGHT 76），白口各 24。
     """
     g = Glyph("uni7740", advance=1000, unicode=0x7740, note="着：羊字头 + 丿 + 目")
 
@@ -322,11 +325,11 @@ def glyph_chaku() -> Glyph:
     g.hbar(250, 720, 680, weight=W_MAIN)
     g.vbar(485, 640, 470, weight=W_SEC)
     g.hbar(270, 700, 560, weight=W_SEC)
-    g.hbar(150, 860, 470, weight=W_MAIN)
+    g.hbar(150, 860, 442, weight=W_MAIN)
     # 丿
     g.diag(360, 400, 140, 180, weight=W_MAIN)
     # 目
-    mu(g, 380, 670, 390, 262, 149, 46, W_THIN)
+    mu(g, 380, 670, 328, 228, 128, 28, W_LIGHT)
     return g
 
 
@@ -421,13 +424,15 @@ def glyph_byou() -> Glyph:
     部件分区：疒占左上（点/横/长撇 + 冫），丙在右下（x 380..900）。
     取舍：疒的长撇极陡（78°）贴左边下行，冫的点与提在撇与框之间；
       丙是「一 + 冂 + 人」，人字的一撇一捺在框内分开，不并成一根。
+    2026-10-31 回修：疒的横与丙的一白口 −6 → 疒的横上抬 30、白口 24，
+    长撇随之平移 12（斜率不变）。
     """
     g = Glyph("uni75C5", advance=1000, unicode=0x75C5, note="病：疒 + 丙")
 
     # 疒
     g.dot(565, 760, w=84, h=100, slant=0)           # 竖点
-    g.hbar(280, 900, 620, weight=W_MAIN)
-    g.diag(300, 600, 190, 60, weight=W_MAIN)        # 疒的长撇
+    g.hbar(280, 900, 650, weight=W_MAIN)
+    g.diag(300, 612, 190, 72, weight=W_MAIN)        # 疒的长撇
     g.dot(190, 530, w=80, h=96, slant=-14)          # 疒内的点
     g.diag(150, 280, 285, 395, weight=W_THIN)       # 疒内的提
     # 丙
@@ -675,18 +680,20 @@ def glyph_you() -> Glyph:
     取舍：艹的两竖穿过顶横；世是「三竖 + 两横 + 底横」，
       中竖与右竖短一截；木的横在 y 250，竖只到 354（不穿世的底横）。
       木的撇捺左右对称展开。
+    2026-10-31 回修：世的底横与木的横白口 −16 → 世的三横局部减重
+    （96/92 → 84）并把中横上移 17、底横上移 34，各层白口 24。
     """
     g = Glyph("uni8449", advance=1000, unicode=0x8449, note="葉：艹 + 世 + 木")
 
     # 艹
     kusa(g, 140, 860, 720, 340, 630, 640)
     # 世
-    g.hbar(110, 890, 580, weight=W_MAIN)            # 世的上横
+    g.hbar(110, 890, 580, weight=W_THIN)            # 世的上横
     g.vbar(330, 580, 330, weight=W_MAIN)            # 世的左竖
     g.vbar(500, 580, 455, weight=W_SEC)             # 世的中竖
     g.vbar(670, 580, 455, weight=W_SEC)             # 世的右竖
-    g.hbar(500, 670, 455, weight=W_SEC)             # 世的中横
-    g.hbar(330, 760, 330, weight=W_MAIN)            # 世的底横
+    g.hbar(500, 670, 472, weight=W_THIN)            # 世的中横
+    g.hbar(330, 760, 364, weight=W_THIN)            # 世的底横
     # 木
     g.hbar(200, 800, 250, weight=W_MAIN)
     g.vbar(490, 354, BASE, weight=W_MAIN)

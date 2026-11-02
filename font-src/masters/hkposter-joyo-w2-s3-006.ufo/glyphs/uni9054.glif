@@ -70,10 +70,14 @@
       <point x="450" y="652" type="line"/>
       <point x="940" y="652" type="line"/>
       <point x="940" y="748" type="line"/>
-      <point x="900" y="748" type="line"/>
-      <point x="900" y="828" type="line"/>
-      <point x="500" y="828" type="line"/>
-      <point x="500" y="748" type="line"/>
+      <point x="748" y="748" type="line"/>
+      <point x="748" y="772" type="line"/>
+      <point x="900" y="772" type="line"/>
+      <point x="900" y="868" type="line"/>
+      <point x="500" y="868" type="line"/>
+      <point x="500" y="772" type="line"/>
+      <point x="652" y="772" type="line"/>
+      <point x="652" y="748" type="line"/>
     </contour>
   </outline>
 </glyph>

@@ -21,8 +21,8 @@
       <point x="330" y="594" type="line"/>
       <point x="330" y="686" type="line"/>
       <point x="248" y="686" type="line"/>
-      <point x="248" y="780" type="line"/>
-      <point x="152" y="780" type="line"/>
+      <point x="248" y="810" type="line"/>
+      <point x="152" y="810" type="line"/>
       <point x="152" y="686" type="line"/>
       <point x="80" y="686" type="line"/>
       <point x="80" y="594" type="line"/>
@@ -54,24 +54,30 @@
       <point x="454" y="93" type="line"/>
     </contour>
     <contour>
-      <point x="780" y="786" type="line"/>
-      <point x="388" y="786" type="line"/>
-      <point x="388" y="782" type="line"/>
-      <point x="384" y="782" type="line"/>
+      <point x="692" y="808" type="line"/>
+      <point x="476" y="808" type="line"/>
+      <point x="476" y="810" type="line"/>
+      <point x="384" y="810" type="line"/>
       <point x="384" y="520" type="line"/>
       <point x="388" y="520" type="line"/>
-      <point x="388" y="518" type="line"/>
-      <point x="780" y="518" type="line"/>
+      <point x="388" y="512" type="line"/>
+      <point x="780" y="512" type="line"/>
       <point x="780" y="520" type="line"/>
       <point x="784" y="520" type="line"/>
-      <point x="784" y="782" type="line"/>
-      <point x="780" y="782" type="line"/>
+      <point x="784" y="810" type="line"/>
+      <point x="692" y="810" type="line"/>
     </contour>
     <contour>
-      <point x="476" y="694" type="line"/>
-      <point x="692" y="694" type="line"/>
-      <point x="692" y="662" type="line"/>
-      <point x="476" y="662" type="line"/>
+      <point x="476" y="716" type="line"/>
+      <point x="692" y="716" type="line"/>
+      <point x="692" y="688" type="line"/>
+      <point x="476" y="688" type="line"/>
+    </contour>
+    <contour>
+      <point x="476" y="588" type="line"/>
+      <point x="476" y="612" type="line"/>
+      <point x="692" y="612" type="line"/>
+      <point x="692" y="588" type="line"/>
     </contour>
   </outline>
 </glyph>

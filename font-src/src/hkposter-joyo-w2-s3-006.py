@@ -189,13 +189,14 @@ def g_fuku() -> Glyph:
     """復。左「彳」+ 右「复」。
 
     部件分区：彳 x 60..330；复 x 360..940（顶撇 + 横 + 日 + 夂）。
+    2026-10-31 回修：复的横与日的顶白口 −14 → 复的横上抬 38、白口 24。
     """
     g = Glyph("uni5FA9", advance=1000, unicode=0x5FA9,
               note="復：左彳（两撇+竖）+右复（顶撇+横+日+夂）")
     _gyou(g)
     # ---- 复 ----
     g.diag(470, 790, 375, 700, weight=W_THIN)  # 复的顶撇
-    g.hbar(390, 930, 690, weight=W_THIN)       # 复的横
+    g.hbar(390, 930, 728, weight=W_THIN)       # 复的横
     _hi(g, 560, 900, 620, 520, 420, W_THIN)    # 复的日
     # 夂
     g.diag(520, 390, 420, 250, weight=W_THIN)  # 夂的撇
@@ -472,6 +473,7 @@ def g_fuka() -> Glyph:
     """深。左「氵」+ 右「罙」。
 
     部件分区：氵 x 60..290；罙 x 330..940（冖 + 儿 + 木）。
+    2026-10-31 回修：儿的竖弯与木的横白口 −30 → 儿的竖与竖弯上提 54、白口 24。
     """
     g = Glyph("uni6DF1", advance=1000, unicode=0x6DF1,
               note="深：左氵（两短撇+提）+右罙（冖+儿+木）")
@@ -481,8 +483,8 @@ def g_fuka() -> Glyph:
     g.vbar(400, 714, 640, weight=W_THIN)           # 冖的左点
     g.vbar(890, 714, 640, weight=W_THIN)           # 冖的右点
     g.diag(570, 620, 430, 430, weight=W_THIN)      # 儿的撇
-    g.vbar(730, 620, 440, weight=W_THIN)           # 儿的竖
-    g.hbar(730, 900, 440, weight=W_THIN)           # 儿的竖弯
+    g.vbar(730, 620, 494, weight=W_THIN)           # 儿的竖
+    g.hbar(730, 900, 494, weight=W_THIN)           # 儿的竖弯
     # 罙的木
     g.hbar(380, 940, 380, weight=W_MAIN)           # 木的横
     g.vbar(660, 380, 40, weight=W_MAIN)            # 木的竖
@@ -566,13 +568,14 @@ def g_wataru2() -> Glyph:
     """渉。左「氵」+ 右「歩」。
 
     部件分区：氵 x 60..290；歩 x 330..940（止 + 少）。
+    2026-10-31 回修：止的横与止的底横白口 −10 → 止的横上抬 34、白口 24。
     """
     g = Glyph("uni6E09", advance=1000, unicode=0x6E09,
               note="渉：左氵（两短撇+提）+右歩（止+少）")
     _sanzui(g)
     # ---- 止 ----
     g.vbar(400, 700, 560, weight=W_THIN)           # 止的左竖
-    g.hbar(440, 580, 640, weight=W_THIN)           # 止的横
+    g.hbar(440, 580, 674, weight=W_THIN)           # 止的横
     g.vbar(510, 780, 560, weight=W_MAIN)           # 止的中竖
     g.hbar(340, 940, 560, weight=W_MAIN)           # 止的底横
     # ---- 少 ----
@@ -588,12 +591,13 @@ def g_tatsu() -> Glyph:
 
     部件分区：羍 x 430..940（土 + 羊）；辶 x 60..430 的点与折折撇，
     底部长捺横扫 x 140..940。
+    2026-10-31 回修：土的上横与下横白口 −16 → 上横上抬 40、白口 24，土的竖随之上抬。
     """
     g = Glyph("uni9054", advance=1000, unicode=0x9054,
               note="達：左辶（点+折折撇+底捺），右羍（土+羊）")
     # ---- 羍 ----
-    g.hbar(500, 900, 780, weight=W_MAIN)           # 土的上横
-    g.vbar(700, 780, 680, weight=W_MAIN)           # 土的竖
+    g.hbar(500, 900, 820, weight=W_MAIN)           # 土的上横
+    g.vbar(700, 820, 680, weight=W_MAIN)           # 土的竖
     g.hbar(450, 940, 700, weight=W_MAIN)           # 土的下横
     g.dot(540, 580, w=84, h=100, slant=-14)        # 丷左（捺向）
     g.dot(840, 580, w=84, h=100, slant=14)         # 丷右（撇向）

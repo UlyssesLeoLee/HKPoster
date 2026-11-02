@@ -101,13 +101,24 @@ def part_mi(g: Glyph, x: int, y_top: int, y_bar: int, y_bot: int, w: int = W_MAI
     g.diag(x, y_bar - 40, x + 170, y_bot, weight=W_SEC)  # 米的捺
 
 
-def part_you(g: Glyph, x1: int, x2: int, y_top: int, y_bot: int) -> None:
-    """用：左竖 + 横折 + 两横 + 中竖。"""
+def part_you(g: Glyph, x1: int, x2: int, y_top: int, y_bot: int,
+              inner: tuple[int, int] | None = None) -> None:
+    """用：左竖 + 横折 + 两横 + 中竖。
+
+    `inner` 给两道内横的中心线 y；缺省时沿用旧画法（中点 / y_bot+90）。
+    「備」的用是密字，旧画法把两道内横都堆在下半 → 白口 −9（腔封死），
+    因此它显式传 (550, 440)（把两道内横按框高 thirds 均匀分布）。
+    """
     g.vbar(x1, y_top, y_bot, weight=W_THIN)
     g.hbar(x1, x2, y_top, weight=W_THIN)
     g.vbar(x2, y_top, y_bot, weight=W_THIN)
-    g.hbar(x1, x2, (y_top + y_bot) / 2, weight=W_THIN)
-    g.hbar(x1, x2, y_bot + 90, weight=W_THIN)
+    if inner is None:
+        i1 = (y_top + y_bot) / 2
+        i2 = y_bot + 90
+    else:
+        i1, i2 = inner
+    g.hbar(x1, x2, i1, weight=W_THIN)
+    g.hbar(x1, x2, i2, weight=W_THIN)
     g.vbar((x1 + x2) / 2, y_top, y_bot, weight=W_THIN)
 
 
@@ -410,15 +421,17 @@ def glyph_dan() -> Glyph:
 def glyph_itsu() -> Glyph:
     """違（U+9055, 12画）—— 辶 + 韋。
 
-    分区：韋 x 500..940 y 210..810；辶 x 80..880 y 40..790。
+    分区：韋 x 500..940 y 210..826；辶 x 80..880 y 40..790。
+    2026-10-31 回修：韋的橫與上口的底白口 −10 → 韋的橫下移到 432、白口 24；
+    上口框高 90 → 108（腔 24）、下口框高 90 → 108（腔 24）。
     """
     g = Glyph("uni9055", advance=1000, unicode=0x9055, note="違：辶+韋")
     # ---- 韋 ----
     g.hbar(520, 900, 780, weight=W_SEC)  # 韋的上横
-    part_kuchi(g, 600, 820, 690, 600)  # 韋的上口
-    g.hbar(500, 940, 520, weight=W_MAIN)  # 韋的横
+    part_kuchi(g, 600, 820, 654, 546)  # 韋的上口（腔 24）
+    g.hbar(500, 940, 432, weight=W_MAIN)  # 韋的横
     g.vbar(710, 600, 300, weight=W_SEC)  # 韋的竖
-    part_kuchi(g, 600, 820, 300, 210)  # 韋的下口
+    part_kuchi(g, 600, 820, 318, 210)  # 韋的下口（腔 24）
     # ---- 辶 ----
     g.dot(150, 740, w=W_DOT, h=96, slant=-14)  # 辶的点
     g.hbar(80, 240, 620, weight=W_THIN)  # 辶的横折
@@ -540,6 +553,8 @@ def glyph_bi() -> Glyph:
     """備（U+5099, 12画）—— 亻 + 用 + 寸。
 
     分区：亻 x 60..250；𠂉+用 x 300..900 y 330..810；寸 y 60..250。
+    2026-10-31 回修：用的兩道內橫白口 −9（腔封死）→ 兩橫改按框高 thirds 分布
+    （550 / 440），各層白口 26。part_you 加 inner 參數，只有備用新畫法。
     """
     g = Glyph("uni5099", advance=1000, unicode=0x5099, note="備：亻+用+寸")
     # ---- 亻 ----
@@ -547,7 +562,7 @@ def glyph_bi() -> Glyph:
     g.vbar(170, 560, 0, weight=W_MAIN)
     # ---- 𠂉（撇）+ 用 ----
     g.diag(780, 810, 330, 742, weight=W_SEC)
-    part_you(g, 330, 900, 660, 330)
+    part_you(g, 330, 900, 660, 330, inner=(550, 440))
     # ---- 寸 ----
     g.hbar(300, 900, 230, weight=W_SEC)
     g.vbar(800, 230, 0, weight=W_SEC)
@@ -576,13 +591,14 @@ def glyph_hai() -> Glyph:
     """配（U+914D, 10画）—— 酉 + 己。
 
     分区：酉 x 70..500 y 60..792；己 x 560..940 y 140..772。
+    2026-10-31 回修：酉的一與冂的橫白口 −10 → 冂的橫與兩根豎下移 34、白口 24。
     """
     g = Glyph("uni914D", advance=1000, unicode=0x914D, note="配：酉+己")
     # ---- 酉 ----
     g.hbar(70, 500, 740, weight=W_MAIN)
-    g.vbar(140, 660, 60, weight=W_THIN)
-    g.hbar(140, 440, 660, weight=W_THIN)
-    g.vbar(440, 660, 60, weight=W_THIN)
+    g.vbar(140, 626, 60, weight=W_THIN)
+    g.hbar(140, 440, 626, weight=W_THIN)
+    g.vbar(440, 626, 60, weight=W_THIN)
     g.diag(250, 655, 220, 575, weight=W_THIN)  # 酉的内撇
     g.vbar(360, 655, 470, weight=W_THIN)  # 酉的内竖
     g.hbar(140, 440, 470, weight=W_THIN)  # 酉的内横

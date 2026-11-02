@@ -11,16 +11,15 @@
       <point x="440" y="18" type="line"/>
       <point x="440" y="60" type="line"/>
       <point x="482" y="60" type="line"/>
-      <point x="482" y="660" type="line"/>
-      <point x="440" y="660" type="line"/>
-      <point x="440" y="692" type="line"/>
-      <point x="500" y="692" type="line"/>
-      <point x="500" y="788" type="line"/>
-      <point x="70" y="788" type="line"/>
-      <point x="70" y="692" type="line"/>
-      <point x="140" y="692" type="line"/>
-      <point x="140" y="660" type="line"/>
-      <point x="98" y="660" type="line"/>
+      <point x="482" y="626" type="line"/>
+      <point x="440" y="626" type="line"/>
+      <point x="440" y="668" type="line"/>
+      <point x="215" y="668" type="line"/>
+      <point x="211" y="670" type="line"/>
+      <point x="210" y="668" type="line"/>
+      <point x="140" y="668" type="line"/>
+      <point x="140" y="626" type="line"/>
+      <point x="98" y="626" type="line"/>
       <point x="98" y="60" type="line"/>
       <point x="140" y="60" type="line"/>
     </contour>
@@ -31,17 +30,19 @@
       <point x="182" y="102" type="line"/>
     </contour>
     <contour>
-      <point x="191" y="618" type="line"/>
-      <point x="182" y="593" type="line"/>
-      <point x="182" y="618" type="line"/>
-    </contour>
-    <contour>
       <point x="318" y="512" type="line"/>
       <point x="182" y="512" type="line"/>
-      <point x="182" y="589" type="line"/>
+      <point x="182" y="584" type="line"/>
+      <point x="196" y="584" type="line"/>
       <point x="259" y="560" type="line"/>
-      <point x="281" y="618" type="line"/>
-      <point x="318" y="618" type="line"/>
+      <point x="268" y="584" type="line"/>
+      <point x="318" y="584" type="line"/>
+    </contour>
+    <contour>
+      <point x="70" y="788" type="line"/>
+      <point x="70" y="692" type="line"/>
+      <point x="500" y="692" type="line"/>
+      <point x="500" y="788" type="line"/>
     </contour>
     <contour>
       <point x="955" y="166" type="line"/>
