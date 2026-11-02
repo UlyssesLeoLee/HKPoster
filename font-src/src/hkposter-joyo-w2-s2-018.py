@@ -526,7 +526,10 @@ def g_su() -> Glyph:
 
 
 def g_kou_ka() -> Glyph:
-    """肯：止 + 月。"""
+    """肯：止 + 月。
+
+    2026-10-31 回修：止的横（422..518）与月上横（334..426）白口 −4 → 月部下移 40，白口 36。
+    """
     g = Glyph("uni80AF", advance=1000, unicode=0x80AF, note="肯：止 + 月")
     # 止
     g.vbar(500, YT, 420, W_MAIN)
@@ -534,11 +537,11 @@ def g_kou_ka() -> Glyph:
     g.vbar(280, 700, 470, W_THIN)
     g.hbar(XL, XR, 470, W_MAIN)
     # 月
-    g.diag(310, 380, 230, 60, W_SEC)
-    g.hbar(250, 790, 380, W_SEC)
-    g.vbar(744, 380, 80, W_SEC)
-    g.hbar(300, 744, 250, W_THIN)
-    g.hbar(300, 744, 120, W_THIN)
+    g.diag(310, 340, 230, 60, W_SEC)
+    g.hbar(250, 790, 340, W_SEC)
+    g.vbar(744, 340, 80, W_SEC)
+    g.hbar(300, 744, 210, W_THIN)
+    g.hbar(300, 744, 80, W_THIN)
     return g
 
 

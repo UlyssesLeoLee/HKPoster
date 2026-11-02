@@ -282,15 +282,16 @@ def g_5FE0() -> Glyph:
 def g_663C() -> Glyph:
     """昼 U+663C —— 尺 + 旦（9 画）。
 
-    分区：尺 y500..820（尸：顶横 / 右竖 / 下横 + 长撇 + 乀）；
+    分区：尺 y470..820（尸：顶横 724..820 / 右竖 / 下横 604..700 + 长撇 + 乀）；
+    2026-10-31 回修：尸顶横与尸底横白口 −12 → 尸底下移 36，白口 24。
     日 x340..760 / y136..472；底横 y48。
     """
     g = Glyph("uni663C", advance=1000, unicode=0x663C, note="昼：尺 + 旦")
-    g.hbar(200, 660, 772, weight=W_MAIN)             # 1 横（尸顶）
-    g.vbar(660, 640, 820, weight=W_MAIN)             # 2 竖（尸右）
-    g.hbar(200, 660, 688, weight=W_MAIN)             # 3 横（尸底）
-    g.diag(205, 690, 85, 470, weight=W_SEC)          # 4 撇
-    g.diag(290, 660, 540, 560, weight=W_THIN)        # 5 乀
+    g.hbar(200, 660, 772, weight=W_MAIN)             # 1 横（尸顶，墨 724..820）
+    g.vbar(660, 652, 820, weight=W_MAIN)             # 2 竖（尸右）
+    g.hbar(200, 660, 652, weight=W_MAIN)             # 3 横（尸底，墨 604..700）
+    g.diag(205, 652, 85, 470, weight=W_SEC)          # 4 撇
+    g.diag(290, 652, 540, 560, weight=W_THIN)        # 5 乀
     comp_日(g, 340, 760, 136, 472, W_MAIN)            # 日
     g.hbar(90, 910, 48, weight=W_MAIN)               # 横（旦底）
     return g
