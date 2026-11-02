@@ -460,20 +460,25 @@ def _g_setsu() -> Glyph:
 
 
 def _g_hou2() -> Glyph:
-    """泡：氵（左 x60..280）+ 包（右 x320..940：勹 + 巳）。"""
+    """泡：氵（左 x60..280）+ 包（右 x320..940：勹 + 巳）。
+
+    2026-10-31 回修：勹的钩（352..448）与巳的中横（332..428）白口 −76，巳整块糊在勹里。
+    改为勹的竖落到底（180）、巳三横下移重排（580/440/300）→ 腔各 44、勹与巳白口 24。
+    参照 M PLUS 1p Black「泡」实测：包内一块大白区，高 314、宽 301。
+    """
     g = Glyph("uni6CE1", advance=1000, unicode=0x6CE1, note="泡：氵 + 包")
     _sanzui(g, X_L, Y_B, 280, Y_T, w=W_MAIN)
     # 勹
     _diag(g, 560, 790, 380, 560, w=W_MAIN)
     g.hbar(500, 900, 760, weight=W_MAIN)
-    g.vbar(852, 400, 760, weight=W_MAIN)
-    g.hbar(700, 852, 400, weight=W_MAIN)
+    g.vbar(852, 180, 760, weight=W_MAIN)
+    g.hbar(700, 852, 180, weight=W_MAIN)
     # 巳
     g.hbar(480, 780, 580, weight=W_MAIN)
-    g.vbar(732, 380, 580, weight=W_MAIN)
-    g.hbar(480, 732, 380, weight=W_MAIN)
-    g.vbar(520, 200, 380, weight=W_MAIN)
-    g.hbar(520, 840, 200, weight=W_MAIN)
+    g.vbar(732, 440, 580, weight=W_MAIN)
+    g.hbar(480, 732, 440, weight=W_MAIN)
+    g.vbar(520, 300, 440, weight=W_MAIN)
+    g.hbar(480, 840, 300, weight=W_MAIN)
     return g
 
 
@@ -548,7 +553,10 @@ def _g_kyu() -> Glyph:
 
 
 def _g_kyo3() -> Glyph:
-    """享：亠（竖点 + 横）+ 口（中 x250..750 / y340..570）+ 子（乛 + 亅 + 一）。"""
+    """享：亠（竖点 + 横）+ 口（中 x250..750 / y340..570）+ 子（乛 + 亅 + 一）。
+
+    2026-10-31 回修：子的乛横（212..308）与子的一（122..218）白口 −6 → 的一下移 30，白口 24。
+    """
     g = Glyph("uni4EAB", advance=1000, unicode=0x4EAB, note="享：亠 + 口 + 子")
     _dot(g, 500, 765, w=W_DOT, h=100, slant=SL_VERT)
     g.hbar(120, 880, 672, weight=W_MAIN)
@@ -558,7 +566,7 @@ def _g_kyo3() -> Glyph:
     _diag(g, 690, 260, 545, 190, w=W_MAIN)
     g.vbar(500, 280, 40, weight=W_MAIN)
     g.hbar(410, 500, 40, weight=W_MAIN)
-    g.hbar(160, 840, 170, weight=W_MAIN)
+    g.hbar(160, 840, 140, weight=W_MAIN)
     return g
 
 
