@@ -7,26 +7,24 @@
 </note>
   <outline>
     <contour>
-      <point x="715" y="99" type="line"/>
-      <point x="799" y="99" type="line"/>
-      <point x="799" y="183" type="line"/>
-      <point x="799" y="240" type="line"/>
-      <point x="799" y="324" type="line"/>
-      <point x="770" y="324" type="line"/>
-      <point x="770" y="403" type="line"/>
-      <point x="490" y="403" type="line"/>
-      <point x="490" y="324" type="line"/>
-      <point x="469" y="324" type="line"/>
-      <point x="469" y="240" type="line"/>
-      <point x="469" y="183" type="line"/>
-      <point x="469" y="99" type="line"/>
-      <point x="553" y="99" type="line"/>
+      <point x="715" y="69" type="line"/>
+      <point x="799" y="69" type="line"/>
+      <point x="799" y="153" type="line"/>
+      <point x="799" y="210" type="line"/>
+      <point x="799" y="294" type="line"/>
+      <point x="715" y="294" type="line"/>
+      <point x="553" y="294" type="line"/>
+      <point x="469" y="294" type="line"/>
+      <point x="469" y="210" type="line"/>
+      <point x="469" y="153" type="line"/>
+      <point x="469" y="69" type="line"/>
+      <point x="553" y="69" type="line"/>
     </contour>
     <contour>
-      <point x="715" y="183" type="line"/>
-      <point x="553" y="183" type="line"/>
-      <point x="553" y="240" type="line"/>
-      <point x="715" y="240" type="line"/>
+      <point x="715" y="153" type="line"/>
+      <point x="553" y="153" type="line"/>
+      <point x="553" y="210" type="line"/>
+      <point x="715" y="210" type="line"/>
     </contour>
     <contour>
       <point x="169" y="60" type="line"/>
@@ -38,6 +36,12 @@
       <point x="66" y="464" type="line"/>
       <point x="154" y="426" type="line"/>
       <point x="169" y="461" type="line"/>
+    </contour>
+    <contour>
+      <point x="490" y="319" type="line"/>
+      <point x="770" y="319" type="line"/>
+      <point x="770" y="403" type="line"/>
+      <point x="490" y="403" type="line"/>
     </contour>
     <contour>
       <point x="482" y="436" type="line"/>

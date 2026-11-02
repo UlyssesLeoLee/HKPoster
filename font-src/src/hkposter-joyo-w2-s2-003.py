@@ -735,7 +735,8 @@ def uni4FE1() -> Glyph:
       4 横   hmid(375,903, 墨迹上缘 644) w92
       5 横   hmid(482,774, 墨迹上缘 520) w84
       6 横   hmid(490,770, 墨迹上缘 403) w84
-      7-9 口 kou(469,799, 324, 99) w84
+      7-9 口 kou(469,799, 294, 69) w84
+      2026-10-31 回修：言的三与口上横白口 −5 → 整字下移 30，白口 25。
     """
     g = Glyph("uni4FE1", advance=1000, unicode=0x4FE1, note="信：亻 + 言")
     ninben(g)
@@ -743,7 +744,7 @@ def uni4FE1() -> Glyph:
     hmid(g, 375, 903, 644, w=W_SEC)
     hmid(g, 482, 774, 520, w=W_THIN)
     hmid(g, 490, 770, 403, w=W_THIN)
-    kou(g, 469, 799, 324, 99, w=W_THIN)
+    kou(g, 469, 799, 294, 69, w=W_THIN)
     return g
 
 
