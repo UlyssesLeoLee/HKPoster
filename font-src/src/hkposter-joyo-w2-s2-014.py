@@ -30,6 +30,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 TOP = 820.0
 BASE = 0.0
@@ -888,12 +889,12 @@ def g_mou():
       下目 me(160, 840, 0, 452, 92)
     """
     g = Glyph("uni5192", advance=1000, unicode=0x5192, note="冒 9画 日+目")
-    g.vbar(120.0, 488.0, 820.0, weight=W_SEC)
+    g.vbar(120.0, 488.0, 820.0, weight=W_LIGHT)
     hbar_at(g, 120.0, 880.0, 772.0, W_SEC)
-    g.vbar(880.0, 488.0, 820.0, weight=W_SEC)
-    hbar_at(g, 120.0, 880.0, 628.0, W_SEC)
-    hbar_at(g, 120.0, 880.0, 520.0, W_SEC)
-    me(g, 160.0, 840.0, 0.0, 452.0, W_SEC)
+    g.vbar(880.0, 488.0, 820.0, weight=W_LIGHT)
+    hbar_at(g, 120.0, 880.0, 628.0, W_LIGHT)
+    hbar_at(g, 120.0, 880.0, 516.0, W_LIGHT)
+    me(g, 160.0, 840.0, 0.0, 452.0, W_LIGHT)
     return g
 
 

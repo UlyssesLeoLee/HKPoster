@@ -37,6 +37,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 # ---- 点/短撇的斜切档 ----
 # 直接写字面量（不写常量名），check_stroke_angles.py 才能在 AST 里核到每一处 slant：
@@ -334,20 +335,20 @@ def glyph_hi() -> Glyph:
     """
     g = Glyph("uni8CBB", advance=1000, unicode=0x8CBB, note="費：弗+貝")
     # ---- 弗：𠃍(横+折) + 中横 + 竖折折钩 + 丨 + 丨（横画逐层下压，避免压住貝）----
-    g.hbar(110, 890, 772, weight=W_MAIN)  # 弗的上横
-    g.vbar(850, 772, 658, weight=W_THIN)  # 弗的横折竖
-    g.hbar(250, 850, 658, weight=W_THIN)  # 弗的中横
-    g.vbar(250, 658, 550, weight=W_THIN)  # 弗的竖折
-    g.hbar(250, 760, 550, weight=W_THIN)  # 弗的折横
-    g.vbar(420, 800, 430, weight=W_SEC)  # 弗的左竖
-    g.vbar(620, 800, 430, weight=W_SEC)  # 弗的右竖
+    g.hbar(110, 890, 772, weight=W_LIGHT)  # 弗的上横
+    g.vbar(850, 772, 658, weight=W_LIGHT)  # 弗的横折竖
+    g.hbar(250, 850, 658, weight=W_LIGHT)  # 弗的中横
+    g.vbar(250, 658, 550, weight=W_LIGHT)  # 弗的竖折
+    g.hbar(250, 760, 550, weight=W_LIGHT)  # 弗的折横
+    g.vbar(420, 800, 430, weight=W_LIGHT)  # 弗的左竖
+    g.vbar(620, 800, 430, weight=W_LIGHT)  # 弗的右竖
     # ---- 貝：目 + 八 ----
-    g.vbar(260, 442, 118, weight=W_THIN)
-    g.hbar(260, 740, 442, weight=W_THIN)
-    g.vbar(740, 442, 118, weight=W_THIN)
-    g.hbar(260, 740, 334, weight=W_THIN)
-    g.hbar(260, 740, 226, weight=W_THIN)
-    g.hbar(260, 740, 118, weight=W_THIN)
+    g.vbar(260, 442, 118, weight=W_LIGHT)
+    g.hbar(260, 740, 442, weight=W_LIGHT)
+    g.vbar(740, 442, 118, weight=W_LIGHT)
+    g.hbar(260, 740, 334, weight=W_LIGHT)
+    g.hbar(260, 740, 226, weight=W_LIGHT)
+    g.hbar(260, 740, 118, weight=W_LIGHT)
     g.diag(330, 160, 190, 0, weight=W_SEC)  # 貝的撇
     g.diag(670, 160, 810, 0, weight=W_SEC)  # 貝的捺
     return g
@@ -428,10 +429,10 @@ def glyph_itsu() -> Glyph:
     g = Glyph("uni9055", advance=1000, unicode=0x9055, note="違：辶+韋")
     # ---- 韋 ----
     g.hbar(520, 900, 780, weight=W_SEC)  # 韋的上横
-    part_kuchi(g, 600, 820, 654, 546)  # 韋的上口（腔 24）
+    part_kuchi(g, 600, 820, 666, 546)  # 韋的上口（腔 36）
     g.hbar(500, 940, 432, weight=W_MAIN)  # 韋的横
     g.vbar(710, 600, 300, weight=W_SEC)  # 韋的竖
-    part_kuchi(g, 600, 820, 318, 210)  # 韋的下口（腔 24）
+    part_kuchi(g, 600, 820, 318, 198)  # 韋的下口（腔 36）
     # ---- 辶 ----
     g.dot(150, 740, w=W_DOT, h=96, slant=-14)  # 辶的点
     g.hbar(80, 240, 620, weight=W_THIN)  # 辶的横折

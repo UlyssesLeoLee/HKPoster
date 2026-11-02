@@ -37,6 +37,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 X_L = 60          # 字面框左
 X_R = 940         # 字面框右
@@ -312,7 +313,7 @@ def g_敗() -> Glyph:
     """
     g = Glyph("uni6557", advance=1000, unicode=0x6557, note="敗：貝 + 攵")
     # 貝
-    目box(g, 110, 400, 780, 348, w=W_MAIN, w_in=W_THIN)
+    目box(g, 110, 400, 780, 348, w=W_LIGHT, w_in=W_LIGHT)
     g.diag(250, 300, 90, 60, weight=W_SEC)
     g.diag(300, 300, 428, 60, weight=W_SEC)
     # 攵
@@ -348,12 +349,12 @@ def g_買() -> Glyph:
     """
     g = Glyph("uni8CB7", advance=1000, unicode=0x8CB7, note="買：罒 + 貝")
     # 罒
-    g.hbar(130, 870, 772, weight=W_MAIN)
-    g.hbar(130, 870, 652, weight=W_MAIN)
+    g.hbar(130, 870, 772, weight=W_SEC)
+    g.hbar(130, 870, 652, weight=W_SEC)
     g.vbar(382, 820, 604, weight=W_SEC)
     g.vbar(618, 820, 604, weight=W_SEC)
     # 貝
-    目box(g, 180, 820, 580, 148, w=W_MAIN, w_in=W_THIN)
+    目box(g, 180, 820, 580, 148, w=W_LIGHT, w_in=W_LIGHT)
     g.diag(430, 148, 250, 50, weight=W_SEC)
     g.diag(560, 148, 760, 50, weight=W_SEC)
     return g
@@ -590,7 +591,7 @@ def g_週() -> Glyph:
     g.hbar(486, 848, 648, weight=W_SEC)
     g.vbar(664, 712, 540, weight=W_SEC)
     g.hbar(466, 876, 540, weight=W_SEC)
-    box(g, 520, 812, 466, 274, w=W_THIN, wv=W_SEC)
+    box(g, 520, 812, 466, 274, w=W_LIGHT, wv=W_LIGHT)
     return g
 
 
@@ -686,7 +687,7 @@ def g_登() -> Glyph:
     g.dot(470, 636, w=W_DOT, h=96, slant=-14)
     # 豆
     g.hbar(230, 770, 470, weight=W_MAIN)
-    box(g, 272, 728, 396, 204, w=W_THIN, wv=W_SEC)
+    box(g, 272, 728, 396, 204, w=W_LIGHT, wv=W_LIGHT)
     g.dot(362, 150, w=W_DOT, h=76, slant=-14)
     g.dot(640, 150, w=W_DOT, h=76, slant=-14)
     g.hbar(196, 800, 48, weight=W_MAIN)

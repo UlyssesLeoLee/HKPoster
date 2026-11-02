@@ -719,10 +719,10 @@ def glyph_dou() -> Glyph:
     g.diag(560, 810, 330, 670, weight=W_MAIN)        # 重的头撇
     g.hbar(270, 660, 630, weight=W_MAIN)             # 重的上横
     g.hbar(330, 600, 510, weight=W_THIN)            # 日的上横
-    g.vbar(330, 510, 280, weight=W_THIN)            # 日的左竖
-    g.vbar(600, 510, 280, weight=W_THIN)            # 日的右竖
-    g.hbar(330, 600, 400, weight=W_THIN)            # 日的中横
-    g.hbar(330, 600, 300, weight=W_THIN)            # 日的下横
+    g.vbar(330, 510, 280, weight=W_LIGHT)            # 日的左竖
+    g.vbar(600, 510, 280, weight=W_LIGHT)            # 日的右竖
+    g.hbar(330, 600, 400, weight=W_LIGHT)            # 日的中横
+    g.hbar(330, 600, 294, weight=W_LIGHT)            # 日的下横（下移 6：下腔 24→30）
     g.vbar(465, 700, 95, weight=W_MAIN)             # 重的长竖
     g.hbar(320, 600, 185, weight=W_SEC)             # 重下的横
     g.diag(290, 45, 540, 135, weight=W_SEC)         # 最下的提
@@ -798,14 +798,14 @@ def glyph_jun() -> Glyph:
     sanzui(g, 215, 700, 500, 120)
     # 隹：亻头
     g.diag(503, 787, 369, 613, weight=W_MAIN)       # 亻的撇
-    g.vbar(471, 693, 387, weight=W_MAIN)            # 亻的竖
+    g.vbar(471, 693, 387, weight=W_LIGHT)            # 亻的竖
     # 隹：撇 + 四横 + 竖
     g.diag(682, 813, 634, 714, weight=W_THIN)       # 隹的头撇
-    g.hbar(476, 806, 708, weight=W_THIN)            # 隹的第一横
-    g.vbar(634, 690, 420, weight=W_MAIN)            # 隹的竖
-    g.hbar(487, 787, 606, weight=W_THIN)            # 隹的第二横
-    g.hbar(480, 804, 507, weight=W_THIN)            # 隹的第三横
-    g.hbar(482, 842, 405, weight=W_THIN)            # 隹的第四横
+    g.hbar(476, 806, 708, weight=W_LIGHT)            # 隹的第一横
+    g.vbar(634, 690, 420, weight=W_LIGHT)            # 隹的竖
+    g.hbar(487, 787, 606, weight=W_LIGHT)            # 隹的第二横
+    g.hbar(480, 804, 507, weight=W_LIGHT)            # 隹的第三横
+    g.hbar(482, 842, 405, weight=W_LIGHT)            # 隹的第四横
     # 底下的十
     g.hbar(131, 869, 221, weight=W_MAIN)
     g.vbar(492, 339, BASE, weight=W_MAIN)

@@ -46,6 +46,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 CJK_TOP = 820
 
@@ -710,10 +711,10 @@ def glyph_teki() -> Glyph:
 
     # ---- 貝 ----
     g.hbar(280, 720, 600, weight=W_THIN)         # 貝的上横
-    g.vbar(285, 600, 200, weight=W_THIN)         # 貝的左竖
-    g.vbar(715, 600, 200, weight=W_THIN)         # 貝的右竖
-    g.hbar(285, 715, 400, weight=W_THIN)         # 貝的内横 1
-    g.hbar(285, 715, 300, weight=W_THIN)         # 貝的内横 2
+    g.vbar(285, 600, 200, weight=W_LIGHT)         # 貝的左竖
+    g.vbar(715, 600, 200, weight=W_LIGHT)         # 貝的右竖
+    g.hbar(285, 715, 400, weight=W_LIGHT)         # 貝的内横 1
+    g.hbar(285, 715, 300, weight=W_LIGHT)         # 貝的内横 2
     g.hbar(250, 750, 180, weight=W_SEC)          # 貝的底横
     g.diag(430, 170, 280, 60, weight=W_SEC)      # 八的撇
     g.dot(640, 100, w=W_DOT, h=100, slant=16)      # 八的点
@@ -982,8 +983,8 @@ def glyph_kei() -> Glyph:
 
     # ---- 圣 ----
     g.hbar(450, 880, 640, weight=W_SEC)          # 又的横
-    g.diag(870, 640, 500, 380, weight=W_SEC)     # 又的撇
-    g.diag(560, 630, 880, 380, weight=W_SEC)     # 又的捺
+    g.diag(870, 610, 500, 350, weight=W_SEC)     # 又的撇（下移 30，楔腔开）
+    g.diag(560, 600, 880, 350, weight=W_SEC)     # 又的捺（下移 30，楔腔开）
     g.hbar(450, 900, 250, weight=W_SEC)          # 土的横
     g.vbar(675, 250, 120, weight=W_SEC)          # 土的竖
     g.hbar(400, 940, 80, weight=W_SEC)           # 土的底横

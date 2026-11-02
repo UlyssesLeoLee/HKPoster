@@ -372,9 +372,9 @@ def g_zou() -> Glyph:
     g = Glyph("uni9020", advance=1000, unicode=0x9020,
               note="造 9画 ⿻告辶：告(7)+辶(2)")
     g.diag(430, 780, 340, 700, weight=W_SEC)
-    h_at(g, 360, 880, 788, W_SEC)
-    v_at(g, 600, 788, 590, W_SEC)
-    h_at(g, 320, 920, 678, W_SEC)
+    h_at(g, 360, 880, 788, W_THIN)
+    v_at(g, 600, 788, 590, W_THIN)
+    h_at(g, 320, 920, 678, W_THIN)
     kuchi(g, 380, 880, 192, 500, W_SEC)
     mawari(g)
     return g
@@ -401,7 +401,7 @@ def g_gi() -> Glyph:
     tehen(g)
     h_at(g, 380, 900, 700, W_MAIN)
     v_at(g, 640, 790, 520, W_MAIN)
-    h_at(g, 420, 880, 470, W_MAIN)
+    h_at(g, 420, 880, 490, W_MAIN)
     g.diag(860, 490, 430, 60, weight=W_MAIN)
     g.diag(460, 470, 890, 60, weight=W_MAIN)
     return g

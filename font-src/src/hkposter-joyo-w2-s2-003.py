@@ -31,6 +31,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 INK_TOP = 820.0
 INK_BOTTOM = 0.0
@@ -336,7 +337,7 @@ def uni5411() -> Glyph:
     hmid(g, 160, 860, 576, w=W_MAIN)
     vbar(g, 860, 60, 576, w=W_MAIN)
     diag(g, 860, 80, 795, 110, w=W_THIN)
-    kou(g, 342, 645, 438, 250, w=W_SEC)
+    kou(g, 342, 645, 438, 250, w=W_LIGHT)
     return g
 
 
@@ -360,11 +361,11 @@ def uni67FB() -> Glyph:
     vbar(g, 488, 461, 802, w=W_MAIN)
     diag(g, 460, 650, 140, 430, w=W_SEC)
     diag(g, 515, 650, 845, 450, w=W_SEC)
-    vbar(g, 340, 60, 420, w=W_THIN)
-    hmid(g, 357, 647, 420, w=W_THIN)
-    vbar(g, 610, 60, 420, w=W_THIN)
-    hmid(g, 359, 635, 317, w=W_THIN)
-    hmid(g, 359, 633, 216, w=W_THIN)
+    vbar(g, 340, 60, 420, w=W_LIGHT)
+    hmid(g, 357, 647, 420, w=W_LIGHT)
+    vbar(g, 610, 60, 420, w=W_LIGHT)
+    hmid(g, 359, 635, 317, w=W_LIGHT)
+    hmid(g, 359, 633, 216, w=W_LIGHT)
     hbase(g, 143, 841, w=W_SEC)
     return g
 
@@ -466,13 +467,13 @@ def uni8ECD() -> Glyph:
     hmid(g, 201, 833, 780, w=W_SEC)
     vbar(g, 787, 695, 780, w=W_SEC)
     hmid(g, 288, 690, 663, w=W_THIN)
-    vbar(g, 263, 256, 549, w=W_THIN)
-    hmid(g, 266, 744, 570, w=W_THIN)
-    vbar(g, 702, 256, 570, w=W_THIN)
-    hmid(g, 285, 718, 464, w=W_THIN)
-    hmid(g, 301, 687, 359, w=W_THIN)
-    hmid(g, 119, 874, 256, w=W_SEC)
-    vbar(g, 488, 47, 737, w=W_SEC)
+    vbar(g, 263, 256, 549, w=W_LIGHT)
+    hmid(g, 266, 744, 570, w=W_LIGHT)
+    vbar(g, 702, 256, 570, w=W_LIGHT)
+    hmid(g, 285, 718, 464, w=W_LIGHT)
+    hmid(g, 301, 687, 359, w=W_LIGHT)
+    hmid(g, 119, 874, 256, w=W_LIGHT)
+    vbar(g, 488, 47, 737, w=W_LIGHT)
     return g
 
 
@@ -644,9 +645,9 @@ def uni53C2() -> Glyph:
     """
     g = Glyph("uni53C2", advance=1000, unicode=0x53C2, note="参：厶 + 大 + 彡")
     diag(g, 620, 778, 280, 660, w=W_SEC)
-    hmid(g, 280, 645, 660, w=W_SEC)
+    hmid(g, 280, 645, 660, w=W_LIGHT)
     diag(g, 600, 740, 665, 665, w=W_DOT)
-    hmid(g, 99, 838, 557, w=W_MAIN)
+    hmid(g, 99, 838, 557, w=W_LIGHT)
     diag(g, 420, 600, 110, 290, w=W_MAIN)
     diag(g, 525, 580, 845, 300, w=W_MAIN)
     diag(g, 480, 430, 300, 330, w=W_THIN)
@@ -823,7 +824,7 @@ def uni5225() -> Glyph:
       6-7 刂（daoliang）
     """
     g = Glyph("uni5225", advance=1000, unicode=0x5225, note="別：口 + 力 + 刂")
-    kou(g, 157, 500, 755, 560, w=W_SEC)
+    kou(g, 157, 500, 755, 560, w=W_LIGHT)
     hmid(g, 269, 488, 483, w=W_SEC)
     vbar(g, 442, 108, 483, w=W_SEC)
     diag(g, 442, 130, 310, 170, w=W_THIN)

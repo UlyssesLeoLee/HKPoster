@@ -29,6 +29,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 EM_X0 = 60.0
 EM_X1 = 940.0
@@ -368,12 +369,12 @@ def g_choku() -> Glyph:
     g = Glyph("uni76F4", advance=1000, unicode=0x76F4, note="直：十+目+一")
     g.hbar(250, 750, 700, W_MAIN)                        # ① 横（墨 652..748）
     g.vbar(500, 580, 820, W_MAIN)                        # ② 竖
-    g.vbar(298, 256, 580, W_THIN)                        # ③ 目左竖
-    g.vbar(702, 256, 580, W_THIN)                        # ④ 目右竖
-    g.hbar(250, 750, 580, W_THIN)                        # ⑤ 目上横（墨 538..622）
-    g.hbar(250, 750, 472, W_THIN)                        # ⑥ 目中横（墨 430..514）
-    g.hbar(250, 750, 364, W_THIN)                        # ⑦ 目下横（墨 322..406）
-    g.hbar(250, 750, 256, W_THIN)                        # ⑧ 目底横（墨 214..298）
+    g.vbar(298, 256, 580, W_LIGHT)                        # ③ 目左竖
+    g.vbar(702, 256, 580, W_LIGHT)                        # ④ 目右竖
+    g.hbar(250, 750, 580, W_LIGHT)                        # ⑤ 目上横（墨 538..622）
+    g.hbar(250, 750, 472, W_LIGHT)                        # ⑥ 目中横（墨 430..514）
+    g.hbar(250, 750, 364, W_LIGHT)                        # ⑦ 目下横（墨 322..406）
+    g.hbar(250, 750, 256, W_LIGHT)                        # ⑧ 目底横（墨 214..298）
     g.hbar(150, 850, 130, W_MAIN)                        # ⑨ 最下一横（墨 82..178）
     return g
 

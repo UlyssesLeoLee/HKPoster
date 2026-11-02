@@ -79,11 +79,11 @@ def glyph_ying() -> Glyph:
     # 参照 M PLUS 1p Black「影」实测：日槽高 24 单位、宽 199 单位 ——
     # 槽高 24 与本仓门槛一致；本字把日做宽到 x 180..460、竖用 W_HAIR，
     # 内白宽 128（参照 199，海报体更厚，窄一些是风格取舍）。
-    g.hbar(180, 460, 778, weight=W_THIN)       # 日的上横（墨 736..820）
+    g.hbar(180, 460, 778, weight=W_HAIR)       # 日的上横（墨 736..820）
     g.vbar(218, 778, 570, weight=W_HAIR)       # 日的左竖（墨 x 180..256）
     g.vbar(422, 778, 570, weight=W_HAIR)       # 日的右竖（墨 x 384..460）
     g.hbar(180, 460, 674, weight=W_HAIR)       # 日的中横（墨 636..712）
-    g.hbar(180, 460, 570, weight=W_THIN)       # 日的下横（墨 528..612）
+    g.hbar(180, 460, 570, weight=W_HAIR)       # 日的下横（墨 528..612）
 
     # ---- 景：亠 ----
     g.dot(300, 520, w=76, h=70, slant=0)       # 亠的点（墨 485..555，压住日下横）
@@ -91,10 +91,10 @@ def glyph_ying() -> Glyph:
 
     # ---- 景：口 ----
     # 口放大到 x 175..465、竖用 W_HAIR → 内白宽 138（参照 M PLUS「影」口槽宽 174）
-    g.hbar(175, 465, 336, weight=W_THIN)       # 口的上横（墨 294..378）
+    g.hbar(175, 465, 336, weight=W_HAIR)       # 口的上横（墨 294..378）
     g.vbar(213, 336, 228, weight=W_HAIR)       # 口的左竖（墨 x 175..251）
     g.vbar(427, 336, 228, weight=W_HAIR)       # 口的右竖（墨 x 389..465）
-    g.hbar(175, 465, 228, weight=W_THIN)       # 口的下横（墨 186..270）  # HC_SELFTEST_ANCHOR
+    g.hbar(175, 465, 228, weight=W_HAIR)       # 口的下横（墨 186..270）  # HC_SELFTEST_ANCHOR
 
     # ---- 景下部：小 ----
     # 小字头的标准骨架：左点为撇（"/"）、右点为捺（"\\"）。

@@ -38,6 +38,7 @@ W_MAIN = 96   # 主
 W_SEC = 92    # 次
 W_THIN = 84   # 细
 W_DOT = 84    # 点的横向宽度
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 
 # --------------------------------------------------------------------------
@@ -138,11 +139,11 @@ def g_i() -> Glyph:
     g = Glyph(name="uni754F", advance=1000, unicode=0x754F,
               note="畏：上田，下衣字底")
     # 田：竖 / 横折 / 中竖 / 两横（田在上部要占足宽度，与下方一形成横向对比）
-    g.vbar(225, 487, 783, weight=W_SEC)          # 田的左竖
-    bar_top(g, 225, 785, W_MAIN)                 # 田的横折（横）
-    g.vbar(775, 518, 790, weight=W_SEC)          # 田的横折（折）
-    g.vbar(500, 542, 779, weight=W_THIN)         # 田的中竖
-    g.hbar(250, 750, 663, weight=W_THIN)         # 田的中横
+    g.vbar(225, 487, 783, weight=W_LIGHT)          # 田的左竖
+    bar_top(g, 225, 785, W_LIGHT)                 # 田的横折（横）
+    g.vbar(775, 518, 790, weight=W_LIGHT)          # 田的横折（折）
+    g.vbar(500, 542, 779, weight=W_LIGHT)         # 田的中竖
+    g.hbar(250, 750, 663, weight=W_LIGHT)         # 田的中横
     g.hbar(265, 725, 528, weight=W_THIN)         # 田的下横
     # 下部：一 + 竖撇 + 撇 + 捺
     g.hbar(117, 877, 407, weight=W_MAIN)         # 的一

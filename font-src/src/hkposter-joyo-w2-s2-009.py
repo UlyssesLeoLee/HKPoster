@@ -43,6 +43,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 # 全批斜切档位（同类同族同档，GLY-004）
 # hkbuild 的 g.dot：slant 为正 = 平行四边形上缘右移（"/" 形，短撇用）；
@@ -465,10 +466,10 @@ def _uni72D9() -> Glyph:
     g.diag(200, 135, 130, 170, weight=W_THIN)            # 钩
     g.diag(300, 700, 105, 300, weight=W_SEC)             # 长丿
     # 且
-    g.vbar(386, 136, 746, weight=W_SEC)
-    g.vbar(894, 136, 746, weight=W_SEC)
-    g.hbar(340, 940, 700, weight=W_SEC)
-    g.hbar(340, 940, 596, weight=W_THIN)
+    g.vbar(386, 136, 746, weight=W_LIGHT)
+    g.vbar(894, 136, 746, weight=W_LIGHT)
+    g.hbar(340, 940, 700, weight=W_LIGHT)
+    g.hbar(340, 940, 596, weight=W_LIGHT)
     g.hbar(340, 940, 470, weight=W_THIN)
     g.hbar(340, 940, 136, weight=W_SEC)                  # 出头的底横
     return g

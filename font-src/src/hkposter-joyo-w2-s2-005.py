@@ -47,6 +47,7 @@ W_MAIN = 96
 W_SEC = 92
 W_THIN = 84
 W_DOT = 84
+W_LIGHT = 76  # 局部减重（GLY-001 小空腔）
 
 X_L = 60
 X_R = 940
@@ -391,10 +392,10 @@ def uni8EAB() -> Glyph:
     """
     g = Glyph("uni8EAB", advance=1000, unicode=0x8EAB, note="身")
     pie(g, 406, 699, 488, 814, W_THIN)
-    vbar(g, 318, 322, 685, W_MAIN)
-    bar(g, 331, 662, 690, W_THIN)
-    vbar(g, 636, 0, 690, W_SEC)
-    bar(g, 336, 650, 583, W_THIN)
+    vbar(g, 318, 322, 685, W_LIGHT)
+    bar(g, 331, 662, 690, W_LIGHT)
+    vbar(g, 636, 0, 690, W_LIGHT)
+    bar(g, 336, 650, 583, W_LIGHT)
     bar(g, 338, 647, 473, W_THIN)
     ti(g, 153, 274, 652, 401, W_THIN)
     pie(g, 230, 80, 700, 500, W_MAIN)
@@ -454,11 +455,11 @@ def uni98DF() -> Glyph:
     pie(g, 108, 437, 484, 806, W_SEC)
     na(g, 483, 500, 892, 755, W_SEC)
     tick(g, 485, 556, 638, W_THIN)
-    bar(g, 340, 633, 539, W_THIN)
-    vbar(g, 590, 321, 539, W_SEC)
-    bar(g, 368, 590, 444, W_THIN)
-    bar(g, 366, 590, 334, W_THIN)
-    vbar(g, 386, 40, 538, W_SEC)
+    bar(g, 340, 633, 539, W_LIGHT)
+    vbar(g, 590, 321, 539, W_LIGHT)
+    bar(g, 368, 590, 432, W_LIGHT)
+    bar(g, 366, 590, 320, W_THIN)
+    vbar(g, 386, 40, 538, W_LIGHT)
     g.diag(386, 66, 484, 138, weight=W_THIN)
     pie(g, 611, 225, 691, 324, W_THIN)
     na(g, 471, 34, 829, 261, W_SEC)

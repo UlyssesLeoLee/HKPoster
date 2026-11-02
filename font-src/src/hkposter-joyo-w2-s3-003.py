@@ -362,11 +362,11 @@ def glyph_sagi() -> Glyph:
     g.diag(80, 230, 320, 340, weight=W_SEC)     # 提
 
     # ---- 是：日 ----
-    g.hbar(388, 780, 762, weight=W_SEC)         # 頂（墨 716..808）
-    g.vbar(430, 520, 810, weight=W_SEC)         # 左豎
-    g.vbar(738, 520, 810, weight=W_SEC)         # 右豎
-    g.hbar(388, 780, 650, weight=W_LIGHT)       # 中（墨 612..688）
-    g.hbar(388, 780, 550, weight=W_LIGHT)       # 底（墨 512..588）
+    g.hbar(388, 780, 774, weight=W_SEC)         # 頂（墨 728..820）
+    g.vbar(430, 520, 820, weight=W_SEC)         # 左豎
+    g.vbar(738, 520, 820, weight=W_SEC)         # 右豎
+    g.hbar(388, 780, 660, weight=W_LIGHT)       # 中（墨 622..698）
+    g.hbar(388, 780, 554, weight=W_LIGHT)       # 底（墨 516..592）
     # ---- 是：疋 ----
     g.hbar(400, 900, 440, weight=W_MAIN)        # 的一（墨 394..486）
     g.vbar(700, 440, 160, weight=W_SEC)         # 豎
@@ -706,12 +706,12 @@ def glyph_shin() -> Glyph:
     g.vbar(500, 730, 820, weight=W_THIN)          # 短豎（墨 730..820）
 
     # ---- 目 ----
-    g.vbar(202, 226, 634, weight=W_THIN)          # 左豎（墨 160..244）
-    g.vbar(798, 226, 634, weight=W_THIN)          # 右豎（墨 756..840）
-    g.hbar(156, 844, 592, weight=W_THIN)          # 頂（墨 550..634）
-    g.hbar(156, 844, 484, weight=W_THIN)          # 內橫 1（墨 442..526）
-    g.hbar(156, 844, 376, weight=W_THIN)          # 內橫 2（墨 334..418）
-    g.hbar(156, 844, 268, weight=W_THIN)          # 底（墨 226..310）
+    g.vbar(202, 226, 634, weight=W_LIGHT)          # 左豎（墨 160..244）
+    g.vbar(798, 226, 634, weight=W_LIGHT)          # 右豎（墨 756..840）
+    g.hbar(156, 844, 592, weight=W_LIGHT)          # 頂（墨 550..634）
+    g.hbar(156, 844, 484, weight=W_LIGHT)          # 內橫 1（墨 442..526）
+    g.hbar(156, 844, 376, weight=W_LIGHT)          # 內橫 2（墨 334..418）
+    g.hbar(156, 844, 268, weight=W_LIGHT)          # 底（墨 226..310）
 
     # ---- 一 ----
     g.hbar(60, 940, 156, weight=W_SEC)            # 一（墨 110..202）

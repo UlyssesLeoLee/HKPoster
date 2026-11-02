@@ -69,11 +69,11 @@ def glyph_long() -> Glyph:
     g.hbar(60, 440, 442, weight=W_SEC)  # 立的下横
 
     # ---- 左半：月 ----
-    g.hbar(120, 400, 334, weight=W_SEC)  # 月的上横
-    g.diag(140, 320, 108, 60, weight=W_THIN)  # 月的左竖（略左倾）
-    g.vbar(360, 380, 40, weight=W_SEC)  # 月的右竖
-    g.hbar(150, 320, 224, weight=W_THIN)  # 月的第一内横
-    g.hbar(150, 320, 124, weight=W_THIN)  # 月的第二内横
+    g.hbar(120, 400, 334, weight=W_LIGHT)  # 月的上横
+    g.diag(140, 320, 108, 60, weight=W_LIGHT)  # 月的左竖（略左倾）
+    g.vbar(360, 380, 40, weight=W_LIGHT)  # 月的右竖
+    g.hbar(150, 320, 224, weight=W_LIGHT)  # 月的第一内横
+    g.hbar(150, 320, 124, weight=W_LIGHT)  # 月的第二内横
 
     # ---- 右半：竖脊 + 七横 + 底钩 ----
     g.vbar(505, 40, 790, weight=W_SEC)  # 竖脊
@@ -154,8 +154,8 @@ def glyph_jing() -> Glyph:
 
     # ---- 敬：苟 ----
     g.hbar(90, 420, 772, weight=W_LIGHT)  # 艹的横
-    g.vbar(180, 700, 820, weight=W_THIN)  # 艹的左竖
-    g.vbar(330, 700, 820, weight=W_THIN)  # 艹的右竖
+    g.vbar(180, 740, 820, weight=W_THIN)  # 艹的左竖（下端上收，艹内开口）
+    g.vbar(330, 740, 820, weight=W_THIN)  # 艹的右竖（下端上收，艹内开口）
     g.hbar(100, 450, 688, weight=W_LIGHT)  # 勹的横
     g.vbar(410, 590, 690, weight=W_THIN)  # 勹的竖（横折钩）
     g.diag(200, 620, 135, 560, weight=W_LIGHT)  # 句的丿
@@ -278,8 +278,8 @@ def glyph_dao() -> Glyph:
     g.dot(660, 770, w=84, h=96, slant=16)  # 丷 右
     g.hbar(330, 860, 660, weight=W_SEC)  # 首的一
     g.hbar(400, 840, 560, weight=W_THIN)  # 目的上横
-    g.vbar(440, 20, 580, weight=W_THIN)  # 目的左竖
-    g.vbar(800, 20, 580, weight=W_THIN)  # 目的右竖
+    g.vbar(440, 150, 580, weight=W_THIN)  # 目的左竖（下端上收，目下开口）
+    g.vbar(800, 150, 580, weight=W_THIN)  # 目的右竖（下端上收，目下开口）
     g.hbar(440, 800, 420, weight=W_THIN)  # 目的内横 1
     g.hbar(440, 800, 290, weight=W_THIN)  # 目的内横 2
     g.hbar(400, 840, 170, weight=W_THIN)  # 目的下横

@@ -37,6 +37,7 @@ W_SEC = 92
 W_THIN = 84
 W_DOT = 84
 W_LIGHT = 76  # 高密字局部减重（cjk-dense 既有做法）
+W_HAIR = 68   # 极密字局部减重（量：九横密排，四道闭腔要留 30 单位）
 
 
 # ---------------------------------------------------------------------------
@@ -197,7 +198,7 @@ def g_fuku() -> Glyph:
     # ---- 复 ----
     g.diag(470, 790, 375, 700, weight=W_THIN)  # 复的顶撇
     g.hbar(390, 930, 728, weight=W_THIN)       # 复的横
-    _hi(g, 560, 900, 620, 520, 420, W_THIN)    # 复的日
+    _hi(g, 560, 900, 620, 516, 412, W_LIGHT)    # 复的日（腔 24→28/28，参照 27）
     # 夂
     g.diag(520, 390, 420, 250, weight=W_THIN)  # 夂的撇
     g.hbar(500, 830, 300, weight=W_SEC)         # 夂的横撇（横）
@@ -225,8 +226,8 @@ def g_wataru() -> Glyph:
     g.vbar(825, 570, 410, weight=W_THIN)        # 廿的右竖
     # 又
     g.hbar(520, 880, 300, weight=W_SEC)         # 又的横撇（横）
-    g.diag(880, 300, 630, 70, weight=W_SEC)     # 又的横撇（撇）
-    g.diag(560, 290, 930, 60, weight=W_MAIN)    # 又的捺
+    g.diag(880, 284, 630, 54, weight=W_SEC)     # 又的横撇（撇）下移 16
+    g.diag(560, 274, 930, 44, weight=W_MAIN)    # 又的捺下移 16（两端同量）
     return g
 
 
@@ -406,21 +407,21 @@ def g_ryo() -> Glyph:
     g = Glyph("uni91CF", advance=1000, unicode=0x91CF,
               note="量：上旦（曰三横+一），下里（田+土），九横密排局部减重")
     # ---- 旦 ----
-    g.hbar(140, 880, 774, weight=W_LIGHT)         # 曰的上横
-    g.hbar(140, 880, 682, weight=W_LIGHT)         # 曰的中横
-    g.hbar(140, 880, 590, weight=W_LIGHT)         # 曰的下横
-    g.vbar(180, 774, 552, weight=W_LIGHT)         # 曰的左竖
-    g.vbar(840, 774, 552, weight=W_LIGHT)         # 曰的右竖
-    g.hbar(90, 930, 498, weight=W_LIGHT)          # 旦的一
+    g.hbar(140, 880, 778, weight=W_HAIR)          # 曰的上横
+    g.hbar(140, 880, 680, weight=W_HAIR)          # 曰的中横（腔 26→30）
+    g.hbar(140, 880, 582, weight=W_HAIR)          # 曰的下横（腔 26→30）
+    g.vbar(180, 778, 548, weight=W_HAIR)          # 曰的左竖
+    g.vbar(840, 778, 548, weight=W_HAIR)          # 曰的右竖
+    g.hbar(90, 930, 490, weight=W_HAIR)           # 旦的一
     # ---- 里 ----
     g.hbar(150, 870, 406, weight=W_LIGHT)         # 田的上横
-    g.hbar(150, 870, 314, weight=W_LIGHT)         # 田的中横
-    g.hbar(150, 870, 222, weight=W_LIGHT)         # 田的下横
-    g.vbar(190, 406, 184, weight=W_LIGHT)         # 田的左竖
-    g.vbar(830, 406, 184, weight=W_LIGHT)         # 田的右竖
-    g.vbar(510, 406, 38, weight=W_LIGHT)          # 里的中竖
-    g.hbar(110, 910, 130, weight=W_LIGHT)         # 土的一
-    g.hbar(90, 930, 38, weight=W_LIGHT)           # 土的底横
+    g.hbar(150, 870, 308, weight=W_HAIR)          # 田的中横（腔 26→30）
+    g.hbar(150, 870, 210, weight=W_HAIR)          # 田的下横（腔 26→30）
+    g.vbar(190, 406, 176, weight=W_HAIR)          # 田的左竖
+    g.vbar(830, 406, 176, weight=W_HAIR)          # 田的右竖
+    g.vbar(510, 406, 38, weight=W_HAIR)           # 里的中竖
+    g.hbar(110, 910, 120, weight=W_HAIR)          # 土的一
+    g.hbar(90, 930, 38, weight=W_HAIR)            # 土的底横
     return g
 
 
