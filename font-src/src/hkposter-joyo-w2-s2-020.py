@@ -149,11 +149,20 @@ def part_chi(g, x1, x2, y_dot, y_base):
     g.diag(x1 + 70, y_dot - 220, x2, y_base, weight=W_MAIN)
 
 
-def part_mou(g, x1, x2, y_top, y_bot):
-    """又：横 + 撇 + 捺。茎・支・殳 共用同一拆法。"""
-    g.hbar(x1, x2, y_top, weight=W_SEC)
-    g.diag(x2 - 40, y_top - 15, x1 + 30, y_bot + 60, weight=W_SEC)
-    g.diag(x1 + 200, y_top - 60, x2 - 10, y_bot, weight=W_SEC)
+def part_mou(g, x1, x2, y_top, y_bot, shift=0, gap=0):
+    """又：横 + 撇 + 捺。茎・支・殳 共用同一拆法。
+
+    `shift` 是整个「又」**均匀上移**的量（三笔同量移 → 斜率与长度全不变，
+    AGENTS.md 铁律 10）。
+
+    `gap` 只把**横**额外上抬（撇、捺完全不动 → 它们的斜率绝对不变）：
+    决定「横下缘 ↔ 捺上缘」那个中间腔高度的是这两者的**平行间距**，
+    整体平移不改变间距（实测「股」的又夹出 h=23.8 的腔），
+    单独抬横才能把间距拉开 → 腔高合格。
+    """
+    g.hbar(x1, x2, y_top + shift + gap, weight=W_SEC)
+    g.diag(x2 - 40, y_top - 15 + shift, x1 + 30, y_bot + 60 + shift, weight=W_SEC)
+    g.diag(x1 + 200, y_top - 60 + shift, x2 - 10, y_bot + shift, weight=W_SEC)
 
 
 # ---------------------------------------------------------------- 32 字
@@ -511,7 +520,7 @@ def g_bu2(g):
     g.diag(438, 800, 386, 600, weight=W_SEC)               # 几的撇
     g.hbar(400, 830, 760, weight=W_SEC)                    # 几的横
     g.vbar(782, 714, 580, weight=W_SEC)                    # 几的右竖
-    part_mou(g, 380, 900, 490, 170)
+    part_mou(g, 380, 900, 490, 170, gap=22)
 
 
 def g_gan(g):

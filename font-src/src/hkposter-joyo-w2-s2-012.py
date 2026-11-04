@@ -142,8 +142,8 @@ def comp_oku(g):
     """
     g.hbar(430, 820, 750, W_SEC)        # 顶部长平撇
     g.diag(560, 715, 440, 40, W_MAIN)   # 长竖撇
-    g.hbar(500, 885, 490, W_THIN)       # ㇋ 横
-    g.diag(880, 490, 680, 330, W_THIN)  # ㇋ 折（折向左下）
+    g.hbar(500, 885, 504, W_THIN)       # ㇋ 横
+    g.diag(880, 504, 680, 336, W_THIN)  # ㇋ 折（折向左下）
     g.diag(655, 460, 890, 80, W_MAIN)   # 捺
     return g
 

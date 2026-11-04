@@ -523,7 +523,7 @@ def g_shi4() -> Glyph:
     g = Glyph("uni793A", advance=1000, unicode=0x793A, note="示：二 + 小")
     g.hbar(280, 720, bar_top(Y_TOP, W_MAIN), weight=W_MAIN)
     g.hbar(200, 800, 620, weight=W_MAIN)
-    g.vbar(500, 620, 400, weight=W_MAIN)
+    g.vbar(500, 620, 380, weight=W_MAIN)
     g.diag(480, 400, 230, 140, weight=W_SEC)
     g.diag(520, 400, 790, 140, weight=W_SEC)
     return g

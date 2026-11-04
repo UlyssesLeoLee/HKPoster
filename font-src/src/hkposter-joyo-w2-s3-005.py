@@ -802,10 +802,10 @@ def glyph_jun() -> Glyph:
     # 隹：撇 + 四横 + 竖
     g.diag(682, 813, 634, 714, weight=W_THIN)       # 隹的头撇
     g.hbar(476, 806, 708, weight=W_LIGHT)            # 隹的第一横
-    g.vbar(634, 690, 420, weight=W_LIGHT)            # 隹的竖
-    g.hbar(487, 787, 606, weight=W_LIGHT)            # 隹的第二横
-    g.hbar(480, 804, 507, weight=W_LIGHT)            # 隹的第三横
-    g.hbar(482, 842, 405, weight=W_LIGHT)            # 隹的第四横
+    g.vbar(634, 690, 390, weight=W_LIGHT)            # 隹的竖
+    g.hbar(487, 787, 604, weight=W_LIGHT)            # 隹的第二横
+    g.hbar(480, 804, 500, weight=W_LIGHT)            # 隹的第三横
+    g.hbar(482, 842, 396, weight=W_LIGHT)            # 隹的第四横
     # 底下的十
     g.hbar(131, 869, 221, weight=W_MAIN)
     g.vbar(492, 339, BASE, weight=W_MAIN)
