@@ -215,7 +215,7 @@ def main() -> int:
     # 11) 字符 ↔ 码位 ↔ 冻结清单的自洽检查
     if not args.skip_charset:
         results["charset"], outputs["charset"] = run(
-            "11/11 字符码位自洽",
+            "11/14 字符码位自洽",
             [PY, str(SCRIPT_DIR / "check_charset.py")],
         )
     else:
@@ -225,7 +225,7 @@ def main() -> int:
     # 12) 码位的独立证据源核对（参照字体）
     if not args.skip_codepoint_ref:
         results["codepoint_ref"], outputs["codepoint_ref"] = run(
-            "12/12 码位独立核对（参照字体）",
+            "12/14 码位独立核对（参照字体）",
             [PY, str(SCRIPT_DIR / "check_codepoint_ref.py")],
         )
     else:
@@ -235,7 +235,7 @@ def main() -> int:
     # 13) 横画内白封闭专项（黑砖检测）
     if not args.skip_hcounters:
         results["hcounters"], outputs["hcounters"] = run(
-            "13/13 横画内白封闭专项",
+            "13/14 横画内白封闭专项",
             [PY, str(SCRIPT_DIR / "check_hcounters.py")],
         )
     else:
