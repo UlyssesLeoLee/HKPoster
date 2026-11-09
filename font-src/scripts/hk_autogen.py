@@ -53,6 +53,15 @@ ASCENDER, DESCENDER = 880.0, -120.0
 # CJK 笔画权重档（粗 → 细）
 WEIGHTS = (96.0, 92.0, 84.0, 76.0, 64.0)
 W_MIN_GAP = 24.0          # 横画白口下限（AGENTS.md 铁律 10）
+# 平行邻笔的墨缝安全余量：两笔都按限重算时，缝 = 间距 − 笔宽 − 余量
+W_GAP_MARGIN = 12.0
+# 方向夹角 ≤ 45° 才算「平行邻笔」（互相约束白口）
+PARALLEL_TOL_DEG = 45.0
+# 几何腔高下限 —— 与 check_cavity_height.py 同口径
+CAVITY_MIN_H = 24.0
+CAVITY_MIN_W = 40.0
+# 参与白口判定的横画最小长度 —— 与 check_hcounters.py 同口径
+HC_MIN_W = 60.0
 
 # 点/短撇的斜切档（house style）
 SLANT_RIGHT_DOWN = -14.0   # 右下点 丶
@@ -445,34 +454,101 @@ def _sample(pts, step=6.0):
     return out
 
 
-def assign_weights(strokes):
-    """按「到最近其他笔中心线的距离」逐笔定权重档。"""
-    samples = [_sample(s) for s in strokes]
+def _closest_to_stroke(P, A, B):
+    """numpy 版「点到折线的最近点」。P:(N,2)，A/B:(M,2) → (距离 (N,), 最近点 (N,2))"""
+    import numpy as np
+
+    AB = B - A
+    AP = P[:, None, :] - A[None, :, :]
+    L2 = (AB ** 2).sum(axis=1)
+    L2 = np.where(L2 < 1e-9, 1.0, L2)
+    tt = np.clip((AP * AB[None, :, :]).sum(axis=2) / L2[None, :], 0.0, 1.0)
+    Q = A[None, :, :] + tt[:, :, None] * AB[None, :, :]
+    d = np.linalg.norm(P[:, None, :] - Q, axis=2)
+    idx = d.argmin(axis=1)
+    rows = np.arange(len(P))
+    return d[rows, idx], Q[rows, idx]
+
+
+def _stroke_dir(st):
+    a, b = st[0], st[-1]
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    L = math.hypot(dx, dy)
+    if L < 1e-9:
+        return (1.0, 0.0)
+    return (dx / L, dy / L)
+
+
+def _dir_angle(u, v):
+    """两方向夹角（0..90°，忽略首尾相反）。"""
+    d = max(-1.0, min(1.0, u[0] * v[0] + u[1] * v[1]))
+    ang = math.acos(d)
+    return min(ang, math.pi - ang)
+
+
+def _facing_clearance(P, A, B):
+    """两笔**面对面的白缝**：只统计投影落在对方笔段跨度内的采样点。
+
+    P:(N,2) 本笔采样点；A/B:(M,2) 对方笔段端点 → (N,) 每采样点的白缝。
+
+    为什么要「跨度内」：两条平行笔如果横向错开很多，正对的那一段才决定
+    白缝；错开端的「最近点」落在对方端点上，用最近点的法向分量会把
+    端点错位误算成白缝不足 —— 实测这会把整层压到最轻档。
+    """
+    import numpy as np
+
+    AB = B - A
+    L = np.linalg.norm(AB, axis=1)
+    ok = L > 1e-9
+    Ls = np.where(ok, L, 1.0)
+    uj = AB / Ls[:, None]                     # (M,2) 对方每段的方向
+    nj = np.stack([-uj[:, 1], uj[:, 0]], axis=1)   # 对方每段的法向
+    AP = P[:, None, :] - A[None, :, :]        # (N,M,2)
+    t = (AP * uj[None, :, :]).sum(axis=2)     # (N,M) 沿对方方向的投影距离
+    inside = (t >= 0) & (t <= Ls[None, :]) & ok[None, :]
+    perp = np.abs((AP * nj[None, :, :]).sum(axis=2))
+    perp = np.where(inside, perp, np.inf)
+    return perp.min(axis=1)
+
+
+def assign_weights(strokes, pct=0.35):
+    """按「到**平行**邻笔的正面白缝」逐笔定权重档。
+
+    三个坑（都是渲染出来才看出来的）：
+
+    1. 不能用**全局最小**中心线距离 —— 横竖相交处两条中心线距离为 0，
+       而汉字里相交是常态。实测用全局最小值会把 97.6% 的笔画压到最轻档 64，
+       整个自动层看起来像 Hairline 而不是 Heavy。
+    2. 也不能用「到任意邻笔的最近距离」—— 最近的那笔往往**横穿**本笔，
+       两笔相交会合并，本来就不构成白口约束。
+    3. 平行间距要**只在投影落在对方跨度内时**才算，否则端点错位被误算。
+
+    真正决定白口的是**平行**邻笔：两条平行笔的墨缝 = 中心线间距 − 笔宽。
+    """
+    import numpy as np
+
+    S = []
+    dirs = []
+    for st in strokes:
+        pts = _sample(st, 8.0)
+        S.append((np.asarray(pts, dtype=float),
+                  np.asarray(st[:-1], dtype=float),
+                  np.asarray(st[1:], dtype=float)))
+        dirs.append(_stroke_dir(st))
     weights = []
-    for i, s in enumerate(strokes):
-        best = 1e9
-        for j, t in enumerate(strokes):
+    for i, (Pi, _, _) in enumerate(S):
+        if len(Pi) == 0:
+            weights.append(WEIGHTS[0])
+            continue
+        best_par = 1e9
+        for j, (_, Aj, Bj) in enumerate(S):
             if i == j:
                 continue
-            # 粗略：点到线段距离
-            for (px, py) in samples[i][::3]:
-                for k in range(len(t) - 1):
-                    ax, ay = t[k]
-                    bx, by = t[k + 1]
-                    vx, vy = bx - ax, by - ay
-                    L2 = vx * vx + vy * vy
-                    if L2 < 1e-9:
-                        continue
-                    tt = max(0.0, min(1.0, ((px - ax) * vx + (py - ay) * vy) / L2))
-                    qx, qy = ax + tt * vx, ay + tt * vy
-                    d = math.hypot(px - qx, py - qy)
-                    if d < best:
-                        best = d
-                        if best < 30:
-                            break
-                if best < 30:
-                    break
-        limit = best - W_MIN_GAP
+            if _dir_angle(dirs[i], dirs[j]) > PARALLEL_TOL_DEG * math.pi / 180.0:
+                continue
+            clear = _facing_clearance(Pi, Aj, Bj)
+            best_par = min(best_par, float(clear.min()))
+        limit = best_par - W_GAP_MARGIN
         w = WEIGHTS[0]
         for cand in WEIGHTS:
             if cand <= limit:
@@ -535,12 +611,16 @@ def build_glyph_code(ch: str, prims_by_stroke, weight_desc=""):
 
 
 def _glyph_ok(glyph):
-    """逐字质量闸：轮廓合法（无自交）+ 在 em 盒内 + advance 正确。
+    """逐字质量闸（三条，与仓库门禁同口径）：
 
-    与 check_glyphs.py 同口径 —— 自交的字渲染出来是糊成一块的墨，
-    宁可剔除也不能混进成品。
+      1. 轮廓合法（无自交）+ 在 em 盒内；
+      2. 横×横白口 > 0（否则腔被封死，渲染成黑砖）—— check_hcounters 同口径；
+      3. 几何腔高 > 24（否则腔消失）—— check_cavity_height 同口径。
+
+    自交的字渲染出来是糊成一块的墨，宁可剔除也不能混进成品。
     """
     from shapely.geometry import Polygon
+    from shapely.ops import unary_union
     try:
         contours = glyph.contours()
     except Exception:
@@ -566,6 +646,53 @@ def _glyph_ok(glyph):
         return False
     if min(xs) < -20 or max(xs) > 1020 or min(ys) < DESCENDER or max(ys) > ASCENDER:
         return False
+
+    # ---- 2. 横×横白口 ----
+    parts = getattr(glyph, "_parts", [])
+    prims = getattr(glyph, "_prims", None)
+    if prims is not None and len(prims) == len(parts):
+        hbars = []
+        for prim, pts in zip(prims, parts):
+            if prim.get("kind") != "hbar":
+                continue
+            length = abs(float(prim.get("x2", 0)) - float(prim.get("x1", 0)))
+            if length < HC_MIN_W:
+                continue
+            poly = Polygon(pts)
+            if poly.is_empty:
+                continue
+            hbars.append(poly)
+        for i in range(len(hbars)):
+            for j in range(i + 1, len(hbars)):
+                a, b = hbars[i], hbars[j]
+                ox = min(a.bounds[2], b.bounds[2]) - max(a.bounds[0], b.bounds[0])
+                if ox <= 0:
+                    continue
+                a_mid = (a.bounds[1] + a.bounds[3]) / 2.0
+                b_mid = (b.bounds[1] + b.bounds[3]) / 2.0
+                upper, lower = (a, b) if a_mid >= b_mid else (b, a)
+                gap = upper.bounds[1] - lower.bounds[3]
+                if gap <= 0:
+                    return False
+
+    # ---- 3. 几何腔高 ----
+    polys = []
+    for pts in parts:
+        poly = Polygon(pts)
+        if not poly.is_valid:
+            poly = poly.buffer(0)
+        if not poly.is_empty:
+            polys.append(poly)
+    if polys:
+        merged = unary_union(polys)
+        geoms = list(merged.geoms) if merged.geom_type == "MultiPolygon" else [merged]
+        for geom in geoms:
+            if geom.is_empty:
+                continue
+            for interior in geom.interiors:
+                minx, miny, maxx, maxy = interior.bounds
+                if (maxx - minx) >= CAVITY_MIN_W and (maxy - miny) <= CAVITY_MIN_H:
+                    return False
     return True
 
 
@@ -579,20 +706,26 @@ def _r(v):
 
 
 def _try_build(ch, strokes, weight_desc=""):
-    """生成一个字的原语列表；不合格时降重/关掉接头延长重试。
+    """生成一个字的原语列表；不合格时按 (接头延长, 权重上限) 组合重试。
+
+    试的顺序有讲究：
+      1. 接头延长 + 最重 —— 方框类（口/日/中）四边要咬合；
+      2. 降一档 —— 腔高不足时；
+      3. 关掉接头延长 —— 延长会把两根横推到一起反而封死白口；
+      4. 再降档 —— 极端密字只能到 64。
 
     返回 (prims_by_stroke, ok)
     """
     allpts = [p for s in strokes for p in s]
-    for attempt in range(5):
-        base = WEIGHTS[min(attempt, len(WEIGHTS) - 1)]
-        tf = make_transform(allpts, ch, base)
+    prims_by_stroke = []
+    attempts = [(True, 0), (True, 1), (False, 0), (True, 2), (False, 2),
+                (False, 3), (False, 4)]
+    for extend, cap in attempts:
+        cap_w = WEIGHTS[cap]
+        tf = make_transform(allpts, ch, cap_w)
         mapped = [tf(s) for s in strokes]
-        ws = assign_weights(mapped)
-        if attempt >= 3:
-            # 最后两轮：整体降重
-            ws = [min(w, WEIGHTS[min(attempt - 2, len(WEIGHTS) - 1)]) for w in ws]
-        mapped2 = extend_ends(mapped, ws) if attempt < 3 else mapped
+        ws = [min(w, cap_w) for w in assign_weights(mapped)]
+        mapped2 = extend_ends(mapped, ws) if extend else mapped
         prims_by_stroke = []
         for s, w in zip(mapped2, ws):
             prims = []

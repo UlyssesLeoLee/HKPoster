@@ -4,6 +4,10 @@ font-src/reports/
 font-src/build-tmp/
 release/
 
+# 第三方骨架数据缓存（hanzi-writer-data medians，Arphic Public License）
+# —— 是下载依赖不是设计源；recipe 才是设计源。删掉后重跑 hk_autogen 会自动重抓。
+font-src/data/hanzi-cache/
+
 # Python
 __pycache__/
 *.py[cod]
