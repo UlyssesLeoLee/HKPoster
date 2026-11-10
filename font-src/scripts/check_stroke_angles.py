@@ -276,6 +276,32 @@ def _data_slants(tree, env):
 
 
 
+def _data_diags(tree, env):
+    """从**数据表**里提取斜画角度。
+
+    有些 recipe 把笔画存在元组里（`("diag", x1, y1, x2, y2, weight)`），
+    `visit_Call` 只认 `g.diag(...)` 调用，看不到元组里的斜画 ——
+    实测 `hkposter-latin-lower-001.py` 因此报「斜画 0 笔」，
+    门禁**跑过了但没覆盖到**（AGENTS.md 铁律 12）。
+
+    约定：元组首元素是 `"diag"` 时，后 4 个元素是 x1, y1, x2, y2。
+    斜画角度**只报分布不判 FAIL**，所以多收只是让报告更全，不引入误报。
+    """
+    out = []
+    for node in ast.walk(tree):
+        if not isinstance(node, (ast.Tuple, ast.List)) or len(node.elts) < 5:
+            continue
+        head = node.elts[0]
+        if not (isinstance(head, ast.Constant) and head.value == "diag"):
+            continue
+        nums = [_num(a, env) for a in node.elts[1:5]]
+        if all(n is not None for n in nums):
+            ang = _angle_from_vertical(*nums)
+            if ang is not None:
+                out.append((getattr(node, "lineno", 0), round(ang, 1)))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="recipe 层笔画角度与记号倾角检查")
     ap.add_argument("--recipes", nargs="*", help="要检查的 recipe 文件（默认扫 font-src/src 下全部）")
@@ -310,6 +336,12 @@ def main() -> int:
         # 数据表里的 slant（kana 把笔画存在元组里，倾角不在实参里）
         data_slants = _data_slants(tree, env)
         n_slants += len(data_slants)
+
+        # 数据表里的斜画（同样只在元组里，visit_Call 看不到）
+        data_diags = _data_diags(tree, env)
+        n_diags += len(data_diags)
+        for lineno, ang in data_diags:
+            dist.append({"file": p.name, "line": lineno, "deg": ang})
 
         # A. 斜切档位（只适用于 CJK 家族 —— Latin 标点有自己的一套）
         if not p.name.startswith("hkposter-latin"):
