@@ -15,12 +15,12 @@
       <point x="594" y="-18" type="line"/>
       <point x="696" y="-18" type="line"/>
       <point x="696" y="7" type="line"/>
-      <point x="723" y="33" type="line"/>
-      <point x="723" y="-52" type="line"/>
-      <point x="787" y="-52" type="line"/>
-      <point x="787" y="163" type="line"/>
-      <point x="723" y="163" type="line"/>
-      <point x="723" y="62" type="line"/>
+      <point x="726" y="35" type="line"/>
+      <point x="742" y="-57" type="line"/>
+      <point x="805" y="-47" type="line"/>
+      <point x="769" y="168" type="line"/>
+      <point x="706" y="158" type="line"/>
+      <point x="722" y="61" type="line"/>
       <point x="696" y="37" type="line"/>
       <point x="696" y="74" type="line"/>
       <point x="570" y="74" type="line"/>
@@ -108,14 +108,14 @@
       <point x="452" y="312" type="line"/>
       <point x="936" y="312" type="line"/>
       <point x="936" y="408" type="line"/>
-      <point x="732" y="408" type="line"/>
-      <point x="732" y="473" type="line"/>
+      <point x="710" y="408" type="line"/>
+      <point x="719" y="473" type="line"/>
       <point x="820" y="473" type="line"/>
       <point x="820" y="569" type="line"/>
       <point x="732" y="569" type="line"/>
-      <point x="732" y="777" type="line"/>
-      <point x="640" y="777" type="line"/>
-      <point x="640" y="569" type="line"/>
+      <point x="759" y="771" type="line"/>
+      <point x="668" y="783" type="line"/>
+      <point x="639" y="569" type="line"/>
       <point x="625" y="569" type="line"/>
       <point x="625" y="617" type="line"/>
       <point x="569" y="617" type="line"/>
@@ -131,11 +131,9 @@
       <point x="452" y="408" type="line"/>
     </contour>
     <contour>
-      <point x="640" y="473" type="line"/>
-      <point x="640" y="410" type="line"/>
-      <point x="638" y="408" type="line"/>
-      <point x="625" y="408" type="line"/>
       <point x="625" y="473" type="line"/>
+      <point x="626" y="473" type="line"/>
+      <point x="625" y="467" type="line"/>
     </contour>
   </outline>
 </glyph>

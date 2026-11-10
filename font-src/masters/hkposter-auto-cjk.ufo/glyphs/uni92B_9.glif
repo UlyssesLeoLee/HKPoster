@@ -23,18 +23,15 @@
       <point x="746" y="313" type="line"/>
       <point x="720" y="313" type="line"/>
       <point x="720" y="335" type="line"/>
-      <point x="472" y="335" type="line"/>
-      <point x="584" y="441" type="line"/>
-      <point x="584" y="338" type="line"/>
-      <point x="648" y="338" type="line"/>
-      <point x="648" y="477" type="line"/>
+      <point x="631" y="335" type="line"/>
+      <point x="649" y="476" type="line"/>
       <point x="933" y="341" type="line"/>
       <point x="961" y="399" type="line"/>
       <point x="737" y="505" type="line"/>
       <point x="828" y="505" type="line"/>
       <point x="828" y="569" type="line"/>
-      <point x="648" y="569" type="line"/>
-      <point x="648" y="600" type="line"/>
+      <point x="660" y="569" type="line"/>
+      <point x="664" y="596" type="line"/>
       <point x="632" y="600" type="line"/>
       <point x="634" y="605" type="line"/>
       <point x="693" y="605" type="line"/>
@@ -46,9 +43,11 @@
       <point x="446" y="681" type="line"/>
       <point x="446" y="605" type="line"/>
       <point x="593" y="605" type="line"/>
-      <point x="591" y="600" type="line"/>
-      <point x="584" y="600" type="line"/>
-      <point x="584" y="567" type="line"/>
+      <point x="585" y="588" type="line"/>
+      <point x="597" y="582" type="line"/>
+      <point x="596" y="569" type="line"/>
+      <point x="585" y="569" type="line"/>
+      <point x="585" y="567" type="line"/>
       <point x="431" y="567" type="line"/>
       <point x="431" y="503" type="line"/>
       <point x="555" y="503" type="line"/>
@@ -144,9 +143,10 @@
       <point x="676" y="199" type="line"/>
     </contour>
     <contour>
-      <point x="648" y="505" type="line"/>
-      <point x="650" y="505" type="line"/>
-      <point x="648" y="499" type="line"/>
+      <point x="579" y="437" type="line"/>
+      <point x="567" y="342" type="line"/>
+      <point x="622" y="335" type="line"/>
+      <point x="472" y="335" type="line"/>
     </contour>
   </outline>
 </glyph>

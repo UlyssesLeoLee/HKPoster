@@ -34,10 +34,10 @@
       <point x="473" y="658" type="line"/>
       <point x="503" y="658" type="line"/>
       <point x="486" y="635" type="line"/>
-      <point x="567" y="575" type="line"/>
-      <point x="567" y="550" type="line"/>
-      <point x="631" y="550" type="line"/>
-      <point x="631" y="594" type="line"/>
+      <point x="567" y="576" type="line"/>
+      <point x="571" y="546" type="line"/>
+      <point x="634" y="555" type="line"/>
+      <point x="628" y="598" type="line"/>
       <point x="596" y="594" type="line"/>
       <point x="615" y="619" type="line"/>
       <point x="562" y="658" type="line"/>
@@ -57,16 +57,9 @@
       <point x="293" y="524" type="line"/>
       <point x="298" y="520" type="line"/>
       <point x="283" y="520" type="line"/>
-      <point x="283" y="444" type="line"/>
-      <point x="349" y="444" type="line"/>
-      <point x="300" y="407" type="line"/>
-      <point x="310" y="394" type="line"/>
-      <point x="300" y="381" type="line"/>
-      <point x="277" y="404" type="line"/>
-      <point x="281" y="404" type="line"/>
-      <point x="281" y="507" type="line"/>
-      <point x="185" y="507" type="line"/>
-      <point x="185" y="404" type="line"/>
+      <point x="283" y="495" type="line"/>
+      <point x="211" y="526" type="line"/>
+      <point x="167" y="424" type="line"/>
       <point x="211" y="404" type="line"/>
       <point x="176" y="371" type="line"/>
       <point x="237" y="307" type="line"/>
@@ -95,6 +88,15 @@
       <point x="454" y="276" type="line"/>
       <point x="413" y="276" type="line"/>
       <point x="413" y="292" type="line"/>
+    </contour>
+    <contour>
+      <point x="310" y="394" type="line"/>
+      <point x="300" y="381" type="line"/>
+      <point x="268" y="415" type="line"/>
+      <point x="283" y="450" type="line"/>
+      <point x="283" y="444" type="line"/>
+      <point x="349" y="444" type="line"/>
+      <point x="300" y="407" type="line"/>
     </contour>
     <contour>
       <point x="506" y="434" type="line"/>

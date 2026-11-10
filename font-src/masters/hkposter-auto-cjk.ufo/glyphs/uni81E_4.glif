@@ -8,8 +8,8 @@
   <outline>
     <contour>
       <point x="70" y="128" type="line"/>
-      <point x="331" y="128" type="line"/>
-      <point x="331" y="-6" type="line"/>
+      <point x="317" y="128" type="line"/>
+      <point x="348" y="-16" type="line"/>
       <point x="395" y="-6" type="line"/>
       <point x="438" y="-27" type="line"/>
       <point x="576" y="258" type="line"/>
@@ -64,8 +64,9 @@
       <point x="296" y="368" type="line"/>
       <point x="417" y="368" type="line"/>
       <point x="496" y="314" type="line"/>
-      <point x="414" y="144" type="line"/>
-      <point x="394" y="144" type="line"/>
+      <point x="412" y="140" type="line"/>
+      <point x="409" y="155" type="line"/>
+      <point x="394" y="151" type="line"/>
       <point x="394" y="192" type="line"/>
       <point x="286" y="192" type="line"/>
     </contour>

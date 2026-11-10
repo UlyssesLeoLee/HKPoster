@@ -26,11 +26,10 @@
       <point x="485" y="244" type="line"/>
       <point x="485" y="331" type="line"/>
       <point x="499" y="319" type="line"/>
-      <point x="532" y="357" type="line"/>
-      <point x="532" y="351" type="line"/>
-      <point x="616" y="351" type="line"/>
-      <point x="616" y="525" type="line"/>
-      <point x="622" y="525" type="line"/>
+      <point x="527" y="351" type="line"/>
+      <point x="566" y="335" type="line"/>
+      <point x="661" y="574" type="line"/>
+      <point x="622" y="589" type="line"/>
       <point x="622" y="609" type="line"/>
       <point x="300" y="609" type="line"/>
       <point x="300" y="597" type="line"/>
@@ -53,8 +52,8 @@
       <point x="340" y="503" type="line"/>
       <point x="342" y="500" type="line"/>
       <point x="185" y="250" type="line"/>
-      <point x="217" y="230" type="line"/>
-      <point x="217" y="175" type="line"/>
+      <point x="209" y="235" type="line"/>
+      <point x="230" y="162" type="line"/>
       <point x="276" y="175" type="line"/>
       <point x="276" y="148" type="line"/>
       <point x="401" y="148" type="line"/>
@@ -68,20 +67,19 @@
     <contour>
       <point x="401" y="503" type="line"/>
       <point x="428" y="525" type="line"/>
-      <point x="532" y="525" type="line"/>
-      <point x="532" y="402" type="line"/>
+      <point x="551" y="525" type="line"/>
+      <point x="510" y="421" type="line"/>
       <point x="446" y="477" type="line"/>
       <point x="427" y="455" type="line"/>
       <point x="441" y="477" type="line"/>
     </contour>
     <contour>
-      <point x="302" y="256" type="line"/>
+      <point x="303" y="257" type="line"/>
       <point x="397" y="408" type="line"/>
       <point x="481" y="335" type="line"/>
       <point x="401" y="335" type="line"/>
       <point x="401" y="244" type="line"/>
-      <point x="313" y="244" type="line"/>
-      <point x="313" y="256" type="line"/>
+      <point x="307" y="244" type="line"/>
     </contour>
     <contour>
       <point x="451" y="862" type="line"/>

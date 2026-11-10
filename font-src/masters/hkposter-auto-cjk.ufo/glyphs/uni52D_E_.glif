@@ -12,18 +12,15 @@
       <point x="169" y="-34" type="line"/>
       <point x="239" y="-100" type="line"/>
       <point x="527" y="202" type="line"/>
-      <point x="578" y="202" type="line"/>
-      <point x="578" y="-10" type="line"/>
+      <point x="616" y="202" type="line"/>
+      <point x="548" y="19" type="line"/>
       <point x="476" y="88" type="line"/>
       <point x="410" y="19" type="line"/>
       <point x="534" y="-101" type="line"/>
-      <point x="578" y="-55" type="line"/>
-      <point x="578" y="-66" type="line"/>
-      <point x="674" y="-66" type="line"/>
-      <point x="674" y="202" type="line"/>
-      <point x="685" y="202" type="line"/>
-      <point x="685" y="273" type="line"/>
-      <point x="710" y="238" type="line"/>
+      <point x="567" y="-66" type="line"/>
+      <point x="612" y="-83" type="line"/>
+      <point x="730" y="231" type="line"/>
+      <point x="711" y="238" type="line"/>
       <point x="876" y="355" type="line"/>
       <point x="884" y="355" type="line"/>
       <point x="884" y="361" type="line"/>
@@ -38,10 +35,10 @@
       <point x="663" y="616" type="line"/>
       <point x="756" y="677" type="line"/>
       <point x="738" y="704" type="line"/>
-      <point x="767" y="704" type="line"/>
-      <point x="767" y="736" type="line"/>
-      <point x="703" y="736" type="line"/>
-      <point x="703" y="719" type="line"/>
+      <point x="770" y="710" type="line"/>
+      <point x="763" y="742" type="line"/>
+      <point x="700" y="729" type="line"/>
+      <point x="702" y="718" type="line"/>
       <point x="685" y="707" type="line"/>
       <point x="659" y="724" type="line"/>
       <point x="678" y="750" type="line"/>
@@ -90,6 +87,11 @@
       <point x="654" y="316" type="line"/>
       <point x="667" y="298" type="line"/>
       <point x="553" y="298" type="line"/>
+    </contour>
+    <contour>
+      <point x="685" y="248" type="line"/>
+      <point x="685" y="273" type="line"/>
+      <point x="708" y="239" type="line"/>
     </contour>
     <contour>
       <point x="423" y="604" type="line"/>

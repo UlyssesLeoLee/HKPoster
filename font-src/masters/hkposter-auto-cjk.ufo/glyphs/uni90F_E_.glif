@@ -128,9 +128,16 @@
       <point x="492" y="307" type="line"/>
     </contour>
     <contour>
-      <point x="790" y="419" type="line"/>
-      <point x="790" y="549" type="line"/>
-      <point x="761" y="549" type="line"/>
+      <point x="696" y="563" type="line"/>
+      <point x="725" y="549" type="line"/>
+      <point x="695" y="538" type="line"/>
+      <point x="740" y="419" type="line"/>
+      <point x="679" y="419" type="line"/>
+      <point x="679" y="355" type="line"/>
+      <point x="791" y="355" type="line"/>
+      <point x="791" y="374" type="line"/>
+      <point x="821" y="386" type="line"/>
+      <point x="760" y="548" type="line"/>
       <point x="838" y="716" type="line"/>
       <point x="809" y="729" type="line"/>
       <point x="809" y="734" type="line"/>
@@ -140,13 +147,6 @@
       <point x="627" y="734" type="line"/>
       <point x="627" y="670" type="line"/>
       <point x="746" y="670" type="line"/>
-      <point x="696" y="563" type="line"/>
-      <point x="726" y="549" type="line"/>
-      <point x="726" y="419" type="line"/>
-      <point x="679" y="419" type="line"/>
-      <point x="679" y="355" type="line"/>
-      <point x="791" y="355" type="line"/>
-      <point x="791" y="419" type="line"/>
     </contour>
   </outline>
 </glyph>

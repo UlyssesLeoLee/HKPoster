@@ -7,24 +7,17 @@
 </note>
   <outline>
     <contour>
-      <point x="166" y="215" type="line"/>
-      <point x="166" y="-57" type="line"/>
-      <point x="250" y="-57" type="line"/>
-      <point x="250" y="200" type="line"/>
-      <point x="446" y="200" type="line"/>
-      <point x="442" y="196" type="line"/>
-      <point x="460" y="180" type="line"/>
-      <point x="460" y="137" type="line"/>
-      <point x="403" y="137" type="line"/>
-      <point x="403" y="198" type="line"/>
-      <point x="319" y="198" type="line"/>
-      <point x="319" y="137" type="line"/>
+      <point x="273" y="-50" type="line"/>
+      <point x="229" y="200" type="line"/>
+      <point x="361" y="200" type="line"/>
+      <point x="305" y="192" type="line"/>
+      <point x="313" y="137" type="line"/>
       <point x="283" y="137" type="line"/>
       <point x="283" y="61" type="line"/>
-      <point x="319" y="61" type="line"/>
-      <point x="319" y="-9" type="line"/>
-      <point x="403" y="-9" type="line"/>
-      <point x="403" y="61" type="line"/>
+      <point x="324" y="61" type="line"/>
+      <point x="334" y="-15" type="line"/>
+      <point x="417" y="-3" type="line"/>
+      <point x="408" y="61" type="line"/>
       <point x="460" y="61" type="line"/>
       <point x="460" y="-40" type="line"/>
       <point x="544" y="-40" type="line"/>
@@ -94,7 +87,17 @@
       <point x="172" y="347" type="line"/>
       <point x="172" y="248" type="line"/>
       <point x="223" y="248" type="line"/>
-      <point x="223" y="215" type="line"/>
+      <point x="223" y="221" type="line"/>
+      <point x="143" y="207" type="line"/>
+      <point x="190" y="-64" type="line"/>
+    </contour>
+    <contour>
+      <point x="398" y="137" type="line"/>
+      <point x="389" y="200" type="line"/>
+      <point x="446" y="200" type="line"/>
+      <point x="442" y="196" type="line"/>
+      <point x="460" y="180" type="line"/>
+      <point x="460" y="137" type="line"/>
     </contour>
     <contour>
       <point x="238" y="328" type="line"/>

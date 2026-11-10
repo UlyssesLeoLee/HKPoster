@@ -396,7 +396,78 @@ def extend_ends(strokes, weights):
     return out
 
 
-def stroke_prims(pts, weight, kind_hint=None):
+def _axis_info(p1, p2, tol=0.45):
+    """近轴向判定：返回 (kind, ratio)。
+
+    kind  = "hbar" / "vbar" / None（不是近轴向）
+    ratio = 该段与轴的偏离比（0 = 与轴平行）；越小越接近轴
+    """
+    dx, dy = p2[0] - p1[0], p2[1] - p1[1]
+    adx, ady = abs(dx), abs(dy)
+    if ady <= tol * adx:
+        return "hbar", (ady / adx if adx > 1e-9 else 0.0)
+    if adx <= tol * ady:
+        return "vbar", (adx / ady if ady > 1e-9 else 0.0)
+    return None, None
+
+
+def _snap_policy(pieces_by_stroke, weight, straight_ratio=0.12):
+    """决定每一段近轴向笔画是否吸附到真正的轴。
+
+    为什么不能只看角度（2026-11-09）：
+      原实现按「与轴夹角 < 24°」判定近轴向，于是**撇/捺也被吸成横/竖**。
+      实测「爬」的爪部撇（偏离竖直 21°）被吃成一根竖 ——
+      字形直接错掉，且**违反「笔画的角度不可改」**。
+
+    改成**非对称**规则（横宽松 / 竖严格）：
+
+    - **横（hbar）**：24° 以内一律吸直。
+      楷体的横本来就有起笔顿挫与整体右升（实测「爬」的巴中横升 17°），
+      吸直是黑体的正确处理；把捺的尾巴压平只是小瑕疵。
+    - **竖（vbar）**：只在两种情况下吸直 ——
+      ① 偏差比 ≤ 0.12（≈7°，本来就直，吸了不改变形状）；
+      ② **两端都接到垂直方向的近轴笔画**（结构判据）——
+         说明它是方框（口/日/中/田/目）的一边，必须直。
+      否则它是自由笔画（撇/竖钩/弯钩），**保留原角度**。
+
+    角度本身区分不了「口左竖（15°斜，该吸直）」与「爪的撇（21°斜，该留斜）」；
+    能区分的是**结构** —— 这条线是不是方框的一边。
+    """
+    flat = []
+    for si, pieces in enumerate(pieces_by_stroke):
+        for pi, (p1, p2) in enumerate(pieces):
+            kind, ratio = _axis_info(p1, p2)
+            flat.append((si, pi, p1, p2, kind, ratio))
+
+    touch = 0.9 * weight
+    policy = {si: [False] * len(pieces) for si, pieces in enumerate(pieces_by_stroke)}
+    for idx, (si, pi, p1, p2, kind, ratio) in enumerate(flat):
+        if kind is None:
+            continue
+        if kind == "hbar":
+            # 横：一律吸直（楷体横的右升是书写习惯，不是字形的一部分）
+            policy[si][pi] = True
+            continue
+        if ratio <= straight_ratio:
+            policy[si][pi] = True
+            continue
+        # 竖：看结构 —— 两端都接到横，才算方框的一边
+        da = db = 1e9
+        for j, (sj, pj, q1, q2, k2, r2) in enumerate(flat):
+            if j == idx or k2 != "hbar":
+                continue
+            for a in (q1, q2):
+                d = math.hypot(a[0] - p1[0], a[1] - p1[1])
+                if d < da:
+                    da = d
+                d = math.hypot(a[0] - p2[0], a[1] - p2[1])
+                if d < db:
+                    db = d
+        policy[si][pi] = da <= touch and db <= touch
+    return policy
+
+
+def stroke_prims(pts, weight, kind_hint=None, snap=None):
     """把一条笔画中线转成一串原语描述。
 
     返回 [(kind, params, meta), ...]
@@ -426,8 +497,11 @@ def stroke_prims(pts, weight, kind_hint=None):
         return [("dot", (cx, cy, weight, h, slant), {})]
 
     prims = []
-    for p1, p2 in pieces:
+    for pi, (p1, p2) in enumerate(pieces):
         kind = _seg_kind(p1, p2)
+        if kind in ("hbar", "vbar") and snap is not None and not snap[pi]:
+            # 结构判据判定它不是方框的一边（是撇/捺）—— 保留原角度。
+            kind = "diag"
         a, b = _snap_axis(p1, p2, kind)
         if kind == "hbar":
             y = (a[1] + b[1]) / 2
@@ -720,39 +794,46 @@ def _try_build(ch, strokes, weight_desc=""):
     prims_by_stroke = []
     attempts = [(True, 0), (True, 1), (False, 0), (True, 2), (False, 2),
                 (False, 3), (False, 4)]
-    for extend, cap in attempts:
-        cap_w = WEIGHTS[cap]
-        tf = make_transform(allpts, ch, cap_w)
-        mapped = [tf(s) for s in strokes]
-        ws = [min(w, cap_w) for w in assign_weights(mapped)]
-        mapped2 = extend_ends(mapped, ws) if extend else mapped
-        prims_by_stroke = []
-        for s, w in zip(mapped2, ws):
-            prims = []
-            for kind, params, _ in stroke_prims(s, w):
-                if kind == "dot":
-                    prims.append(("dot", tuple(_r(v) for v in params)))
-                else:
-                    prims.append((kind, tuple(_r(v) for v in params)))
-            prims_by_stroke.append((prims, w))
-        try:
-            from hkbuild import Glyph
-            g = Glyph("uni%04X" % ord(ch), advance=1000, unicode=ord(ch),
-                      note="%s：自动生成" % ch)
-            for prims, w in prims_by_stroke:
-                for kind, params in prims:
-                    if kind == "hbar":
-                        g.hbar(*params, weight=w)
-                    elif kind == "vbar":
-                        g.vbar(*params, weight=w)
-                    elif kind == "diag":
-                        g.diag(*params, weight=w)
+    # 优先用**结构判据**（把方框的一边吸直、把撇捺留成斜的）；
+    # 若某个字在新判据下过不了质量闸（自交/越界/白口/腔高），
+    # 退回到纯角度判据重试 —— 宁可角度不完美，也不丢字。
+    for use_policy in (True, False):
+        for extend, cap in attempts:
+            cap_w = WEIGHTS[cap]
+            tf = make_transform(allpts, ch, cap_w)
+            mapped = [tf(s) for s in strokes]
+            ws = [min(w, cap_w) for w in assign_weights(mapped)]
+            mapped2 = extend_ends(mapped, ws) if extend else mapped
+            pieces_by_stroke = [fit_pieces(s, w) for s, w in zip(mapped2, ws)]
+            policy = (_snap_policy(pieces_by_stroke, min(ws) if ws else cap_w)
+                      if use_policy else None)
+            prims_by_stroke = []
+            for si, (s, w) in enumerate(zip(mapped2, ws)):
+                prims = []
+                for kind, params, _ in stroke_prims(s, w, snap=policy.get(si) if policy else None):
+                    if kind == "dot":
+                        prims.append(("dot", tuple(_r(v) for v in params)))
                     else:
-                        g.dot(*params)
-            if _glyph_ok(g):
-                return prims_by_stroke, True
-        except Exception:
-            pass
+                        prims.append((kind, tuple(_r(v) for v in params)))
+                prims_by_stroke.append((prims, w))
+            try:
+                from hkbuild import Glyph
+                g = Glyph("uni%04X" % ord(ch), advance=1000, unicode=ord(ch),
+                          note="%s：自动生成" % ch)
+                for prims, w in prims_by_stroke:
+                    for kind, params in prims:
+                        if kind == "hbar":
+                            g.hbar(*params, weight=w)
+                        elif kind == "vbar":
+                            g.vbar(*params, weight=w)
+                        elif kind == "diag":
+                            g.diag(*params, weight=w)
+                        else:
+                            g.dot(*params)
+                if _glyph_ok(g):
+                    return prims_by_stroke, True
+            except Exception:
+                pass
     return prims_by_stroke, False
 
 
@@ -761,10 +842,13 @@ def generate(chars, master_name, out_path, base_weight=96.0, per_stroke_weight=T
     body = []
     names = []
     failed = []
+    no_data = []
+    gate_failed = []
     for ch in chars:
         med = fetch_medians(ch)
         if not med:
             failed.append(ch)
+            no_data.append(ch)
             continue
         strokes = []
         for m in med:
@@ -774,10 +858,12 @@ def generate(chars, master_name, out_path, base_weight=96.0, per_stroke_weight=T
             strokes.append(pts)
         if not strokes:
             failed.append(ch)
+            no_data.append(ch)
             continue
         prims_by_stroke, ok = _try_build(ch, strokes)
         if not ok:
             failed.append(ch)
+            gate_failed.append(ch)
             continue
         code, fn = build_glyph_code(ch, prims_by_stroke)
         body.append(code)
@@ -827,7 +913,7 @@ def generate(chars, master_name, out_path, base_weight=96.0, per_stroke_weight=T
     tail.append("")
 
     Path(out_path).write_text("\n".join(header + body + tail), encoding="utf-8")
-    return len(names), failed
+    return len(names), failed, no_data, gate_failed
 
 
 if __name__ == "__main__":
@@ -850,7 +936,10 @@ if __name__ == "__main__":
             chars.append(chr(int(line[2:], 16)))
         else:
             chars.extend(list(line))
-    n, failed = generate(chars, a.master, a.out, a.weight, not a.uniform_weight)
+    n, failed, no_data, gate_failed = generate(chars, a.master, a.out, a.weight, not a.uniform_weight)
     print("[autogen] 生成 %d 字 → %s" % (n, a.out))
-    if failed:
-        print("[autogen] 取不到骨架数据 %d 个：%s" % (len(failed), "".join(failed)))
+    if no_data:
+        print("[autogen] 取不到骨架数据 %d 个：%s" % (len(no_data), "".join(no_data)))
+    if gate_failed:
+        print("[autogen] 质量闸不过（结构判据与角度判据都试过）%d 个：%s"
+              % (len(gate_failed), "".join(gate_failed)))

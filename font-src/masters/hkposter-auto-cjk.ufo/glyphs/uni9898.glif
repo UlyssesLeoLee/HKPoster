@@ -9,23 +9,20 @@
     <contour>
       <point x="193" y="330" type="line"/>
       <point x="19" y="93" type="line"/>
-      <point x="36" y="81" type="line"/>
-      <point x="11" y="81" type="line"/>
-      <point x="11" y="65" type="line"/>
+      <point x="30" y="85" type="line"/>
+      <point x="12" y="88" type="line"/>
+      <point x="10" y="72" type="line"/>
       <point x="58" y="65" type="line"/>
       <point x="96" y="37" type="line"/>
       <point x="231" y="219" type="line"/>
       <point x="373" y="145" type="line"/>
-      <point x="400" y="197" type="line"/>
-      <point x="413" y="197" type="line"/>
-      <point x="413" y="222" type="line"/>
-      <point x="418" y="231" type="line"/>
-      <point x="413" y="233" type="line"/>
-      <point x="413" y="288" type="line"/>
+      <point x="401" y="200" type="line"/>
+      <point x="430" y="204" type="line"/>
+      <point x="418" y="288" type="line"/>
       <point x="569" y="288" type="line"/>
       <point x="569" y="384" type="line"/>
-      <point x="413" y="384" type="line"/>
-      <point x="413" y="435" type="line"/>
+      <point x="404" y="384" type="line"/>
+      <point x="397" y="435" type="line"/>
       <point x="575" y="435" type="line"/>
       <point x="575" y="519" type="line"/>
       <point x="404" y="519" type="line"/>
@@ -43,12 +40,9 @@
       <point x="188" y="390" type="line"/>
       <point x="224" y="417" type="line"/>
       <point x="211" y="435" type="line"/>
-      <point x="317" y="435" type="line"/>
-      <point x="317" y="421" type="line"/>
-      <point x="307" y="409" type="line"/>
-      <point x="316" y="401" type="line"/>
-      <point x="317" y="402" type="line"/>
-      <point x="317" y="283" type="line"/>
+      <point x="330" y="435" type="line"/>
+      <point x="300" y="431" type="line"/>
+      <point x="322" y="280" type="line"/>
       <point x="282" y="301" type="line"/>
       <point x="250" y="325" type="line"/>
       <point x="292" y="347" type="line"/>
@@ -89,7 +83,8 @@
       <point x="963" y="-15" type="line"/>
       <point x="963" y="98" type="line"/>
       <point x="940" y="98" type="line"/>
-      <point x="779" y="304" type="line"/>
+      <point x="802" y="276" type="line"/>
+      <point x="793" y="296" type="line"/>
       <point x="830" y="274" type="line"/>
       <point x="885" y="367" type="line"/>
       <point x="858" y="383" type="line"/>
@@ -110,21 +105,24 @@
       <point x="636" y="709" type="line"/>
       <point x="645" y="695" type="line"/>
       <point x="611" y="639" type="line"/>
-      <point x="639" y="623" type="line"/>
-      <point x="639" y="586" type="line"/>
-      <point x="663" y="586" type="line"/>
-      <point x="663" y="579" type="line"/>
-      <point x="652" y="579" type="line"/>
+      <point x="631" y="627" type="line"/>
+      <point x="576" y="603" type="line"/>
+      <point x="652" y="429" type="line"/>
       <point x="652" y="417" type="line"/>
     </contour>
     <contour>
-      <point x="766" y="321" type="line"/>
-      <point x="744" y="304" type="line"/>
-      <point x="739" y="308" type="line"/>
-      <point x="739" y="586" type="line"/>
+      <point x="693" y="336" type="line"/>
+      <point x="667" y="309" type="line"/>
+      <point x="687" y="348" type="line"/>
+    </contour>
+    <contour>
       <point x="826" y="586" type="line"/>
       <point x="826" y="392" type="line"/>
-      <point x="776" y="309" type="line"/>
+      <point x="783" y="319" type="line"/>
+      <point x="716" y="473" type="line"/>
+      <point x="716" y="579" type="line"/>
+      <point x="669" y="579" type="line"/>
+      <point x="666" y="586" type="line"/>
     </contour>
     <contour>
       <point x="765" y="175" type="line"/>
@@ -132,9 +130,6 @@
       <point x="815" y="134" type="line"/>
       <point x="573" y="134" type="line"/>
       <point x="654" y="285" type="line"/>
-      <point x="663" y="276" type="line"/>
-      <point x="663" y="202" type="line"/>
-      <point x="738" y="202" type="line"/>
     </contour>
   </outline>
 </glyph>

@@ -9,8 +9,8 @@
     <contour>
       <point x="456" y="316" type="line"/>
       <point x="448" y="324" type="line"/>
-      <point x="495" y="324" type="line"/>
-      <point x="495" y="430" type="line"/>
+      <point x="479" y="316" type="line"/>
+      <point x="509" y="421" type="line"/>
       <point x="478" y="430" type="line"/>
       <point x="494" y="458" type="line"/>
       <point x="444" y="486" type="line"/>
@@ -22,35 +22,8 @@
       <point x="307" y="605" type="line"/>
       <point x="399" y="525" type="line"/>
       <point x="430" y="562" type="line"/>
-      <point x="526" y="562" type="line"/>
-      <point x="526" y="611" type="line"/>
-      <point x="554" y="597" type="line"/>
-      <point x="551" y="597" type="line"/>
-      <point x="551" y="0" type="line"/>
-      <point x="635" y="0" type="line"/>
-      <point x="635" y="597" type="line"/>
-      <point x="601" y="597" type="line"/>
-      <point x="663" y="721" type="line"/>
-      <point x="793" y="721" type="line"/>
-      <point x="737" y="605" type="line"/>
-      <point x="766" y="591" type="line"/>
-      <point x="738" y="575" type="line"/>
-      <point x="864" y="358" type="line"/>
-      <point x="741" y="358" type="line"/>
-      <point x="741" y="294" type="line"/>
-      <point x="901" y="294" type="line"/>
-      <point x="911" y="278" type="line"/>
-      <point x="966" y="310" type="line"/>
-      <point x="938" y="358" type="line"/>
-      <point x="802" y="593" type="line"/>
-      <point x="879" y="751" type="line"/>
-      <point x="850" y="765" type="line"/>
-      <point x="850" y="785" type="line"/>
-      <point x="635" y="785" type="line"/>
-      <point x="635" y="772" type="line"/>
-      <point x="635" y="742" type="line"/>
-      <point x="591" y="764" type="line"/>
-      <point x="526" y="634" type="line"/>
+      <point x="475" y="545" type="line"/>
+      <point x="571" y="800" type="line"/>
       <point x="526" y="816" type="line"/>
       <point x="526" y="842" type="line"/>
       <point x="249" y="842" type="line"/>
@@ -95,19 +68,46 @@
       <point x="268" y="411" type="line"/>
       <point x="428" y="411" type="line"/>
       <point x="428" y="422" type="line"/>
-      <point x="431" y="420" type="line"/>
-      <point x="431" y="344" type="line"/>
-      <point x="427" y="349" type="line"/>
+      <point x="441" y="415" type="line"/>
+      <point x="420" y="343" type="line"/>
       <point x="401" y="327" type="line"/>
     </contour>
     <contour>
       <point x="352" y="746" type="line"/>
-      <point x="430" y="746" type="line"/>
-      <point x="430" y="625" type="line"/>
+      <point x="448" y="746" type="line"/>
+      <point x="409" y="643" type="line"/>
       <point x="369" y="678" type="line"/>
       <point x="308" y="607" type="line"/>
       <point x="369" y="698" type="line"/>
       <point x="329" y="724" type="line"/>
+    </contour>
+    <contour>
+      <point x="554" y="597" type="line"/>
+      <point x="513" y="592" type="line"/>
+      <point x="591" y="-5" type="line"/>
+      <point x="674" y="5" type="line"/>
+      <point x="598" y="590" type="line"/>
+      <point x="663" y="721" type="line"/>
+      <point x="793" y="721" type="line"/>
+      <point x="737" y="605" type="line"/>
+      <point x="766" y="591" type="line"/>
+      <point x="738" y="575" type="line"/>
+      <point x="864" y="358" type="line"/>
+      <point x="741" y="358" type="line"/>
+      <point x="741" y="294" type="line"/>
+      <point x="901" y="294" type="line"/>
+      <point x="911" y="278" type="line"/>
+      <point x="966" y="310" type="line"/>
+      <point x="938" y="358" type="line"/>
+      <point x="802" y="593" type="line"/>
+      <point x="879" y="751" type="line"/>
+      <point x="850" y="765" type="line"/>
+      <point x="850" y="785" type="line"/>
+      <point x="635" y="785" type="line"/>
+      <point x="635" y="772" type="line"/>
+      <point x="635" y="742" type="line"/>
+      <point x="591" y="764" type="line"/>
+      <point x="517" y="616" type="line"/>
     </contour>
   </outline>
 </glyph>

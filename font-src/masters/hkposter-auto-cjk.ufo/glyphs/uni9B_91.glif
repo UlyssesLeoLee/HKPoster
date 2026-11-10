@@ -7,14 +7,12 @@
 </note>
   <outline>
     <contour>
-      <point x="146" y="84" type="line"/>
-      <point x="78" y="116" type="line"/>
       <point x="15" y="-22" type="line"/>
       <point x="53" y="-40" type="line"/>
-      <point x="14" y="-40" type="line"/>
-      <point x="14" y="-67" type="line"/>
-      <point x="98" y="-67" type="line"/>
-      <point x="98" y="-43" type="line"/>
+      <point x="12" y="-48" type="line"/>
+      <point x="17" y="-75" type="line"/>
+      <point x="100" y="-59" type="line"/>
+      <point x="97" y="-45" type="line"/>
       <point x="149" y="68" type="line"/>
       <point x="151" y="59" type="line"/>
       <point x="172" y="59" type="line"/>
@@ -23,6 +21,8 @@
       <point x="205" y="114" type="line"/>
       <point x="201" y="142" type="line"/>
       <point x="137" y="142" type="line"/>
+      <point x="146" y="84" type="line"/>
+      <point x="78" y="116" type="line"/>
     </contour>
     <contour>
       <point x="162" y="340" type="line"/>

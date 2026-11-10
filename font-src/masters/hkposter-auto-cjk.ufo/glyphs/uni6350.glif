@@ -98,7 +98,7 @@
       <point x="582" y="706" type="line"/>
     </contour>
     <contour>
-      <point x="833" y="266" type="line"/>
+      <point x="847" y="266" type="line"/>
       <point x="840" y="266" type="line"/>
       <point x="840" y="-19" type="line"/>
       <point x="786" y="7" type="line"/>
@@ -107,8 +107,9 @@
       <point x="866" y="-66" type="line"/>
       <point x="904" y="-66" type="line"/>
       <point x="904" y="266" type="line"/>
-      <point x="897" y="266" type="line"/>
-      <point x="897" y="444" type="line"/>
+      <point x="879" y="266" type="line"/>
+      <point x="911" y="271" type="line"/>
+      <point x="882" y="449" type="line"/>
       <point x="851" y="444" type="line"/>
       <point x="851" y="452" type="line"/>
       <point x="660" y="452" type="line"/>
@@ -117,7 +118,7 @@
       <point x="644" y="370" type="line"/>
       <point x="660" y="397" type="line"/>
       <point x="660" y="388" type="line"/>
-      <point x="833" y="388" type="line"/>
+      <point x="827" y="388" type="line"/>
     </contour>
   </outline>
 </glyph>

@@ -7,14 +7,14 @@
 </note>
   <outline>
     <contour>
-      <point x="355" y="292" type="line"/>
-      <point x="355" y="209" type="line"/>
+      <point x="345" y="281" type="line"/>
+      <point x="361" y="214" type="line"/>
       <point x="59" y="-17" type="line"/>
       <point x="117" y="-94" type="line"/>
       <point x="444" y="156" type="line"/>
       <point x="415" y="194" type="line"/>
-      <point x="451" y="194" type="line"/>
-      <point x="451" y="292" type="line"/>
+      <point x="462" y="206" type="line"/>
+      <point x="438" y="304" type="line"/>
     </contour>
     <contour>
       <point x="421" y="332" type="line"/>
@@ -26,7 +26,20 @@
       <point x="470" y="321" type="line"/>
       <point x="510" y="321" type="line"/>
       <point x="510" y="292" type="line"/>
-      <point x="574" y="292" type="line"/>
+      <point x="542" y="292" type="line"/>
+      <point x="492" y="285" type="line"/>
+      <point x="538" y="-49" type="line"/>
+      <point x="579" y="-43" type="line"/>
+      <point x="579" y="-75" type="line"/>
+      <point x="878" y="-75" type="line"/>
+      <point x="878" y="-23" type="line"/>
+      <point x="920" y="-29" type="line"/>
+      <point x="948" y="148" type="line"/>
+      <point x="866" y="161" type="line"/>
+      <point x="841" y="9" type="line"/>
+      <point x="615" y="9" type="line"/>
+      <point x="575" y="296" type="line"/>
+      <point x="574" y="296" type="line"/>
       <point x="574" y="513" type="line"/>
       <point x="540" y="513" type="line"/>
       <point x="558" y="539" type="line"/>
@@ -87,20 +100,6 @@
       <point x="436" y="447" type="line"/>
       <point x="465" y="447" type="line"/>
       <point x="469" y="444" type="line"/>
-    </contour>
-    <contour>
-      <point x="935" y="-23" type="line"/>
-      <point x="935" y="154" type="line"/>
-      <point x="851" y="154" type="line"/>
-      <point x="851" y="9" type="line"/>
-      <point x="598" y="9" type="line"/>
-      <point x="598" y="290" type="line"/>
-      <point x="514" y="290" type="line"/>
-      <point x="514" y="-43" type="line"/>
-      <point x="579" y="-43" type="line"/>
-      <point x="579" y="-75" type="line"/>
-      <point x="878" y="-75" type="line"/>
-      <point x="878" y="-23" type="line"/>
     </contour>
     <contour>
       <point x="635" y="354" type="line"/>
