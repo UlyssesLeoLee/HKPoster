@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni531A" format="2">
+  <advance width="1000"/>
+  <unicode hex="531A"/>
+  <note>
+匚：自动生成
+</note>
+  <outline>
+    <contour>
+      <point x="882" y="29" type="line"/>
+      <point x="882" y="125" type="line"/>
+      <point x="360" y="125" type="line"/>
+      <point x="360" y="29" type="line"/>
+    </contour>
+    <contour>
+      <point x="318" y="143" type="line"/>
+      <point x="403" y="187" type="line"/>
+      <point x="232" y="518" type="line"/>
+      <point x="235" y="518" type="line"/>
+      <point x="235" y="670" type="line"/>
+      <point x="784" y="670" type="line"/>
+      <point x="784" y="766" type="line"/>
+      <point x="215" y="766" type="line"/>
+      <point x="215" y="704" type="line"/>
+      <point x="139" y="704" type="line"/>
+      <point x="139" y="518" type="line"/>
+      <point x="178" y="518" type="line"/>
+      <point x="135" y="496" type="line"/>
+    </contour>
+  </outline>
+</glyph>

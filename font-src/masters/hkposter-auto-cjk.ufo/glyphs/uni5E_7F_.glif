@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5E7F" format="2">
+  <advance width="1000"/>
+  <unicode hex="5E7F"/>
+  <note>
+广：自动生成
+</note>
+  <outline>
+    <contour>
+      <point x="258" y="570" type="line"/>
+      <point x="162" y="570" type="line"/>
+      <point x="162" y="-57" type="line"/>
+      <point x="258" y="-57" type="line"/>
+    </contour>
+    <contour>
+      <point x="516" y="520" type="line"/>
+      <point x="516" y="538" type="line"/>
+      <point x="838" y="538" type="line"/>
+      <point x="838" y="634" type="line"/>
+      <point x="516" y="634" type="line"/>
+      <point x="516" y="616" type="line"/>
+      <point x="336" y="616" type="line"/>
+      <point x="336" y="520" type="line"/>
+    </contour>
+    <contour>
+      <point x="470" y="816" type="line"/>
+      <point x="470" y="720" type="line"/>
+      <point x="520" y="720" type="line"/>
+      <point x="520" y="664" type="line"/>
+      <point x="616" y="664" type="line"/>
+      <point x="616" y="744" type="line"/>
+      <point x="582" y="744" type="line"/>
+      <point x="582" y="816" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2022" format="2">
+  <advance width="640"/>
+  <unicode hex="2022"/>
+  <note>
+•：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="398" y="330" type="line"/>
+      <point x="392" y="360" type="line"/>
+      <point x="375" y="385" type="line"/>
+      <point x="350" y="402" type="line"/>
+      <point x="320" y="408" type="line"/>
+      <point x="290" y="402" type="line"/>
+      <point x="265" y="385" type="line"/>
+      <point x="248" y="360" type="line"/>
+      <point x="242" y="330" type="line"/>
+      <point x="248" y="300" type="line"/>
+      <point x="265" y="275" type="line"/>
+      <point x="290" y="258" type="line"/>
+      <point x="320" y="252" type="line"/>
+      <point x="350" y="258" type="line"/>
+      <point x="375" y="275" type="line"/>
+      <point x="392" y="300" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF3A" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF3A"/>
+  <note>
+Ｚ：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="257" y="132" type="line"/>
+      <point x="250" y="132" type="line"/>
+      <point x="250" y="123" type="line"/>
+      <point x="206" y="67" type="line"/>
+      <point x="250" y="33" type="line"/>
+      <point x="250" y="0" type="line"/>
+      <point x="291" y="0" type="line"/>
+      <point x="294" y="-2" type="line"/>
+      <point x="296" y="0" type="line"/>
+      <point x="750" y="0" type="line"/>
+      <point x="750" y="132" type="line"/>
+      <point x="400" y="132" type="line"/>
+      <point x="743" y="568" type="line"/>
+      <point x="750" y="568" type="line"/>
+      <point x="750" y="577" type="line"/>
+      <point x="794" y="633" type="line"/>
+      <point x="750" y="667" type="line"/>
+      <point x="750" y="700" type="line"/>
+      <point x="709" y="700" type="line"/>
+      <point x="706" y="702" type="line"/>
+      <point x="704" y="700" type="line"/>
+      <point x="250" y="700" type="line"/>
+      <point x="250" y="568" type="line"/>
+      <point x="600" y="568" type="line"/>
+    </contour>
+  </outline>
+</glyph>

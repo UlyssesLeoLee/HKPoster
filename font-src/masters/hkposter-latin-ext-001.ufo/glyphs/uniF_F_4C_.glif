@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF4C" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF4C"/>
+  <note>
+ｌ：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="440" y="0" type="line"/>
+      <point x="560" y="0" type="line"/>
+      <point x="560" y="700" type="line"/>
+      <point x="440" y="700" type="line"/>
+    </contour>
+  </outline>
+</glyph>

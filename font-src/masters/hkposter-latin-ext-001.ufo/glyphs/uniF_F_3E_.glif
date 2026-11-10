@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF3E" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF3E"/>
+  <note>
+＾：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="460" y="705" type="line"/>
+      <point x="260" y="525" type="line"/>
+      <point x="340" y="435" type="line"/>
+      <point x="500" y="579" type="line"/>
+      <point x="660" y="435" type="line"/>
+      <point x="740" y="525" type="line"/>
+      <point x="540" y="705" type="line"/>
+      <point x="500" y="660" type="line"/>
+    </contour>
+  </outline>
+</glyph>

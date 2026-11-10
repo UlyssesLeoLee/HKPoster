@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5182" format="2">
+  <advance width="1000"/>
+  <unicode hex="5182"/>
+  <note>
+冂：自动生成
+</note>
+  <outline>
+    <contour>
+      <point x="747" y="495" type="line"/>
+      <point x="747" y="4" type="line"/>
+      <point x="658" y="4" type="line"/>
+      <point x="658" y="-60" type="line"/>
+      <point x="747" y="-60" type="line"/>
+      <point x="747" y="-68" type="line"/>
+      <point x="811" y="-68" type="line"/>
+      <point x="811" y="-60" type="line"/>
+      <point x="878" y="-60" type="line"/>
+      <point x="878" y="4" type="line"/>
+      <point x="811" y="4" type="line"/>
+      <point x="811" y="495" type="line"/>
+    </contour>
+    <contour>
+      <point x="164" y="539" type="line"/>
+      <point x="132" y="539" type="line"/>
+      <point x="132" y="-45" type="line"/>
+      <point x="196" y="-45" type="line"/>
+      <point x="196" y="539" type="line"/>
+      <point x="228" y="539" type="line"/>
+      <point x="228" y="568" type="line"/>
+      <point x="681" y="568" type="line"/>
+      <point x="681" y="632" type="line"/>
+      <point x="228" y="632" type="line"/>
+      <point x="228" y="717" type="line"/>
+      <point x="164" y="717" type="line"/>
+    </contour>
+  </outline>
+</glyph>

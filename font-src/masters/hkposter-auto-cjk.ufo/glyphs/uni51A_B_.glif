@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni51AB" format="2">
+  <advance width="1000"/>
+  <unicode hex="51AB"/>
+  <note>
+冫：自动生成
+</note>
+  <outline>
+    <contour>
+      <point x="487" y="402" type="line"/>
+      <point x="487" y="-32" type="line"/>
+      <point x="583" y="-32" type="line"/>
+      <point x="583" y="402" type="line"/>
+    </contour>
+    <contour>
+      <point x="619" y="603" type="line"/>
+      <point x="449" y="785" type="line"/>
+      <point x="379" y="719" type="line"/>
+      <point x="549" y="537" type="line"/>
+    </contour>
+  </outline>
+</glyph>

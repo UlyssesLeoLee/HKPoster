@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF57" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF57"/>
+  <note>
+ｗ：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="481" y="420" type="line"/>
+      <point x="428" y="438" type="line"/>
+      <point x="342" y="191" type="line"/>
+      <point x="255" y="515" type="line"/>
+      <point x="147" y="485" type="line"/>
+      <point x="282" y="-15" type="line"/>
+      <point x="336" y="0" type="line"/>
+      <point x="389" y="-18" type="line"/>
+      <point x="481" y="248" type="line"/>
+      <point x="573" y="-18" type="line"/>
+      <point x="626" y="0" type="line"/>
+      <point x="678" y="-18" type="line"/>
+      <point x="853" y="482" type="line"/>
+      <point x="748" y="518" type="line"/>
+      <point x="626" y="171" type="line"/>
+      <point x="534" y="438" type="line"/>
+    </contour>
+  </outline>
+</glyph>

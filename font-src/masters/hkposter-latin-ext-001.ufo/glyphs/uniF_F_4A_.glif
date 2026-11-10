@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF4A" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF4A"/>
+  <note>
+ｊ：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="407" y="-203" type="line"/>
+      <point x="617" y="-93" type="line"/>
+      <point x="589" y="-40" type="line"/>
+      <point x="649" y="-40" type="line"/>
+      <point x="649" y="500" type="line"/>
+      <point x="529" y="500" type="line"/>
+      <point x="529" y="-4" type="line"/>
+      <point x="351" y="-97" type="line"/>
+    </contour>
+    <contour>
+      <point x="629" y="580" type="line"/>
+      <point x="641" y="599" type="line"/>
+      <point x="645" y="620" type="line"/>
+      <point x="641" y="641" type="line"/>
+      <point x="629" y="660" type="line"/>
+      <point x="610" y="672" type="line"/>
+      <point x="589" y="676" type="line"/>
+      <point x="567" y="672" type="line"/>
+      <point x="549" y="660" type="line"/>
+      <point x="537" y="641" type="line"/>
+      <point x="533" y="620" type="line"/>
+      <point x="537" y="599" type="line"/>
+      <point x="549" y="580" type="line"/>
+      <point x="567" y="568" type="line"/>
+      <point x="589" y="564" type="line"/>
+      <point x="610" y="568" type="line"/>
+    </contour>
+  </outline>
+</glyph>

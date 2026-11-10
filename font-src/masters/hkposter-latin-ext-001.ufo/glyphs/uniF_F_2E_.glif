@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF2E" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF2E"/>
+  <note>
+Ｎ：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="214" y="700" type="line"/>
+      <point x="214" y="0" type="line"/>
+      <point x="346" y="0" type="line"/>
+      <point x="346" y="483" type="line"/>
+      <point x="654" y="32" type="line"/>
+      <point x="654" y="0" type="line"/>
+      <point x="676" y="0" type="line"/>
+      <point x="677" y="-2" type="line"/>
+      <point x="679" y="0" type="line"/>
+      <point x="786" y="0" type="line"/>
+      <point x="786" y="700" type="line"/>
+      <point x="654" y="700" type="line"/>
+      <point x="654" y="217" type="line"/>
+      <point x="346" y="668" type="line"/>
+      <point x="346" y="700" type="line"/>
+      <point x="324" y="700" type="line"/>
+      <point x="323" y="702" type="line"/>
+      <point x="321" y="700" type="line"/>
+    </contour>
+  </outline>
+</glyph>

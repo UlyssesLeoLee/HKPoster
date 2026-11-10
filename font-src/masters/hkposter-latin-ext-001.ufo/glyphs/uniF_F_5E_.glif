@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF5E" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF5E"/>
+  <note>
+～：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="277" y="455" type="line"/>
+      <point x="323" y="385" type="line"/>
+      <point x="378" y="440" type="line"/>
+      <point x="500" y="318" type="line"/>
+      <point x="622" y="440" type="line"/>
+      <point x="677" y="385" type="line"/>
+      <point x="723" y="455" type="line"/>
+      <point x="598" y="520" type="line"/>
+      <point x="500" y="402" type="line"/>
+      <point x="402" y="520" type="line"/>
+    </contour>
+  </outline>
+</glyph>

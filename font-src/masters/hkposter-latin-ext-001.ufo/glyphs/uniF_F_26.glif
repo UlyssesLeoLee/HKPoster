@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF26" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF26"/>
+  <note>
+Ｆ：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="242" y="700" type="line"/>
+      <point x="242" y="0" type="line"/>
+      <point x="374" y="0" type="line"/>
+      <point x="374" y="298" type="line"/>
+      <point x="718" y="298" type="line"/>
+      <point x="718" y="402" type="line"/>
+      <point x="374" y="402" type="line"/>
+      <point x="374" y="568" type="line"/>
+      <point x="758" y="568" type="line"/>
+      <point x="758" y="700" type="line"/>
+      <point x="374" y="700" type="line"/>
+      <point x="308" y="700" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2017" format="2">
+  <advance width="640"/>
+  <unicode hex="2017"/>
+  <note>
+‗：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="540" y="82" type="line"/>
+      <point x="100" y="82" type="line"/>
+      <point x="100" y="-2" type="line"/>
+      <point x="540" y="-2" type="line"/>
+    </contour>
+    <contour>
+      <point x="540" y="212" type="line"/>
+      <point x="100" y="212" type="line"/>
+      <point x="100" y="128" type="line"/>
+      <point x="540" y="128" type="line"/>
+    </contour>
+  </outline>
+</glyph>

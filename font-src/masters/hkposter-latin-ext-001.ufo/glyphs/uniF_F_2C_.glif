@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF2C" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF2C"/>
+  <note>
+Ｌ：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="738" y="132" type="line"/>
+      <point x="394" y="132" type="line"/>
+      <point x="394" y="700" type="line"/>
+      <point x="262" y="700" type="line"/>
+      <point x="262" y="0" type="line"/>
+      <point x="328" y="0" type="line"/>
+      <point x="394" y="0" type="line"/>
+      <point x="738" y="0" type="line"/>
+    </contour>
+  </outline>
+</glyph>

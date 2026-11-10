@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF39" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF39"/>
+  <note>
+Ｙ：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="444" y="321" type="line"/>
+      <point x="444" y="0" type="line"/>
+      <point x="556" y="0" type="line"/>
+      <point x="556" y="321" type="line"/>
+      <point x="795" y="634" type="line"/>
+      <point x="705" y="702" type="line"/>
+      <point x="500" y="432" type="line"/>
+      <point x="295" y="702" type="line"/>
+      <point x="205" y="634" type="line"/>
+    </contour>
+  </outline>
+</glyph>

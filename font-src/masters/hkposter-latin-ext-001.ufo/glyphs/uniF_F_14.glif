@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF14" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF14"/>
+  <note>
+４：latin-ext-001
+</note>
+  <outline>
+    <contour>
+      <point x="768" y="286" type="line"/>
+      <point x="674" y="286" type="line"/>
+      <point x="674" y="700" type="line"/>
+      <point x="544" y="700" type="line"/>
+      <point x="542" y="701" type="line"/>
+      <point x="232" y="262" type="line"/>
+      <point x="278" y="230" type="line"/>
+      <point x="278" y="174" type="line"/>
+      <point x="542" y="174" type="line"/>
+      <point x="542" y="0" type="line"/>
+      <point x="674" y="0" type="line"/>
+      <point x="674" y="174" type="line"/>
+      <point x="768" y="174" type="line"/>
+    </contour>
+    <contour>
+      <point x="542" y="286" type="line"/>
+      <point x="386" y="286" type="line"/>
+      <point x="542" y="507" type="line"/>
+    </contour>
+  </outline>
+</glyph>
