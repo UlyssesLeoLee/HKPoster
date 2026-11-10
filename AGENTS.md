@@ -114,6 +114,40 @@
       必须在新派单里**点名要求忽略**，否则新 worker 会接着那份沉没成本往下做。
       实测：`s3-009` 第一个 worker 卡在「反复参照栅格化」循环里 60 分钟零产出；
       换人后新派单明确「忽略 `_grid.py` / `_probe.py` / `ref-*.png` 残留」才走上正轨。
+16. **定档/密度类判据的「距离」必须先问它约束什么（2026-11-07）**：
+    自动生成层用「到最近其他笔中心线的全局最小距离」定笔画权重 ⇒
+    **97.6% 的笔画落到最轻档**，整层渲染出来像 Hairline。
+    - 错在：横竖**相交点距离为 0**，但那里本来就要相交，不构成重量约束。
+    - 正确判据：只看**平行**邻笔（夹角 ≤ 45°）的**正面白缝**，
+      且平行间距**只在投影落在对方笔段跨度内时**才算
+      （否则「横笔从斜笔端点外侧擦过」会被误判成贴太近）。
+    - 修正后 96 档占比 0.7% → 35.6%。
+    - **推广**：任何用几何距离做视觉判定的门禁，都要先确认这个距离
+      对应的是哪个**视觉约束**，而不是「几何上最近」。
+17. **质量闸必须用「落盘后的坐标」判定，不能用理想几何（2026-11-07）**：
+    `hkbuild.write_ufo()` 会把坐标**取整** ⇒ 全精度浮点下判过自交的字
+    （口 U+53E3、中 U+4E2D 实测）取整后仍自交。
+    ⇒ 自动生成的闸门必须走「生成 → 取整 → 判定」的完整路径。
+18. **许可/法律文件必须下载原件，不能手抄（2026-11-09）**：
+    `hanzi-writer-data` 的许可不是 MIT 而是 **Arphic Public License**，
+    且 APL §1 要求**原样保留**许可文件。
+    实测手抄 6900 字节的 `ARPHICPL.TXT` **抄错 3 处**
+    （`COPYRIGHT HOLDERS`→`COPYWRIGHTHOLDERS`、
+    `do not excuse your obligations`→`…non-compliance…`、
+    `INDIRECT,` 后漏一个空格）—— 抄错 = 违反许可。
+    ⇒ 用 `Invoke-WebRequest` 取原件并记录 sha256；
+    **禁止凭记忆重写法律文本**。
+19. **法律声明要打在「被分发的那个文件」上，不要打在生成源上（2026-11-09）**：
+    APL §2(a) 说的「被修改的文件」= 成品字体 ⇒ 声明写在 **build 阶段**
+    （`build_font.py` 的 `apply_license_notice()`，进 nameID 0 / 13）。
+    - **不要**写进 `hkbuild.write_ufo()`：`check_recipes.py` 的 `info_dict()`
+      比对 fontinfo 的**全部字段**，改那里就得全量重新生成 58 个 master；
+      改 build 阶段则一个 UFO 都不用动。
+20. **「能覆盖」≠「能用于标题」（2026-11-09）**：
+    v0.4 的 9088 字形是**两层**（手工精造 1587 / 自动骨架 7246）+ 拉丁层 255，
+    品质不同。发布说明**必须**写明每层的品质预期与使用场景 ——
+    大字号标题用手工层，自动层用于正文与生僻字。
+    把「能覆盖」当成「能用于标题」是本轮最容易犯的自欺。
 
 ## 常用命令
 
@@ -139,6 +173,10 @@ python font-src/scripts/check_charset.py              # 字符↔码位↔冻结
 python font-src/scripts/check_codepoint_ref.py        # 码位独立核对（参照字体当第三方证据源）
 python font-src/scripts/check_codepoint_ref.py --selftest  # 先自证该门禁的分辨力
 python font-src/scripts/check_encoding.py              # 字符损坏扫描（坏字符进 recipe 就是错字形）
+python font-src/scripts/check_cavity_height.py         # 几何腔高校验（<24 FAIL / =24 WARN），第 14 步
+python font-src/scripts/check_coverage.py              # 覆盖审计（GB2312/CJK/Jōyō/Latin 口径实测，审计性质不判 FAIL）
+python font-src/scripts/check_coverage.py --selftest   # 先自证该审计器本身的分辨力
+python font-src/scripts/hk_autogen.py --chars <chars.txt> --out font-src/src/<recipe>.py --master <master>  # 骨架中线自动生成
 python font-src/tests/run_tests.py         # UT + IT + ST 全套
 python font-src/specimens/render_specimens.py --all        # 重生成样张
 python font-src/scripts/sync_charset_table.py              # 把 master 里的真实字形回写进字符规划表

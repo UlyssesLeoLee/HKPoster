@@ -172,6 +172,37 @@ def composite(sources: list[Path]) -> tuple[Font, list[str]]:
     return base, conflicts
 
 
+# 自动骨架层（hkposter-auto-joyo / hkposter-auto-cjk）的字形派生自
+# hanzi-writer-data 的「笔画中线」，而该数据的许可是 Arphic Public License
+# （见 https://github.com/chanind/hanzi-writer-data 的 README 与 ARPHICPL.TXT）。
+# APL §2a 要求「在被修改的文件里显著声明何时如何修改」——被分发的文件是
+# 成品字体本身，所以声明打在 name 表（nameID 0 / nameID 13 / nameID 14）上。
+# 注意：不要把这段写进 hkbuild.write_ufo —— check_recipes 会逐字段比对
+# fontinfo.plist，改那里就得全量重新生成 58 个 master。
+APL_NOTICE = (
+    "Contains glyphs derived from Arphic Technology data "
+    "(hanzi-writer-data / Make Me A Hanzi), redistributed under the "
+    "Arphic Public License; modified 2026-11 by re-drawing stroke "
+    "centerlines. See ARPHICPL.TXT."
+)
+
+
+def apply_license_notice(font: Font) -> None:
+    """把 APL 衍生声明写进成品字体的 name 表。"""
+    info = font.info
+    info.copyright = (
+        "Copyright (c) 2026 HK Poster Project. All rights reserved. " + APL_NOTICE
+    )
+    info.openTypeNameLicense = (
+        "UNDECIDED — 发布前必须完成许可证审查（见 docs/08_授权与发布.md）。"
+        + APL_NOTICE
+    )
+    info.openTypeNameDescription = (
+        "HK Poster Heavy — 香港电影海报风格粗体（Wave 0 试制，未发布）。"
+        "含自动骨架层（由笔画中线重画，非描摹轮廓）。"
+    )
+
+
 def feature_applies(glyph_names: set[str], text: str) -> tuple[bool, str]:
     """判断该特性文件在当前字形集下是否适用。
 
@@ -317,6 +348,7 @@ def main() -> int:
     out_dir = Path(args.out).resolve()
 
     font, conflicts = composite(sources)
+    apply_license_notice(font)
     used_features, skipped_features = apply_features(font, feature_files, strict=full_build)
 
     tmp_dir = Path(tempfile.mkdtemp(prefix="hkposter-build-", dir=str(FONT_SRC)))
