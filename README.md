@@ -24,7 +24,7 @@
 
 - **字体本体与海报视觉效果分离。** 霓虹、荧光描边、颗粒、雨夜反射属于应用样张的图形处理，不视为 OTF/TTF 字形轮廓的必要组成。
 - **状态不可冒充。** 已有真实字形源、UFO master、可构建的 OTF/TTF/WOFF2、可执行的 UT/IT/ST 与样张；
-  但 **macOS/浏览器平台测试未执行、字体自身许可证仍为 `UNDECIDED`、自动骨架层含 Arphic Public License 衍生作品**——
+  但 **macOS/浏览器平台测试未执行**；字体二进制已按 **SIL OFL 1.1** 授权（自动骨架层另受 Arphic Public License 约束，见 `OFL.txt` / `ARPHICPL.TXT`）——
   表格中未执行的一律保持 `NOT_RUN`，不因“文档已完成”而标 PASS。
 
 ## 与初始方案相比的整理
@@ -43,4 +43,4 @@
 | 单元 / 集成 / 系统测试 | **可执行**（`font-src/tests/run_tests.py`）；Windows 侧通过，macOS 与浏览器 NOT_RUN |
 | 质量门禁 | **14/14 PASS**（`font-src/scripts/verify_all.py`），含横画内白、几何腔高、码位三方交叉核对 |
 | 样张 | **已生成**（黑白 48/96/192 px + 效果组 + 假名 + 拉丁；7 张，缺字 0 个） |
-| 字体许可证最终确定 | **未确定**；拟发布前必须审查，发布门禁（G4）仍阻断。**自动骨架层 7246 字是 Arphic Public License 衍生作品**（见 `release/NOTICE.md`） |
+| 字体许可证 | **字体二进制 = SIL OFL 1.1**（保留字体名 `HK Poster Heavy`，见 `OFL.txt`）；**源代码 = GNU GPL v3**（仓库根 `LICENSE`）；**自动骨架层 7246 字 = Arphic Public License 衍生作品**（见 `ARPHICPL.TXT` / `NOTICE.md`） |

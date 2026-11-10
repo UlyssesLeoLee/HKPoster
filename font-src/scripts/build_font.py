@@ -179,26 +179,35 @@ def composite(sources: list[Path]) -> tuple[Font, list[str]]:
 # 成品字体本身，所以声明打在 name 表（nameID 0 / nameID 13 / nameID 14）上。
 # 注意：不要把这段写进 hkbuild.write_ufo —— check_recipes 会逐字段比对
 # fontinfo.plist，改那里就得全量重新生成 58 个 master。
+#
+# 字体二进制自身的许可（2026-11-10 拍板）：SIL Open Font License 1.1，
+# 保留字体名 "HK Poster Heavy"；APL 衍生部分随包保留 ARPHICPL.TXT 原文与
+# 修改声明（NOTICE.md），并在 GitHub 公开完整源码以满足 APL §2(b)。
 APL_NOTICE = (
     "Contains glyphs derived from Arphic Technology data "
     "(hanzi-writer-data / Make Me A Hanzi), redistributed under the "
     "Arphic Public License; modified 2026-11 by re-drawing stroke "
-    "centerlines. See ARPHICPL.TXT."
+    "centerlines. See ARPHICPL.TXT and NOTICE.md."
 )
+OFL_URL = "https://github.com/UlyssesLeoLee/HKPoster/blob/main/OFL.txt"
 
 
 def apply_license_notice(font: Font) -> None:
-    """把 APL 衍生声明写进成品字体的 name 表。"""
+    """把 OFL 1.1 + APL 衍生声明写进成品字体的 name 表。"""
     info = font.info
     info.copyright = (
-        "Copyright (c) 2026 HK Poster Project. All rights reserved. " + APL_NOTICE
+        'Copyright (c) 2026 HK Poster Project '
+        "(https://github.com/UlyssesLeoLee/HKPoster), "
+        'with Reserved Font Name "HK Poster Heavy". ' + APL_NOTICE
     )
     info.openTypeNameLicense = (
-        "UNDECIDED — 发布前必须完成许可证审查（见 docs/08_授权与发布.md）。"
-        + APL_NOTICE
+        "This Font Software is licensed under the SIL Open Font License, "
+        "Version 1.1. This license is copied below, and is also available "
+        "with a FAQ at: https://openfontlicense.org " + APL_NOTICE
     )
+    info.openTypeNameLicenseURL = OFL_URL
     info.openTypeNameDescription = (
-        "HK Poster Heavy — 香港电影海报风格粗体（Wave 0 试制，未发布）。"
+        "HK Poster Heavy — 香港电影海报风格粗体。"
         "含自动骨架层（由笔画中线重画，非描摹轮廓）。"
     )
 
