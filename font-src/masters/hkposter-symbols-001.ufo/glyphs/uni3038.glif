@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3038" format="2">
+  <advance width="1000"/>
+  <unicode hex="3038"/>
+  <note>
+〸：杭州数字 10
+</note>
+  <outline>
+    <contour>
+      <point x="452" y="472" type="line"/>
+      <point x="452" y="100" type="line"/>
+      <point x="548" y="100" type="line"/>
+      <point x="548" y="472" type="line"/>
+      <point x="780" y="472" type="line"/>
+      <point x="780" y="568" type="line"/>
+      <point x="548" y="568" type="line"/>
+      <point x="548" y="720" type="line"/>
+      <point x="452" y="720" type="line"/>
+      <point x="452" y="568" type="line"/>
+      <point x="220" y="568" type="line"/>
+      <point x="220" y="472" type="line"/>
+    </contour>
+  </outline>
+</glyph>

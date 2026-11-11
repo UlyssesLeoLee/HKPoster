@@ -7,16 +7,16 @@
 </note>
   <outline>
     <contour>
-      <point x="346" y="72" type="line"/>
-      <point x="426" y="72" type="line"/>
-      <point x="426" y="107" type="line"/>
-      <point x="449" y="67" type="line"/>
-      <point x="702" y="207" type="line"/>
-      <point x="658" y="288" type="line"/>
-      <point x="646" y="281" type="line"/>
-      <point x="646" y="361" type="line"/>
-      <point x="396" y="361" type="line"/>
-      <point x="396" y="295" type="line"/>
+      <point x="353" y="77" type="line"/>
+      <point x="425" y="77" type="line"/>
+      <point x="425" y="107" type="line"/>
+      <point x="447" y="67" type="line"/>
+      <point x="704" y="203" type="line"/>
+      <point x="661" y="284" type="line"/>
+      <point x="647" y="277" type="line"/>
+      <point x="647" y="356" type="line"/>
+      <point x="410" y="356" type="line"/>
+      <point x="410" y="282" type="line"/>
       <point x="378" y="311" type="line"/>
       <point x="314" y="241" type="line"/>
       <point x="314" y="493" type="line"/>
@@ -32,22 +32,22 @@
       <point x="252" y="105" type="line"/>
       <point x="286" y="74" type="line"/>
       <point x="314" y="105" type="line"/>
-      <point x="346" y="140" type="line"/>
+      <point x="353" y="147" type="line"/>
     </contour>
     <contour>
-      <point x="562" y="269" type="line"/>
-      <point x="624" y="269" type="line"/>
-      <point x="575" y="242" type="line"/>
+      <point x="565" y="264" type="line"/>
+      <point x="623" y="264" type="line"/>
+      <point x="576" y="239" type="line"/>
     </contour>
     <contour>
       <point x="471" y="217" type="line"/>
-      <point x="492" y="196" type="line"/>
-      <point x="426" y="160" type="line"/>
-      <point x="426" y="164" type="line"/>
-      <point x="369" y="164" type="line"/>
+      <point x="493" y="195" type="line"/>
+      <point x="425" y="159" type="line"/>
+      <point x="425" y="169" type="line"/>
+      <point x="373" y="169" type="line"/>
       <point x="446" y="249" type="line"/>
-      <point x="424" y="269" type="line"/>
-      <point x="460" y="269" type="line"/>
+      <point x="430" y="264" type="line"/>
+      <point x="463" y="264" type="line"/>
       <point x="481" y="226" type="line"/>
     </contour>
     <contour>
@@ -62,28 +62,28 @@
       <point x="985" y="171" type="line"/>
       <point x="895" y="191" type="line"/>
       <point x="880" y="124" type="line"/>
-      <point x="741" y="488" type="line"/>
-      <point x="800" y="488" type="line"/>
-      <point x="800" y="578" type="line"/>
-      <point x="845" y="578" type="line"/>
-      <point x="845" y="672" type="line"/>
+      <point x="743" y="483" type="line"/>
+      <point x="825" y="483" type="line"/>
+      <point x="825" y="562" type="line"/>
+      <point x="854" y="562" type="line"/>
+      <point x="854" y="672" type="line"/>
       <point x="813" y="672" type="line"/>
-      <point x="832" y="713" type="line"/>
-      <point x="688" y="779" type="line"/>
-      <point x="653" y="702" type="line"/>
+      <point x="813" y="740" type="line"/>
+      <point x="668" y="740" type="line"/>
+      <point x="668" y="668" type="line"/>
       <point x="611" y="804" type="line"/>
       <point x="526" y="768" type="line"/>
-      <point x="605" y="580" type="line"/>
-      <point x="433" y="580" type="line"/>
-      <point x="433" y="488" type="line"/>
-      <point x="643" y="488" type="line"/>
+      <point x="607" y="575" type="line"/>
+      <point x="433" y="575" type="line"/>
+      <point x="433" y="483" type="line"/>
+      <point x="644" y="483" type="line"/>
       <point x="848" y="-51" type="line"/>
     </contour>
     <contour>
-      <point x="704" y="580" type="line"/>
-      <point x="658" y="692" type="line"/>
-      <point x="753" y="649" type="line"/>
-      <point x="753" y="580" type="line"/>
+      <point x="706" y="575" type="line"/>
+      <point x="676" y="648" type="line"/>
+      <point x="762" y="648" type="line"/>
+      <point x="762" y="575" type="line"/>
     </contour>
   </outline>
 </glyph>

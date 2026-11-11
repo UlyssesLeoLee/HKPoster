@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3026" format="2">
+  <advance width="1000"/>
+  <unicode hex="3026"/>
+  <note>
+〦：杭州数字 6
+</note>
+  <outline>
+    <contour>
+      <point x="280" y="127" type="line"/>
+      <point x="426" y="545" type="line"/>
+      <point x="334" y="575" type="line"/>
+      <point x="200" y="153" type="line"/>
+    </contour>
+    <contour>
+      <point x="720" y="127" type="line"/>
+      <point x="800" y="153" type="line"/>
+      <point x="666" y="575" type="line"/>
+      <point x="574" y="545" type="line"/>
+    </contour>
+    <contour>
+      <point x="720" y="592" type="line"/>
+      <point x="720" y="688" type="line"/>
+      <point x="280" y="688" type="line"/>
+      <point x="280" y="592" type="line"/>
+    </contour>
+  </outline>
+</glyph>

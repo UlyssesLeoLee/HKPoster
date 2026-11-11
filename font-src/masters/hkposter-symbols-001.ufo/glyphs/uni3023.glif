@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3023" format="2">
+  <advance width="1000"/>
+  <unicode hex="3023"/>
+  <note>
+〣：杭州数字 3
+</note>
+  <outline>
+    <contour>
+      <point x="262" y="700" type="line"/>
+      <point x="262" y="120" type="line"/>
+      <point x="358" y="120" type="line"/>
+      <point x="358" y="700" type="line"/>
+    </contour>
+    <contour>
+      <point x="548" y="700" type="line"/>
+      <point x="452" y="700" type="line"/>
+      <point x="452" y="120" type="line"/>
+      <point x="548" y="120" type="line"/>
+    </contour>
+    <contour>
+      <point x="738" y="700" type="line"/>
+      <point x="642" y="700" type="line"/>
+      <point x="642" y="120" type="line"/>
+      <point x="738" y="120" type="line"/>
+    </contour>
+  </outline>
+</glyph>

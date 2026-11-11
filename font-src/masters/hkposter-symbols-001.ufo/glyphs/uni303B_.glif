@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni303B" format="2">
+  <advance width="1000"/>
+  <unicode hex="303B"/>
+  <note>
+〻：竖排表意反复号
+</note>
+  <outline>
+    <contour>
+      <point x="322" y="720" type="line"/>
+      <point x="322" y="100" type="line"/>
+      <point x="418" y="100" type="line"/>
+      <point x="418" y="720" type="line"/>
+    </contour>
+    <contour>
+      <point x="582" y="720" type="line"/>
+      <point x="582" y="100" type="line"/>
+      <point x="678" y="100" type="line"/>
+      <point x="678" y="720" type="line"/>
+    </contour>
+  </outline>
+</glyph>

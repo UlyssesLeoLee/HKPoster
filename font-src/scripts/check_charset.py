@@ -113,7 +113,8 @@ def main() -> int:
                 continue
             claimed = note[0]
             cp = ord(claimed)
-            if not (0x3400 <= cp <= 0x9FFF or 0x3040 <= cp <= 0x30FF):
+            if not (0x3000 <= cp <= 0x30FF or 0x3400 <= cp <= 0x9FFF
+                    or 0xFF00 <= cp <= 0xFFEF):
                 continue
             checked_notes += 1
             if cp != g.unicode:

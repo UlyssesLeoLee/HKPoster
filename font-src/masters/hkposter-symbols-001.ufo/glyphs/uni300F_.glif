@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni300F" format="2">
+  <advance width="1000"/>
+  <unicode hex="300F"/>
+  <note>
+』：右白直角引号
+</note>
+  <outline>
+    <contour>
+      <point x="268" y="760" type="line"/>
+      <point x="220" y="760" type="line"/>
+      <point x="220" y="808" type="line"/>
+      <point x="100" y="808" type="line"/>
+      <point x="100" y="712" type="line"/>
+      <point x="172" y="712" type="line"/>
+      <point x="172" y="692" type="line"/>
+      <point x="160" y="692" type="line"/>
+      <point x="160" y="608" type="line"/>
+      <point x="172" y="608" type="line"/>
+      <point x="172" y="60" type="line"/>
+      <point x="268" y="60" type="line"/>
+      <point x="268" y="608" type="line"/>
+      <point x="298" y="608" type="line"/>
+      <point x="298" y="170" type="line"/>
+      <point x="382" y="170" type="line"/>
+      <point x="382" y="650" type="line"/>
+      <point x="340" y="650" type="line"/>
+      <point x="340" y="692" type="line"/>
+      <point x="268" y="692" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3004" format="2">
+  <advance width="1000"/>
+  <unicode hex="3004"/>
+  <note>
+〄：日本工业标准记号
+</note>
+  <outline>
+    <contour>
+      <point x="660" y="254" type="line"/>
+      <point x="660" y="260" type="line"/>
+      <point x="706" y="260" type="line"/>
+      <point x="706" y="712" type="line"/>
+      <point x="760" y="712" type="line"/>
+      <point x="760" y="808" type="line"/>
+      <point x="320" y="808" type="line"/>
+      <point x="320" y="760" type="line"/>
+      <point x="272" y="760" type="line"/>
+      <point x="272" y="0" type="line"/>
+      <point x="368" y="0" type="line"/>
+      <point x="368" y="254" type="line"/>
+    </contour>
+    <contour>
+      <point x="368" y="346" type="line"/>
+      <point x="368" y="712" type="line"/>
+      <point x="614" y="712" type="line"/>
+      <point x="614" y="346" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2023" format="2">
+  <advance width="640"/>
+  <unicode hex="2023"/>
+  <note>
+‣：三角项目符号
+</note>
+  <outline>
+    <contour>
+      <point x="230" y="470" type="line"/>
+      <point x="320" y="260" type="line"/>
+      <point x="410" y="470" type="line"/>
+    </contour>
+  </outline>
+</glyph>

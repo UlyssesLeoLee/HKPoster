@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3034" format="2">
+  <advance width="1000"/>
+  <unicode hex="3034"/>
+  <note>
+〴：竖排假名浊音重复记号上半
+</note>
+  <outline>
+    <contour>
+      <point x="272" y="760" type="line"/>
+      <point x="272" y="380" type="line"/>
+      <point x="368" y="380" type="line"/>
+      <point x="368" y="760" type="line"/>
+    </contour>
+    <contour>
+      <point x="820" y="742" type="line"/>
+      <point x="700" y="742" type="line"/>
+      <point x="700" y="658" type="line"/>
+      <point x="820" y="658" type="line"/>
+    </contour>
+  </outline>
+</glyph>

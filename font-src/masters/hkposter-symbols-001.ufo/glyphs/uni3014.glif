@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3014" format="2">
+  <advance width="1000"/>
+  <unicode hex="3014"/>
+  <note>
+〔：左甲鱼括号
+</note>
+  <outline>
+    <contour>
+      <point x="300" y="700" type="line"/>
+      <point x="300" y="120" type="line"/>
+      <point x="300" y="40" type="line"/>
+      <point x="420" y="120" type="line"/>
+      <point x="420" y="700" type="line"/>
+      <point x="300" y="780" type="line"/>
+    </contour>
+  </outline>
+</glyph>

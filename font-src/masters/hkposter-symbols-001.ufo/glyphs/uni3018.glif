@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3018" format="2">
+  <advance width="1000"/>
+  <unicode hex="3018"/>
+  <note>
+〘：左空白龟甲括号（双线）
+</note>
+  <outline>
+    <contour>
+      <point x="300" y="700" type="line"/>
+      <point x="300" y="115" type="line"/>
+      <point x="300" y="60" type="line"/>
+      <point x="400" y="130" type="line"/>
+      <point x="400" y="140" type="line"/>
+      <point x="380" y="150" type="line"/>
+      <point x="380" y="690" type="line"/>
+      <point x="392" y="696" type="line"/>
+      <point x="300" y="760" type="line"/>
+    </contour>
+  </outline>
+</glyph>

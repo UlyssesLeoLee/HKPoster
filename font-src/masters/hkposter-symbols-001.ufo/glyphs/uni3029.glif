@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3029" format="2">
+  <advance width="1000"/>
+  <unicode hex="3029"/>
+  <note>
+〩：杭州数字 9
+</note>
+  <outline>
+    <contour>
+      <point x="746" y="55" type="line"/>
+      <point x="814" y="105" type="line"/>
+      <point x="708" y="252" type="line"/>
+      <point x="708" y="480" type="line"/>
+      <point x="660" y="480" type="line"/>
+      <point x="660" y="528" type="line"/>
+      <point x="504" y="528" type="line"/>
+      <point x="318" y="769" type="line"/>
+      <point x="242" y="711" type="line"/>
+      <point x="383" y="528" type="line"/>
+      <point x="360" y="528" type="line"/>
+      <point x="360" y="432" type="line"/>
+      <point x="612" y="432" type="line"/>
+      <point x="612" y="60" type="line"/>
+      <point x="708" y="60" type="line"/>
+      <point x="708" y="104" type="line"/>
+    </contour>
+  </outline>
+</glyph>

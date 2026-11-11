@@ -203,7 +203,17 @@ class Glyph:
 
     # ---- 轮廓输出 ----
     def contours(self) -> list[list[Point]]:
-        """并集后的轮廓环列表：外环 + 内环（洞），坐标取整。"""
+        """并集后的轮廓环列表：外环 + 内环（洞），坐标取整。
+
+        两道清理（2026-11-10）：
+        1. **<3 点的环丢掉** —— 并集偶尔留下零面积的「尖刺」多边形
+           （顶点 A,B,A），去重后只剩 2 个点。`draw()` 本来就不画这种环，
+           所以它**不会进 UFO**，门禁却会因此判 FAIL —— 那是误报：
+           断言的东西（成品的墨形）根本没有这个环。
+        2. **非法环修复** —— 坐标取整可能让两个本来分开的点合并，
+           环就自交了。这种环会**真的进 UFO**，必须修（`buffer(0)`），
+           不能靠门禁挡掉 —— 门禁挡掉 = 丢字。
+        """
         if not self._parts:
             return []
         polys = []
@@ -225,7 +235,30 @@ class Glyph:
             rings.append(_ring(geom.exterior.coords))
             for interior in geom.interiors:
                 rings.append(_ring(interior.coords))
-        return rings
+
+        out: list[list[Point]] = []
+        for ring in rings:
+            if len(ring) < 3:
+                continue          # 退化尖刺环：不绘制，也不算缺陷
+            poly = Polygon([(float(p[0]), float(p[1])) for p in ring])
+            if poly.is_valid:
+                out.append(ring)
+                continue
+            fixed = poly.buffer(0)
+            if fixed.is_empty:
+                continue
+            parts = list(fixed.geoms) if fixed.geom_type == "MultiPolygon" else [fixed]
+            for part in parts:
+                if part.geom_type != "Polygon" or part.is_empty:
+                    continue
+                ext = _ring(part.exterior.coords)
+                if len(ext) >= 3:
+                    out.append(ext)
+                for interior in part.interiors:
+                    hole = _ring(interior.coords)
+                    if len(hole) >= 3:
+                        out.append(hole)
+        return out
 
     def draw(self, pen) -> None:
         """把轮廓画进一个 pen（ufoLib2 的 glyph pen）。"""
@@ -294,6 +327,32 @@ def notdef_glyph() -> Glyph:
 def space_glyph(advance: int = 500) -> Glyph:
     """空格：必须有 U+0020 映射，否则排版时空格会落到 .notdef。"""
     return Glyph("space", advance=advance, unicode=0x20)
+
+
+def is_blank_kind(codepoint: int | None) -> bool:
+    """该码位**本来就不该有墨**（Unicode 类别 Zs / Zl / Zp / Cf / Cn）。
+
+    空格（Zs）、行/段分隔符（Zl/Zp）、格式控制符（Cf：零宽连字、方向标记等）
+    按 Unicode 定义就是零墨的字形 —— 画不出东西才是对的。
+
+    「空字形 = FAIL」这条判据只对**应该有墨**的字符成立；
+    对这几类放行，否则门禁会逼着人给空格画一根发丝 ——
+    那既不是 Unicode 语义，也会污染墨量率统计。
+
+    Cn（未分配码位）也放行：U+2065 这类「保留码位」语义上就是保留位，
+    我们给它一个零墨的占位，好过留一个 .notdef。
+
+    这条判据由门禁与 UT 套件**共用**（check_glyphs / test_glyph_metrics），
+    避免两处口径漂移。
+    """
+    if codepoint is None:
+        return False
+    import unicodedata
+    try:
+        category = unicodedata.category(chr(codepoint))
+    except ValueError:
+        return False
+    return category in ("Zs", "Zl", "Zp", "Cf", "Cn")
 
 
 def write_ufo(

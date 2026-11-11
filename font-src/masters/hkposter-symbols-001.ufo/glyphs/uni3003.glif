@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3003" format="2">
+  <advance width="1000"/>
+  <unicode hex="3003"/>
+  <note>
+〃：同上记号
+</note>
+  <outline>
+    <contour>
+      <point x="371" y="310" type="line"/>
+      <point x="461" y="690" type="line"/>
+      <point x="379" y="710" type="line"/>
+      <point x="289" y="330" type="line"/>
+    </contour>
+    <contour>
+      <point x="611" y="310" type="line"/>
+      <point x="701" y="690" type="line"/>
+      <point x="619" y="710" type="line"/>
+      <point x="529" y="330" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2040" format="2">
+  <advance width="640"/>
+  <unicode hex="2040"/>
+  <note>
+⁀：字符连字符
+</note>
+  <outline>
+    <contour>
+      <point x="470" y="12" type="line"/>
+      <point x="198" y="12" type="line"/>
+      <point x="220" y="77" type="line"/>
+      <point x="140" y="103" type="line"/>
+      <point x="100" y="-17" type="line"/>
+      <point x="140" y="-30" type="line"/>
+      <point x="140" y="-72" type="line"/>
+      <point x="500" y="-72" type="line"/>
+      <point x="500" y="-30" type="line"/>
+      <point x="540" y="-43" type="line"/>
+      <point x="580" y="77" type="line"/>
+      <point x="500" y="103" type="line"/>
+    </contour>
+  </outline>
+</glyph>

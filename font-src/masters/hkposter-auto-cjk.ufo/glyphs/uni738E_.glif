@@ -7,7 +7,7 @@
 </note>
   <outline>
     <contour>
-      <point x="203" y="442" type="line"/>
+      <point x="203" y="422" type="line"/>
       <point x="203" y="304" type="line"/>
       <point x="88" y="247" type="line"/>
       <point x="87" y="248" type="line"/>
@@ -23,9 +23,9 @@
       <point x="299" y="352" type="line"/>
       <point x="299" y="442" type="line"/>
       <point x="324" y="442" type="line"/>
-      <point x="324" y="509" type="line"/>
-      <point x="367" y="509" type="line"/>
-      <point x="367" y="558" type="line"/>
+      <point x="324" y="462" type="line"/>
+      <point x="324" y="538" type="line"/>
+      <point x="324" y="558" type="line"/>
       <point x="299" y="558" type="line"/>
       <point x="299" y="633" type="line"/>
       <point x="265" y="633" type="line"/>
@@ -41,11 +41,11 @@
       <point x="213" y="652" type="line"/>
       <point x="194" y="625" type="line"/>
       <point x="203" y="619" type="line"/>
-      <point x="203" y="540" type="line"/>
-      <point x="136" y="540" type="line"/>
-      <point x="136" y="470" type="line"/>
-      <point x="179" y="470" type="line"/>
+      <point x="203" y="538" type="line"/>
+      <point x="179" y="538" type="line"/>
+      <point x="179" y="518" type="line"/>
       <point x="179" y="442" type="line"/>
+      <point x="179" y="422" type="line"/>
     </contour>
     <contour>
       <point x="619" y="477" type="line"/>
@@ -58,12 +58,12 @@
       <point x="714" y="493" type="line"/>
       <point x="666" y="485" type="line"/>
       <point x="714" y="494" type="line"/>
-      <point x="685" y="657" type="line"/>
-      <point x="940" y="657" type="line"/>
-      <point x="940" y="753" type="line"/>
-      <point x="415" y="753" type="line"/>
-      <point x="415" y="657" type="line"/>
-      <point x="587" y="657" type="line"/>
+      <point x="684" y="660" type="line"/>
+      <point x="940" y="660" type="line"/>
+      <point x="940" y="756" type="line"/>
+      <point x="419" y="756" type="line"/>
+      <point x="419" y="660" type="line"/>
+      <point x="587" y="660" type="line"/>
     </contour>
   </outline>
 </glyph>

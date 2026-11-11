@@ -49,9 +49,17 @@ UPM = 1000
 FACE_X0, FACE_X1 = 60.0, 940.0
 FACE_Y0, FACE_Y1 = 0.0, 820.0
 ASCENDER, DESCENDER = 880.0, -120.0
+# 质量闸允许的墨迹范围（与 _glyph_ok 同口径）
+EM_X0, EM_X1 = -20.0, 1020.0
 
 # CJK 笔画权重档（粗 → 细）
-WEIGHTS = (96.0, 92.0, 84.0, 76.0, 64.0)
+# 末尾两档 56 / 48 是**密字专用档**：极繁的字（鬱 機 齷 …）里相邻横画的
+# 中心线间距常常小于 64，轻档 64 仍会把白口封死（腔消失 → 黑砖）。
+# 参照字体（M PLUS 1p Black）在同类字上同样把笔画压细。
+WEIGHTS = (96.0, 92.0, 84.0, 76.0, 64.0, 56.0, 48.0)
+# 质量闸重试阶梯：(接头延长, 权重上限档位)。0 = 最重，6 = 最轻。
+ATTEMPTS = ((True, 0), (True, 1), (False, 0), (True, 2), (False, 2),
+            (False, 3), (False, 4), (True, 5), (False, 5), (False, 6))
 W_MIN_GAP = 24.0          # 横画白口下限（AGENTS.md 铁律 10）
 # 平行邻笔的墨缝安全余量：两笔都按限重算时，缝 = 间距 − 笔宽 − 余量
 W_GAP_MARGIN = 12.0
@@ -144,8 +152,17 @@ def make_transform(pts_all, ch: str, weight: float):
         # 目标：中线框落在「参照墨迹框内缩 w/2」里
         tx0, tx1 = rx0 + weight / 2, rx1 - weight / 2
         ty0, ty1 = ry0 + weight / 2, ry1 - weight / 2
+        # 夹到 em 盒内（墨迹 = 中线 ± w/2，所以中线还要再内缩 w/2）。
+        # 参照字体（M PLUS 1p Black）本身允许长笔画甩到 descender 之外
+        # （实测「機」「幾」的墨底到 -160），照搬进来就越界 → 质量闸判 FAIL。
+        # 夹住后该字被等比缩小到装得下 —— 宁可小一点，不越界。
+        tx0 = max(tx0, EM_X0 + weight / 2)
+        tx1 = min(tx1, EM_X1 - weight / 2)
+        ty0 = max(ty0, DESCENDER + weight / 2)
+        ty1 = min(ty1, ASCENDER - weight / 2)
         if tx1 - tx0 < 40 or ty1 - ty0 < 40:
-            tx0, tx1, ty0, ty1 = FACE_X0, FACE_X1, FACE_Y0, FACE_Y1
+            tx0, tx1 = FACE_X0, FACE_X1
+            ty0, ty1 = FACE_Y0, FACE_Y1
     else:
         tx0, tx1 = FACE_X0, FACE_X1
         ty0, ty1 = FACE_Y0, FACE_Y1
@@ -329,11 +346,22 @@ def fit_pieces(pts, weight, fold_deg=30.0):
         return [(pts[0], pts[-1])]
 
     corners = []
+    # 折角点必须落在 em 盒内（墨迹 = 中线 ± w/2，所以中线还要再内缩 w/2）。
+    # 两条最小二乘拟合直线的交点在近平行时会飞到远处 —— 实测「機」的戈部撇
+    # 交点甩到中线框外 66 单位，画出的笔画墨底到 -141，越界判 FAIL。
+    # 夹到 em 盒即可：**只保证不越界**，不改动合法的转折位置
+    # （早先按「本笔中线框」夹，把「稿」「唤」这类字的折角也夹歪了，
+    #  反而让 31 个原本过关的字挂掉 —— 约束要对着真正要守的那条线）。
+    cx0 = EM_X0 + weight / 2
+    cx1 = EM_X1 - weight / 2
+    cy0 = DESCENDER + weight / 2
+    cy1 = ASCENDER - weight / 2
     for k in range(len(fits) - 1):
         (a0, au, _), (b0, bu, _) = fits[k], fits[k + 1]
         c = _isect(a0, au, b0, bu, max_d=3.0 * weight)
         if c is None:
             c = ((a0[0] + b0[0]) / 2, (a0[1] + b0[1]) / 2)
+        c = (min(max(c[0], cx0), cx1), min(max(c[1], cy0), cy1))
         corners.append(c)
 
     out = []
@@ -351,6 +379,22 @@ def _pt_seg_dist(p, a, b):
         return math.hypot(p[0] - a[0], p[1] - a[1])
     t = max(0.0, min(1.0, ((p[0] - a[0]) * vx + (p[1] - a[1]) * vy) / L2))
     return math.hypot(p[0] - (a[0] + t * vx), p[1] - (a[1] + t * vy))
+
+
+def _pt_seg_closest(p, a, b):
+    """线段 ab 上离 p 最近的点（投影截断到线段内）。
+
+    必须用「最近点」而不是「线段起点」：
+    原实现取 t[k]（线段起点）当延长目标，方向会偏离真实最近方向，
+    延长量又按距离上限（1.2×笔宽）走 —— 于是笔画会被甩过接头，
+    冲出字面框（实测「機」墨底到 -141，越界）甚至与别的笔画交叉成自交。
+    """
+    vx, vy = b[0] - a[0], b[1] - a[1]
+    L2 = vx * vx + vy * vy
+    if L2 < 1e-9:
+        return (a[0], a[1])
+    t = max(0.0, min(1.0, ((p[0] - a[0]) * vx + (p[1] - a[1]) * vy) / L2))
+    return (a[0] + t * vx, a[1] + t * vy)
 
 
 def extend_ends(strokes, weights):
@@ -377,7 +421,7 @@ def extend_ends(strokes, weights):
                     d = _pt_seg_dist(P, t[k], t[k + 1])
                     if d < bestd:
                         bestd = d
-                        best = t[k]
+                        best = _pt_seg_closest(P, t[k], t[k + 1])
             if best is None or bestd > 1.5 * w:
                 continue
             ext = max(0.0, min(1.2 * w, bestd - 0.4 * w))
@@ -506,13 +550,25 @@ def stroke_prims(pts, weight, kind_hint=None, snap=None):
         if kind == "hbar":
             y = (a[1] + b[1]) / 2
             x1, x2 = sorted((a[0], b[0]))
+            if x2 - x1 < 1.0:
+                continue          # 退化横（零长）→ 轮廓环只剩 <3 点
             prims.append(("hbar", (x1, x2, y), {}))
         elif kind == "vbar":
             x = (a[0] + b[0]) / 2
             y1, y2 = sorted((a[1], b[1]))
+            if y2 - y1 < 1.0:
+                continue          # 退化竖
             prims.append(("vbar", (x, y1, y2), {}))
         else:
+            if math.hypot(b[0] - a[0], b[1] - a[1]) < 1.0:
+                continue          # 退化斜笔
             prims.append(("diag", (a[0], a[1], b[0], b[1]), {}))
+    if not prims:
+        # 整条笔画退化（骨架里出现零长笔）—— 落一个点，
+        # 否则这个字会少一笔，或者产生一个 <3 点的轮廓环。
+        cx = sum(p[0] for p in pts) / len(pts)
+        cy = sum(p[1] for p in pts) / len(pts)
+        return [("dot", (cx, cy, weight, max(0.55 * weight, 1.0), SLANT_VERTICAL), {})]
     return prims
 
 
@@ -684,49 +740,55 @@ def build_glyph_code(ch: str, prims_by_stroke, weight_desc=""):
     return "\n".join(lines), fn
 
 
-def _glyph_ok(glyph):
-    """逐字质量闸（三条，与仓库门禁同口径）：
+def _glyph_check(glyph, owner=None):
+    """逐字质量闸（三条，与仓库门禁同口径）+ **卡点归因**。
 
       1. 轮廓合法（无自交）+ 在 em 盒内；
       2. 横×横白口 > 0（否则腔被封死，渲染成黑砖）—— check_hcounters 同口径；
       3. 几何腔高 > 24（否则腔消失）—— check_cavity_height 同口径。
 
-    自交的字渲染出来是糊成一块的墨，宁可剔除也不能混进成品。
+    返回 (ok, reason, offenders)：
+      reason = 'ok' / '自交' / '越界' / '白口' / '腔高' / '退化'
+      offenders = 涉事的**笔序**列表（只有「白口」时非空）
+        —— owner 是「原语下标 → 笔序」的映射。
+
+    为什么要归因：光知道「FAIL」没法修。
+    知道「是这两笔横打架」才能**只把这两笔降重**，而不是把整字压成最轻档
+    （实测整字压到 40 只能救回 16/29，而按笔降重能救回更多，
+     且其余笔画保持正常重量 —— 视觉上才是对的）。
     """
     from shapely.geometry import Polygon
     from shapely.ops import unary_union
     try:
         contours = glyph.contours()
     except Exception:
-        return False
+        return False, "退化", []
     if not contours:
-        return False
+        return False, "退化", []
     for c in contours:
         pts = [(p[0], p[1]) if isinstance(p, (tuple, list)) else (p.x, p.y) for p in c]
         if len(pts) < 3:
-            return False
+            continue
         try:
             if not Polygon(pts).is_valid:
-                return False
+                return False, "自交", []
         except Exception:
-            return False
-    flat = []
-    for c in contours:
-        for p in c:
-            flat.append((p[0], p[1]) if isinstance(p, (tuple, list)) else (p.x, p.y))
+            return False, "自交", []
+    flat = [(p[0], p[1]) if isinstance(p, (tuple, list)) else (p.x, p.y)
+            for c in contours for p in c]
     xs = [p[0] for p in flat]
     ys = [p[1] for p in flat]
     if not xs:
-        return False
-    if min(xs) < -20 or max(xs) > 1020 or min(ys) < DESCENDER or max(ys) > ASCENDER:
-        return False
+        return False, "退化", []
+    if min(xs) < EM_X0 or max(xs) > EM_X1 or min(ys) < DESCENDER or max(ys) > ASCENDER:
+        return False, "越界", []
 
     # ---- 2. 横×横白口 ----
     parts = getattr(glyph, "_parts", [])
     prims = getattr(glyph, "_prims", None)
     if prims is not None and len(prims) == len(parts):
         hbars = []
-        for prim, pts in zip(prims, parts):
+        for index, (prim, pts) in enumerate(zip(prims, parts)):
             if prim.get("kind") != "hbar":
                 continue
             length = abs(float(prim.get("x2", 0)) - float(prim.get("x1", 0)))
@@ -735,19 +797,25 @@ def _glyph_ok(glyph):
             poly = Polygon(pts)
             if poly.is_empty:
                 continue
-            hbars.append(poly)
+            hbars.append((index, poly))
         for i in range(len(hbars)):
             for j in range(i + 1, len(hbars)):
-                a, b = hbars[i], hbars[j]
+                idx_a, a = hbars[i]
+                idx_b, b = hbars[j]
                 ox = min(a.bounds[2], b.bounds[2]) - max(a.bounds[0], b.bounds[0])
                 if ox <= 0:
                     continue
                 a_mid = (a.bounds[1] + a.bounds[3]) / 2.0
                 b_mid = (b.bounds[1] + b.bounds[3]) / 2.0
                 upper, lower = (a, b) if a_mid >= b_mid else (b, a)
-                gap = upper.bounds[1] - lower.bounds[3]
-                if gap <= 0:
-                    return False
+                if upper.bounds[1] - lower.bounds[3] <= 0:
+                    offenders = []
+                    if owner:
+                        for index in (idx_a, idx_b):
+                            stroke_index = owner.get(index)
+                            if stroke_index is not None and stroke_index not in offenders:
+                                offenders.append(stroke_index)
+                    return False, "白口", offenders
 
     # ---- 3. 几何腔高 ----
     polys = []
@@ -766,8 +834,14 @@ def _glyph_ok(glyph):
             for interior in geom.interiors:
                 minx, miny, maxx, maxy = interior.bounds
                 if (maxx - minx) >= CAVITY_MIN_W and (maxy - miny) <= CAVITY_MIN_H:
-                    return False
-    return True
+                    return False, "腔高", []
+    return True, "ok", []
+
+
+def _glyph_ok(glyph):
+    """布尔版（保持旧调用点可用）。"""
+    ok, _reason, _offenders = _glyph_check(glyph)
+    return ok
 
 
 def _r(v):
@@ -792,8 +866,7 @@ def _try_build(ch, strokes, weight_desc=""):
     """
     allpts = [p for s in strokes for p in s]
     prims_by_stroke = []
-    attempts = [(True, 0), (True, 1), (False, 0), (True, 2), (False, 2),
-                (False, 3), (False, 4)]
+    attempts = ATTEMPTS
     # 优先用**结构判据**（把方框的一边吸直、把撇捺留成斜的）；
     # 若某个字在新判据下过不了质量闸（自交/越界/白口/腔高），
     # 退回到纯角度判据重试 —— 宁可角度不完美，也不丢字。

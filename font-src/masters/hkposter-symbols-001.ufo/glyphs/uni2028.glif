@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2028" format="2">
+  <advance width="1000"/>
+  <unicode hex="2028"/>
+  <note>
+：行分隔符
+</note>
+  <outline>
+    <contour>
+      <point x="60" y="452" type="line"/>
+      <point x="60" y="368" type="line"/>
+      <point x="940" y="368" type="line"/>
+      <point x="940" y="452" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni302E" format="2">
+  <advance width="1000"/>
+  <unicode hex="302E"/>
+  <note>
+〮：谚文单点声调
+</note>
+  <outline>
+    <contour>
+      <point x="570" y="410" type="line"/>
+      <point x="565" y="437" type="line"/>
+      <point x="549" y="459" type="line"/>
+      <point x="527" y="475" type="line"/>
+      <point x="500" y="480" type="line"/>
+      <point x="473" y="475" type="line"/>
+      <point x="451" y="459" type="line"/>
+      <point x="435" y="437" type="line"/>
+      <point x="430" y="410" type="line"/>
+      <point x="435" y="383" type="line"/>
+      <point x="451" y="361" type="line"/>
+      <point x="473" y="345" type="line"/>
+      <point x="500" y="340" type="line"/>
+      <point x="527" y="345" type="line"/>
+      <point x="549" y="361" type="line"/>
+      <point x="565" y="383" type="line"/>
+    </contour>
+  </outline>
+</glyph>

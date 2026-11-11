@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni204F" format="2">
+  <advance width="640"/>
+  <unicode hex="204F"/>
+  <note>
+⁏：反分号
+</note>
+  <outline>
+    <contour>
+      <point x="366" y="101" type="line"/>
+      <point x="370" y="120" type="line"/>
+      <point x="366" y="139" type="line"/>
+      <point x="355" y="155" type="line"/>
+      <point x="339" y="166" type="line"/>
+      <point x="320" y="170" type="line"/>
+      <point x="301" y="166" type="line"/>
+      <point x="285" y="155" type="line"/>
+      <point x="274" y="139" type="line"/>
+      <point x="270" y="120" type="line"/>
+      <point x="274" y="101" type="line"/>
+      <point x="285" y="85" type="line"/>
+      <point x="301" y="74" type="line"/>
+      <point x="320" y="70" type="line"/>
+      <point x="339" y="74" type="line"/>
+      <point x="355" y="85" type="line"/>
+    </contour>
+    <contour>
+      <point x="299" y="243" type="line"/>
+      <point x="359" y="383" type="line"/>
+      <point x="281" y="417" type="line"/>
+      <point x="221" y="277" type="line"/>
+    </contour>
+  </outline>
+</glyph>

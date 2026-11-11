@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni300A" format="2">
+  <advance width="1000"/>
+  <unicode hex="300A"/>
+  <note>
+《：左双角括号
+</note>
+  <outline>
+    <contour>
+      <point x="566" y="47" type="line"/>
+      <point x="634" y="113" type="line"/>
+      <point x="347" y="410" type="line"/>
+      <point x="634" y="707" type="line"/>
+      <point x="566" y="773" type="line"/>
+      <point x="246" y="443" type="line"/>
+      <point x="280" y="410" type="line"/>
+      <point x="246" y="377" type="line"/>
+    </contour>
+    <contour>
+      <point x="821" y="52" type="line"/>
+      <point x="899" y="108" type="line"/>
+      <point x="679" y="410" type="line"/>
+      <point x="899" y="712" type="line"/>
+      <point x="821" y="768" type="line"/>
+      <point x="581" y="438" type="line"/>
+      <point x="620" y="410" type="line"/>
+      <point x="581" y="382" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFA49" format="2">
+  <advance width="1000"/>
+  <unicode hex="FA49"/>
+  <note>
+爫：兼容表意文字（= 统一表意文字 U+722B）
+</note>
+  <outline>
+    <contour>
+      <point x="179" y="118" type="line"/>
+      <point x="247" y="186" type="line"/>
+      <point x="94" y="341" type="line"/>
+      <point x="26" y="274" type="line"/>
+    </contour>
+    <contour>
+      <point x="350" y="327" type="line"/>
+      <point x="462" y="194" type="line"/>
+      <point x="536" y="256" type="line"/>
+      <point x="423" y="389" type="line"/>
+    </contour>
+    <contour>
+      <point x="882" y="457" type="line"/>
+      <point x="636" y="278" type="line"/>
+      <point x="692" y="200" type="line"/>
+      <point x="978" y="407" type="line"/>
+      <point x="949" y="446" type="line"/>
+      <point x="988" y="475" type="line"/>
+      <point x="895" y="603" type="line"/>
+      <point x="896" y="606" type="line"/>
+      <point x="891" y="609" type="line"/>
+      <point x="868" y="640" type="line"/>
+      <point x="853" y="629" type="line"/>
+      <point x="716" y="701" type="line"/>
+      <point x="671" y="616" type="line"/>
+      <point x="826" y="534" type="line"/>
+    </contour>
+    <contour>
+      <point x="175" y="505" type="line"/>
+      <point x="693" y="505" type="line"/>
+      <point x="693" y="601" type="line"/>
+      <point x="175" y="601" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFFE3" format="2">
+  <advance width="1000"/>
+  <unicode hex="FFE3"/>
+  <note>
+￣：全角长音符
+</note>
+  <outline>
+    <contour>
+      <point x="160" y="608" type="line"/>
+      <point x="160" y="512" type="line"/>
+      <point x="840" y="512" type="line"/>
+      <point x="840" y="608" type="line"/>
+    </contour>
+  </outline>
+</glyph>

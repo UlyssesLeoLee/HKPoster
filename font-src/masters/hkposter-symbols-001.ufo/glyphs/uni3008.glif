@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3008" format="2">
+  <advance width="1000"/>
+  <unicode hex="3008"/>
+  <note>
+〈：左角括号
+</note>
+  <outline>
+    <contour>
+      <point x="673" y="114" type="line"/>
+      <point x="369" y="410" type="line"/>
+      <point x="673" y="706" type="line"/>
+      <point x="607" y="774" type="line"/>
+      <point x="267" y="444" type="line"/>
+      <point x="300" y="410" type="line"/>
+      <point x="267" y="376" type="line"/>
+      <point x="607" y="46" type="line"/>
+    </contour>
+  </outline>
+</glyph>

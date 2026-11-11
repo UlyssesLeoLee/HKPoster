@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2E8D" format="2">
+  <advance width="1000"/>
+  <unicode hex="2E8D"/>
+  <note>
+⺍：自动生成
+</note>
+  <outline>
+    <contour>
+      <point x="224" y="211" type="line"/>
+      <point x="297" y="274" type="line"/>
+      <point x="159" y="431" type="line"/>
+      <point x="87" y="368" type="line"/>
+    </contour>
+    <contour>
+      <point x="545" y="251" type="line"/>
+      <point x="609" y="313" type="line"/>
+      <point x="815" y="430" type="line"/>
+      <point x="882" y="430" type="line"/>
+      <point x="882" y="526" type="line"/>
+      <point x="814" y="526" type="line"/>
+      <point x="814" y="484" type="line"/>
+      <point x="790" y="526" type="line"/>
+      <point x="546" y="388" type="line"/>
+      <point x="408" y="531" type="line"/>
+      <point x="339" y="464" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni204B" format="2">
+  <advance width="640"/>
+  <unicode hex="204B"/>
+  <note>
+⁋：反pilcrow记号
+</note>
+  <outline>
+    <contour>
+      <point x="200" y="521" type="line"/>
+      <point x="200" y="0" type="line"/>
+      <point x="300" y="0" type="line"/>
+      <point x="300" y="380" type="line"/>
+      <point x="480" y="380" type="line"/>
+      <point x="480" y="700" type="line"/>
+      <point x="200" y="700" type="line"/>
+      <point x="200" y="599" type="line"/>
+      <point x="188" y="581" type="line"/>
+      <point x="184" y="560" type="line"/>
+      <point x="188" y="539" type="line"/>
+    </contour>
+  </outline>
+</glyph>

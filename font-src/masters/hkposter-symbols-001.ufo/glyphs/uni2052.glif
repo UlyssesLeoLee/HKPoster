@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2052" format="2">
+  <advance width="640"/>
+  <unicode hex="2052"/>
+  <note>
+⁒：商业减号
+</note>
+  <outline>
+    <contour>
+      <point x="150" y="378" type="line"/>
+      <point x="150" y="282" type="line"/>
+      <point x="490" y="282" type="line"/>
+      <point x="490" y="378" type="line"/>
+    </contour>
+  </outline>
+</glyph>

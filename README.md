@@ -38,9 +38,10 @@
 | 需求、基本设计、详细设计与测试文档 | 已生成（设计基线，待评审确认） |
 | XLSX 规划表及测试用例 | 已生成；Wave 0 用例已执行（28 PASS / 0 FAIL / 0 WARN / 1 SKIP） |
 | “港”字视觉样张 | 已包含，**并非可用字体字形** |
-| 字形源（recipe + UFO master） | **已生成**：**9088 个字形 / 9072 个码位**（58 个 master）——手工精造层 1570 码位 + 自动骨架层 7246 码位 + 拉丁扩展层 255 码位 |
+| 字形源（recipe + UFO master） | **已生成**：**10573 个字形 / 10557 个码位**（62 个 master）——手工精造层 1570 + 自动骨架层 8178 + 拉丁扩展层 255 + 兼容别名层 402 + 符号补齐层 151 码位 |
 | 字体工程与构建链 | **已生成**：可构建 OTF / TTF / WOFF2，构建按提交时间定版、可复现 |
 | 单元 / 集成 / 系统测试 | **可执行**（`font-src/tests/run_tests.py`）；Windows 侧通过，macOS 与浏览器 NOT_RUN |
 | 质量门禁 | **14/14 PASS**（`font-src/scripts/verify_all.py`），含横画内白、几何腔高、码位三方交叉核对 |
 | 样张 | **已生成**（黑白 48/96/192 px + 效果组 + 假名 + 拉丁；7 张，缺字 0 个） |
-| 字体许可证 | **字体二进制 = SIL OFL 1.1**（保留字体名 `HK Poster Heavy`，见 `OFL.txt`）；**源代码 = GNU GPL v3**（仓库根 `LICENSE`）；**自动骨架层 7246 字 = Arphic Public License 衍生作品**（见 `ARPHICPL.TXT` / `NOTICE.md`） |
+| 字符覆盖 | GB2312 **94.0%** / CJK 统一 **45.0%** / CJK 兼容 **78.5%** / Jōyō **93.8%**；**ASCII · Latin-1 · 通用标点 · CJK 全角标点 · 全角形式 全部 100%** |
+| 字体许可证 | **字体二进制 = SIL OFL 1.1**（保留字体名 `HK Poster Heavy`，见 `OFL.txt`）；**源代码 = GNU GPL v3**（仓库根 `LICENSE`）；**8445 个码位 = Arphic Public License 衍生作品**（自动骨架层 8178 + 兼容别名层里的 APL 派生别名 267，见 `ARPHICPL.TXT` / `NOTICE.md`） |

@@ -44,6 +44,8 @@ from shapely.geometry import Polygon  # noqa: E402
 from shapely.ops import unary_union  # noqa: E402
 from ufoLib2 import Font  # noqa: E402
 
+from hkbuild import is_blank_kind  # noqa: E402
+
 UPM = 1000
 ASCENDER = 880
 DESCENDER = -120
@@ -153,6 +155,11 @@ def main() -> int:
 
             polygon = glyph_polygon(glyph)
             if polygon is None or polygon.is_empty:
+                if is_blank_kind(codepoint):
+                    # 空格 / 格式控制符：本来就无墨，不是缺陷。
+                    record["blank_kind"] = True
+                    records.append(record)
+                    continue
                 failures.append(f"{name}：空字形（无有效轮廓）")
                 records.append(record)
                 continue

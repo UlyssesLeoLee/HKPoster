@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniF90A" format="2">
+  <advance width="1000"/>
+  <unicode hex="F90A"/>
+  <note>
+金：兼容表意文字（= 统一表意文字 U+91D1）
+</note>
+  <outline>
+    <contour>
+      <point x="140" y="0" type="line"/>
+      <point x="860" y="0" type="line"/>
+      <point x="860" y="96" type="line"/>
+      <point x="140" y="96" type="line"/>
+    </contour>
+    <contour>
+      <point x="452" y="150" type="line"/>
+      <point x="548" y="150" type="line"/>
+      <point x="548" y="282" type="line"/>
+      <point x="750" y="282" type="line"/>
+      <point x="750" y="378" type="line"/>
+      <point x="250" y="378" type="line"/>
+      <point x="250" y="282" type="line"/>
+      <point x="452" y="282" type="line"/>
+    </contour>
+    <contour>
+      <point x="382" y="412" type="line"/>
+      <point x="382" y="508" type="line"/>
+      <point x="298" y="508" type="line"/>
+      <point x="298" y="412" type="line"/>
+    </contour>
+    <contour>
+      <point x="702" y="412" type="line"/>
+      <point x="702" y="508" type="line"/>
+      <point x="618" y="508" type="line"/>
+      <point x="618" y="412" type="line"/>
+    </contour>
+    <contour>
+      <point x="880" y="604" type="line"/>
+      <point x="800" y="641" type="line"/>
+      <point x="800" y="648" type="line"/>
+      <point x="784" y="648" type="line"/>
+      <point x="545" y="759" type="line"/>
+      <point x="505" y="671" type="line"/>
+      <point x="555" y="648" type="line"/>
+      <point x="379" y="648" type="line"/>
+      <point x="501" y="724" type="line"/>
+      <point x="449" y="806" type="line"/>
+      <point x="124" y="601" type="line"/>
+      <point x="176" y="519" type="line"/>
+      <point x="227" y="552" type="line"/>
+      <point x="763" y="552" type="line"/>
+      <point x="840" y="516" type="line"/>
+    </contour>
+  </outline>
+</glyph>

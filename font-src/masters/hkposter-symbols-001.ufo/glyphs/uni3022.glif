@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3022" format="2">
+  <advance width="1000"/>
+  <unicode hex="3022"/>
+  <note>
+〢：杭州数字 2
+</note>
+  <outline>
+    <contour>
+      <point x="325" y="700" type="line"/>
+      <point x="325" y="120" type="line"/>
+      <point x="421" y="120" type="line"/>
+      <point x="421" y="700" type="line"/>
+    </contour>
+    <contour>
+      <point x="579" y="700" type="line"/>
+      <point x="579" y="120" type="line"/>
+      <point x="675" y="120" type="line"/>
+      <point x="675" y="700" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni303F" format="2">
+  <advance width="1000"/>
+  <unicode hex="303F"/>
+  <note>
+〿：表意半填充空格
+</note>
+  <outline>
+    <contour>
+      <point x="840" y="720" type="line"/>
+      <point x="160" y="720" type="line"/>
+      <point x="160" y="100" type="line"/>
+      <point x="840" y="100" type="line"/>
+    </contour>
+  </outline>
+</glyph>

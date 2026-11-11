@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3035" format="2">
+  <advance width="1000"/>
+  <unicode hex="3035"/>
+  <note>
+〵：竖排假名重复记号下半
+</note>
+  <outline>
+    <contour>
+      <point x="332" y="60" type="line"/>
+      <point x="428" y="60" type="line"/>
+      <point x="428" y="440" type="line"/>
+      <point x="332" y="440" type="line"/>
+    </contour>
+  </outline>
+</glyph>

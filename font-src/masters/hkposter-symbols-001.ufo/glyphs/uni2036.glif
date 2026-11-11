@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2036" format="2">
+  <advance width="640"/>
+  <unicode hex="2036"/>
+  <note>
+‶：反双撇号
+</note>
+  <outline>
+    <contour>
+      <point x="229" y="456" type="line"/>
+      <point x="309" y="676" type="line"/>
+      <point x="231" y="704" type="line"/>
+      <point x="151" y="484" type="line"/>
+    </contour>
+    <contour>
+      <point x="429" y="456" type="line"/>
+      <point x="509" y="676" type="line"/>
+      <point x="431" y="704" type="line"/>
+      <point x="351" y="484" type="line"/>
+    </contour>
+  </outline>
+</glyph>

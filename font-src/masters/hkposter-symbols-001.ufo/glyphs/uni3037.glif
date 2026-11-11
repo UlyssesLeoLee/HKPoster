@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3037" format="2">
+  <advance width="1000"/>
+  <unicode hex="3037"/>
+  <note>
+〷：电报换行分隔符
+</note>
+  <outline>
+    <contour>
+      <point x="200" y="640" type="line"/>
+      <point x="200" y="180" type="line"/>
+      <point x="800" y="180" type="line"/>
+      <point x="800" y="640" type="line"/>
+    </contour>
+  </outline>
+</glyph>

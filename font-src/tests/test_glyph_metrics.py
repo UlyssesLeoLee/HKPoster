@@ -13,6 +13,9 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 FONT_SRC = SCRIPT_DIR.parent
 sys.path.insert(0, str(SCRIPT_DIR))
+sys.path.insert(0, str(FONT_SRC / "scripts"))
+
+from hkbuild import is_blank_kind  # noqa: E402
 
 UPM = 1000
 CJK_ADVANCE = 1000
@@ -77,6 +80,18 @@ def run(context) -> list[dict]:
                 polys.append(poly.buffer(0) if not poly.is_valid else poly)
 
             if not polys:
+                if is_blank_kind(codepoint):
+                    # 空格 / 行段分隔符 / 格式控制符：按 Unicode 定义就无墨，
+                    # 不是缺陷（口径与 check_glyphs 共用 hkbuild.is_blank_kind）。
+                    records.append(
+                        {
+                            "name": name,
+                            "category": category_of(codepoint),
+                            "advance": glyph.width,
+                            "blank_kind": True,
+                        }
+                    )
+                    continue
                 results.append(
                     {"name": f"{name}: 空字形", "status": "FAIL", "detail": "无有效轮廓"}
                 )

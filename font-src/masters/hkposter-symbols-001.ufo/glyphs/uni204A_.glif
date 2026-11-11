@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni204A" format="2">
+  <advance width="640"/>
+  <unicode hex="204A"/>
+  <note>
+⁊：提尔干 et 记号
+</note>
+  <outline>
+    <contour>
+      <point x="261" y="109" type="line"/>
+      <point x="396" y="592" type="line"/>
+      <point x="520" y="592" type="line"/>
+      <point x="520" y="688" type="line"/>
+      <point x="150" y="688" type="line"/>
+      <point x="150" y="592" type="line"/>
+      <point x="298" y="592" type="line"/>
+      <point x="179" y="131" type="line"/>
+    </contour>
+  </outline>
+</glyph>

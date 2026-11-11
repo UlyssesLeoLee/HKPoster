@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni6208" format="2">
+  <advance width="1000"/>
+  <unicode hex="6208"/>
+  <note>
+戈：自动生成
+</note>
+  <outline>
+    <contour>
+      <point x="882" y="-84" type="line"/>
+      <point x="944" y="159" type="line"/>
+      <point x="851" y="183" type="line"/>
+      <point x="816" y="44" type="line"/>
+      <point x="605" y="357" type="line"/>
+      <point x="652" y="514" type="line"/>
+      <point x="647" y="516" type="line"/>
+      <point x="661" y="533" type="line"/>
+      <point x="584" y="595" type="line"/>
+      <point x="538" y="539" type="line"/>
+      <point x="484" y="539" type="line"/>
+      <point x="293" y="824" type="line"/>
+      <point x="213" y="770" type="line"/>
+      <point x="368" y="539" type="line"/>
+      <point x="123" y="539" type="line"/>
+      <point x="123" y="443" type="line"/>
+      <point x="432" y="443" type="line"/>
+      <point x="495" y="349" type="line"/>
+      <point x="149" y="31" type="line"/>
+      <point x="214" y="-40" type="line"/>
+      <point x="550" y="268" type="line"/>
+      <point x="796" y="-99" type="line"/>
+      <point x="836" y="-72" type="line"/>
+    </contour>
+    <contour>
+      <point x="550" y="750" type="line"/>
+      <point x="708" y="649" type="line"/>
+      <point x="760" y="730" type="line"/>
+      <point x="601" y="831" type="line"/>
+    </contour>
+  </outline>
+</glyph>

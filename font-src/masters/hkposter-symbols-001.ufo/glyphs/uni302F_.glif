@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni302F" format="2">
+  <advance width="1000"/>
+  <unicode hex="302F"/>
+  <note>
+〯：谚文双点声调
+</note>
+  <outline>
+    <contour>
+      <point x="465" y="383" type="line"/>
+      <point x="470" y="410" type="line"/>
+      <point x="465" y="437" type="line"/>
+      <point x="449" y="459" type="line"/>
+      <point x="427" y="475" type="line"/>
+      <point x="400" y="480" type="line"/>
+      <point x="373" y="475" type="line"/>
+      <point x="351" y="459" type="line"/>
+      <point x="335" y="437" type="line"/>
+      <point x="330" y="410" type="line"/>
+      <point x="335" y="383" type="line"/>
+      <point x="351" y="361" type="line"/>
+      <point x="373" y="345" type="line"/>
+      <point x="400" y="340" type="line"/>
+      <point x="427" y="345" type="line"/>
+      <point x="449" y="361" type="line"/>
+    </contour>
+    <contour>
+      <point x="665" y="383" type="line"/>
+      <point x="670" y="410" type="line"/>
+      <point x="665" y="437" type="line"/>
+      <point x="649" y="459" type="line"/>
+      <point x="627" y="475" type="line"/>
+      <point x="600" y="480" type="line"/>
+      <point x="573" y="475" type="line"/>
+      <point x="551" y="459" type="line"/>
+      <point x="535" y="437" type="line"/>
+      <point x="530" y="410" type="line"/>
+      <point x="535" y="383" type="line"/>
+      <point x="551" y="361" type="line"/>
+      <point x="573" y="345" type="line"/>
+      <point x="600" y="340" type="line"/>
+      <point x="627" y="345" type="line"/>
+      <point x="649" y="361" type="line"/>
+    </contour>
+  </outline>
+</glyph>

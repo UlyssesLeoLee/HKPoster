@@ -7,55 +7,50 @@
 </note>
   <outline>
     <contour>
-      <point x="292" y="84" type="line"/>
-      <point x="292" y="530" type="line"/>
-      <point x="229" y="530" type="line"/>
-      <point x="316" y="659" type="line"/>
-      <point x="290" y="677" type="line"/>
-      <point x="321" y="669" type="line"/>
-      <point x="358" y="812" type="line"/>
-      <point x="296" y="828" type="line"/>
-      <point x="260" y="690" type="line"/>
-      <point x="63" y="397" type="line"/>
-      <point x="117" y="362" type="line"/>
-      <point x="228" y="528" type="line"/>
-      <point x="228" y="84" type="line"/>
-    </contour>
-    <contour>
-      <point x="324" y="363" type="line"/>
-      <point x="541" y="363" type="line"/>
-      <point x="541" y="367" type="line"/>
-      <point x="575" y="367" type="line"/>
       <point x="575" y="0" type="line"/>
       <point x="667" y="0" type="line"/>
-      <point x="667" y="367" type="line"/>
-      <point x="910" y="367" type="line"/>
-      <point x="910" y="463" type="line"/>
-      <point x="659" y="463" type="line"/>
+      <point x="667" y="357" type="line"/>
+      <point x="910" y="357" type="line"/>
+      <point x="910" y="453" type="line"/>
+      <point x="661" y="453" type="line"/>
       <point x="635" y="597" type="line"/>
       <point x="801" y="597" type="line"/>
       <point x="801" y="693" type="line"/>
-      <point x="569" y="693" type="line"/>
-      <point x="599" y="746" type="line"/>
-      <point x="558" y="770" type="line"/>
-      <point x="595" y="800" type="line"/>
+      <point x="575" y="693" type="line"/>
+      <point x="603" y="723" type="line"/>
+      <point x="568" y="756" type="line"/>
+      <point x="606" y="786" type="line"/>
       <point x="559" y="844" type="line"/>
       <point x="485" y="783" type="line"/>
-      <point x="499" y="765" type="line"/>
-      <point x="392" y="578" type="line"/>
-      <point x="394" y="576" type="line"/>
-      <point x="310" y="576" type="line"/>
-      <point x="310" y="480" type="line"/>
-      <point x="434" y="480" type="line"/>
-      <point x="434" y="554" type="line"/>
-      <point x="475" y="530" type="line"/>
-      <point x="514" y="597" type="line"/>
+      <point x="505" y="758" type="line"/>
+      <point x="281" y="520" type="line"/>
+      <point x="281" y="533" type="line"/>
+      <point x="233" y="533" type="line"/>
+      <point x="233" y="84" type="line"/>
+      <point x="281" y="84" type="line"/>
+      <point x="281" y="513" type="line"/>
+      <point x="345" y="453" type="line"/>
+      <point x="314" y="453" type="line"/>
+      <point x="314" y="357" type="line"/>
+      <point x="575" y="357" type="line"/>
+    </contour>
+    <contour>
+      <point x="568" y="453" type="line"/>
+      <point x="350" y="453" type="line"/>
+      <point x="506" y="619" type="line"/>
+      <point x="506" y="597" type="line"/>
       <point x="553" y="597" type="line"/>
       <point x="542" y="595" type="line"/>
-      <point x="566" y="463" type="line"/>
-      <point x="541" y="463" type="line"/>
-      <point x="541" y="459" type="line"/>
-      <point x="324" y="459" type="line"/>
+    </contour>
+    <contour>
+      <point x="267" y="687" type="line"/>
+      <point x="70" y="393" type="line"/>
+      <point x="110" y="366" type="line"/>
+      <point x="310" y="664" type="line"/>
+      <point x="290" y="677" type="line"/>
+      <point x="313" y="671" type="line"/>
+      <point x="351" y="814" type="line"/>
+      <point x="304" y="826" type="line"/>
     </contour>
   </outline>
 </glyph>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFFE1" format="2">
+  <advance width="1000"/>
+  <unicode hex="FFE1"/>
+  <note>
+￡：全角英镑符号
+</note>
+  <outline>
+    <contour>
+      <point x="800" y="32" type="line"/>
+      <point x="800" y="128" type="line"/>
+      <point x="428" y="128" type="line"/>
+      <point x="428" y="252" type="line"/>
+      <point x="760" y="252" type="line"/>
+      <point x="760" y="348" type="line"/>
+      <point x="428" y="348" type="line"/>
+      <point x="428" y="659" type="line"/>
+      <point x="436" y="647" type="line"/>
+      <point x="440" y="634" type="line"/>
+      <point x="442" y="620" type="line"/>
+      <point x="510" y="620" type="line"/>
+      <point x="507" y="649" type="line"/>
+      <point x="497" y="676" type="line"/>
+      <point x="482" y="701" type="line"/>
+      <point x="461" y="722" type="line"/>
+      <point x="436" y="737" type="line"/>
+      <point x="409" y="747" type="line"/>
+      <point x="380" y="750" type="line"/>
+      <point x="351" y="747" type="line"/>
+      <point x="324" y="737" type="line"/>
+      <point x="299" y="722" type="line"/>
+      <point x="278" y="701" type="line"/>
+      <point x="263" y="676" type="line"/>
+      <point x="253" y="649" type="line"/>
+      <point x="250" y="620" type="line"/>
+      <point x="318" y="620" type="line"/>
+      <point x="320" y="634" type="line"/>
+      <point x="324" y="647" type="line"/>
+      <point x="332" y="659" type="line"/>
+      <point x="332" y="348" type="line"/>
+      <point x="220" y="348" type="line"/>
+      <point x="220" y="252" type="line"/>
+      <point x="332" y="252" type="line"/>
+      <point x="332" y="128" type="line"/>
+      <point x="200" y="128" type="line"/>
+      <point x="200" y="32" type="line"/>
+    </contour>
+  </outline>
+</glyph>

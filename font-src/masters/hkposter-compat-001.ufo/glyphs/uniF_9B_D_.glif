@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniF9BD" format="2">
+  <advance width="1000"/>
+  <unicode hex="F9BD"/>
+  <note>
+尿：兼容表意文字（= 统一表意文字 U+5C3F）
+</note>
+  <outline>
+    <contour>
+      <point x="410" y="-2" type="line"/>
+      <point x="500" y="-2" type="line"/>
+      <point x="500" y="40" type="line"/>
+      <point x="548" y="40" type="line"/>
+      <point x="548" y="314" type="line"/>
+      <point x="841" y="92" type="line"/>
+      <point x="899" y="168" type="line"/>
+      <point x="569" y="418" type="line"/>
+      <point x="548" y="391" type="line"/>
+      <point x="548" y="452" type="line"/>
+      <point x="752" y="452" type="line"/>
+      <point x="752" y="500" type="line"/>
+      <point x="800" y="500" type="line"/>
+      <point x="800" y="724" type="line"/>
+      <point x="800" y="772" type="line"/>
+      <point x="800" y="820" type="line"/>
+      <point x="150" y="820" type="line"/>
+      <point x="150" y="773" type="line"/>
+      <point x="112" y="779" type="line"/>
+      <point x="47" y="307" type="line"/>
+      <point x="143" y="293" type="line"/>
+      <point x="164" y="452" type="line"/>
+      <point x="452" y="452" type="line"/>
+      <point x="452" y="422" type="line"/>
+      <point x="280" y="422" type="line"/>
+      <point x="280" y="338" type="line"/>
+      <point x="330" y="338" type="line"/>
+      <point x="196" y="204" type="line"/>
+      <point x="264" y="136" type="line"/>
+      <point x="452" y="324" type="line"/>
+      <point x="452" y="54" type="line"/>
+      <point x="410" y="54" type="line"/>
+    </contour>
+    <contour>
+      <point x="704" y="724" type="line"/>
+      <point x="704" y="548" type="line"/>
+      <point x="178" y="548" type="line"/>
+      <point x="202" y="724" type="line"/>
+    </contour>
+  </outline>
+</glyph>
